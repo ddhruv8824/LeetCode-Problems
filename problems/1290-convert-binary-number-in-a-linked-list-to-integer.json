@@ -55,5 +55,25 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (get-decimal-value head)\n  (-> (or/c list-node? #f) exact-integer?)\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec get_decimal_value(Head :: #list_node{} | null) -> integer().\nget_decimal_value(Head) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec get_decimal_value(head :: ListNode.t | nil) :: integer\n  def get_decimal_value(head) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          1,
+          0,
+          1
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "head": [
+          0
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

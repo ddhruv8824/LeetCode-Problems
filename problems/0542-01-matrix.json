@@ -57,5 +57,83 @@
     "racket": "(define/contract (update-matrix mat)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec update_matrix(Mat :: [[integer()]]) -> [[integer()]].\nupdate_matrix(Mat) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec update_matrix(mat :: [[integer]]) :: [[integer]]\n  def update_matrix(mat) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    }
+  ]
 }

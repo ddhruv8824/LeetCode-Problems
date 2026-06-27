@@ -55,5 +55,25 @@
     "racket": "(define/contract (maximum69-number  num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum69_number (Num :: integer()) -> integer().\nmaximum69_number (Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum69_number (num :: integer) :: integer\n  def maximum69_number (num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 9669
+      },
+      "expected": 9969
+    },
+    {
+      "args": {
+        "num": 9996
+      },
+      "expected": 9999
+    },
+    {
+      "args": {
+        "num": 9999
+      },
+      "expected": 9999
+    }
+  ]
 }

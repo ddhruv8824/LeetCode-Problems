@@ -54,5 +54,31 @@
     "racket": "(define/contract (count-subarrays nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_subarrays(Nums :: [integer()], K :: integer()) -> integer().\ncount_subarrays(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_subarrays(nums :: [integer], k :: integer) :: integer\n  def count_subarrays(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          1,
+          4,
+          5
+        ],
+        "k": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1
+        ],
+        "k": 3
+      },
+      "expected": 1
+    }
+  ]
 }

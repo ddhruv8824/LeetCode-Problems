@@ -51,5 +51,19 @@
     "racket": "(define/contract (longest-prefix s)\n  (-> string? string?)\n  )",
     "erlang": "-spec longest_prefix(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_prefix(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_prefix(s :: String.t) :: String.t\n  def longest_prefix(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "level"
+      },
+      "expected": "l"
+    },
+    {
+      "args": {
+        "s": "ababab"
+      },
+      "expected": "abab"
+    }
+  ]
 }

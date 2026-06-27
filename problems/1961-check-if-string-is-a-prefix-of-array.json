@@ -53,5 +53,31 @@
     "racket": "(define/contract (is-prefix-string s words)\n  (-> string? (listof string?) boolean?)\n  )",
     "erlang": "-spec is_prefix_string(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> boolean().\nis_prefix_string(S, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_prefix_string(s :: String.t, words :: [String.t]) :: boolean\n  def is_prefix_string(s, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "iloveleetcode",
+        "words": [
+          "i",
+          "love",
+          "leetcode",
+          "apples"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "iloveleetcode",
+        "words": [
+          "apples",
+          "i",
+          "love",
+          "leetcode"
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

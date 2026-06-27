@@ -48,5 +48,25 @@
     "racket": "(define/contract (to-goat-latin sentence)\n  (-> string? string?)\n  )",
     "erlang": "-spec to_goat_latin(Sentence :: unicode:unicode_binary()) -> unicode:unicode_binary().\nto_goat_latin(Sentence) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec to_goat_latin(sentence :: String.t) :: String.t\n  def to_goat_latin(sentence) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "I speak Goat Latin"
+      },
+      "expected": "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"
+    },
+    {
+      "args": {
+        "s": "The quick brown fox jumped over the lazy dog"
+      },
+      "expected": "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa"
+    },
+    {
+      "args": {
+        "s": "Each word consists of lowercase and uppercase letters only"
+      },
+      "expected": "Eachmaa ordwmaaa onsistscmaaaa ofmaaaaa owercaselmaaaaaa andmaaaaaaa uppercasemaaaaaaaa etterslmaaaaaaaaa onlymaaaaaaaaaa"
+    }
+  ]
 }

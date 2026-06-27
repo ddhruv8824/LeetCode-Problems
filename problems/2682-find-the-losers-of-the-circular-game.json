@@ -49,5 +49,28 @@
     "racket": "(define/contract (circular-game-losers n k)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec circular_game_losers(N :: integer(), K :: integer()) -> [integer()].\ncircular_game_losers(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec circular_game_losers(n :: integer, k :: integer) :: [integer]\n  def circular_game_losers(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "k": 2
+      },
+      "expected": [
+        4,
+        5
+      ]
+    },
+    {
+      "args": {
+        "n": 4,
+        "k": 4
+      },
+      "expected": [
+        2,
+        3,
+        4
+      ]
+    }
+  ]
 }

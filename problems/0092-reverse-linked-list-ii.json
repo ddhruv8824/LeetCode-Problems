@@ -52,5 +52,139 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (reverse-between head left right)\n  (-> (or/c list-node? #f) exact-integer? exact-integer? (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec reverse_between(Head :: #list_node{} | null, Left :: integer(), Right :: integer()) -> #list_node{} | null.\nreverse_between(Head, Left, Right) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec reverse_between(head :: ListNode.t | nil, left :: integer, right :: integer) :: ListNode.t | nil\n  def reverse_between(head, left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 2,
+        "right": 4
+      },
+      "expected": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 1,
+        "right": 5
+      },
+      "expected": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 1,
+        "right": 3
+      },
+      "expected": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 3,
+        "right": 5
+      },
+      "expected": [
+        1,
+        2,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 5,
+        "right": 5
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 1,
+        "right": 1
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1
+        ],
+        "left": 1,
+        "right": 1
+      },
+      "expected": [
+        1
+      ]
+    }
+  ]
 }

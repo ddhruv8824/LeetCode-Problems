@@ -53,5 +53,50 @@
     "racket": "(define/contract (ladder-length beginWord endWord wordList)\n  (-> string? string? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec ladder_length(BeginWord :: unicode:unicode_binary(), EndWord :: unicode:unicode_binary(), WordList :: [unicode:unicode_binary()]) -> integer().\nladder_length(BeginWord, EndWord, WordList) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ladder_length(begin_word :: String.t, end_word :: String.t, word_list :: [String.t]) :: integer\n  def ladder_length(begin_word, end_word, word_list) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "beginWord": "hit",
+        "endWord": "cog",
+        "wordList": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log",
+          "cog"
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "beginWord": "hit",
+        "endWord": "cog",
+        "wordList": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log"
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "beginWord": "hot",
+        "endWord": "dog",
+        "wordList": [
+          "hot",
+          "dog",
+          "cog",
+          "pot",
+          "dot"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

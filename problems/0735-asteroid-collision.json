@@ -56,5 +56,57 @@
     "racket": "(define/contract (asteroid-collision asteroids)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec asteroid_collision(Asteroids :: [integer()]) -> [integer()].\nasteroid_collision(Asteroids) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec asteroid_collision(asteroids :: [integer]) :: [integer]\n  def asteroid_collision(asteroids) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "asteroids": [
+          5,
+          10,
+          -5
+        ]
+      },
+      "expected": [
+        5,
+        10
+      ]
+    },
+    {
+      "args": {
+        "asteroids": [
+          8,
+          -8
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "asteroids": [
+          10,
+          2,
+          -5
+        ]
+      },
+      "expected": [
+        10
+      ]
+    },
+    {
+      "args": {
+        "asteroids": [
+          -2,
+          -1,
+          1,
+          2
+        ]
+      },
+      "expected": [
+        -2,
+        -1,
+        1,
+        2
+      ]
+    }
+  ]
 }

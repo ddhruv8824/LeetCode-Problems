@@ -51,5 +51,21 @@
     "racket": "(define/contract (make-strings-equal s target)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec make_strings_equal(S :: unicode:unicode_binary(), Target :: unicode:unicode_binary()) -> boolean().\nmake_strings_equal(S, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_strings_equal(s :: String.t, target :: String.t) :: boolean\n  def make_strings_equal(s, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1010",
+        "target": "0110"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "11",
+        "target": "00"
+      },
+      "expected": false
+    }
+  ]
 }

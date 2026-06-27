@@ -58,5 +58,34 @@
     "racket": "(define/contract (nth-ugly-number n a b c)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec nth_ugly_number(N :: integer(), A :: integer(), B :: integer(), C :: integer()) -> integer().\nnth_ugly_number(N, A, B, C) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nth_ugly_number(n :: integer, a :: integer, b :: integer, c :: integer) :: integer\n  def nth_ugly_number(n, a, b, c) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "a": 2,
+        "b": 3,
+        "c": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 4,
+        "a": 2,
+        "b": 3,
+        "c": 4
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 5,
+        "a": 2,
+        "b": 11,
+        "c": 13
+      },
+      "expected": 10
+    }
+  ]
 }

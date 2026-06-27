@@ -45,5 +45,21 @@
     "racket": "(define/contract (sum num1 num2)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum(Num1 :: integer(), Num2 :: integer()) -> integer().\nsum(Num1, Num2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum(num1 :: integer, num2 :: integer) :: integer\n  def sum(num1, num2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": 12,
+        "num2": 5
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "num1": -10,
+        "num2": 4
+      },
+      "expected": -6
+    }
+  ]
 }

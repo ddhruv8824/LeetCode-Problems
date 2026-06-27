@@ -51,5 +51,19 @@
     "racket": "(define/contract (seconds-to-remove-occurrences s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec seconds_to_remove_occurrences(S :: unicode:unicode_binary()) -> integer().\nseconds_to_remove_occurrences(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec seconds_to_remove_occurrences(s :: String.t) :: integer\n  def seconds_to_remove_occurrences(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0110101"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "11100"
+      },
+      "expected": 0
+    }
+  ]
 }

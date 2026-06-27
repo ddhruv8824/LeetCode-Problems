@@ -53,5 +53,45 @@
     "racket": "(define/contract (min-eating-speed piles h)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_eating_speed(Piles :: [integer()], H :: integer()) -> integer().\nmin_eating_speed(Piles, H) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_eating_speed(piles :: [integer], h :: integer) :: integer\n  def min_eating_speed(piles, h) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "piles": [
+          3,
+          6,
+          7,
+          11
+        ],
+        "h": 8
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "piles": [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        "h": 5
+      },
+      "expected": 30
+    },
+    {
+      "args": {
+        "piles": [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        "h": 6
+      },
+      "expected": 23
+    }
+  ]
 }

@@ -62,5 +62,49 @@
     "racket": "(define/contract (recover-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec recover_array(Nums :: [integer()]) -> [integer()].\nrecover_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec recover_array(nums :: [integer]) :: [integer]\n  def recover_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          10,
+          6,
+          4,
+          8,
+          12
+        ]
+      },
+      "expected": [
+        3,
+        7,
+        11
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      "expected": [
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          435
+        ]
+      },
+      "expected": [
+        220
+      ]
+    }
+  ]
 }

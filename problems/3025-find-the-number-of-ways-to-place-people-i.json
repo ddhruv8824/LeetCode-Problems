@@ -66,5 +66,64 @@
     "racket": "(define/contract (number-of-pairs points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_pairs(Points :: [[integer()]]) -> integer().\nnumber_of_pairs(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_pairs(points :: [[integer]]) :: integer\n  def number_of_pairs(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "points": [
+          [
+            6,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

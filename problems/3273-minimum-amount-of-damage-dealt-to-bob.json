@@ -57,5 +57,55 @@
     "racket": "(define/contract (min-damage power damage health)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_damage(Power :: integer(), Damage :: [integer()], Health :: [integer()]) -> integer().\nmin_damage(Power, Damage, Health) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_damage(power :: integer, damage :: [integer], health :: [integer]) :: integer\n  def min_damage(power, damage, health) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "power": 4,
+        "damage": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "health": [
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "expected": 39
+    },
+    {
+      "args": {
+        "power": 1,
+        "damage": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "health": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "power": 8,
+        "damage": [
+          40
+        ],
+        "health": [
+          59
+        ]
+      },
+      "expected": 320
+    }
+  ]
 }

@@ -48,5 +48,19 @@
     "racket": "(define/contract (min-days n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_days(N :: integer()) -> integer().\nmin_days(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_days(n :: integer) :: integer\n  def min_days(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -51,5 +51,32 @@
     "racket": "(define/contract (smallest-divisor nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec smallest_divisor(Nums :: [integer()], Threshold :: integer()) -> integer().\nsmallest_divisor(Nums, Threshold) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_divisor(nums :: [integer], threshold :: integer) :: integer\n  def smallest_divisor(nums, threshold) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          5,
+          9
+        ],
+        "threshold": 6
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          44,
+          22,
+          33,
+          11,
+          1
+        ],
+        "threshold": 5
+      },
+      "expected": 44
+    }
+  ]
 }

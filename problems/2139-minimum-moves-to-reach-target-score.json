@@ -55,5 +55,28 @@
     "racket": "(define/contract (min-moves target maxDoubles)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_moves(Target :: integer(), MaxDoubles :: integer()) -> integer().\nmin_moves(Target, MaxDoubles) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves(target :: integer, max_doubles :: integer) :: integer\n  def min_moves(target, max_doubles) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "target": 5,
+        "maxDoubles": 0
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "target": 19,
+        "maxDoubles": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "target": 10,
+        "maxDoubles": 4
+      },
+      "expected": 4
+    }
+  ]
 }

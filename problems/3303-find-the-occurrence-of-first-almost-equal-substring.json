@@ -61,5 +61,35 @@
     "racket": "(define/contract (min-starting-index s pattern)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec min_starting_index(S :: unicode:unicode_binary(), Pattern :: unicode:unicode_binary()) -> integer().\nmin_starting_index(S, Pattern) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_starting_index(s :: String.t, pattern :: String.t) :: integer\n  def min_starting_index(s, pattern) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcdefg",
+        "pattern": "bcdffg"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "ababbababa",
+        "pattern": "bacaba"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "abcd",
+        "pattern": "dba"
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "s": "dde",
+        "pattern": "d"
+      },
+      "expected": 0
+    }
+  ]
 }

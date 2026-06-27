@@ -48,5 +48,17 @@
     "racket": "(define/contract (sort-array-by-parity nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec sort_array_by_parity(Nums :: [integer()]) -> [integer()].\nsort_array_by_parity(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sort_array_by_parity(nums :: [integer]) :: [integer]\n  def sort_array_by_parity(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          3,
+          1,
+          2,
+          4
+        ]
+      }
+    }
+  ]
 }

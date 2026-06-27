@@ -66,5 +66,96 @@
     "racket": "(define/contract (calc-equation equations values queries)\n  (-> (listof (listof string?)) (listof flonum?) (listof (listof string?)) (listof flonum?))\n  )",
     "erlang": "-spec calc_equation(Equations :: [[unicode:unicode_binary()]], Values :: [float()], Queries :: [[unicode:unicode_binary()]]) -> [float()].\ncalc_equation(Equations, Values, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec calc_equation(equations :: [[String.t]], values :: [float], queries :: [[String.t]]) :: [float]\n  def calc_equation(equations, values, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "equations": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "values": [
+          2,
+          3
+        ],
+        "queries": [
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "a",
+            "e"
+          ],
+          [
+            "a",
+            "a"
+          ],
+          [
+            "x",
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        6,
+        0.5,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "equations": [
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "values": [
+          0
+        ],
+        "queries": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "a",
+            "a"
+          ],
+          [
+            "b",
+            "b"
+          ],
+          [
+            "x",
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
 }

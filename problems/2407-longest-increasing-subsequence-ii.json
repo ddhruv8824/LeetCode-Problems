@@ -62,5 +62,50 @@
     "racket": "(define/contract (length-of-lis nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec length_of_lis(Nums :: [integer()], K :: integer()) -> integer().\nlength_of_lis(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_of_lis(nums :: [integer], k :: integer) :: integer\n  def length_of_lis(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          1,
+          4,
+          3,
+          4,
+          5,
+          8,
+          15
+        ],
+        "k": 3
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          4,
+          5,
+          1,
+          8,
+          12,
+          4,
+          7
+        ],
+        "k": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5
+        ],
+        "k": 1
+      },
+      "expected": 1
+    }
+  ]
 }

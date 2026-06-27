@@ -51,5 +51,60 @@
     "racket": "(define/contract (is-monotonic nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_monotonic(Nums :: [integer()]) -> boolean().\nis_monotonic(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_monotonic(nums :: [integer]) :: boolean\n  def is_monotonic(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": [
+          6,
+          5,
+          4,
+          4
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          3,
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          2,
+          4,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

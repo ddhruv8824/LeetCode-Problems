@@ -54,5 +54,29 @@
     "racket": "(define/contract (maximum-groups grades)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_groups(Grades :: [integer()]) -> integer().\nmaximum_groups(Grades) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_groups(grades :: [integer]) :: integer\n  def maximum_groups(grades) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grades": [
+          10,
+          6,
+          12,
+          7,
+          3,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grades": [
+          8,
+          8
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

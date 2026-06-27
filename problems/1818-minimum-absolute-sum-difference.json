@@ -59,5 +59,62 @@
     "racket": "(define/contract (min-absolute-sum-diff nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_absolute_sum_diff(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmin_absolute_sum_diff(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_absolute_sum_diff(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def min_absolute_sum_diff(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          7,
+          5
+        ],
+        "nums2": [
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "nums2": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          10,
+          4,
+          4,
+          2,
+          7
+        ],
+        "nums2": [
+          9,
+          3,
+          5,
+          1,
+          7,
+          4
+        ]
+      },
+      "expected": 20
+    }
+  ]
 }

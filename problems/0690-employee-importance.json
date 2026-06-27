@@ -53,5 +53,33 @@
     "ruby": "=begin\n# Definition for Employee.\nclass Employee\n    attr_accessor :id, :importance, :subordinates\n    def initialize( id, importance, subordinates)\n        @id = id\n        @importance = importance\n        @subordinates = subordinates\n    end\nend\n=end\n\n# @param {Employee} employees\n# @param {Integer} id\n# @return {Integer}\ndef get_importance(employees, id)\n    \nend",
     "scala": "/*\n// Definition for Employee.\nclass Employee() {\n    var id: Int = 0\n    var importance: Int = 0\n    var subordinates: List[Int] = List()\n};\n*/\n\nobject Solution {\n    def getImportance(employees: List[Employee], id: Int): Int = {\n        \n    }\n}"
   },
-  "solution": "[TOC]\n\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition and Algorithm**\n\nLet's use a hashmap `emap = {employee.id -> employee}` to query employees quickly.\n\nNow to find the total importance of an employee, it will be the importance of that employee, plus the total importance of each of that employee's subordinates.  This is a straightforward depth-first search.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of employees. We might query each employee in `dfs`.\n\n* Space Complexity: $$O(N)$$, the size of the implicit call stack when evaluating `dfs`."
+  "solution": "[TOC]\n\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition and Algorithm**\n\nLet's use a hashmap `emap = {employee.id -> employee}` to query employees quickly.\n\nNow to find the total importance of an employee, it will be the importance of that employee, plus the total importance of each of that employee's subordinates.  This is a straightforward depth-first search.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of employees. We might query each employee in `dfs`.\n\n* Space Complexity: $$O(N)$$, the size of the implicit call stack when evaluating `dfs`.",
+  "test_cases": [
+    {
+      "args": {
+        "employees": [
+          [
+            1,
+            5,
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            2,
+            3,
+            []
+          ],
+          [
+            3,
+            3,
+            []
+          ]
+        ],
+        "id": 1
+      },
+      "expected": 11
+    }
+  ]
 }

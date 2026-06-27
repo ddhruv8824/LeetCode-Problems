@@ -46,5 +46,19 @@
     "racket": "(define/contract (is-perfect-square num)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_perfect_square(Num :: integer()) -> boolean().\nis_perfect_square(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_perfect_square(num :: integer) :: boolean\n  def is_perfect_square(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 16
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "num": 14
+      },
+      "expected": false
+    }
+  ]
 }

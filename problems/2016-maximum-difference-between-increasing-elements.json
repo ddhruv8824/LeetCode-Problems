@@ -56,5 +56,40 @@
     "erlang": "-spec maximum_difference(Nums :: [integer()]) -> integer().\nmaximum_difference(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_difference(nums :: [integer]) :: integer\n  def maximum_difference(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Prefix Minimum Value\n\n#### Intuition\n\nWhen we fix $j$, the chosen index $i$ must satisfy $0 \\leq i < j$ and $\\textit{nums}[i]$ must be the smallest among those indices. Therefore, we can iterate over $j$ while maintaining the prefix minimum of $\\textit{nums}[0..j-1]$, denoted as $\\textit{premin}$. In this way:\n\n- If $\\textit{nums}[j] > \\textit{premin}$, we update the answer with $\\textit{nums}[j] - \\textit{premin}$.\n\n- Otherwise, we update the prefix minimum value $\\textit{premin}$ using $\\textit{nums}[j]$.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array $\\textit{nums}$ once.\n\n- Space complexity: $O(1)$."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Prefix Minimum Value\n\n#### Intuition\n\nWhen we fix $j$, the chosen index $i$ must satisfy $0 \\leq i < j$ and $\\textit{nums}[i]$ must be the smallest among those indices. Therefore, we can iterate over $j$ while maintaining the prefix minimum of $\\textit{nums}[0..j-1]$, denoted as $\\textit{premin}$. In this way:\n\n- If $\\textit{nums}[j] > \\textit{premin}$, we update the answer with $\\textit{nums}[j] - \\textit{premin}$.\n\n- Otherwise, we update the prefix minimum value $\\textit{premin}$ using $\\textit{nums}[j]$.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array $\\textit{nums}$ once.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          1,
+          5,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          4,
+          3,
+          2
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          2,
+          10
+        ]
+      },
+      "expected": 9
+    }
+  ]
 }

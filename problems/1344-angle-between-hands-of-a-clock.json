@@ -60,5 +60,28 @@
     "racket": "(define/contract (angle-clock hour minutes)\n  (-> exact-integer? exact-integer? flonum?)\n  )",
     "erlang": "-spec angle_clock(Hour :: integer(), Minutes :: integer()) -> float().\nangle_clock(Hour, Minutes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec angle_clock(hour :: integer, minutes :: integer) :: float\n  def angle_clock(hour, minutes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "hour": 12,
+        "minutes": 30
+      },
+      "expected": 165
+    },
+    {
+      "args": {
+        "hour": 3,
+        "minutes": 30
+      },
+      "expected": 75
+    },
+    {
+      "args": {
+        "hour": 3,
+        "minutes": 15
+      },
+      "expected": 7.5
+    }
+  ]
 }

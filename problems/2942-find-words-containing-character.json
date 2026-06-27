@@ -57,5 +57,47 @@
     "erlang": "-spec find_words_containing(Words :: [unicode:unicode_binary()], X :: char()) -> [integer()].\nfind_words_containing(Words, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_words_containing(words :: [String.t], x :: char) :: [integer]\n  def find_words_containing(words, x) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Simulation\n\n#### Intuition\n\nAccording to the problem, we should simulate the process by traversing each string and checking whether it contains the character $x$. If it does, we add the index of the string to the result array.\n\nFinally, we return the result array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array and $m$ be the length of the string.\n\n- Time complexity: $O(n * m)$.\n  \n  We traverse each string to check if it contains the character `x`.\n\n- Space complexity: $O(1)$.\n  \n  The space required for the return variable is not included in the calculation."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Simulation\n\n#### Intuition\n\nAccording to the problem, we should simulate the process by traversing each string and checking whether it contains the character $x$. If it does, we add the index of the string to the result array.\n\nFinally, we return the result array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array and $m$ be the length of the string.\n\n- Time complexity: $O(n * m)$.\n  \n  We traverse each string to check if it contains the character `x`.\n\n- Space complexity: $O(1)$.\n  \n  The space required for the return variable is not included in the calculation.",
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "leet",
+          "code"
+        ],
+        "x": "e"
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "abc",
+          "bcd",
+          "aaaa",
+          "cbc"
+        ],
+        "x": "a"
+      },
+      "expected": [
+        0,
+        2
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "abc",
+          "bcd",
+          "aaaa",
+          "cbc"
+        ],
+        "x": "z"
+      },
+      "expected": []
+    }
+  ]
 }

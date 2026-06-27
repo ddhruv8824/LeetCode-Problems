@@ -64,5 +64,36 @@
     "racket": "(define/contract (max-palindromes-after-operations words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec max_palindromes_after_operations(Words :: [unicode:unicode_binary()]) -> integer().\nmax_palindromes_after_operations(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_palindromes_after_operations(words :: [String.t]) :: integer\n  def max_palindromes_after_operations(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "abbb",
+          "ba",
+          "aa"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "words": [
+          "abc",
+          "ab"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "cd",
+          "ef",
+          "a"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

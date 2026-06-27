@@ -62,5 +62,31 @@
     "racket": "(define/contract (num-of-arrays n m k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_of_arrays(N :: integer(), M :: integer(), K :: integer()) -> integer().\nnum_of_arrays(N, M, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_arrays(n :: integer, m :: integer, k :: integer) :: integer\n  def num_of_arrays(n, m, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "m": 3,
+        "k": 1
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 5,
+        "m": 2,
+        "k": 3
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 9,
+        "m": 1,
+        "k": 1
+      },
+      "expected": 1
+    }
+  ]
 }

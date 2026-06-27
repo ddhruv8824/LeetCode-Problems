@@ -56,5 +56,56 @@
     "racket": "(define/contract (number-of-boomerangs points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_boomerangs(Points :: [[integer()]]) -> integer().\nnumber_of_boomerangs(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_boomerangs(points :: [[integer]]) :: integer\n  def number_of_boomerangs(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

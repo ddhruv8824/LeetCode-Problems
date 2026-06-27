@@ -58,5 +58,36 @@
     "racket": "(define/contract (minimize-concatenated-length words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec minimize_concatenated_length(Words :: [unicode:unicode_binary()]) -> integer().\nminimize_concatenated_length(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_concatenated_length(words :: [String.t]) :: integer\n  def minimize_concatenated_length(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "aa",
+          "ab",
+          "bc"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "words": [
+          "ab",
+          "b"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "aaa",
+          "c",
+          "aba"
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

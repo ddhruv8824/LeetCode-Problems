@@ -53,5 +53,33 @@
     "racket": "(define/contract (compute-area ax1 ay1 ax2 ay2 bx1 by1 bx2 by2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec compute_area(Ax1 :: integer(), Ay1 :: integer(), Ax2 :: integer(), Ay2 :: integer(), Bx1 :: integer(), By1 :: integer(), Bx2 :: integer(), By2 :: integer()) -> integer().\ncompute_area(Ax1, Ay1, Ax2, Ay2, Bx1, By1, Bx2, By2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec compute_area(ax1 :: integer, ay1 :: integer, ax2 :: integer, ay2 :: integer, bx1 :: integer, by1 :: integer, bx2 :: integer, by2 :: integer) :: integer\n  def compute_area(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ax1": -3,
+        "ay1": 0,
+        "ax2": 3,
+        "ay2": 4,
+        "bx1": 0,
+        "by1": -1,
+        "bx2": 9,
+        "by2": 2
+      },
+      "expected": 45
+    },
+    {
+      "args": {
+        "ax1": -2,
+        "ay1": -2,
+        "ax2": 2,
+        "ay2": 2,
+        "bx1": -2,
+        "by1": -2,
+        "bx2": 2,
+        "by2": 2
+      },
+      "expected": 16
+    }
+  ]
 }

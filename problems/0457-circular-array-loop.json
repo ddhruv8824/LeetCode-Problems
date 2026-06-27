@@ -62,5 +62,52 @@
     "racket": "(define/contract (circular-array-loop nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec circular_array_loop(Nums :: [integer()]) -> boolean().\ncircular_array_loop(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec circular_array_loop(nums :: [integer]) :: boolean\n  def circular_array_loop(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          -1,
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          -2,
+          1,
+          -1,
+          -2,
+          -2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          -1,
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

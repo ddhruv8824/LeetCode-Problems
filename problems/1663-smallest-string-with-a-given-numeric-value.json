@@ -50,5 +50,21 @@
     "racket": "(define/contract (get-smallest-string n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec get_smallest_string(N :: integer(), K :: integer()) -> unicode:unicode_binary().\nget_smallest_string(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_smallest_string(n :: integer, k :: integer) :: String.t\n  def get_smallest_string(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 27
+      },
+      "expected": "aay"
+    },
+    {
+      "args": {
+        "n": 5,
+        "k": 73
+      },
+      "expected": "aaszz"
+    }
+  ]
 }

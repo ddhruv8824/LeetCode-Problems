@@ -55,5 +55,41 @@
     "erlang": "-spec is_rectangle_overlap(Rec1 :: [integer()], Rec2 :: [integer()]) -> boolean().\nis_rectangle_overlap(Rec1, Rec2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_rectangle_overlap(rec1 :: [integer], rec2 :: [integer]) :: boolean\n  def is_rectangle_overlap(rec1, rec2) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n### Approach #1: Check Position [Accepted]\n\n**Intuition**\n\nIf the rectangles do not overlap, then `rec1` must either be higher, lower, to the left, or to the right of `rec2`.\n\n**Algorithm**\n\nThe answer for whether they *don't* overlap is `LEFT OR RIGHT OR UP OR DOWN`, where `OR` is the logical OR, and `LEFT` is a boolean that represents whether `rec1` is to the left of `rec2`.  The answer for whether they do overlap is the negation of this.\n\nThe condition \"`rec1` is to the left of `rec2`\" is `rec1[2] <= rec2[0]`, that is the right-most x-coordinate of `rec1` is left of the left-most x-coordinate of `rec2`.  The other cases are similar.\n\n_Note: we should also check if either of the rectangle is actually a line._\nIf this is the case, then we cannot have any positive overlapping according to the definition.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(1)$$.\n\n---\n### Approach #2: Check Area [Accepted]\n\n**Intuition**\n\nIf the rectangles overlap, they have positive area.  This area must be a rectangle where both dimensions are positive, since the boundaries of the intersection are axis aligned.\n\nThus, we can reduce the problem to the one-dimensional problem of determining whether two line segments overlap.\n\n**Algorithm**\n\nSay the area of the intersection is `width * height`, where `width` is the intersection of the rectangles projected onto the x-axis, and `height` is the same for the y-axis.  We want both quantities to be positive.\n\nThe `width` is positive when `min(rec1[2], rec2[2]) > max(rec1[0], rec2[0])`, that is when the smaller of (the largest x-coordinates) is larger than the larger of (the smallest x-coordinates).  The `height` is similar.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n### Approach #1: Check Position [Accepted]\n\n**Intuition**\n\nIf the rectangles do not overlap, then `rec1` must either be higher, lower, to the left, or to the right of `rec2`.\n\n**Algorithm**\n\nThe answer for whether they *don't* overlap is `LEFT OR RIGHT OR UP OR DOWN`, where `OR` is the logical OR, and `LEFT` is a boolean that represents whether `rec1` is to the left of `rec2`.  The answer for whether they do overlap is the negation of this.\n\nThe condition \"`rec1` is to the left of `rec2`\" is `rec1[2] <= rec2[0]`, that is the right-most x-coordinate of `rec1` is left of the left-most x-coordinate of `rec2`.  The other cases are similar.\n\n_Note: we should also check if either of the rectangle is actually a line._\nIf this is the case, then we cannot have any positive overlapping according to the definition.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(1)$$.\n\n---\n### Approach #2: Check Area [Accepted]\n\n**Intuition**\n\nIf the rectangles overlap, they have positive area.  This area must be a rectangle where both dimensions are positive, since the boundaries of the intersection are axis aligned.\n\nThus, we can reduce the problem to the one-dimensional problem of determining whether two line segments overlap.\n\n**Algorithm**\n\nSay the area of the intersection is `width * height`, where `width` is the intersection of the rectangles projected onto the x-axis, and `height` is the same for the y-axis.  We want both quantities to be positive.\n\nThe `width` is positive when `min(rec1[2], rec2[2]) > max(rec1[0], rec2[0])`, that is when the smaller of (the largest x-coordinates) is larger than the larger of (the smallest x-coordinates).  The `height` is similar.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "rec1": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "rec2": [
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "rec1": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "rec2": [
+          1,
+          0,
+          2,
+          1
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

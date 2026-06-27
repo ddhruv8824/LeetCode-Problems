@@ -47,5 +47,73 @@
     "racket": "(define fancy%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; append : exact-integer? -> void?\n    (define/public (append val)\n      )\n    ; add-all : exact-integer? -> void?\n    (define/public (add-all inc)\n      )\n    ; mult-all : exact-integer? -> void?\n    (define/public (mult-all m)\n      )\n    ; get-index : exact-integer? -> exact-integer?\n    (define/public (get-index idx)\n      )))\n\n;; Your fancy% object will be instantiated and called as such:\n;; (define obj (new fancy%))\n;; (send obj append val)\n;; (send obj add-all inc)\n;; (send obj mult-all m)\n;; (define param_4 (send obj get-index idx))",
     "erlang": "-spec fancy_init_() -> any().\nfancy_init_() ->\n  .\n\n-spec fancy_append(Val :: integer()) -> any().\nfancy_append(Val) ->\n  .\n\n-spec fancy_add_all(Inc :: integer()) -> any().\nfancy_add_all(Inc) ->\n  .\n\n-spec fancy_mult_all(M :: integer()) -> any().\nfancy_mult_all(M) ->\n  .\n\n-spec fancy_get_index(Idx :: integer()) -> integer().\nfancy_get_index(Idx) ->\n  .\n\n\n%% Your functions will be called as such:\n%% fancy_init_(),\n%% fancy_append(Val),\n%% fancy_add_all(Inc),\n%% fancy_mult_all(M),\n%% Param_4 = fancy_get_index(Idx),\n\n%% fancy_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule Fancy do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec append(val :: integer) :: any\n  def append(val) do\n    \n  end\n\n  @spec add_all(inc :: integer) :: any\n  def add_all(inc) do\n    \n  end\n\n  @spec mult_all(m :: integer) :: any\n  def mult_all(m) do\n    \n  end\n\n  @spec get_index(idx :: integer) :: integer\n  def get_index(idx) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# Fancy.init_()\n# Fancy.append(val)\n# Fancy.add_all(inc)\n# Fancy.mult_all(m)\n# param_4 = Fancy.get_index(idx)\n\n# Fancy.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "Fancy",
+        "append",
+        "addAll",
+        "append",
+        "multAll",
+        "getIndex",
+        "addAll",
+        "append",
+        "multAll",
+        "getIndex",
+        "getIndex",
+        "getIndex"
+      ],
+      "args": [
+        [],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          0
+        ],
+        [
+          3
+        ],
+        [
+          10
+        ],
+        [
+          2
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        10,
+        null,
+        null,
+        null,
+        26,
+        34,
+        20
+      ]
+    }
+  ]
 }

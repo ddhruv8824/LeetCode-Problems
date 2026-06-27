@@ -71,5 +71,133 @@
     "racket": "(define/contract (placed-coins edges cost)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec placed_coins(Edges :: [[integer()]], Cost :: [integer()]) -> [integer()].\nplaced_coins(Edges, Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec placed_coins(edges :: [[integer]], cost :: [integer]) :: [integer]\n  def placed_coins(edges, cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "cost": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "expected": [
+        120,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ]
+        ],
+        "cost": [
+          1,
+          4,
+          2,
+          3,
+          5,
+          7,
+          8,
+          -4,
+          2
+        ]
+      },
+      "expected": [
+        280,
+        140,
+        32,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "cost": [
+          1,
+          2,
+          -2
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
 }

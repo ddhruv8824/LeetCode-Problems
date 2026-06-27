@@ -57,5 +57,53 @@
     "racket": "(define/contract (min-cost-connect-points points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec min_cost_connect_points(Points :: [[integer()]]) -> integer().\nmin_cost_connect_points(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost_connect_points(points :: [[integer]]) :: integer\n  def min_cost_connect_points(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            7,
+            0
+          ]
+        ]
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "points": [
+          [
+            3,
+            12
+          ],
+          [
+            -2,
+            5
+          ],
+          [
+            -4,
+            1
+          ]
+        ]
+      },
+      "expected": 18
+    }
+  ]
 }

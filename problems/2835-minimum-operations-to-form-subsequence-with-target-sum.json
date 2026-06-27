@@ -61,5 +61,41 @@
     "racket": "(define/contract (min-operations nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_operations(Nums :: [integer()], Target :: integer()) -> integer().\nmin_operations(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], target :: integer) :: integer\n  def min_operations(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          8
+        ],
+        "target": 7
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          32,
+          1,
+          2
+        ],
+        "target": 12
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          32,
+          1
+        ],
+        "target": 35
+      },
+      "expected": -1
+    }
+  ]
 }

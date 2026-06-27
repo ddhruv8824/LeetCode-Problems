@@ -54,5 +54,40 @@
     "racket": "(define/contract (num-moves-stones a b c)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec num_moves_stones(A :: integer(), B :: integer(), C :: integer()) -> [integer()].\nnum_moves_stones(A, B, C) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_moves_stones(a :: integer, b :: integer, c :: integer) :: [integer]\n  def num_moves_stones(a, b, c) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 1,
+        "b": 2,
+        "c": 5
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "a": 4,
+        "b": 3,
+        "c": 2
+      },
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "a": 3,
+        "b": 5,
+        "c": 1
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

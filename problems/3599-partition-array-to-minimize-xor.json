@@ -60,5 +60,43 @@
     "racket": "(define/contract (min-xor nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_xor(Nums :: [integer()], K :: integer()) -> integer().\nmin_xor(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_xor(nums :: [integer], k :: integer) :: integer\n  def min_xor(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "k": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          3,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          3,
+          1
+        ],
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

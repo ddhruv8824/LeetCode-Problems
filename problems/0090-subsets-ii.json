@@ -48,5 +48,51 @@
     "racket": "(define/contract (subsets-with-dup nums)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec subsets_with_dup(Nums :: [integer()]) -> [[integer()]].\nsubsets_with_dup(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subsets_with_dup(nums :: [integer]) :: [[integer]]\n  def subsets_with_dup(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0
+        ]
+      },
+      "expected": [
+        [],
+        [
+          0
+        ]
+      ]
+    }
+  ]
 }

@@ -62,5 +62,93 @@
     "racket": "(define/contract (box-delivering boxes portsCount maxBoxes maxWeight)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec box_delivering(Boxes :: [[integer()]], PortsCount :: integer(), MaxBoxes :: integer(), MaxWeight :: integer()) -> integer().\nbox_delivering(Boxes, PortsCount, MaxBoxes, MaxWeight) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec box_delivering(boxes :: [[integer]], ports_count :: integer, max_boxes :: integer, max_weight :: integer) :: integer\n  def box_delivering(boxes, ports_count, max_boxes, max_weight) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "boxes": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "portsCount": 2,
+        "maxBoxes": 3,
+        "maxWeight": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "boxes": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "portsCount": 3,
+        "maxBoxes": 3,
+        "maxWeight": 6
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "boxes": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "portsCount": 3,
+        "maxBoxes": 6,
+        "maxWeight": 7
+      },
+      "expected": 6
+    }
+  ]
 }

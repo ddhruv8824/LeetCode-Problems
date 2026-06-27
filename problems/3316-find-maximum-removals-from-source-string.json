@@ -68,5 +68,55 @@
     "racket": "(define/contract (max-removals source pattern targetIndices)\n  (-> string? string? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_removals(Source :: unicode:unicode_binary(), Pattern :: unicode:unicode_binary(), TargetIndices :: [integer()]) -> integer().\nmax_removals(Source, Pattern, TargetIndices) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_removals(source :: String.t, pattern :: String.t, target_indices :: [integer]) :: integer\n  def max_removals(source, pattern, target_indices) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "source": "abbaa",
+        "pattern": "aba",
+        "targetIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "source": "bcda",
+        "pattern": "d",
+        "targetIndices": [
+          0,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "source": "dda",
+        "pattern": "dda",
+        "targetIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "source": "yeyeykyded",
+        "pattern": "yeyyd",
+        "targetIndices": [
+          0,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -58,5 +58,36 @@
     "racket": "(define/contract (stone-game-ix stones)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec stone_game_ix(Stones :: [integer()]) -> boolean().\nstone_game_ix(Stones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec stone_game_ix(stones :: [integer]) :: boolean\n  def stone_game_ix(stones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          2,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "stones": [
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "stones": [
+          5,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

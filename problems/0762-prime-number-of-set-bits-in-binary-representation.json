@@ -49,5 +49,21 @@
     "racket": "(define/contract (count-prime-set-bits left right)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_prime_set_bits(Left :: integer(), Right :: integer()) -> integer().\ncount_prime_set_bits(Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_prime_set_bits(left :: integer, right :: integer) :: integer\n  def count_prime_set_bits(left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "L": 6,
+        "R": 10
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "L": 10,
+        "R": 15
+      },
+      "expected": 5
+    }
+  ]
 }

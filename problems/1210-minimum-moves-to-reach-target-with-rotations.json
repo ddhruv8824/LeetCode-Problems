@@ -52,5 +52,19 @@
     "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_moves(grid)\n    \nend",
     "scala": "object Solution {\n    def minimumMoves(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn minimum_moves(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": "[[0,0,0,0,0,1]"
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "grid": "[[0,0,1,1,1,1]"
+      },
+      "expected": 9
+    }
+  ]
 }

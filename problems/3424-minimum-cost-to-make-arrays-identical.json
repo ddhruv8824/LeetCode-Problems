@@ -54,5 +54,37 @@
     "racket": "(define/contract (min-cost arr brr k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_cost(Arr :: [integer()], Brr :: [integer()], K :: integer()) -> integer().\nmin_cost(Arr, Brr, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost(arr :: [integer], brr :: [integer], k :: integer) :: integer\n  def min_cost(arr, brr, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          -7,
+          9,
+          5
+        ],
+        "brr": [
+          7,
+          -2,
+          -5
+        ],
+        "k": 2
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "arr": [
+          2,
+          1
+        ],
+        "brr": [
+          2,
+          1
+        ],
+        "k": 0
+      },
+      "expected": 0
+    }
+  ]
 }

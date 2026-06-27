@@ -59,5 +59,29 @@
     "scala": "object Solution {\r\n    def waysToBuildRooms(prevRoom: Array[Int]): Int = {\r\n        \r\n    }\r\n}",
     "rust": "impl Solution {\r\n    pub fn ways_to_build_rooms(prev_room: Vec<i32>) -> i32 {\r\n        \r\n    }\r\n}",
     "racket": "(define/contract (ways-to-build-rooms prevRoom)\r\n  (-> (listof exact-integer?) exact-integer?)\r\n\r\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "prevRoom": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "prevRoom": [
+          -1,
+          0,
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -54,5 +54,36 @@
     "racket": "(define/contract (find-disappeared-numbers nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_disappeared_numbers(Nums :: [integer()]) -> [integer()].\nfind_disappeared_numbers(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_disappeared_numbers(nums :: [integer]) :: [integer]\n  def find_disappeared_numbers(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          7,
+          8,
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": [
+        5,
+        6
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1
+        ]
+      },
+      "expected": [
+        2
+      ]
+    }
+  ]
 }

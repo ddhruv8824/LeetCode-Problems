@@ -55,5 +55,25 @@
     "erlang": "-spec first_uniq_char(S :: unicode:unicode_binary()) -> integer().\nfirst_uniq_char(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec first_uniq_char(s :: String.t) :: integer\n  def first_uniq_char(s) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Video Solution\n---## Solution Article\n\n---\n\n### Approach 1: Linear time solution\n\nThe best possible solution here could be of a linear time because to ensure that the character is unique you have to check the whole string anyway. \n\nThe idea is to go through the string and save in a hash map the number of times each character appears in the string. That would take $$\\mathcal{O}(N)$$ time, where `N` is the number of characters in the string.\n \nThen we go through the string the second time, this time we use the hash map as a reference to check if a character is unique or not. If the character is unique, one could just return its index. The complexity of the second iteration is $$\\mathcal{O}(N)$$ as well.\n\n!?!../Documents/387_LIS.json:1000,621!?!**Complexity Analysis**\n\n* Time complexity: $$\\mathcal{O}(N)$$ since we go through the string of length `N` two times. \n* Space complexity: $$\\mathcal{O}(1)$$ because English alphabet contains 26 letters."
+  "solution": "[TOC]\n\n## Video Solution\n---## Solution Article\n\n---\n\n### Approach 1: Linear time solution\n\nThe best possible solution here could be of a linear time because to ensure that the character is unique you have to check the whole string anyway. \n\nThe idea is to go through the string and save in a hash map the number of times each character appears in the string. That would take $$\\mathcal{O}(N)$$ time, where `N` is the number of characters in the string.\n \nThen we go through the string the second time, this time we use the hash map as a reference to check if a character is unique or not. If the character is unique, one could just return its index. The complexity of the second iteration is $$\\mathcal{O}(N)$$ as well.\n\n!?!../Documents/387_LIS.json:1000,621!?!**Complexity Analysis**\n\n* Time complexity: $$\\mathcal{O}(N)$$ since we go through the string of length `N` two times. \n* Space complexity: $$\\mathcal{O}(1)$$ because English alphabet contains 26 letters.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "loveleetcode"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "aabb"
+      },
+      "expected": -1
+    }
+  ]
 }

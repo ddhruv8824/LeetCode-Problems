@@ -61,5 +61,47 @@
     "racket": "(define/contract (find-subtree-sizes parent s)\n  (-> (listof exact-integer?) string? (listof exact-integer?))\n  )",
     "erlang": "-spec find_subtree_sizes(Parent :: [integer()], S :: unicode:unicode_binary()) -> [integer()].\nfind_subtree_sizes(Parent, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_subtree_sizes(parent :: [integer], s :: String.t) :: [integer]\n  def find_subtree_sizes(parent, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "s": "abaabc"
+      },
+      "expected": [
+        6,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          4,
+          0,
+          1
+        ],
+        "s": "abbba"
+      },
+      "expected": [
+        5,
+        2,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
 }

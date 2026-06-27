@@ -47,5 +47,31 @@
     "racket": "(define/contract (number-of-arithmetic-slices nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_arithmetic_slices(Nums :: [integer()]) -> integer().\nnumber_of_arithmetic_slices(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_arithmetic_slices(nums :: [integer]) :: integer\n  def number_of_arithmetic_slices(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          6,
+          8,
+          10
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

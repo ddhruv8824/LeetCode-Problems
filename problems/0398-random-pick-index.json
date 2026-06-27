@@ -46,5 +46,42 @@
     "racket": "(define solution%\n  (class object%\n    (super-new)\n    \n    ; nums : (listof exact-integer?)\n    (init-field\n      nums)\n    \n    ; pick : exact-integer? -> exact-integer?\n    (define/public (pick target)\n      )))\n\n;; Your solution% object will be instantiated and called as such:\n;; (define obj (new solution% [nums nums]))\n;; (define param_1 (send obj pick target))",
     "erlang": "-spec solution_init_(Nums :: [integer()]) -> any().\nsolution_init_(Nums) ->\n  .\n\n-spec solution_pick(Target :: integer()) -> integer().\nsolution_pick(Target) ->\n  .\n\n\n%% Your functions will be called as such:\n%% solution_init_(Nums),\n%% Param_1 = solution_pick(Target),\n\n%% solution_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule Solution do\n  @spec init_(nums :: [integer]) :: any\n  def init_(nums) do\n    \n  end\n\n  @spec pick(target :: integer) :: integer\n  def pick(target) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# Solution.init_(nums)\n# param_1 = Solution.pick(target)\n\n# Solution.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "Solution",
+        "pick",
+        "pick"
+      ],
+      "args": [
+        [
+          [
+            1,
+            2,
+            3,
+            3,
+            3
+          ]
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          0
+        ]
+      ]
+    }
+  ]
 }

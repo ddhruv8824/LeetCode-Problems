@@ -50,5 +50,27 @@
     "racket": ";; This is the interface that allows for creating nested lists.\n;; You should not implement it, or speculate about its implementation\n\n#|\n\n(define nested-integer%\n  (class object%\n    ...\n\n    ; Return true if this nested-integer% holds a single integer, rather than a nested list.\n    ; -> boolean?\n    (define/public (is-integer)\n      ...)\n\n    ; Return the single integer that this nested-integer% holds, if it holds a single integer,\n    ; or #f if this nested-integer% holds a nested list.\n    ; -> integer?\n    (define/public (get-integer)\n      ...)\n\n    ; Set this nested-integer% to hold a single integer equal to value.\n    ; -> integer? void?\n    (define/public (set-integer i)\n      ...)\n\n    ; Set this nested-integer% to hold a nested list and adds a nested integer elem to it.\n    ; -> (is-a?/c nested-integer%) void?\n    (define/public (add ni)\n      ...)\n\n    ; Return the nested list that this nested-integer% holds,\n    ; or an empty list if this nested-integer% holds a single integer.\n    ; -> gvector?\n    (define/public (get-list)\n      ...)))\n\n|#\n\n(define/contract (deserialize s)\n  (-> string? (is-a?/c nested-integer%))\n  )",
     "erlang": "%% % This is the interface that allows for creating nested lists.\n%% % You should not implement it, or speculate about its implementation\n%%\n%% % Create an empty nested list.\n%% nested_integer:new() -> nested_integer().\n%%\n%% % Create a single integer.\n%% nested_integer:new(Val :: integer()) -> nested_integer().\n%%\n%% % Return true if argument NestedInteger holds a single integer, rather than a nested list.\n%% nested_integer:is_integer(NestedInteger :: nested_integer()) -> boolean().\n%%\n%% % Return the single integer that NestedInteger holds, if it holds a single integer.\n%% % The result is undefined if it holds a nested list.\n%% nested_integer:get_integer(NestedInteger :: nested_integer()) -> integer().\n%%\n%% % Return a copy of argument NestedInteger with it set to hold a single integer Val.\n%% nested_integer:set_integer(NestedInteger :: nested_integer(), Val :: integer()) -> nested_integer().\n%%\n%% % Return a copy of argument NestedInteger with it set to hold a nested list and adds a nested_integer Elem to it.\n%% nested_integer:add(NestedInteger :: nested_integer(), Elem :: nested_integer()) -> nested_integer().\n%%\n%% % Return the nested list that NestedInteger holds, if it holds a nested list.\n%% % The result is undefined if it holds a single integer.\n%% nested_integer:get_list(NestedInteger :: nested_integer()) -> array:array(nested_integer()).\n\n-spec deserialize(S :: unicode:unicode_binary()) -> nested_integer:nested_integer().\ndeserialize(S) ->\n  .",
     "elixir": "# # This is the interface that allows for creating nested lists.\n# # You should not implement it, or speculate about its implementation\n#\n# # Create an empty nested list.\n# :nested_integer.new() :: :nested_integer.nested_integer\n#\n# # Create a single integer.\n# :nested_integer.new(val :: integer) :: :nested_integer.nested_integer\n#\n# # Return true if argument nested_integer holds a single integer, rather than a nested list.\n# :nested_integer.is_integer(nested_integer :: :nested_integer.nested_integer) :: boolean\n#\n# # Return the single integer that nested_integer holds, if it holds a single integer\n# # The result is undefined if it holds a nested list.\n# :nested_integer.get_integer(nested_integer :: :nested_integer.nested_integer) :: integer\n#\n# # Return a copy of argument nested_integer with it set to hold a single integer val.\n# :nested_integer.set_integer(nested_integer :: :nested_integer.nested_integer, val :: integer) :: :nested_integer.nested_integer\n#\n# # Return a copy of argument nested_integer with it set to hold a nested list and adds a nested_integer elem to it.\n# :nested_integer.add(nested_integer :: :nested_integer.nested_integer, elem :: :nested_integer.nested_integer) :: :nested_integer.nested_integer\n#\n# # Return the nested list that nested_integer holds, if it holds a nested list.\n# # The result is undefined if it holds a single integer.\n# :nested_integer.get_list(nested_integer :: :nested_integer.nested_integer) :: :array.array(:nested_integer.nested_integer)\n\ndefmodule Solution do\n  @spec deserialize(s :: String.t) :: :nested_integer.nested_integer\n  def deserialize(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "324"
+      },
+      "expected": 324
+    },
+    {
+      "args": {
+        "s": "[123,[456,[789]]]"
+      },
+      "expected": [
+        123,
+        [
+          456,
+          [
+            789
+          ]
+        ]
+      ]
+    }
+  ]
 }

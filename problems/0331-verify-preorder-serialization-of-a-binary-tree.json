@@ -60,5 +60,37 @@
     "racket": "(define/contract (is-valid-serialization preorder)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_valid_serialization(Preorder :: unicode:unicode_binary()) -> boolean().\nis_valid_serialization(Preorder) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_valid_serialization(preorder :: String.t) :: boolean\n  def is_valid_serialization(preorder) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "preorder": "9,3,4,#,#,1,#,#,2,#,6,#,#"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "preorder": "1,#"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "preorder": "9,#,#,1"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "preorder": "#"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "preorder": "#,1,#"
+      },
+      "expected": false
+    }
+  ]
 }

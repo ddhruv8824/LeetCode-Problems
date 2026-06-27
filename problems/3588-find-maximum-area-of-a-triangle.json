@@ -58,5 +58,49 @@
     "racket": "(define/contract (max-area coords)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_area(Coords :: [[integer()]]) -> integer().\nmax_area(Coords) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_area(coords :: [[integer]]) :: integer\n  def max_area(coords) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coords": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "coords": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

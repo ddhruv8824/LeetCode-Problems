@@ -55,5 +55,38 @@
     "erlang": "-spec max_increase_keeping_skyline(Grid :: [[integer()]]) -> integer().\nmax_increase_keeping_skyline(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_increase_keeping_skyline(grid :: [[integer]]) :: integer\n  def max_increase_keeping_skyline(grid) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Row and Column Maximums [Accepted]\n\n**Intuition and Algorithm**\n\nThe skyline looking from the top is `col_maxes = [max(column_0), max(column_1), ...]`.  Similarly, the skyline from the left is `row_maxes [max(row_0), max(row_1), ...]`\n\nIn particular, each building `grid[r][c]` could become height `min(max(row_r), max(col_c))`, and this is the largest such height.  If it were larger, say `grid[r][c] > max(row_r)`, then the part of the skyline `row_maxes = [..., max(row_r), ...]` would change.\n\nThese increases are also independent (none of them change the skyline), so we can perform them independently.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the number of rows (and columns) of the grid.  We iterate through every cell of the grid.\n\n* Space Complexity: $$O(N)$$, the space used by `row_maxes` and `col_maxes`."
+  "solution": "[TOC]\n\n---\n### Approach #1: Row and Column Maximums [Accepted]\n\n**Intuition and Algorithm**\n\nThe skyline looking from the top is `col_maxes = [max(column_0), max(column_1), ...]`.  Similarly, the skyline from the left is `row_maxes [max(row_0), max(row_1), ...]`\n\nIn particular, each building `grid[r][c]` could become height `min(max(row_r), max(col_c))`, and this is the largest such height.  If it were larger, say `grid[r][c] > max(row_r)`, then the part of the skyline `row_maxes = [..., max(row_r), ...]` would change.\n\nThese increases are also independent (none of them change the skyline), so we can perform them independently.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the number of rows (and columns) of the grid.  We iterate through every cell of the grid.\n\n* Space Complexity: $$O(N)$$, the space used by `row_maxes` and `col_maxes`.",
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            0,
+            8,
+            4
+          ],
+          [
+            2,
+            4,
+            5,
+            7
+          ],
+          [
+            9,
+            2,
+            6,
+            3
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 35
+    }
+  ]
 }

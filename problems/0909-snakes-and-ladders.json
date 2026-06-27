@@ -54,5 +54,62 @@
     "racket": "(define/contract (snakes-and-ladders board)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec snakes_and_ladders(Board :: [[integer()]]) -> integer().\nsnakes_and_ladders(Board) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec snakes_and_ladders(board :: [[integer]]) :: integer\n  def snakes_and_ladders(board) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            35,
+            -1,
+            -1,
+            13,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            15,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

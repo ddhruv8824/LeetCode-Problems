@@ -55,5 +55,49 @@
     "racket": "(define/contract (find-x-sum nums k x)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec find_x_sum(Nums :: [integer()], K :: integer(), X :: integer()) -> [integer()].\nfind_x_sum(Nums, K, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_x_sum(nums :: [integer], k :: integer, x :: integer) :: [integer]\n  def find_x_sum(nums, k, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          4,
+          2,
+          3
+        ],
+        "k": 6,
+        "x": 2
+      },
+      "expected": [
+        6,
+        10,
+        12
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          8,
+          7,
+          8,
+          7,
+          5
+        ],
+        "k": 2,
+        "x": 2
+      },
+      "expected": [
+        11,
+        15,
+        15,
+        15,
+        12
+      ]
+    }
+  ]
 }

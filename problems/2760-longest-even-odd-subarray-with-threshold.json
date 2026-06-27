@@ -55,5 +55,41 @@
     "racket": "(define/contract (longest-alternating-subarray nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec longest_alternating_subarray(Nums :: [integer()], Threshold :: integer()) -> integer().\nlongest_alternating_subarray(Nums, Threshold) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_alternating_subarray(nums :: [integer], threshold :: integer) :: integer\n  def longest_alternating_subarray(nums, threshold) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          5,
+          4
+        ],
+        "threshold": 5
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ],
+        "threshold": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "threshold": 4
+      },
+      "expected": 3
+    }
+  ]
 }

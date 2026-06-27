@@ -58,5 +58,44 @@
     "racket": "(define/contract (check-prime-frequency nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec check_prime_frequency(Nums :: [integer()]) -> boolean().\ncheck_prime_frequency(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_prime_frequency(nums :: [integer]) :: boolean\n  def check_prime_frequency(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          4
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          2,
+          4,
+          4
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

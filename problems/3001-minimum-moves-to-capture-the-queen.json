@@ -54,5 +54,29 @@
     "racket": "(define/contract (min-moves-to-capture-the-queen a b c d e f)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_moves_to_capture_the_queen(A :: integer(), B :: integer(), C :: integer(), D :: integer(), E :: integer(), F :: integer()) -> integer().\nmin_moves_to_capture_the_queen(A, B, C, D, E, F) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves_to_capture_the_queen(a :: integer, b :: integer, c :: integer, d :: integer, e :: integer, f :: integer) :: integer\n  def min_moves_to_capture_the_queen(a, b, c, d, e, f) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 1,
+        "b": 1,
+        "c": 8,
+        "d": 8,
+        "e": 2,
+        "f": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "a": 5,
+        "b": 3,
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 2
+      },
+      "expected": 1
+    }
+  ]
 }

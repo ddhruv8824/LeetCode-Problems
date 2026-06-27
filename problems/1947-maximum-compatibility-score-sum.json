@@ -56,5 +56,79 @@
     "racket": "(define/contract (max-compatibility-sum students mentors)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_compatibility_sum(Students :: [[integer()]], Mentors :: [[integer()]]) -> integer().\nmax_compatibility_sum(Students, Mentors) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_compatibility_sum(students :: [[integer]], mentors :: [[integer]]) :: integer\n  def max_compatibility_sum(students, mentors) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "students": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "mentors": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "students": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "mentors": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

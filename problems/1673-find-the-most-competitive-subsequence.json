@@ -52,5 +52,43 @@
     "racket": "(define/contract (most-competitive nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec most_competitive(Nums :: [integer()], K :: integer()) -> [integer()].\nmost_competitive(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_competitive(nums :: [integer], k :: integer) :: [integer]\n  def most_competitive(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          2,
+          6
+        ],
+        "k": 2
+      },
+      "expected": [
+        2,
+        6
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          3,
+          3,
+          5,
+          4,
+          9,
+          6
+        ],
+        "k": 4
+      },
+      "expected": [
+        2,
+        3,
+        3,
+        4
+      ]
+    }
+  ]
 }

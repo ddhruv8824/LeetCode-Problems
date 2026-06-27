@@ -53,5 +53,25 @@
     "racket": "(define/contract (number-of-steps num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_steps(Num :: integer()) -> integer().\nnumber_of_steps(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_steps(num :: integer) :: integer\n  def number_of_steps(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 14
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "num": 8
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "num": 123
+      },
+      "expected": 12
+    }
+  ]
 }

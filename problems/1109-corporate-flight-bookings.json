@@ -50,5 +50,57 @@
     "racket": "(define/contract (corp-flight-bookings bookings n)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec corp_flight_bookings(Bookings :: [[integer()]], N :: integer()) -> [integer()].\ncorp_flight_bookings(Bookings, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec corp_flight_bookings(bookings :: [[integer]], n :: integer) :: [integer]\n  def corp_flight_bookings(bookings, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "bookings": [
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            2,
+            3,
+            20
+          ],
+          [
+            2,
+            5,
+            25
+          ]
+        ],
+        "n": 5
+      },
+      "expected": [
+        10,
+        55,
+        45,
+        25,
+        25
+      ]
+    },
+    {
+      "args": {
+        "bookings": [
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            2,
+            2,
+            15
+          ]
+        ],
+        "n": 2
+      },
+      "expected": [
+        10,
+        25
+      ]
+    }
+  ]
 }

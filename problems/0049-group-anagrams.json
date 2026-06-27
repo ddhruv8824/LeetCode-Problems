@@ -55,5 +55,33 @@
     "racket": "(define/contract (group-anagrams strs)\n  (-> (listof string?) (listof (listof string?)))\n  )",
     "erlang": "-spec group_anagrams(Strs :: [unicode:unicode_binary()]) -> [[unicode:unicode_binary()]].\ngroup_anagrams(Strs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec group_anagrams(strs :: [String.t]) :: [[String.t]]\n  def group_anagrams(strs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strs": [
+          "eat",
+          "tea",
+          "tan",
+          "ate",
+          "nat",
+          "bat"
+        ]
+      },
+      "expected": [
+        [
+          "eat",
+          "tea",
+          "ate"
+        ],
+        [
+          "tan",
+          "nat"
+        ],
+        [
+          "bat"
+        ]
+      ]
+    }
+  ]
 }

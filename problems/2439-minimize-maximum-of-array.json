@@ -55,5 +55,27 @@
     "racket": "(define/contract (minimize-array-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimize_array_value(Nums :: [integer()]) -> integer().\nminimize_array_value(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_array_value(nums :: [integer]) :: integer\n  def minimize_array_value(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          7,
+          1,
+          6
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          1
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

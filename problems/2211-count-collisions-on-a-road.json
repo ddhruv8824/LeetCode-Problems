@@ -52,5 +52,19 @@
     "racket": "(define/contract (count-collisions directions)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec count_collisions(Directions :: unicode:unicode_binary()) -> integer().\ncount_collisions(Directions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_collisions(directions :: String.t) :: integer\n  def count_collisions(directions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "directions": "RLRSLL"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "directions": "LLRR"
+      },
+      "expected": 0
+    }
+  ]
 }

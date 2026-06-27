@@ -54,5 +54,45 @@
     "racket": "(define/contract (minimum-finish-time tires changeTime numLaps)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_finish_time(Tires :: [[integer()]], ChangeTime :: integer(), NumLaps :: integer()) -> integer().\nminimum_finish_time(Tires, ChangeTime, NumLaps) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_finish_time(tires :: [[integer]], change_time :: integer, num_laps :: integer) :: integer\n  def minimum_finish_time(tires, change_time, num_laps) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tires": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "changeTime": 5,
+        "numLaps": 4
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "tires": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "changeTime": 6,
+        "numLaps": 5
+      },
+      "expected": 25
+    }
+  ]
 }

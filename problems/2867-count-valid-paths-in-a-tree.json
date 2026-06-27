@@ -64,5 +64,59 @@
     "racket": "(define/contract (count-paths n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec count_paths(N :: integer(), Edges :: [[integer()]]) -> integer().\ncount_paths(N, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_paths(n :: integer, edges :: [[integer]]) :: integer\n  def count_paths(n, edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 6,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -34,5 +34,44 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "salaries": [
+          100,
+          200,
+          300
+        ]
+      },
+      "expected": 200
+    },
+    {
+      "args": {
+        "salaries": [
+          100
+        ]
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "salaries": [
+          100,
+          100,
+          100
+        ]
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "salaries": [
+          200,
+          100
+        ]
+      },
+      "expected": 100
+    }
+  ]
 }

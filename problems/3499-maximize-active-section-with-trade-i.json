@@ -61,5 +61,31 @@
     "racket": "(define/contract (max-active-sections-after-trade s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_active_sections_after_trade(S :: unicode:unicode_binary()) -> integer().\nmax_active_sections_after_trade(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_active_sections_after_trade(s :: String.t) :: integer\n  def max_active_sections_after_trade(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "01"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "0100"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "1000100"
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "01010"
+      },
+      "expected": 4
+    }
+  ]
 }

@@ -45,5 +45,61 @@
     "racket": "(define my-hash-map%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; put : exact-integer? exact-integer? -> void?\n    (define/public (put key value)\n      )\n    ; get : exact-integer? -> exact-integer?\n    (define/public (get key)\n      )\n    ; remove : exact-integer? -> void?\n    (define/public (remove key)\n      )))\n\n;; Your my-hash-map% object will be instantiated and called as such:\n;; (define obj (new my-hash-map%))\n;; (send obj put key value)\n;; (define param_2 (send obj get key))\n;; (send obj remove key)",
     "erlang": "-spec my_hash_map_init_() -> any().\nmy_hash_map_init_() ->\n  .\n\n-spec my_hash_map_put(Key :: integer(), Value :: integer()) -> any().\nmy_hash_map_put(Key, Value) ->\n  .\n\n-spec my_hash_map_get(Key :: integer()) -> integer().\nmy_hash_map_get(Key) ->\n  .\n\n-spec my_hash_map_remove(Key :: integer()) -> any().\nmy_hash_map_remove(Key) ->\n  .\n\n\n%% Your functions will be called as such:\n%% my_hash_map_init_(),\n%% my_hash_map_put(Key, Value),\n%% Param_2 = my_hash_map_get(Key),\n%% my_hash_map_remove(Key),\n\n%% my_hash_map_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MyHashMap do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec put(key :: integer, value :: integer) :: any\n  def put(key, value) do\n    \n  end\n\n  @spec get(key :: integer) :: integer\n  def get(key) do\n    \n  end\n\n  @spec remove(key :: integer) :: any\n  def remove(key) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MyHashMap.init_()\n# MyHashMap.put(key, value)\n# param_2 = MyHashMap.get(key)\n# MyHashMap.remove(key)\n\n# MyHashMap.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MyHashMap",
+        "put",
+        "put",
+        "get",
+        "get",
+        "put",
+        "get",
+        "remove",
+        "get"
+      ],
+      "args": [
+        [],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        -1,
+        null,
+        1,
+        null,
+        -1
+      ]
+    }
+  ]
 }

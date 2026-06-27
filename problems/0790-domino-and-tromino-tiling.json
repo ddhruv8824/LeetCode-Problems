@@ -49,5 +49,19 @@
     "racket": "(define/contract (num-tilings n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_tilings(N :: integer()) -> integer().\nnum_tilings(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_tilings(n :: integer) :: integer\n  def num_tilings(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    }
+  ]
 }

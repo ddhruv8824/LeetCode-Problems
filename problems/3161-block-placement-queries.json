@@ -61,5 +61,71 @@
     "racket": "(define/contract (get-results queries)\n  (-> (listof (listof exact-integer?)) (listof boolean?))\n  )",
     "erlang": "-spec get_results(Queries :: [[integer()]]) -> [boolean()].\nget_results(Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_results(queries :: [[integer]]) :: [boolean]\n  def get_results(queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            7,
+            5
+          ],
+          [
+            2,
+            7,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        true,
+        true,
+        false
+      ]
+    }
+  ]
 }

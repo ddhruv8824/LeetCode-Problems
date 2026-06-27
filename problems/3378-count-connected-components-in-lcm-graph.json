@@ -59,5 +59,34 @@
     "racket": "(define/contract (count-components nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_components(Nums :: [integer()], Threshold :: integer()) -> integer().\ncount_components(Nums, Threshold) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_components(nums :: [integer], threshold :: integer) :: integer\n  def count_components(nums, threshold) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          8,
+          3,
+          9
+        ],
+        "threshold": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          8,
+          3,
+          9,
+          12
+        ],
+        "threshold": 10
+      },
+      "expected": 2
+    }
+  ]
 }

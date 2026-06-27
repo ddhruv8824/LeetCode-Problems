@@ -57,5 +57,49 @@
     "racket": "(define/contract (subsequences-with-middle-mode nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec subsequences_with_middle_mode(Nums :: [integer()]) -> integer().\nsubsequences_with_middle_mode(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subsequences_with_middle_mode(nums :: [integer]) :: integer\n  def subsequences_with_middle_mode(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

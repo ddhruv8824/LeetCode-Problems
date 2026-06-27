@@ -54,5 +54,25 @@
     "racket": "(define/contract (alternate-digit-sum n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec alternate_digit_sum(N :: integer()) -> integer().\nalternate_digit_sum(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec alternate_digit_sum(n :: integer) :: integer\n  def alternate_digit_sum(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 521
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 111
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 886996
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -62,5 +62,96 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (sufficient-subset root limit)\n  (-> (or/c tree-node? #f) exact-integer? (or/c tree-node? #f))\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec sufficient_subset(Root :: #tree_node{} | null, Limit :: integer()) -> #tree_node{} | null.\nsufficient_subset(Root, Limit) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec sufficient_subset(root :: TreeNode.t | nil, limit :: integer) :: TreeNode.t | nil\n  def sufficient_subset(root, limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          -99,
+          -99,
+          7,
+          8,
+          9,
+          -99,
+          -99,
+          12,
+          13,
+          -99,
+          14
+        ],
+        "limit": 1
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        null,
+        null,
+        7,
+        8,
+        9,
+        null,
+        14
+      ]
+    },
+    {
+      "args": {
+        "root": [
+          5,
+          4,
+          8,
+          11,
+          null,
+          17,
+          4,
+          7,
+          1,
+          null,
+          null,
+          5,
+          3
+        ],
+        "limit": 22
+      },
+      "expected": [
+        5,
+        4,
+        8,
+        11,
+        null,
+        17,
+        4,
+        7,
+        null,
+        null,
+        null,
+        5
+      ]
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          -3,
+          -5,
+          null,
+          4,
+          null
+        ],
+        "limit": -1
+      },
+      "expected": [
+        1,
+        null,
+        -3,
+        4
+      ]
+    }
+  ]
 }

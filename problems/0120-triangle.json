@@ -49,5 +49,32 @@
     "racket": "(define/contract (minimum-total triangle)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_total(Triangle :: [[integer()]]) -> integer().\nminimum_total(Triangle) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_total(triangle :: [[integer]]) :: integer\n  def minimum_total(triangle) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "triangle": [
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            5,
+            7
+          ],
+          [
+            4,
+            1,
+            8,
+            3
+          ]
+        ]
+      },
+      "expected": 11
+    }
+  ]
 }

@@ -57,5 +57,35 @@
     "racket": "(define/contract (find-permutation nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_permutation(Nums :: [integer()]) -> [integer()].\nfind_permutation(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_permutation(nums :: [integer]) :: [integer]\n  def find_permutation(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        2,
+        1
+      ]
+    }
+  ]
 }

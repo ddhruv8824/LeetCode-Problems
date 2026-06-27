@@ -63,5 +63,41 @@
     "racket": "(define/contract (kth-largest-number nums k)\n  (-> (listof string?) exact-integer? string?)\n  )",
     "erlang": "-spec kth_largest_number(Nums :: [unicode:unicode_binary()], K :: integer()) -> unicode:unicode_binary().\nkth_largest_number(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_largest_number(nums :: [String.t], k :: integer) :: String.t\n  def kth_largest_number(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          "3",
+          "6",
+          "7",
+          "10"
+        ],
+        "k": 4
+      },
+      "expected": "3"
+    },
+    {
+      "args": {
+        "nums": [
+          "2",
+          "21",
+          "12",
+          "1"
+        ],
+        "k": 3
+      },
+      "expected": "2"
+    },
+    {
+      "args": {
+        "nums": [
+          "0",
+          "0"
+        ],
+        "k": 2
+      },
+      "expected": "0"
+    }
+  ]
 }

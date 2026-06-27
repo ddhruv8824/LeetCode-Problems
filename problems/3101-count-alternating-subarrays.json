@@ -51,5 +51,29 @@
     "racket": "(define/contract (count-alternating-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_alternating_subarrays(Nums :: [integer()]) -> integer().\ncount_alternating_subarrays(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_alternating_subarrays(nums :: [integer]) :: integer\n  def count_alternating_subarrays(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

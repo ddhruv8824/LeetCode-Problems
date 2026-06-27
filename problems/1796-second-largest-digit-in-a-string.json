@@ -50,5 +50,19 @@
     "racket": "(define/contract (second-highest s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec second_highest(S :: unicode:unicode_binary()) -> integer().\nsecond_highest(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec second_highest(s :: String.t) :: integer\n  def second_highest(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "dfa12321afd"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abc1111"
+      },
+      "expected": -1
+    }
+  ]
 }

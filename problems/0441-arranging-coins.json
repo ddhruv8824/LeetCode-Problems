@@ -50,5 +50,19 @@
     "racket": "(define/contract (arrange-coins n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec arrange_coins(N :: integer()) -> integer().\narrange_coins(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec arrange_coins(n :: integer) :: integer\n  def arrange_coins(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 8
+      },
+      "expected": 3
+    }
+  ]
 }

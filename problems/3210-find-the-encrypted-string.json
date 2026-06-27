@@ -49,5 +49,21 @@
     "racket": "(define/contract (get-encrypted-string s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec get_encrypted_string(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nget_encrypted_string(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_encrypted_string(s :: String.t, k :: integer) :: String.t\n  def get_encrypted_string(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "dart",
+        "k": 3
+      },
+      "expected": "tdar"
+    },
+    {
+      "args": {
+        "s": "aaa",
+        "k": 1
+      },
+      "expected": "aaa"
+    }
+  ]
 }

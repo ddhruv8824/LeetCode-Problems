@@ -66,5 +66,25 @@
     "racket": "(define/contract (are-numbers-ascending s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec are_numbers_ascending(S :: unicode:unicode_binary()) -> boolean().\nare_numbers_ascending(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec are_numbers_ascending(s :: String.t) :: boolean\n  def are_numbers_ascending(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "hello world 5 x 5"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "sunset is at 7 51 pm overnight lows will be in the low 50 and 60 s"
+      },
+      "expected": false
+    }
+  ]
 }

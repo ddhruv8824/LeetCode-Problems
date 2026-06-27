@@ -50,5 +50,31 @@
     "racket": "(define/contract (generate-key num1 num2 num3)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec generate_key(Num1 :: integer(), Num2 :: integer(), Num3 :: integer()) -> integer().\ngenerate_key(Num1, Num2, Num3) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec generate_key(num1 :: integer, num2 :: integer, num3 :: integer) :: integer\n  def generate_key(num1, num2, num3) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": 1,
+        "num2": 10,
+        "num3": 1000
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "num1": 987,
+        "num2": 879,
+        "num3": 798
+      },
+      "expected": 777
+    },
+    {
+      "args": {
+        "num1": 1,
+        "num2": 2,
+        "num3": 3
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -50,5 +50,21 @@
     "racket": "(define/contract (k-similarity s1 s2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec k_similarity(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> integer().\nk_similarity(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_similarity(s1 :: String.t, s2 :: String.t) :: integer\n  def k_similarity(s1, s2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "ab",
+        "s2": "ba"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s1": "abc",
+        "s2": "bca"
+      },
+      "expected": 2
+    }
+  ]
 }

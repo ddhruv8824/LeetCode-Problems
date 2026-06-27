@@ -55,5 +55,44 @@
     "racket": "(define/contract (count-matching-subarrays nums pattern)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_matching_subarrays(Nums :: [integer()], Pattern :: [integer()]) -> integer().\ncount_matching_subarrays(Nums, Pattern) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_matching_subarrays(nums :: [integer], pattern :: [integer]) :: integer\n  def count_matching_subarrays(nums, pattern) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "pattern": [
+          1,
+          1
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          4,
+          1,
+          3,
+          5,
+          5,
+          3
+        ],
+        "pattern": [
+          1,
+          0,
+          -1
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

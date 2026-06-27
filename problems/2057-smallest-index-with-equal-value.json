@@ -53,5 +53,45 @@
     "racket": "(define/contract (smallest-equal nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec smallest_equal(Nums :: [integer()]) -> integer().\nsmallest_equal(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_equal(nums :: [integer]) :: integer\n  def smallest_equal(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          0
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

@@ -59,5 +59,25 @@
     "racket": "(define/contract (min-operations-to-flip expression)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_operations_to_flip(Expression :: unicode:unicode_binary()) -> integer().\nmin_operations_to_flip(Expression) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations_to_flip(expression :: String.t) :: integer\n  def min_operations_to_flip(expression) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "expression": "1&(0|1)"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "expression": "(0&0)&(0&0&0)"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "expression": "(0|(1|0&1))"
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -55,5 +55,31 @@
     "racket": "(define/contract (number-of-beautiful-integers low high k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_beautiful_integers(Low :: integer(), High :: integer(), K :: integer()) -> integer().\nnumber_of_beautiful_integers(Low, High, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_beautiful_integers(low :: integer, high :: integer, k :: integer) :: integer\n  def number_of_beautiful_integers(low, high, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "low": 10,
+        "high": 20,
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "low": 1,
+        "high": 10,
+        "k": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "low": 5,
+        "high": 5,
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

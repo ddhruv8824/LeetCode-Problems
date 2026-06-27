@@ -52,5 +52,19 @@
     "racket": "(define/contract (sort-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec sort_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsort_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sort_string(s :: String.t) :: String.t\n  def sort_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aaaabbbbcccc"
+      },
+      "expected": "abccbaabccba"
+    },
+    {
+      "args": {
+        "s": "rat"
+      },
+      "expected": "art"
+    }
+  ]
 }

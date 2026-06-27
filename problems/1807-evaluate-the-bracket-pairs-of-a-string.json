@@ -64,5 +64,47 @@
     "racket": "(define/contract (evaluate s knowledge)\n  (-> string? (listof (listof string?)) string?)\n  )",
     "erlang": "-spec evaluate(S :: unicode:unicode_binary(), Knowledge :: [[unicode:unicode_binary()]]) -> unicode:unicode_binary().\nevaluate(S, Knowledge) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec evaluate(s :: String.t, knowledge :: [[String.t]]) :: String.t\n  def evaluate(s, knowledge) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "(name)is(age)yearsold",
+        "knowledge": [
+          [
+            "name",
+            "bob"
+          ],
+          [
+            "age",
+            "two"
+          ]
+        ]
+      },
+      "expected": "bobistwoyearsold"
+    },
+    {
+      "args": {
+        "s": "hi(name)",
+        "knowledge": [
+          [
+            "a",
+            "b"
+          ]
+        ]
+      },
+      "expected": "hi?"
+    },
+    {
+      "args": {
+        "s": "(a)(a)(a)aaa",
+        "knowledge": [
+          [
+            "a",
+            "yes"
+          ]
+        ]
+      },
+      "expected": "yesyesyesaaa"
+    }
+  ]
 }

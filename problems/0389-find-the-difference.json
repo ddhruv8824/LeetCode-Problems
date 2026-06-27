@@ -50,5 +50,21 @@
     "racket": "(define/contract (find-the-difference s t)\n  (-> string? string? char?)\n  )",
     "erlang": "-spec find_the_difference(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> char().\nfind_the_difference(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_the_difference(s :: String.t, t :: String.t) :: char\n  def find_the_difference(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcd",
+        "t": "abcde"
+      },
+      "expected": "e"
+    },
+    {
+      "args": {
+        "s": "",
+        "t": "y"
+      },
+      "expected": "y"
+    }
+  ]
 }

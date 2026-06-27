@@ -60,5 +60,28 @@
     "racket": "(define/contract (tiling-rectangle n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec tiling_rectangle(N :: integer(), M :: integer()) -> integer().\ntiling_rectangle(N, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec tiling_rectangle(n :: integer, m :: integer) :: integer\n  def tiling_rectangle(n, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "m": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 5,
+        "m": 8
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 11,
+        "m": 13
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -61,5 +61,42 @@
     "racket": "(define/contract (maximal-square matrix)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec maximal_square(Matrix :: [[char()]]) -> integer().\nmaximal_square(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximal_square(matrix :: [[char]]) :: integer\n  def maximal_square(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            "1",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "1",
+            "0"
+          ]
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

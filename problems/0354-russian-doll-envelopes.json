@@ -50,5 +50,49 @@
     "racket": "(define/contract (max-envelopes envelopes)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_envelopes(Envelopes :: [[integer()]]) -> integer().\nmax_envelopes(Envelopes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_envelopes(envelopes :: [[integer]]) :: integer\n  def max_envelopes(envelopes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "envelopes": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "envelopes": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

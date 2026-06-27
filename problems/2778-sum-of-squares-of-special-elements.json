@@ -50,5 +50,31 @@
     "racket": "(define/contract (sum-of-squares nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_of_squares(Nums :: [integer()]) -> integer().\nsum_of_squares(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_squares(nums :: [integer]) :: integer\n  def sum_of_squares(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          7,
+          1,
+          19,
+          18,
+          3
+        ]
+      },
+      "expected": 63
+    }
+  ]
 }

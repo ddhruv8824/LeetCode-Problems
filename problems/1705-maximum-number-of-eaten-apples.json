@@ -53,5 +53,47 @@
     "racket": "(define/contract (eaten-apples apples days)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec eaten_apples(Apples :: [integer()], Days :: [integer()]) -> integer().\neaten_apples(Apples, Days) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec eaten_apples(apples :: [integer], days :: [integer]) :: integer\n  def eaten_apples(apples, days) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "apples": [
+          1,
+          2,
+          3,
+          5,
+          2
+        ],
+        "days": [
+          3,
+          2,
+          1,
+          4,
+          2
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "apples": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "days": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -57,5 +57,25 @@
     "racket": "(define/contract (add-minimum word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec add_minimum(Word :: unicode:unicode_binary()) -> integer().\nadd_minimum(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec add_minimum(word :: String.t) :: integer\n  def add_minimum(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "b"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "aaa"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "word": "abc"
+      },
+      "expected": 0
+    }
+  ]
 }

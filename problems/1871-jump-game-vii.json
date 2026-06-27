@@ -54,5 +54,23 @@
     "racket": "(define/contract (can-reach s minJump maxJump)\n  (-> string? exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec can_reach(S :: unicode:unicode_binary(), MinJump :: integer(), MaxJump :: integer()) -> boolean().\ncan_reach(S, MinJump, MaxJump) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_reach(s :: String.t, min_jump :: integer, max_jump :: integer) :: boolean\n  def can_reach(s, min_jump, max_jump) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "011010",
+        "minJump": 2,
+        "maxJump": 3
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "01101110",
+        "minJump": 2,
+        "maxJump": 3
+      },
+      "expected": false
+    }
+  ]
 }

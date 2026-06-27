@@ -75,5 +75,52 @@
     "racket": "(define/contract (min-length-after-removals nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_length_after_removals(Nums :: [integer()]) -> integer().\nmin_length_after_removals(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_length_after_removals(nums :: [integer]) :: integer\n  def min_length_after_removals(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1000000000,
+          1000000000
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          4,
+          4,
+          4
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

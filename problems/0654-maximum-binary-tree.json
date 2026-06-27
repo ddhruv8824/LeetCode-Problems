@@ -57,5 +57,30 @@
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec construct_maximum_binary_tree(Nums :: [integer()]) -> #tree_node{} | null.\nconstruct_maximum_binary_tree(Nums) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec construct_maximum_binary_tree(nums :: [integer]) :: TreeNode.t | nil\n  def construct_maximum_binary_tree(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n\n## Solution\n\n---\n### Approach 1: Recursive Solution\n\nThe current solution is very simple. We make use of a function `construct(nums, l, r)`, which returns the maximum binary tree consisting of numbers within the indices $$l$$ and $$r$$ in the given $$nums$$ array(excluding the $$r^{th}$$ element).\n\nThe algorithm consists of the following steps:\n\n1. Start with the function call `construct(nums, 0, n)`. Here, $$n$$ refers to the number of elements in the given $$nums$$ array.\n\n2. Find the index, $$max_i$$, of the largest element in the current range of indices $$(l:r-1)$$. Make this largest element, $$nums[max\\_i]$$ as the local root node.\n\n3. Determine the left child using `construct(nums, l, max_i)`. Doing this recursively finds the largest element in the subarray left to the current largest element.\n\n4. Similarly, determine the right child using `construct(nums, max_i + 1, r)`.\n\n5. Return the root node to the calling function.**Complexity Analysis**\n\n* Time complexity : $$O(n^2)$$. The function `construct` is called $$n$$ times. At each level of the recursive tree, we traverse over all the $$n$$ elements to find the maximum element.  In the average case, there will be a $$\\log n$$ levels leading to a complexity of $$O\\big(n\\log n\\big)$$. In the worst case, the depth of the recursive tree can grow upto $$n$$, which happens in the case of a sorted $$nums$$ array, giving a complexity of $$O(n^2)$$.\n\n* Space complexity : $$O(n)$$. The size of the $$set$$ can grow upto $$n$$ in the worst case. In the average case, the size will be $$\\log n$$ for $$n$$ elements in $$nums$$, giving an average case complexity of $$O(\\log n)$$"
+  "solution": "[TOC]\n\n\n## Solution\n\n---\n### Approach 1: Recursive Solution\n\nThe current solution is very simple. We make use of a function `construct(nums, l, r)`, which returns the maximum binary tree consisting of numbers within the indices $$l$$ and $$r$$ in the given $$nums$$ array(excluding the $$r^{th}$$ element).\n\nThe algorithm consists of the following steps:\n\n1. Start with the function call `construct(nums, 0, n)`. Here, $$n$$ refers to the number of elements in the given $$nums$$ array.\n\n2. Find the index, $$max_i$$, of the largest element in the current range of indices $$(l:r-1)$$. Make this largest element, $$nums[max\\_i]$$ as the local root node.\n\n3. Determine the left child using `construct(nums, l, max_i)`. Doing this recursively finds the largest element in the subarray left to the current largest element.\n\n4. Similarly, determine the right child using `construct(nums, max_i + 1, r)`.\n\n5. Return the root node to the calling function.**Complexity Analysis**\n\n* Time complexity : $$O(n^2)$$. The function `construct` is called $$n$$ times. At each level of the recursive tree, we traverse over all the $$n$$ elements to find the maximum element.  In the average case, there will be a $$\\log n$$ levels leading to a complexity of $$O\\big(n\\log n\\big)$$. In the worst case, the depth of the recursive tree can grow upto $$n$$, which happens in the case of a sorted $$nums$$ array, giving a complexity of $$O(n^2)$$.\n\n* Space complexity : $$O(n)$$. The size of the $$set$$ can grow upto $$n$$ in the worst case. In the average case, the size will be $$\\log n$$ for $$n$$ elements in $$nums$$, giving an average case complexity of $$O(\\log n)$$",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          1,
+          6,
+          0,
+          5
+        ]
+      },
+      "expected": [
+        6,
+        3,
+        5,
+        null,
+        2,
+        0,
+        null,
+        null,
+        1
+      ]
+    }
+  ]
 }

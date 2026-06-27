@@ -59,5 +59,57 @@
     "racket": "(define/contract (minimum-operations grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_operations(Grid :: [[integer()]]) -> integer().\nminimum_operations(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_operations(grid :: [[integer]]) :: integer\n  def minimum_operations(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

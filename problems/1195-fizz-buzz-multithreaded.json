@@ -32,5 +32,41 @@
     "python3": "class FizzBuzz:\n    def __init__(self, n: int):\n        self.n = n\n\n    # printFizz() outputs \"fizz\"\n    def fizz(self, printFizz: 'Callable[[], None]') -> None:\n    \t\n\n    # printBuzz() outputs \"buzz\"\n    def buzz(self, printBuzz: 'Callable[[], None]') -> None:\n    \t\n\n    # printFizzBuzz() outputs \"fizzbuzz\"\n    def fizzbuzz(self, printFizzBuzz: 'Callable[[], None]') -> None:\n        \n\n    # printNumber(x) outputs \"x\", where x is an integer.\n    def number(self, printNumber: 'Callable[[int], None]') -> None:\n        ",
     "c": "typedef struct {\n    int n;\n} FizzBuzz;\n\nFizzBuzz* fizzBuzzCreate(int n) {\n    FizzBuzz* obj = (FizzBuzz*) malloc(sizeof(FizzBuzz));\n    obj->n = n;\n    return obj;\n}\n\n// Don't change the following declarations\nvoid printNumber(int a);\nvoid printFizz();\nvoid printBuzz();\nvoid printFizzBuzz();\n\n// printFizz() outputs \"fizz\".\nvoid fizz(FizzBuzz* obj) {\n    \n}\n\n// printBuzz() outputs \"buzz\".\nvoid buzz(FizzBuzz* obj) {\n    \n}\n\n// printFizzBuzz() outputs \"fizzbuzz\".\nvoid fizzbuzz(FizzBuzz* obj) {\n    \n}\n\n// You may call global function `void printNumber(int x)`\n// to output \"x\", where x is an integer.\nvoid number(FizzBuzz* obj) {\n    \n}\n\nvoid fizzBuzzFree(FizzBuzz* obj) {\n    \n}",
     "csharp": "public class FizzBuzz {\n    private int n;\n\n    public FizzBuzz(int n) {\n        this.n = n;\n    }\n\n    // printFizz() outputs \"fizz\".\n    public void Fizz(Action printFizz) {\n        \n    }\n\n    // printBuzzz() outputs \"buzz\".\n    public void Buzz(Action printBuzz) {\n        \n    }\n\n    // printFizzBuzz() outputs \"fizzbuzz\".\n    public void Fizzbuzz(Action printFizzBuzz) {\n        \n    }\n\n    // printNumber(x) outputs \"x\", where x is an integer.\n    public void Number(Action<int> printNumber) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 15
+      },
+      "expected": [
+        1,
+        2,
+        "fizz",
+        4,
+        "buzz",
+        "fizz",
+        7,
+        8,
+        "fizz",
+        "buzz",
+        11,
+        "fizz",
+        13,
+        14,
+        "fizzbuzz"
+      ]
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": [
+        1,
+        2,
+        "fizz",
+        4,
+        "buzz"
+      ]
+    }
+  ]
 }

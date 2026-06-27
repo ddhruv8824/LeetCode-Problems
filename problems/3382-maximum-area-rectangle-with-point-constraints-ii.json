@@ -69,5 +69,64 @@
     "racket": "(define/contract (max-rectangle-area xCoord yCoord)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_rectangle_area(XCoord :: [integer()], YCoord :: [integer()]) -> integer().\nmax_rectangle_area(XCoord, YCoord) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_rectangle_area(x_coord :: [integer], y_coord :: [integer]) :: integer\n  def max_rectangle_area(x_coord, y_coord) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "xCoord": [
+          1,
+          1,
+          3,
+          3
+        ],
+        "yCoord": [
+          1,
+          3,
+          1,
+          3
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "xCoord": [
+          1,
+          1,
+          3,
+          3,
+          2
+        ],
+        "yCoord": [
+          1,
+          3,
+          1,
+          3,
+          2
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "xCoord": [
+          1,
+          1,
+          3,
+          3,
+          1,
+          3
+        ],
+        "yCoord": [
+          1,
+          3,
+          1,
+          3,
+          2,
+          2
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

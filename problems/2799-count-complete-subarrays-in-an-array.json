@@ -52,5 +52,30 @@
     "erlang": "-spec count_complete_subarrays(Nums :: [integer()]) -> integer().\ncount_complete_subarrays(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_complete_subarrays(nums :: [integer]) :: integer\n  def count_complete_subarrays(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Sliding Window\n\n#### Intuition\n\nWe fix the left boundary $\\textit{left}$ and use the $\\textit{cnt}$ hash map to count the number of occurrences of each element in the window. When the number of different elements in the window is less than $\\textit{distinct}$, we continuously shift $\\textit{right}$ to expand the window; once the number of different elements in the window equals $\\textit{distinct}$, it indicates that the current window $[\\textit{left},\\textit{right})$ is a **complete subarray**. At this point, since continuing to increase $\\textit{right}$ will not reduce the number of different elements in the window, all subarrays from $\\textit{right}$ to the end of the array are also valid **complete subarrays**. Therefore, we can count these solutions at once. That is, we add $n-\\textit{right}+1$.\n\nEach time we move $\\textit{left}$, the count of $\\textit{nums}[\\textit{left}]$ in the hash table should be decreased by 1. If the count is reduced to $0$, the element should be deleted from the hash table.\n\nFinally, return the accumulated results.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$\n\nThe two pointers $\\textit{left}$ and $\\textit{right}$ will each traverse the array once.\n\n- Space complexity: $O(n)$\n\nThis is the space required for the hash map $\\textit{cnt}$."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Sliding Window\n\n#### Intuition\n\nWe fix the left boundary $\\textit{left}$ and use the $\\textit{cnt}$ hash map to count the number of occurrences of each element in the window. When the number of different elements in the window is less than $\\textit{distinct}$, we continuously shift $\\textit{right}$ to expand the window; once the number of different elements in the window equals $\\textit{distinct}$, it indicates that the current window $[\\textit{left},\\textit{right})$ is a **complete subarray**. At this point, since continuing to increase $\\textit{right}$ will not reduce the number of different elements in the window, all subarrays from $\\textit{right}$ to the end of the array are also valid **complete subarrays**. Therefore, we can count these solutions at once. That is, we add $n-\\textit{right}+1$.\n\nEach time we move $\\textit{left}$, the count of $\\textit{nums}[\\textit{left}]$ in the hash table should be decreased by 1. If the count is reduced to $0$, the element should be deleted from the hash table.\n\nFinally, return the accumulated results.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$\n\nThe two pointers $\\textit{left}$ and $\\textit{right}$ will each traverse the array once.\n\n- Space complexity: $O(n)$\n\nThis is the space required for the hash map $\\textit{cnt}$.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

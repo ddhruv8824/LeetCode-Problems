@@ -51,5 +51,32 @@
     "racket": "(define/contract (min-deletion nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_deletion(Nums :: [integer()]) -> integer().\nmin_deletion(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_deletion(nums :: [integer]) :: integer\n  def min_deletion(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

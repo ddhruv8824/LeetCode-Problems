@@ -66,5 +66,53 @@
     "racket": "(define/contract (has-valid-path grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec has_valid_path(Grid :: [[integer()]]) -> boolean().\nhas_valid_path(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_valid_path(grid :: [[integer]]) :: boolean\n  def has_valid_path(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            4,
+            3
+          ],
+          [
+            6,
+            5,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

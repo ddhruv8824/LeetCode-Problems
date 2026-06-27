@@ -57,5 +57,72 @@
     "erlang": "-spec loud_and_rich(Richer :: [[integer()]], Quiet :: [integer()]) -> [integer()].\nloud_and_rich(Richer, Quiet) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec loud_and_rich(richer :: [[integer]], quiet :: [integer]) :: [integer]\n  def loud_and_rich(richer, quiet) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Cached Depth-First Search [Accepted]\n\n**Intuition**\n\nConsider the directed graph with edge `x -> y` if `y` is richer than `x`.\n\nFor each person `x`, we want the quietest person in the subtree at `x`.\n\n**Algorithm**\n\nConstruct the graph described above, and say `dfs(person)` is the quietest person in the subtree at `person`.   Notice because the statements are logically consistent, the graph must be a DAG - a directed graph with no cycles.\n\nNow `dfs(person)` is either `person`, or `min(dfs(child) for child in person)`.  That is to say, the quietest person in the subtree is either the `person` itself, or the quietest person in some subtree of a child of `person`.\n\nWe can cache values of `dfs(person)` as `answer[person]`, when performing our *post-order traversal* of the graph.  That way, we don't repeat work.  This technique reduces a quadratic time algorithm down to linear time.**Complexity Analysis**\n\n* Time Complexity: $$\\mathcal{O}(N^2)$$, where $$N$$ is the number of people.\nWe are iterating here over array `richer`. It could contain up to \n$$1 + ... + N - 1 = N(N - 1) / 2$$ elements, for example, in the situation \nwhen each new person is richer than the previous one.  \n\n* Space Complexity: $$\\mathcal{O}(N^2)$$, to keep the graph with $$N^2$$ edges."
+  "solution": "[TOC]\n\n---\n### Approach #1: Cached Depth-First Search [Accepted]\n\n**Intuition**\n\nConsider the directed graph with edge `x -> y` if `y` is richer than `x`.\n\nFor each person `x`, we want the quietest person in the subtree at `x`.\n\n**Algorithm**\n\nConstruct the graph described above, and say `dfs(person)` is the quietest person in the subtree at `person`.   Notice because the statements are logically consistent, the graph must be a DAG - a directed graph with no cycles.\n\nNow `dfs(person)` is either `person`, or `min(dfs(child) for child in person)`.  That is to say, the quietest person in the subtree is either the `person` itself, or the quietest person in some subtree of a child of `person`.\n\nWe can cache values of `dfs(person)` as `answer[person]`, when performing our *post-order traversal* of the graph.  That way, we don't repeat work.  This technique reduces a quadratic time algorithm down to linear time.**Complexity Analysis**\n\n* Time Complexity: $$\\mathcal{O}(N^2)$$, where $$N$$ is the number of people.\nWe are iterating here over array `richer`. It could contain up to \n$$1 + ... + N - 1 = N(N - 1) / 2$$ elements, for example, in the situation \nwhen each new person is richer than the previous one.  \n\n* Space Complexity: $$\\mathcal{O}(N^2)$$, to keep the graph with $$N^2$$ edges.",
+  "test_cases": [
+    {
+      "args": {
+        "richer": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ]
+        ],
+        "quiet": [
+          3,
+          2,
+          5,
+          4,
+          6,
+          1,
+          7,
+          0
+        ]
+      },
+      "expected": [
+        5,
+        5,
+        2,
+        5,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "args": {
+        "richer": [],
+        "quiet": [
+          0
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

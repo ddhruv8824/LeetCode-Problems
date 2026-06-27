@@ -76,5 +76,68 @@
     "racket": "(define/contract (can-reach-corner xCorner yCorner circles)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec can_reach_corner(XCorner :: integer(), YCorner :: integer(), Circles :: [[integer()]]) -> boolean().\ncan_reach_corner(XCorner, YCorner, Circles) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_reach_corner(x_corner :: integer, y_corner :: integer, circles :: [[integer]]) :: boolean\n  def can_reach_corner(x_corner, y_corner, circles) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "xCorner": 3,
+        "yCorner": 4,
+        "circles": [
+          [
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "xCorner": 3,
+        "yCorner": 3,
+        "circles": [
+          [
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "xCorner": 3,
+        "yCorner": 3,
+        "circles": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "xCorner": 4,
+        "yCorner": 4,
+        "circles": [
+          [
+            5,
+            5,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

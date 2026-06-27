@@ -53,5 +53,30 @@
     "racket": "(define/contract (count-permutations complexity)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_permutations(Complexity :: [integer()]) -> integer().\ncount_permutations(Complexity) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_permutations(complexity :: [integer]) :: integer\n  def count_permutations(complexity) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "complexity": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "complexity": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

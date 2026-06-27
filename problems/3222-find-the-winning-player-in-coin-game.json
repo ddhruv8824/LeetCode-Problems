@@ -51,5 +51,21 @@
     "racket": "(define/contract (winning-player x y)\n  (-> exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec winning_player(X :: integer(), Y :: integer()) -> unicode:unicode_binary().\nwinning_player(X, Y) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec winning_player(x :: integer, y :: integer) :: String.t\n  def winning_player(x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 2,
+        "y": 7
+      },
+      "expected": "Alice"
+    },
+    {
+      "args": {
+        "x": 4,
+        "y": 11
+      },
+      "expected": "Bob"
+    }
+  ]
 }

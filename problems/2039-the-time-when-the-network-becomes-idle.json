@@ -64,5 +64,51 @@
     "racket": "(define/contract (network-becomes-idle edges patience)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec network_becomes_idle(Edges :: [[integer()]], Patience :: [integer()]) -> integer().\nnetwork_becomes_idle(Edges, Patience) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec network_becomes_idle(edges :: [[integer]], patience :: [integer]) :: integer\n  def network_becomes_idle(edges, patience) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "patience": [
+          0,
+          2,
+          1
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "patience": [
+          0,
+          10,
+          10
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

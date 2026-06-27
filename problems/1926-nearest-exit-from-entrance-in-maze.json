@@ -68,5 +68,77 @@
     "racket": "(define/contract (nearest-exit maze entrance)\n  (-> (listof (listof char?)) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec nearest_exit(Maze :: [[char()]], Entrance :: [integer()]) -> integer().\nnearest_exit(Maze, Entrance) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nearest_exit(maze :: [[char]], entrance :: [integer]) :: integer\n  def nearest_exit(maze, entrance) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "maze": [
+          [
+            "+",
+            "+",
+            ".",
+            "+"
+          ],
+          [
+            ".",
+            ".",
+            ".",
+            "+"
+          ],
+          [
+            "+",
+            "+",
+            "+",
+            "."
+          ]
+        ],
+        "entrance": [
+          1,
+          2
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "maze": [
+          [
+            "+",
+            "+",
+            "+"
+          ],
+          [
+            ".",
+            ".",
+            "."
+          ],
+          [
+            "+",
+            "+",
+            "+"
+          ]
+        ],
+        "entrance": [
+          1,
+          0
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "maze": [
+          [
+            ".",
+            "+"
+          ]
+        ],
+        "entrance": [
+          0,
+          0
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

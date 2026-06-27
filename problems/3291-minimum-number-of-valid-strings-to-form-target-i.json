@@ -67,5 +67,37 @@
     "racket": "(define/contract (min-valid-strings words target)\n  (-> (listof string?) string? exact-integer?)\n  )",
     "erlang": "-spec min_valid_strings(Words :: [unicode:unicode_binary()], Target :: unicode:unicode_binary()) -> integer().\nmin_valid_strings(Words, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_valid_strings(words :: [String.t], target :: String.t) :: integer\n  def min_valid_strings(words, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "abc",
+          "aaaaa",
+          "bcdef"
+        ],
+        "target": "aabcdabc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "words": [
+          "abababab",
+          "ab"
+        ],
+        "target": "ababaababa"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "abcdef"
+        ],
+        "target": "xyz"
+      },
+      "expected": -1
+    }
+  ]
 }

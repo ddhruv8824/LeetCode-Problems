@@ -49,5 +49,29 @@
     "erlang": "-spec count_subarrays(Nums :: [integer()]) -> integer().\ncount_subarrays(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_subarrays(nums :: [integer]) :: integer\n  def count_subarrays(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: One-Time Traversal\n\n#### Intuition\n\nLet $n$ be the length of the array $\\textit{nums}$, and perform a traversal of the indices in the range $[1, n-2]$. When traversing to index $i$, if $\\textit{nums}[i]$ is equal to $(\\textit{nums}[i-1] + \\textit{nums}[i+1]) \\times 2$, then the answer increases by $1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: One-Time Traversal\n\n#### Intuition\n\nLet $n$ be the length of the array $\\textit{nums}$, and perform a traversal of the indices in the range $[1, n-2]$. When traversing to index $i$, if $\\textit{nums}[i]$ is equal to $(\\textit{nums}[i-1] + \\textit{nums}[i+1]) \\times 2$, then the answer increases by $1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          1,
+          4,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

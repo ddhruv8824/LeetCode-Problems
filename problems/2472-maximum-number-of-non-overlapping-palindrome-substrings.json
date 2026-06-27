@@ -53,5 +53,21 @@
     "racket": "(define/contract (max-palindromes s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_palindromes(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_palindromes(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_palindromes(s :: String.t, k :: integer) :: integer\n  def max_palindromes(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abaccdbbd",
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "adbcda",
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

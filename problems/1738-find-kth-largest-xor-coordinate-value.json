@@ -63,5 +63,55 @@
     "racket": "(define/contract (kth-largest-value matrix k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec kth_largest_value(Matrix :: [[integer()]], K :: integer()) -> integer().\nkth_largest_value(Matrix, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_largest_value(matrix :: [[integer]], k :: integer) :: integer\n  def kth_largest_value(matrix, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 4
+    }
+  ]
 }

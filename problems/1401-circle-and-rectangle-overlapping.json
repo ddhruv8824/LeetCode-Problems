@@ -62,5 +62,43 @@
     "racket": "(define/contract (check-overlap radius xCenter yCenter x1 y1 x2 y2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec check_overlap(Radius :: integer(), XCenter :: integer(), YCenter :: integer(), X1 :: integer(), Y1 :: integer(), X2 :: integer(), Y2 :: integer()) -> boolean().\ncheck_overlap(Radius, XCenter, YCenter, X1, Y1, X2, Y2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_overlap(radius :: integer, x_center :: integer, y_center :: integer, x1 :: integer, y1 :: integer, x2 :: integer, y2 :: integer) :: boolean\n  def check_overlap(radius, x_center, y_center, x1, y1, x2, y2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "radius": 1,
+        "xCenter": 0,
+        "yCenter": 0,
+        "x1": 1,
+        "y1": -1,
+        "x2": 3,
+        "y2": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "radius": 1,
+        "xCenter": 1,
+        "yCenter": 1,
+        "x1": 1,
+        "y1": -3,
+        "x2": 2,
+        "y2": -1
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "radius": 1,
+        "xCenter": 0,
+        "yCenter": 0,
+        "x1": -1,
+        "y1": 0,
+        "x2": 0,
+        "y2": 1
+      },
+      "expected": true
+    }
+  ]
 }

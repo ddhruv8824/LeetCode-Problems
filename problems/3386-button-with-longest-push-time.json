@@ -48,5 +48,45 @@
     "racket": "(define/contract (button-with-longest-time events)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec button_with_longest_time(Events :: [[integer()]]) -> integer().\nbutton_with_longest_time(Events) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec button_with_longest_time(events :: [[integer]]) :: integer\n  def button_with_longest_time(events) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "events": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            1,
+            15
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "events": [
+          [
+            10,
+            5
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

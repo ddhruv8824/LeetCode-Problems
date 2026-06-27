@@ -58,5 +58,28 @@
     "racket": "(define/contract (can-be-typed-words text brokenLetters)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec can_be_typed_words(Text :: unicode:unicode_binary(), BrokenLetters :: unicode:unicode_binary()) -> integer().\ncan_be_typed_words(Text, BrokenLetters) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_be_typed_words(text :: String.t, broken_letters :: String.t) :: integer\n  def can_be_typed_words(text, broken_letters) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "hello world",
+        "brokenLetters": "ad"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "text": "leet code",
+        "brokenLetters": "lt"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "text": "leet code",
+        "brokenLetters": "e"
+      },
+      "expected": 0
+    }
+  ]
 }

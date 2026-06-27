@@ -55,5 +55,29 @@
     "racket": "(define/contract (minimum-removal beans)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_removal(Beans :: [integer()]) -> integer().\nminimum_removal(Beans) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_removal(beans :: [integer]) :: integer\n  def minimum_removal(beans) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "beans": [
+          4,
+          1,
+          6,
+          5
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "beans": [
+          2,
+          10,
+          3,
+          2
+        ]
+      },
+      "expected": 7
+    }
+  ]
 }

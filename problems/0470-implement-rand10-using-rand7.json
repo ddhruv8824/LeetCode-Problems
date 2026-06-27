@@ -49,5 +49,34 @@
     "ruby": "# The rand7() API is already defined for you.\n# def rand7()\n# @return {Integer} a random integer in the range 1 to 7\n\ndef rand10()\n    \nend",
     "scala": "/**\n * The rand7() API is already defined in the parent class SolBase.\n * def rand7(): Int = {}\n * @return a random integer in the range 1 to 7\n */\nobject Solution extends SolBase {\n    def rand10(): Int = {\n        \n    }\n}",
     "rust": "/** \n * The rand7() API is already defined for you.\n * @return a random integer in the range 1 to 7\n * fn rand7() -> i32;\n */\n\nimpl Solution {\n    pub fn rand10() -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": [
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": [
+        2,
+        8
+      ]
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": [
+        3,
+        8,
+        10
+      ]
+    }
+  ]
 }

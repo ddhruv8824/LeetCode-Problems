@@ -52,5 +52,21 @@
     "racket": "(define/contract (longest-palindromic-subsequence s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec longest_palindromic_subsequence(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nlongest_palindromic_subsequence(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_palindromic_subsequence(s :: String.t, k :: integer) :: integer\n  def longest_palindromic_subsequence(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abced",
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": " aaazzz ",
+        "k": 4
+      },
+      "expected": 6
+    }
+  ]
 }

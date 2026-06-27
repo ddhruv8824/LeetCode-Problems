@@ -55,5 +55,47 @@
     "racket": "(define/contract (top-k-frequent words k)\n  (-> (listof string?) exact-integer? (listof string?))\n  )",
     "erlang": "-spec top_k_frequent(Words :: [unicode:unicode_binary()], K :: integer()) -> [unicode:unicode_binary()].\ntop_k_frequent(Words, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec top_k_frequent(words :: [String.t], k :: integer) :: [String.t]\n  def top_k_frequent(words, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "i",
+          "love",
+          "leetcode",
+          "i",
+          "love",
+          "coding"
+        ],
+        "k": 2
+      },
+      "expected": [
+        "i",
+        "love"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "the",
+          "day",
+          "is",
+          "sunny",
+          "the",
+          "the",
+          "the",
+          "sunny",
+          "is",
+          "is"
+        ],
+        "k": 4
+      },
+      "expected": [
+        "the",
+        "is",
+        "sunny",
+        "day"
+      ]
+    }
+  ]
 }

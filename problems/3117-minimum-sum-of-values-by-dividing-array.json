@@ -64,5 +64,58 @@
     "racket": "(define/contract (minimum-value-sum nums andValues)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_value_sum(Nums :: [integer()], AndValues :: [integer()]) -> integer().\nminimum_value_sum(Nums, AndValues) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_value_sum(nums :: [integer], and_values :: [integer]) :: integer\n  def minimum_value_sum(nums, and_values) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          3,
+          3,
+          2
+        ],
+        "andValues": [
+          0,
+          3,
+          3,
+          2
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          5,
+          7,
+          7,
+          7,
+          5
+        ],
+        "andValues": [
+          0,
+          7,
+          5
+        ]
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "andValues": [
+          2
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

@@ -53,5 +53,28 @@
     "erlang": "-spec difference_of_sums(N :: integer(), M :: integer()) -> integer().\ndifference_of_sums(N, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec difference_of_sums(n :: integer, m :: integer) :: integer\n  def difference_of_sums(n, m) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Traversal\n\n#### Intuition\n\nConsider the interval $[1, n]$. \n\n- Let $\\textit{num}_1$ be the sum of the integers in this range that aren’t divisible by `m`.\n- Let $\\textit{num}_2$ be the sum of those that are divisible by `m`.\n\nTo capture their combined effect, we introduce a running total called ans.\n\nAs we walk through each integer `x` from 1 to `n`:\n\n1. If `x` isn’t divisible by `m`, we add it to ans.\n2. If `x` is divisible by `m`, we subtract it from ans.\n\nWhen the traversal ends, the value stored in ans is exactly the result the problem asks for.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the given integer.\n\n- Time complexity: $O(n)$.\n  \n  We traverse all numbers from 1 to n.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{ans}$ was used.\n\n### Approach 2: Mathematical Derivation\n\n#### Intuition\n\nFirst, focus on the numbers that are divisible by `m`.\nThe *k-th* such number is *k × m*, so their sum is\n\n$$\n\\text{num}_2\n  = m + 2m + \\dots + k m\n  = (1 + 2 + \\dots + k)\\,m\n  = \\frac{k(k+1)}{2}\\,m,\n$$ -------------- ( 1 )\n\nwhere\n\n$$\nk=\\bigl\\lfloor\\tfrac{n}{m}\\bigr\\rfloor\n$$ \n\nis the count of multiples of `m` up to `n`.\n\n\nNext, look at the numbers **not** divisible by `m`.\nTheir sum is simply the total of the first `n` integers minus $\\text{num}_2$:\n\n$$\n\\text{num}_1\n  = (1 + 2 + \\dots + n) - \\text{num}_2\n  = \\frac{n(n+1)}{2} - \\text{num}_2.\n$$  --------------- ( 2 )\n\n\nPutting the two pieces together, the quantity the problem asks for is\n\n$$\n\\text{num}_1 - \\text{num}_2\n  = \\left[\\frac{n(n+1)}{2} - \\text{num}_2\\right] - \\text{num}_2\n  = \\frac{n(n+1)}{2} - 2\\,\\text{num}_2.\n$$\n\nFinally, substitute the closed form of $\\text{num}_2$:\n\n$$\n\\boxed{\\text{num}_1 - \\text{num}_2\n       = \\frac{n(n+1)}{2} \\;-\\; k(k+1)\\,m.}\n$$\n\nThis single formula lets us compute the desired result directly, without any iteration.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{k}$ was used."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Traversal\n\n#### Intuition\n\nConsider the interval $[1, n]$. \n\n- Let $\\textit{num}_1$ be the sum of the integers in this range that aren’t divisible by `m`.\n- Let $\\textit{num}_2$ be the sum of those that are divisible by `m`.\n\nTo capture their combined effect, we introduce a running total called ans.\n\nAs we walk through each integer `x` from 1 to `n`:\n\n1. If `x` isn’t divisible by `m`, we add it to ans.\n2. If `x` is divisible by `m`, we subtract it from ans.\n\nWhen the traversal ends, the value stored in ans is exactly the result the problem asks for.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the given integer.\n\n- Time complexity: $O(n)$.\n  \n  We traverse all numbers from 1 to n.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{ans}$ was used.\n\n### Approach 2: Mathematical Derivation\n\n#### Intuition\n\nFirst, focus on the numbers that are divisible by `m`.\nThe *k-th* such number is *k × m*, so their sum is\n\n$$\n\\text{num}_2\n  = m + 2m + \\dots + k m\n  = (1 + 2 + \\dots + k)\\,m\n  = \\frac{k(k+1)}{2}\\,m,\n$$ -------------- ( 1 )\n\nwhere\n\n$$\nk=\\bigl\\lfloor\\tfrac{n}{m}\\bigr\\rfloor\n$$ \n\nis the count of multiples of `m` up to `n`.\n\n\nNext, look at the numbers **not** divisible by `m`.\nTheir sum is simply the total of the first `n` integers minus $\\text{num}_2$:\n\n$$\n\\text{num}_1\n  = (1 + 2 + \\dots + n) - \\text{num}_2\n  = \\frac{n(n+1)}{2} - \\text{num}_2.\n$$  --------------- ( 2 )\n\n\nPutting the two pieces together, the quantity the problem asks for is\n\n$$\n\\text{num}_1 - \\text{num}_2\n  = \\left[\\frac{n(n+1)}{2} - \\text{num}_2\\right] - \\text{num}_2\n  = \\frac{n(n+1)}{2} - 2\\,\\text{num}_2.\n$$\n\nFinally, substitute the closed form of $\\text{num}_2$:\n\n$$\n\\boxed{\\text{num}_1 - \\text{num}_2\n       = \\frac{n(n+1)}{2} \\;-\\; k(k+1)\\,m.}\n$$\n\nThis single formula lets us compute the desired result directly, without any iteration.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{k}$ was used.",
+  "test_cases": [
+    {
+      "args": {
+        "n": 10,
+        "m": 3
+      },
+      "expected": 19
+    },
+    {
+      "args": {
+        "n": 5,
+        "m": 6
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "n": 5,
+        "m": 1
+      },
+      "expected": -15
+    }
+  ]
 }

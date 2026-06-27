@@ -56,5 +56,37 @@
     "racket": "(define/contract (is-good-array nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_good_array(Nums :: [integer()]) -> boolean().\nis_good_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_good_array(nums :: [integer]) :: boolean\n  def is_good_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          12,
+          5,
+          7,
+          23
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          29,
+          6,
+          10
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          6
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

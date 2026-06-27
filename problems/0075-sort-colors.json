@@ -52,5 +52,41 @@
     "ruby": "# @param {Integer[]} nums\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef sort_colors(nums)\n    \nend",
     "scala": "object Solution {\n    def sortColors(nums: Array[Int]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn sort_colors(nums: &mut Vec<i32>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          0,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
 }

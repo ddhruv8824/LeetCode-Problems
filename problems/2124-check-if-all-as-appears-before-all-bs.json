@@ -54,5 +54,25 @@
     "racket": "(define/contract (check-string s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec check_string(S :: unicode:unicode_binary()) -> boolean().\ncheck_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_string(s :: String.t) :: boolean\n  def check_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aaabbb"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abab"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "bbb"
+      },
+      "expected": true
+    }
+  ]
 }

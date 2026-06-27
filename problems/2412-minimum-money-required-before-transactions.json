@@ -53,5 +53,41 @@
     "racket": "(define/contract (minimum-money transactions)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_money(Transactions :: [[integer()]]) -> integer().\nminimum_money(Transactions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_money(transactions :: [[integer]]) :: integer\n  def minimum_money(transactions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "transactions": [
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "transactions": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

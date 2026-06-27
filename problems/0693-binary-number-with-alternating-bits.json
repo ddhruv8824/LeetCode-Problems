@@ -51,5 +51,25 @@
     "erlang": "-spec has_alternating_bits(N :: integer()) -> boolean().\nhas_alternating_bits(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_alternating_bits(n :: integer) :: boolean\n  def has_alternating_bits(n) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n### Approach #1: Convert to String [Accepted]\n\n**Intuition and Algorithm**\n\nLet's convert the given number into a string of binary digits. Then, we should simply check that no two adjacent digits are the same.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$, or alternatively $$O(w)$$.\n\n---\n\n### Approach #2: Divide By Two [Accepted]\n\n**Intuition and Algorithm**\n\nWe can get the last bit and the rest of the bits via `n % 2` and `n // 2` operations. Let's remember `cur`, the last bit of `n`. If the last bit ever equals the last bit of the remaining, then two adjacent bits have the same value, and the answer is `False`.  Otherwise, the answer is `True`.\n\nAlso note that instead of `n % 2` and `n // 2`, we could have used operators `n & 1` and `n >>= 1` instead.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$."
+  "solution": "[TOC]\n\n### Approach #1: Convert to String [Accepted]\n\n**Intuition and Algorithm**\n\nLet's convert the given number into a string of binary digits. Then, we should simply check that no two adjacent digits are the same.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$, or alternatively $$O(w)$$.\n\n---\n\n### Approach #2: Divide By Two [Accepted]\n\n**Intuition and Algorithm**\n\nWe can get the last bit and the rest of the bits via `n % 2` and `n // 2` operations. Let's remember `cur`, the last bit of `n`. If the last bit ever equals the last bit of the remaining, then two adjacent bits have the same value, and the answer is `False`.  Otherwise, the answer is `True`.\n\nAlso note that instead of `n % 2` and `n // 2`, we could have used operators `n & 1` and `n >>= 1` instead.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 7
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 11
+      },
+      "expected": false
+    }
+  ]
 }

@@ -53,5 +53,37 @@
     "racket": "(define/contract (decode encoded)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec decode(Encoded :: [integer()]) -> [integer()].\ndecode(Encoded) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec decode(encoded :: [integer]) :: [integer]\n  def decode(encoded) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "encoded": [
+          3,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "encoded": [
+          6,
+          5,
+          4,
+          6
+        ]
+      },
+      "expected": [
+        2,
+        4,
+        1,
+        5,
+        3
+      ]
+    }
+  ]
 }

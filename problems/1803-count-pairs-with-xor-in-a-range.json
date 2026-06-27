@@ -49,5 +49,34 @@
     "scala": "object Solution {\n    def countPairs(nums: Array[Int], low: Int, high: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn count_pairs(nums: Vec<i32>, low: i32, high: i32) -> i32 {\n        \n    }\n}",
     "racket": "(define/contract (count-pairs nums low high)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          2,
+          7
+        ],
+        "low": 2,
+        "high": 6
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          8,
+          4,
+          2,
+          1
+        ],
+        "low": 5,
+        "high": 14
+      },
+      "expected": 8
+    }
+  ]
 }

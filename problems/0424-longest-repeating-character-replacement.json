@@ -49,5 +49,21 @@
     "racket": "(define/contract (character-replacement s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec character_replacement(S :: unicode:unicode_binary(), K :: integer()) -> integer().\ncharacter_replacement(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec character_replacement(s :: String.t, k :: integer) :: integer\n  def character_replacement(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "ABAB",
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "AABABBA",
+        "k": 1
+      },
+      "expected": 4
+    }
+  ]
 }

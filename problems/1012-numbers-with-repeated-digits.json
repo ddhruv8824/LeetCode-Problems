@@ -54,5 +54,25 @@
     "racket": "(define/contract (num-dup-digits-at-most-n n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_dup_digits_at_most_n(N :: integer()) -> integer().\nnum_dup_digits_at_most_n(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_dup_digits_at_most_n(n :: integer) :: integer\n  def num_dup_digits_at_most_n(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 20
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 100
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "n": 1000
+      },
+      "expected": 262
+    }
+  ]
 }

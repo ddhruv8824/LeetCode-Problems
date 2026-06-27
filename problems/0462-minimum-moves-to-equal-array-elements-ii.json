@@ -49,5 +49,28 @@
     "racket": "(define/contract (min-moves2 nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_moves2(Nums :: [integer()]) -> integer().\nmin_moves2(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves2(nums :: [integer]) :: integer\n  def min_moves2(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          10,
+          2,
+          9
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

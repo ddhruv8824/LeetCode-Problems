@@ -57,5 +57,108 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (get-all-elements root1 root2)\n  (-> (or/c tree-node? #f) (or/c tree-node? #f) (listof exact-integer?))\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec get_all_elements(Root1 :: #tree_node{} | null, Root2 :: #tree_node{} | null) -> [integer()].\nget_all_elements(Root1, Root2) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec get_all_elements(root1 :: TreeNode.t | nil, root2 :: TreeNode.t | nil) :: [integer]\n  def get_all_elements(root1, root2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root1": [
+          2,
+          1,
+          4
+        ],
+        "root2": [
+          1,
+          0,
+          3
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "root1": [
+          0,
+          -10,
+          10
+        ],
+        "root2": [
+          5,
+          1,
+          7,
+          0,
+          2
+        ]
+      },
+      "expected": [
+        -10,
+        0,
+        0,
+        1,
+        2,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "args": {
+        "root1": [],
+        "root2": [
+          5,
+          1,
+          7,
+          0,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "args": {
+        "root1": [
+          0,
+          -10,
+          10
+        ],
+        "root2": []
+      },
+      "expected": [
+        -10,
+        0,
+        10
+      ]
+    },
+    {
+      "args": {
+        "root1": [
+          1,
+          null,
+          8
+        ],
+        "root2": [
+          8,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        8,
+        8
+      ]
+    }
+  ]
 }

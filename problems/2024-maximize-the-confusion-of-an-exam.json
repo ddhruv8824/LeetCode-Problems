@@ -59,5 +59,28 @@
     "racket": "(define/contract (max-consecutive-answers answerKey k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_consecutive_answers(AnswerKey :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_consecutive_answers(AnswerKey, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_consecutive_answers(answer_key :: String.t, k :: integer) :: integer\n  def max_consecutive_answers(answer_key, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "answerKey": "TTFF",
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "answerKey": "TFFT",
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "answerKey": "TTFTTFTT",
+        "k": 1
+      },
+      "expected": 5
+    }
+  ]
 }

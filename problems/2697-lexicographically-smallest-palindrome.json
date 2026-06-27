@@ -56,5 +56,25 @@
     "racket": "(define/contract (make-smallest-palindrome s)\n  (-> string? string?)\n  )",
     "erlang": "-spec make_smallest_palindrome(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_smallest_palindrome(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_smallest_palindrome(s :: String.t) :: String.t\n  def make_smallest_palindrome(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "egcfe"
+      },
+      "expected": "efcfe"
+    },
+    {
+      "args": {
+        "s": "abcd"
+      },
+      "expected": "abba"
+    },
+    {
+      "args": {
+        "s": "seven"
+      },
+      "expected": "neven"
+    }
+  ]
 }

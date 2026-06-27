@@ -54,5 +54,37 @@
     "racket": "(define/contract (max-weight pizzas)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_weight(Pizzas :: [integer()]) -> integer().\nmax_weight(Pizzas) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_weight(pizzas :: [integer]) :: integer\n  def max_weight(pizzas) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pizzas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "pizzas": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

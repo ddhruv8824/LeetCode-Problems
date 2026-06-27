@@ -56,5 +56,71 @@
     "racket": "(define/contract (recover-array n sums)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec recover_array(N :: integer(), Sums :: [integer()]) -> [integer()].\nrecover_array(N, Sums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec recover_array(n :: integer, sums :: [integer]) :: [integer]\n  def recover_array(n, sums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "sums": [
+          -3,
+          -2,
+          -1,
+          0,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        -3
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "sums": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 4,
+        "sums": [
+          0,
+          0,
+          5,
+          5,
+          4,
+          -1,
+          4,
+          9,
+          9,
+          -1,
+          4,
+          3,
+          4,
+          8,
+          3,
+          8
+        ]
+      },
+      "expected": [
+        0,
+        -1,
+        4,
+        5
+      ]
+    }
+  ]
 }

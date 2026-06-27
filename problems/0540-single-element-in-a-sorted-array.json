@@ -47,5 +47,37 @@
     "racket": "(define/contract (single-non-duplicate nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec single_non_duplicate(Nums :: [integer()]) -> integer().\nsingle_non_duplicate(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec single_non_duplicate(nums :: [integer]) :: integer\n  def single_non_duplicate(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          8,
+          8
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3,
+          7,
+          7,
+          10,
+          11,
+          11
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

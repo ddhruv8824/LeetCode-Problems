@@ -52,5 +52,36 @@
     "racket": "(define/contract (number-of-subsequences nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_subsequences(Nums :: [integer()]) -> integer().\nnumber_of_subsequences(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_subsequences(nums :: [integer]) :: integer\n  def number_of_subsequences(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          3,
+          6,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

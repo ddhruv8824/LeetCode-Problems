@@ -60,5 +60,25 @@
     "racket": "(define/contract (minimum-perimeter neededApples)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_perimeter(NeededApples :: integer()) -> integer().\nminimum_perimeter(NeededApples) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_perimeter(needed_apples :: integer) :: integer\n  def minimum_perimeter(needed_apples) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "neededApples": 1
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "neededApples": 13
+      },
+      "expected": 16
+    },
+    {
+      "args": {
+        "neededApples": 1000000000
+      },
+      "expected": 5040
+    }
+  ]
 }

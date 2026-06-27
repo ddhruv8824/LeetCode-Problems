@@ -55,5 +55,39 @@
     "racket": "(define/contract (minimum-levels possible)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_levels(Possible :: [integer()]) -> integer().\nminimum_levels(Possible) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_levels(possible :: [integer]) :: integer\n  def minimum_levels(possible) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "possible": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "possible": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "possible": [
+          0,
+          0
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

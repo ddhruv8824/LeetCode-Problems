@@ -49,5 +49,29 @@
     "racket": "(define/contract (expressive-words s words)\n  (-> string? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec expressive_words(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> integer().\nexpressive_words(S, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec expressive_words(s :: String.t, words :: [String.t]) :: integer\n  def expressive_words(s, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "heeellooo",
+        "words": [
+          "hello",
+          "hi",
+          "helo"
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "zzzzzyyyyy",
+        "words": [
+          "zzyy",
+          "zy",
+          "zyy"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

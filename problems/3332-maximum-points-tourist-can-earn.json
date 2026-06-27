@@ -56,5 +56,66 @@
     "racket": "(define/contract (max-score n k stayScore travelScore)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_score(N :: integer(), K :: integer(), StayScore :: [[integer()]], TravelScore :: [[integer()]]) -> integer().\nmax_score(N, K, StayScore, TravelScore) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_score(n :: integer, k :: integer, stay_score :: [[integer]], travel_score :: [[integer]]) :: integer\n  def max_score(n, k, stay_score, travel_score) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "k": 1,
+        "stayScore": [
+          [
+            2,
+            3
+          ]
+        ],
+        "travelScore": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 2,
+        "stayScore": [
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "travelScore": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            4
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

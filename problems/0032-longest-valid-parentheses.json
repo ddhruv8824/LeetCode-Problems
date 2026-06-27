@@ -53,5 +53,25 @@
     "racket": "(define/contract (longest-valid-parentheses s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec longest_valid_parentheses(S :: unicode:unicode_binary()) -> integer().\nlongest_valid_parentheses(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_valid_parentheses(s :: String.t) :: integer\n  def longest_valid_parentheses(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "(()"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": ")()())"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": ""
+      },
+      "expected": 0
+    }
+  ]
 }

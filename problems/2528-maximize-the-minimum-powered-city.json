@@ -57,5 +57,34 @@
     "racket": "(define/contract (max-power stations r k)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_power(Stations :: [integer()], R :: integer(), K :: integer()) -> integer().\nmax_power(Stations, R, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_power(stations :: [integer], r :: integer, k :: integer) :: integer\n  def max_power(stations, r, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stations": [
+          1,
+          2,
+          4,
+          5,
+          0
+        ],
+        "r": 1,
+        "k": 2
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "stations": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "r": 0,
+        "k": 3
+      },
+      "expected": 4
+    }
+  ]
 }

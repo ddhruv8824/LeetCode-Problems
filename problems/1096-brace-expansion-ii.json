@@ -52,5 +52,31 @@
     "racket": "(define/contract (brace-expansion-ii expression)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec brace_expansion_ii(Expression :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nbrace_expansion_ii(Expression) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec brace_expansion_ii(expression :: String.t) :: [String.t]\n  def brace_expansion_ii(expression) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "expression": "{a,b}{c,{d,e}}"
+      },
+      "expected": [
+        "ac",
+        "ad",
+        "ae",
+        "bc",
+        "bd",
+        "be"
+      ]
+    },
+    {
+      "args": {
+        "expression": "{{a,z},a{b,c},{ab,z}}"
+      },
+      "expected": [
+        "a",
+        "ab",
+        "ac",
+        "z"
+      ]
+    }
+  ]
 }

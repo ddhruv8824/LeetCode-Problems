@@ -56,5 +56,42 @@
     "racket": "(define/contract (count-battleships board)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec count_battleships(Board :: [[char()]]) -> integer().\ncount_battleships(Board) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_battleships(board :: [[char]]) :: integer\n  def count_battleships(board) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            "X",
+            ".",
+            ".",
+            "X"
+          ],
+          [
+            ".",
+            ".",
+            ".",
+            "X"
+          ],
+          [
+            ".",
+            ".",
+            ".",
+            "X"
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "."
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

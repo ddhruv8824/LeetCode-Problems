@@ -52,5 +52,28 @@
     "racket": "(define/contract (get-permutation n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec get_permutation(N :: integer(), K :: integer()) -> unicode:unicode_binary().\nget_permutation(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_permutation(n :: integer, k :: integer) :: String.t\n  def get_permutation(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 3
+      },
+      "expected": "213"
+    },
+    {
+      "args": {
+        "n": 4,
+        "k": 9
+      },
+      "expected": "2314"
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 1
+      },
+      "expected": "123"
+    }
+  ]
 }

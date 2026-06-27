@@ -53,5 +53,41 @@
     "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val)\n#         @val = val\n#         @left, @right = nil, nil\n#     end\n# end\n# @param {TreeNode} root\n# @param {TreeNode} target\n# @param {Integer} k\n# @return {Integer[]}\ndef distance_k(root, target, k)\n    \nend",
     "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(var _value: Int) {\n *   var value: Int = _value\n *   var left: TreeNode = null\n *   var right: TreeNode = null\n * }\n */\nobject Solution {\n    def distanceK(root: TreeNode, target: TreeNode, k: Int): List[Int] = {\n        \n    }\n}",
     "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn distance_k(root: Option<Rc<RefCell<TreeNode>>>, target: Option<Rc<RefCell<TreeNode>>>, k: i32) -> Vec<i32> {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          3,
+          5,
+          1,
+          6,
+          2,
+          0,
+          8,
+          null,
+          null,
+          7,
+          4
+        ],
+        "target": 5,
+        "k": 2
+      },
+      "expected": [
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "args": {
+        "root": [
+          1
+        ],
+        "target": 1,
+        "k": 3
+      },
+      "expected": []
+    }
+  ]
 }

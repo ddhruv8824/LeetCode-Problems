@@ -58,5 +58,40 @@
     "racket": "(define/contract (median-of-uniqueness-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec median_of_uniqueness_array(Nums :: [integer()]) -> integer().\nmedian_of_uniqueness_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec median_of_uniqueness_array(nums :: [integer]) :: integer\n  def median_of_uniqueness_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          5,
+          4
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

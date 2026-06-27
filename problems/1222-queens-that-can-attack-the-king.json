@@ -57,5 +57,107 @@
     "racket": "(define/contract (queens-attackthe-king queens king)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec queens_attackthe_king(Queens :: [[integer()]], King :: [integer()]) -> [[integer()]].\nqueens_attackthe_king(Queens, King) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec queens_attackthe_king(queens :: [[integer]], king :: [integer]) :: [[integer]]\n  def queens_attackthe_king(queens, king) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queens": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "king": [
+          0,
+          0
+        ]
+      },
+      "expected": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "args": {
+        "queens": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "king": [
+          3,
+          3
+        ]
+      },
+      "expected": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  ]
 }

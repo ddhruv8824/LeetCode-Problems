@@ -55,5 +55,18 @@
     "erlang": "-spec unique_morse_representations(Words :: [unicode:unicode_binary()]) -> integer().\nunique_morse_representations(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unique_morse_representations(words :: [String.t]) :: integer\n  def unique_morse_representations(words) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach 1: Hash Set\n\n**Intuition and Algorithm**\n\nWe can transform each `word` into it's Morse Code representation.\n\nAfter, we put all transformations into a set `seen`, and return the size of the set.**Complexity Analysis**\n\n* Time Complexity:  $$O(S)$$, where $$S$$ is the sum of the lengths of words in `words`.  We iterate through each character of each word in `words`.\n\n* Space Complexity: $$O(S)$$."
+  "solution": "[TOC]\n\n---\n### Approach 1: Hash Set\n\n**Intuition and Algorithm**\n\nWe can transform each `word` into it's Morse Code representation.\n\nAfter, we put all transformations into a set `seen`, and return the size of the set.**Complexity Analysis**\n\n* Time Complexity:  $$O(S)$$, where $$S$$ is the sum of the lengths of words in `words`.  We iterate through each character of each word in `words`.\n\n* Space Complexity: $$O(S)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "gin",
+          "zen",
+          "gig",
+          "msg"
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

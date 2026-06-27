@@ -47,5 +47,42 @@
     "racket": "(define/contract (is-long-pressed-name name typed)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_long_pressed_name(Name :: unicode:unicode_binary(), Typed :: unicode:unicode_binary()) -> boolean().\nis_long_pressed_name(Name, Typed) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_long_pressed_name(name :: String.t, typed :: String.t) :: boolean\n  def is_long_pressed_name(name, typed) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "name": "alex",
+        "typed": "aaleex"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "name": "saeed",
+        "typed": "ssaaedd"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "name": "leelee",
+        "typed": "lleeelee"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "name": "laiden",
+        "typed": "laiden"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "name": "a",
+        "typed": "aab"
+      },
+      "expected": false
+    }
+  ]
 }

@@ -56,5 +56,25 @@
     "racket": "(define/contract (minimum-chairs s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_chairs(S :: unicode:unicode_binary()) -> integer().\nminimum_chairs(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_chairs(s :: String.t) :: integer\n  def minimum_chairs(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "EEEEEEE"
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "ELELEEL"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "ELEELEELLL"
+      },
+      "expected": 3
+    }
+  ]
 }

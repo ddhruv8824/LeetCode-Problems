@@ -53,5 +53,40 @@
     "racket": "(define/contract (min-removal nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_removal(Nums :: [integer()], K :: integer()) -> integer().\nmin_removal(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_removal(nums :: [integer], k :: integer) :: integer\n  def min_removal(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          5
+        ],
+        "k": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          6,
+          2,
+          9
+        ],
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          6
+        ],
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

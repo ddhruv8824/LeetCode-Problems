@@ -52,5 +52,27 @@
     "racket": "(define/contract (num-squareful-perms nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_squareful_perms(Nums :: [integer()]) -> integer().\nnum_squareful_perms(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_squareful_perms(nums :: [integer]) :: integer\n  def num_squareful_perms(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          17,
+          8
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

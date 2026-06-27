@@ -61,5 +61,69 @@
     "racket": "(define/contract (max-genetic-difference parents queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec max_genetic_difference(Parents :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmax_genetic_difference(Parents, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_genetic_difference(parents :: [integer], queries :: [[integer]]) :: [integer]\n  def max_genetic_difference(parents, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "parents": [
+          -1,
+          0,
+          1,
+          1
+        ],
+        "queries": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "args": {
+        "parents": [
+          3,
+          7,
+          -1,
+          2,
+          0,
+          7,
+          0,
+          2
+        ],
+        "queries": [
+          [
+            4,
+            6
+          ],
+          [
+            1,
+            15
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        6,
+        14,
+        7
+      ]
+    }
+  ]
 }

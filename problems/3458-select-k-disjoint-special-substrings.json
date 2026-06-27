@@ -60,5 +60,28 @@
     "racket": "(define/contract (max-substring-length s k)\n  (-> string? exact-integer? boolean?)\n  )",
     "erlang": "-spec max_substring_length(S :: unicode:unicode_binary(), K :: integer()) -> boolean().\nmax_substring_length(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_substring_length(s :: String.t, k :: integer) :: boolean\n  def max_substring_length(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcdbaefab",
+        "k": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "cdefdc",
+        "k": 3
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "abeabe",
+        "k": 0
+      },
+      "expected": true
+    }
+  ]
 }

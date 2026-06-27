@@ -35,5 +35,133 @@
     "pythondata": "import pandas as pd\n\ndef combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
   },
-  "solution": "[TOC]\n\n# Solution\n---\n\n## pandas\n\n### Approach 1: Using `merge`\n\n**Visualization of approach 1**\n\n![fig](../Figures/175/175-1.png)\n\n#### Intuition\n\nLet's breakdown the steps given the following input DataFrames:\n\n`person`:personIdlastNamefirstName1WangAllen2AliceBob`address`:addressIdpersonIdcitystate12New York CityNew York23LeetcodeCalifornia1. **Merging the DataFrames**\n   \n   ```python\n   result = pd.merge(person, address, on='personId', how='left')\n   ```\n   In this step, we are merging the `person` and `address` dataframes using a left join operation with the `pd.merge()` function. Here:\n   - `on='personId'` specifies that we are using the 'personId' column as the key for merging the data. This column is present in both dataframes, and it holds unique identifiers for the individuals.\n   - `how='left'` specifies that we are performing a left join, meaning all the records from the `person` dataframe (the left dataframe) will be retained, and the matching records from the `address` dataframe (the right dataframe) will be merged where the 'personId' values match. If a 'personId' from the `person` dataframe does not have a matching 'personId' in the `address` dataframe, the 'city' and 'state' columns for that record will contain Null values (representing missing data).personIdlastNamefirstNameaddressIdcitystate1WangAllenNullNullNull2AliceBob1.0New York CityNew York2. **Selecting Relevant Columns**\n\n   ```python\n   result = result[['firstName', 'lastName', 'city', 'state']]\n   ```\n   In this step, we select only the columns that we are interested in for the final output. Since the merging operation can potentially bring in other columns from the `address` dataframe, we are explicitly selecting only the 'firstName', 'lastName', 'city', and 'state' columns to be in our final result. This helps in maintaining a clean and focused dataset which contains only the information we are interested in.firstNamelastNamecitystateAllenWangNullNullBobAliceNew York CityNew YorkIn summary, this script is taking two separate dataframes and merging them into a single dataframe where each row represents a person and contains their first name, last name, city, and state. This is done using the person's unique identifier to correctly match each person with their address. It's a common operation when you want to bring together information from different sources into a unified view.\n\n#### Implementation---\n\n## Database\n\n### Approach 1: Using `outer join`\n\n#### Intuition\n\nSince the *PersonId* in table **Address** is the foreign key of table **Person**, we can join these two tables to get the address information of a person.\n\nConsidering there might be no address information for every person, we should use `outer join` instead of the default `inner join`.\n\n#### Implementation\n\n> Note: For MySQL, an `outer join` is performed either using `left join` or `right join`. \n\n\n```sql\nselect FirstName, LastName, City, State\nfrom Person left join Address\non Person.PersonId = Address.PersonId\n;\n```\n\n> Note: Using the `where` clause to filter the records will fail if there is no address information for a person because it will not display the name information."
+  "solution": "[TOC]\n\n# Solution\n---\n\n## pandas\n\n### Approach 1: Using `merge`\n\n**Visualization of approach 1**\n\n![fig](../Figures/175/175-1.png)\n\n#### Intuition\n\nLet's breakdown the steps given the following input DataFrames:\n\n`person`:personIdlastNamefirstName1WangAllen2AliceBob`address`:addressIdpersonIdcitystate12New York CityNew York23LeetcodeCalifornia1. **Merging the DataFrames**\n   \n   ```python\n   result = pd.merge(person, address, on='personId', how='left')\n   ```\n   In this step, we are merging the `person` and `address` dataframes using a left join operation with the `pd.merge()` function. Here:\n   - `on='personId'` specifies that we are using the 'personId' column as the key for merging the data. This column is present in both dataframes, and it holds unique identifiers for the individuals.\n   - `how='left'` specifies that we are performing a left join, meaning all the records from the `person` dataframe (the left dataframe) will be retained, and the matching records from the `address` dataframe (the right dataframe) will be merged where the 'personId' values match. If a 'personId' from the `person` dataframe does not have a matching 'personId' in the `address` dataframe, the 'city' and 'state' columns for that record will contain Null values (representing missing data).personIdlastNamefirstNameaddressIdcitystate1WangAllenNullNullNull2AliceBob1.0New York CityNew York2. **Selecting Relevant Columns**\n\n   ```python\n   result = result[['firstName', 'lastName', 'city', 'state']]\n   ```\n   In this step, we select only the columns that we are interested in for the final output. Since the merging operation can potentially bring in other columns from the `address` dataframe, we are explicitly selecting only the 'firstName', 'lastName', 'city', and 'state' columns to be in our final result. This helps in maintaining a clean and focused dataset which contains only the information we are interested in.firstNamelastNamecitystateAllenWangNullNullBobAliceNew York CityNew YorkIn summary, this script is taking two separate dataframes and merging them into a single dataframe where each row represents a person and contains their first name, last name, city, and state. This is done using the person's unique identifier to correctly match each person with their address. It's a common operation when you want to bring together information from different sources into a unified view.\n\n#### Implementation---\n\n## Database\n\n### Approach 1: Using `outer join`\n\n#### Intuition\n\nSince the *PersonId* in table **Address** is the foreign key of table **Person**, we can join these two tables to get the address information of a person.\n\nConsidering there might be no address information for every person, we should use `outer join` instead of the default `inner join`.\n\n#### Implementation\n\n> Note: For MySQL, an `outer join` is performed either using `left join` or `right join`. \n\n\n```sql\nselect FirstName, LastName, City, State\nfrom Person left join Address\non Person.PersonId = Address.PersonId\n;\n```\n\n> Note: Using the `where` clause to filter the records will fail if there is no address information for a person because it will not display the name information.",
+  "test_cases": [
+    {
+      "args": {
+        "Person": [
+          {
+            "personId": 1,
+            "lastName": "Wang",
+            "firstName": "Allen"
+          },
+          {
+            "personId": 2,
+            "lastName": "Alice",
+            "firstName": "Bob"
+          }
+        ],
+        "Address": [
+          {
+            "addressId": 1,
+            "personId": 2,
+            "city": "New York City",
+            "state": "New York"
+          },
+          {
+            "addressId": 2,
+            "personId": 3,
+            "city": "Leetcode",
+            "state": "California"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "firstName": "Allen",
+          "lastName": "Wang",
+          "city": null,
+          "state": null
+        },
+        {
+          "firstName": "Bob",
+          "lastName": "Alice",
+          "city": "New York City",
+          "state": "New York"
+        }
+      ]
+    },
+    {
+      "args": {
+        "Person": [
+          {
+            "personId": 1,
+            "lastName": "Smith",
+            "firstName": "John"
+          },
+          {
+            "personId": 2,
+            "lastName": "Johnson",
+            "firstName": "Jane"
+          }
+        ],
+        "Address": [
+          {
+            "addressId": 1,
+            "personId": 1,
+            "city": "Los Angeles",
+            "state": "California"
+          },
+          {
+            "addressId": 2,
+            "personId": 2,
+            "city": "Chicago",
+            "state": "Illinois"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "firstName": "John",
+          "lastName": "Smith",
+          "city": "Los Angeles",
+          "state": "California"
+        },
+        {
+          "firstName": "Jane",
+          "lastName": "Johnson",
+          "city": "Chicago",
+          "state": "Illinois"
+        }
+      ]
+    },
+    {
+      "args": {
+        "Person": [
+          {
+            "personId": 1,
+            "lastName": "Williams",
+            "firstName": "Michael"
+          },
+          {
+            "personId": 2,
+            "lastName": "Davis",
+            "firstName": "Emily"
+          }
+        ],
+        "Address": [
+          {
+            "addressId": 1,
+            "personId": 3,
+            "city": "Houston",
+            "state": "Texas"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "firstName": "Michael",
+          "lastName": "Williams",
+          "city": null,
+          "state": null
+        },
+        {
+          "firstName": "Emily",
+          "lastName": "Davis",
+          "city": null,
+          "state": null
+        }
+      ]
+    }
+  ]
 }

@@ -42,5 +42,21 @@
     "ruby": "# The is_bad_version API is already defined for you.\n# @param {Integer} version\n# @return {boolean} whether the version is bad\n# def is_bad_version(version):\n\n# @param {Integer} n\n# @return {Integer}\ndef first_bad_version(n)\n    \nend",
     "scala": "/* The isBadVersion API is defined in the parent class VersionControl.\n      def isBadVersion(version: Int): Boolean = {} */\n\nclass Solution extends VersionControl {\n    def firstBadVersion(n: Int): Int = {\n        \n    }\n}",
     "rust": "// The API isBadVersion is defined for you.\n// isBadVersion(version:i32)-> bool;\n// to call it use self.isBadVersion(version)\n\nimpl Solution {\n    pub fn first_bad_version(&self, n: i32) -> i32 {\n\t\t\n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "bad": 4
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 1,
+        "bad": 1
+      },
+      "expected": 1
+    }
+  ]
 }

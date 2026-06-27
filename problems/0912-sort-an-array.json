@@ -53,5 +53,43 @@
     "racket": "(define/contract (sort-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec sort_array(Nums :: [integer()]) -> [integer()].\nsort_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sort_array(nums :: [integer]) :: [integer]\n  def sort_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          1,
+          1,
+          2,
+          0,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        5
+      ]
+    }
+  ]
 }

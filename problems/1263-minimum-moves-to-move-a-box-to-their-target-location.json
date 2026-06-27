@@ -66,5 +66,25 @@
     "racket": "(define/contract (min-push-box grid)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec min_push_box(Grid :: [[char()]]) -> integer().\nmin_push_box(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_push_box(grid :: [[char]]) :: integer\n  def min_push_box(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": "[[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": "[[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]"
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "grid": "[[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]"
+      },
+      "expected": 5
+    }
+  ]
 }

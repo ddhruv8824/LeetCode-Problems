@@ -57,5 +57,40 @@
     "racket": "(define/contract (stone-game-iii stoneValue)\n  (-> (listof exact-integer?) string?)\n  )",
     "erlang": "-spec stone_game_iii(StoneValue :: [integer()]) -> unicode:unicode_binary().\nstone_game_iii(StoneValue) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec stone_game_iii(stone_value :: [integer]) :: String.t\n  def stone_game_iii(stone_value) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stoneValue": [
+          1,
+          2,
+          3,
+          7
+        ]
+      },
+      "expected": "Bob"
+    },
+    {
+      "args": {
+        "stoneValue": [
+          1,
+          2,
+          3,
+          -9
+        ]
+      },
+      "expected": "Alice"
+    },
+    {
+      "args": {
+        "stoneValue": [
+          1,
+          2,
+          3,
+          6
+        ]
+      },
+      "expected": "Tie"
+    }
+  ]
 }

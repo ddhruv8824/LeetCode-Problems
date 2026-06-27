@@ -48,5 +48,25 @@
     "racket": "(define/contract (categorize-box length width height mass)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec categorize_box(Length :: integer(), Width :: integer(), Height :: integer(), Mass :: integer()) -> unicode:unicode_binary().\ncategorize_box(Length, Width, Height, Mass) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec categorize_box(length :: integer, width :: integer, height :: integer, mass :: integer) :: String.t\n  def categorize_box(length, width, height, mass) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "length": 1000,
+        "width": 35,
+        "height": 700,
+        "mass": 300
+      },
+      "expected": "Heavy"
+    },
+    {
+      "args": {
+        "length": 200,
+        "width": 50,
+        "height": 800,
+        "mass": 50
+      },
+      "expected": "Neither"
+    }
+  ]
 }

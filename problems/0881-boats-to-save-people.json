@@ -54,5 +54,41 @@
     "racket": "(define/contract (num-rescue-boats people limit)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_rescue_boats(People :: [integer()], Limit :: integer()) -> integer().\nnum_rescue_boats(People, Limit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_rescue_boats(people :: [integer], limit :: integer) :: integer\n  def num_rescue_boats(people, limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "people": [
+          1,
+          2
+        ],
+        "limit": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "people": [
+          3,
+          2,
+          2,
+          1
+        ],
+        "limit": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "people": [
+          3,
+          5,
+          3,
+          4
+        ],
+        "limit": 5
+      },
+      "expected": 4
+    }
+  ]
 }

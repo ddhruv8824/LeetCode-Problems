@@ -70,5 +70,39 @@
     "racket": "(define/contract (can-mouse-win grid catJump mouseJump)\n  (-> (listof string?) exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec can_mouse_win(Grid :: [unicode:unicode_binary()], CatJump :: integer(), MouseJump :: integer()) -> boolean().\ncan_mouse_win(Grid, CatJump, MouseJump) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_mouse_win(grid :: [String.t], cat_jump :: integer, mouse_jump :: integer) :: boolean\n  def can_mouse_win(grid, cat_jump, mouse_jump) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          "####F",
+          "#C...",
+          "M...."
+        ],
+        "catJump": 1,
+        "mouseJump": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          "M.C...F"
+        ],
+        "catJump": 1,
+        "mouseJump": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          "M.C...F"
+        ],
+        "catJump": 1,
+        "mouseJump": 3
+      },
+      "expected": false
+    }
+  ]
 }

@@ -53,5 +53,37 @@
     "racket": "(define/contract (find-min-moves machines)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_min_moves(Machines :: [integer()]) -> integer().\nfind_min_moves(Machines) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_min_moves(machines :: [integer]) :: integer\n  def find_min_moves(machines) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "machines": [
+          1,
+          0,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "machines": [
+          0,
+          3,
+          0
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "machines": [
+          0,
+          2,
+          0
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

@@ -38,5 +38,87 @@
   "code_snippets": {
     "javascript": "/**\n * @param {Array} arr\n * @param {number} size\n * @return {Array}\n */\nvar chunk = function(arr, size) {\n    \n};\n",
     "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\ntype Obj = Record<string, JSONValue> | Array<JSONValue>;\n\nfunction chunk(arr: Obj[], size: number): Obj[][] {\n    \n};\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "size": 1
+      },
+      "expected": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          9,
+          6,
+          3,
+          2
+        ],
+        "size": 3
+      },
+      "expected": [
+        [
+          1,
+          9,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          8,
+          5,
+          3,
+          2,
+          6
+        ],
+        "size": 6
+      },
+      "expected": [
+        [
+          8,
+          5,
+          3,
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "args": {
+        "arr": [],
+        "size": 1
+      },
+      "expected": []
+    }
+  ]
 }

@@ -53,5 +53,49 @@
     "erlang": "-spec average_waiting_time(Customers :: [[integer()]]) -> float().\naverage_waiting_time(Customers) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec average_waiting_time(customers :: [[integer]]) :: float\n  def average_waiting_time(customers) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThere is a restaurant with a single chef. We are given the arrival time and order preparation time for every customer. This data is already sorted in non-decreasing order of arrival time.\n\nThe chef prepares the orders strictly on a **first-come, first-serve** basis. If the chef is busy preparing another order, all the subsequent customers need to wait for their turn. We need to find the average waiting time of all customers. The food preparation time should be included in the waiting time.\n\nConstraints on the number of customers, denoted by `n`, are `1 <= n <= 100000`. Therefore, we need to consider an approach with linear or log-linear time complexity.\n\n---\n\n### Approach: Simulation\n\n#### Intuition\n\nThe chef prepares customer orders as soon as they arrive at the restaurant, provided he isn't already busy. He never takes a rest if there is a queue of pending orders. Therefore, the average waiting time will always be minimal. Also, we are not allowed to change the order of customers. So, we can simulate the process in the provided order, maintaining the time when each customer receives their order. Subtracting this time from the customer's arrival time gives us the waiting time for that customer.\n\nThere is no waiting time for the first customer apart from the preparation time. Let's say another customer arrives while the chef is preparing this order. How much does this customer need to wait to place their order? The waiting time is given by the time gap between their arrival time and when the first customer receives his order. \n\nIn other words, the chef can only start preparing a customer's order when he is idle or when the customer has arrived at the restaurant, whichever happens later. Adding this to the preparation time gives us the time when the customer receives their order. The waiting time for the customer is given by the difference between the order's delivery time and the customer's arrival time.\n\nUsing this approach, we can calculate the sum of the waiting time for all the customers. Dividing it by the total number of customers gives us the average waiting time per customer. Don't forget to calculate this average in a floating-point/double data type for precision.\n\n#### Algorithm\n\n1. Initialize integers `nextIdleTime` and `netWaitTime` with 0.\n2. Iterate through the `customers` array:\n    - Set `nextIdleTime` as the maximum of customer's arrival time and the current value of `nextIdleTime` plus the order preparation time.\n    - Increment `netWaitTime` by the difference of `nextIdleTime` and the customer's arrival time.\n3. Divide the `netWaitTime` by `customers.size` to get the `averageWaitTime`.\n4. Return the `averageWaitTime`.\n\n!?!../Documents/1701_republish/slideshow1_republish.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `customers` array.\n\n- Time complexity: $O(n)$\n\n   The time complexity remains linear, as the loop traverses the array only once.\n\n- Space complexity: $O(1)$\n\n   We do not use any additional space, so the space complexity is constant.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThere is a restaurant with a single chef. We are given the arrival time and order preparation time for every customer. This data is already sorted in non-decreasing order of arrival time.\n\nThe chef prepares the orders strictly on a **first-come, first-serve** basis. If the chef is busy preparing another order, all the subsequent customers need to wait for their turn. We need to find the average waiting time of all customers. The food preparation time should be included in the waiting time.\n\nConstraints on the number of customers, denoted by `n`, are `1 <= n <= 100000`. Therefore, we need to consider an approach with linear or log-linear time complexity.\n\n---\n\n### Approach: Simulation\n\n#### Intuition\n\nThe chef prepares customer orders as soon as they arrive at the restaurant, provided he isn't already busy. He never takes a rest if there is a queue of pending orders. Therefore, the average waiting time will always be minimal. Also, we are not allowed to change the order of customers. So, we can simulate the process in the provided order, maintaining the time when each customer receives their order. Subtracting this time from the customer's arrival time gives us the waiting time for that customer.\n\nThere is no waiting time for the first customer apart from the preparation time. Let's say another customer arrives while the chef is preparing this order. How much does this customer need to wait to place their order? The waiting time is given by the time gap between their arrival time and when the first customer receives his order. \n\nIn other words, the chef can only start preparing a customer's order when he is idle or when the customer has arrived at the restaurant, whichever happens later. Adding this to the preparation time gives us the time when the customer receives their order. The waiting time for the customer is given by the difference between the order's delivery time and the customer's arrival time.\n\nUsing this approach, we can calculate the sum of the waiting time for all the customers. Dividing it by the total number of customers gives us the average waiting time per customer. Don't forget to calculate this average in a floating-point/double data type for precision.\n\n#### Algorithm\n\n1. Initialize integers `nextIdleTime` and `netWaitTime` with 0.\n2. Iterate through the `customers` array:\n    - Set `nextIdleTime` as the maximum of customer's arrival time and the current value of `nextIdleTime` plus the order preparation time.\n    - Increment `netWaitTime` by the difference of `nextIdleTime` and the customer's arrival time.\n3. Divide the `netWaitTime` by `customers.size` to get the `averageWaitTime`.\n4. Return the `averageWaitTime`.\n\n!?!../Documents/1701_republish/slideshow1_republish.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `customers` array.\n\n- Time complexity: $O(n)$\n\n   The time complexity remains linear, as the loop traverses the array only once.\n\n- Space complexity: $O(1)$\n\n   We do not use any additional space, so the space complexity is constant.\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "customers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "customers": [
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "expected": 3.25
+    }
+  ]
 }

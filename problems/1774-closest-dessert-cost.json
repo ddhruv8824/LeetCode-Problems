@@ -58,5 +58,50 @@
     "racket": "(define/contract (closest-cost baseCosts toppingCosts target)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec closest_cost(BaseCosts :: [integer()], ToppingCosts :: [integer()], Target :: integer()) -> integer().\nclosest_cost(BaseCosts, ToppingCosts, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec closest_cost(base_costs :: [integer], topping_costs :: [integer], target :: integer) :: integer\n  def closest_cost(base_costs, topping_costs, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "baseCosts": [
+          1,
+          7
+        ],
+        "toppingCosts": [
+          3,
+          4
+        ],
+        "target": 10
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "baseCosts": [
+          2,
+          3
+        ],
+        "toppingCosts": [
+          4,
+          5,
+          100
+        ],
+        "target": 18
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "baseCosts": [
+          3,
+          10
+        ],
+        "toppingCosts": [
+          2,
+          5
+        ],
+        "target": 9
+      },
+      "expected": 8
+    }
+  ]
 }

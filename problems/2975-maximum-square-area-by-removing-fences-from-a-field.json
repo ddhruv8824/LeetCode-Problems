@@ -59,5 +59,34 @@
     "racket": "(define/contract (maximize-square-area m n hFences vFences)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximize_square_area(M :: integer(), N :: integer(), HFences :: [integer()], VFences :: [integer()]) -> integer().\nmaximize_square_area(M, N, HFences, VFences) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximize_square_area(m :: integer, n :: integer, h_fences :: [integer], v_fences :: [integer]) :: integer\n  def maximize_square_area(m, n, h_fences, v_fences) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 4,
+        "n": 3,
+        "hFences": [
+          2,
+          3
+        ],
+        "vFences": [
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "m": 6,
+        "n": 7,
+        "hFences": [
+          2
+        ],
+        "vFences": [
+          4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

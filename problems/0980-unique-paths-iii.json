@@ -64,5 +64,72 @@
     "racket": "(define/contract (unique-paths-iii grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec unique_paths_iii(Grid :: [[integer()]]) -> integer().\nunique_paths_iii(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unique_paths_iii(grid :: [[integer]]) :: integer\n  def unique_paths_iii(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            -1
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

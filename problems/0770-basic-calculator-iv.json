@@ -64,5 +64,50 @@
     "racket": "(define/contract (basic-calculator-iv expression evalvars evalints)\n  (-> string? (listof string?) (listof exact-integer?) (listof string?))\n  )",
     "erlang": "-spec basic_calculator_iv(Expression :: unicode:unicode_binary(), Evalvars :: [unicode:unicode_binary()], Evalints :: [integer()]) -> [unicode:unicode_binary()].\nbasic_calculator_iv(Expression, Evalvars, Evalints) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec basic_calculator_iv(expression :: String.t, evalvars :: [String.t], evalints :: [integer]) :: [String.t]\n  def basic_calculator_iv(expression, evalvars, evalints) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "expression": "e + 8 - a + 5",
+        "evalvars": [
+          "e"
+        ],
+        "evalints": [
+          1
+        ]
+      },
+      "expected": [
+        "-1*a",
+        "14"
+      ]
+    },
+    {
+      "args": {
+        "expression": "e - 8 + temperature - pressure",
+        "evalvars": [
+          "e",
+          "temperature"
+        ],
+        "evalints": [
+          1,
+          12
+        ]
+      },
+      "expected": [
+        "-1*pressure",
+        "5"
+      ]
+    },
+    {
+      "args": {
+        "expression": "(e + 8) * (e - 8)",
+        "evalvars": [],
+        "evalints": []
+      },
+      "expected": [
+        "1*e*e",
+        "-64"
+      ]
+    }
+  ]
 }

@@ -52,5 +52,21 @@
     "racket": "(define/contract (min-characters a b)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec min_characters(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> integer().\nmin_characters(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_characters(a :: String.t, b :: String.t) :: integer\n  def min_characters(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": "aba",
+        "b": "caa"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "a": "dabadd",
+        "b": "cda"
+      },
+      "expected": 3
+    }
+  ]
 }

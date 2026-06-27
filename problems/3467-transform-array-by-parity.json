@@ -50,5 +50,41 @@
     "racket": "(define/contract (transform-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec transform_array(Nums :: [integer()]) -> [integer()].\ntransform_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec transform_array(nums :: [integer]) :: [integer]\n  def transform_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          1,
+          4,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
 }

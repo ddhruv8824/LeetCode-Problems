@@ -50,5 +50,19 @@
     "erlang": "-spec max_power(S :: unicode:unicode_binary()) -> integer().\nmax_power(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_power(s :: String.t) :: integer\n  def max_power(s) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThis problem is very similar to [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/), and the only difference is that we need a substring with the same characters instead of an increasing one. Therefore, similar methods can be applied. Below, a similar and simple approach is introduced.\n\n---\n\n### Approach #1: One Pass\n\n**Intuition and Algorithm**\n\nRecall the problem, we need to find \"the maximum length of a non-empty substring that contains only one unique character\".\n\nIn other words, we need to find the Longest Substring with **the same characters**.\n\nWe can iterate over the given string, and use a variable `count` to record the length of that substring.\n\nWhen the next character is the same as the previous one, we increase `count` by one. Else, we reset `count` to 1.\n\nWith this method, when reaching the end of a substring with the same characters, `count` will be the length of that substring, since we reset the `count` when that substring starts, and increase `count` when iterate that substring.\n\nTherefore, the maximum value of `count` is what we need. Another variable is needed to store the maximum while iterating.**Complexity Analysis**\n\nLet $$N$$ be the length of `s`.\n\n* Time Complexity: $$O(N)$$, since we perform one loop through `s`.\n\n* Space Complexity: $$O(1)$$, since we only have two integer variables `count` and `max_count`(`maxCount`), and one character variable `previous`."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThis problem is very similar to [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/), and the only difference is that we need a substring with the same characters instead of an increasing one. Therefore, similar methods can be applied. Below, a similar and simple approach is introduced.\n\n---\n\n### Approach #1: One Pass\n\n**Intuition and Algorithm**\n\nRecall the problem, we need to find \"the maximum length of a non-empty substring that contains only one unique character\".\n\nIn other words, we need to find the Longest Substring with **the same characters**.\n\nWe can iterate over the given string, and use a variable `count` to record the length of that substring.\n\nWhen the next character is the same as the previous one, we increase `count` by one. Else, we reset `count` to 1.\n\nWith this method, when reaching the end of a substring with the same characters, `count` will be the length of that substring, since we reset the `count` when that substring starts, and increase `count` when iterate that substring.\n\nTherefore, the maximum value of `count` is what we need. Another variable is needed to store the maximum while iterating.**Complexity Analysis**\n\nLet $$N$$ be the length of `s`.\n\n* Time Complexity: $$O(N)$$, since we perform one loop through `s`.\n\n* Space Complexity: $$O(1)$$, since we only have two integer variables `count` and `max_count`(`maxCount`), and one character variable `previous`.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abbcccddddeeeeedcba"
+      },
+      "expected": 5
+    }
+  ]
 }

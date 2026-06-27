@@ -30,5 +30,23 @@
   "code_snippets": {
     "javascript": "/**\n * @return {null|boolean|number|string|Array|Object}\n */\nArray.prototype.last = function() {\n    \n};\n\n/**\n * const arr = [1, 2, 3];\n * arr.last(); // 3\n */",
     "typescript": "interface Array<T> {\n    last(): T | -1;\n}\n\nArray.prototype.last = function() {\n    \n};\n\n/**\n * const arr = [1, 2, 3];\n * arr.last(); // 3\n */\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          null,
+          {},
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": []
+      },
+      "expected": -1
+    }
+  ]
 }

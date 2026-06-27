@@ -58,5 +58,40 @@
     "racket": "(define/contract (min-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_difference(Nums :: [integer()]) -> integer().\nmin_difference(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_difference(nums :: [integer]) :: integer\n  def min_difference(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -1,
+          10,
+          8
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          10,
+          -1,
+          8
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

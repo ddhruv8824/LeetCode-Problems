@@ -51,5 +51,39 @@
     "racket": "(define/contract (min-number-of-hours initialEnergy initialExperience energy experience)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_number_of_hours(InitialEnergy :: integer(), InitialExperience :: integer(), Energy :: [integer()], Experience :: [integer()]) -> integer().\nmin_number_of_hours(InitialEnergy, InitialExperience, Energy, Experience) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_number_of_hours(initial_energy :: integer, initial_experience :: integer, energy :: [integer], experience :: [integer]) :: integer\n  def min_number_of_hours(initial_energy, initial_experience, energy, experience) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "initialEnergy": 5,
+        "initialExperience": 3,
+        "energy": [
+          1,
+          4,
+          3,
+          2
+        ],
+        "experience": [
+          2,
+          6,
+          3,
+          1
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "initialEnergy": 2,
+        "initialExperience": 4,
+        "energy": [
+          1
+        ],
+        "experience": [
+          3
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

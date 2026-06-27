@@ -53,5 +53,39 @@
     "racket": "(define/contract (mice-and-cheese reward1 reward2 k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec mice_and_cheese(Reward1 :: [integer()], Reward2 :: [integer()], K :: integer()) -> integer().\nmice_and_cheese(Reward1, Reward2, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec mice_and_cheese(reward1 :: [integer], reward2 :: [integer], k :: integer) :: integer\n  def mice_and_cheese(reward1, reward2, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "reward1": [
+          1,
+          1,
+          3,
+          4
+        ],
+        "reward2": [
+          4,
+          4,
+          1,
+          1
+        ],
+        "k": 2
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "reward1": [
+          1,
+          1
+        ],
+        "reward2": [
+          1,
+          1
+        ],
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

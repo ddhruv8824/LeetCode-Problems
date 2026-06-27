@@ -58,5 +58,40 @@
     "racket": "(define/contract (gcd-sort nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec gcd_sort(Nums :: [integer()]) -> boolean().\ngcd_sort(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec gcd_sort(nums :: [integer]) :: boolean\n  def gcd_sort(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          21,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          2,
+          6,
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          5,
+          9,
+          3,
+          15
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

@@ -54,5 +54,25 @@
     "racket": "(define/contract (generate-tag caption)\n  (-> string? string?)\n  )",
     "erlang": "-spec generate_tag(Caption :: unicode:unicode_binary()) -> unicode:unicode_binary().\ngenerate_tag(Caption) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec generate_tag(caption :: String.t) :: String.t\n  def generate_tag(caption) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "caption": "Leetcode daily streak achieved"
+      },
+      "expected": "#leetcodeDailyStreakAchieved"
+    },
+    {
+      "args": {
+        "caption": "can I Go There"
+      },
+      "expected": "#canIGoThere"
+    },
+    {
+      "args": {
+        "caption": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+      },
+      "expected": "#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    }
+  ]
 }

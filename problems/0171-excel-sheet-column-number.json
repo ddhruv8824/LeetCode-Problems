@@ -58,5 +58,25 @@
     "racket": "(define/contract (title-to-number columnTitle)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec title_to_number(ColumnTitle :: unicode:unicode_binary()) -> integer().\ntitle_to_number(ColumnTitle) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec title_to_number(column_title :: String.t) :: integer\n  def title_to_number(column_title) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "columnTitle": "A"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "columnTitle": "AB"
+      },
+      "expected": 28
+    },
+    {
+      "args": {
+        "columnTitle": "ZY"
+      },
+      "expected": 701
+    }
+  ]
 }

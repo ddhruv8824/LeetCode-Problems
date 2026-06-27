@@ -53,5 +53,28 @@
     "racket": "(define/contract (maximum-or nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_or(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_or(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_or(nums :: [integer], k :: integer) :: integer\n  def maximum_or(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          12,
+          9
+        ],
+        "k": 1
+      },
+      "expected": 30
+    },
+    {
+      "args": {
+        "nums": [
+          8,
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 35
+    }
+  ]
 }

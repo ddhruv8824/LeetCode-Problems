@@ -56,5 +56,28 @@
     "racket": "(define/contract (number-of-arrays s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_arrays(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nnumber_of_arrays(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_arrays(s :: String.t, k :: integer) :: integer\n  def number_of_arrays(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1000",
+        "k": 10000
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "1000",
+        "k": 10
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "1317",
+        "k": 2000
+      },
+      "expected": 8
+    }
+  ]
 }

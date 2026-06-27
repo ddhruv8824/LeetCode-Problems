@@ -57,5 +57,28 @@
     "racket": "(define/contract (is-transformable s t)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_transformable(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_transformable(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_transformable(s :: String.t, t :: String.t) :: boolean\n  def is_transformable(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "84532",
+        "t": "34852"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "34521",
+        "t": "23415"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "12345",
+        "t": "12435"
+      },
+      "expected": false
+    }
+  ]
 }

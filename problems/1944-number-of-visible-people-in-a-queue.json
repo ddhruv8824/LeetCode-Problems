@@ -60,5 +60,45 @@
     "racket": "(define/contract (can-see-persons-count heights)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec can_see_persons_count(Heights :: [integer()]) -> [integer()].\ncan_see_persons_count(Heights) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_see_persons_count(heights :: [integer]) :: [integer]\n  def can_see_persons_count(heights) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "heights": [
+          10,
+          6,
+          8,
+          5,
+          11,
+          9
+        ]
+      },
+      "expected": [
+        3,
+        1,
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "heights": [
+          5,
+          1,
+          2,
+          3,
+          10
+        ]
+      },
+      "expected": [
+        4,
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
 }

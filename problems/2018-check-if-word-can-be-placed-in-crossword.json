@@ -66,5 +66,76 @@
     "racket": "(define/contract (place-word-in-crossword board word)\n  (-> (listof (listof char?)) string? boolean?)\n  )",
     "erlang": "-spec place_word_in_crossword(Board :: [[char()]], Word :: unicode:unicode_binary()) -> boolean().\nplace_word_in_crossword(Board, Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec place_word_in_crossword(board :: [[char]], word :: String.t) :: boolean\n  def place_word_in_crossword(board, word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            "#",
+            " ",
+            "#"
+          ],
+          [
+            " ",
+            " ",
+            "#"
+          ],
+          [
+            "#",
+            "c",
+            " "
+          ]
+        ],
+        "word": "abc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "board": [
+          [
+            " ",
+            "#",
+            "a"
+          ],
+          [
+            " ",
+            "#",
+            "c"
+          ],
+          [
+            " ",
+            "#",
+            "a"
+          ]
+        ],
+        "word": "ac"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "#",
+            " ",
+            "#"
+          ],
+          [
+            " ",
+            " ",
+            "#"
+          ],
+          [
+            "#",
+            " ",
+            "c"
+          ]
+        ],
+        "word": "ca"
+      },
+      "expected": true
+    }
+  ]
 }

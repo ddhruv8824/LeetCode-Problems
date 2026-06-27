@@ -52,5 +52,25 @@
     "racket": "(define/contract (trailing-zeroes n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec trailing_zeroes(N :: integer()) -> integer().\ntrailing_zeroes(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec trailing_zeroes(n :: integer) :: integer\n  def trailing_zeroes(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 0
+      },
+      "expected": 0
+    }
+  ]
 }

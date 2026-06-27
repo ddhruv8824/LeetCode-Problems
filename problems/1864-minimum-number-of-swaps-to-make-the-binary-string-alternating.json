@@ -55,5 +55,25 @@
     "racket": "(define/contract (min-swaps s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_swaps(S :: unicode:unicode_binary()) -> integer().\nmin_swaps(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_swaps(s :: String.t) :: integer\n  def min_swaps(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "111000"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "010"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "1110"
+      },
+      "expected": -1
+    }
+  ]
 }

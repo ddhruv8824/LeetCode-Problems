@@ -59,5 +59,45 @@
     "racket": "(define/contract (num-subseq nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_subseq(Nums :: [integer()], Target :: integer()) -> integer().\nnum_subseq(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_subseq(nums :: [integer], target :: integer) :: integer\n  def num_subseq(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "target": 9
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3,
+          6,
+          8
+        ],
+        "target": 10
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          3,
+          4,
+          6,
+          7
+        ],
+        "target": 12
+      },
+      "expected": 61
+    }
+  ]
 }

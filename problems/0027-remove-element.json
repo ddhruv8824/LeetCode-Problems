@@ -54,5 +54,35 @@
     "ruby": "# @param {Integer[]} nums\n# @param {Integer} val\n# @return {Integer}\ndef remove_element(nums, val)\n    \nend",
     "scala": "object Solution {\n    def removeElement(nums: Array[Int], `val`: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          2,
+          3
+        ],
+        "val": 3
+      },
+      "expected": "2, nums = [2,2,_,_]"
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2,
+          2,
+          3,
+          0,
+          4,
+          2
+        ],
+        "val": 2
+      },
+      "expected": "5, nums = [0,1,4,0,3,_,_,_]"
+    }
+  ]
 }

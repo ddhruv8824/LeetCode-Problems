@@ -50,5 +50,43 @@
     "racket": "(define/contract (divisor-game n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec divisor_game(N :: integer()) -> boolean().\ndivisor_game(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec divisor_game(n :: integer) :: boolean\n  def divisor_game(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "N": 1
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "N": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "N": 3
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "N": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "N": 5
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "N": 6
+      },
+      "expected": true
+    }
+  ]
 }

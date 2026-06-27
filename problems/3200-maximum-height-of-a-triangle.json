@@ -65,5 +65,35 @@
     "racket": "(define/contract (max-height-of-triangle red blue)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_height_of_triangle(Red :: integer(), Blue :: integer()) -> integer().\nmax_height_of_triangle(Red, Blue) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_height_of_triangle(red :: integer, blue :: integer) :: integer\n  def max_height_of_triangle(red, blue) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "red": 2,
+        "blue": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "red": 2,
+        "blue": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "red": 1,
+        "blue": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "red": 10,
+        "blue": 1
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -51,5 +51,31 @@
     "racket": "(define/contract (minimum-card-pickup cards)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_card_pickup(Cards :: [integer()]) -> integer().\nminimum_card_pickup(Cards) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_card_pickup(cards :: [integer]) :: integer\n  def minimum_card_pickup(cards) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cards": [
+          3,
+          4,
+          2,
+          3,
+          4,
+          7
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "cards": [
+          1,
+          0,
+          5,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

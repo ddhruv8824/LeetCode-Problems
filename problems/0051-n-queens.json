@@ -50,5 +50,36 @@
     "racket": "(define/contract (solve-n-queens n)\n  (-> exact-integer? (listof (listof string?)))\n  )",
     "erlang": "-spec solve_n_queens(N :: integer()) -> [[unicode:unicode_binary()]].\nsolve_n_queens(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec solve_n_queens(n :: integer) :: [[String.t]]\n  def solve_n_queens(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": [
+        [
+          ".Q..",
+          "...Q",
+          "Q...",
+          "..Q."
+        ],
+        [
+          "..Q.",
+          "Q...",
+          "...Q",
+          ".Q.."
+        ]
+      ]
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": [
+        [
+          "Q"
+        ]
+      ]
+    }
+  ]
 }

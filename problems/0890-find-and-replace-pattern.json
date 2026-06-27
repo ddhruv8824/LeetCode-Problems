@@ -50,5 +50,39 @@
     "racket": "(define/contract (find-and-replace-pattern words pattern)\n  (-> (listof string?) string? (listof string?))\n  )",
     "erlang": "-spec find_and_replace_pattern(Words :: [unicode:unicode_binary()], Pattern :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nfind_and_replace_pattern(Words, Pattern) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_and_replace_pattern(words :: [String.t], pattern :: String.t) :: [String.t]\n  def find_and_replace_pattern(words, pattern) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "abc",
+          "deq",
+          "mee",
+          "aqq",
+          "dkd",
+          "ccc"
+        ],
+        "pattern": "abb"
+      },
+      "expected": [
+        "mee",
+        "aqq"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "b",
+          "c"
+        ],
+        "pattern": "a"
+      },
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ]
 }

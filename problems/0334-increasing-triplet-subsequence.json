@@ -52,5 +52,44 @@
     "racket": "(define/contract (increasing-triplet nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec increasing_triplet(Nums :: [integer()]) -> boolean().\nincreasing_triplet(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec increasing_triplet(nums :: [integer]) :: boolean\n  def increasing_triplet(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          5,
+          0,
+          4,
+          6
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

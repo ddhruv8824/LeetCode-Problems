@@ -50,5 +50,21 @@
     "racket": "(define/contract (can-transform start result)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec can_transform(Start :: unicode:unicode_binary(), Result :: unicode:unicode_binary()) -> boolean().\ncan_transform(Start, Result) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_transform(start :: String.t, result :: String.t) :: boolean\n  def can_transform(start, result) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "start": "RXXLRXRXL",
+        "result": "XRLXXRRLX"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "start": "X",
+        "result": "L"
+      },
+      "expected": false
+    }
+  ]
 }

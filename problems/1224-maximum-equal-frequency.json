@@ -50,5 +50,42 @@
     "racket": "(define/contract (max-equal-freq nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_equal_freq(Nums :: [integer()]) -> integer().\nmax_equal_freq(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_equal_freq(nums :: [integer]) :: integer\n  def max_equal_freq(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          1,
+          1,
+          5,
+          3,
+          3,
+          5
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      "expected": 13
+    }
+  ]
 }

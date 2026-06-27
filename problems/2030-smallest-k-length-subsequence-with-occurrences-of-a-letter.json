@@ -62,5 +62,34 @@
     "racket": "(define/contract (smallest-subsequence s k letter repetition)\n  (-> string? exact-integer? char? exact-integer? string?)\n  )",
     "erlang": "-spec smallest_subsequence(S :: unicode:unicode_binary(), K :: integer(), Letter :: char(), Repetition :: integer()) -> unicode:unicode_binary().\nsmallest_subsequence(S, K, Letter, Repetition) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_subsequence(s :: String.t, k :: integer, letter :: char, repetition :: integer) :: String.t\n  def smallest_subsequence(s, k, letter, repetition) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leet",
+        "k": 3,
+        "letter": "e",
+        "repetition": 1
+      },
+      "expected": "eet"
+    },
+    {
+      "args": {
+        "s": "leetcode",
+        "k": 4,
+        "letter": "e",
+        "repetition": 2
+      },
+      "expected": "ecde"
+    },
+    {
+      "args": {
+        "s": "bb",
+        "k": 2,
+        "letter": "b",
+        "repetition": 2
+      },
+      "expected": "bb"
+    }
+  ]
 }

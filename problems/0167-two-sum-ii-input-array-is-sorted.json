@@ -56,5 +56,67 @@
     "racket": "(define/contract (two-sum numbers target)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec two_sum(Numbers :: [integer()], Target :: integer()) -> [integer()].\ntwo_sum(Numbers, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec two_sum(numbers :: [integer], target :: integer) :: [integer]\n  def two_sum(numbers, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numbers": [
+          2,
+          7,
+          11,
+          15
+        ],
+        "target": 9
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "numbers": [
+          -5,
+          -2,
+          7,
+          11,
+          15
+        ],
+        "target": 9
+      },
+      "expected": [
+        2,
+        4
+      ]
+    },
+    {
+      "args": {
+        "numbers": [
+          5,
+          25,
+          75
+        ],
+        "target": 100
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "numbers": [
+          0,
+          0,
+          3,
+          4
+        ],
+        "target": 0
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

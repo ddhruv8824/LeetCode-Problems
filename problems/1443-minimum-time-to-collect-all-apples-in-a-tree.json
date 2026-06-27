@@ -66,5 +66,130 @@
     "racket": "(define/contract (min-time n edges hasApple)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof boolean?) exact-integer?)\n  )",
     "erlang": "-spec min_time(N :: integer(), Edges :: [[integer()]], HasApple :: [boolean()]) -> integer().\nmin_time(N, Edges, HasApple) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_time(n :: integer, edges :: [[integer]], has_apple :: [boolean]) :: integer\n  def min_time(n, edges, has_apple) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "hasApple": [
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "hasApple": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "hasApple": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

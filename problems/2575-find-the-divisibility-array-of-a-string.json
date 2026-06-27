@@ -53,5 +53,36 @@
     "racket": "(define/contract (divisibility-array word m)\n  (-> string? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec divisibility_array(Word :: unicode:unicode_binary(), M :: integer()) -> [integer()].\ndivisibility_array(Word, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec divisibility_array(word :: String.t, m :: integer) :: [integer]\n  def divisibility_array(word, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "998244353",
+        "m": 3
+      },
+      "expected": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "word": "1010",
+        "m": 10
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ]
 }

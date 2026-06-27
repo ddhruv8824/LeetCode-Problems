@@ -55,5 +55,25 @@
     "racket": "(define/contract (min-number-of-frogs croakOfFrogs)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_number_of_frogs(CroakOfFrogs :: unicode:unicode_binary()) -> integer().\nmin_number_of_frogs(CroakOfFrogs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_number_of_frogs(croak_of_frogs :: String.t) :: integer\n  def min_number_of_frogs(croak_of_frogs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "croakOfFrogs": "croakcroak"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "croakOfFrogs": "crcoakroak"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "croakOfFrogs": "croakcrook"
+      },
+      "expected": -1
+    }
+  ]
 }

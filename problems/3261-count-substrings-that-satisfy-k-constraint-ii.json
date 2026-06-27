@@ -59,5 +59,47 @@
     "racket": "(define/contract (count-k-constraint-substrings s k queries)\n  (-> string? exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec count_k_constraint_substrings(S :: unicode:unicode_binary(), K :: integer(), Queries :: [[integer()]]) -> [integer()].\ncount_k_constraint_substrings(S, K, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_k_constraint_substrings(s :: String.t, k :: integer, queries :: [[integer]]) :: [integer]\n  def count_k_constraint_substrings(s, k, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0001111",
+        "k": 2,
+        "queries": [
+          [
+            0,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        26
+      ]
+    },
+    {
+      "args": {
+        "s": "010101",
+        "k": 1,
+        "queries": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        15,
+        9,
+        3
+      ]
+    }
+  ]
 }

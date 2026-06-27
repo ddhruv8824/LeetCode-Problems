@@ -56,5 +56,25 @@
     "racket": "(define/contract (min-insertions s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_insertions(S :: unicode:unicode_binary()) -> integer().\nmin_insertions(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_insertions(s :: String.t) :: integer\n  def min_insertions(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "(()))"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "())"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "))())("
+      },
+      "expected": 3
+    }
+  ]
 }

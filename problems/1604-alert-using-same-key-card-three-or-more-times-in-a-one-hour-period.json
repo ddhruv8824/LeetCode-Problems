@@ -55,5 +55,57 @@
     "racket": "(define/contract (alert-names keyName keyTime)\n  (-> (listof string?) (listof string?) (listof string?))\n  )",
     "erlang": "-spec alert_names(KeyName :: [unicode:unicode_binary()], KeyTime :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nalert_names(KeyName, KeyTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec alert_names(key_name :: [String.t], key_time :: [String.t]) :: [String.t]\n  def alert_names(key_name, key_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "keyName": [
+          "daniel",
+          "daniel",
+          "daniel",
+          "luis",
+          "luis",
+          "luis",
+          "luis"
+        ],
+        "keyTime": [
+          "10:00",
+          "10:40",
+          "11:00",
+          "09:00",
+          "11:00",
+          "13:00",
+          "15:00"
+        ]
+      },
+      "expected": [
+        "daniel"
+      ]
+    },
+    {
+      "args": {
+        "keyName": [
+          "alice",
+          "alice",
+          "alice",
+          "bob",
+          "bob",
+          "bob",
+          "bob"
+        ],
+        "keyTime": [
+          "12:01",
+          "12:00",
+          "18:00",
+          "21:00",
+          "21:20",
+          "21:30",
+          "23:00"
+        ]
+      },
+      "expected": [
+        "bob"
+      ]
+    }
+  ]
 }

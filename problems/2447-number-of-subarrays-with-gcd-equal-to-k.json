@@ -51,5 +51,30 @@
     "racket": "(define/contract (subarray-gcd nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec subarray_gcd(Nums :: [integer()], K :: integer()) -> integer().\nsubarray_gcd(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subarray_gcd(nums :: [integer], k :: integer) :: integer\n  def subarray_gcd(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          9,
+          3,
+          1,
+          2,
+          6,
+          3
+        ],
+        "k": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          4
+        ],
+        "k": 7
+      },
+      "expected": 0
+    }
+  ]
 }

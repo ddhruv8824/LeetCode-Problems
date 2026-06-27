@@ -52,5 +52,21 @@
     "racket": "(define/contract (maximum-subsequence-count text pattern)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec maximum_subsequence_count(Text :: unicode:unicode_binary(), Pattern :: unicode:unicode_binary()) -> integer().\nmaximum_subsequence_count(Text, Pattern) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_subsequence_count(text :: String.t, pattern :: String.t) :: integer\n  def maximum_subsequence_count(text, pattern) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "abdcdbc",
+        "pattern": "ac"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "text": "aabb",
+        "pattern": "ab"
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -63,5 +63,83 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (is-cousins root x y)\n  (-> (or/c tree-node? #f) exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec is_cousins(Root :: #tree_node{} | null, X :: integer(), Y :: integer()) -> boolean().\nis_cousins(Root, X, Y) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec is_cousins(root :: TreeNode.t | nil, x :: integer, y :: integer) :: boolean\n  def is_cousins(root, x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "x": 4,
+        "y": 3
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          null,
+          4,
+          null,
+          5
+        ],
+        "x": 5,
+        "y": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          null,
+          4
+        ],
+        "x": 2,
+        "y": 3
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          5,
+          3,
+          null,
+          null,
+          6,
+          4
+        ],
+        "x": 3,
+        "y": 6
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "root": [
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "x": 4,
+        "y": 5
+      },
+      "expected": true
+    }
+  ]
 }

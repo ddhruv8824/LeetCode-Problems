@@ -61,5 +61,51 @@
     "racket": "(define/contract (is-possible-to-cut-path grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec is_possible_to_cut_path(Grid :: [[integer()]]) -> boolean().\nis_possible_to_cut_path(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_possible_to_cut_path(grid :: [[integer]]) :: boolean\n  def is_possible_to_cut_path(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

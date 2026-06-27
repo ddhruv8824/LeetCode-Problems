@@ -55,5 +55,49 @@
     "racket": "(define/contract (minimum-distance points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_distance(Points :: [[integer()]]) -> integer().\nminimum_distance(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_distance(points :: [[integer]]) :: integer\n  def minimum_distance(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            3,
+            10
+          ],
+          [
+            5,
+            15
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

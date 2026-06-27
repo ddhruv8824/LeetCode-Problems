@@ -66,5 +66,91 @@
     "racket": "(define/contract (root-count edges guesses k)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec root_count(Edges :: [[integer()]], Guesses :: [[integer()]], K :: integer()) -> integer().\nroot_count(Edges, Guesses, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec root_count(edges :: [[integer]], guesses :: [[integer]], k :: integer) :: integer\n  def root_count(edges, guesses, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "guesses": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "guesses": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 5
+    }
+  ]
 }

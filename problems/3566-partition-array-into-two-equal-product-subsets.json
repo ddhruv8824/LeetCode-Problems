@@ -54,5 +54,32 @@
     "racket": "(define/contract (check-equal-partitions nums target)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
     "erlang": "-spec check_equal_partitions(Nums :: [integer()], Target :: integer()) -> boolean().\ncheck_equal_partitions(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_equal_partitions(nums :: [integer], target :: integer) :: boolean\n  def check_equal_partitions(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          6,
+          8,
+          4
+        ],
+        "target": 24
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          5,
+          3,
+          7
+        ],
+        "target": 15
+      },
+      "expected": false
+    }
+  ]
 }

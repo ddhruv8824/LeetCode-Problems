@@ -48,5 +48,37 @@
     "racket": "(define/contract (flipgame fronts backs)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec flipgame(Fronts :: [integer()], Backs :: [integer()]) -> integer().\nflipgame(Fronts, Backs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec flipgame(fronts :: [integer], backs :: [integer]) :: integer\n  def flipgame(fronts, backs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "fronts": [
+          1,
+          2,
+          4,
+          4,
+          7
+        ],
+        "backs": [
+          1,
+          3,
+          4,
+          1,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "fronts": [
+          1
+        ],
+        "backs": [
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

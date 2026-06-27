@@ -47,5 +47,27 @@
     "racket": "(define/contract (gray-code n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec gray_code(N :: integer()) -> [integer()].\ngray_code(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec gray_code(n :: integer) :: [integer]\n  def gray_code(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
 }

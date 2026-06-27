@@ -53,5 +53,37 @@
     "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
     "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          2,
+          4,
+          1
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "nums": [
+          8
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

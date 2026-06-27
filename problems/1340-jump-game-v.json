@@ -63,5 +63,54 @@
     "racket": "(define/contract (max-jumps arr d)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_jumps(Arr :: [integer()], D :: integer()) -> integer().\nmax_jumps(Arr, D) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_jumps(arr :: [integer], d :: integer) :: integer\n  def max_jumps(arr, d) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          6,
+          4,
+          14,
+          6,
+          8,
+          13,
+          9,
+          7,
+          10,
+          6,
+          12
+        ],
+        "d": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arr": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "d": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "arr": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "d": 1
+      },
+      "expected": 7
+    }
+  ]
 }

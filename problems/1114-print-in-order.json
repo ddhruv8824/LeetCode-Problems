@@ -37,5 +37,23 @@
     "python3": "class Foo:\n    def __init__(self):\n        pass\n\n\n    def first(self, printFirst: 'Callable[[], None]') -> None:\n        \n        # printFirst() outputs \"first\". Do not change or remove this line.\n        printFirst()\n\n\n    def second(self, printSecond: 'Callable[[], None]') -> None:\n        \n        # printSecond() outputs \"second\". Do not change or remove this line.\n        printSecond()\n\n\n    def third(self, printThird: 'Callable[[], None]') -> None:\n        \n        # printThird() outputs \"third\". Do not change or remove this line.\n        printThird()",
     "c": "typedef struct {\n    // User defined data may be declared here.\n    \n} Foo;\n\n// Function Declaration, do not remove\nvoid printFirst();\nvoid printSecond();\nvoid printThird();\n\nFoo* fooCreate() {\n    Foo* obj = (Foo*) malloc(sizeof(Foo));\n    \n    // Initialize user defined data here.\n    \n    return obj;\n}\n\nvoid first(Foo* obj) {\n    \n    // printFirst() outputs \"first\". Do not change or remove this line.\n    printFirst();\n}\n\nvoid second(Foo* obj) {\n    \n    // printSecond() outputs \"second\". Do not change or remove this line.\n    printSecond();\n}\n\nvoid third(Foo* obj) {\n    \n    // printThird() outputs \"third\". Do not change or remove this line.\n    printThird();\n}\n\nvoid fooFree(Foo* obj) {\n    // User defined data may be cleaned up here.\n    \n}",
     "csharp": "public class Foo {\n\n    public Foo() {\n        \n    }\n\n    public void First(Action printFirst) {\n        \n        // printFirst() outputs \"first\". Do not change or remove this line.\n        printFirst();\n    }\n\n    public void Second(Action printSecond) {\n        \n        // printSecond() outputs \"second\". Do not change or remove this line.\n        printSecond();\n    }\n\n    public void Third(Action printThird) {\n        \n        // printThird() outputs \"third\". Do not change or remove this line.\n        printThird();\n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "thread_order": [
+        1,
+        2,
+        3
+      ],
+      "expected": "firstsecondthird"
+    },
+    {
+      "thread_order": [
+        1,
+        2,
+        3
+      ],
+      "expected": "firstsecondthird"
+    }
+  ]
 }

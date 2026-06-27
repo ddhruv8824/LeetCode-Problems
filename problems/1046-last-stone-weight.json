@@ -49,5 +49,20 @@
     "racket": "(define/contract (last-stone-weight stones)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec last_stone_weight(Stones :: [integer()]) -> integer().\nlast_stone_weight(Stones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec last_stone_weight(stones :: [integer]) :: integer\n  def last_stone_weight(stones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          2,
+          7,
+          4,
+          1,
+          8,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -54,5 +54,49 @@
     "racket": "(define/contract (find-min-arrow-shots points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec find_min_arrow_shots(Points :: [[integer()]]) -> integer().\nfind_min_arrow_shots(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_min_arrow_shots(points :: [[integer]]) :: integer\n  def find_min_arrow_shots(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            10,
+            16
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            7,
+            12
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

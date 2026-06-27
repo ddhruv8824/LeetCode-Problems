@@ -46,5 +46,19 @@
     "racket": "(define/contract (convert-to-base7 num)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec convert_to_base7(Num :: integer()) -> unicode:unicode_binary().\nconvert_to_base7(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec convert_to_base7(num :: integer) :: String.t\n  def convert_to_base7(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 100
+      },
+      "expected": "202"
+    },
+    {
+      "args": {
+        "num": -7
+      },
+      "expected": "-10"
+    }
+  ]
 }

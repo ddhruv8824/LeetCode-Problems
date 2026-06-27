@@ -55,5 +55,46 @@
     "ruby": "# @param {Integer[]} arr\n# @return {Boolean}\ndef valid_mountain_array(arr)\n    \nend",
     "scala": "object Solution {\n    def validMountainArray(arr: Array[Int]): Boolean = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn valid_mountain_array(arr: Vec<i32>) -> bool {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          2,
+          1
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "a": [
+          3,
+          5,
+          5
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "a": [
+          0,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          2
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

@@ -51,5 +51,25 @@
     "racket": "(define/contract (preimage-size-fzf k)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec preimage_size_fzf(K :: integer()) -> integer().\npreimage_size_fzf(K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec preimage_size_fzf(k :: integer) :: integer\n  def preimage_size_fzf(k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 0
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "k": 5
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "k": 3
+      },
+      "expected": 5
+    }
+  ]
 }

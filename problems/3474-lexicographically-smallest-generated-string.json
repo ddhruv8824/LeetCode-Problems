@@ -62,5 +62,28 @@
     "racket": "(define/contract (generate-string str1 str2)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec generate_string(Str1 :: unicode:unicode_binary(), Str2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\ngenerate_string(Str1, Str2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec generate_string(str1 :: String.t, str2 :: String.t) :: String.t\n  def generate_string(str1, str2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "str1": "TFTF",
+        "str2": "ab"
+      },
+      "expected": "ababa"
+    },
+    {
+      "args": {
+        "str1": "TFTF",
+        "str2": "abc"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "str1": "F",
+        "str2": "d"
+      },
+      "expected": "a"
+    }
+  ]
 }

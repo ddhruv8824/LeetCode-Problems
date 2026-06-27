@@ -56,5 +56,28 @@
     "racket": "(define/contract (count-of-substrings word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_of_substrings(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\ncount_of_substrings(Word, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_of_substrings(word :: String.t, k :: integer) :: integer\n  def count_of_substrings(word, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "aeioqq",
+        "k": 1
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "word": "aeiou",
+        "k": 0
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "word": " ieaouqqieaouqq ",
+        "k": 1
+      },
+      "expected": 3
+    }
+  ]
 }

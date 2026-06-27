@@ -56,5 +56,29 @@
     "racket": "(define/contract (number-of-alternating-groups colors)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_alternating_groups(Colors :: [integer()]) -> integer().\nnumber_of_alternating_groups(Colors) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_alternating_groups(colors :: [integer]) :: integer\n  def number_of_alternating_groups(colors) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "colors": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "colors": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

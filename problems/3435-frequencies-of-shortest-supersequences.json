@@ -62,5 +62,150 @@
     "racket": "(define/contract (supersequences words)\n  (-> (listof string?) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec supersequences(Words :: [unicode:unicode_binary()]) -> [[integer()]].\nsupersequences(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec supersequences(words :: [String.t]) :: [[integer]]\n  def supersequences(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "ab",
+          "ba"
+        ]
+      },
+      "expected": [
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "aa",
+          "ac"
+        ]
+      },
+      "expected": [
+        [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "aa",
+          "bb",
+          "cc"
+        ]
+      },
+      "expected": [
+        [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ]
 }

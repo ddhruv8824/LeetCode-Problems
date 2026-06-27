@@ -54,5 +54,25 @@
     "racket": "(define/contract (winner-square-game n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec winner_square_game(N :: integer()) -> boolean().\nwinner_square_game(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec winner_square_game(n :: integer) :: boolean\n  def winner_square_game(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": true
+    }
+  ]
 }

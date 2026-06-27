@@ -58,5 +58,28 @@
     "racket": "(define/contract (minimum-changes s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_changes(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_changes(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_changes(s :: String.t, k :: integer) :: integer\n  def minimum_changes(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcac",
+        "k": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "abcdef",
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "aabbaa",
+        "k": 3
+      },
+      "expected": 0
+    }
+  ]
 }

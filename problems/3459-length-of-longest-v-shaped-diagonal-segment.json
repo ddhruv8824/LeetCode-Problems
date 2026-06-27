@@ -70,5 +70,143 @@
     "racket": "(define/contract (len-of-v-diagonal grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec len_of_v_diagonal(Grid :: [[integer()]]) -> integer().\nlen_of_v_diagonal(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec len_of_v_diagonal(grid :: [[integer]]) :: integer\n  def len_of_v_diagonal(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            2,
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

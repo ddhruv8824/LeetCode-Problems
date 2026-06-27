@@ -52,5 +52,21 @@
     "racket": "(define/contract (query-string s n)\n  (-> string? exact-integer? boolean?)\n  )",
     "erlang": "-spec query_string(S :: unicode:unicode_binary(), N :: integer()) -> boolean().\nquery_string(S, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec query_string(s :: String.t, n :: integer) :: boolean\n  def query_string(s, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0110",
+        "n": 3
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "0110",
+        "n": 4
+      },
+      "expected": false
+    }
+  ]
 }

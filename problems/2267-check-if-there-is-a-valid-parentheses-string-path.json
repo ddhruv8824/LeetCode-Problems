@@ -58,5 +58,49 @@
     "racket": "(define/contract (has-valid-path grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
     "erlang": "-spec has_valid_path(Grid :: [[char()]]) -> boolean().\nhas_valid_path(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_valid_path(grid :: [[char]]) :: boolean\n  def has_valid_path(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            "(",
+            "(",
+            "("
+          ],
+          [
+            ")",
+            "(",
+            ")"
+          ],
+          [
+            "(",
+            "(",
+            ")"
+          ],
+          [
+            "(",
+            "(",
+            ")"
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            ")",
+            ")"
+          ],
+          [
+            "(",
+            "("
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

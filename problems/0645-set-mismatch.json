@@ -49,5 +49,33 @@
     "racket": "(define/contract (find-error-nums nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_error_nums(Nums :: [integer()]) -> [integer()].\nfind_error_nums(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_error_nums(nums :: [integer]) :: [integer]\n  def find_error_nums(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2,
+          4
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

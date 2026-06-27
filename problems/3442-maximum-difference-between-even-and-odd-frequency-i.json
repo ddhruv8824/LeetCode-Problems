@@ -52,5 +52,19 @@
     "erlang": "-spec max_difference(S :: unicode:unicode_binary()) -> integer().\nmax_difference(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_difference(s :: String.t) :: integer\n  def max_difference(s) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Count The Frequency Of Each Character\n\n#### Intuition\n\nWe use a hash map to count the number of occurrences of each character in the string $s$. In each key-value pair of the hash map, the key represents a character, and the value represents the number of times that character appears.\n\nAfter the statistics are completed, we traverse the values in the hash map to find the largest odd number $\\textit{maxOdd}$ and the smallest even number $\\textit{minEven}$. The final answer is $\\textit{maxOdd} - \\textit{minEven}$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and $|\\Sigma|$ the size of its character set. Since $s$ contains only lowercase letters, $|\\Sigma| = 26$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(|\\Sigma|)$."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Count The Frequency Of Each Character\n\n#### Intuition\n\nWe use a hash map to count the number of occurrences of each character in the string $s$. In each key-value pair of the hash map, the key represents a character, and the value represents the number of times that character appears.\n\nAfter the statistics are completed, we traverse the values in the hash map to find the largest odd number $\\textit{maxOdd}$ and the smallest even number $\\textit{minEven}$. The final answer is $\\textit{maxOdd} - \\textit{minEven}$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and $|\\Sigma|$ the size of its character set. Since $s$ contains only lowercase letters, $|\\Sigma| = 26$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(|\\Sigma|)$.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "aaaaabbc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "abcabcab"
+      },
+      "expected": 1
+    }
+  ]
 }

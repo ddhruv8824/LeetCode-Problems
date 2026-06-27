@@ -53,5 +53,101 @@
     "erlang": "-spec flip_and_invert_image(Image :: [[integer()]]) -> [[integer()]].\nflip_and_invert_image(Image) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec flip_and_invert_image(image :: [[integer]]) :: [[integer]]\n  def flip_and_invert_image(image) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe can do this in place.  In each row, the `i`th value from the left is equal to the inverse of the `i`th value from the right.\n\nWe use `(C+1) / 2` (with floor division) to iterate over all indexes `i` in the first half of the row, including the center.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where `N` is the total number of elements in `A`.\n\n* Space Complexity: $$O(1)$$ in *additional* space complexity."
+  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe can do this in place.  In each row, the `i`th value from the left is equal to the inverse of the `i`th value from the right.\n\nWe use `(C+1) / 2` (with floor division) to iterate over all indexes `i` in the first half of the row, including the center.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where `N` is the total number of elements in `A`.\n\n* Space Complexity: $$O(1)$$ in *additional* space complexity.",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "a": [
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ]
 }

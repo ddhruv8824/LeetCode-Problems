@@ -45,5 +45,48 @@
     "racket": "(define trie%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; insert : string? -> void?\n    (define/public (insert word)\n      )\n    ; search : string? -> boolean?\n    (define/public (search word)\n      )\n    ; starts-with : string? -> boolean?\n    (define/public (starts-with prefix)\n      )))\n\n;; Your trie% object will be instantiated and called as such:\n;; (define obj (new trie%))\n;; (send obj insert word)\n;; (define param_2 (send obj search word))\n;; (define param_3 (send obj starts-with prefix))",
     "erlang": "-spec trie_init_() -> any().\ntrie_init_() ->\n  .\n\n-spec trie_insert(Word :: unicode:unicode_binary()) -> any().\ntrie_insert(Word) ->\n  .\n\n-spec trie_search(Word :: unicode:unicode_binary()) -> boolean().\ntrie_search(Word) ->\n  .\n\n-spec trie_starts_with(Prefix :: unicode:unicode_binary()) -> boolean().\ntrie_starts_with(Prefix) ->\n  .\n\n\n%% Your functions will be called as such:\n%% trie_init_(),\n%% trie_insert(Word),\n%% Param_2 = trie_search(Word),\n%% Param_3 = trie_starts_with(Prefix),\n\n%% trie_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule Trie do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec insert(word :: String.t) :: any\n  def insert(word) do\n    \n  end\n\n  @spec search(word :: String.t) :: boolean\n  def search(word) do\n    \n  end\n\n  @spec starts_with(prefix :: String.t) :: boolean\n  def starts_with(prefix) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# Trie.init_()\n# Trie.insert(word)\n# param_2 = Trie.search(word)\n# param_3 = Trie.starts_with(prefix)\n\n# Trie.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "Trie",
+        "insert",
+        "search",
+        "search",
+        "startsWith",
+        "insert",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "apple"
+        ],
+        [
+          "apple"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ],
+        [
+          "app"
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        true,
+        false,
+        true,
+        null,
+        true
+      ]
+    }
+  ]
 }

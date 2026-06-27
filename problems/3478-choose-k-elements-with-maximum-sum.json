@@ -53,5 +53,56 @@
     "racket": "(define/contract (find-max-sum nums1 nums2 k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec find_max_sum(Nums1 :: [integer()], Nums2 :: [integer()], K :: integer()) -> [integer()].\nfind_max_sum(Nums1, Nums2, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_max_sum(nums1 :: [integer], nums2 :: [integer], k :: integer) :: [integer]\n  def find_max_sum(nums1, nums2, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          4,
+          2,
+          1,
+          5,
+          3
+        ],
+        "nums2": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "k": 2
+      },
+      "expected": [
+        80,
+        30,
+        0,
+        80,
+        50
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "nums2": [
+          3,
+          1,
+          2,
+          3
+        ],
+        "k": 1
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

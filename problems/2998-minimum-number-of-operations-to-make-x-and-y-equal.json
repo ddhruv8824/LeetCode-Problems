@@ -58,5 +58,28 @@
     "racket": "(define/contract (minimum-operations-to-make-equal x y)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_operations_to_make_equal(X :: integer(), Y :: integer()) -> integer().\nminimum_operations_to_make_equal(X, Y) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_operations_to_make_equal(x :: integer, y :: integer) :: integer\n  def minimum_operations_to_make_equal(x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 26,
+        "y": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "x": 54,
+        "y": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "x": 25,
+        "y": 30
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -57,5 +57,42 @@
     "racket": "(define/contract (get-max-len nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec get_max_len(Nums :: [integer()]) -> integer().\nget_max_len(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_max_len(nums :: [integer]) :: integer\n  def get_max_len(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          -2,
+          -3,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -2,
+          -3,
+          0,
+          1
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

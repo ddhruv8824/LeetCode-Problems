@@ -55,5 +55,65 @@
     "racket": "(define/contract (wiggle-max-length nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec wiggle_max_length(Nums :: [integer()]) -> integer().\nwiggle_max_length(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec wiggle_max_length(nums :: [integer]) :: integer\n  def wiggle_max_length(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          7,
+          4,
+          9,
+          2,
+          5
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          17,
+          5,
+          10,
+          13,
+          15,
+          10,
+          5,
+          16,
+          8
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3,
+          3,
+          2,
+          5
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

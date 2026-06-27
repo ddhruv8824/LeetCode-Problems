@@ -59,5 +59,36 @@
     "racket": "(define/contract (count-lattice-points circles)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec count_lattice_points(Circles :: [[integer()]]) -> integer().\ncount_lattice_points(Circles) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_lattice_points(circles :: [[integer]]) :: integer\n  def count_lattice_points(circles) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "circles": [
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "circles": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

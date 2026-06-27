@@ -54,5 +54,35 @@
     "racket": "(define/contract (arithmetic-triplets nums diff)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec arithmetic_triplets(Nums :: [integer()], Diff :: integer()) -> integer().\narithmetic_triplets(Nums, Diff) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec arithmetic_triplets(nums :: [integer], diff :: integer) :: integer\n  def arithmetic_triplets(nums, diff) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          4,
+          6,
+          7,
+          10
+        ],
+        "diff": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "diff": 2
+      },
+      "expected": 2
+    }
+  ]
 }

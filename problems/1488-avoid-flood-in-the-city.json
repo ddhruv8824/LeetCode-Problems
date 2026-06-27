@@ -59,5 +59,55 @@
     "racket": "(define/contract (avoid-flood rains)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec avoid_flood(Rains :: [integer()]) -> [integer()].\navoid_flood(Rains) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec avoid_flood(rains :: [integer]) :: [integer]\n  def avoid_flood(rains) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "rains": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "rains": [
+          1,
+          2,
+          0,
+          0,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        -1,
+        -1,
+        2,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "rains": [
+          1,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

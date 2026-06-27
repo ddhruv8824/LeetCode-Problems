@@ -47,5 +47,37 @@
     "racket": "(define/contract (num-squares n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_squares(N :: integer()) -> integer().\nnum_squares(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_squares(n :: integer) :: integer\n  def num_squares(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 12
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 13
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 128
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 43
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 48
+      },
+      "expected": 3
+    }
+  ]
 }

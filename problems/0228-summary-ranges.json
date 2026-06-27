@@ -48,5 +48,69 @@
     "racket": "(define/contract (summary-ranges nums)\n  (-> (listof exact-integer?) (listof string?))\n  )",
     "erlang": "-spec summary_ranges(Nums :: [integer()]) -> [unicode:unicode_binary()].\nsummary_ranges(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec summary_ranges(nums :: [integer]) :: [String.t]\n  def summary_ranges(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ]
+      },
+      "expected": [
+        "0->2",
+        "4->5",
+        "7"
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          8,
+          9
+        ]
+      },
+      "expected": [
+        "0",
+        "2->4",
+        "6",
+        "8->9"
+      ]
+    },
+    {
+      "args": {
+        "nums": []
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "nums": [
+          -1
+        ]
+      },
+      "expected": [
+        "-1"
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0
+        ]
+      },
+      "expected": [
+        "0"
+      ]
+    }
+  ]
 }

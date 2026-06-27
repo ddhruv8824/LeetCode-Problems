@@ -57,5 +57,42 @@
     "racket": "(define/contract (stone-game-v stoneValue)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec stone_game_v(StoneValue :: [integer()]) -> integer().\nstone_game_v(StoneValue) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec stone_game_v(stone_value :: [integer]) :: integer\n  def stone_game_v(stone_value) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stoneValue": [
+          6,
+          2,
+          3,
+          4,
+          5,
+          5
+        ]
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "stoneValue": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": 28
+    },
+    {
+      "args": {
+        "stoneValue": [
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

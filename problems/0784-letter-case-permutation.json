@@ -48,5 +48,35 @@
     "racket": "(define/contract (letter-case-permutation s)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec letter_case_permutation(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nletter_case_permutation(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec letter_case_permutation(s :: String.t) :: [String.t]\n  def letter_case_permutation(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "a1b2"
+      },
+      "expected": [
+        "a1b2",
+        "a1B2",
+        "A1b2",
+        "A1B2"
+      ]
+    },
+    {
+      "args": {
+        "s": "3z4"
+      },
+      "expected": [
+        "3z4",
+        "3Z4"
+      ]
+    },
+    {
+      "args": {
+        "s": "12345"
+      },
+      "expected": [
+        "12345"
+      ]
+    }
+  ]
 }

@@ -55,5 +55,30 @@
     "racket": "(define/contract (max-sliding-window nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec max_sliding_window(Nums :: [integer()], K :: integer()) -> [integer()].\nmax_sliding_window(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_sliding_window(nums :: [integer], k :: integer) :: [integer]\n  def max_sliding_window(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          -1,
+          -3,
+          5,
+          3,
+          6,
+          7
+        ],
+        "k": 3
+      },
+      "expected": [
+        3,
+        3,
+        5,
+        5,
+        6,
+        7
+      ]
+    }
+  ]
 }

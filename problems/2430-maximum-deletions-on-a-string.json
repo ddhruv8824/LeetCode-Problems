@@ -60,5 +60,25 @@
     "racket": "(define/contract (delete-string s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec delete_string(S :: unicode:unicode_binary()) -> integer().\ndelete_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec delete_string(s :: String.t) :: integer\n  def delete_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcabcdabc"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "aaabaab"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "aaaaa"
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -55,5 +55,42 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (range-sum-bst root low high)\n  (-> (or/c tree-node? #f) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec range_sum_bst(Root :: #tree_node{} | null, Low :: integer(), High :: integer()) -> integer().\nrange_sum_bst(Root, Low, High) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec range_sum_bst(root :: TreeNode.t | nil, low :: integer, high :: integer) :: integer\n  def range_sum_bst(root, low, high) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          10,
+          5,
+          15,
+          3,
+          7,
+          null,
+          18
+        ],
+        "low": 7,
+        "high": 15
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "root": [
+          10,
+          5,
+          15,
+          3,
+          7,
+          13,
+          18,
+          1,
+          null,
+          6
+        ],
+        "low": 6,
+        "high": 10
+      },
+      "expected": 23
+    }
+  ]
 }

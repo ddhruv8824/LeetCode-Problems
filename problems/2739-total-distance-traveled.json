@@ -48,5 +48,21 @@
     "racket": "(define/contract (distance-traveled mainTank additionalTank)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec distance_traveled(MainTank :: integer(), AdditionalTank :: integer()) -> integer().\ndistance_traveled(MainTank, AdditionalTank) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distance_traveled(main_tank :: integer, additional_tank :: integer) :: integer\n  def distance_traveled(main_tank, additional_tank) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mainTank": 5,
+        "additionalTank": 10
+      },
+      "expected": 60
+    },
+    {
+      "args": {
+        "mainTank": 1,
+        "additionalTank": 2
+      },
+      "expected": 10
+    }
+  ]
 }

@@ -56,5 +56,25 @@
     "racket": "(define/contract (split-string s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec split_string(S :: unicode:unicode_binary()) -> boolean().\nsplit_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec split_string(s :: String.t) :: boolean\n  def split_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1234"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "050043"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "9080701"
+      },
+      "expected": false
+    }
+  ]
 }

@@ -57,5 +57,49 @@
     "racket": "(define/contract (max-sum grid limits k)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_sum(Grid :: [[integer()]], Limits :: [integer()], K :: integer()) -> integer().\nmax_sum(Grid, Limits, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_sum(grid :: [[integer]], limits :: [integer], k :: integer) :: integer\n  def max_sum(grid, limits, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "limits": [
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            3,
+            7
+          ],
+          [
+            8,
+            2,
+            6
+          ]
+        ],
+        "limits": [
+          2,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 21
+    }
+  ]
 }

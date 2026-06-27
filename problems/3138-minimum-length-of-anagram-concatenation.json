@@ -56,5 +56,25 @@
     "racket": "(define/contract (min-anagram-length s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_anagram_length(S :: unicode:unicode_binary()) -> integer().\nmin_anagram_length(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_anagram_length(s :: String.t) :: integer\n  def min_anagram_length(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abba"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "cdef"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "abcbcacabbaccba"
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -54,5 +54,39 @@
     "racket": "(define/contract (min-element nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_element(Nums :: [integer()]) -> integer().\nmin_element(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_element(nums :: [integer]) :: integer\n  def min_element(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          12,
+          13,
+          14
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          999,
+          19,
+          199
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

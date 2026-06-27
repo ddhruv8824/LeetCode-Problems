@@ -54,5 +54,21 @@
     "racket": "(define/contract (count-stepping-numbers low high)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec count_stepping_numbers(Low :: unicode:unicode_binary(), High :: unicode:unicode_binary()) -> integer().\ncount_stepping_numbers(Low, High) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_stepping_numbers(low :: String.t, high :: String.t) :: integer\n  def count_stepping_numbers(low, high) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "low": "1",
+        "high": "11"
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "low": "90",
+        "high": "101"
+      },
+      "expected": 2
+    }
+  ]
 }

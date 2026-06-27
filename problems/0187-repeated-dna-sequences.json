@@ -51,5 +51,24 @@
     "racket": "(define/contract (find-repeated-dna-sequences s)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec find_repeated_dna_sequences(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nfind_repeated_dna_sequences(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_repeated_dna_sequences(s :: String.t) :: [String.t]\n  def find_repeated_dna_sequences(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+      },
+      "expected": [
+        "AAAAACCCCC",
+        "CCCCCAAAAA"
+      ]
+    },
+    {
+      "args": {
+        "s": "AAAAAAAAAAAAA"
+      },
+      "expected": [
+        "AAAAAAAAAA"
+      ]
+    }
+  ]
 }

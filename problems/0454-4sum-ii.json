@@ -51,5 +51,45 @@
     "racket": "(define/contract (four-sum-count nums1 nums2 nums3 nums4)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec four_sum_count(Nums1 :: [integer()], Nums2 :: [integer()], Nums3 :: [integer()], Nums4 :: [integer()]) -> integer().\nfour_sum_count(Nums1, Nums2, Nums3, Nums4) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec four_sum_count(nums1 :: [integer], nums2 :: [integer], nums3 :: [integer], nums4 :: [integer]) :: integer\n  def four_sum_count(nums1, nums2, nums3, nums4) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          2
+        ],
+        "nums2": [
+          -2,
+          -1
+        ],
+        "nums3": [
+          -1,
+          2
+        ],
+        "nums4": [
+          0,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums1": [
+          0
+        ],
+        "nums2": [
+          0
+        ],
+        "nums3": [
+          0
+        ],
+        "nums4": [
+          0
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

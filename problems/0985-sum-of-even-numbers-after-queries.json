@@ -51,5 +51,41 @@
     "erlang": "-spec sum_even_after_queries(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nsum_even_after_queries(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_even_after_queries(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def sum_even_after_queries(nums, queries) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Maintain Array Sum\n\n**Intuition and Algorithm**\n\nLet's try to maintain `S`, the sum of the array throughout one query operation.\n\nWhen acting on an array element `A[index]`, the rest of the values of `A` remain the same.  Let's remove `A[index]` from `S` if it is even, then add `A[index] + val` back (if it is even.)\n\nHere are some examples:\n\n* If we have `A = [2,2,2,2,2]`, `S = 10`, and we do `A[0] += 4`: we will update `S -= 2`, then `S += 6`.  At the end, we will have `A = [6,2,2,2,2]` and `S = 14`.\n\n* If we have `A = [1,2,2,2,2]`, `S = 8`, and we do `A[0] += 3`: we will skip updating `S` (since `A[0]` is odd), then `S += 4`.  At the end, we will have `A = [4,2,2,2,2]` and `S = 12`.\n\n* If we have `A = [2,2,2,2,2]`, `S = 10` and we do `A[0] += 1`: we will update `S -= 2`, then skip updating `S` (since `A[0] + 1` is odd.)  At the end, we will have `A = [3,2,2,2,2]` and `S = 8`.\n\n* If we have `A = [1,2,2,2,2]`, `S = 8` and we do `A[0] += 2`: we will skip updating `S` (since `A[0]` is odd), then skip updating `S` again (since `A[0] + 2` is odd.)  At the end, we will have `A = [3,2,2,2,2]` and `S = 8`.\n\nThese examples help illustrate that our algorithm actually maintains the value of `S` throughout each query operation.**Complexity Analysis**\n\n* Time Complexity:  $$O(N+Q)$$, where $$N$$ is the length of `A` and $$Q$$ is the number of `queries`.\n\n* Space Complexity:  $$O(Q)$$, though we only allocate $$O(1)$$ additional space."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Maintain Array Sum\n\n**Intuition and Algorithm**\n\nLet's try to maintain `S`, the sum of the array throughout one query operation.\n\nWhen acting on an array element `A[index]`, the rest of the values of `A` remain the same.  Let's remove `A[index]` from `S` if it is even, then add `A[index] + val` back (if it is even.)\n\nHere are some examples:\n\n* If we have `A = [2,2,2,2,2]`, `S = 10`, and we do `A[0] += 4`: we will update `S -= 2`, then `S += 6`.  At the end, we will have `A = [6,2,2,2,2]` and `S = 14`.\n\n* If we have `A = [1,2,2,2,2]`, `S = 8`, and we do `A[0] += 3`: we will skip updating `S` (since `A[0]` is odd), then `S += 4`.  At the end, we will have `A = [4,2,2,2,2]` and `S = 12`.\n\n* If we have `A = [2,2,2,2,2]`, `S = 10` and we do `A[0] += 1`: we will update `S -= 2`, then skip updating `S` (since `A[0] + 1` is odd.)  At the end, we will have `A = [3,2,2,2,2]` and `S = 8`.\n\n* If we have `A = [1,2,2,2,2]`, `S = 8` and we do `A[0] += 2`: we will skip updating `S` (since `A[0]` is odd), then skip updating `S` again (since `A[0] + 2` is odd.)  At the end, we will have `A = [3,2,2,2,2]` and `S = 8`.\n\nThese examples help illustrate that our algorithm actually maintains the value of `S` throughout each query operation.**Complexity Analysis**\n\n* Time Complexity:  $$O(N+Q)$$, where $$N$$ is the length of `A` and $$Q$$ is the number of `queries`.\n\n* Space Complexity:  $$O(Q)$$, though we only allocate $$O(1)$$ additional space.",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "queries": [
+          [
+            1,
+            0
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        8,
+        6,
+        2,
+        4
+      ]
+    }
+  ]
 }

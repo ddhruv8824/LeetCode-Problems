@@ -61,5 +61,28 @@
     "racket": "(define/contract (smallest-number num t)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec smallest_number(Num :: unicode:unicode_binary(), T :: integer()) -> unicode:unicode_binary().\nsmallest_number(Num, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_number(num :: String.t, t :: integer) :: String.t\n  def smallest_number(num, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "1234",
+        "t": 256
+      },
+      "expected": "1488"
+    },
+    {
+      "args": {
+        "num": "12355",
+        "t": 50
+      },
+      "expected": "12355"
+    },
+    {
+      "args": {
+        "num": "11111",
+        "t": 26
+      },
+      "expected": "-1"
+    }
+  ]
 }

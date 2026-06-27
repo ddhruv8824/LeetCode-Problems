@@ -60,5 +60,75 @@
     "racket": "(define/contract (frog-position n edges t target)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? flonum?)\n  )",
     "erlang": "-spec frog_position(N :: integer(), Edges :: [[integer()]], T :: integer(), Target :: integer()) -> float().\nfrog_position(N, Edges, T, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec frog_position(n :: integer, edges :: [[integer]], t :: integer, target :: integer) :: float\n  def frog_position(n, edges, t, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "t": 2,
+        "target": 4
+      },
+      "expected": 0.16666666666666666
+    },
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "t": 1,
+        "target": 7
+      },
+      "expected": 0.3333333333333333
+    }
+  ]
 }

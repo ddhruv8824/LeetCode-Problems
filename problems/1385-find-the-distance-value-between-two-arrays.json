@@ -57,5 +57,63 @@
     "racket": "(define/contract (find-the-distance-value arr1 arr2 d)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_the_distance_value(Arr1 :: [integer()], Arr2 :: [integer()], D :: integer()) -> integer().\nfind_the_distance_value(Arr1, Arr2, D) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_the_distance_value(arr1 :: [integer], arr2 :: [integer], d :: integer) :: integer\n  def find_the_distance_value(arr1, arr2, d) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr1": [
+          4,
+          5,
+          8
+        ],
+        "arr2": [
+          10,
+          9,
+          1,
+          8
+        ],
+        "d": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr1": [
+          1,
+          4,
+          2,
+          3
+        ],
+        "arr2": [
+          -4,
+          -3,
+          6,
+          10,
+          20,
+          30
+        ],
+        "d": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr1": [
+          2,
+          1,
+          100,
+          3
+        ],
+        "arr2": [
+          -5,
+          -2,
+          10,
+          -3,
+          7
+        ],
+        "d": 6
+      },
+      "expected": 1
+    }
+  ]
 }

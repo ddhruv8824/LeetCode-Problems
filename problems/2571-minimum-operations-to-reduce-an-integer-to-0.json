@@ -51,5 +51,19 @@
     "racket": "(define/contract (min-operations n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_operations(N :: integer()) -> integer().\nmin_operations(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(n :: integer) :: integer\n  def min_operations(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 39
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 54
+      },
+      "expected": 3
+    }
+  ]
 }

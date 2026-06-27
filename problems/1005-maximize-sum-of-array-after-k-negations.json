@@ -54,5 +54,63 @@
     "racket": "(define/contract (largest-sum-after-k-negations nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec largest_sum_after_k_negations(Nums :: [integer()], K :: integer()) -> integer().\nlargest_sum_after_k_negations(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_sum_after_k_negations(nums :: [integer], k :: integer) :: integer\n  def largest_sum_after_k_negations(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "A": [
+          4,
+          2,
+          3
+        ],
+        "K": 1
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "A": [
+          3,
+          -1,
+          0,
+          2
+        ],
+        "K": 3
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "A": [
+          2,
+          -3,
+          -1,
+          5,
+          -4
+        ],
+        "K": 2
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "A": [
+          -1,
+          2
+        ],
+        "K": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "A": [
+          -1,
+          -2
+        ],
+        "K": 3
+      },
+      "expected": 1
+    }
+  ]
 }

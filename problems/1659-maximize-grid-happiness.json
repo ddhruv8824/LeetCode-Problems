@@ -64,5 +64,34 @@
     "racket": "(define/contract (get-max-grid-happiness m n introvertsCount extrovertsCount)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_max_grid_happiness(M :: integer(), N :: integer(), IntrovertsCount :: integer(), ExtrovertsCount :: integer()) -> integer().\nget_max_grid_happiness(M, N, IntrovertsCount, ExtrovertsCount) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_max_grid_happiness(m :: integer, n :: integer, introverts_count :: integer, extroverts_count :: integer) :: integer\n  def get_max_grid_happiness(m, n, introverts_count, extroverts_count) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 2,
+        "n": 3,
+        "introvertsCount": 1,
+        "extrovertsCount": 2
+      },
+      "expected": 240
+    },
+    {
+      "args": {
+        "m": 3,
+        "n": 1,
+        "introvertsCount": 2,
+        "extrovertsCount": 1
+      },
+      "expected": 260
+    },
+    {
+      "args": {
+        "m": 2,
+        "n": 2,
+        "introvertsCount": 4,
+        "extrovertsCount": 0
+      },
+      "expected": 240
+    }
+  ]
 }

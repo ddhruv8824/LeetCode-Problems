@@ -68,5 +68,79 @@
     "racket": "(define/contract (visible-points points angle location)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec visible_points(Points :: [[integer()]], Angle :: integer(), Location :: [integer()]) -> integer().\nvisible_points(Points, Angle, Location) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec visible_points(points :: [[integer]], angle :: integer, location :: [integer]) :: integer\n  def visible_points(points, angle, location) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "angle": 90,
+        "location": [
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "angle": 90,
+        "location": [
+          1,
+          1
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "angle": 13,
+        "location": [
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

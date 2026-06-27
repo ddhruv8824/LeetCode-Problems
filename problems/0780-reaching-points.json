@@ -50,5 +50,34 @@
     "racket": "(define/contract (reaching-points sx sy tx ty)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec reaching_points(Sx :: integer(), Sy :: integer(), Tx :: integer(), Ty :: integer()) -> boolean().\nreaching_points(Sx, Sy, Tx, Ty) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reaching_points(sx :: integer, sy :: integer, tx :: integer, ty :: integer) :: boolean\n  def reaching_points(sx, sy, tx, ty) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "sx": 1,
+        "sy": 1,
+        "tx": 3,
+        "ty": 5
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "sx": 1,
+        "sy": 1,
+        "tx": 2,
+        "ty": 2
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "sx": 1,
+        "sy": 1,
+        "tx": 1,
+        "ty": 1
+      },
+      "expected": true
+    }
+  ]
 }

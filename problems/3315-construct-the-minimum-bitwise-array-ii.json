@@ -52,5 +52,37 @@
     "racket": "(define/contract (min-bitwise-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec min_bitwise_array(Nums :: [integer()]) -> [integer()].\nmin_bitwise_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_bitwise_array(nums :: [integer]) :: [integer]\n  def min_bitwise_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      "expected": [
+        -1,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          11,
+          13,
+          31
+        ]
+      },
+      "expected": [
+        9,
+        12,
+        15
+      ]
+    }
+  ]
 }

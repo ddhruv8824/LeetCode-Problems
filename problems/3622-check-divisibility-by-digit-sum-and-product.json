@@ -47,5 +47,19 @@
     "racket": "(define/contract (check-divisibility n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec check_divisibility(N :: integer()) -> boolean().\ncheck_divisibility(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_divisibility(n :: integer) :: boolean\n  def check_divisibility(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 99
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 23
+      },
+      "expected": false
+    }
+  ]
 }

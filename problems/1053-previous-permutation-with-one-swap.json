@@ -54,5 +54,53 @@
     "racket": "(define/contract (prev-perm-opt1 arr)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec prev_perm_opt1(Arr :: [integer()]) -> [integer()].\nprev_perm_opt1(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec prev_perm_opt1(arr :: [integer]) :: [integer]\n  def prev_perm_opt1(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          1,
+          5
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          9,
+          4,
+          6,
+          7
+        ]
+      },
+      "expected": [
+        1,
+        7,
+        4,
+        6,
+        9
+      ]
+    }
+  ]
 }

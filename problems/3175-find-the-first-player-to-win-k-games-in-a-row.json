@@ -53,5 +53,31 @@
     "racket": "(define/contract (find-winning-player skills k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_winning_player(Skills :: [integer()], K :: integer()) -> integer().\nfind_winning_player(Skills, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_winning_player(skills :: [integer], k :: integer) :: integer\n  def find_winning_player(skills, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "skills": [
+          4,
+          2,
+          6,
+          3,
+          9
+        ],
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "skills": [
+          2,
+          5,
+          4
+        ],
+        "k": 3
+      },
+      "expected": 1
+    }
+  ]
 }

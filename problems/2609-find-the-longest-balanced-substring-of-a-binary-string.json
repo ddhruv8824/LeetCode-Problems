@@ -54,5 +54,25 @@
     "racket": "(define/contract (find-the-longest-balanced-substring s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec find_the_longest_balanced_substring(S :: unicode:unicode_binary()) -> integer().\nfind_the_longest_balanced_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_the_longest_balanced_substring(s :: String.t) :: integer\n  def find_the_longest_balanced_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "01000111"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "s": "00111"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "111"
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -57,5 +57,48 @@
     "racket": "(define/contract (k-increasing arr k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec k_increasing(Arr :: [integer()], K :: integer()) -> integer().\nk_increasing(Arr, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_increasing(arr :: [integer], k :: integer) :: integer\n  def k_increasing(arr, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "k": 1
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          1,
+          5,
+          2,
+          6,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          1,
+          5,
+          2,
+          6,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 2
+    }
+  ]
 }

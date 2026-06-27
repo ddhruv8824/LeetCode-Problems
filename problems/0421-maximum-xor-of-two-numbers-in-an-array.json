@@ -49,5 +49,39 @@
     "racket": "(define/contract (find-maximum-xor nums)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )",
     "erlang": "-spec find_maximum_xor(Nums :: [integer()]) -> integer().\nfind_maximum_xor(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_maximum_xor(nums :: [integer]) :: integer\n  def find_maximum_xor(nums) do\n\n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          10,
+          5,
+          25,
+          2,
+          8
+        ]
+      },
+      "expected": 28
+    },
+    {
+      "args": {
+        "nums": [
+          14,
+          70,
+          53,
+          83,
+          49,
+          91,
+          36,
+          80,
+          92,
+          51,
+          66,
+          70
+        ]
+      },
+      "expected": 127
+    }
+  ]
 }

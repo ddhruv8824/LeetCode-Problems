@@ -66,5 +66,85 @@
     "racket": "(define/contract (exist board word)\n  (-> (listof (listof char?)) string? boolean?)\n  )",
     "erlang": "-spec exist(Board :: [[char()]], Word :: unicode:unicode_binary()) -> boolean().\nexist(Board, Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec exist(board :: [[char]], word :: String.t) :: boolean\n  def exist(board, word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "ABCCED"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "SEE"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "ABCB"
+      },
+      "expected": false
+    }
+  ]
 }

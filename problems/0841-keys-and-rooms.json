@@ -53,5 +53,46 @@
     "erlang": "-spec can_visit_all_rooms(Rooms :: [[integer()]]) -> boolean().\ncan_visit_all_rooms(Rooms) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_visit_all_rooms(rooms :: [[integer]]) :: boolean\n  def can_visit_all_rooms(rooms) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition and Algorithm**\n\nWhen visiting a room for the first time, look at all the keys in that room.  For any key that hasn't been used yet, add it to the todo list (`stack`) for it to be used.\n\nSee the comments of the code for more details.**Complexity Analysis**\n\n* Time Complexity:  $$O(N + E)$$, where $$N$$ is the number of rooms, and $$E$$ is the total number of keys.\n\n* Space Complexity:  $$O(N)$$ in additional space complexity, to store `stack` and `seen`."
+  "solution": "[TOC]\n\n---\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition and Algorithm**\n\nWhen visiting a room for the first time, look at all the keys in that room.  For any key that hasn't been used yet, add it to the todo list (`stack`) for it to be used.\n\nSee the comments of the code for more details.**Complexity Analysis**\n\n* Time Complexity:  $$O(N + E)$$, where $$N$$ is the number of rooms, and $$E$$ is the total number of keys.\n\n* Space Complexity:  $$O(N)$$ in additional space complexity, to store `stack` and `seen`.",
+  "test_cases": [
+    {
+      "args": {
+        "rooms": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          []
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "rooms": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

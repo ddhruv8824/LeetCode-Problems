@@ -47,5 +47,19 @@
     "racket": "(define/contract (sum-of-the-digits-of-harshad-number x)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_of_the_digits_of_harshad_number(X :: integer()) -> integer().\nsum_of_the_digits_of_harshad_number(X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_the_digits_of_harshad_number(x :: integer) :: integer\n  def sum_of_the_digits_of_harshad_number(x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 18
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "x": 23
+      },
+      "expected": -1
+    }
+  ]
 }

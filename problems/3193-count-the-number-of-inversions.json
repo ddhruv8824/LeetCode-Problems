@@ -61,5 +61,59 @@
     "racket": "(define/contract (number-of-permutations n requirements)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_permutations(N :: integer(), Requirements :: [[integer()]]) -> integer().\nnumber_of_permutations(N, Requirements) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_permutations(n :: integer, requirements :: [[integer]]) :: integer\n  def number_of_permutations(n, requirements) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "requirements": [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3,
+        "requirements": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2,
+        "requirements": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

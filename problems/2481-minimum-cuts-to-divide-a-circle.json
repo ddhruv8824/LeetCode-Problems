@@ -53,5 +53,19 @@
     "racket": "(define/contract (number-of-cuts n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_cuts(N :: integer()) -> integer().\nnumber_of_cuts(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_cuts(n :: integer) :: integer\n  def number_of_cuts(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 3
+    }
+  ]
 }

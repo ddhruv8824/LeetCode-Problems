@@ -50,5 +50,33 @@
     "racket": "(define/contract (max-score nums x)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_score(Nums :: [integer()], X :: integer()) -> integer().\nmax_score(Nums, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer], x :: integer) :: integer\n  def max_score(nums, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          6,
+          1,
+          9,
+          2
+        ],
+        "x": 5
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "x": 3
+      },
+      "expected": 20
+    }
+  ]
 }

@@ -29,5 +29,103 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef fix_names(users: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "users": [
+          {
+            "user_id": 1,
+            "name": "aLice"
+          },
+          {
+            "user_id": 2,
+            "name": "bOB"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "user_id": 1,
+          "name": "Alice"
+        },
+        {
+          "user_id": 2,
+          "name": "Bob"
+        }
+      ]
+    },
+    {
+      "args": {
+        "users": [
+          {
+            "user_id": 3,
+            "name": "cAROL"
+          },
+          {
+            "user_id": 4,
+            "name": "dAVID"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "user_id": 3,
+          "name": "Carol"
+        },
+        {
+          "user_id": 4,
+          "name": "David"
+        }
+      ]
+    },
+    {
+      "args": {
+        "users": [
+          {
+            "user_id": 5,
+            "name": "eDWARD"
+          },
+          {
+            "user_id": 6,
+            "name": "fRANK"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "user_id": 5,
+          "name": "Edward"
+        },
+        {
+          "user_id": 6,
+          "name": "Frank"
+        }
+      ]
+    },
+    {
+      "args": {
+        "users": [
+          {
+            "user_id": 7,
+            "name": "gEORGE"
+          },
+          {
+            "user_id": 8,
+            "name": "hARRY"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "user_id": 7,
+          "name": "George"
+        },
+        {
+          "user_id": 8,
+          "name": "Harry"
+        }
+      ]
+    }
+  ]
 }

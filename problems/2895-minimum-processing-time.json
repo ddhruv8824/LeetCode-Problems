@@ -54,5 +54,45 @@
     "racket": "(define/contract (min-processing-time processorTime tasks)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_processing_time(ProcessorTime :: [integer()], Tasks :: [integer()]) -> integer().\nmin_processing_time(ProcessorTime, Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_processing_time(processor_time :: [integer], tasks :: [integer]) :: integer\n  def min_processing_time(processor_time, tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "processorTime": [
+          8,
+          10
+        ],
+        "tasks": [
+          2,
+          2,
+          3,
+          1,
+          8,
+          7,
+          4,
+          5
+        ]
+      },
+      "expected": 16
+    },
+    {
+      "args": {
+        "processorTime": [
+          10,
+          20
+        ],
+        "tasks": [
+          2,
+          3,
+          1,
+          2,
+          5,
+          8,
+          4,
+          3
+        ]
+      },
+      "expected": 23
+    }
+  ]
 }

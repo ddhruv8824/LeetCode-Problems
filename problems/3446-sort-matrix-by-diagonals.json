@@ -61,5 +61,83 @@
     "racket": "(define/contract (sort-matrix grid)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec sort_matrix(Grid :: [[integer()]]) -> [[integer()]].\nsort_matrix(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sort_matrix(grid :: [[integer]]) :: [[integer]]\n  def sort_matrix(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            9,
+            8,
+            2
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        [
+          8,
+          2,
+          3
+        ],
+        [
+          9,
+          6,
+          7
+        ],
+        [
+          4,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1
+        ]
+      ]
+    }
+  ]
 }

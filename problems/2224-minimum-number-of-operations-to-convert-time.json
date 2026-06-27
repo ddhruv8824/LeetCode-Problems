@@ -50,5 +50,21 @@
     "racket": "(define/contract (convert-time current correct)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec convert_time(Current :: unicode:unicode_binary(), Correct :: unicode:unicode_binary()) -> integer().\nconvert_time(Current, Correct) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec convert_time(current :: String.t, correct :: String.t) :: integer\n  def convert_time(current, correct) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "current": "02:30",
+        "correct": "04:35"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "current": "11:00",
+        "correct": "11:01"
+      },
+      "expected": 1
+    }
+  ]
 }

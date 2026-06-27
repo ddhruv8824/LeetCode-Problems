@@ -49,5 +49,19 @@
     "racket": "(define/contract (reorder-spaces text)\n  (-> string? string?)\n  )",
     "erlang": "-spec reorder_spaces(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreorder_spaces(Text) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reorder_spaces(text :: String.t) :: String.t\n  def reorder_spaces(text) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "  this   is  a sentence "
+      },
+      "expected": "this   is   a   sentence"
+    },
+    {
+      "args": {
+        "text": " practice   makes   perfect"
+      },
+      "expected": "practice   makes   perfect "
+    }
+  ]
 }

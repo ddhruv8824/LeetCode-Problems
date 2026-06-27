@@ -55,5 +55,45 @@
     "racket": "(define/contract (interchangeable-rectangles rectangles)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec interchangeable_rectangles(Rectangles :: [[integer()]]) -> integer().\ninterchangeable_rectangles(Rectangles) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec interchangeable_rectangles(rectangles :: [[integer]]) :: integer\n  def interchangeable_rectangles(rectangles) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "rectangles": [
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ]
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "rectangles": [
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

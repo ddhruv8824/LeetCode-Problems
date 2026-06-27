@@ -25,5 +25,37 @@
   "hints": [],
   "code_snippets": {
     "bash": "# Read from the file file.txt and output the tenth line to stdout.\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "file": "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9\nLine 10"
+      },
+      "expected": "Line 10"
+    },
+    {
+      "args": {
+        "file": "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9\nLine 10\nLine 11"
+      },
+      "expected": "Line 10"
+    },
+    {
+      "args": {
+        "file": "Line 10"
+      },
+      "expected": "Line 10"
+    },
+    {
+      "args": {
+        "file": ""
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "file": "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9"
+      },
+      "expected": null
+    }
+  ]
 }

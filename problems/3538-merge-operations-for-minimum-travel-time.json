@@ -60,5 +60,49 @@
     "racket": "(define/contract (min-travel-time l n k position time)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_travel_time(L :: integer(), N :: integer(), K :: integer(), Position :: [integer()], Time :: [integer()]) -> integer().\nmin_travel_time(L, N, K, Position, Time) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_travel_time(l :: integer, n :: integer, k :: integer, position :: [integer], time :: [integer]) :: integer\n  def min_travel_time(l, n, k, position, time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "l": 10,
+        "n": 4,
+        "k": 1,
+        "position": [
+          0,
+          3,
+          8,
+          10
+        ],
+        "time": [
+          5,
+          8,
+          3,
+          6
+        ]
+      },
+      "expected": 62
+    },
+    {
+      "args": {
+        "l": 5,
+        "n": 5,
+        "k": 1,
+        "position": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "time": [
+          8,
+          3,
+          9,
+          3,
+          3
+        ]
+      },
+      "expected": 34
+    }
+  ]
 }

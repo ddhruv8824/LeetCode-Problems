@@ -51,5 +51,25 @@
     "racket": "(define/contract (hamming-weight n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec hamming_weight(N :: integer()) -> integer().\nhamming_weight(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec hamming_weight(n :: integer) :: integer\n  def hamming_weight(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 11
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 128
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2147483645
+      },
+      "expected": 30
+    }
+  ]
 }

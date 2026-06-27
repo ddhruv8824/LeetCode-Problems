@@ -53,5 +53,26 @@
     "racket": "(define/contract (unique-xor-triplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec unique_xor_triplets(Nums :: [integer()]) -> integer().\nunique_xor_triplets(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unique_xor_triplets(nums :: [integer]) :: integer\n  def unique_xor_triplets(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          2
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

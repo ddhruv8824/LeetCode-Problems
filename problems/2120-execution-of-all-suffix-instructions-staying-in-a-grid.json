@@ -64,5 +64,57 @@
     "racket": "(define/contract (execute-instructions n startPos s)\n  (-> exact-integer? (listof exact-integer?) string? (listof exact-integer?))\n  )",
     "erlang": "-spec execute_instructions(N :: integer(), StartPos :: [integer()], S :: unicode:unicode_binary()) -> [integer()].\nexecute_instructions(N, StartPos, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec execute_instructions(n :: integer, start_pos :: [integer], s :: String.t) :: [integer]\n  def execute_instructions(n, start_pos, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "startPos": [
+          0,
+          1
+        ],
+        "s": "RRDDLU"
+      },
+      "expected": [
+        1,
+        5,
+        4,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "startPos": [
+          1,
+          1
+        ],
+        "s": "LURD"
+      },
+      "expected": [
+        4,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 1,
+        "startPos": [
+          0,
+          0
+        ],
+        "s": "LRUD"
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

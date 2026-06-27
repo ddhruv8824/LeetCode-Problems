@@ -50,5 +50,77 @@
     "golang": "/**\n * Definition for a QuadTree node.\n * type Node struct {\n *     Val bool\n *     IsLeaf bool\n *     TopLeft *Node\n *     TopRight *Node\n *     BottomLeft *Node\n *     BottomRight *Node\n * }\n */\n\nfunc intersect(quadTree1 *Node, quadTree2 *Node) *Node {\n    \n}",
     "ruby": "# Definition for a QuadTree node.\n# class Node\n#     attr_accessor :val, :isLeaf, :topLeft, :topRight, :bottomLeft, :bottomRight\n#     def initialize(val=false, isLeaf=false, topLeft=nil, topRight=nil, bottomLeft=nil, bottomRight=nil)\n#         @val = val\n#         @isLeaf = isLeaf\n#         @topLeft = topLeft\n#         @topRight = topRight\n#         @bottomLeft = bottomLeft\n#         @bottomRight = bottomRight\n#     end\n# end\n\n# @param {Node} quadTree1\n# @param {Node} quadTree2\n# @return {Node}\ndef intersect(quadTree1, quadTree2)\n\t\nend\n",
     "scala": "/**\n * Definition for a QuadTree node.\n * class Node(var _value: Boolean, var _isLeaf: Boolean) {\n *   var value: Int = _value\n *   var isLeaf: Boolean = _isLeaf\n *   var topLeft: Node = null\n *   var topRight: Node = null\n *   var bottomLeft: Node = null\n *   var bottomRight: Node = null\n * }\n */\n\nobject Solution {\n    def intersect(quadTree1: Node, quadTree2: Node): Node = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "quadTree1": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "quadTree1": [
+          [
+            1,
+            0
+          ]
+        ],
+        "quadTree2": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ]
 }

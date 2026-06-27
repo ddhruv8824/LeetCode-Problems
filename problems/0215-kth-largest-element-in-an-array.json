@@ -50,5 +50,38 @@
     "racket": "(define/contract (find-kth-largest nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_kth_largest(Nums :: [integer()], K :: integer()) -> integer().\nfind_kth_largest(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_kth_largest(nums :: [integer], k :: integer) :: integer\n  def find_kth_largest(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          1,
+          5,
+          6,
+          4
+        ],
+        "k": 2
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          3,
+          1,
+          2,
+          4,
+          5,
+          5,
+          6
+        ],
+        "k": 4
+      },
+      "expected": 4
+    }
+  ]
 }

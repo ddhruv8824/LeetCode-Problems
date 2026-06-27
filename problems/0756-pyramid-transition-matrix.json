@@ -55,5 +55,32 @@
     "racket": "(define/contract (pyramid-transition bottom allowed)\n  (-> string? (listof string?) boolean?)\n  )",
     "erlang": "-spec pyramid_transition(Bottom :: unicode:unicode_binary(), Allowed :: [unicode:unicode_binary()]) -> boolean().\npyramid_transition(Bottom, Allowed) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec pyramid_transition(bottom :: String.t, allowed :: [String.t]) :: boolean\n  def pyramid_transition(bottom, allowed) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "bottom": "BCD",
+        "allowed": [
+          "BCC",
+          "CDE",
+          "CEA",
+          "FFF"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "bottom": "AAAA",
+        "allowed": [
+          "AAB",
+          "AAC",
+          "BCD",
+          "BBE",
+          "DEF"
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

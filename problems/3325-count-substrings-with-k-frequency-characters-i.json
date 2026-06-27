@@ -53,5 +53,21 @@
     "racket": "(define/contract (number-of-substrings s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_substrings(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nnumber_of_substrings(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_substrings(s :: String.t, k :: integer) :: integer\n  def number_of_substrings(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abacb",
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "abcde",
+        "k": 1
+      },
+      "expected": 15
+    }
+  ]
 }

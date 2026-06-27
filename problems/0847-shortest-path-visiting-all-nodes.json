@@ -58,5 +58,55 @@
     "racket": "(define/contract (shortest-path-length graph)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec shortest_path_length(Graph :: [[integer()]]) -> integer().\nshortest_path_length(Graph) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_path_length(graph :: [[integer]]) :: integer\n  def shortest_path_length(graph) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "graph": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "graph": [
+          [
+            1
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

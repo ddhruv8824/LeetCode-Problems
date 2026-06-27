@@ -58,5 +58,43 @@
     "racket": "(define/contract (minimum-added-coins coins target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_added_coins(Coins :: [integer()], Target :: integer()) -> integer().\nminimum_added_coins(Coins, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_added_coins(coins :: [integer], target :: integer) :: integer\n  def minimum_added_coins(coins, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coins": [
+          1,
+          4,
+          10
+        ],
+        "target": 19
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "coins": [
+          1,
+          4,
+          10,
+          5,
+          7,
+          19
+        ],
+        "target": 19
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "coins": [
+          1,
+          1,
+          1
+        ],
+        "target": 20
+      },
+      "expected": 3
+    }
+  ]
 }

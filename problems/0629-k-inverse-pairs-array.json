@@ -46,5 +46,21 @@
     "racket": "(define/contract (k-inverse-pairs n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec k_inverse_pairs(N :: integer(), K :: integer()) -> integer().\nk_inverse_pairs(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_inverse_pairs(n :: integer, k :: integer) :: integer\n  def k_inverse_pairs(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 0
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 1
+      },
+      "expected": 2
+    }
+  ]
 }

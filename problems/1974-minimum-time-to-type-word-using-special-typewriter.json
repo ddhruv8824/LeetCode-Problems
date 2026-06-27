@@ -61,5 +61,25 @@
     "racket": "(define/contract (min-time-to-type word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_time_to_type(Word :: unicode:unicode_binary()) -> integer().\nmin_time_to_type(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_time_to_type(word :: String.t) :: integer\n  def min_time_to_type(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "abc"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "word": "bza"
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "word": "zjpc"
+      },
+      "expected": 34
+    }
+  ]
 }

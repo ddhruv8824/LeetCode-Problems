@@ -49,5 +49,19 @@
     "racket": "(define/contract (original-digits s)\n  (-> string? string?)\n  )",
     "erlang": "-spec original_digits(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\noriginal_digits(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec original_digits(s :: String.t) :: String.t\n  def original_digits(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "owoztneoer"
+      },
+      "expected": "012"
+    },
+    {
+      "args": {
+        "s": "fviefuro"
+      },
+      "expected": "45"
+    }
+  ]
 }

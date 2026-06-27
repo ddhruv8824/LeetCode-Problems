@@ -61,5 +61,46 @@
     "racket": "(define/contract (count-of-pairs n x y)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec count_of_pairs(N :: integer(), X :: integer(), Y :: integer()) -> [integer()].\ncount_of_pairs(N, X, Y) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_of_pairs(n :: integer, x :: integer, y :: integer) :: [integer]\n  def count_of_pairs(n, x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "x": 1,
+        "y": 3
+      },
+      "expected": [
+        6,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "x": 2,
+        "y": 4
+      },
+      "expected": [
+        10,
+        8,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 4,
+        "x": 1,
+        "y": 1
+      },
+      "expected": [
+        6,
+        4,
+        2,
+        0
+      ]
+    }
+  ]
 }

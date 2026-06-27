@@ -59,5 +59,39 @@
     "racket": "(define/contract (letter-combinations digits)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec letter_combinations(Digits :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nletter_combinations(Digits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec letter_combinations(digits :: String.t) :: [String.t]\n  def letter_combinations(digits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "digits": "23"
+      },
+      "expected": [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf"
+      ]
+    },
+    {
+      "args": {
+        "digits": ""
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "digits": "2"
+      },
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ]
 }

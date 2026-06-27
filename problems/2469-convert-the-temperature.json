@@ -47,5 +47,25 @@
     "racket": "(define/contract (convert-temperature celsius)\n  (-> flonum? (listof flonum?))\n  )",
     "erlang": "-spec convert_temperature(Celsius :: float()) -> [float()].\nconvert_temperature(Celsius) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec convert_temperature(celsius :: float) :: [float]\n  def convert_temperature(celsius) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "celsius": 36.5
+      },
+      "expected": [
+        309.65,
+        97.7
+      ]
+    },
+    {
+      "args": {
+        "celsius": 122.11
+      },
+      "expected": [
+        395.26,
+        251.798
+      ]
+    }
+  ]
 }

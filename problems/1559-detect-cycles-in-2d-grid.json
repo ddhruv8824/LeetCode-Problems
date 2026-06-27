@@ -66,5 +66,91 @@
     "racket": "(define/contract (contains-cycle grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
     "erlang": "-spec contains_cycle(Grid :: [[char()]]) -> boolean().\ncontains_cycle(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec contains_cycle(grid :: [[char]]) :: boolean\n  def contains_cycle(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          [
+            "a",
+            "b",
+            "b",
+            "a"
+          ],
+          [
+            "a",
+            "b",
+            "b",
+            "a"
+          ],
+          [
+            "a",
+            "a",
+            "a",
+            "a"
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            "c",
+            "c",
+            "c",
+            "a"
+          ],
+          [
+            "c",
+            "d",
+            "c",
+            "c"
+          ],
+          [
+            "c",
+            "c",
+            "e",
+            "c"
+          ],
+          [
+            "f",
+            "c",
+            "c",
+            "c"
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            "a",
+            "b",
+            "b"
+          ],
+          [
+            "b",
+            "z",
+            "b"
+          ],
+          [
+            "b",
+            "b",
+            "a"
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

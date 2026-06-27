@@ -52,5 +52,39 @@
     "racket": "(define/contract (distance nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec distance(Nums :: [integer()]) -> [integer()].\ndistance(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distance(nums :: [integer]) :: [integer]\n  def distance(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      "expected": [
+        5,
+        0,
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          5,
+          3
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

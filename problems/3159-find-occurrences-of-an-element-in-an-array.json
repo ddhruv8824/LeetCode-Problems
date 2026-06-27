@@ -50,5 +50,46 @@
     "racket": "(define/contract (occurrences-of-element nums queries x)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec occurrences_of_element(Nums :: [integer()], Queries :: [integer()], X :: integer()) -> [integer()].\noccurrences_of_element(Nums, Queries, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec occurrences_of_element(nums :: [integer], queries :: [integer], x :: integer) :: [integer]\n  def occurrences_of_element(nums, queries, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          1,
+          7
+        ],
+        "queries": [
+          1,
+          3,
+          2,
+          4
+        ],
+        "x": 1
+      },
+      "expected": [
+        0,
+        -1,
+        2,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "queries": [
+          10
+        ],
+        "x": 5
+      },
+      "expected": [
+        -1
+      ]
+    }
+  ]
 }

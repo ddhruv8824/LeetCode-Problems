@@ -52,5 +52,25 @@
     "racket": "(define/contract (min-cut s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_cut(S :: unicode:unicode_binary()) -> integer().\nmin_cut(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cut(s :: String.t) :: integer\n  def min_cut(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aab"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "a"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "ab"
+      },
+      "expected": 1
+    }
+  ]
 }

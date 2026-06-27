@@ -50,5 +50,25 @@
     "racket": "(define/contract (is-ugly n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_ugly(N :: integer()) -> boolean().\nis_ugly(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_ugly(n :: integer) :: boolean\n  def is_ugly(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 14
+      },
+      "expected": false
+    }
+  ]
 }

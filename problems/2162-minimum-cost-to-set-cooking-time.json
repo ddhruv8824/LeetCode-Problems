@@ -57,5 +57,25 @@
     "racket": "(define/contract (min-cost-set-time startAt moveCost pushCost targetSeconds)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_cost_set_time(StartAt :: integer(), MoveCost :: integer(), PushCost :: integer(), TargetSeconds :: integer()) -> integer().\nmin_cost_set_time(StartAt, MoveCost, PushCost, TargetSeconds) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost_set_time(start_at :: integer, move_cost :: integer, push_cost :: integer, target_seconds :: integer) :: integer\n  def min_cost_set_time(start_at, move_cost, push_cost, target_seconds) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "startAt": 1,
+        "moveCost": 2,
+        "pushCost": 1,
+        "targetSeconds": 600
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "startAt": 0,
+        "moveCost": 1,
+        "pushCost": 2,
+        "targetSeconds": 76
+      },
+      "expected": 6
+    }
+  ]
 }

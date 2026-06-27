@@ -59,5 +59,43 @@
     "erlang": "-spec min_operations(Nums :: [integer()], K :: integer()) -> integer().\nmin_operations(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], k :: integer) :: integer\n  def min_operations(nums, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Hash map\n\n#### Intuition\n\nAccording to the problem, if the maximum value of the current array is $x$, and the second largest value (if it exists) is $y$, then we can choose an $h$ such that $y \\le h \\lt x$, and replace all occurrences of $x$ in the array with $h$.\n\nTherefore, to minimize the number of operations required to turn all numbers in the array into `k`:\n\n- If there is a number smaller than $k$ in the array, there is no solution.\n- Otherwise, count the number of different numbers greater than $k$ in the array, which is the number of operations.\n\nWe use a hash map to count the numbers greater than $k$ in the array. During the traversal of the array, if we encounter a number smaller than $k$, we directly return $-1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe only need to traverse $\\textit{nums}$ once, and the time complexity of adding elements to the hash map is $O(1)$, so the overall time complexity is $O(n)$.\n\n- Space complexity: $O(n)$.\n\nThe space complexity of using a hash map is $O(n)$."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Hash map\n\n#### Intuition\n\nAccording to the problem, if the maximum value of the current array is $x$, and the second largest value (if it exists) is $y$, then we can choose an $h$ such that $y \\le h \\lt x$, and replace all occurrences of $x$ in the array with $h$.\n\nTherefore, to minimize the number of operations required to turn all numbers in the array into `k`:\n\n- If there is a number smaller than $k$ in the array, there is no solution.\n- Otherwise, count the number of different numbers greater than $k$ in the array, which is the number of operations.\n\nWe use a hash map to count the numbers greater than $k$ in the array. During the traversal of the array, if we encounter a number smaller than $k$, we directly return $-1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe only need to traverse $\\textit{nums}$ once, and the time complexity of adding elements to the hash map is $O(1)$, so the overall time complexity is $O(n)$.\n\n- Space complexity: $O(n)$.\n\nThe space complexity of using a hash map is $O(n)$.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          2,
+          5,
+          4,
+          5
+        ],
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          7,
+          5,
+          3
+        ],
+        "k": 1
+      },
+      "expected": 4
+    }
+  ]
 }

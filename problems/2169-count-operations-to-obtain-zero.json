@@ -49,5 +49,21 @@
     "racket": "(define/contract (count-operations num1 num2)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_operations(Num1 :: integer(), Num2 :: integer()) -> integer().\ncount_operations(Num1, Num2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_operations(num1 :: integer, num2 :: integer) :: integer\n  def count_operations(num1, num2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": 2,
+        "num2": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "num1": 10,
+        "num2": 10
+      },
+      "expected": 1
+    }
+  ]
 }

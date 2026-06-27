@@ -56,5 +56,31 @@
     "racket": "(define/contract (num-of-burgers tomatoSlices cheeseSlices)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec num_of_burgers(TomatoSlices :: integer(), CheeseSlices :: integer()) -> [integer()].\nnum_of_burgers(TomatoSlices, CheeseSlices) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_burgers(tomato_slices :: integer, cheese_slices :: integer) :: [integer]\n  def num_of_burgers(tomato_slices, cheese_slices) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tomatoSlices": 16,
+        "cheeseSlices": 7
+      },
+      "expected": [
+        1,
+        6
+      ]
+    },
+    {
+      "args": {
+        "tomatoSlices": 17,
+        "cheeseSlices": 4
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "tomatoSlices": 4,
+        "cheeseSlices": 17
+      },
+      "expected": []
+    }
+  ]
 }

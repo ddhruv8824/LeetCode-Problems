@@ -63,5 +63,65 @@
     "racket": "(define/contract (find-words board words)\n  (-> (listof (listof char?)) (listof string?) (listof string?))\n  )",
     "erlang": "-spec find_words(Board :: [[char()]], Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nfind_words(Board, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_words(board :: [[char]], words :: [String.t]) :: [String.t]\n  def find_words(board, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            "o",
+            "a",
+            "a",
+            "n"
+          ],
+          [
+            "e",
+            "t",
+            "a",
+            "e"
+          ],
+          [
+            "i",
+            "h",
+            "k",
+            "r"
+          ],
+          [
+            "i",
+            "f",
+            "l",
+            "v"
+          ]
+        ],
+        "words": [
+          "oath",
+          "pea",
+          "eat",
+          "rain"
+        ]
+      },
+      "expected": [
+        "eat",
+        "oath"
+      ]
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ]
+        ],
+        "words": [
+          "abcb"
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

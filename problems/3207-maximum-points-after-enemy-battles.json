@@ -53,5 +53,27 @@
     "racket": "(define/contract (maximum-points enemyEnergies currentEnergy)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_points(EnemyEnergies :: [integer()], CurrentEnergy :: integer()) -> integer().\nmaximum_points(EnemyEnergies, CurrentEnergy) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_points(enemy_energies :: [integer], current_energy :: integer) :: integer\n  def maximum_points(enemy_energies, current_energy) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "enemyEnergies": [
+          3,
+          2,
+          2
+        ],
+        "currentEnergy": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "enemyEnergies": [
+          2
+        ],
+        "currentEnergy": 10
+      },
+      "expected": 5
+    }
+  ]
 }

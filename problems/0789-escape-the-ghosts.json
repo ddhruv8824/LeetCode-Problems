@@ -56,5 +56,56 @@
     "racket": "(define/contract (escape-ghosts ghosts target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec escape_ghosts(Ghosts :: [[integer()]], Target :: [integer()]) -> boolean().\nescape_ghosts(Ghosts, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec escape_ghosts(ghosts :: [[integer]], target :: [integer]) :: boolean\n  def escape_ghosts(ghosts, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ghosts": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "target": [
+          0,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "ghosts": [
+          [
+            1,
+            0
+          ]
+        ],
+        "target": [
+          2,
+          0
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "ghosts": [
+          [
+            2,
+            0
+          ]
+        ],
+        "target": [
+          1,
+          0
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

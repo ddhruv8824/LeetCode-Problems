@@ -61,5 +61,64 @@
     "racket": "(define/contract (good-subsetof-binary-matrix grid)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n\n  )",
     "erlang": "-spec good_subsetof_binary_matrix(Grid :: [[integer()]]) -> [integer()].\ngood_subsetof_binary_matrix(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec good_subsetof_binary_matrix(grid :: [[integer]]) :: [integer]\n  def good_subsetof_binary_matrix(grid) do\n\n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0
+          ]
+        ]
+      },
+      "expected": [
+        0
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

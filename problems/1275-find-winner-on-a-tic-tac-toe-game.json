@@ -66,5 +66,108 @@
     "racket": "(define/contract (tictactoe moves)\n  (-> (listof (listof exact-integer?)) string?)\n  )",
     "erlang": "-spec tictactoe(Moves :: [[integer()]]) -> unicode:unicode_binary().\ntictactoe(Moves) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec tictactoe(moves :: [[integer]]) :: String.t\n  def tictactoe(moves) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "moves": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": "A"
+    },
+    {
+      "args": {
+        "moves": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": "B"
+    },
+    {
+      "args": {
+        "moves": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": "Draw"
+    }
+  ]
 }

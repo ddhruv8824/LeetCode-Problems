@@ -58,5 +58,28 @@
     "racket": "(define/contract (truncate-sentence s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec truncate_sentence(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ntruncate_sentence(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec truncate_sentence(s :: String.t, k :: integer) :: String.t\n  def truncate_sentence(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "Hello how are you Contestant",
+        "k": 4
+      },
+      "expected": "Hello how are you"
+    },
+    {
+      "args": {
+        "s": "What is the solution to this problem",
+        "k": 4
+      },
+      "expected": "What is the solution"
+    },
+    {
+      "args": {
+        "s": "chopper is not a tanuki",
+        "k": 5
+      },
+      "expected": "chopper is not a tanuki"
+    }
+  ]
 }

@@ -54,5 +54,41 @@
     "racket": "(define/contract (maximum-bags capacity rocks additionalRocks)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_bags(Capacity :: [integer()], Rocks :: [integer()], AdditionalRocks :: integer()) -> integer().\nmaximum_bags(Capacity, Rocks, AdditionalRocks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_bags(capacity :: [integer], rocks :: [integer], additional_rocks :: integer) :: integer\n  def maximum_bags(capacity, rocks, additional_rocks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "capacity": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "rocks": [
+          1,
+          2,
+          4,
+          4
+        ],
+        "additionalRocks": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "capacity": [
+          10,
+          2,
+          2
+        ],
+        "rocks": [
+          2,
+          2,
+          0
+        ],
+        "additionalRocks": 100
+      },
+      "expected": 3
+    }
+  ]
 }

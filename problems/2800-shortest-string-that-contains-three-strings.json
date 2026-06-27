@@ -51,5 +51,23 @@
     "racket": "(define/contract (minimum-string a b c)\n  (-> string? string? string? string?)\n  )",
     "erlang": "-spec minimum_string(A :: unicode:unicode_binary(), B :: unicode:unicode_binary(), C :: unicode:unicode_binary()) -> unicode:unicode_binary().\nminimum_string(A, B, C) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_string(a :: String.t, b :: String.t, c :: String.t) :: String.t\n  def minimum_string(a, b, c) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": "abc",
+        "b": "bca",
+        "c": "aaa"
+      },
+      "expected": "aaabca"
+    },
+    {
+      "args": {
+        "a": "ab",
+        "b": "ba",
+        "c": "aba"
+      },
+      "expected": "aba"
+    }
+  ]
 }

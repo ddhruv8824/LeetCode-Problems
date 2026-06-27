@@ -51,5 +51,25 @@
     "racket": "(define/contract (is-number s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_number(S :: unicode:unicode_binary()) -> boolean().\nis_number(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_number(s :: String.t) :: boolean\n  def is_number(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "e"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "."
+      },
+      "expected": false
+    }
+  ]
 }

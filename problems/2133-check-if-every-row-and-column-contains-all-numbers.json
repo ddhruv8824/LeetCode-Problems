@@ -56,5 +56,51 @@
     "racket": "(define/contract (check-valid matrix)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec check_valid(Matrix :: [[integer()]]) -> boolean().\ncheck_valid(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_valid(matrix :: [[integer]]) :: boolean\n  def check_valid(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

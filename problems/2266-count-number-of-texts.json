@@ -56,5 +56,19 @@
     "racket": "(define/contract (count-texts pressedKeys)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec count_texts(PressedKeys :: unicode:unicode_binary()) -> integer().\ncount_texts(PressedKeys) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_texts(pressed_keys :: String.t) :: integer\n  def count_texts(pressed_keys) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pressedKeys": "22233"
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "pressedKeys": "222222222222222222222222222222222222"
+      },
+      "expected": 82876089
+    }
+  ]
 }

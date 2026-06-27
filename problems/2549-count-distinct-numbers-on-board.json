@@ -52,5 +52,19 @@
     "racket": "(define/contract (distinct-integers n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec distinct_integers(N :: integer()) -> integer().\ndistinct_integers(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distinct_integers(n :: integer) :: integer\n  def distinct_integers(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 2
+    }
+  ]
 }

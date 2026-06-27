@@ -48,5 +48,33 @@
     "racket": "(define/contract (maximum-median-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_median_sum(Nums :: [integer()]) -> integer().\nmaximum_median_sum(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_median_sum(nums :: [integer]) :: integer\n  def maximum_median_sum(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          3,
+          2,
+          1,
+          3
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "expected": 20
+    }
+  ]
 }

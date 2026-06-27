@@ -56,5 +56,43 @@
     "racket": "(define/contract (find-lucky arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_lucky(Arr :: [integer()]) -> integer().\nfind_lucky(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_lucky(arr :: [integer]) :: integer\n  def find_lucky(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          2,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

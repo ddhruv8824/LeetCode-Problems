@@ -53,5 +53,19 @@
     "racket": "(define/contract (number-of-ways s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec number_of_ways(S :: unicode:unicode_binary()) -> integer().\nnumber_of_ways(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_ways(s :: String.t) :: integer\n  def number_of_ways(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "001101"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "s": "11100"
+      },
+      "expected": 0
+    }
+  ]
 }

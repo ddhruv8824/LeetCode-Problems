@@ -55,5 +55,25 @@
     "racket": "(define/contract (count-palindromes s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec count_palindromes(S :: unicode:unicode_binary()) -> integer().\ncount_palindromes(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_palindromes(s :: String.t) :: integer\n  def count_palindromes(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "103301"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "0000000"
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "s": "9999900000"
+      },
+      "expected": 2
+    }
+  ]
 }

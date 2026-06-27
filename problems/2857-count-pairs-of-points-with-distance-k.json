@@ -53,5 +53,59 @@
     "racket": "(define/contract (count-pairs coordinates k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_pairs(Coordinates :: [[integer()]], K :: integer()) -> integer().\ncount_pairs(Coordinates, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_pairs(coordinates :: [[integer]], k :: integer) :: integer\n  def count_pairs(coordinates, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coordinates": [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "k": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "coordinates": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "k": 0
+      },
+      "expected": 10
+    }
+  ]
 }

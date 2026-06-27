@@ -52,5 +52,29 @@
     "racket": "(define/contract (find-ocurrences text first second)\n  (-> string? string? string? (listof string?))\n  )",
     "erlang": "-spec find_ocurrences(Text :: unicode:unicode_binary(), First :: unicode:unicode_binary(), Second :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nfind_ocurrences(Text, First, Second) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_ocurrences(text :: String.t, first :: String.t, second :: String.t) :: [String.t]\n  def find_ocurrences(text, first, second) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "alice is a good girl she is a good student",
+        "first": "a",
+        "second": "good"
+      },
+      "expected": [
+        "girl",
+        "student"
+      ]
+    },
+    {
+      "args": {
+        "text": "we will we will rock you",
+        "first": "we",
+        "second": "will"
+      },
+      "expected": [
+        "we",
+        "rock"
+      ]
+    }
+  ]
 }

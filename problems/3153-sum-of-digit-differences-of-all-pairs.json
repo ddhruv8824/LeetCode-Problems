@@ -54,5 +54,28 @@
     "racket": "(define/contract (sum-digit-differences nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_digit_differences(Nums :: [integer()]) -> integer().\nsum_digit_differences(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_digit_differences(nums :: [integer]) :: integer\n  def sum_digit_differences(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          13,
+          23,
+          12
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

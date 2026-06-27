@@ -53,5 +53,28 @@
     "racket": "(define/contract (can-construct ransomNote magazine)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec can_construct(RansomNote :: unicode:unicode_binary(), Magazine :: unicode:unicode_binary()) -> boolean().\ncan_construct(RansomNote, Magazine) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_construct(ransom_note :: String.t, magazine :: String.t) :: boolean\n  def can_construct(ransom_note, magazine) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ransomNote": "a",
+        "magazine": "b"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "ransomNote": "aa",
+        "magazine": "ab"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "ransomNote": "aa",
+        "magazine": "aab"
+      },
+      "expected": true
+    }
+  ]
 }

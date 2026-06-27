@@ -57,5 +57,25 @@
     "racket": "(define/contract (balanced-string s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec balanced_string(S :: unicode:unicode_binary()) -> integer().\nbalanced_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec balanced_string(s :: String.t) :: integer\n  def balanced_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "QWER"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "QQWE"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "QQQW"
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -52,5 +52,29 @@
     "racket": "(define/contract (subarray-lcm nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec subarray_lcm(Nums :: [integer()], K :: integer()) -> integer().\nsubarray_lcm(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subarray_lcm(nums :: [integer], k :: integer) :: integer\n  def subarray_lcm(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          2,
+          7,
+          1
+        ],
+        "k": 6
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          3
+        ],
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

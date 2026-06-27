@@ -55,5 +55,48 @@
     "racket": "(define/contract (count-submatrices grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_submatrices(Grid :: [[integer()]], K :: integer()) -> integer().\ncount_submatrices(Grid, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_submatrices(grid :: [[integer]], k :: integer) :: integer\n  def count_submatrices(grid, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            7,
+            6,
+            3
+          ],
+          [
+            6,
+            6,
+            1
+          ]
+        ],
+        "k": 18
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            7,
+            2,
+            9
+          ],
+          [
+            1,
+            5,
+            0
+          ],
+          [
+            2,
+            6,
+            6
+          ]
+        ],
+        "k": 20
+      },
+      "expected": 6
+    }
+  ]
 }

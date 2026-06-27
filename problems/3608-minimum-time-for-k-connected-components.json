@@ -68,5 +68,54 @@
     "racket": "(define/contract (min-time n edges k)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_time(N :: integer(), Edges :: [[integer()]], K :: integer()) -> integer().\nmin_time(N, Edges, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_time(n :: integer, edges :: [[integer]], k :: integer) :: integer\n  def min_time(n, edges, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 0
+    }
+  ]
 }

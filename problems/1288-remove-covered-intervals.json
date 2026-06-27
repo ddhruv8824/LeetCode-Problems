@@ -52,5 +52,41 @@
     "racket": "(define/contract (remove-covered-intervals intervals)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec remove_covered_intervals(Intervals :: [[integer()]]) -> integer().\nremove_covered_intervals(Intervals) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_covered_intervals(intervals :: [[integer]]) :: integer\n  def remove_covered_intervals(intervals) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "intervals": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "intervals": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

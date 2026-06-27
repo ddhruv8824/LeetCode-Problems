@@ -59,5 +59,68 @@
     "racket": "(define/contract (matrix-sum-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec matrix_sum_queries(N :: integer(), Queries :: [[integer()]]) -> integer().\nmatrix_sum_queries(N, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec matrix_sum_queries(n :: integer, queries :: [[integer]]) :: integer\n  def matrix_sum_queries(n, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "queries": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ]
+      },
+      "expected": 23
+    },
+    {
+      "args": {
+        "n": 3,
+        "queries": [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 17
+    }
+  ]
 }

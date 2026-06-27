@@ -60,5 +60,72 @@
     "racket": "(define/contract (assign-edge-weights edges queries)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec assign_edge_weights(Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nassign_edge_weights(Edges, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec assign_edge_weights(edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def assign_edge_weights(edges, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ],
+        "queries": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "queries": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        4
+      ]
+    }
+  ]
 }

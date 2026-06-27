@@ -52,5 +52,37 @@
     "racket": "(define/contract (maximum-profit prices k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_profit(Prices :: [integer()], K :: integer()) -> integer().\nmaximum_profit(Prices, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_profit(prices :: [integer], k :: integer) :: integer\n  def maximum_profit(prices, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "prices": [
+          1,
+          7,
+          9,
+          8,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "prices": [
+          12,
+          16,
+          19,
+          19,
+          8,
+          1,
+          19,
+          13,
+          9
+        ],
+        "k": 3
+      },
+      "expected": 36
+    }
+  ]
 }

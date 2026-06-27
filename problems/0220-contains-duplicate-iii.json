@@ -55,5 +55,48 @@
     "racket": "(define/contract (contains-nearby-almost-duplicate nums indexDiff valueDiff)\n  (-> (listof exact-integer?) exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec contains_nearby_almost_duplicate(Nums :: [integer()], IndexDiff :: integer(), ValueDiff :: integer()) -> boolean().\ncontains_nearby_almost_duplicate(Nums, IndexDiff, ValueDiff) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec contains_nearby_almost_duplicate(nums :: [integer], index_diff :: integer, value_diff :: integer) :: boolean\n  def contains_nearby_almost_duplicate(nums, index_diff, value_diff) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "k": 3,
+        "t": 0
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "k": 1,
+        "t": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          9,
+          1,
+          5,
+          9
+        ],
+        "k": 2,
+        "t": 3
+      },
+      "expected": false
+    }
+  ]
 }

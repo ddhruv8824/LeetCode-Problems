@@ -59,5 +59,47 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (build-tree inorder postorder)\n  (-> (listof exact-integer?) (listof exact-integer?) (or/c tree-node? #f))\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec build_tree(Inorder :: [integer()], Postorder :: [integer()]) -> #tree_node{} | null.\nbuild_tree(Inorder, Postorder) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec build_tree(inorder :: [integer], postorder :: [integer]) :: TreeNode.t | nil\n  def build_tree(inorder, postorder) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "inorder": [
+          9,
+          3,
+          15,
+          20,
+          7
+        ],
+        "postorder": [
+          9,
+          15,
+          7,
+          20,
+          3
+        ]
+      },
+      "expected": [
+        3,
+        9,
+        20,
+        null,
+        null,
+        15,
+        7
+      ]
+    },
+    {
+      "args": {
+        "inorder": [
+          -1
+        ],
+        "postorder": [
+          -1
+        ]
+      },
+      "expected": [
+        -1
+      ]
+    }
+  ]
 }

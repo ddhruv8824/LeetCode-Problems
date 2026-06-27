@@ -49,5 +49,23 @@
     "racket": "(define/contract (sum-of-three num)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec sum_of_three(Num :: integer()) -> [integer()].\nsum_of_three(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_three(num :: integer) :: [integer]\n  def sum_of_three(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 33
+      },
+      "expected": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "args": {
+        "num": 4
+      },
+      "expected": []
+    }
+  ]
 }

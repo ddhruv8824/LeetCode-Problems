@@ -50,5 +50,21 @@
     "erlang": "-spec count_symmetric_integers(Low :: integer(), High :: integer()) -> integer().\ncount_symmetric_integers(Low, High) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_symmetric_integers(low :: integer, high :: integer) :: integer\n  def count_symmetric_integers(low, high) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumeration\n\n#### Intuition\n\nEnumerate all numbers from $\\textit{low}$ to $\\textit{high}$:\n\n- If it is a two-digit number and is a multiple of 11, then it is a symmetric integer.\n- If it is a four-digit number, calculate the sum of the thousands and hundreds digits, as well as the sum of the tens and ones digits. If they are equal, it is a symmetric (even) integer.\n\nFinally, it returns the number of symmetric integers in the range.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(high - low)$.\n\nWe enumerate all numbers from $\\textit{low}$ to $\\textit{high}$ and check whether they are symmetric integers in $O(1)$ each time.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumeration\n\n#### Intuition\n\nEnumerate all numbers from $\\textit{low}$ to $\\textit{high}$:\n\n- If it is a two-digit number and is a multiple of 11, then it is a symmetric integer.\n- If it is a four-digit number, calculate the sum of the thousands and hundreds digits, as well as the sum of the tens and ones digits. If they are equal, it is a symmetric (even) integer.\n\nFinally, it returns the number of symmetric integers in the range.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(high - low)$.\n\nWe enumerate all numbers from $\\textit{low}$ to $\\textit{high}$ and check whether they are symmetric integers in $O(1)$ each time.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed.",
+  "test_cases": [
+    {
+      "args": {
+        "low": 1,
+        "high": 100
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "low": 1200,
+        "high": 1230
+      },
+      "expected": 4
+    }
+  ]
 }

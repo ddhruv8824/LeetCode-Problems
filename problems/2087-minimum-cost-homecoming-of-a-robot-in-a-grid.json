@@ -60,5 +60,50 @@
     "racket": "(define/contract (min-cost startPos homePos rowCosts colCosts)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_cost(StartPos :: [integer()], HomePos :: [integer()], RowCosts :: [integer()], ColCosts :: [integer()]) -> integer().\nmin_cost(StartPos, HomePos, RowCosts, ColCosts) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost(start_pos :: [integer], home_pos :: [integer], row_costs :: [integer], col_costs :: [integer]) :: integer\n  def min_cost(start_pos, home_pos, row_costs, col_costs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "startPos": [
+          1,
+          0
+        ],
+        "homePos": [
+          2,
+          3
+        ],
+        "rowCosts": [
+          5,
+          4,
+          3
+        ],
+        "colCosts": [
+          8,
+          2,
+          6,
+          7
+        ]
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "startPos": [
+          0,
+          0
+        ],
+        "homePos": [
+          0,
+          0
+        ],
+        "rowCosts": [
+          5
+        ],
+        "colCosts": [
+          26
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

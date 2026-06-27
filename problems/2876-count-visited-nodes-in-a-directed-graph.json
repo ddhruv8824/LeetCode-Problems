@@ -58,5 +58,41 @@
     "racket": "(define/contract (count-visited-nodes edges)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec count_visited_nodes(Edges :: [integer()]) -> [integer()].\ncount_visited_nodes(Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_visited_nodes(edges :: [integer]) :: [integer]\n  def count_visited_nodes(edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          1,
+          2,
+          0,
+          0
+        ]
+      },
+      "expected": [
+        3,
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ]
+      },
+      "expected": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    }
+  ]
 }

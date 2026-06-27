@@ -51,5 +51,31 @@
     "racket": "(define/contract (maximum-energy energy k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_energy(Energy :: [integer()], K :: integer()) -> integer().\nmaximum_energy(Energy, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_energy(energy :: [integer], k :: integer) :: integer\n  def maximum_energy(energy, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "energy": [
+          5,
+          2,
+          -10,
+          -5,
+          1
+        ],
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "energy": [
+          -2,
+          -3,
+          -1
+        ],
+        "k": 2
+      },
+      "expected": -1
+    }
+  ]
 }

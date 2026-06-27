@@ -47,5 +47,21 @@
     "racket": "(define/contract (divide dividend divisor)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec divide(Dividend :: integer(), Divisor :: integer()) -> integer().\ndivide(Dividend, Divisor) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec divide(dividend :: integer, divisor :: integer) :: integer\n  def divide(dividend, divisor) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "dividend": 10,
+        "divisor": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "dividend": 7,
+        "divisor": -3
+      },
+      "expected": -2
+    }
+  ]
 }

@@ -53,5 +53,37 @@
     "racket": "(define/contract (k-length-apart nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
     "erlang": "-spec k_length_apart(Nums :: [integer()], K :: integer()) -> boolean().\nk_length_apart(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_length_apart(nums :: [integer], k :: integer) :: boolean\n  def k_length_apart(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "k": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "k": 2
+      },
+      "expected": false
+    }
+  ]
 }

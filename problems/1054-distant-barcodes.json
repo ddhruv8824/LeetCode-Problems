@@ -53,5 +53,51 @@
     "racket": "(define/contract (rearrange-barcodes barcodes)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec rearrange_barcodes(Barcodes :: [integer()]) -> [integer()].\nrearrange_barcodes(Barcodes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rearrange_barcodes(barcodes :: [integer]) :: [integer]\n  def rearrange_barcodes(barcodes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "barcodes": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "barcodes": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        2,
+        1,
+        2
+      ]
+    }
+  ]
 }

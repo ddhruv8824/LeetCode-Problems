@@ -49,5 +49,27 @@
     "racket": "(define/contract (shortest-to-char s c)\n  (-> string? char? (listof exact-integer?))\n  )",
     "erlang": "-spec shortest_to_char(S :: unicode:unicode_binary(), C :: char()) -> [integer()].\nshortest_to_char(S, C) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_to_char(s :: String.t, c :: char) :: [integer]\n  def shortest_to_char(s, c) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "loveleetcode",
+        "c": "e"
+      },
+      "expected": [
+        3,
+        2,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    }
+  ]
 }

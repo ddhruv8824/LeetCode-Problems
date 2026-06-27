@@ -60,5 +60,32 @@
     "erlang": "-spec max_dist_to_closest(Seats :: [integer()]) -> integer().\nmax_dist_to_closest(Seats) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_dist_to_closest(seats :: [integer]) :: integer\n  def max_dist_to_closest(seats) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Next Array [Accepted]\n\n**Intuition**\n\nLet `left[i]` be the distance from seat `i` to the closest person sitting to the left of `i`.  Similarly, let `right[i]` be the distance to the closest person sitting to the right of `i`.  This is motivated by the idea that the closest person in seat `i` sits a distance `min(left[i], right[i])` away.\n\n**Algorithm**\n\nTo construct `left[i]`, notice it is either `left[i-1] + 1` if the seat is empty, or `0` if it is full.  `right[i]` is constructed in a similar way.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(N)$$, the space used by `left` and `right`.\n\n\n---\n### Approach #2: Two Pointer [Accepted]\n\n**Intuition**\n\nAs we iterate through seats, we'll update the closest person sitting to our left, and closest person sitting to our right.\n\n**Algorithm**\n\nKeep track of `prev`, the filled seat at or to the left of `i`, and `future`, the filled seat at or to the right of `i`.\n\nThen at seat `i`, the closest person is `min(i - prev, future - i)`, with one exception.  `i - prev` should be considered infinite if there is no person to the left of seat `i`, and similarly `future - i` is infinite if there is no one to the right of seat `i`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(1)$$.\n\n\n\n---\n### Approach #3: Group by Zero [Accepted]\n\n**Intuition**\n\nIn a group of `K` adjacent empty seats between two people, the answer is `(K+1) / 2`.\n\n**Algorithm**\n\nFor each group of `K` empty seats between two people, we can take into account the candidate answer `(K+1) / 2`.\n\nFor groups of empty seats between the edge of the row and one other person, the answer is `K`, and we should take into account those answers too.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n---\n### Approach #1: Next Array [Accepted]\n\n**Intuition**\n\nLet `left[i]` be the distance from seat `i` to the closest person sitting to the left of `i`.  Similarly, let `right[i]` be the distance to the closest person sitting to the right of `i`.  This is motivated by the idea that the closest person in seat `i` sits a distance `min(left[i], right[i])` away.\n\n**Algorithm**\n\nTo construct `left[i]`, notice it is either `left[i-1] + 1` if the seat is empty, or `0` if it is full.  `right[i]` is constructed in a similar way.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(N)$$, the space used by `left` and `right`.\n\n\n---\n### Approach #2: Two Pointer [Accepted]\n\n**Intuition**\n\nAs we iterate through seats, we'll update the closest person sitting to our left, and closest person sitting to our right.\n\n**Algorithm**\n\nKeep track of `prev`, the filled seat at or to the left of `i`, and `future`, the filled seat at or to the right of `i`.\n\nThen at seat `i`, the closest person is `min(i - prev, future - i)`, with one exception.  `i - prev` should be considered infinite if there is no person to the left of seat `i`, and similarly `future - i` is infinite if there is no one to the right of seat `i`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(1)$$.\n\n\n\n---\n### Approach #3: Group by Zero [Accepted]\n\n**Intuition**\n\nIn a group of `K` adjacent empty seats between two people, the answer is `(K+1) / 2`.\n\n**Algorithm**\n\nFor each group of `K` empty seats between two people, we can take into account the candidate answer `(K+1) / 2`.\n\nFor groups of empty seats between the edge of the row and one other person, the answer is `K`, and we should take into account those answers too.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `seats`.\n\n* Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "seats": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "seats": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

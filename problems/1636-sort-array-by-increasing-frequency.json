@@ -57,5 +57,71 @@
     "erlang": "-spec frequency_sort(Nums :: [integer()]) -> [integer()].\nfrequency_sort(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec frequency_sort(nums :: [integer]) :: [integer]\n  def frequency_sort(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThe task is to sort an array of integers by their frequency, placing numbers with fewer occurrences first. If two numbers appear with the same frequency, they should be ordered by their values in descending order. Think of it as arranging a playlist by the least to most popular songs, or ranking search results to prioritize the most relevant and engaging options for a more intuitive user experience.\n\n--- \n\n### Approach: Customized Sorting\n\n#### Intuition\n\nTo sort the numbers, we first arrange them based on their frequency in ascending order. Numbers that appear less frequently will come before those with higher frequencies. We use a hashmap, `freq`, to count the occurrences of each number in the array.\n\nIf two numbers have the same frequency, we then sort them by their values in descending order. This introduces a dual sorting criterion: first by frequency and then by value.\n\nTo accomplish this, we will apply a custom sorting function using lambda expressions. These anonymous functions let us define sorting logic inline. Specifically, our lambda function ensures that numbers are compared primarily by their frequency, and secondarily by their value if frequencies match. This approach guarantees that the final sorted list adheres to both sorting criteria.\n\n##### C++ Lambda Function for Sorting by Increasing Frequency\n```\nsort(nums.begin(), nums.end(), [&](int a, int b) {\n    if (freq[a] == freq[b]) {\n        return a > b; \n    }\n    return freq[a] < freq[b];\n});\n```\n\nThe lambda `[&](int a, int b) { ... }` serves as the comparator for the `sort` function:\n\n1. `&` captures all external variables (`freq` in this case) by reference, allowing the lambda to access and use `freq`.\n2. `(int a, int b)` defines parameters for elements to compare.\n3. Comparison logic:\n   - If frequencies are equal (`freq[a] == freq[b]`), sort by value in descending order (`a > b`).\n   - Otherwise, sort by frequency in ascending order (`freq[a] < freq[b]`).\n\n##### Java Lambda Function for Sorting by Increasing Frequency\n```\nArrays.sort(numsObj, (a, b) -> {\n    if (freq.get(a).equals(freq.get(b))) {\n        return Integer.compare(b, a);\n    }\n    return Integer.compare(freq.get(a), freq.get(b));\n});\n```\n\nLambda `(a, b) -> { ... }` as comparator for `Arrays.sort`:\n\n1. Parameters `a` and `b` represent elements to compare.\n2. Comparison logic:\n   - If frequencies are equal (`freq.get(a).equals(freq.get(b))`), sort by value in descending order (`Integer.compare(b, a)`).\n   - Otherwise, sort by frequency in ascending order (`Integer.compare(freq.get(a), freq.get(b))`).\n\n##### Python Lambda Function for Sorting by Increasing Frequency\n```\nsorted(nums, key=lambda x: (freq[x], -x))\n```\n\nThe lambda function `lambda x: (freq[x], -x)` is used as the `key` parameter in the `sorted` function call.\n1.  `lambda x:` creates an anonymous function with `x` as its parameter.\n2.  `(freq[x], -x)` is the tuple that the lambda function returns.\n3. `freq[x]` is used to get the frequency of `x` from the `freq` dictionary as the main sorting criterion.\n4. `-x` ensures that values are sorted in descending order when their frequencies are the same.\n\n#### Algorithm\n\n- Initialize an unordered map `freq` to store the frequency of each integer in the input array `nums`.\n- Traverse through each integer `num` in the array `nums`.\n- Increase the count of `num` in the `freq` map using `freq[num]++`.\n- Sort the array `nums` using the `sort` function with a custom comparator:\n    - Compare two integers `a` and `b` based on their frequencies stored in the `freq` map:\n        - If `freq[a]` (frequency of `a`) equals `freq[b]` (frequency of `b`), then:\n        - Return `a > b` to ensure that in case of tie-in frequency, larger values come first (decreasing order).\n        - Otherwise, return `freq[a] < freq[b]` to sort by frequency in increasing order.\n- Return the sorted `nums` array, which now reflects the integers sorted primarily by frequency in ascending order, and by value in descending order when frequencies are tied.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the length of `nums`.\n\n* Time complexity: $O(N \\cdot logN)$.\n    \n    Sorting `nums` incurs a time complexity of $O(N \\cdot logN)$. Iterating over `nums` when counting frequencies incurs a time complexity of $O(N)$, which can be ignored since $O(N \\cdot logN)$ is the dominating term.\n\n* Space complexity: $O(N)$. We define a hash map to count the frequencies of each element, which incurs a space complexity of $O(N)$. Sorting also takes up some space, and the space complexity for that is detailed below:\n    \n    Some extra space is used when we sort an array of size $N$ in place. The space complexity of the sorting algorithm depends on the programming language.\n    - In Python, the `sort` method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has a space complexity of $O(N)$\n    - In C++, the sort() function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worst-case space complexity of $O( \\log N )$\n    - In Java, Arrays.sort() is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log N)$\n\n    Overall, the worst-case time complexity will be $O(N)$ when the array `nums` is filled with unique elements.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThe task is to sort an array of integers by their frequency, placing numbers with fewer occurrences first. If two numbers appear with the same frequency, they should be ordered by their values in descending order. Think of it as arranging a playlist by the least to most popular songs, or ranking search results to prioritize the most relevant and engaging options for a more intuitive user experience.\n\n--- \n\n### Approach: Customized Sorting\n\n#### Intuition\n\nTo sort the numbers, we first arrange them based on their frequency in ascending order. Numbers that appear less frequently will come before those with higher frequencies. We use a hashmap, `freq`, to count the occurrences of each number in the array.\n\nIf two numbers have the same frequency, we then sort them by their values in descending order. This introduces a dual sorting criterion: first by frequency and then by value.\n\nTo accomplish this, we will apply a custom sorting function using lambda expressions. These anonymous functions let us define sorting logic inline. Specifically, our lambda function ensures that numbers are compared primarily by their frequency, and secondarily by their value if frequencies match. This approach guarantees that the final sorted list adheres to both sorting criteria.\n\n##### C++ Lambda Function for Sorting by Increasing Frequency\n```\nsort(nums.begin(), nums.end(), [&](int a, int b) {\n    if (freq[a] == freq[b]) {\n        return a > b; \n    }\n    return freq[a] < freq[b];\n});\n```\n\nThe lambda `[&](int a, int b) { ... }` serves as the comparator for the `sort` function:\n\n1. `&` captures all external variables (`freq` in this case) by reference, allowing the lambda to access and use `freq`.\n2. `(int a, int b)` defines parameters for elements to compare.\n3. Comparison logic:\n   - If frequencies are equal (`freq[a] == freq[b]`), sort by value in descending order (`a > b`).\n   - Otherwise, sort by frequency in ascending order (`freq[a] < freq[b]`).\n\n##### Java Lambda Function for Sorting by Increasing Frequency\n```\nArrays.sort(numsObj, (a, b) -> {\n    if (freq.get(a).equals(freq.get(b))) {\n        return Integer.compare(b, a);\n    }\n    return Integer.compare(freq.get(a), freq.get(b));\n});\n```\n\nLambda `(a, b) -> { ... }` as comparator for `Arrays.sort`:\n\n1. Parameters `a` and `b` represent elements to compare.\n2. Comparison logic:\n   - If frequencies are equal (`freq.get(a).equals(freq.get(b))`), sort by value in descending order (`Integer.compare(b, a)`).\n   - Otherwise, sort by frequency in ascending order (`Integer.compare(freq.get(a), freq.get(b))`).\n\n##### Python Lambda Function for Sorting by Increasing Frequency\n```\nsorted(nums, key=lambda x: (freq[x], -x))\n```\n\nThe lambda function `lambda x: (freq[x], -x)` is used as the `key` parameter in the `sorted` function call.\n1.  `lambda x:` creates an anonymous function with `x` as its parameter.\n2.  `(freq[x], -x)` is the tuple that the lambda function returns.\n3. `freq[x]` is used to get the frequency of `x` from the `freq` dictionary as the main sorting criterion.\n4. `-x` ensures that values are sorted in descending order when their frequencies are the same.\n\n#### Algorithm\n\n- Initialize an unordered map `freq` to store the frequency of each integer in the input array `nums`.\n- Traverse through each integer `num` in the array `nums`.\n- Increase the count of `num` in the `freq` map using `freq[num]++`.\n- Sort the array `nums` using the `sort` function with a custom comparator:\n    - Compare two integers `a` and `b` based on their frequencies stored in the `freq` map:\n        - If `freq[a]` (frequency of `a`) equals `freq[b]` (frequency of `b`), then:\n        - Return `a > b` to ensure that in case of tie-in frequency, larger values come first (decreasing order).\n        - Otherwise, return `freq[a] < freq[b]` to sort by frequency in increasing order.\n- Return the sorted `nums` array, which now reflects the integers sorted primarily by frequency in ascending order, and by value in descending order when frequencies are tied.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the length of `nums`.\n\n* Time complexity: $O(N \\cdot logN)$.\n    \n    Sorting `nums` incurs a time complexity of $O(N \\cdot logN)$. Iterating over `nums` when counting frequencies incurs a time complexity of $O(N)$, which can be ignored since $O(N \\cdot logN)$ is the dominating term.\n\n* Space complexity: $O(N)$. We define a hash map to count the frequencies of each element, which incurs a space complexity of $O(N)$. Sorting also takes up some space, and the space complexity for that is detailed below:\n    \n    Some extra space is used when we sort an array of size $N$ in place. The space complexity of the sorting algorithm depends on the programming language.\n    - In Python, the `sort` method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has a space complexity of $O(N)$\n    - In C++, the sort() function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worst-case space complexity of $O( \\log N )$\n    - In Java, Arrays.sort() is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log N)$\n\n    Overall, the worst-case time complexity will be $O(N)$ when the array `nums` is filled with unique elements.\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        3,
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1,
+          3,
+          2
+        ]
+      },
+      "expected": [
+        1,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          1,
+          -6,
+          4,
+          5,
+          -6,
+          1,
+          4,
+          1
+        ]
+      },
+      "expected": [
+        5,
+        -1,
+        4,
+        4,
+        -6,
+        -6,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
 }

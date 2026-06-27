@@ -60,5 +60,59 @@
     "racket": "(define/contract (calculate-tax brackets income)\n  (-> (listof (listof exact-integer?)) exact-integer? flonum?)\n  )",
     "erlang": "-spec calculate_tax(Brackets :: [[integer()]], Income :: integer()) -> float().\ncalculate_tax(Brackets, Income) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec calculate_tax(brackets :: [[integer]], income :: integer) :: float\n  def calculate_tax(brackets, income) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "brackets": [
+          [
+            3,
+            50
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            12,
+            25
+          ]
+        ],
+        "income": 10
+      },
+      "expected": 2.65
+    },
+    {
+      "args": {
+        "brackets": [
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            25
+          ],
+          [
+            5,
+            50
+          ]
+        ],
+        "income": 2
+      },
+      "expected": 0.25
+    },
+    {
+      "args": {
+        "brackets": [
+          [
+            2,
+            50
+          ]
+        ],
+        "income": 0
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -70,5 +70,75 @@
     "erlang": "-spec max_free_time(EventTime :: integer(), StartTime :: [integer()], EndTime :: [integer()]) -> integer().\nmax_free_time(EventTime, StartTime, EndTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_free_time(event_time :: integer, start_time :: [integer], end_time :: [integer]) :: integer\n  def max_free_time(event_time, start_time, end_time) do\n    \n  end\nend"
   },
-  "solution": "### Approach 1: Greedy\n\n#### Intuition\n\nAssume the current meeting to be shifted is $i$. There are two optimal ways to translate the meeting:\n\n1. If meeting $i$ can be moved to an available time slot, and this slot is not adjacent to the two available time slots on either side of meeting $i$, then shifting it can create a new available time slot, with a duration equal to the sum of the durations of meeting $i$ and the two adjacent available slots on either side.\n\n2. Otherwise, moving meeting $i$ simply merges the two adjacent free time periods on both sides.\n\nAs we can see that maximum free time that can be obtained after rearranging the meetings is the maximum value of the new available time periods resulting from shifting a meeting.\n\nWe use $q[i]$ to record whether meeting $i$ satisfies the condition for the first case. We first traverse the meetings from left to right, maintaining the maximum duration $t_1$ of any non-adjacent free time slot to the left of the current meeting $i$. If $t_1 \\ge \\textit{endTime}[i] - \\textit{startTime}[i]$, then there is a free time slot on the left of meeting $i$ that satisfies case 1, so we record $q[i] = \\text{true}$. Similarly, we traverse from right to left to check whether the right side also satisfies the condition.\n\nThen, for each meeting $i$, we define $\\textit{left}_i$ as the end time of the previous meeting and $\\textit{right}_i$ as the start time of the next meeting. Based on the value of $q[i]$, we determine which case applies:\n\n- Case 1: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i$\n\n- Case 2: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i - (\\textit{endTime}[i] - \\textit{startTime}[i])$\n\nFinally, return the maximum of all computed durations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to record all the meeting situations.\n\n\n### Approach 2: Greedy + Optimization\n\n#### Intuition\n\nIn Approach 1, we used an array `q[i]` to determine whether meeting $i$ satisfied the condition for an optimal shift. However, if we calculate the result for both cases directly while enumerating meeting $i$, we can eliminate the need for the `q` array altogether. The specific process is as follows:\n\n- We iterate over each meeting and first calculate the duration of the new free time slot if we were to merge the adjacent free slots on both sides of the meeting. This corresponds to Case 2 in the previous approach.\n\n- Then, we perform a left-to-right traversal, maintaining a variable $t_1$ to store the maximum duration of any non-adjacent free slot to the left of the current meeting. If the duration of the current meeting is less than or equal to $t_1$, it means the meeting can be shifted into that earlier free slot. We then compute the new available time obtained after this shift (Case 1).\n\n- Similarly, we perform a right-to-left traversal, using $t_2$ to track the maximum duration of non-adjacent free slots on the right. If the current meeting's duration is less than or equal to $t_2$, then it can be shifted into that slot, and we calculate the resulting new available time (Case 1 from the right side).\n\nIn the end, we return the maximum duration among all the computed available time slots.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$."
+  "solution": "### Approach 1: Greedy\n\n#### Intuition\n\nAssume the current meeting to be shifted is $i$. There are two optimal ways to translate the meeting:\n\n1. If meeting $i$ can be moved to an available time slot, and this slot is not adjacent to the two available time slots on either side of meeting $i$, then shifting it can create a new available time slot, with a duration equal to the sum of the durations of meeting $i$ and the two adjacent available slots on either side.\n\n2. Otherwise, moving meeting $i$ simply merges the two adjacent free time periods on both sides.\n\nAs we can see that maximum free time that can be obtained after rearranging the meetings is the maximum value of the new available time periods resulting from shifting a meeting.\n\nWe use $q[i]$ to record whether meeting $i$ satisfies the condition for the first case. We first traverse the meetings from left to right, maintaining the maximum duration $t_1$ of any non-adjacent free time slot to the left of the current meeting $i$. If $t_1 \\ge \\textit{endTime}[i] - \\textit{startTime}[i]$, then there is a free time slot on the left of meeting $i$ that satisfies case 1, so we record $q[i] = \\text{true}$. Similarly, we traverse from right to left to check whether the right side also satisfies the condition.\n\nThen, for each meeting $i$, we define $\\textit{left}_i$ as the end time of the previous meeting and $\\textit{right}_i$ as the start time of the next meeting. Based on the value of $q[i]$, we determine which case applies:\n\n- Case 1: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i$\n\n- Case 2: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i - (\\textit{endTime}[i] - \\textit{startTime}[i])$\n\nFinally, return the maximum of all computed durations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to record all the meeting situations.\n\n\n### Approach 2: Greedy + Optimization\n\n#### Intuition\n\nIn Approach 1, we used an array `q[i]` to determine whether meeting $i$ satisfied the condition for an optimal shift. However, if we calculate the result for both cases directly while enumerating meeting $i$, we can eliminate the need for the `q` array altogether. The specific process is as follows:\n\n- We iterate over each meeting and first calculate the duration of the new free time slot if we were to merge the adjacent free slots on both sides of the meeting. This corresponds to Case 2 in the previous approach.\n\n- Then, we perform a left-to-right traversal, maintaining a variable $t_1$ to store the maximum duration of any non-adjacent free slot to the left of the current meeting. If the duration of the current meeting is less than or equal to $t_1$, it means the meeting can be shifted into that earlier free slot. We then compute the new available time obtained after this shift (Case 1).\n\n- Similarly, we perform a right-to-left traversal, using $t_2$ to track the maximum duration of non-adjacent free slots on the right. If the current meeting's duration is less than or equal to $t_2$, then it can be shifted into that slot, and we calculate the resulting new available time (Case 1 from the right side).\n\nIn the end, we return the maximum duration among all the computed available time slots.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "eventTime": 5,
+        "startTime": [
+          1,
+          3
+        ],
+        "endTime": [
+          2,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "eventTime": 10,
+        "startTime": [
+          0,
+          7,
+          9
+        ],
+        "endTime": [
+          1,
+          8,
+          10
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "eventTime": 10,
+        "startTime": [
+          0,
+          3,
+          7,
+          9
+        ],
+        "endTime": [
+          1,
+          4,
+          8,
+          10
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "eventTime": 5,
+        "startTime": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "endTime": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

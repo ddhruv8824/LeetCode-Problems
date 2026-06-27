@@ -57,5 +57,33 @@
     "racket": "(define/contract (min-distance houses k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_distance(Houses :: [integer()], K :: integer()) -> integer().\nmin_distance(Houses, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_distance(houses :: [integer], k :: integer) :: integer\n  def min_distance(houses, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "houses": [
+          1,
+          4,
+          8,
+          10,
+          20
+        ],
+        "k": 3
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "houses": [
+          2,
+          3,
+          5,
+          12,
+          18
+        ],
+        "k": 2
+      },
+      "expected": 9
+    }
+  ]
 }

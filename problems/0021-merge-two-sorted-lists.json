@@ -59,5 +59,69 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (merge-two-lists list1 list2)\n  (-> (or/c list-node? #f) (or/c list-node? #f) (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec merge_two_lists(List1 :: #list_node{} | null, List2 :: #list_node{} | null) -> #list_node{} | null.\nmerge_two_lists(List1, List2) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec merge_two_lists(list1 :: ListNode.t | nil, list2 :: ListNode.t | nil) :: ListNode.t | nil\n  def merge_two_lists(list1, list2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "list1": [
+          1,
+          3,
+          4
+        ],
+        "list2": [
+          2,
+          5,
+          6
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "args": {
+        "list1": [
+          1,
+          2,
+          4
+        ],
+        "list2": [
+          1,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "args": {
+        "list1": [],
+        "list2": []
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "list1": [],
+        "list2": [
+          0
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

@@ -57,5 +57,43 @@
     "racket": "(define/contract (max-sum-min-product nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_sum_min_product(Nums :: [integer()]) -> integer().\nmax_sum_min_product(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_sum_min_product(nums :: [integer]) :: integer\n  def max_sum_min_product(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          2
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          3,
+          1,
+          2
+        ]
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          5,
+          6,
+          4,
+          2
+        ]
+      },
+      "expected": 60
+    }
+  ]
 }

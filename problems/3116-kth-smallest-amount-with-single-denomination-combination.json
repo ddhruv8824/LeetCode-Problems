@@ -56,5 +56,28 @@
     "racket": "(define/contract (find-kth-smallest coins k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_kth_smallest(Coins :: [integer()], K :: integer()) -> integer().\nfind_kth_smallest(Coins, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_kth_smallest(coins :: [integer], k :: integer) :: integer\n  def find_kth_smallest(coins, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coins": [
+          3,
+          6,
+          9
+        ],
+        "k": 3
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "coins": [
+          5,
+          2
+        ],
+        "k": 7
+      },
+      "expected": 12
+    }
+  ]
 }

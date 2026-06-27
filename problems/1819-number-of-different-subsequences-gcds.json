@@ -58,5 +58,29 @@
     "racket": "(define/contract (count-different-subsequence-gc-ds nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_different_subsequence_gc_ds(Nums :: [integer()]) -> integer().\ncount_different_subsequence_gc_ds(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_different_subsequence_gc_ds(nums :: [integer]) :: integer\n  def count_different_subsequence_gc_ds(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          6,
+          10,
+          3
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          15,
+          40,
+          5,
+          6
+        ]
+      },
+      "expected": 7
+    }
+  ]
 }

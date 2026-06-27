@@ -59,5 +59,44 @@
     "racket": "(define/contract (max-product nums k limit)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_product(Nums :: [integer()], K :: integer(), Limit :: integer()) -> integer().\nmax_product(Nums, K, Limit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_product(nums :: [integer], k :: integer, limit :: integer) :: integer\n  def max_product(nums, k, limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "k": 2,
+        "limit": 10
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          2,
+          3
+        ],
+        "k": -5,
+        "limit": 12
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "k": 0,
+        "limit": 9
+      },
+      "expected": 9
+    }
+  ]
 }

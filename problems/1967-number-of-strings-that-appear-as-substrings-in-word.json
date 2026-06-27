@@ -57,5 +57,41 @@
     "racket": "(define/contract (num-of-strings patterns word)\n  (-> (listof string?) string? exact-integer?)\n  )",
     "erlang": "-spec num_of_strings(Patterns :: [unicode:unicode_binary()], Word :: unicode:unicode_binary()) -> integer().\nnum_of_strings(Patterns, Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_strings(patterns :: [String.t], word :: String.t) :: integer\n  def num_of_strings(patterns, word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "patterns": [
+          "a",
+          "abc",
+          "bc",
+          "d"
+        ],
+        "word": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "patterns": [
+          "a",
+          "b",
+          "c"
+        ],
+        "word": "aaaaabbbbb"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "patterns": [
+          "a",
+          "a",
+          "a"
+        ],
+        "word": "ab"
+      },
+      "expected": 3
+    }
+  ]
 }

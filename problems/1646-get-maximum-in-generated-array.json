@@ -54,5 +54,25 @@
     "racket": "(define/contract (get-maximum-generated n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_maximum_generated(N :: integer()) -> integer().\nget_maximum_generated(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_maximum_generated(n :: integer) :: integer\n  def get_maximum_generated(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -51,5 +51,19 @@
     "racket": "(define/contract (smallest-value n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec smallest_value(N :: integer()) -> integer().\nsmallest_value(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_value(n :: integer) :: integer\n  def smallest_value(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 15
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 3
+    }
+  ]
 }

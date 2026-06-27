@@ -58,5 +58,39 @@
     "racket": "(define/contract (max-satisfaction satisfaction)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_satisfaction(Satisfaction :: [integer()]) -> integer().\nmax_satisfaction(Satisfaction) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_satisfaction(satisfaction :: [integer]) :: integer\n  def max_satisfaction(satisfaction) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "satisfaction": [
+          -1,
+          -8,
+          0,
+          5,
+          -9
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "satisfaction": [
+          4,
+          3,
+          2
+        ]
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "satisfaction": [
+          -1,
+          -4,
+          -5
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

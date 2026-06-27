@@ -51,5 +51,19 @@
     "racket": "(define/contract (digit-count num)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec digit_count(Num :: unicode:unicode_binary()) -> boolean().\ndigit_count(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec digit_count(num :: String.t) :: boolean\n  def digit_count(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "1210"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "num": "030"
+      },
+      "expected": false
+    }
+  ]
 }

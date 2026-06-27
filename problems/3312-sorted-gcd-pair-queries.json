@@ -63,5 +63,64 @@
     "racket": "(define/contract (gcd-values nums queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec gcd_values(Nums :: [integer()], Queries :: [integer()]) -> [integer()].\ngcd_values(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec gcd_values(nums :: [integer], queries :: [integer]) :: [integer]\n  def gcd_values(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          4
+        ],
+        "queries": [
+          0,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          4,
+          2,
+          1
+        ],
+        "queries": [
+          5,
+          3,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        4,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2
+        ],
+        "queries": [
+          0,
+          0
+        ]
+      },
+      "expected": [
+        2,
+        2
+      ]
+    }
+  ]
 }

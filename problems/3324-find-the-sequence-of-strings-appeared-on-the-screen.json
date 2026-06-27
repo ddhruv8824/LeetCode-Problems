@@ -50,5 +50,40 @@
     "racket": "(define/contract (string-sequence target)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec string_sequence(Target :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nstring_sequence(Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec string_sequence(target :: String.t) :: [String.t]\n  def string_sequence(target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "target": "abc"
+      },
+      "expected": [
+        "a",
+        "aa",
+        "ab",
+        "aba",
+        "abb",
+        "abc"
+      ]
+    },
+    {
+      "args": {
+        "target": "he"
+      },
+      "expected": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "ha",
+        "hb",
+        "hc",
+        "hd",
+        "he"
+      ]
+    }
+  ]
 }

@@ -60,5 +60,84 @@
     "racket": "(define/contract (people-indexes favoriteCompanies)\n  (-> (listof (listof string?)) (listof exact-integer?))\n  )",
     "erlang": "-spec people_indexes(FavoriteCompanies :: [[unicode:unicode_binary()]]) -> [integer()].\npeople_indexes(FavoriteCompanies) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec people_indexes(favorite_companies :: [[String.t]]) :: [integer]\n  def people_indexes(favorite_companies) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "favoriteCompanies": [
+          [
+            "leetcode",
+            "google",
+            "facebook"
+          ],
+          [
+            "google",
+            "microsoft"
+          ],
+          [
+            "google",
+            "facebook"
+          ],
+          [
+            "google"
+          ],
+          [
+            "amazon"
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "args": {
+        "favoriteCompanies": [
+          [
+            "leetcode",
+            "google",
+            "facebook"
+          ],
+          [
+            "leetcode",
+            "amazon"
+          ],
+          [
+            "facebook",
+            "google"
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "favoriteCompanies": [
+          [
+            "leetcode"
+          ],
+          [
+            "google"
+          ],
+          [
+            "facebook"
+          ],
+          [
+            "amazon"
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
 }

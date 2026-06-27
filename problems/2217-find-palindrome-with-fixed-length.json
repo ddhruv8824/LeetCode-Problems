@@ -51,5 +51,43 @@
     "racket": "(define/contract (kth-palindrome queries intLength)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec kth_palindrome(Queries :: [integer()], IntLength :: integer()) -> [integer()].\nkth_palindrome(Queries, IntLength) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_palindrome(queries :: [integer], int_length :: integer) :: [integer]\n  def kth_palindrome(queries, int_length) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          90
+        ],
+        "intLength": 3
+      },
+      "expected": [
+        101,
+        111,
+        121,
+        131,
+        141,
+        999
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          2,
+          4,
+          6
+        ],
+        "intLength": 4
+      },
+      "expected": [
+        1111,
+        1331,
+        1551
+      ]
+    }
+  ]
 }

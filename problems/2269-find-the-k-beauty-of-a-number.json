@@ -51,5 +51,21 @@
     "racket": "(define/contract (divisor-substrings num k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec divisor_substrings(Num :: integer(), K :: integer()) -> integer().\ndivisor_substrings(Num, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec divisor_substrings(num :: integer, k :: integer) :: integer\n  def divisor_substrings(num, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 240,
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 430043,
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

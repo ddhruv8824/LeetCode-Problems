@@ -56,5 +56,40 @@
     "erlang": "-spec can_reorder_doubled(Arr :: [integer()]) -> boolean().\ncan_reorder_doubled(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_reorder_doubled(arr :: [integer]) :: boolean\n  def can_reorder_doubled(arr) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIf `x` is currently the array element with the least absolute value, it must pair with `2*x`, as there does not exist any other `x/2` to pair with it.\n\n**Algorithm**\n\nLet's try to (virtually) \"write\" the final reordered array.\n\nLet's check elements in order of absolute value.  When we check an element `x` and it isn't used, it must pair with `2*x`.  We will attempt to write `x, 2x` - if we can't, then the answer is `false`.  If we write everything, the answer is `true`.\n\nTo keep track of what we have not yet written, we will store it in a `count`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIf `x` is currently the array element with the least absolute value, it must pair with `2*x`, as there does not exist any other `x/2` to pair with it.\n\n**Algorithm**\n\nLet's try to (virtually) \"write\" the final reordered array.\n\nLet's check elements in order of absolute value.  When we check an element `x` and it isn't used, it must pair with `2*x`.  We will attempt to write `x, 2x` - if we can't, then the answer is `false`.  If we write everything, the answer is `true`.\n\nTo keep track of what we have not yet written, we will store it in a `count`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          1,
+          3,
+          6
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "arr": [
+          2,
+          1,
+          2,
+          6
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          -2,
+          2,
+          -4
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

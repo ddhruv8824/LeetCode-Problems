@@ -54,5 +54,31 @@
     "racket": "(define/contract (day-of-the-week day month year)\n  (-> exact-integer? exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec day_of_the_week(Day :: integer(), Month :: integer(), Year :: integer()) -> unicode:unicode_binary().\nday_of_the_week(Day, Month, Year) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec day_of_the_week(day :: integer, month :: integer, year :: integer) :: String.t\n  def day_of_the_week(day, month, year) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "day": 31,
+        "month": 8,
+        "year": 2019
+      },
+      "expected": "Saturday"
+    },
+    {
+      "args": {
+        "day": 18,
+        "month": 7,
+        "year": 1999
+      },
+      "expected": "Sunday"
+    },
+    {
+      "args": {
+        "day": 15,
+        "month": 8,
+        "year": 1993
+      },
+      "expected": "Sunday"
+    }
+  ]
 }

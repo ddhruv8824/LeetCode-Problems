@@ -53,5 +53,41 @@
     "racket": "(define/contract (kth-smallest matrix k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec kth_smallest(Matrix :: [[integer()]], K :: integer()) -> integer().\nkth_smallest(Matrix, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_smallest(matrix :: [[integer]], k :: integer) :: integer\n  def kth_smallest(matrix, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            10,
+            11,
+            13
+          ],
+          [
+            12,
+            13,
+            15
+          ]
+        ],
+        "k": 8
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            -5
+          ]
+        ],
+        "k": 1
+      },
+      "expected": -5
+    }
+  ]
 }

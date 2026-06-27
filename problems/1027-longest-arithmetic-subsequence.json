@@ -54,5 +54,44 @@
     "racket": "(define/contract (longest-arith-seq-length nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec longest_arith_seq_length(Nums :: [integer()]) -> integer().\nlongest_arith_seq_length(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_arith_seq_length(nums :: [integer]) :: integer\n  def longest_arith_seq_length(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          9,
+          12
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          4,
+          7,
+          2,
+          10
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          20,
+          1,
+          15,
+          3,
+          10,
+          5,
+          8
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

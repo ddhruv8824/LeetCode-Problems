@@ -48,5 +48,31 @@
     "racket": "(define/contract (maximize-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximize_sum(Nums :: [integer()], K :: integer()) -> integer().\nmaximize_sum(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximize_sum(nums :: [integer], k :: integer) :: integer\n  def maximize_sum(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "k": 3
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          5,
+          5
+        ],
+        "k": 2
+      },
+      "expected": 11
+    }
+  ]
 }

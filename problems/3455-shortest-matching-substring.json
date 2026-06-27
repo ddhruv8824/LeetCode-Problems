@@ -64,5 +64,35 @@
     "racket": "(define/contract (shortest-matching-substring s p)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec shortest_matching_substring(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> integer().\nshortest_matching_substring(S, P) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_matching_substring(s :: String.t, p :: String.t) :: integer\n  def shortest_matching_substring(s, p) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abaacbaecebce",
+        "p": "ba*c*ce"
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "s": "baccbaadbc",
+        "p": "cc*baa*adb"
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "s": "a",
+        "p": "**"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "madlogic",
+        "p": "*adlogi*"
+      },
+      "expected": 6
+    }
+  ]
 }

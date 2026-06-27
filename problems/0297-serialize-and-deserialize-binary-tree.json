@@ -51,5 +51,37 @@
     "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val)\n#         @val = val\n#         @left, @right = nil, nil\n#     end\n# end\n\n# Encodes a tree to a single string.\n#\n# @param {TreeNode} root\n# @return {string}\ndef serialize(root)\n    \nend\n\n# Decodes your encoded data to tree.\n#\n# @param {string} data\n# @return {TreeNode}\ndef deserialize(data)\n    \nend\n\n\n# Your functions will be called as such:\n# deserialize(serialize(data))",
     "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(var _value: Int) {\n *   var value: Int = _value\n *   var left: TreeNode = null\n *   var right: TreeNode = null\n * }\n */\n\nclass Codec {\n    // Encodes a list of strings to a single string.\n    def serialize(root: TreeNode): String = {\n        \n    }\n    \n    // Decodes a single string to a list of strings.\n    def deserialize(data: String): TreeNode = {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * var ser = new Codec()\n * var deser = new Codec()\n * val s = ser.serialize(root)\n * val ans = deser.deserialize(s)\n */",
     "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nstruct Codec {\n\t\n}\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl Codec {\n    fn new() -> Self {\n        \n    }\n\n    fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {\n        \n    }\n\t\n    fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * let obj = Codec::new();\n * let data: String = obj.serialize(strs);\n * let ans: Option<Rc<RefCell<TreeNode>>> = obj.deserialize(data);\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": []
+      }
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          null,
+          4,
+          5
+        ]
+      }
+    }
+  ]
 }

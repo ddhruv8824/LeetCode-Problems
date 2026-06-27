@@ -50,5 +50,23 @@
     "racket": "(define/contract (max-containers n w maxWeight)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_containers(N :: integer(), W :: integer(), MaxWeight :: integer()) -> integer().\nmax_containers(N, W, MaxWeight) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_containers(n :: integer, w :: integer, max_weight :: integer) :: integer\n  def max_containers(n, w, max_weight) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "w": 3,
+        "maxWeight": 15
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 3,
+        "w": 5,
+        "maxWeight": 20
+      },
+      "expected": 4
+    }
+  ]
 }

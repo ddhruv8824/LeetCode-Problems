@@ -60,5 +60,67 @@
     "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc getIntersectionNode(headA, headB *ListNode) *ListNode {\n    \n}",
     "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val)\n#         @val = val\n#         @next = nil\n#     end\n# end\n\n# @param {ListNode} headA\n# @param {ListNode} headB\n# @return {ListNode}\ndef getIntersectionNode(headA, headB)\n    \nend",
     "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(var _x: Int = 0) {\n *   var next: ListNode = null\n *   var x: Int = _x\n * }\n */\n\nobject Solution {\n    def getIntersectionNode(headA: ListNode, headB: ListNode): ListNode = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "intersectVal": 8,
+        "listA": [
+          4,
+          1,
+          8,
+          4,
+          5
+        ],
+        "listB": [
+          5,
+          6,
+          1,
+          8,
+          4,
+          5
+        ],
+        "skipA": 2,
+        "skipB": 3
+      },
+      "expected": "Intersected at '8'"
+    },
+    {
+      "args": {
+        "intersectVal": 2,
+        "listA": [
+          1,
+          9,
+          1,
+          2,
+          4
+        ],
+        "listB": [
+          3,
+          2,
+          4
+        ],
+        "skipA": 3,
+        "skipB": 1
+      },
+      "expected": "Intersected at '2'"
+    },
+    {
+      "args": {
+        "intersectVal": 0,
+        "listA": [
+          2,
+          6,
+          4
+        ],
+        "listB": [
+          1,
+          5
+        ],
+        "skipA": 3,
+        "skipB": 2
+      },
+      "expected": "No intersection"
+    }
+  ]
 }

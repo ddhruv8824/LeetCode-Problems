@@ -51,5 +51,39 @@
     "erlang": "-spec min_sum(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmin_sum(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_sum(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def min_sum(nums1, nums2) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Minimum Sum Matching\n\n#### Intuition\n\nThe task requires us to replace all $0$s in the two arrays with positive integers and make their sums equal. It is not difficult to imagine that replacing all $0$s in an array with $1$s will make the sum of its elements as small as possible.\n\nLet $\\textit{sum}_1$ and $\\textit{sum}_2$ be the sums of $\\textit{nums}_1$ and $\\textit{nums}_2$, respectively. Let $\\textit{zero}_1$ and $\\textit{zero}_2$ be the number of zeros in the two arrays. The minimum sums that the two arrays can reach are $\\textit{sum}_1 + \\textit{zero}_1$ and $\\textit{sum}_2 + \\textit{zero}_2$, respectively.\n\nWhen there is at least one $0$ in both arrays, a solution always exists, and the minimum possible equal sum is $\\max(\\textit{sum}_1 + \\textit{zero}_1, \\textit{sum}_2 + \\textit{zero}_2)$. However, if there are no $0$s in one of the arrays, and the minimum possible sum of the other array exceeds the fixed sum of this array, then it is impossible to make the sums equal, so we return $-1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the lengths of $\\textit{nums}_1$ and $\\textit{nums}_2$, respectively.\n\n- Time complexity: $O(n + m)$.\n\nWe need to traverse both arrays once.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Minimum Sum Matching\n\n#### Intuition\n\nThe task requires us to replace all $0$s in the two arrays with positive integers and make their sums equal. It is not difficult to imagine that replacing all $0$s in an array with $1$s will make the sum of its elements as small as possible.\n\nLet $\\textit{sum}_1$ and $\\textit{sum}_2$ be the sums of $\\textit{nums}_1$ and $\\textit{nums}_2$, respectively. Let $\\textit{zero}_1$ and $\\textit{zero}_2$ be the number of zeros in the two arrays. The minimum sums that the two arrays can reach are $\\textit{sum}_1 + \\textit{zero}_1$ and $\\textit{sum}_2 + \\textit{zero}_2$, respectively.\n\nWhen there is at least one $0$ in both arrays, a solution always exists, and the minimum possible equal sum is $\\max(\\textit{sum}_1 + \\textit{zero}_1, \\textit{sum}_2 + \\textit{zero}_2)$. However, if there are no $0$s in one of the arrays, and the minimum possible sum of the other array exceeds the fixed sum of this array, then it is impossible to make the sums equal, so we return $-1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the lengths of $\\textit{nums}_1$ and $\\textit{nums}_2$, respectively.\n\n- Time complexity: $O(n + m)$.\n\nWe need to traverse both arrays once.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed.",
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          3,
+          2,
+          0,
+          1,
+          0
+        ],
+        "nums2": [
+          6,
+          5,
+          0
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "nums2": [
+          1,
+          4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

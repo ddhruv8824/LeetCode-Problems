@@ -52,5 +52,25 @@
     "racket": "(define/contract (is-same-after-reversals num)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_same_after_reversals(Num :: integer()) -> boolean().\nis_same_after_reversals(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_same_after_reversals(num :: integer) :: boolean\n  def is_same_after_reversals(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 526
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "num": 1800
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "num": 0
+      },
+      "expected": true
+    }
+  ]
 }

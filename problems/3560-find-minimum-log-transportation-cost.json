@@ -52,5 +52,23 @@
     "racket": "(define/contract (min-cutting-cost n m k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_cutting_cost(N :: integer(), M :: integer(), K :: integer()) -> integer().\nmin_cutting_cost(N, M, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cutting_cost(n :: integer, m :: integer, k :: integer) :: integer\n  def min_cutting_cost(n, m, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6,
+        "m": 5,
+        "k": 5
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 4,
+        "m": 4,
+        "k": 6
+      },
+      "expected": 0
+    }
+  ]
 }

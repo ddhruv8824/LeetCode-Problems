@@ -60,5 +60,28 @@
     "racket": "(define/contract (max-partitions-after-operations s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_partitions_after_operations(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_partitions_after_operations(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_partitions_after_operations(s :: String.t, k :: integer) :: integer\n  def max_partitions_after_operations(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "accca",
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "aabaab",
+        "k": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "xxyz",
+        "k": 1
+      },
+      "expected": 4
+    }
+  ]
 }

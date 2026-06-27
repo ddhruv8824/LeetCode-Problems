@@ -52,5 +52,29 @@
     "racket": "(define/contract (count-elements nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_elements(Nums :: [integer()]) -> integer().\ncount_elements(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_elements(nums :: [integer]) :: integer\n  def count_elements(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          11,
+          7,
+          2,
+          15
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          -3,
+          3,
+          3,
+          90
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

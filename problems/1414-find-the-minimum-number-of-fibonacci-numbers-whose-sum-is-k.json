@@ -54,5 +54,25 @@
     "racket": "(define/contract (find-min-fibonacci-numbers k)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_min_fibonacci_numbers(K :: integer()) -> integer().\nfind_min_fibonacci_numbers(K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_min_fibonacci_numbers(k :: integer) :: integer\n  def find_min_fibonacci_numbers(k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 7
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "k": 10
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "k": 19
+      },
+      "expected": 3
+    }
+  ]
 }

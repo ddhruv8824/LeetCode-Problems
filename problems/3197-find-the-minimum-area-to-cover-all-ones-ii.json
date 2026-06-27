@@ -57,5 +57,43 @@
     "racket": "(define/contract (minimum-sum grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_sum(Grid :: [[integer()]]) -> integer().\nminimum_sum(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_sum(grid :: [[integer]]) :: integer\n  def minimum_sum(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

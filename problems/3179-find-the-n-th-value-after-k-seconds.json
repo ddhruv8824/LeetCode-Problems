@@ -51,5 +51,21 @@
     "racket": "(define/contract (value-after-k-seconds n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec value_after_k_seconds(N :: integer(), K :: integer()) -> integer().\nvalue_after_k_seconds(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec value_after_k_seconds(n :: integer, k :: integer) :: integer\n  def value_after_k_seconds(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "k": 5
+      },
+      "expected": 56
+    },
+    {
+      "args": {
+        "n": 5,
+        "k": 3
+      },
+      "expected": 35
+    }
+  ]
 }

@@ -56,5 +56,31 @@
     "ruby": "# @param {Integer} a\n# @param {Integer} b\n# @param {Integer} c\n# @return {Integer}\ndef min_flips(a, b, c)\n    \nend",
     "scala": "object Solution {\n    def minFlips(a: Int, b: Int, c: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn min_flips(a: i32, b: i32, c: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 2,
+        "b": 6,
+        "c": 5
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": 4,
+        "b": 2,
+        "c": 7
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      },
+      "expected": 0
+    }
+  ]
 }

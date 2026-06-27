@@ -62,5 +62,72 @@
     "racket": "(define/contract (are-similar mat k)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
     "erlang": "-spec are_similar(Mat :: [[integer()]], K :: integer()) -> boolean().\nare_similar(Mat, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec are_similar(mat :: [[integer]], k :: integer) :: boolean\n  def are_similar(mat, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ],
+        "k": 4
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            6,
+            3,
+            6,
+            3
+          ]
+        ],
+        "k": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "k": 3
+      },
+      "expected": true
+    }
+  ]
 }

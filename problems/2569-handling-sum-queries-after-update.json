@@ -55,5 +55,66 @@
     "racket": "(define/contract (handle-query nums1 nums2 queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec handle_query(Nums1 :: [integer()], Nums2 :: [integer()], Queries :: [[integer()]]) -> [integer()].\nhandle_query(Nums1, Nums2, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec handle_query(nums1 :: [integer], nums2 :: [integer], queries :: [[integer]]) :: [integer]\n  def handle_query(nums1, nums2, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          0,
+          1
+        ],
+        "nums2": [
+          0,
+          0,
+          0
+        ],
+        "queries": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          1
+        ],
+        "nums2": [
+          5
+        ],
+        "queries": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        5
+      ]
+    }
+  ]
 }

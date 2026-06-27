@@ -47,5 +47,21 @@
     "racket": "(define/contract (the-maximum-achievable-x num t)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec the_maximum_achievable_x(Num :: integer(), T :: integer()) -> integer().\nthe_maximum_achievable_x(Num, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec the_maximum_achievable_x(num :: integer, t :: integer) :: integer\n  def the_maximum_achievable_x(num, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 4,
+        "t": 1
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "num": 3,
+        "t": 2
+      },
+      "expected": 7
+    }
+  ]
 }

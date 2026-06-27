@@ -49,5 +49,19 @@
     "racket": "(define/contract (get-smallest-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec get_smallest_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nget_smallest_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_smallest_string(s :: String.t) :: String.t\n  def get_smallest_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "45320"
+      },
+      "expected": "43520"
+    },
+    {
+      "args": {
+        "s": "001"
+      },
+      "expected": "001"
+    }
+  ]
 }

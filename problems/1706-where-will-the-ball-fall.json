@@ -64,5 +64,113 @@
     "racket": "(define/contract (find-ball grid)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec find_ball(Grid :: [[integer()]]) -> [integer()].\nfind_ball(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_ball(grid :: [[integer]]) :: [integer]\n  def find_ball(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            -1
+          ]
+        ]
+      },
+      "expected": [
+        -1
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        -1
+      ]
+    }
+  ]
 }

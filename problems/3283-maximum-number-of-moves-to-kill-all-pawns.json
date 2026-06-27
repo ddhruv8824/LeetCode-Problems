@@ -68,5 +68,58 @@
     "racket": "(define/contract (max-moves kx ky positions)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_moves(Kx :: integer(), Ky :: integer(), Positions :: [[integer()]]) -> integer().\nmax_moves(Kx, Ky, Positions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_moves(kx :: integer, ky :: integer, positions :: [[integer]]) :: integer\n  def max_moves(kx, ky, positions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "kx": 1,
+        "ky": 1,
+        "positions": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "kx": 0,
+        "ky": 2,
+        "positions": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "kx": 0,
+        "ky": 0,
+        "positions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -52,5 +52,28 @@
     "racket": "(define/contract (longest-valid-substring word forbidden)\n  (-> string? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec longest_valid_substring(Word :: unicode:unicode_binary(), Forbidden :: [unicode:unicode_binary()]) -> integer().\nlongest_valid_substring(Word, Forbidden) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_valid_substring(word :: String.t, forbidden :: [String.t]) :: integer\n  def longest_valid_substring(word, forbidden) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "cbaaaabc",
+        "forbidden": [
+          "aaa",
+          "cb"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "word": "leetcode",
+        "forbidden": [
+          "de",
+          "le",
+          "e"
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

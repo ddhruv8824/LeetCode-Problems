@@ -44,5 +44,21 @@
     "scala": "object Solution {\n    def strWithout3a3b(a: Int, b: Int): String = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn str_without3a3b(a: i32, b: i32) -> String {\n        \n    }\n}"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIntuitively, we should write the most common letter first.  For example, if we have `A = 6, B = 2`, we want to write `'aabaabaa'`.  The only time we don't write the most common letter is if the last two letters we have written are also the most common letter\n\n**Algorithm**\n\nLet's maintain `A, B`: the number of `'a'` and `'b'`'s left to write.\n\nIf we have already written the most common letter twice, we'll write the other letter.  Otherwise, we'll write the most common letter.**Complexity Analysis**\n\n* Time Complexity:  $$O(A+B)$$.\n\n* Space Complexity:  $$O(A+B)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIntuitively, we should write the most common letter first.  For example, if we have `A = 6, B = 2`, we want to write `'aabaabaa'`.  The only time we don't write the most common letter is if the last two letters we have written are also the most common letter\n\n**Algorithm**\n\nLet's maintain `A, B`: the number of `'a'` and `'b'`'s left to write.\n\nIf we have already written the most common letter twice, we'll write the other letter.  Otherwise, we'll write the most common letter.**Complexity Analysis**\n\n* Time Complexity:  $$O(A+B)$$.\n\n* Space Complexity:  $$O(A+B)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "a": 1,
+        "b": 2
+      },
+      "expected": "abb"
+    },
+    {
+      "args": {
+        "a": 4,
+        "b": 1
+      },
+      "expected": "aabaa"
+    }
+  ]
 }

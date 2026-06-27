@@ -53,5 +53,30 @@
     "racket": "(define/contract (max-consecutive bottom top special)\n  (-> exact-integer? exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_consecutive(Bottom :: integer(), Top :: integer(), Special :: [integer()]) -> integer().\nmax_consecutive(Bottom, Top, Special) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_consecutive(bottom :: integer, top :: integer, special :: [integer]) :: integer\n  def max_consecutive(bottom, top, special) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "bottom": 2,
+        "top": 9,
+        "special": [
+          4,
+          6
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "bottom": 6,
+        "top": 8,
+        "special": [
+          7,
+          6,
+          8
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

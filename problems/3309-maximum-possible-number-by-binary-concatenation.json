@@ -50,5 +50,27 @@
     "racket": "(define/contract (max-good-number nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_good_number(Nums :: [integer()]) -> integer().\nmax_good_number(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_good_number(nums :: [integer]) :: integer\n  def max_good_number(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 30
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          8,
+          16
+        ]
+      },
+      "expected": 1296
+    }
+  ]
 }

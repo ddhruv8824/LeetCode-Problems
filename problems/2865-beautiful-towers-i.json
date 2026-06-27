@@ -57,5 +57,45 @@
     "racket": "(define/contract (maximum-sum-of-heights heights)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_sum_of_heights(Heights :: [integer()]) -> integer().\nmaximum_sum_of_heights(Heights) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_sum_of_heights(heights :: [integer]) :: integer\n  def maximum_sum_of_heights(heights) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "heights": [
+          5,
+          3,
+          4,
+          1,
+          1
+        ]
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "heights": [
+          6,
+          5,
+          3,
+          9,
+          2,
+          7
+        ]
+      },
+      "expected": 22
+    },
+    {
+      "args": {
+        "heights": [
+          3,
+          2,
+          5,
+          5,
+          2,
+          3
+        ]
+      },
+      "expected": 18
+    }
+  ]
 }

@@ -57,5 +57,46 @@
     "ruby": "# @param {Integer[]} distance\n# @param {Integer} start\n# @param {Integer} destination\n# @return {Integer}\ndef distance_between_bus_stops(distance, start, destination)\n    \nend",
     "scala": "object Solution {\n    def distanceBetweenBusStops(distance: Array[Int], start: Int, destination: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn distance_between_bus_stops(distance: Vec<i32>, start: i32, destination: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "distance": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "start": 0,
+        "destination": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "distance": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "start": 0,
+        "destination": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "distance": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "start": 0,
+        "destination": 3
+      },
+      "expected": 4
+    }
+  ]
 }

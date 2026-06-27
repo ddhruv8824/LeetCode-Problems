@@ -59,5 +59,43 @@
     "erlang": "-spec partition_array(Nums :: [integer()], K :: integer()) -> integer().\npartition_array(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec partition_array(nums :: [integer], k :: integer) :: integer\n  def partition_array(nums, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Sort + Greedy\n\n#### Intuition\n\nThe task requires us to group the numbers in the $\\textit{nums}$ array such that the difference between the minimum and maximum values in each group is no more than $k$, and the total number of groups is minimized.\n\nWe can consider a greedy approach here: for each group, we include as many numbers as possible. Since the order of elements does not affect the grouping, we can sort the array first. Then, we traverse the array $\\textit{nums}$ and start a new group whenever necessary. We record the minimum value $\\textit{rec}$ of the current group. As we iterate, if the current element $\\textit{nums}[i]$ satisfies $\\textit{nums}[i] - \\textit{rec} > k$, it means a new group must be started.\n\nThe correctness of this greedy strategy can be explained as follows:\n\n1. Suppose the minimum value of a group is $\\textit{start}$. Then, the valid range for that group is $[\\textit{start}, \\textit{start} + k]$. Since we add all elements within this range to the current group, removing any of them wouldn't reduce the number of groups—it would either stay the same or increase. Thus, including all such elements in a group ensures we use the fewest groups possible.\n2. According to our strategy, we start a new group only when an element exceeds $\\textit{start} + k$. This guarantees that no element is counted in more than one group. If there were overlap between two groups, the overlapping elements could be moved to the first group, which would increase the second group's minimum value and its upper bound, possibly allowing more elements to be grouped together. This either reduces or maintains the number of groups, proving the greedy method does not produce a worse result.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n \\log n)$.\n  \n  We sort the array $\\textit{nums}$ in $O(n \\log n)$ time. Then, we traverse the sorted array once, which takes $O(n)$ time. Therefore, the overall time complexity is $O(n \\log n)$.\n\n- Space complexity: $O(S_n)$.\n  \n  The space complexity is determined by the space needed by our sorting algorithm to sort `nums`. This space complexity ($S$) depends on the language of implementation. Given input size $n$:\n\n  In Java, `Arrays.sort()` is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log n)$.\n  In C++, the `sort()` function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worst-case space complexity of $O(\\log n)$.\n  In Python, the `sort()` method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has a space complexity of $O(n)$."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Sort + Greedy\n\n#### Intuition\n\nThe task requires us to group the numbers in the $\\textit{nums}$ array such that the difference between the minimum and maximum values in each group is no more than $k$, and the total number of groups is minimized.\n\nWe can consider a greedy approach here: for each group, we include as many numbers as possible. Since the order of elements does not affect the grouping, we can sort the array first. Then, we traverse the array $\\textit{nums}$ and start a new group whenever necessary. We record the minimum value $\\textit{rec}$ of the current group. As we iterate, if the current element $\\textit{nums}[i]$ satisfies $\\textit{nums}[i] - \\textit{rec} > k$, it means a new group must be started.\n\nThe correctness of this greedy strategy can be explained as follows:\n\n1. Suppose the minimum value of a group is $\\textit{start}$. Then, the valid range for that group is $[\\textit{start}, \\textit{start} + k]$. Since we add all elements within this range to the current group, removing any of them wouldn't reduce the number of groups—it would either stay the same or increase. Thus, including all such elements in a group ensures we use the fewest groups possible.\n2. According to our strategy, we start a new group only when an element exceeds $\\textit{start} + k$. This guarantees that no element is counted in more than one group. If there were overlap between two groups, the overlapping elements could be moved to the first group, which would increase the second group's minimum value and its upper bound, possibly allowing more elements to be grouped together. This either reduces or maintains the number of groups, proving the greedy method does not produce a worse result.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n \\log n)$.\n  \n  We sort the array $\\textit{nums}$ in $O(n \\log n)$ time. Then, we traverse the sorted array once, which takes $O(n)$ time. Therefore, the overall time complexity is $O(n \\log n)$.\n\n- Space complexity: $O(S_n)$.\n  \n  The space complexity is determined by the space needed by our sorting algorithm to sort `nums`. This space complexity ($S$) depends on the language of implementation. Given input size $n$:\n\n  In Java, `Arrays.sort()` is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log n)$.\n  In C++, the `sort()` function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worst-case space complexity of $O(\\log n)$.\n  In Python, the `sort()` method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has a space complexity of $O(n)$.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          1,
+          2,
+          5
+        ],
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "k": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          4,
+          5
+        ],
+        "k": 0
+      },
+      "expected": 3
+    }
+  ]
 }

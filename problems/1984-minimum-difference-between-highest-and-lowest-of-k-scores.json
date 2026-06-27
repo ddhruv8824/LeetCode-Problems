@@ -53,5 +53,28 @@
     "racket": "(define/contract (minimum-difference nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_difference(Nums :: [integer()], K :: integer()) -> integer().\nminimum_difference(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_difference(nums :: [integer], k :: integer) :: integer\n  def minimum_difference(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          90
+        ],
+        "k": 1
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          4,
+          1,
+          7
+        ],
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

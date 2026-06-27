@@ -49,5 +49,19 @@
     "racket": "(define/contract (two-egg-drop n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec two_egg_drop(N :: integer()) -> integer().\ntwo_egg_drop(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec two_egg_drop(n :: integer) :: integer\n  def two_egg_drop(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 100
+      },
+      "expected": 14
+    }
+  ]
 }

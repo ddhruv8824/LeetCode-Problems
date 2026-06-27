@@ -49,5 +49,25 @@
     "ruby": "# @param {String} command\n# @return {String}\ndef interpret(command)\n    \nend",
     "scala": "object Solution {\n    def interpret(command: String): String = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn interpret(command: String) -> String {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "command": "G()(al)"
+      },
+      "expected": "Goal"
+    },
+    {
+      "args": {
+        "command": "G()()()()(al)"
+      },
+      "expected": "Gooooal"
+    },
+    {
+      "args": {
+        "command": "(al)G(al)()()G"
+      },
+      "expected": "alGalooG"
+    }
+  ]
 }

@@ -72,5 +72,62 @@
     "racket": "(define/contract (max-len n edges label)\n  (-> exact-integer? (listof (listof exact-integer?)) string? exact-integer?)\n  )",
     "erlang": "-spec max_len(N :: integer(), Edges :: [[integer()]], Label :: unicode:unicode_binary()) -> integer().\nmax_len(N, Edges, Label) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_len(n :: integer, edges :: [[integer]], label :: String.t) :: integer\n  def max_len(n, edges, label) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "label": "aba"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "label": "abc"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "label": "bbac"
+      },
+      "expected": 3
+    }
+  ]
 }

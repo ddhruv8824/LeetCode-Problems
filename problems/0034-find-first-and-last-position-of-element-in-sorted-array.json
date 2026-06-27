@@ -54,5 +54,51 @@
     "racket": "(define/contract (search-range nums target)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec search_range(Nums :: [integer()], Target :: integer()) -> [integer()].\nsearch_range(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec search_range(nums :: [integer], target :: integer) :: [integer]\n  def search_range(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          7,
+          7,
+          8,
+          8,
+          10
+        ],
+        "target": 8
+      },
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          7,
+          7,
+          8,
+          8,
+          10
+        ],
+        "target": 6
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "nums": [],
+        "target": 0
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    }
+  ]
 }

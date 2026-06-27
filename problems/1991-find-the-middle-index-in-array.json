@@ -56,5 +56,38 @@
     "racket": "(define/contract (find-middle-index nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_middle_index(Nums :: [integer()]) -> integer().\nfind_middle_index(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_middle_index(nums :: [integer]) :: integer\n  def find_middle_index(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          -1,
+          8,
+          4
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -1,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          5
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

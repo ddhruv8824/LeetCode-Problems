@@ -57,5 +57,58 @@
     "racket": "(define/contract (good-days-to-rob-bank security time)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec good_days_to_rob_bank(Security :: [integer()], Time :: integer()) -> [integer()].\ngood_days_to_rob_bank(Security, Time) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec good_days_to_rob_bank(security :: [integer], time :: integer) :: [integer]\n  def good_days_to_rob_bank(security, time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "security": [
+          5,
+          3,
+          3,
+          3,
+          5,
+          6,
+          2
+        ],
+        "time": 2
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "security": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "time": 0
+      },
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "security": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "time": 2
+      },
+      "expected": []
+    }
+  ]
 }

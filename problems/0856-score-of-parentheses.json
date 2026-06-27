@@ -53,5 +53,31 @@
     "racket": "(define/contract (score-of-parentheses s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec score_of_parentheses(S :: unicode:unicode_binary()) -> integer().\nscore_of_parentheses(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec score_of_parentheses(s :: String.t) :: integer\n  def score_of_parentheses(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "S": "()"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "S": "(())"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "S": "()()"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "S": "(()(()))"
+      },
+      "expected": 6
+    }
+  ]
 }

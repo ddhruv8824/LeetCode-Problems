@@ -55,5 +55,39 @@
     "racket": "(define/contract (minimum-right-shifts nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_right_shifts(Nums :: [integer()]) -> integer().\nminimum_right_shifts(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_right_shifts(nums :: [integer]) :: integer\n  def minimum_right_shifts(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          5
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

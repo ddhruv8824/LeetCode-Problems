@@ -52,5 +52,21 @@
     "racket": "(define/contract (popcount-depth n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec popcount_depth(N :: integer(), K :: integer()) -> integer().\npopcount_depth(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec popcount_depth(n :: integer, k :: integer) :: integer\n  def popcount_depth(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "k": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 7,
+        "k": 2
+      },
+      "expected": 3
+    }
+  ]
 }

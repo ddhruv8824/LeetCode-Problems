@@ -57,5 +57,51 @@
     "racket": "(define/contract (diagonal-prime nums)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec diagonal_prime(Nums :: [[integer()]]) -> integer().\ndiagonal_prime(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec diagonal_prime(nums :: [[integer]]) :: integer\n  def diagonal_prime(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            6,
+            7
+          ],
+          [
+            9,
+            10,
+            11
+          ]
+        ]
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "nums": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            17,
+            7
+          ],
+          [
+            9,
+            11,
+            10
+          ]
+        ]
+      },
+      "expected": 17
+    }
+  ]
 }

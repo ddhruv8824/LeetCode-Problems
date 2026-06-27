@@ -48,5 +48,31 @@
     "racket": "(define/contract (can-jump nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_jump(Nums :: [integer()]) -> boolean().\ncan_jump(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_jump(nums :: [integer]) :: boolean\n  def can_jump(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          1,
+          0,
+          4
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

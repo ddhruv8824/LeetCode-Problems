@@ -60,5 +60,39 @@
     "racket": "(define/contract (maximum-strong-pair-xor nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_strong_pair_xor(Nums :: [integer()]) -> integer().\nmaximum_strong_pair_xor(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_strong_pair_xor(nums :: [integer]) :: integer\n  def maximum_strong_pair_xor(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          100
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          500,
+          520,
+          2500,
+          3000
+        ]
+      },
+      "expected": 1020
+    }
+  ]
 }

@@ -54,5 +54,35 @@
     "racket": "(define/contract (minimum-xor-sum nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_xor_sum(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nminimum_xor_sum(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_xor_sum(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def minimum_xor_sum(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          2
+        ],
+        "nums2": [
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          0,
+          3
+        ],
+        "nums2": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

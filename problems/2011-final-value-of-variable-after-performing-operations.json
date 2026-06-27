@@ -56,5 +56,38 @@
     "racket": "(define/contract (final-value-after-operations operations)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec final_value_after_operations(Operations :: [unicode:unicode_binary()]) -> integer().\nfinal_value_after_operations(Operations) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec final_value_after_operations(operations :: [String.t]) :: integer\n  def final_value_after_operations(operations) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "operations": [
+          "--X",
+          "X++",
+          "X++"
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "operations": [
+          "++X",
+          "++X",
+          "X++"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "operations": [
+          "X++",
+          "++X",
+          "--X",
+          "X--"
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

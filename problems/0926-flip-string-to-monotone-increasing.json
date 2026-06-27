@@ -52,5 +52,25 @@
     "racket": "(define/contract (min-flips-mono-incr s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_flips_mono_incr(S :: unicode:unicode_binary()) -> integer().\nmin_flips_mono_incr(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_flips_mono_incr(s :: String.t) :: integer\n  def min_flips_mono_incr(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "00110"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "010110"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "00011000"
+      },
+      "expected": 2
+    }
+  ]
 }

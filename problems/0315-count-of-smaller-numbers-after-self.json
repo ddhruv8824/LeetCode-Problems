@@ -57,5 +57,41 @@
     "racket": "(define/contract (count-smaller nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec count_smaller(Nums :: [integer()]) -> [integer()].\ncount_smaller(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_smaller(nums :: [integer]) :: [integer]\n  def count_smaller(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          2,
+          6,
+          1
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          7,
+          8,
+          5
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
 }

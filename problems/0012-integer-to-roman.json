@@ -52,5 +52,37 @@
     "racket": "(define/contract (int-to-roman num)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec int_to_roman(Num :: integer()) -> unicode:unicode_binary().\nint_to_roman(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec int_to_roman(num :: integer) :: String.t\n  def int_to_roman(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 3
+      },
+      "expected": "III"
+    },
+    {
+      "args": {
+        "num": 4
+      },
+      "expected": "IV"
+    },
+    {
+      "args": {
+        "num": 9
+      },
+      "expected": "IX"
+    },
+    {
+      "args": {
+        "num": 58
+      },
+      "expected": "LVIII"
+    },
+    {
+      "args": {
+        "num": 1994
+      },
+      "expected": "MCMXCIV"
+    }
+  ]
 }

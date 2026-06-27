@@ -52,5 +52,29 @@
     "racket": "(define/contract (maximum-possible-size nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_possible_size(Nums :: [integer()]) -> integer().\nmaximum_possible_size(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_possible_size(nums :: [integer]) :: integer\n  def maximum_possible_size(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          5,
+          3,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -54,5 +54,19 @@
     "racket": "(define/contract (largest-palindromic num)\n  (-> string? string?)\n  )",
     "erlang": "-spec largest_palindromic(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_palindromic(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_palindromic(num :: String.t) :: String.t\n  def largest_palindromic(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "444947137"
+      },
+      "expected": "7449447"
+    },
+    {
+      "args": {
+        "num": "00009"
+      },
+      "expected": "9"
+    }
+  ]
 }

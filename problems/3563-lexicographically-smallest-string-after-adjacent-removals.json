@@ -57,5 +57,25 @@
     "racket": "(define/contract (lexicographically-smallest-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec lexicographically_smallest_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlexicographically_smallest_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec lexicographically_smallest_string(s :: String.t) :: String.t\n  def lexicographically_smallest_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc"
+      },
+      "expected": "a"
+    },
+    {
+      "args": {
+        "s": "bcda"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "zdce"
+      },
+      "expected": "zdce"
+    }
+  ]
 }

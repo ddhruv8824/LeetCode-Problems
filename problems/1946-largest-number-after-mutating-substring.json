@@ -59,5 +59,61 @@
     "racket": "(define/contract (maximum-number num change)\n  (-> string? (listof exact-integer?) string?)\n  )",
     "erlang": "-spec maximum_number(Num :: unicode:unicode_binary(), Change :: [integer()]) -> unicode:unicode_binary().\nmaximum_number(Num, Change) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_number(num :: String.t, change :: [integer]) :: String.t\n  def maximum_number(num, change) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "132",
+        "change": [
+          9,
+          8,
+          5,
+          0,
+          3,
+          6,
+          4,
+          2,
+          6,
+          8
+        ]
+      },
+      "expected": "832"
+    },
+    {
+      "args": {
+        "num": "021",
+        "change": [
+          9,
+          4,
+          3,
+          5,
+          7,
+          2,
+          1,
+          9,
+          0,
+          6
+        ]
+      },
+      "expected": "934"
+    },
+    {
+      "args": {
+        "num": "5",
+        "change": [
+          1,
+          4,
+          7,
+          5,
+          3,
+          2,
+          5,
+          6,
+          9,
+          4
+        ]
+      },
+      "expected": "5"
+    }
+  ]
 }

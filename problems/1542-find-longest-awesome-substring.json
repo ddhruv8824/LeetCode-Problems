@@ -57,5 +57,25 @@
     "racket": "(define/contract (longest-awesome s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec longest_awesome(S :: unicode:unicode_binary()) -> integer().\nlongest_awesome(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_awesome(s :: String.t) :: integer\n  def longest_awesome(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "3242415"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "s": "12345678"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "213123"
+      },
+      "expected": 6
+    }
+  ]
 }

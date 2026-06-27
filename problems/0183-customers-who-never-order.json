@@ -34,5 +34,130 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "customers": [
+          {
+            "id": 1,
+            "name": "Joe"
+          },
+          {
+            "id": 2,
+            "name": "Henry"
+          },
+          {
+            "id": 3,
+            "name": "Sam"
+          },
+          {
+            "id": 4,
+            "name": "Max"
+          }
+        ],
+        "orders": [
+          {
+            "id": 1,
+            "customerId": 3
+          },
+          {
+            "id": 2,
+            "customerId": 1
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Customers": "Henry"
+        },
+        {
+          "Customers": "Max"
+        }
+      ]
+    },
+    {
+      "args": {
+        "customers": [
+          {
+            "id": 1,
+            "name": "Alice"
+          },
+          {
+            "id": 2,
+            "name": "Bob"
+          },
+          {
+            "id": 3,
+            "name": "Charlie"
+          }
+        ],
+        "orders": [
+          {
+            "id": 1,
+            "customerId": 1
+          },
+          {
+            "id": 2,
+            "customerId": 2
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Customers": "Charlie"
+        }
+      ]
+    },
+    {
+      "args": {
+        "customers": [
+          {
+            "id": 1,
+            "name": "David"
+          },
+          {
+            "id": 2,
+            "name": "Eve"
+          }
+        ],
+        "orders": [
+          {
+            "id": 1,
+            "customerId": 1
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Customers": "Eve"
+        }
+      ]
+    },
+    {
+      "args": {
+        "customers": [
+          {
+            "id": 1,
+            "name": "Frank"
+          },
+          {
+            "id": 2,
+            "name": "Grace"
+          }
+        ],
+        "orders": [
+          {
+            "id": 1,
+            "customerId": 1
+          },
+          {
+            "id": 2,
+            "customerId": 2
+          }
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

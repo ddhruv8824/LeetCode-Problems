@@ -57,5 +57,59 @@
     "erlang": "-spec find_even_numbers(Digits :: [integer()]) -> [integer()].\nfind_even_numbers(Digits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_even_numbers(digits :: [integer]) :: [integer]\n  def find_even_numbers(digits) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumerate the Element Combinations in an Array\n\n#### Intuition\n\nWe can enumerate all combinations of three integer digits from the array and determine whether the composed integer satisfies the following conditions:\n\n- The integer is **even**.\n- The integer does not contain leading zeros (i.e., it is not less than 100).\n- The three digits come from distinct array indices (i.e., indices cannot be duplicated).\n\nTo avoid repetition, we use a hash set to store the 3-digit even numbers that meet these requirements. If a number generated during enumeration satisfies all three conditions, we add it to the hash set.\n\nFinally, we convert the elements of the hash set into an array, sort it in ascending order, and return it.\n\n#### Implementation#### Complexity Analysis\n\nLet $M = \\min(n^3, 10^k)$ be the number of even numbers that meet the requirements, where $n$ is the length of the input array and $k$ is the number of digits in the target even number.\n\n- Time complexity: $O(n^3 + M \\log M)$\n\n  The time complexity for enumerating all combinations of three elements is $O(n^3)$. Sorting the valid even numbers stored in the set takes $O(M \\log M)$.\n\n- Space complexity: $O(M)$\n\n  This accounts for the space used by the hash set that stores all valid integers.\n\n### Approach 2: Traverse All Possible 3-Digit Even Numbers\n\n#### Intuition\n\nWe can also traverse all 3-digit even numbers from smallest to largest (i.e., all even numbers in the closed interval $[100, 999]$), and check whether their three digits can be formed using distinct elements from the input digit array. If they can, then the number qualifies as a target even number; otherwise, it does not.\n\nSpecifically, we first use a hash table $\\textit{freq}$ to record the frequency of each digit in the $\\textit{digits}$ array. While traversing even numbers, we use another hash table $\\textit{freq}_1$ to record the frequency of each digit in the current number. At this point, a **necessary and sufficient** condition for the number to be formed using the array is:\n\nEach digit in $\\textit{freq}_1$ must appear no more times than it does in $\\textit{freq}$.\n\nWe check each even number using this condition to determine whether it qualifies, and collect all such valid numbers. Finally, we return the sorted array of target even numbers.\n\n#### Implementation#### Complexity Analysis\n\nLet $k$ be the number of digits in the target even number.\n\n- Time complexity: $O(k \\cdot 10^k)$\n\n  This represents the time required to enumerate all even numbers with $k$ digits.\n\n- Space complexity: $O(1)$\n\n  The output array is not counted in the space complexity."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumerate the Element Combinations in an Array\n\n#### Intuition\n\nWe can enumerate all combinations of three integer digits from the array and determine whether the composed integer satisfies the following conditions:\n\n- The integer is **even**.\n- The integer does not contain leading zeros (i.e., it is not less than 100).\n- The three digits come from distinct array indices (i.e., indices cannot be duplicated).\n\nTo avoid repetition, we use a hash set to store the 3-digit even numbers that meet these requirements. If a number generated during enumeration satisfies all three conditions, we add it to the hash set.\n\nFinally, we convert the elements of the hash set into an array, sort it in ascending order, and return it.\n\n#### Implementation#### Complexity Analysis\n\nLet $M = \\min(n^3, 10^k)$ be the number of even numbers that meet the requirements, where $n$ is the length of the input array and $k$ is the number of digits in the target even number.\n\n- Time complexity: $O(n^3 + M \\log M)$\n\n  The time complexity for enumerating all combinations of three elements is $O(n^3)$. Sorting the valid even numbers stored in the set takes $O(M \\log M)$.\n\n- Space complexity: $O(M)$\n\n  This accounts for the space used by the hash set that stores all valid integers.\n\n### Approach 2: Traverse All Possible 3-Digit Even Numbers\n\n#### Intuition\n\nWe can also traverse all 3-digit even numbers from smallest to largest (i.e., all even numbers in the closed interval $[100, 999]$), and check whether their three digits can be formed using distinct elements from the input digit array. If they can, then the number qualifies as a target even number; otherwise, it does not.\n\nSpecifically, we first use a hash table $\\textit{freq}$ to record the frequency of each digit in the $\\textit{digits}$ array. While traversing even numbers, we use another hash table $\\textit{freq}_1$ to record the frequency of each digit in the current number. At this point, a **necessary and sufficient** condition for the number to be formed using the array is:\n\nEach digit in $\\textit{freq}_1$ must appear no more times than it does in $\\textit{freq}$.\n\nWe check each even number using this condition to determine whether it qualifies, and collect all such valid numbers. Finally, we return the sorted array of target even numbers.\n\n#### Implementation#### Complexity Analysis\n\nLet $k$ be the number of digits in the target even number.\n\n- Time complexity: $O(k \\cdot 10^k)$\n\n  This represents the time required to enumerate all even numbers with $k$ digits.\n\n- Space complexity: $O(1)$\n\n  The output array is not counted in the space complexity.",
+  "test_cases": [
+    {
+      "args": {
+        "digits": [
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      "expected": [
+        102,
+        120,
+        130,
+        132,
+        210,
+        230,
+        302,
+        310,
+        312,
+        320
+      ]
+    },
+    {
+      "args": {
+        "digits": [
+          2,
+          2,
+          8,
+          8,
+          2
+        ]
+      },
+      "expected": [
+        222,
+        228,
+        282,
+        288,
+        822,
+        828,
+        882
+      ]
+    },
+    {
+      "args": {
+        "digits": [
+          3,
+          7,
+          5
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

@@ -74,5 +74,65 @@
     "racket": "(define/contract (good-subtree-sum vals par)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec good_subtree_sum(Vals :: [integer()], Par :: [integer()]) -> integer().\ngood_subtree_sum(Vals, Par) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec good_subtree_sum(vals :: [integer], par :: [integer]) :: integer\n  def good_subtree_sum(vals, par) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "vals": [
+          2,
+          3
+        ],
+        "par": [
+          -1,
+          0
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "vals": [
+          1,
+          5,
+          2
+        ],
+        "par": [
+          -1,
+          0,
+          0
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "vals": [
+          34,
+          1,
+          2
+        ],
+        "par": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "expected": 42
+    },
+    {
+      "args": {
+        "vals": [
+          3,
+          22,
+          5
+        ],
+        "par": [
+          -1,
+          0,
+          1
+        ]
+      },
+      "expected": 18
+    }
+  ]
 }

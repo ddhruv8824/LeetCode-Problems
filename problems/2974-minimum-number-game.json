@@ -52,5 +52,35 @@
     "racket": "(define/contract (number-game nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec number_game(Nums :: [integer()]) -> [integer()].\nnumber_game(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_game(nums :: [integer]) :: [integer]\n  def number_game(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          4,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        3,
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          5
+        ]
+      },
+      "expected": [
+        5,
+        2
+      ]
+    }
+  ]
 }

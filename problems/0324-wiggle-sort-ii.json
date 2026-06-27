@@ -48,5 +48,47 @@
     "ruby": "# @param {Integer[]} nums\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef wiggle_sort(nums)\n    \nend",
     "scala": "object Solution {\n    def wiggleSort(nums: Array[Int]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn wiggle_sort(nums: &mut Vec<i32>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          1,
+          1,
+          6,
+          4
+        ]
+      },
+      "expected": [
+        1,
+        6,
+        1,
+        5,
+        1,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          2,
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": [
+        2,
+        3,
+        1,
+        3,
+        1,
+        2
+      ]
+    }
+  ]
 }

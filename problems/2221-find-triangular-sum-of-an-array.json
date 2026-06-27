@@ -56,5 +56,27 @@
     "racket": "(define/contract (triangular-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec triangular_sum(Nums :: [integer()]) -> integer().\ntriangular_sum(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec triangular_sum(nums :: [integer]) :: integer\n  def triangular_sum(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "nums": [
+          5
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -63,5 +63,54 @@
     "racket": "(define/contract (maximum-points edges coins k)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_points(Edges :: [[integer()]], Coins :: [integer()], K :: integer()) -> integer().\nmaximum_points(Edges, Coins, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_points(edges :: [[integer]], coins :: [integer], k :: integer) :: integer\n  def maximum_points(edges, coins, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "coins": [
+          10,
+          10,
+          3,
+          3
+        ],
+        "k": 5
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "coins": [
+          8,
+          4,
+          4
+        ],
+        "k": 0
+      },
+      "expected": 16
+    }
+  ]
 }

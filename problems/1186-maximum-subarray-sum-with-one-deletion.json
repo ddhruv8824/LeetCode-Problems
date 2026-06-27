@@ -56,5 +56,40 @@
     "racket": "(define/contract (maximum-sum arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_sum(Arr :: [integer()]) -> integer().\nmaximum_sum(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_sum(arr :: [integer]) :: integer\n  def maximum_sum(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          1,
+          -2,
+          0,
+          3
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          -2,
+          -2,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

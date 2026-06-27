@@ -59,5 +59,41 @@
     "racket": "(define/contract (is-self-crossing distance)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_self_crossing(Distance :: [integer()]) -> boolean().\nis_self_crossing(Distance) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_self_crossing(distance :: [integer]) :: boolean\n  def is_self_crossing(distance) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "distance": [
+          2,
+          1,
+          1,
+          2
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "distance": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "distance": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

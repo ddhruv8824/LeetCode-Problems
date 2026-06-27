@@ -52,5 +52,35 @@
     "racket": "(define/contract (num-moves-stones-ii stones)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec num_moves_stones_ii(Stones :: [integer()]) -> [integer()].\nnum_moves_stones_ii(Stones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_moves_stones_ii(stones :: [integer]) :: [integer]\n  def num_moves_stones_ii(stones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          7,
+          4,
+          9
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "stones": [
+          6,
+          5,
+          4,
+          3,
+          10
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    }
+  ]
 }

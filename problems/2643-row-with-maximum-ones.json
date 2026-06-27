@@ -56,5 +56,67 @@
     "racket": "(define/contract (row-and-maximum-ones mat)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec row_and_maximum_ones(Mat :: [[integer()]]) -> [integer()].\nrow_and_maximum_ones(Mat) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec row_and_maximum_ones(mat :: [[integer]]) :: [integer]\n  def row_and_maximum_ones(mat) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

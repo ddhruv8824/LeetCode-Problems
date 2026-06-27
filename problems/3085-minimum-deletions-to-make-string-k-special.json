@@ -62,5 +62,28 @@
     "erlang": "-spec minimum_deletions(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_deletions(Word, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_deletions(word :: String.t, k :: integer) :: integer\n  def minimum_deletions(word, k) do\n    \n  end\nend"
   },
-  "solution": "### Approach: Hash Table + Enumeration\n\n#### Intuition\n\nThe task requires us to delete certain characters from the given string so that the difference in the frequency of any two types of characters does not exceed $k$.\n\nTo do this, we first use a hash table to count the number of occurrences of each character, where $\\textit{cnt}[c]$ represents the number of times the character $c$ appears. Since there are only $26$ character types, we can enumerate one of them as the \"character with the lowest frequency after the deletion operation\" and set it as $c$. Then, all characters with frequencies less than $\\textit{cnt}[c]$ will be entirely deleted, and all characters with frequencies greater than $\\textit{cnt}[c] + k$ will be reduced to exactly $\\textit{cnt}[c] + k$ instances.\n\nAmong all such enumeration schemes, we select the one that results in the smallest total number of deletions.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{word}$, and let $C$ be the size of the character set, which is $26$ in this case.\n\n- Time complexity: $O(n + C^2)$.\n  \n  We enumerate each character and calculate the number of deleted characters.\n\n- Space complexity: $O(C)$.\n  \n  The space complexity when using a hash table is $O(C)$."
+  "solution": "### Approach: Hash Table + Enumeration\n\n#### Intuition\n\nThe task requires us to delete certain characters from the given string so that the difference in the frequency of any two types of characters does not exceed $k$.\n\nTo do this, we first use a hash table to count the number of occurrences of each character, where $\\textit{cnt}[c]$ represents the number of times the character $c$ appears. Since there are only $26$ character types, we can enumerate one of them as the \"character with the lowest frequency after the deletion operation\" and set it as $c$. Then, all characters with frequencies less than $\\textit{cnt}[c]$ will be entirely deleted, and all characters with frequencies greater than $\\textit{cnt}[c] + k$ will be reduced to exactly $\\textit{cnt}[c] + k$ instances.\n\nAmong all such enumeration schemes, we select the one that results in the smallest total number of deletions.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{word}$, and let $C$ be the size of the character set, which is $26$ in this case.\n\n- Time complexity: $O(n + C^2)$.\n  \n  We enumerate each character and calculate the number of deleted characters.\n\n- Space complexity: $O(C)$.\n  \n  The space complexity when using a hash table is $O(C)$.",
+  "test_cases": [
+    {
+      "args": {
+        "word": "aabcaba",
+        "k": 0
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "word": "dabdcbdcdcd",
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "aaabaaa",
+        "k": 2
+      },
+      "expected": 1
+    }
+  ]
 }

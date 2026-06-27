@@ -60,5 +60,42 @@
     "racket": "(define/contract (num-of-pairs nums target)\n  (-> (listof string?) string? exact-integer?)\n  )",
     "erlang": "-spec num_of_pairs(Nums :: [unicode:unicode_binary()], Target :: unicode:unicode_binary()) -> integer().\nnum_of_pairs(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_pairs(nums :: [String.t], target :: String.t) :: integer\n  def num_of_pairs(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          "777",
+          "7",
+          "77",
+          "77"
+        ],
+        "target": "7777"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          "123",
+          "4",
+          "12",
+          "34"
+        ],
+        "target": "1234"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          "1",
+          "1",
+          "1"
+        ],
+        "target": "11"
+      },
+      "expected": 6
+    }
+  ]
 }

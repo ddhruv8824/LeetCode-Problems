@@ -70,5 +70,98 @@
     "racket": "(define/contract (max-distance side points k)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_distance(Side :: integer(), Points :: [[integer()]], K :: integer()) -> integer().\nmax_distance(Side, Points, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_distance(side :: integer, points :: [[integer]], k :: integer) :: integer\n  def max_distance(side, points, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "side": 2,
+        "points": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "k": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "side": 2,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "k": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "side": 2,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "k": 5
+      },
+      "expected": 1
+    }
+  ]
 }

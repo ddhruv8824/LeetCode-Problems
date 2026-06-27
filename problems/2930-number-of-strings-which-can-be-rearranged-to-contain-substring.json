@@ -50,5 +50,19 @@
     "racket": "(define/contract (string-count n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec string_count(N :: integer()) -> integer().\nstring_count(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec string_count(n :: integer) :: integer\n  def string_count(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 83943898
+    }
+  ]
 }

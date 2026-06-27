@@ -63,5 +63,97 @@
     "racket": "(define/contract (find-critical-and-pseudo-critical-edges n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec find_critical_and_pseudo_critical_edges(N :: integer(), Edges :: [[integer()]]) -> [[integer()]].\nfind_critical_and_pseudo_critical_edges(N, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_critical_and_pseudo_critical_edges(n :: integer, edges :: [[integer]]) :: [[integer]]\n  def find_critical_and_pseudo_critical_edges(n, edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            4,
+            3
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            1,
+            4,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    }
+  ]
 }

@@ -50,5 +50,32 @@
     "racket": "(define/contract (sum-indices-with-k-set-bits nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_indices_with_k_set_bits(Nums :: [integer()], K :: integer()) -> integer().\nsum_indices_with_k_set_bits(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_indices_with_k_set_bits(nums :: [integer], k :: integer) :: integer\n  def sum_indices_with_k_set_bits(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          10,
+          1,
+          5,
+          2
+        ],
+        "k": 1
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          1
+        ],
+        "k": 2
+      },
+      "expected": 1
+    }
+  ]
 }

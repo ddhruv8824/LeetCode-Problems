@@ -50,5 +50,19 @@
     "racket": "(define/contract (is-strictly-palindromic n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_strictly_palindromic(N :: integer()) -> boolean().\nis_strictly_palindromic(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_strictly_palindromic(n :: integer) :: boolean\n  def is_strictly_palindromic(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 9
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": false
+    }
+  ]
 }

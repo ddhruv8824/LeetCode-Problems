@@ -62,5 +62,43 @@
     "racket": "(define/contract (min-difficulty jobDifficulty d)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_difficulty(JobDifficulty :: [integer()], D :: integer()) -> integer().\nmin_difficulty(JobDifficulty, D) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_difficulty(job_difficulty :: [integer], d :: integer) :: integer\n  def min_difficulty(job_difficulty, d) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "jobDifficulty": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "d": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "jobDifficulty": [
+          9,
+          9,
+          9
+        ],
+        "d": 4
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "jobDifficulty": [
+          1,
+          1,
+          1
+        ],
+        "d": 3
+      },
+      "expected": 3
+    }
+  ]
 }

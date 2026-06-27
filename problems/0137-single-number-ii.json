@@ -48,5 +48,32 @@
     "racket": "(define/contract (single-number nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec single_number(Nums :: [integer()]) -> integer().\nsingle_number(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec single_number(nums :: [integer]) :: integer\n  def single_number(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          3,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          99
+        ]
+      },
+      "expected": 99
+    }
+  ]
 }

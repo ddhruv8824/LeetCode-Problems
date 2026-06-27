@@ -44,5 +44,31 @@
     "racket": "(define recent-counter%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; ping : exact-integer? -> exact-integer?\n    (define/public (ping t)\n      )))\n\n;; Your recent-counter% object will be instantiated and called as such:\n;; (define obj (new recent-counter%))\n;; (define param_1 (send obj ping t))",
     "erlang": "-spec recent_counter_init_() -> any().\nrecent_counter_init_() ->\n  .\n\n-spec recent_counter_ping(T :: integer()) -> integer().\nrecent_counter_ping(T) ->\n  .\n\n\n%% Your functions will be called as such:\n%% recent_counter_init_(),\n%% Param_1 = recent_counter_ping(T),\n\n%% recent_counter_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule RecentCounter do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec ping(t :: integer) :: integer\n  def ping(t) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# RecentCounter.init_()\n# param_1 = RecentCounter.ping(t)\n\n# RecentCounter.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "t": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "t": 100
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "t": 3001
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "t": 3002
+      },
+      "expected": 3
+    }
+  ]
 }

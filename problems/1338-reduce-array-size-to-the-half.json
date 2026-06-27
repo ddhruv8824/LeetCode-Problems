@@ -55,5 +55,37 @@
     "racket": "(define/contract (min-set-size arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_set_size(Arr :: [integer()]) -> integer().\nmin_set_size(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_set_size(arr :: [integer]) :: integer\n  def min_set_size(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          2,
+          2,
+          7
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

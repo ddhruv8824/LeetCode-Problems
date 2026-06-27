@@ -55,5 +55,50 @@
     "racket": "(define/contract (added-integer nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec added_integer(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nadded_integer(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec added_integer(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def added_integer(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          2,
+          6,
+          4
+        ],
+        "nums2": [
+          9,
+          7,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums1": [
+          10
+        ],
+        "nums2": [
+          5
+        ]
+      },
+      "expected": -5
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "nums2": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

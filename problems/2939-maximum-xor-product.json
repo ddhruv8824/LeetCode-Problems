@@ -57,5 +57,31 @@
     "racket": "(define/contract (maximum-xor-product a b n)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_xor_product(A :: integer(), B :: integer(), N :: integer()) -> integer().\nmaximum_xor_product(A, B, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_xor_product(a :: integer, b :: integer, n :: integer) :: integer\n  def maximum_xor_product(a, b, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 12,
+        "b": 5,
+        "n": 4
+      },
+      "expected": 98
+    },
+    {
+      "args": {
+        "a": 6,
+        "b": 7,
+        "n": 5
+      },
+      "expected": 930
+    },
+    {
+      "args": {
+        "a": 1,
+        "b": 6,
+        "n": 3
+      },
+      "expected": 12
+    }
+  ]
 }

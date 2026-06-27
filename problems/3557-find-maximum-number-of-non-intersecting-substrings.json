@@ -54,5 +54,19 @@
     "racket": "(define/contract (max-substrings word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_substrings(Word :: unicode:unicode_binary()) -> integer().\nmax_substrings(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_substrings(word :: String.t) :: integer\n  def max_substrings(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "abcdeafdef"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "bcdaaaab"
+      },
+      "expected": 1
+    }
+  ]
 }

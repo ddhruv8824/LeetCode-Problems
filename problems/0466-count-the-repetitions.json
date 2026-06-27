@@ -48,5 +48,25 @@
     "racket": "(define/contract (get-max-repetitions s1 n1 s2 n2)\n  (-> string? exact-integer? string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_max_repetitions(S1 :: unicode:unicode_binary(), N1 :: integer(), S2 :: unicode:unicode_binary(), N2 :: integer()) -> integer().\nget_max_repetitions(S1, N1, S2, N2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_max_repetitions(s1 :: String.t, n1 :: integer, s2 :: String.t, n2 :: integer) :: integer\n  def get_max_repetitions(s1, n1, s2, n2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "acb",
+        "n1": 4,
+        "s2": "ab",
+        "n2": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s1": "acb",
+        "n1": 1,
+        "s2": "acb",
+        "n2": 1
+      },
+      "expected": 1
+    }
+  ]
 }

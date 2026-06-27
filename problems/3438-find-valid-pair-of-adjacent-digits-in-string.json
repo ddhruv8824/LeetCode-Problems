@@ -55,5 +55,25 @@
     "racket": "(define/contract (find-valid-pair s)\n  (-> string? string?)\n  )",
     "erlang": "-spec find_valid_pair(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfind_valid_pair(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_valid_pair(s :: String.t) :: String.t\n  def find_valid_pair(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "2523533"
+      },
+      "expected": "23"
+    },
+    {
+      "args": {
+        "s": "221"
+      },
+      "expected": "21"
+    },
+    {
+      "args": {
+        "s": "22"
+      },
+      "expected": ""
+    }
+  ]
 }

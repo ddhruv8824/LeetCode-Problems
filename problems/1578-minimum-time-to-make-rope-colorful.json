@@ -64,5 +64,44 @@
     "racket": "(define/contract (min-cost colors neededTime)\n  (-> string? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_cost(Colors :: unicode:unicode_binary(), NeededTime :: [integer()]) -> integer().\nmin_cost(Colors, NeededTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost(colors :: String.t, needed_time :: [integer]) :: integer\n  def min_cost(colors, needed_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "colors": "abaac",
+        "neededTime": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "colors": "abc",
+        "neededTime": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "colors": "aabaa",
+        "neededTime": [
+          1,
+          2,
+          3,
+          4,
+          1
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

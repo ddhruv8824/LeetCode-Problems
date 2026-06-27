@@ -61,5 +61,48 @@
     "racket": "(define/contract (total-numbers digits)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec total_numbers(Digits :: [integer()]) -> integer().\ntotal_numbers(Digits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_numbers(digits :: [integer]) :: integer\n  def total_numbers(digits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "digits": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "digits": [
+          0,
+          2,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "digits": [
+          6,
+          6,
+          6
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "digits": [
+          1,
+          3,
+          5
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

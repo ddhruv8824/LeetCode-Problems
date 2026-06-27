@@ -50,5 +50,21 @@
     "racket": "(define/contract (num-jewels-in-stones jewels stones)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec num_jewels_in_stones(Jewels :: unicode:unicode_binary(), Stones :: unicode:unicode_binary()) -> integer().\nnum_jewels_in_stones(Jewels, Stones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_jewels_in_stones(jewels :: String.t, stones :: String.t) :: integer\n  def num_jewels_in_stones(jewels, stones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "j": "aA",
+        "s": "aAAbbbb"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "j": "z",
+        "s": "ZZ"
+      },
+      "expected": 0
+    }
+  ]
 }

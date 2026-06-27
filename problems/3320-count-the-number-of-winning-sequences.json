@@ -51,5 +51,19 @@
     "racket": "(define/contract (count-winning-sequences s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec count_winning_sequences(S :: unicode:unicode_binary()) -> integer().\ncount_winning_sequences(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_winning_sequences(s :: String.t) :: integer\n  def count_winning_sequences(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "FFF"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "FWEFW"
+      },
+      "expected": 18
+    }
+  ]
 }

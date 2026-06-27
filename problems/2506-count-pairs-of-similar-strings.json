@@ -59,5 +59,39 @@
     "racket": "(define/contract (similar-pairs words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec similar_pairs(Words :: [unicode:unicode_binary()]) -> integer().\nsimilar_pairs(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec similar_pairs(words :: [String.t]) :: integer\n  def similar_pairs(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "aba",
+          "aabb",
+          "abcd",
+          "bac",
+          "aabc"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "aabb",
+          "ab",
+          "ba"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "words": [
+          "nba",
+          "cba",
+          "dba"
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

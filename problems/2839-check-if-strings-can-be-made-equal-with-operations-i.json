@@ -49,5 +49,21 @@
     "racket": "(define/contract (can-be-equal s1 s2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec can_be_equal(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> boolean().\ncan_be_equal(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_be_equal(s1 :: String.t, s2 :: String.t) :: boolean\n  def can_be_equal(s1, s2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "abcd",
+        "s2": "cdab"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s1": "abcd",
+        "s2": "dacb"
+      },
+      "expected": false
+    }
+  ]
 }

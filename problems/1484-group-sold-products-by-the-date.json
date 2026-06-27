@@ -29,5 +29,152 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef categorize_products(activities: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "activities": [
+          {
+            "sell_date": "2020-05-30",
+            "product": "Headphone"
+          },
+          {
+            "sell_date": "2020-06-01",
+            "product": "Pencil"
+          },
+          {
+            "sell_date": "2020-06-02",
+            "product": "Mask"
+          },
+          {
+            "sell_date": "2020-05-30",
+            "product": "Basketball"
+          },
+          {
+            "sell_date": "2020-06-01",
+            "product": "Bible"
+          },
+          {
+            "sell_date": "2020-06-02",
+            "product": "Mask"
+          },
+          {
+            "sell_date": "2020-05-30",
+            "product": "T-Shirt"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "sell_date": "2020-05-30",
+          "num_sold": 3,
+          "products": "Basketball,Headphone,T-Shirt"
+        },
+        {
+          "sell_date": "2020-06-01",
+          "num_sold": 2,
+          "products": "Bible,Pencil"
+        },
+        {
+          "sell_date": "2020-06-02",
+          "num_sold": 1,
+          "products": "Mask"
+        }
+      ]
+    },
+    {
+      "args": {
+        "activities": [
+          {
+            "sell_date": "2022-01-01",
+            "product": "Phone"
+          },
+          {
+            "sell_date": "2022-01-01",
+            "product": "Laptop"
+          },
+          {
+            "sell_date": "2022-01-02",
+            "product": "Tablet"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "sell_date": "2022-01-01",
+          "num_sold": 2,
+          "products": "Laptop,Phone"
+        },
+        {
+          "sell_date": "2022-01-02",
+          "num_sold": 1,
+          "products": "Tablet"
+        }
+      ]
+    },
+    {
+      "args": {
+        "activities": [
+          {
+            "sell_date": "2022-02-01",
+            "product": "Book"
+          },
+          {
+            "sell_date": "2022-02-01",
+            "product": "Pen"
+          },
+          {
+            "sell_date": "2022-02-01",
+            "product": "Pencil"
+          },
+          {
+            "sell_date": "2022-02-02",
+            "product": "Eraser"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "sell_date": "2022-02-01",
+          "num_sold": 3,
+          "products": "Book,Pen,Pencil"
+        },
+        {
+          "sell_date": "2022-02-02",
+          "num_sold": 1,
+          "products": "Eraser"
+        }
+      ]
+    },
+    {
+      "args": {
+        "activities": [
+          {
+            "sell_date": "2022-03-01",
+            "product": "Shirt"
+          },
+          {
+            "sell_date": "2022-03-01",
+            "product": "Shirt"
+          },
+          {
+            "sell_date": "2022-03-02",
+            "product": "Pants"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "sell_date": "2022-03-01",
+          "num_sold": 1,
+          "products": "Shirt"
+        },
+        {
+          "sell_date": "2022-03-02",
+          "num_sold": 1,
+          "products": "Pants"
+        }
+      ]
+    }
+  ]
 }

@@ -53,5 +53,60 @@
     "racket": "(define/contract (results-array queries k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec results_array(Queries :: [[integer()]], K :: integer()) -> [integer()].\nresults_array(Queries, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec results_array(queries :: [[integer]], k :: integer) :: [integer]\n  def results_array(queries, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            -3,
+            0
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        -1,
+        7,
+        5,
+        3
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          [
+            5,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "k": 1
+      },
+      "expected": [
+        10,
+        8,
+        6
+      ]
+    }
+  ]
 }

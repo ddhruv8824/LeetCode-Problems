@@ -51,5 +51,31 @@
     "racket": "(define/contract (unequal-triplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec unequal_triplets(Nums :: [integer()]) -> integer().\nunequal_triplets(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unequal_triplets(nums :: [integer]) :: integer\n  def unequal_triplets(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          4,
+          2,
+          4,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

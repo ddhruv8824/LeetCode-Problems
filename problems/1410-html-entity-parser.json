@@ -50,5 +50,19 @@
     "racket": "(define/contract (entity-parser text)\n  (-> string? string?)\n  )",
     "erlang": "-spec entity_parser(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\nentity_parser(Text) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec entity_parser(text :: String.t) :: String.t\n  def entity_parser(text) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "&amp; is an HTML entity but &ambassador; is not."
+      },
+      "expected": "& is an HTML entity but &ambassador; is not."
+    },
+    {
+      "args": {
+        "text": "and I quote: &quot;...&quot;"
+      },
+      "expected": "and I quote: \"...\""
+    }
+  ]
 }

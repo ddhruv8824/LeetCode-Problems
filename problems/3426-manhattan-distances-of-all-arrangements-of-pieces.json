@@ -56,5 +56,23 @@
     "racket": "(define/contract (distance-sum m n k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec distance_sum(M :: integer(), N :: integer(), K :: integer()) -> integer().\ndistance_sum(M, N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distance_sum(m :: integer, n :: integer, k :: integer) :: integer\n  def distance_sum(m, n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 2,
+        "n": 2,
+        "k": 2
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "m": 1,
+        "n": 4,
+        "k": 3
+      },
+      "expected": 20
+    }
+  ]
 }

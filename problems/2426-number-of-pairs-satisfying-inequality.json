@@ -58,5 +58,37 @@
     "racket": "(define/contract (number-of-pairs nums1 nums2 diff)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_pairs(Nums1 :: [integer()], Nums2 :: [integer()], Diff :: integer()) -> integer().\nnumber_of_pairs(Nums1, Nums2, Diff) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_pairs(nums1 :: [integer], nums2 :: [integer], diff :: integer) :: integer\n  def number_of_pairs(nums1, nums2, diff) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          3,
+          2,
+          5
+        ],
+        "nums2": [
+          2,
+          2,
+          1
+        ],
+        "diff": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums1": [
+          3,
+          -1
+        ],
+        "nums2": [
+          -2,
+          2
+        ],
+        "diff": -1
+      },
+      "expected": 0
+    }
+  ]
 }

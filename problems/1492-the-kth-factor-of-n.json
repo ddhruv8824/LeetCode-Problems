@@ -54,5 +54,28 @@
     "racket": "(define/contract (kth-factor n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec kth_factor(N :: integer(), K :: integer()) -> integer().\nkth_factor(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_factor(n :: integer, k :: integer) :: integer\n  def kth_factor(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 12,
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 7,
+        "k": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "n": 4,
+        "k": 4
+      },
+      "expected": -1
+    }
+  ]
 }

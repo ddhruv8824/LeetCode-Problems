@@ -55,5 +55,31 @@
     "racket": "(define/contract (array-pair-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec array_pair_sum(Nums :: [integer()]) -> integer().\narray_pair_sum(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec array_pair_sum(nums :: [integer]) :: integer\n  def array_pair_sum(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          3,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          2,
+          6,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": 9
+    }
+  ]
 }

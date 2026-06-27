@@ -47,5 +47,64 @@
     "racket": "(define/contract (rob nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec rob(Nums :: [integer()]) -> integer().\nrob(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rob(nums :: [integer]) :: integer\n  def rob(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          7,
+          9,
+          3,
+          1
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          1,
+          1,
+          10
+        ]
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "nums": []
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

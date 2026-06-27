@@ -49,5 +49,19 @@
     "racket": "(define/contract (count-even num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_even(Num :: integer()) -> integer().\ncount_even(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_even(num :: integer) :: integer\n  def count_even(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 30
+      },
+      "expected": 14
+    }
+  ]
 }

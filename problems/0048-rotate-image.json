@@ -50,5 +50,101 @@
     "ruby": "# @param {Integer[][]} matrix\n# @return {Void} Do not return anything, modify matrix in-place instead.\ndef rotate(matrix)\n    \nend",
     "scala": "object Solution {\n    def rotate(matrix: Array[Array[Int]]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn rotate(matrix: &mut Vec<Vec<i32>>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        [
+          7,
+          4,
+          1
+        ],
+        [
+          8,
+          5,
+          2
+        ],
+        [
+          9,
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            5,
+            1,
+            9,
+            11
+          ],
+          [
+            2,
+            4,
+            8,
+            10
+          ],
+          [
+            13,
+            3,
+            6,
+            7
+          ],
+          [
+            15,
+            14,
+            12,
+            16
+          ]
+        ]
+      },
+      "expected": [
+        [
+          15,
+          13,
+          2,
+          5
+        ],
+        [
+          14,
+          3,
+          4,
+          1
+        ],
+        [
+          12,
+          6,
+          8,
+          9
+        ],
+        [
+          16,
+          7,
+          10,
+          11
+        ]
+      ]
+    }
+  ]
 }

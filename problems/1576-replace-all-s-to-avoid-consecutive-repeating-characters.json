@@ -49,5 +49,19 @@
     "racket": "(define/contract (modify-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec modify_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmodify_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec modify_string(s :: String.t) :: String.t\n  def modify_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "?zs"
+      },
+      "expected": "azs"
+    },
+    {
+      "args": {
+        "s": "ubv?w"
+      },
+      "expected": "ubvaw"
+    }
+  ]
 }

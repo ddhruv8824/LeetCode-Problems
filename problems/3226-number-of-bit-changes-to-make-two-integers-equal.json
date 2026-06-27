@@ -53,5 +53,28 @@
     "racket": "(define/contract (min-changes n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_changes(N :: integer(), K :: integer()) -> integer().\nmin_changes(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_changes(n :: integer, k :: integer) :: integer\n  def min_changes(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 13,
+        "k": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 21,
+        "k": 21
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 14,
+        "k": 13
+      },
+      "expected": -1
+    }
+  ]
 }

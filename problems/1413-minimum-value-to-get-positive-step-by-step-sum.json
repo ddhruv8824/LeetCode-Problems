@@ -54,5 +54,38 @@
     "racket": "(define/contract (min-start-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_start_value(Nums :: [integer()]) -> integer().\nmin_start_value(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_start_value(nums :: [integer]) :: integer\n  def min_start_value(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          -3,
+          2,
+          -3,
+          4,
+          2
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -2,
+          -3
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -54,5 +54,31 @@
     "racket": "(define/contract (num-matching-subseq s words)\n  (-> string? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec num_matching_subseq(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> integer().\nnum_matching_subseq(S, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_matching_subseq(s :: String.t, words :: [String.t]) :: integer\n  def num_matching_subseq(s, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "S": "abcde",
+        "words": [
+          "a",
+          "bb",
+          "acd",
+          "ace"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "S": "dsahjpjauf",
+        "words": [
+          "ahjpjau",
+          "ja",
+          "ahbwzgqnuk",
+          "tnmlanowax"
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

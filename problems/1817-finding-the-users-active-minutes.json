@@ -52,5 +52,66 @@
     "racket": "(define/contract (finding-users-active-minutes logs k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec finding_users_active_minutes(Logs :: [[integer()]], K :: integer()) -> [integer()].\nfinding_users_active_minutes(Logs, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec finding_users_active_minutes(logs :: [[integer]], k :: integer) :: [integer]\n  def finding_users_active_minutes(logs, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "logs": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "k": 5
+      },
+      "expected": [
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "logs": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "k": 4
+      },
+      "expected": [
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
 }

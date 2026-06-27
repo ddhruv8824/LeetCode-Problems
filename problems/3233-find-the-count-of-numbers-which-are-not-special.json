@@ -51,5 +51,21 @@
     "racket": "(define/contract (non-special-count l r)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec non_special_count(L :: integer(), R :: integer()) -> integer().\nnon_special_count(L, R) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec non_special_count(l :: integer, r :: integer) :: integer\n  def non_special_count(l, r) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "l": 5,
+        "r": 7
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "l": 4,
+        "r": 16
+      },
+      "expected": 11
+    }
+  ]
 }

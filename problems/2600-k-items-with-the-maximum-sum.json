@@ -51,5 +51,25 @@
     "racket": "(define/contract (k-items-with-maximum-sum numOnes numZeros numNegOnes k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec k_items_with_maximum_sum(NumOnes :: integer(), NumZeros :: integer(), NumNegOnes :: integer(), K :: integer()) -> integer().\nk_items_with_maximum_sum(NumOnes, NumZeros, NumNegOnes, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_items_with_maximum_sum(num_ones :: integer, num_zeros :: integer, num_neg_ones :: integer, k :: integer) :: integer\n  def k_items_with_maximum_sum(num_ones, num_zeros, num_neg_ones, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numOnes": 3,
+        "numZeros": 2,
+        "numNegOnes": 0,
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "numOnes": 3,
+        "numZeros": 2,
+        "numNegOnes": 0,
+        "k": 4
+      },
+      "expected": 3
+    }
+  ]
 }

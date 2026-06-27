@@ -50,5 +50,21 @@
     "racket": "(define/contract (distribute-candies n limit)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec distribute_candies(N :: integer(), Limit :: integer()) -> integer().\ndistribute_candies(N, Limit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distribute_candies(n :: integer, limit :: integer) :: integer\n  def distribute_candies(n, limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "limit": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "limit": 3
+      },
+      "expected": 10
+    }
+  ]
 }

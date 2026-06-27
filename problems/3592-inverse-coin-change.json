@@ -58,5 +58,47 @@
     "racket": "(define/contract (find-coins numWays)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_coins(NumWays :: [integer()]) -> [integer()].\nfind_coins(NumWays) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_coins(num_ways :: [integer]) :: [integer]\n  def find_coins(num_ways) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numWays": [
+          1,
+          2,
+          3,
+          4,
+          15
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "numWays": [
+          1,
+          2,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "args": {
+        "numWays": [
+          1,
+          2,
+          3,
+          4,
+          15
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

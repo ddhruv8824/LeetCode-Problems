@@ -60,5 +60,39 @@
     "racket": "(define/contract (max-num-of-marked-indices nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_num_of_marked_indices(Nums :: [integer()]) -> integer().\nmax_num_of_marked_indices(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_num_of_marked_indices(nums :: [integer]) :: integer\n  def max_num_of_marked_indices(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          2,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          2,
+          5,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          6,
+          8
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

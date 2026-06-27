@@ -54,5 +54,40 @@
     "racket": "(define/contract (super-pow a b)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec super_pow(A :: integer(), B :: [integer()]) -> integer().\nsuper_pow(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec super_pow(a :: integer, b :: [integer]) :: integer\n  def super_pow(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 2,
+        "b": [
+          3
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "a": 2,
+        "b": [
+          1,
+          0
+        ]
+      },
+      "expected": 1024
+    },
+    {
+      "args": {
+        "a": 1,
+        "b": [
+          4,
+          3,
+          3,
+          8,
+          5,
+          2
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

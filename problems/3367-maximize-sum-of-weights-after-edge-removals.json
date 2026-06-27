@@ -59,5 +59,73 @@
     "racket": "(define/contract (maximize-sum-of-weights edges k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximize_sum_of_weights(Edges :: [[integer()]], K :: integer()) -> integer().\nmaximize_sum_of_weights(Edges, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximize_sum_of_weights(edges :: [[integer]], k :: integer) :: integer\n  def maximize_sum_of_weights(edges, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            12
+          ],
+          [
+            2,
+            4,
+            6
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 22
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            0,
+            3,
+            15
+          ],
+          [
+            3,
+            4,
+            20
+          ],
+          [
+            3,
+            5,
+            5
+          ],
+          [
+            0,
+            6,
+            10
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 65
+    }
+  ]
 }

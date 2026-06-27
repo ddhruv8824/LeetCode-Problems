@@ -50,5 +50,29 @@
     "racket": "(define/contract (dominant-index nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec dominant_index(Nums :: [integer()]) -> integer().\ndominant_index(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec dominant_index(nums :: [integer]) :: integer\n  def dominant_index(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          1,
+          0
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

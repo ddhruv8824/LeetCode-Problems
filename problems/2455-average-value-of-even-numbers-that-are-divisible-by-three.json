@@ -50,5 +50,32 @@
     "racket": "(define/contract (average-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec average_value(Nums :: [integer()]) -> integer().\naverage_value(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec average_value(nums :: [integer]) :: integer\n  def average_value(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          6,
+          10,
+          12,
+          15
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          4,
+          7,
+          10
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -53,5 +53,25 @@
     "racket": "(define/contract (integer-replacement n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec integer_replacement(N :: integer()) -> integer().\ninteger_replacement(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec integer_replacement(n :: integer) :: integer\n  def integer_replacement(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 8
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 7
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 2
+    }
+  ]
 }

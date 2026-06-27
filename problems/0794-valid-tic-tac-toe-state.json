@@ -59,5 +59,37 @@
     "racket": "(define/contract (valid-tic-tac-toe board)\n  (-> (listof string?) boolean?)\n  )",
     "erlang": "-spec valid_tic_tac_toe(Board :: [unicode:unicode_binary()]) -> boolean().\nvalid_tic_tac_toe(Board) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec valid_tic_tac_toe(board :: [String.t]) :: boolean\n  def valid_tic_tac_toe(board) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          "O  ",
+          "   ",
+          "   "
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "board": [
+          "XOX",
+          " X ",
+          "   "
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "board": [
+          "XOX",
+          "O O",
+          "XOX"
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

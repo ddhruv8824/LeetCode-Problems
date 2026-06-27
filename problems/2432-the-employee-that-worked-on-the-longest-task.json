@@ -60,5 +60,71 @@
     "racket": "(define/contract (hardest-worker n logs)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec hardest_worker(N :: integer(), Logs :: [[integer()]]) -> integer().\nhardest_worker(N, Logs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec hardest_worker(n :: integer, logs :: [[integer]]) :: integer\n  def hardest_worker(n, logs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10,
+        "logs": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            15
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 26,
+        "logs": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            7,
+            17
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 2,
+        "logs": [
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            20
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

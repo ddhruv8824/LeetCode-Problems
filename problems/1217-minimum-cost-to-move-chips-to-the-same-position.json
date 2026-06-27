@@ -64,5 +64,38 @@
     "racket": "(define/contract (min-cost-to-move-chips position)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_cost_to_move_chips(Position :: [integer()]) -> integer().\nmin_cost_to_move_chips(Position) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost_to_move_chips(position :: [integer]) :: integer\n  def min_cost_to_move_chips(position) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "position": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "position": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "position": [
+          1,
+          1000000000
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

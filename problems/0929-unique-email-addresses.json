@@ -54,5 +54,17 @@
     "racket": "(define/contract (num-unique-emails emails)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec num_unique_emails(Emails :: [unicode:unicode_binary()]) -> integer().\nnum_unique_emails(Emails) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_unique_emails(emails :: [String.t]) :: integer\n  def num_unique_emails(emails) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "emails": [
+          "test.email+alex@leetcode.com",
+          "test.e.mail+bob.cathy@leetcode.com",
+          "testemail+david@lee.tcode.com"
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

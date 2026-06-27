@@ -54,5 +54,21 @@
     "racket": "(define/contract (max-value n x)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec max_value(N :: unicode:unicode_binary(), X :: integer()) -> unicode:unicode_binary().\nmax_value(N, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_value(n :: String.t, x :: integer) :: String.t\n  def max_value(n, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": "99",
+        "x": 9
+      },
+      "expected": "999"
+    },
+    {
+      "args": {
+        "n": "-13",
+        "x": 2
+      },
+      "expected": "-123"
+    }
+  ]
 }

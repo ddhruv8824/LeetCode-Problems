@@ -48,5 +48,28 @@
     "ruby": "# The guess API is already defined for you.\n# @param num, your guess\n# @return -1 if num is higher than the picked number\n#          1 if num is lower than the picked number\n#          otherwise return 0\n# def guess(num)\n\ndef guessNumber(n)\n    \nend",
     "scala": "/** \n * The API guess is defined in the parent class.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * def guess(num: Int): Int = {}\n */\n\nclass Solution extends GuessGame {\n    def guessNumber(n: Int): Int = {\n        \n    }\n}",
     "rust": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * unsafe fn guess(num: i32) -> i32 {}\n */\n\nimpl Solution {\n    unsafe fn guessNumber(n: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10,
+        "pick": 6
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 1,
+        "pick": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2,
+        "pick": 1
+      },
+      "expected": 1
+    }
+  ]
 }

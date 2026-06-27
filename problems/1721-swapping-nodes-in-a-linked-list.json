@@ -56,5 +56,55 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (swap-nodes head k)\n  (-> (or/c list-node? #f) exact-integer? (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec swap_nodes(Head :: #list_node{} | null, K :: integer()) -> #list_node{} | null.\nswap_nodes(Head, K) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec swap_nodes(head :: ListNode.t | nil, k :: integer) :: ListNode.t | nil\n  def swap_nodes(head, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "k": 2
+      },
+      "expected": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          7,
+          9,
+          6,
+          6,
+          7,
+          8,
+          3,
+          0,
+          9,
+          5
+        ],
+        "k": 5
+      },
+      "expected": [
+        7,
+        9,
+        6,
+        6,
+        8,
+        7,
+        3,
+        0,
+        9,
+        5
+      ]
+    }
+  ]
 }

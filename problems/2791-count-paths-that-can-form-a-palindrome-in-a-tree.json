@@ -61,5 +61,34 @@
     "racket": "(define/contract (count-palindrome-paths parent s)\n  (-> (listof exact-integer?) string? exact-integer?)\n  )",
     "erlang": "-spec count_palindrome_paths(Parent :: [integer()], S :: unicode:unicode_binary()) -> integer().\ncount_palindrome_paths(Parent, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_palindrome_paths(parent :: [integer], s :: String.t) :: integer\n  def count_palindrome_paths(parent, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "s": "acaabc"
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "s": "aaaaa"
+      },
+      "expected": 10
+    }
+  ]
 }

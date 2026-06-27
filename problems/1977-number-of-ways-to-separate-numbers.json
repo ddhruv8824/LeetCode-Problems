@@ -56,5 +56,25 @@
     "racket": "(define/contract (number-of-combinations num)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec number_of_combinations(Num :: unicode:unicode_binary()) -> integer().\nnumber_of_combinations(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_combinations(num :: String.t) :: integer\n  def number_of_combinations(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "327"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": "094"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "num": "0"
+      },
+      "expected": 0
+    }
+  ]
 }

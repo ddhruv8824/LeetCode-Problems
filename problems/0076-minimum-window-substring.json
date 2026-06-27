@@ -62,5 +62,63 @@
     "racket": "(define/contract (min-window s t)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec min_window(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmin_window(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_window(s :: String.t, t :: String.t) :: String.t\n  def min_window(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "ADOBECODEBANC",
+        "t": "ABC"
+      },
+      "expected": "BANC"
+    },
+    {
+      "args": {
+        "s": "a",
+        "t": "a"
+      },
+      "expected": "a"
+    },
+    {
+      "args": {
+        "s": "this is a test string",
+        "t": "tist"
+      },
+      "expected": "t stri"
+    },
+    {
+      "args": {
+        "s": "geeksforgeeks",
+        "t": "ork"
+      },
+      "expected": "ksfor"
+    },
+    {
+      "args": {
+        "s": "abc",
+        "t": ""
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "abc",
+        "t": "b"
+      },
+      "expected": "b"
+    },
+    {
+      "args": {
+        "s": "abc",
+        "t": "d"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "abc",
+        "t": "abcd"
+      },
+      "expected": ""
+    }
+  ]
 }

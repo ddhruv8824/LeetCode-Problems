@@ -51,5 +51,23 @@
     "racket": "(define/contract (number-of-ways startPos endPos k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_ways(StartPos :: integer(), EndPos :: integer(), K :: integer()) -> integer().\nnumber_of_ways(StartPos, EndPos, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_ways(start_pos :: integer, end_pos :: integer, k :: integer) :: integer\n  def number_of_ways(start_pos, end_pos, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "startPos": 1,
+        "endPos": 2,
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "startPos": 2,
+        "endPos": 5,
+        "k": 10
+      },
+      "expected": 0
+    }
+  ]
 }

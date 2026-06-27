@@ -48,5 +48,19 @@
     "racket": "(define/contract (can-alice-win n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec can_alice_win(N :: integer()) -> boolean().\ncan_alice_win(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_alice_win(n :: integer) :: boolean\n  def can_alice_win(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 12
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": false
+    }
+  ]
 }

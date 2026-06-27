@@ -57,5 +57,34 @@
     "racket": "(define/contract (maximum-even-split finalSum)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec maximum_even_split(FinalSum :: integer()) -> [integer()].\nmaximum_even_split(FinalSum) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_even_split(final_sum :: integer) :: [integer]\n  def maximum_even_split(final_sum) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "finalSum": 12
+      },
+      "expected": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "args": {
+        "finalSum": 7
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "finalSum": 28
+      },
+      "expected": [
+        6,
+        8,
+        2,
+        12
+      ]
+    }
+  ]
 }

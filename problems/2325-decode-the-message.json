@@ -58,5 +58,21 @@
     "racket": "(define/contract (decode-message key message)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec decode_message(Key :: unicode:unicode_binary(), Message :: unicode:unicode_binary()) -> unicode:unicode_binary().\ndecode_message(Key, Message) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec decode_message(key :: String.t, message :: String.t) :: String.t\n  def decode_message(key, message) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "key": "the quick brown fox jumps over the lazy dog",
+        "message": "vkbs bs t suepuv"
+      },
+      "expected": "this is a secret"
+    },
+    {
+      "args": {
+        "key": "eljuxhpwnyrdgtqkviszcfmabo",
+        "message": "zwx hnfx lqantp mnoeius ycgk vcnjrdb"
+      },
+      "expected": "the five boxing wizards jump quickly"
+    }
+  ]
 }

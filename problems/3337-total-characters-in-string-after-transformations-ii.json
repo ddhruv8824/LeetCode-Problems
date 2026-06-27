@@ -57,5 +57,77 @@
     "erlang": "-spec length_after_transformations(S :: unicode:unicode_binary(), T :: integer(), Nums :: [integer()]) -> integer().\nlength_after_transformations(S, T, Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_after_transformations(s :: String.t, t :: integer, nums :: [integer]) :: integer\n  def length_after_transformations(s, t, nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Matrix Multiplication + Matrix Exponentiation By Squaring\n\n#### Intuition\n\nWe use $f(i, c)$ to represent the number of occurrences of the character $c$ in the string after $i$ transformations. For convenience, we let the value range of $c$ be $[0, 26)$, corresponding to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, all $f(0, c)$ values are equal to the number of occurrences of $c$ in the given string $s$. When we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$, we use the recurrence:\n\n$$\nf(i, c) = \\sum_{c'=0}^{25} \\left[ f(i-1, c') \\times T(c, c') \\right]\n$$\n\nHere, the value of $T(c, c')$ is either 0 or 1. If $c'$ is included in the substitution set of $c$ during a single transformation, the value is 1; otherwise, it is 0. The values of $T(c, c')$ can be obtained from the given array $\\textit{nums}$.\n\nThe time complexity of directly using the recurrence is high, so optimization is necessary. Notice that $T(c, c')$ is independent of $i$; it remains fixed in each round of iteration. Therefore, if we express $f(i, c)$ and $f(i-1, c')$ as $n \\times 1$ column vectors, and $T(c, c')$ as an $n \\times n$ matrix, the recurrence becomes a matrix multiplication:\n\n$$\n\\begin{pmatrix}\nf(i, 0) \\\\\nf(i, 1) \\\\\n\\vdots \\\\\nf(i, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}\n\\begin{pmatrix}\nf(i-1, 0) \\\\\nf(i-1, 1) \\\\\n\\vdots \\\\\nf(i-1, 25)\n\\end{pmatrix}\n$$\n\nSo, after $t$ iterations:\n\n$$\n\\begin{pmatrix}\nf(t, 0) \\\\\nf(t, 1) \\\\\n\\vdots \\\\\nf(t, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}^t\n\\begin{pmatrix}\nf(0, 0) \\\\\nf(0, 1) \\\\\n\\vdots \\\\\nf(0, 25)\n\\end{pmatrix}\n$$\n\nThus, we can first compute the $t$-th power of the matrix corresponding to $T(c, c')$, and then multiply it by the initial column vector $f(0, \\cdots)$ to obtain all values $f(t, \\cdots)$. The sum of these values gives the final answer.\n\nThe exponentiation of the transformation matrix can be efficiently performed using [matrix exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring), which we will not elaborate on here.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ denote the size of the character set, which is 26 in this case.\n\n- Time complexity: $O(n + \\log t \\times |\\Sigma|^3)$.\n  \n  We first traverse the string to count the occurrences of each character. Then, we apply matrix exponentiation by squaring to compute repeated matrix multiplication.\n  \n- Space complexity: $O(|\\Sigma|^2)$.\n  \n  This is the space required to store the transformation matrix."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Matrix Multiplication + Matrix Exponentiation By Squaring\n\n#### Intuition\n\nWe use $f(i, c)$ to represent the number of occurrences of the character $c$ in the string after $i$ transformations. For convenience, we let the value range of $c$ be $[0, 26)$, corresponding to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, all $f(0, c)$ values are equal to the number of occurrences of $c$ in the given string $s$. When we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$, we use the recurrence:\n\n$$\nf(i, c) = \\sum_{c'=0}^{25} \\left[ f(i-1, c') \\times T(c, c') \\right]\n$$\n\nHere, the value of $T(c, c')$ is either 0 or 1. If $c'$ is included in the substitution set of $c$ during a single transformation, the value is 1; otherwise, it is 0. The values of $T(c, c')$ can be obtained from the given array $\\textit{nums}$.\n\nThe time complexity of directly using the recurrence is high, so optimization is necessary. Notice that $T(c, c')$ is independent of $i$; it remains fixed in each round of iteration. Therefore, if we express $f(i, c)$ and $f(i-1, c')$ as $n \\times 1$ column vectors, and $T(c, c')$ as an $n \\times n$ matrix, the recurrence becomes a matrix multiplication:\n\n$$\n\\begin{pmatrix}\nf(i, 0) \\\\\nf(i, 1) \\\\\n\\vdots \\\\\nf(i, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}\n\\begin{pmatrix}\nf(i-1, 0) \\\\\nf(i-1, 1) \\\\\n\\vdots \\\\\nf(i-1, 25)\n\\end{pmatrix}\n$$\n\nSo, after $t$ iterations:\n\n$$\n\\begin{pmatrix}\nf(t, 0) \\\\\nf(t, 1) \\\\\n\\vdots \\\\\nf(t, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}^t\n\\begin{pmatrix}\nf(0, 0) \\\\\nf(0, 1) \\\\\n\\vdots \\\\\nf(0, 25)\n\\end{pmatrix}\n$$\n\nThus, we can first compute the $t$-th power of the matrix corresponding to $T(c, c')$, and then multiply it by the initial column vector $f(0, \\cdots)$ to obtain all values $f(t, \\cdots)$. The sum of these values gives the final answer.\n\nThe exponentiation of the transformation matrix can be efficiently performed using [matrix exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring), which we will not elaborate on here.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ denote the size of the character set, which is 26 in this case.\n\n- Time complexity: $O(n + \\log t \\times |\\Sigma|^3)$.\n  \n  We first traverse the string to count the occurrences of each character. Then, we apply matrix exponentiation by squaring to compute repeated matrix multiplication.\n  \n- Space complexity: $O(|\\Sigma|^2)$.\n  \n  This is the space required to store the transformation matrix.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcyy",
+        "t": 2,
+        "nums": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "azbk",
+        "t": 1,
+        "nums": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

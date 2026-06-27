@@ -59,5 +59,54 @@
     "racket": "(define/contract (number-of-submatrices grid)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_submatrices(Grid :: [[char()]]) -> integer().\nnumber_of_submatrices(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_submatrices(grid :: [[char]]) :: integer\n  def number_of_submatrices(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            "X",
+            "Y",
+            "."
+          ],
+          [
+            "Y",
+            ".",
+            "."
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            "X",
+            "X"
+          ],
+          [
+            "X",
+            "Y"
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            ".",
+            "."
+          ],
+          [
+            ".",
+            "."
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

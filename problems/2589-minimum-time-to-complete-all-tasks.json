@@ -56,5 +56,51 @@
     "racket": "(define/contract (find-minimum-time tasks)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec find_minimum_time(Tasks :: [[integer()]]) -> integer().\nfind_minimum_time(Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_minimum_time(tasks :: [[integer]]) :: integer\n  def find_minimum_time(tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tasks": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            4,
+            5,
+            1
+          ],
+          [
+            1,
+            5,
+            2
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "tasks": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            5,
+            6,
+            2
+          ]
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

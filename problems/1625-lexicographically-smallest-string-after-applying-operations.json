@@ -61,5 +61,31 @@
     "racket": "(define/contract (find-lex-smallest-string s a b)\n  (-> string? exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec find_lex_smallest_string(S :: unicode:unicode_binary(), A :: integer(), B :: integer()) -> unicode:unicode_binary().\nfind_lex_smallest_string(S, A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_lex_smallest_string(s :: String.t, a :: integer, b :: integer) :: String.t\n  def find_lex_smallest_string(s, a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "5525",
+        "a": 9,
+        "b": 2
+      },
+      "expected": "2050"
+    },
+    {
+      "args": {
+        "s": "74",
+        "a": 5,
+        "b": 1
+      },
+      "expected": "24"
+    },
+    {
+      "args": {
+        "s": "0011",
+        "a": 4,
+        "b": 2
+      },
+      "expected": "0011"
+    }
+  ]
 }

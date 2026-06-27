@@ -51,5 +51,30 @@
     "racket": "(define/contract (nth-super-ugly-number n primes)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec nth_super_ugly_number(N :: integer(), Primes :: [integer()]) -> integer().\nnth_super_ugly_number(N, Primes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nth_super_ugly_number(n :: integer, primes :: [integer]) :: integer\n  def nth_super_ugly_number(n, primes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 12,
+        "primes": [
+          2,
+          7,
+          13,
+          19
+        ]
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "n": 1,
+        "primes": [
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

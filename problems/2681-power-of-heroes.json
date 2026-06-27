@@ -55,5 +55,27 @@
     "racket": "(define/contract (sum-of-power nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_of_power(Nums :: [integer()]) -> integer().\nsum_of_power(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_power(nums :: [integer]) :: integer\n  def sum_of_power(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          4
+        ]
+      },
+      "expected": 141
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 7
+    }
+  ]
 }

@@ -54,5 +54,37 @@
     "erlang": "-spec num_of_unplaced_fruits(Fruits :: [integer()], Baskets :: [integer()]) -> integer().\nnum_of_unplaced_fruits(Fruits, Baskets) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_unplaced_fruits(fruits :: [integer], baskets :: [integer]) :: integer\n  def num_of_unplaced_fruits(fruits, baskets) do\n    \n  end\nend"
   },
-  "solution": "### Approach: Simulation\n\n#### Intuition\n\nSince the input size is small, we can simulate the process directly. We iterate over each fruit from left to right and try to find a basket that can hold it. A fruit can only be placed in a basket if the basket’s capacity is greater than or equal to the fruit's requirement. Once a fruit is placed in a basket, that basket is marked as used and cannot be used again.\n\nThere are two possibilities for each fruit:\n\n1. If a basket with enough capacity is found, we use that basket and mark it as unavailable by setting its capacity to `0`.\n2. If no such basket is found, we increment the counter `count` to indicate this fruit couldn't be placed.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{fruits}$.\n\n- Time complexity: $O(n^2)$.\n  \n  Every time a fruit is encountered, the basket array needs to be traversed.\n\n- Space complexity: $O(1)$.\n\n  Only a few additional variables were used.\n  \n---"
+  "solution": "### Approach: Simulation\n\n#### Intuition\n\nSince the input size is small, we can simulate the process directly. We iterate over each fruit from left to right and try to find a basket that can hold it. A fruit can only be placed in a basket if the basket’s capacity is greater than or equal to the fruit's requirement. Once a fruit is placed in a basket, that basket is marked as used and cannot be used again.\n\nThere are two possibilities for each fruit:\n\n1. If a basket with enough capacity is found, we use that basket and mark it as unavailable by setting its capacity to `0`.\n2. If no such basket is found, we increment the counter `count` to indicate this fruit couldn't be placed.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{fruits}$.\n\n- Time complexity: $O(n^2)$.\n  \n  Every time a fruit is encountered, the basket array needs to be traversed.\n\n- Space complexity: $O(1)$.\n\n  Only a few additional variables were used.\n  \n---",
+  "test_cases": [
+    {
+      "args": {
+        "fruits": [
+          4,
+          2,
+          5
+        ],
+        "baskets": [
+          3,
+          5,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "fruits": [
+          3,
+          6,
+          1
+        ],
+        "baskets": [
+          6,
+          4,
+          7
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

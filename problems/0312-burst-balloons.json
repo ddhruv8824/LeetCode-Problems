@@ -48,5 +48,27 @@
     "racket": "(define/contract (max-coins nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_coins(Nums :: [integer()]) -> integer().\nmax_coins(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_coins(nums :: [integer]) :: integer\n  def max_coins(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          5,
+          8
+        ]
+      },
+      "expected": 167
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

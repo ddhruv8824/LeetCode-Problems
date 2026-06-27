@@ -59,5 +59,42 @@
     "racket": "(define/contract (distribute-candies candyType)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec distribute_candies(CandyType :: [integer()]) -> integer().\ndistribute_candies(CandyType) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distribute_candies(candy_type :: [integer]) :: integer\n  def distribute_candies(candy_type) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "candyType": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "candyType": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "candyType": [
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

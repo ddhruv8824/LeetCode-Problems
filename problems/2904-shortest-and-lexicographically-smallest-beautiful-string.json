@@ -55,5 +55,28 @@
     "racket": "(define/contract (shortest-beautiful-substring s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec shortest_beautiful_substring(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nshortest_beautiful_substring(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_beautiful_substring(s :: String.t, k :: integer) :: String.t\n  def shortest_beautiful_substring(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "100011001",
+        "k": 3
+      },
+      "expected": "11001"
+    },
+    {
+      "args": {
+        "s": "1011",
+        "k": 2
+      },
+      "expected": "11"
+    },
+    {
+      "args": {
+        "s": "000",
+        "k": 1
+      },
+      "expected": ""
+    }
+  ]
 }

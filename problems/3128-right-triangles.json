@@ -60,5 +60,76 @@
     "racket": "(define/contract (number-of-right-triangles grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_right_triangles(Grid :: [[integer()]]) -> integer().\nnumber_of_right_triangles(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_right_triangles(grid :: [[integer]]) :: integer\n  def number_of_right_triangles(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

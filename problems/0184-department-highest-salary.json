@@ -34,5 +34,204 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "Employee": [
+          {
+            "id": 1,
+            "name": "Joe",
+            "salary": 70000,
+            "departmentId": 1
+          },
+          {
+            "id": 2,
+            "name": "Jim",
+            "salary": 90000,
+            "departmentId": 1
+          },
+          {
+            "id": 3,
+            "name": "Henry",
+            "salary": 80000,
+            "departmentId": 2
+          },
+          {
+            "id": 4,
+            "name": "Sam",
+            "salary": 60000,
+            "departmentId": 2
+          },
+          {
+            "id": 5,
+            "name": "Max",
+            "salary": 90000,
+            "departmentId": 1
+          }
+        ],
+        "Department": [
+          {
+            "id": 1,
+            "name": "IT"
+          },
+          {
+            "id": 2,
+            "name": "Sales"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Department": "IT",
+          "Employee": "Jim",
+          "Salary": 90000
+        },
+        {
+          "Department": "Sales",
+          "Employee": "Henry",
+          "Salary": 80000
+        },
+        {
+          "Department": "IT",
+          "Employee": "Max",
+          "Salary": 90000
+        }
+      ]
+    },
+    {
+      "args": {
+        "Employee": [
+          {
+            "id": 1,
+            "name": "John",
+            "salary": 50000,
+            "departmentId": 1
+          },
+          {
+            "id": 2,
+            "name": "Alice",
+            "salary": 60000,
+            "departmentId": 1
+          },
+          {
+            "id": 3,
+            "name": "Bob",
+            "salary": 70000,
+            "departmentId": 2
+          }
+        ],
+        "Department": [
+          {
+            "id": 1,
+            "name": "Marketing"
+          },
+          {
+            "id": 2,
+            "name": "HR"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Department": "Marketing",
+          "Employee": "Alice",
+          "Salary": 60000
+        },
+        {
+          "Department": "HR",
+          "Employee": "Bob",
+          "Salary": 70000
+        }
+      ]
+    },
+    {
+      "args": {
+        "Employee": [
+          {
+            "id": 1,
+            "name": "Mike",
+            "salary": 40000,
+            "departmentId": 1
+          },
+          {
+            "id": 2,
+            "name": "Emma",
+            "salary": 50000,
+            "departmentId": 1
+          },
+          {
+            "id": 3,
+            "name": "David",
+            "salary": 60000,
+            "departmentId": 1
+          }
+        ],
+        "Department": [
+          {
+            "id": 1,
+            "name": "Finance"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Department": "Finance",
+          "Employee": "David",
+          "Salary": 60000
+        }
+      ]
+    },
+    {
+      "args": {
+        "Employee": [
+          {
+            "id": 1,
+            "name": "Oliver",
+            "salary": 100000,
+            "departmentId": 1
+          },
+          {
+            "id": 2,
+            "name": "Ava",
+            "salary": 100000,
+            "departmentId": 1
+          },
+          {
+            "id": 3,
+            "name": "Liam",
+            "salary": 80000,
+            "departmentId": 2
+          }
+        ],
+        "Department": [
+          {
+            "id": 1,
+            "name": "Engineering"
+          },
+          {
+            "id": 2,
+            "name": "Design"
+          }
+        ]
+      },
+      "expected": [
+        {
+          "Department": "Engineering",
+          "Employee": "Oliver",
+          "Salary": 100000
+        },
+        {
+          "Department": "Engineering",
+          "Employee": "Ava",
+          "Salary": 100000
+        },
+        {
+          "Department": "Design",
+          "Employee": "Liam",
+          "Salary": 80000
+        }
+      ]
+    }
+  ]
 }

@@ -52,5 +52,21 @@
     "racket": "(define/contract (minimum-score s t)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec minimum_score(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nminimum_score(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_score(s :: String.t, t :: String.t) :: integer\n  def minimum_score(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abacaba",
+        "t": "bzaa"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "cde",
+        "t": "xyz"
+      },
+      "expected": 3
+    }
+  ]
 }

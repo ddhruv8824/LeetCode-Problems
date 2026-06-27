@@ -64,5 +64,25 @@
     "racket": "(define/contract (minimum-buckets hamsters)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_buckets(Hamsters :: unicode:unicode_binary()) -> integer().\nminimum_buckets(Hamsters) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_buckets(hamsters :: String.t) :: integer\n  def minimum_buckets(hamsters) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "hamsters": "H..H"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "hamsters": ".H.H."
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "hamsters": ".HHH."
+      },
+      "expected": -1
+    }
+  ]
 }

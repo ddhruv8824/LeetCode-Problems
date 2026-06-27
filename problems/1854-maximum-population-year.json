@@ -51,5 +51,41 @@
     "racket": "(define/contract (maximum-population logs)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximum_population(Logs :: [[integer()]]) -> integer().\nmaximum_population(Logs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_population(logs :: [[integer]]) :: integer\n  def maximum_population(logs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "logs": [
+          [
+            1993,
+            1999
+          ],
+          [
+            2000,
+            2010
+          ]
+        ]
+      },
+      "expected": 1993
+    },
+    {
+      "args": {
+        "logs": [
+          [
+            1950,
+            1961
+          ],
+          [
+            1960,
+            1971
+          ],
+          [
+            1970,
+            1981
+          ]
+        ]
+      },
+      "expected": 1960
+    }
+  ]
 }

@@ -36,5 +36,28 @@
   "code_snippets": {
     "javascript": "/**\n * @param {Function[]} functions\n * @return {Function}\n */\nvar compose = function(functions) {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */",
     "typescript": "type F = (x: number) => number;\n\nfunction compose(functions: F[]): F {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "functions": "[",
+        "x": 4
+      },
+      "expected": 65
+    },
+    {
+      "args": {
+        "functions": "[",
+        "x": 1
+      },
+      "expected": 1000
+    },
+    {
+      "args": {
+        "functions": [],
+        "x": 42
+      },
+      "expected": 42
+    }
+  ]
 }

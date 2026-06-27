@@ -53,5 +53,28 @@
     "racket": "(define/contract (least-ops-express-target x target)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec least_ops_express_target(X :: integer(), Target :: integer()) -> integer().\nleast_ops_express_target(X, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec least_ops_express_target(x :: integer, target :: integer) :: integer\n  def least_ops_express_target(x, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 3,
+        "target": 19
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "x": 5,
+        "target": 501
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "x": 100,
+        "target": 100000000
+      },
+      "expected": 3
+    }
+  ]
 }

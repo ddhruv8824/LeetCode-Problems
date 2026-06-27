@@ -54,5 +54,43 @@
     "racket": "(define/contract (can-alice-win nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_alice_win(Nums :: [integer()]) -> boolean().\ncan_alice_win(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_alice_win(nums :: [integer]) :: boolean\n  def can_alice_win(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          10
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          14
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          5,
+          5,
+          25
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

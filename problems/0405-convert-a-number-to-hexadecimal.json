@@ -47,5 +47,19 @@
     "racket": "(define/contract (to-hex num)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec to_hex(Num :: integer()) -> unicode:unicode_binary().\nto_hex(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec to_hex(num :: integer) :: String.t\n  def to_hex(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 26
+      },
+      "expected": "1a"
+    },
+    {
+      "args": {
+        "num": -1
+      },
+      "expected": "ffffffff"
+    }
+  ]
 }

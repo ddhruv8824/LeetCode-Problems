@@ -49,5 +49,19 @@
     "racket": "(define/contract (remove-trailing-zeros num)\n  (-> string? string?)\n  )",
     "erlang": "-spec remove_trailing_zeros(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_trailing_zeros(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_trailing_zeros(num :: String.t) :: String.t\n  def remove_trailing_zeros(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "51230100"
+      },
+      "expected": "512301"
+    },
+    {
+      "args": {
+        "num": "123"
+      },
+      "expected": "123"
+    }
+  ]
 }

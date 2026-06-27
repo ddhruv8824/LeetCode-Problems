@@ -53,5 +53,27 @@
     "racket": "(define/contract (num-similar-groups strs)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec num_similar_groups(Strs :: [unicode:unicode_binary()]) -> integer().\nnum_similar_groups(Strs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_similar_groups(strs :: [String.t]) :: integer\n  def num_similar_groups(strs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strs": [
+          "tars",
+          "rats",
+          "arts",
+          "star"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "strs": [
+          "omv",
+          "ovm"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

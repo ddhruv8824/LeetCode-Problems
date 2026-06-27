@@ -74,5 +74,110 @@
     "racket": "(define/contract (find-median n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec find_median(N :: integer(), Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nfind_median(N, Edges, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_median(n :: integer, edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def find_median(n, edges, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1,
+            7
+          ]
+        ],
+        "queries": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            4
+          ]
+        ],
+        "queries": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            3
+          ]
+        ],
+        "queries": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        2
+      ]
+    }
+  ]
 }

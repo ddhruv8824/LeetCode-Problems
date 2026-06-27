@@ -49,5 +49,19 @@
     "racket": "(define/contract (total-n-queens n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec total_n_queens(N :: integer()) -> integer().\ntotal_n_queens(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_n_queens(n :: integer) :: integer\n  def total_n_queens(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -59,5 +59,28 @@
     "racket": "(define/contract (count-k-reducible-numbers s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_k_reducible_numbers(S :: unicode:unicode_binary(), K :: integer()) -> integer().\ncount_k_reducible_numbers(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_k_reducible_numbers(s :: String.t, k :: integer) :: integer\n  def count_k_reducible_numbers(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "111",
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "1000",
+        "k": 2
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "s": "1",
+        "k": 3
+      },
+      "expected": 0
+    }
+  ]
 }

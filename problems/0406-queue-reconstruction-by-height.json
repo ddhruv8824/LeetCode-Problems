@@ -54,5 +54,63 @@
     "racket": "(define/contract (reconstruct-queue people)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec reconstruct_queue(People :: [[integer()]]) -> [[integer()]].\nreconstruct_queue(People) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reconstruct_queue(people :: [[integer]]) :: [[integer]]\n  def reconstruct_queue(people) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "people": [
+          [
+            7,
+            0
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        [
+          5,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    }
+  ]
 }

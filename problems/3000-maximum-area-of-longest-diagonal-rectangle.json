@@ -49,5 +49,37 @@
     "racket": "(define/contract (area-of-max-diagonal dimensions)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec area_of_max_diagonal(Dimensions :: [[integer()]]) -> integer().\narea_of_max_diagonal(Dimensions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec area_of_max_diagonal(dimensions :: [[integer]]) :: integer\n  def area_of_max_diagonal(dimensions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "dimensions": [
+          [
+            9,
+            3
+          ],
+          [
+            8,
+            6
+          ]
+        ]
+      },
+      "expected": 48
+    },
+    {
+      "args": {
+        "dimensions": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "expected": 12
+    }
+  ]
 }

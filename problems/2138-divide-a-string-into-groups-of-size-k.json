@@ -53,5 +53,32 @@
     "erlang": "-spec divide_string(S :: unicode:unicode_binary(), K :: integer(), Fill :: char()) -> [unicode:unicode_binary()].\ndivide_string(S, K, Fill) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec divide_string(s :: String.t, k :: integer, fill :: char) :: [String.t]\n  def divide_string(s, k, fill) do\n    \n  end\nend"
   },
-  "solution": "### Approach: Search for the starting index of each group\n\n#### Intuition\n\nWe assume that the length of the string $s$ is $n$. Since the length of each group of strings - except for the last one i.e., $k$, we can determine the starting index of each group: the starting index of the $i$-th group is $k \\times i$. Based on this, we can compute the index range of the characters in each group of the string $s$, which corresponds to the closed interval $[k \\times i, \\min((k + 1) \\times i, n) - 1]$.\n\nWe use the array $\\textit{res}$ to store each group of strings, and a variable $\\textit{curr}$ to track the starting index of the current group. Initially, $\\textit{curr}$ is set to $0$. As long as $\\textit{curr}$ is a valid index, it indicates that the current group exists. We then append the substring $s[k \\times i..\\min((k + 1) \\times i, n) - 1]$ to the end of $\\textit{res}$ and increment $\\textit{curr}$ by $k$ to move to the next group's starting index.\n\nFinally, the last element in the array $\\textit{res}$ may need padding. We use the fill character $\\textit{fill}$ to extend its length to $k$. After completing this process, we return the array $\\textit{res}$ as the result.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $s$.\n\n- Time complexity: $O(\\max(n, k))$.\n  \n  This is the time complexity for grouping the strings and applying padding.\n\n- Space complexity: $O(1)$.\n  \n  The output array is not included in the space complexity."
+  "solution": "### Approach: Search for the starting index of each group\n\n#### Intuition\n\nWe assume that the length of the string $s$ is $n$. Since the length of each group of strings - except for the last one i.e., $k$, we can determine the starting index of each group: the starting index of the $i$-th group is $k \\times i$. Based on this, we can compute the index range of the characters in each group of the string $s$, which corresponds to the closed interval $[k \\times i, \\min((k + 1) \\times i, n) - 1]$.\n\nWe use the array $\\textit{res}$ to store each group of strings, and a variable $\\textit{curr}$ to track the starting index of the current group. Initially, $\\textit{curr}$ is set to $0$. As long as $\\textit{curr}$ is a valid index, it indicates that the current group exists. We then append the substring $s[k \\times i..\\min((k + 1) \\times i, n) - 1]$ to the end of $\\textit{res}$ and increment $\\textit{curr}$ by $k$ to move to the next group's starting index.\n\nFinally, the last element in the array $\\textit{res}$ may need padding. We use the fill character $\\textit{fill}$ to extend its length to $k$. After completing this process, we return the array $\\textit{res}$ as the result.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $s$.\n\n- Time complexity: $O(\\max(n, k))$.\n  \n  This is the time complexity for grouping the strings and applying padding.\n\n- Space complexity: $O(1)$.\n  \n  The output array is not included in the space complexity.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcdefghi",
+        "k": 3,
+        "fill": "x"
+      },
+      "expected": [
+        "abc",
+        "def",
+        "ghi"
+      ]
+    },
+    {
+      "args": {
+        "s": "abcdefghij",
+        "k": 3,
+        "fill": "x"
+      },
+      "expected": [
+        "abc",
+        "def",
+        "ghi",
+        "jxx"
+      ]
+    }
+  ]
 }

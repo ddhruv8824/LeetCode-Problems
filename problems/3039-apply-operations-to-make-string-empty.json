@@ -52,5 +52,19 @@
     "racket": "(define/contract (last-non-empty-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec last_non_empty_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlast_non_empty_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec last_non_empty_string(s :: String.t) :: String.t\n  def last_non_empty_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aabcbbca"
+      },
+      "expected": "ba"
+    },
+    {
+      "args": {
+        "s": "abcd"
+      },
+      "expected": "abcd"
+    }
+  ]
 }

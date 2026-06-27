@@ -47,5 +47,28 @@
     "racket": "(define/contract (max-balanced-shipments weight)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_balanced_shipments(Weight :: [integer()]) -> integer().\nmax_balanced_shipments(Weight) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_balanced_shipments(weight :: [integer]) :: integer\n  def max_balanced_shipments(weight) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "weight": [
+          2,
+          5,
+          1,
+          4,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "weight": [
+          4,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

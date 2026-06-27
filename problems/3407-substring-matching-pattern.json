@@ -56,5 +56,28 @@
     "racket": "(define/contract (has-match s p)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec has_match(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> boolean().\nhas_match(S, P) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_match(s :: String.t, p :: String.t) :: boolean\n  def has_match(s, p) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode",
+        "p": "ee*e"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "car",
+        "p": "c*v"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "luck",
+        "p": "u*"
+      },
+      "expected": true
+    }
+  ]
 }

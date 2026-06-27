@@ -56,5 +56,45 @@
     "racket": "(define/contract (string-indices wordsContainer wordsQuery)\n  (-> (listof string?) (listof string?) (listof exact-integer?))\n  )",
     "erlang": "-spec string_indices(WordsContainer :: [unicode:unicode_binary()], WordsQuery :: [unicode:unicode_binary()]) -> [integer()].\nstring_indices(WordsContainer, WordsQuery) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec string_indices(words_container :: [String.t], words_query :: [String.t]) :: [integer]\n  def string_indices(words_container, words_query) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "wordsContainer": [
+          "abcd",
+          "bcd",
+          "xbcd"
+        ],
+        "wordsQuery": [
+          "cd",
+          "bcd",
+          "xyz"
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "wordsContainer": [
+          "abcdefgh",
+          "poiuygh",
+          "ghghgh"
+        ],
+        "wordsQuery": [
+          "gh",
+          "acbfgh",
+          "acbfegh"
+        ]
+      },
+      "expected": [
+        2,
+        0,
+        2
+      ]
+    }
+  ]
 }

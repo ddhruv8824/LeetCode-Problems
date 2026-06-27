@@ -52,5 +52,33 @@
     "erlang": "-spec largest_altitude(Gain :: [integer()]) -> integer().\nlargest_altitude(Gain) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_altitude(gain :: [integer]) :: integer\n  def largest_altitude(gain) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Prefix Sum\n\n**Intuition**\n\nWe start from the altitude `0` and we have a list of $N$ integers, where each integer represents the gain in altitude at each step (it could be negative as well, which implies a fall in altitude) a biker takes. We need to return the highest altitude of the biker in the complete journey, including the starting point at `0`.\n\nThis can be solved by taking the maximum altitudes at each step in the journey. The altitude at a step can be determined as the altitude at the previous step plus the gain at the current step. Hence, we will start from `0` and keep adding the gain in altitude to it at each step, and after each addition, we will update the maximum altitude we have seen so far.\n\n![fig](../Figures/1732/1732A.png)\n\nIf we observe closely, the altitude at a point is the sum of gains on the left of it, which is nothing but the prefix sum at this index. Therefore, we can find the prefix sum and return the maximum as the highest reached altitude.\n\n**Algorithm**\n\n1. Initialize the variable `currentAltitude` to `0`; this is the current altitude of the biker.\n2. Initialize the variable `highestPoint` to `currentAltitude`, as the highest altitude we have seen is `0`.\n3. Iterate over the gain in altitude in the list `gain` and add the current gain `altitudeGain` to the variable `currentAltitude`.\n4. Update the variable `highestPoint` as necessary.\n5. Return `highestPoint`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of integers in the list `gain`.\n\n* Time complexity: $O(N)$.\n\n  We iterate over every integer in the list `gain` only once, and hence the total time complexity is equal to $O(N)$.\n\n* Space complexity: $O(1)$.\n\n  We only need two variables, `currentAltitude` and`highestPoint`; hence the space complexity is constant.---"
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Prefix Sum\n\n**Intuition**\n\nWe start from the altitude `0` and we have a list of $N$ integers, where each integer represents the gain in altitude at each step (it could be negative as well, which implies a fall in altitude) a biker takes. We need to return the highest altitude of the biker in the complete journey, including the starting point at `0`.\n\nThis can be solved by taking the maximum altitudes at each step in the journey. The altitude at a step can be determined as the altitude at the previous step plus the gain at the current step. Hence, we will start from `0` and keep adding the gain in altitude to it at each step, and after each addition, we will update the maximum altitude we have seen so far.\n\n![fig](../Figures/1732/1732A.png)\n\nIf we observe closely, the altitude at a point is the sum of gains on the left of it, which is nothing but the prefix sum at this index. Therefore, we can find the prefix sum and return the maximum as the highest reached altitude.\n\n**Algorithm**\n\n1. Initialize the variable `currentAltitude` to `0`; this is the current altitude of the biker.\n2. Initialize the variable `highestPoint` to `currentAltitude`, as the highest altitude we have seen is `0`.\n3. Iterate over the gain in altitude in the list `gain` and add the current gain `altitudeGain` to the variable `currentAltitude`.\n4. Update the variable `highestPoint` as necessary.\n5. Return `highestPoint`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of integers in the list `gain`.\n\n* Time complexity: $O(N)$.\n\n  We iterate over every integer in the list `gain` only once, and hence the total time complexity is equal to $O(N)$.\n\n* Space complexity: $O(1)$.\n\n  We only need two variables, `currentAltitude` and`highestPoint`; hence the space complexity is constant.---",
+  "test_cases": [
+    {
+      "args": {
+        "gain": [
+          -5,
+          1,
+          5,
+          0,
+          -7
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "gain": [
+          -4,
+          -3,
+          -2,
+          -1,
+          4,
+          3,
+          2
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

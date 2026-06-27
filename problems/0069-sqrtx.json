@@ -49,5 +49,19 @@
     "racket": "(define/contract (my-sqrt x)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec my_sqrt(X :: integer()) -> integer().\nmy_sqrt(X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec my_sqrt(x :: integer) :: integer\n  def my_sqrt(x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "x": 8
+      },
+      "expected": 2
+    }
+  ]
 }

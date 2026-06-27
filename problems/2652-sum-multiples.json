@@ -52,5 +52,25 @@
     "racket": "(define/contract (sum-of-multiples n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_of_multiples(N :: integer()) -> integer().\nsum_of_multiples(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_multiples(n :: integer) :: integer\n  def sum_of_multiples(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 40
+    },
+    {
+      "args": {
+        "n": 9
+      },
+      "expected": 30
+    }
+  ]
 }

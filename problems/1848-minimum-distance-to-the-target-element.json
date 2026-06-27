@@ -56,5 +56,50 @@
     "racket": "(define/contract (get-min-distance nums target start)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_min_distance(Nums :: [integer()], Target :: integer(), Start :: integer()) -> integer().\nget_min_distance(Nums, Target, Start) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_min_distance(nums :: [integer], target :: integer, start :: integer) :: integer\n  def get_min_distance(nums, target, start) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "target": 5,
+        "start": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ],
+        "target": 1,
+        "start": 0
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "target": 1,
+        "start": 0
+      },
+      "expected": 0
+    }
+  ]
 }

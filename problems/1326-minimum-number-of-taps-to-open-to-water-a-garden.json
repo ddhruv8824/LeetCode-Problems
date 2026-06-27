@@ -57,5 +57,33 @@
     "racket": "(define/contract (min-taps n ranges)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_taps(N :: integer(), Ranges :: [integer()]) -> integer().\nmin_taps(N, Ranges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_taps(n :: integer, ranges :: [integer]) :: integer\n  def min_taps(n, ranges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "ranges": [
+          3,
+          4,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 3,
+        "ranges": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

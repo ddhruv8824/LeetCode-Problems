@@ -57,5 +57,59 @@
     "racket": "(define/contract (get-sneaky-numbers nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec get_sneaky_numbers(Nums :: [integer()]) -> [integer()].\nget_sneaky_numbers(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_sneaky_numbers(nums :: [integer]) :: [integer]\n  def get_sneaky_numbers(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          3,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          1,
+          5,
+          4,
+          3,
+          4,
+          6,
+          0,
+          9,
+          5,
+          8,
+          2
+        ]
+      },
+      "expected": [
+        4,
+        5
+      ]
+    }
+  ]
 }

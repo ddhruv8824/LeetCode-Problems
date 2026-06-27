@@ -54,5 +54,25 @@
     "racket": "(define/contract (check-zero-ones s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec check_zero_ones(S :: unicode:unicode_binary()) -> boolean().\ncheck_zero_ones(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_zero_ones(s :: String.t) :: boolean\n  def check_zero_ones(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1101"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "111000"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "110100010"
+      },
+      "expected": false
+    }
+  ]
 }

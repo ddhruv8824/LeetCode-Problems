@@ -55,5 +55,47 @@
     "racket": "(define/contract (is-toeplitz-matrix matrix)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec is_toeplitz_matrix(Matrix :: [[integer()]]) -> boolean().\nis_toeplitz_matrix(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_toeplitz_matrix(matrix :: [[integer]]) :: boolean\n  def is_toeplitz_matrix(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            5,
+            1,
+            2,
+            3
+          ],
+          [
+            9,
+            5,
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

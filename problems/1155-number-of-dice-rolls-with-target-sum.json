@@ -53,5 +53,31 @@
     "racket": "(define/contract (num-rolls-to-target n k target)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_rolls_to_target(N :: integer(), K :: integer(), Target :: integer()) -> integer().\nnum_rolls_to_target(N, K, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_rolls_to_target(n :: integer, k :: integer, target :: integer) :: integer\n  def num_rolls_to_target(n, k, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1,
+        "k": 6,
+        "target": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2,
+        "k": 6,
+        "target": 7
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 30,
+        "k": 30,
+        "target": 500
+      },
+      "expected": 222616187
+    }
+  ]
 }

@@ -54,5 +54,35 @@
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec min_camera_cover(Root :: #tree_node{} | null) -> integer().\nmin_camera_cover(Root) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec min_camera_cover(root :: TreeNode.t | nil) :: integer\n  def min_camera_cover(root) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition**\n\nLet's try to cover every node, starting from the top of the tree and working down.  Every node considered must be covered by a camera at that node or some neighbor.\n\nBecause cameras only care about local state, we can hope to leverage this fact for an efficient solution.  Specifically, when deciding to place a camera at a node, we might have placed cameras to cover some subset of this node, its left child, and its right child already.\n\n**Algorithm**\n\nLet `solve(node)` be some information about how many cameras it takes to cover the subtree at this node in various states.  There are essentially 3 states:\n\n* [State 0] Strict subtree:  All the nodes below this node are covered, but not this node.\n* [State 1] Normal subtree:  All the nodes below and including this node are covered, but there is no camera here.\n* [State 2] Placed camera:  All the nodes below and including this node are covered, and there is a camera here (which may cover nodes above this node).\n\nOnce we frame the problem in this way, the answer falls out:\n\n* To cover a strict subtree, the children of this node must be in state 1.\n* To cover a normal subtree without placing a camera here, the children of this node must be in states 1 or 2, and at least one of those children must be in state 2.\n* To cover the subtree when placing a camera here, the children can be in any state.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree.---\n### Approach 2: Greedy\n\n**Intuition**\n\nInstead of trying to cover every node from the top down, let's try to cover it from the bottom up - considering placing a camera with the deepest nodes first, and working our way up the tree.\n\nIf a node has its children covered and has a parent, then it is strictly better to place the camera at this node's parent.\n\n**Algorithm**\n\nIf a node has children that are not covered by a camera, then we must place a camera here.  Additionally, if a node has no parent and it is not covered, we must place a camera here.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition**\n\nLet's try to cover every node, starting from the top of the tree and working down.  Every node considered must be covered by a camera at that node or some neighbor.\n\nBecause cameras only care about local state, we can hope to leverage this fact for an efficient solution.  Specifically, when deciding to place a camera at a node, we might have placed cameras to cover some subset of this node, its left child, and its right child already.\n\n**Algorithm**\n\nLet `solve(node)` be some information about how many cameras it takes to cover the subtree at this node in various states.  There are essentially 3 states:\n\n* [State 0] Strict subtree:  All the nodes below this node are covered, but not this node.\n* [State 1] Normal subtree:  All the nodes below and including this node are covered, but there is no camera here.\n* [State 2] Placed camera:  All the nodes below and including this node are covered, and there is a camera here (which may cover nodes above this node).\n\nOnce we frame the problem in this way, the answer falls out:\n\n* To cover a strict subtree, the children of this node must be in state 1.\n* To cover a normal subtree without placing a camera here, the children of this node must be in states 1 or 2, and at least one of those children must be in state 2.\n* To cover the subtree when placing a camera here, the children can be in any state.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree.---\n### Approach 2: Greedy\n\n**Intuition**\n\nInstead of trying to cover every node from the top down, let's try to cover it from the bottom up - considering placing a camera with the deepest nodes first, and working our way up the tree.\n\nIf a node has its children covered and has a parent, then it is strictly better to place the camera at this node's parent.\n\n**Algorithm**\n\nIf a node has children that are not covered by a camera, then we must place a camera here.  Additionally, if a node has no parent and it is not covered, we must place a camera here.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree.",
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          0,
+          0,
+          null,
+          0,
+          0
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "root": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -59,5 +59,66 @@
     "racket": "(define/contract (maximum-set-size nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_set_size(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmaximum_set_size(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_set_size(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def maximum_set_size(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "nums2": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "nums2": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3
+        ],
+        "nums2": [
+          4,
+          4,
+          5,
+          5,
+          6,
+          6
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -55,5 +55,25 @@
     "racket": "(define/contract (min-flips target)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_flips(Target :: unicode:unicode_binary()) -> integer().\nmin_flips(Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_flips(target :: String.t) :: integer\n  def min_flips(target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "target": "10111"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "target": "101"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "target": "00000"
+      },
+      "expected": 0
+    }
+  ]
 }

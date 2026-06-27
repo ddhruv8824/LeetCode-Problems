@@ -58,5 +58,60 @@
     "racket": "(define/contract (best-team-score scores ages)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec best_team_score(Scores :: [integer()], Ages :: [integer()]) -> integer().\nbest_team_score(Scores, Ages) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec best_team_score(scores :: [integer], ages :: [integer]) :: integer\n  def best_team_score(scores, ages) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "scores": [
+          1,
+          3,
+          5,
+          10,
+          15
+        ],
+        "ages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 34
+    },
+    {
+      "args": {
+        "scores": [
+          4,
+          5,
+          6,
+          5
+        ],
+        "ages": [
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 16
+    },
+    {
+      "args": {
+        "scores": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "ages": [
+          8,
+          9,
+          10,
+          1
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

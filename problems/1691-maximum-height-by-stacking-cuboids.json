@@ -59,5 +59,83 @@
     "ruby": "# @param {Integer[][]} cuboids\n# @return {Integer}\ndef max_height(cuboids)\n    \nend",
     "scala": "object Solution {\n    def maxHeight(cuboids: Array[Array[Int]]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn max_height(cuboids: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cuboids": [
+          [
+            50,
+            45,
+            20
+          ],
+          [
+            95,
+            37,
+            53
+          ],
+          [
+            45,
+            23,
+            12
+          ]
+        ]
+      },
+      "expected": 190
+    },
+    {
+      "args": {
+        "cuboids": [
+          [
+            38,
+            25,
+            45
+          ],
+          [
+            76,
+            35,
+            3
+          ]
+        ]
+      },
+      "expected": 76
+    },
+    {
+      "args": {
+        "cuboids": [
+          [
+            7,
+            11,
+            17
+          ],
+          [
+            7,
+            17,
+            11
+          ],
+          [
+            11,
+            7,
+            17
+          ],
+          [
+            11,
+            17,
+            7
+          ],
+          [
+            17,
+            7,
+            11
+          ],
+          [
+            17,
+            11,
+            7
+          ]
+        ]
+      },
+      "expected": 102
+    }
+  ]
 }

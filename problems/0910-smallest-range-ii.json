@@ -56,5 +56,47 @@
     "erlang": "-spec smallest_range_ii(Nums :: [integer()], K :: integer()) -> integer().\nsmallest_range_ii(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_range_ii(nums :: [integer], k :: integer) :: integer\n  def smallest_range_ii(nums, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Linear Scan\n\n**Intuition**\n\nAs in *Smallest Range I*, smaller `A[i]` will choose to increase their value (\"go up\"), and bigger `A[i]` will decrease their value (\"go down\").\n\n**Algorithm**\n\nWe can formalize the above concept: if `A[i] < A[j]`, we don't need to consider when `A[i]` goes down while `A[j]` goes up.  This is because the interval `(A[i] + K, A[j] - K)` is a subset of `(A[i] - K, A[j] + K)` (here, `(a, b)` for `a > b` denotes `(b, a)` instead.)\n\nThat means that it is never worse to choose `(up, down)` instead of `(down, up)`.  We can prove this claim that one interval is a subset of another, by showing both `A[i] + K` and `A[j] - K` are between `A[i] - K` and `A[j] + K`.\n\nFor sorted `A`, say `A[i]` is the largest `i` that goes up.  Then `A[0] + K, A[i] + K, A[i+1] - K, A[A.length - 1] - K` are the only relevant values for calculating the answer: every other value is between one of these extremal values.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of the `A`.\n\n* Space complexity : $$\\mathcal{O}(N)$$ or $$\\mathcal{O}(\\log{N})$$\n\n  - The space complexity of the sorting algorithm depends on the implementation of each program language.\n\n  - For instance, the `list.sort()` function in Python is implemented with the [Timsort](https://en.wikipedia.org/wiki/Timsort) algorithm whose space complexity is $$\\mathcal{O}(N)$$.\n\n  - In Java, the [Arrays.sort()](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-byte:A-) is implemented as a variant of quicksort algorithm whose space complexity is $$\\mathcal{O}(\\log{N})$$.\n\n\n---"
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Linear Scan\n\n**Intuition**\n\nAs in *Smallest Range I*, smaller `A[i]` will choose to increase their value (\"go up\"), and bigger `A[i]` will decrease their value (\"go down\").\n\n**Algorithm**\n\nWe can formalize the above concept: if `A[i] < A[j]`, we don't need to consider when `A[i]` goes down while `A[j]` goes up.  This is because the interval `(A[i] + K, A[j] - K)` is a subset of `(A[i] - K, A[j] + K)` (here, `(a, b)` for `a > b` denotes `(b, a)` instead.)\n\nThat means that it is never worse to choose `(up, down)` instead of `(down, up)`.  We can prove this claim that one interval is a subset of another, by showing both `A[i] + K` and `A[j] - K` are between `A[i] - K` and `A[j] + K`.\n\nFor sorted `A`, say `A[i]` is the largest `i` that goes up.  Then `A[0] + K, A[i] + K, A[i+1] - K, A[A.length - 1] - K` are the only relevant values for calculating the answer: every other value is between one of these extremal values.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of the `A`.\n\n* Space complexity : $$\\mathcal{O}(N)$$ or $$\\mathcal{O}(\\log{N})$$\n\n  - The space complexity of the sorting algorithm depends on the implementation of each program language.\n\n  - For instance, the `list.sort()` function in Python is implemented with the [Timsort](https://en.wikipedia.org/wiki/Timsort) algorithm whose space complexity is $$\\mathcal{O}(N)$$.\n\n  - In Java, the [Arrays.sort()](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-byte:A-) is implemented as a variant of quicksort algorithm whose space complexity is $$\\mathcal{O}(\\log{N})$$.\n\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          1
+        ],
+        "k": 0
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "a": [
+          0,
+          10
+        ],
+        "k": 2
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          3,
+          6
+        ],
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": [
+          0,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 2
+    }
+  ]
 }

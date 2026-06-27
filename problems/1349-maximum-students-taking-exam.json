@@ -67,5 +67,25 @@
     "racket": "(define/contract (max-students seats)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec max_students(Seats :: [[char()]]) -> integer().\nmax_students(Seats) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_students(seats :: [[char]]) :: integer\n  def max_students(seats) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "seats": "[[\"#\",\".\",\"#\",\"#\",\".\",\"#\"]"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "seats": "[[\".\",\"#\"]"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "seats": "[[\"#\",\".\",\".\",\".\",\"#\"]"
+      },
+      "expected": 10
+    }
+  ]
 }

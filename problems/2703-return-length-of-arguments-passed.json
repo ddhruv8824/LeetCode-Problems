@@ -27,5 +27,25 @@
   "code_snippets": {
     "javascript": "/**\n * @param {...(null|boolean|number|string|Array|Object)} args\n * @return {number}\n */\nvar argumentsLength = function(...args) {\n    \n};\n\n/**\n * argumentsLength(1, 2, 3); // 3\n */",
     "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\n\nfunction argumentsLength(...args: JSONValue[]): number {\n    \n};\n\n/**\n * argumentsLength(1, 2, 3); // 3\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "args": [
+          5
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "args": [
+          {},
+          null,
+          "3"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

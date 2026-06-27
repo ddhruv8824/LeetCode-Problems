@@ -58,5 +58,38 @@
     "racket": "(define/contract (k-concatenation-max-sum arr k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec k_concatenation_max_sum(Arr :: [integer()], K :: integer()) -> integer().\nk_concatenation_max_sum(Arr, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_concatenation_max_sum(arr :: [integer], k :: integer) :: integer\n  def k_concatenation_max_sum(arr, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          1,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          -2,
+          1
+        ],
+        "k": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          -1,
+          -2
+        ],
+        "k": 7
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -57,5 +57,45 @@
     "erlang": "-spec max_sum(Nums :: [integer()]) -> integer().\nmax_sum(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_sum(nums :: [integer]) :: integer\n  def max_sum(nums) do\n    \n  end\nend"
   },
-  "solution": "### Approach: Duplicate Removal for Positive Numbers\n\n#### Intuition\n\nThe problem essentially requires finding a non-empty subsequence of non-repeating elements that gives the maximum sum. To achieve this, we can greedily collect all positive numbers in a hash set to ensure uniqueness and then sum them. If there are no positive numbers, we return the maximum value from the array.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n  \n  We traverse the array exactly once, and each operation on the hash table takes constant time in the average case.\n\n- Space complexity: $O(n)$.\n  \n  This comes mainly from the space used by the hash table to store the positive numbers."
+  "solution": "### Approach: Duplicate Removal for Positive Numbers\n\n#### Intuition\n\nThe problem essentially requires finding a non-empty subsequence of non-repeating elements that gives the maximum sum. To achieve this, we can greedily collect all positive numbers in a hash set to ensure uniqueness and then sum them. If there are no positive numbers, we return the maximum value from the array.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n  \n  We traverse the array exactly once, and each operation on the hash table takes constant time in the average case.\n\n- Space complexity: $O(n)$.\n  \n  This comes mainly from the space used by the hash table to store the positive numbers.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -1,
+          -2,
+          1,
+          0,
+          -1
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

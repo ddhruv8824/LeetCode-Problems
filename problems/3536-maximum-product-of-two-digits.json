@@ -53,5 +53,25 @@
     "racket": "(define/contract (max-product n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_product(N :: integer()) -> integer().\nmax_product(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_product(n :: integer) :: integer\n  def max_product(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 31
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 22
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 124
+      },
+      "expected": 8
+    }
+  ]
 }

@@ -54,5 +54,25 @@
     "racket": "(define/contract (arrange-words text)\n  (-> string? string?)\n  )",
     "erlang": "-spec arrange_words(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\narrange_words(Text) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec arrange_words(text :: String.t) :: String.t\n  def arrange_words(text) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "Leetcode is cool"
+      },
+      "expected": "Is cool leetcode"
+    },
+    {
+      "args": {
+        "text": "Keep calm and code on"
+      },
+      "expected": "On and keep calm code"
+    },
+    {
+      "args": {
+        "text": "To be or not to be"
+      },
+      "expected": "To be or to be not"
+    }
+  ]
 }

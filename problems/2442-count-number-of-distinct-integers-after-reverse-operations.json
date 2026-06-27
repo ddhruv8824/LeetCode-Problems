@@ -52,5 +52,29 @@
     "racket": "(define/contract (count-distinct-integers nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_distinct_integers(Nums :: [integer()]) -> integer().\ncount_distinct_integers(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_distinct_integers(nums :: [integer]) :: integer\n  def count_distinct_integers(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          13,
+          10,
+          12,
+          31
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -51,5 +51,77 @@
     "ruby": "# @param {Character[][]} board\n# @return {Void} Do not return anything, modify board in-place instead.\ndef solve(board)\n    \nend",
     "scala": "object Solution {\n    def solve(board: Array[Array[Char]]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn solve(board: &mut Vec<Vec<char>>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            "X",
+            "X",
+            "X",
+            "X"
+          ],
+          [
+            "X",
+            "O",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "X",
+            "O",
+            "X"
+          ],
+          [
+            "X",
+            "O",
+            "X",
+            "X"
+          ]
+        ]
+      },
+      "expected": [
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "X",
+          "X",
+          "X"
+        ],
+        [
+          "X",
+          "O",
+          "X",
+          "X"
+        ]
+      ]
+    },
+    {
+      "args": {
+        "board": [
+          [
+            "X"
+          ]
+        ]
+      },
+      "expected": [
+        [
+          "X"
+        ]
+      ]
+    }
+  ]
 }

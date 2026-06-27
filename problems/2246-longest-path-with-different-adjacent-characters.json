@@ -62,5 +62,33 @@
     "racket": "(define/contract (longest-path parent s)\n  (-> (listof exact-integer?) string? exact-integer?)\n  )",
     "erlang": "-spec longest_path(Parent :: [integer()], S :: unicode:unicode_binary()) -> integer().\nlongest_path(Parent, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_path(parent :: [integer], s :: String.t) :: integer\n  def longest_path(parent, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "s": "abacbe"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "parent": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "s": "aabc"
+      },
+      "expected": 3
+    }
+  ]
 }

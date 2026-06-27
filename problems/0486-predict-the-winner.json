@@ -50,5 +50,28 @@
     "racket": "(define/contract (predict-the-winner nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec predict_the_winner(Nums :: [integer()]) -> boolean().\npredict_the_winner(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec predict_the_winner(nums :: [integer]) :: boolean\n  def predict_the_winner(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          233,
+          7
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

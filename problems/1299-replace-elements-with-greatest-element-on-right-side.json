@@ -49,5 +49,37 @@
     "racket": "(define/contract (replace-elements arr)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec replace_elements(Arr :: [integer()]) -> [integer()].\nreplace_elements(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec replace_elements(arr :: [integer]) :: [integer]\n  def replace_elements(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          17,
+          18,
+          5,
+          4,
+          6,
+          1
+        ]
+      },
+      "expected": [
+        18,
+        6,
+        6,
+        6,
+        1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          400
+        ]
+      },
+      "expected": [
+        -1
+      ]
+    }
+  ]
 }

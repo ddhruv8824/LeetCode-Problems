@@ -54,5 +54,40 @@
     "racket": "(define/contract (remove-anagrams words)\n  (-> (listof string?) (listof string?))\n  )",
     "erlang": "-spec remove_anagrams(Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nremove_anagrams(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_anagrams(words :: [String.t]) :: [String.t]\n  def remove_anagrams(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "abba",
+          "baba",
+          "bbaa",
+          "cd",
+          "cd"
+        ]
+      },
+      "expected": [
+        "abba",
+        "cd"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      "expected": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    }
+  ]
 }

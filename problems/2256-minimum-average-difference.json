@@ -50,5 +50,28 @@
     "racket": "(define/contract (minimum-average-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_average_difference(Nums :: [integer()]) -> integer().\nminimum_average_difference(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_average_difference(nums :: [integer]) :: integer\n  def minimum_average_difference(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          5,
+          3,
+          9,
+          5,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          0
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

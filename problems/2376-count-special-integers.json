@@ -54,5 +54,25 @@
     "racket": "(define/contract (count-special-numbers n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_special_numbers(N :: integer()) -> integer().\ncount_special_numbers(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_special_numbers(n :: integer) :: integer\n  def count_special_numbers(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 20
+      },
+      "expected": 19
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 135
+      },
+      "expected": 110
+    }
+  ]
 }

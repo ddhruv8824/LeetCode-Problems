@@ -59,5 +59,43 @@
     "racket": "(define/contract (minimum-refill plants capacityA capacityB)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_refill(Plants :: [integer()], CapacityA :: integer(), CapacityB :: integer()) -> integer().\nminimum_refill(Plants, CapacityA, CapacityB) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_refill(plants :: [integer], capacity_a :: integer, capacity_b :: integer) :: integer\n  def minimum_refill(plants, capacity_a, capacity_b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "plants": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "capacityA": 5,
+        "capacityB": 5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "plants": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "capacityA": 3,
+        "capacityB": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "plants": [
+          5
+        ],
+        "capacityA": 10,
+        "capacityB": 8
+      },
+      "expected": 0
+    }
+  ]
 }

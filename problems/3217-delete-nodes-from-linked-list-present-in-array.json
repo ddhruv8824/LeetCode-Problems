@@ -67,5 +67,66 @@
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec modified_list(Nums :: [integer()], Head :: #list_node{} | null) -> #list_node{} | null.\nmodified_list(Nums, Head) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec modified_list(nums :: [integer], head :: ListNode.t | nil) :: ListNode.t | nil\n  def modified_list(nums, head) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Hash Set\n\n#### Intuition\n\nThe first challenge is efficiently determining whether a linked list value exists in the `nums` array. A naive approach would involve searching through `nums` for each node, but this is inefficient for large arrays. Instead, we can use a Hash Set, which allows constant-time lookups. By adding all elements of `nums` to the set, we can check if a node should be removed by verifying if its value exists in constant time.\n\n> If you're unfamiliar with hash sets, you can refer to this LeetCode [Explore Card](https://leetcode.com/explore/learn/card/hash-table/183/combination-with-other-algorithms/) for an in-depth tutorial.\n\nWith the lookup mechanism in place, we handle the linked list. The head requires special attention, as removing it alters the starting point of the list. We loop through the list to remove nodes from the beginning if their values are found in the hash set, then store the updated head. After this loop, the modified `head` is stored as the new starting point of the linked list.\n\nNext, we traverse the rest of the list using a `current` node. As we iterate, we check if `current.next`'s value is in the hash set. If it is, we adjust `current.next` to skip over that node, removing it from the list.\n\nOnce the traversal is complete, we return the modified head of the list.\n\nThe algorithm is visualized below:\n\n!?!../Documents/3217/slideshow.json:1082,602!?!\n\n#### Algorithm\n\n- Initialize a set `valuesToRemove` and populate it with the values of the `nums` array.\n- While the `head` of the linked list is not null and the `head`'s value is present in `valuesToRemove`:\n  - Move `head` to `head.next`.\n- If the `head` is `null`, return `null` since all nodes have been removed.\n- Start iterating from the `head` of the modified list:\n  - For each node `current`, check if the value of the next node (`current.next`) is in the `valuesToRemove` set.\n    - If it is, skip the next node by updating `current.next` to `current.next.next`\n  - If it is not, move the `current` pointer to the next node in the list.\n- Return the updated `head` of the list.\n\n#### Implementation\n\n> Note: In C++, memory management is manual, unlike languages with automatic garbage collection (like Java or Python). When you remove a node from a linked list, its memory remains allocated unless you explicitly free it. In the solution provided below, the memory of each removed node is properly deallocated using `delete`. However, if you're working in a production environment or during an interview, ensure that you discuss how the list nodes were allocated (e.g., via `new`) and ensure they are deallocated appropriately to avoid memory leaks. If possible, consider using smart pointers (`std::shared_ptr` or `std::unique_ptr`) for automatic memory management, which can help simplify the code and avoid manual memory management issues.#### Complexity Analysis\n\nLet $m$ and $n$ be the lengths of the `nums` array and the linked list, respectively.\n\n- Time complexity: $O(m + n)$\n\n    Iterating through the `nums` array and inserting each element into the hash set takes $O(m)$ time, as each insertion into the set is $O(1)$ on average.\n\n    The algorithm traverses the entire linked list exactly once, checking if each node's value is in the hash set. This operation takes $O(n)$ time.\n\n    Thus, the overall time complexity of the algorithm is $O(m) + O(n) = O(m + n)$.  \n\n- Space complexity: $O(m)$\n\n    The hash set can store up to $m$ elements, one for each unique value in the `nums` array, leading to a space complexity of $O(m)$. All additional variables used take constant space.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Hash Set\n\n#### Intuition\n\nThe first challenge is efficiently determining whether a linked list value exists in the `nums` array. A naive approach would involve searching through `nums` for each node, but this is inefficient for large arrays. Instead, we can use a Hash Set, which allows constant-time lookups. By adding all elements of `nums` to the set, we can check if a node should be removed by verifying if its value exists in constant time.\n\n> If you're unfamiliar with hash sets, you can refer to this LeetCode [Explore Card](https://leetcode.com/explore/learn/card/hash-table/183/combination-with-other-algorithms/) for an in-depth tutorial.\n\nWith the lookup mechanism in place, we handle the linked list. The head requires special attention, as removing it alters the starting point of the list. We loop through the list to remove nodes from the beginning if their values are found in the hash set, then store the updated head. After this loop, the modified `head` is stored as the new starting point of the linked list.\n\nNext, we traverse the rest of the list using a `current` node. As we iterate, we check if `current.next`'s value is in the hash set. If it is, we adjust `current.next` to skip over that node, removing it from the list.\n\nOnce the traversal is complete, we return the modified head of the list.\n\nThe algorithm is visualized below:\n\n!?!../Documents/3217/slideshow.json:1082,602!?!\n\n#### Algorithm\n\n- Initialize a set `valuesToRemove` and populate it with the values of the `nums` array.\n- While the `head` of the linked list is not null and the `head`'s value is present in `valuesToRemove`:\n  - Move `head` to `head.next`.\n- If the `head` is `null`, return `null` since all nodes have been removed.\n- Start iterating from the `head` of the modified list:\n  - For each node `current`, check if the value of the next node (`current.next`) is in the `valuesToRemove` set.\n    - If it is, skip the next node by updating `current.next` to `current.next.next`\n  - If it is not, move the `current` pointer to the next node in the list.\n- Return the updated `head` of the list.\n\n#### Implementation\n\n> Note: In C++, memory management is manual, unlike languages with automatic garbage collection (like Java or Python). When you remove a node from a linked list, its memory remains allocated unless you explicitly free it. In the solution provided below, the memory of each removed node is properly deallocated using `delete`. However, if you're working in a production environment or during an interview, ensure that you discuss how the list nodes were allocated (e.g., via `new`) and ensure they are deallocated appropriately to avoid memory leaks. If possible, consider using smart pointers (`std::shared_ptr` or `std::unique_ptr`) for automatic memory management, which can help simplify the code and avoid manual memory management issues.#### Complexity Analysis\n\nLet $m$ and $n$ be the lengths of the `nums` array and the linked list, respectively.\n\n- Time complexity: $O(m + n)$\n\n    Iterating through the `nums` array and inserting each element into the hash set takes $O(m)$ time, as each insertion into the set is $O(1)$ on average.\n\n    The algorithm traverses the entire linked list exactly once, checking if each node's value is in the hash set. This operation takes $O(n)$ time.\n\n    Thus, the overall time complexity of the algorithm is $O(m) + O(n) = O(m + n)$.  \n\n- Space complexity: $O(m)$\n\n    The hash set can store up to $m$ elements, one for each unique value in the `nums` array, leading to a space complexity of $O(m)$. All additional variables used take constant space.\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": [
+        4,
+        5
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ],
+        "head": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          5
+        ],
+        "head": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
 }

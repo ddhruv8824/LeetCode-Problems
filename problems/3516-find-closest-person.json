@@ -52,5 +52,31 @@
     "racket": "(define/contract (find-closest x y z)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_closest(X :: integer(), Y :: integer(), Z :: integer()) -> integer().\nfind_closest(X, Y, Z) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_closest(x :: integer, y :: integer, z :: integer) :: integer\n  def find_closest(x, y, z) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 2,
+        "y": 7,
+        "z": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "x": 2,
+        "y": 5,
+        "z": 6
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "x": 1,
+        "y": 5,
+        "z": 3
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -54,5 +54,25 @@
     "racket": "(define/contract (count-vowel-permutation n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_vowel_permutation(N :: integer()) -> integer().\ncount_vowel_permutation(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_vowel_permutation(n :: integer) :: integer\n  def count_vowel_permutation(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 68
+    }
+  ]
 }

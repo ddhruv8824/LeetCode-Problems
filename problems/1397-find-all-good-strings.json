@@ -60,5 +60,34 @@
     "racket": "(define/contract (find-good-strings n s1 s2 evil)\n  (-> exact-integer? string? string? string? exact-integer?)\n  )",
     "erlang": "-spec find_good_strings(N :: integer(), S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary(), Evil :: unicode:unicode_binary()) -> integer().\nfind_good_strings(N, S1, S2, Evil) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_good_strings(n :: integer, s1 :: String.t, s2 :: String.t, evil :: String.t) :: integer\n  def find_good_strings(n, s1, s2, evil) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "s1": "aa",
+        "s2": "da",
+        "evil": "b"
+      },
+      "expected": 51
+    },
+    {
+      "args": {
+        "n": 8,
+        "s1": "leetcode",
+        "s2": "leetgoes",
+        "evil": "leet"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 2,
+        "s1": "gx",
+        "s2": "gz",
+        "evil": "x"
+      },
+      "expected": 2
+    }
+  ]
 }

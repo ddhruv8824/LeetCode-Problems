@@ -51,5 +51,30 @@
     "racket": "(define/contract (max-selected-elements nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_selected_elements(Nums :: [integer()]) -> integer().\nmax_selected_elements(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_selected_elements(nums :: [integer]) :: integer\n  def max_selected_elements(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          5,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

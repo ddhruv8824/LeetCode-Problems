@@ -68,5 +68,49 @@
     "racket": "(define/contract (count-combinations pieces positions)\n  (-> (listof string?) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec count_combinations(Pieces :: [unicode:unicode_binary()], Positions :: [[integer()]]) -> integer().\ncount_combinations(Pieces, Positions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_combinations(pieces :: [String.t], positions :: [[integer]]) :: integer\n  def count_combinations(pieces, positions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pieces": [
+          "rook"
+        ],
+        "positions": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "pieces": [
+          "queen"
+        ],
+        "positions": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 22
+    },
+    {
+      "args": {
+        "pieces": [
+          "bishop"
+        ],
+        "positions": [
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "expected": 12
+    }
+  ]
 }

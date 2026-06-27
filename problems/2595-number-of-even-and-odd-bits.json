@@ -48,5 +48,25 @@
     "racket": "(define/contract (even-odd-bit n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec even_odd_bit(N :: integer()) -> [integer()].\neven_odd_bit(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec even_odd_bit(n :: integer) :: [integer]\n  def even_odd_bit(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 50
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
 }

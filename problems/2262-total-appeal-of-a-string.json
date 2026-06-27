@@ -53,5 +53,19 @@
     "racket": "(define/contract (appeal-sum s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec appeal_sum(S :: unicode:unicode_binary()) -> integer().\nappeal_sum(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec appeal_sum(s :: String.t) :: integer\n  def appeal_sum(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abbca"
+      },
+      "expected": 28
+    },
+    {
+      "args": {
+        "s": "code"
+      },
+      "expected": 20
+    }
+  ]
 }

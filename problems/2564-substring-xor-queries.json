@@ -59,5 +59,66 @@
     "racket": "(define/contract (substring-xor-queries s queries)\n  (-> string? (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec substring_xor_queries(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [[integer()]].\nsubstring_xor_queries(S, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec substring_xor_queries(s :: String.t, queries :: [[integer]]) :: [[integer]]\n  def substring_xor_queries(s, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "101101",
+        "queries": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "args": {
+        "s": "0101",
+        "queries": [
+          [
+            12,
+            8
+          ]
+        ]
+      },
+      "expected": [
+        [
+          -1,
+          -1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "s": "1",
+        "queries": [
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ]
 }

@@ -57,5 +57,28 @@
     "racket": "(define/contract (check-if-can-break s1 s2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec check_if_can_break(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> boolean().\ncheck_if_can_break(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_if_can_break(s1 :: String.t, s2 :: String.t) :: boolean\n  def check_if_can_break(s1, s2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "abc",
+        "s2": "xya"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s1": "abe",
+        "s2": "acd"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s1": "leetcodee",
+        "s2": "interview"
+      },
+      "expected": true
+    }
+  ]
 }

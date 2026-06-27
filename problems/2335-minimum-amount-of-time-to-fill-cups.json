@@ -57,5 +57,37 @@
     "racket": "(define/contract (fill-cups amount)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec fill_cups(Amount :: [integer()]) -> integer().\nfill_cups(Amount) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec fill_cups(amount :: [integer]) :: integer\n  def fill_cups(amount) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "amount": [
+          1,
+          4,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "amount": [
+          5,
+          4,
+          4
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "amount": [
+          5,
+          0,
+          0
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

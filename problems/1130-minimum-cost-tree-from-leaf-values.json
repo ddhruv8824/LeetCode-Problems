@@ -58,5 +58,26 @@
     "racket": "(define/contract (mct-from-leaf-values arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec mct_from_leaf_values(Arr :: [integer()]) -> integer().\nmct_from_leaf_values(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec mct_from_leaf_values(arr :: [integer]) :: integer\n  def mct_from_leaf_values(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          6,
+          2,
+          4
+        ]
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          11
+        ]
+      },
+      "expected": 44
+    }
+  ]
 }

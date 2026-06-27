@@ -69,5 +69,106 @@
     "racket": "(define/contract (maximum-minutes grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximum_minutes(Grid :: [[integer()]]) -> integer().\nmaximum_minutes(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_minutes(grid :: [[integer]]) :: integer\n  def maximum_minutes(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            2,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 1000000000
+    }
+  ]
 }

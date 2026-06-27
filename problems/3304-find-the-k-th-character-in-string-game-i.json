@@ -51,5 +51,19 @@
     "erlang": "-spec kth_character(K :: integer()) -> char().\nkth_character(K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_character(k :: integer) :: char\n  def kth_character(k) do\n    \n  end\nend"
   },
-  "solution": "### Approach: Iteration\n\n#### Intuition\n\nInitially, there is a string $\\text{\"a\"}$ of length $1$. In each operation, every character in the current string is changed to the next character in the alphabet, and the modified string is appended to the original string.\n\nIt is easy to observe that after each operation, the length of the string doubles. Each character in the appended half is formed by applying a \"+1 modulo 26\" operation on the corresponding character in the original string.\n\nOur goal is to find the character at the $k$-th position. To do this, we ask: which character in the previous version of the string (let's call this position $k'$) contributed to the character at position $k$?\n\nLet $k = 2^t + a$ (i.e., find the largest power of $2 \\leq k$).\n\n- If $a = 0$, then $k$ lies in the $t$-th operation, and we set $k' = k - 2^{t + 1}$.\n- If $a \\ne 0$, then $k$ lies in the $(t + 1)$-th operation, and we set $k' = k - 2^t = a$.\n\nBy iterating this process, we eventually reduce $k'$ to $1$, which corresponds to the $0$-th operation where the character is $\\text{\"a\"}$.\n\nEach iteration represents a single \"+1\" transformation, so we only need to count how many such steps are taken.\n\nSince the constraint is $1 \\leq k \\leq 500$, we don't need to worry about performing modulus 26 operations explicitly.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(\\log k)$.\n  \n  It only depends on the binary digits of $k$.\n\n- Space complexity: $O(1)$."
+  "solution": "### Approach: Iteration\n\n#### Intuition\n\nInitially, there is a string $\\text{\"a\"}$ of length $1$. In each operation, every character in the current string is changed to the next character in the alphabet, and the modified string is appended to the original string.\n\nIt is easy to observe that after each operation, the length of the string doubles. Each character in the appended half is formed by applying a \"+1 modulo 26\" operation on the corresponding character in the original string.\n\nOur goal is to find the character at the $k$-th position. To do this, we ask: which character in the previous version of the string (let's call this position $k'$) contributed to the character at position $k$?\n\nLet $k = 2^t + a$ (i.e., find the largest power of $2 \\leq k$).\n\n- If $a = 0$, then $k$ lies in the $t$-th operation, and we set $k' = k - 2^{t + 1}$.\n- If $a \\ne 0$, then $k$ lies in the $(t + 1)$-th operation, and we set $k' = k - 2^t = a$.\n\nBy iterating this process, we eventually reduce $k'$ to $1$, which corresponds to the $0$-th operation where the character is $\\text{\"a\"}$.\n\nEach iteration represents a single \"+1\" transformation, so we only need to count how many such steps are taken.\n\nSince the constraint is $1 \\leq k \\leq 500$, we don't need to worry about performing modulus 26 operations explicitly.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(\\log k)$.\n  \n  It only depends on the binary digits of $k$.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "k": 5
+      },
+      "expected": "b"
+    },
+    {
+      "args": {
+        "k": 10
+      },
+      "expected": "c"
+    }
+  ]
 }

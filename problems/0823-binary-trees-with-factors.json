@@ -50,5 +50,27 @@
     "racket": "(define/contract (num-factored-binary-trees arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_factored_binary_trees(Arr :: [integer()]) -> integer().\nnum_factored_binary_trees(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_factored_binary_trees(arr :: [integer]) :: integer\n  def num_factored_binary_trees(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          2,
+          4
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          2,
+          4,
+          5,
+          10
+        ]
+      },
+      "expected": 7
+    }
+  ]
 }

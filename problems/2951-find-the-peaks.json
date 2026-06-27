@@ -49,5 +49,32 @@
     "racket": "(define/contract (find-peaks mountain)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_peaks(Mountain :: [integer()]) -> [integer()].\nfind_peaks(Mountain) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_peaks(mountain :: [integer]) :: [integer]\n  def find_peaks(mountain) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mountain": [
+          2,
+          4,
+          4
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "mountain": [
+          1,
+          4,
+          3,
+          8,
+          5
+        ]
+      },
+      "expected": [
+        1,
+        3
+      ]
+    }
+  ]
 }

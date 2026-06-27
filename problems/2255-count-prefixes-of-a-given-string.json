@@ -50,5 +50,31 @@
     "racket": "(define/contract (count-prefixes words s)\n  (-> (listof string?) string? exact-integer?)\n  )",
     "erlang": "-spec count_prefixes(Words :: [unicode:unicode_binary()], S :: unicode:unicode_binary()) -> integer().\ncount_prefixes(Words, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_prefixes(words :: [String.t], s :: String.t) :: integer\n  def count_prefixes(words, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "a",
+          "b",
+          "c",
+          "ab",
+          "bc",
+          "abc"
+        ],
+        "s": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "a"
+        ],
+        "s": "aa"
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -55,5 +55,25 @@
     "racket": "(define/contract (min-non-zero-product p)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_non_zero_product(P :: integer()) -> integer().\nmin_non_zero_product(P) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_non_zero_product(p :: integer) :: integer\n  def min_non_zero_product(p) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "p": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "p": 2
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "p": 3
+      },
+      "expected": 1512
+    }
+  ]
 }

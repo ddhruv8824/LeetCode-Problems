@@ -57,5 +57,49 @@
     "racket": "(define/contract (maximum-rows matrix numSelect)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_rows(Matrix :: [[integer()]], NumSelect :: integer()) -> integer().\nmaximum_rows(Matrix, NumSelect) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_rows(matrix :: [[integer]], num_select :: integer) :: integer\n  def maximum_rows(matrix, num_select) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "numSelect": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "numSelect": 1
+      },
+      "expected": 2
+    }
+  ]
 }

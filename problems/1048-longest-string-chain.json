@@ -60,5 +60,41 @@
     "racket": "(define/contract (longest-str-chain words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec longest_str_chain(Words :: [unicode:unicode_binary()]) -> integer().\nlongest_str_chain(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_str_chain(words :: [String.t]) :: integer\n  def longest_str_chain(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "a",
+          "b",
+          "ba",
+          "bca",
+          "bda",
+          "bdca"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "words": [
+          "xbc",
+          "pcxbcf",
+          "xb",
+          "cxbc",
+          "pcxbc"
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "words": [
+          "abcd",
+          "dbqca"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

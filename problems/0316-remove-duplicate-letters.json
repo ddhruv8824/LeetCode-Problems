@@ -51,5 +51,25 @@
     "racket": "(define/contract (remove-duplicate-letters s)\n  (-> string? string?)\n  )",
     "erlang": "-spec remove_duplicate_letters(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_duplicate_letters(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_duplicate_letters(s :: String.t) :: String.t\n  def remove_duplicate_letters(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "bcabc"
+      },
+      "expected": "abc"
+    },
+    {
+      "args": {
+        "s": "cbacdcbc"
+      },
+      "expected": "acdb"
+    },
+    {
+      "args": {
+        "s": "bcab"
+      },
+      "expected": "bca"
+    }
+  ]
 }

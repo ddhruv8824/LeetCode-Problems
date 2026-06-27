@@ -58,5 +58,59 @@
     "racket": "(define/contract (find-shortest-cycle n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec find_shortest_cycle(N :: integer(), Edges :: [[integer()]]) -> integer().\nfind_shortest_cycle(N, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_shortest_cycle(n :: integer, edges :: [[integer]]) :: integer\n  def find_shortest_cycle(n, edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

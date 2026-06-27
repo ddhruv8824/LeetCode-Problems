@@ -59,5 +59,40 @@
     "racket": "(define/contract (sum-of-powers nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_of_powers(Nums :: [integer()], K :: integer()) -> integer().\nsum_of_powers(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_powers(nums :: [integer], k :: integer) :: integer\n  def sum_of_powers(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "k": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          -1
+        ],
+        "k": 2
+      },
+      "expected": 10
+    }
+  ]
 }

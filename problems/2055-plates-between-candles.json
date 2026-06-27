@@ -59,5 +59,60 @@
     "racket": "(define/contract (plates-between-candles s queries)\n  (-> string? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec plates_between_candles(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [integer()].\nplates_between_candles(S, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec plates_between_candles(s :: String.t, queries :: [[integer]]) :: [integer]\n  def plates_between_candles(s, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "**|**|***|",
+        "queries": [
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "s": "***|**|*****|**||**|*",
+        "queries": [
+          [
+            1,
+            17
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            14,
+            17
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            15,
+            16
+          ]
+        ]
+      },
+      "expected": [
+        9,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

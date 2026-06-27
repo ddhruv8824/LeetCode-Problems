@@ -54,5 +54,31 @@
     "racket": "(define/contract (find-substring-in-wrapround-string s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec find_substring_in_wrapround_string(S :: unicode:unicode_binary()) -> integer().\nfind_substring_in_wrapround_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_substring_in_wrapround_string(s :: String.t) :: integer\n  def find_substring_in_wrapround_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "p": "a"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "p": "cac"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "p": "zab"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "p": "zaba"
+      },
+      "expected": 6
+    }
+  ]
 }

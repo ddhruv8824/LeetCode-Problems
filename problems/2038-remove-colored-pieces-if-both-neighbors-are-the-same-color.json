@@ -58,5 +58,25 @@
     "racket": "(define/contract (winner-of-game colors)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec winner_of_game(Colors :: unicode:unicode_binary()) -> boolean().\nwinner_of_game(Colors) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec winner_of_game(colors :: String.t) :: boolean\n  def winner_of_game(colors) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "colors": "AAABABB"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "colors": "AA"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "colors": "ABBBBBBBAAA"
+      },
+      "expected": false
+    }
+  ]
 }

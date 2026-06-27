@@ -56,5 +56,54 @@
     "racket": "(define/contract (maximum-segment-sum nums removeQueries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec maximum_segment_sum(Nums :: [integer()], RemoveQueries :: [integer()]) -> [integer()].\nmaximum_segment_sum(Nums, RemoveQueries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_segment_sum(nums :: [integer], remove_queries :: [integer]) :: [integer]\n  def maximum_segment_sum(nums, remove_queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          5,
+          6,
+          1
+        ],
+        "removeQueries": [
+          0,
+          3,
+          2,
+          4,
+          1
+        ]
+      },
+      "expected": [
+        14,
+        7,
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          11,
+          1
+        ],
+        "removeQueries": [
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        16,
+        5,
+        3,
+        0
+      ]
+    }
+  ]
 }

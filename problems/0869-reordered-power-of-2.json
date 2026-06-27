@@ -49,5 +49,19 @@
     "racket": "(define/contract (reordered-power-of2 n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec reordered_power_of2(N :: integer()) -> boolean().\nreordered_power_of2(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reordered_power_of2(n :: integer) :: boolean\n  def reordered_power_of2(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": false
+    }
+  ]
 }

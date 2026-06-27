@@ -55,5 +55,25 @@
     "racket": "(define/contract (is-substring-present s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_substring_present(S :: unicode:unicode_binary()) -> boolean().\nis_substring_present(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_substring_present(s :: String.t) :: boolean\n  def is_substring_present(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abcba"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abcd"
+      },
+      "expected": false
+    }
+  ]
 }

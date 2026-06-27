@@ -50,5 +50,33 @@
     "racket": "(define/contract (left-right-difference nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec left_right_difference(Nums :: [integer()]) -> [integer()].\nleft_right_difference(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec left_right_difference(nums :: [integer]) :: [integer]\n  def left_right_difference(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          4,
+          8,
+          3
+        ]
+      },
+      "expected": [
+        15,
+        1,
+        11,
+        22
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

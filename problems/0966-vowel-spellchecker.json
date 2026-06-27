@@ -50,5 +50,54 @@
     "erlang": "-spec spellchecker(Wordlist :: [unicode:unicode_binary()], Queries :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nspellchecker(Wordlist, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec spellchecker(wordlist :: [String.t], queries :: [String.t]) :: [String.t]\n  def spellchecker(wordlist, queries) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: HashMap\n\n**Intuition and Algorithm**\n\nWe analyze the 3 cases that the algorithm needs to consider: when the query is an exact match, when the query is a match up to capitalization, and when the query is a match up to vowel errors.\n\nIn all 3 cases, we can use a hash table to query the answer.\n\n* For the first case (exact match), we hold a set of words to efficiently test whether our query is in the set.\n* For the second case (capitalization), we hold a hash table that converts the word from its lowercase version to the original word (with correct capitalization).\n* For the third case (vowel replacement), we hold a hash table that converts the word from its lowercase version with the vowels masked out, to the original word.\n\nThe rest of the algorithm is careful planning and reading the problem carefully.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\mathcal{C})$$, where $$\\mathcal{C}$$ is the total *content* of `wordlist` and `queries`.\n\n* Space Complexity:  $$O(\\mathcal{C})$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: HashMap\n\n**Intuition and Algorithm**\n\nWe analyze the 3 cases that the algorithm needs to consider: when the query is an exact match, when the query is a match up to capitalization, and when the query is a match up to vowel errors.\n\nIn all 3 cases, we can use a hash table to query the answer.\n\n* For the first case (exact match), we hold a set of words to efficiently test whether our query is in the set.\n* For the second case (capitalization), we hold a hash table that converts the word from its lowercase version to the original word (with correct capitalization).\n* For the third case (vowel replacement), we hold a hash table that converts the word from its lowercase version with the vowels masked out, to the original word.\n\nThe rest of the algorithm is careful planning and reading the problem carefully.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\mathcal{C})$$, where $$\\mathcal{C}$$ is the total *content* of `wordlist` and `queries`.\n\n* Space Complexity:  $$O(\\mathcal{C})$$.",
+  "test_cases": [
+    {
+      "args": {
+        "wordlist": [
+          "KiTe",
+          "kite",
+          "hare",
+          "Hare"
+        ],
+        "queries": [
+          "kite",
+          "Kite",
+          "KiTe",
+          "Hare",
+          "HARE",
+          "Hear",
+          "hear",
+          "keti",
+          "keet",
+          "keto"
+        ]
+      },
+      "expected": [
+        "kite",
+        "KiTe",
+        "KiTe",
+        "Hare",
+        "hare",
+        "",
+        "",
+        "KiTe",
+        "",
+        "KiTe"
+      ]
+    },
+    {
+      "args": {
+        "wordlist": [
+          "yellow"
+        ],
+        "queries": [
+          "YellOw"
+        ]
+      },
+      "expected": [
+        "yellow"
+      ]
+    }
+  ]
 }

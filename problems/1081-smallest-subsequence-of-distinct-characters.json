@@ -51,5 +51,19 @@
     "racket": "(define/contract (smallest-subsequence s)\n  (-> string? string?)\n  )",
     "erlang": "-spec smallest_subsequence(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_subsequence(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_subsequence(s :: String.t) :: String.t\n  def smallest_subsequence(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "bcabc"
+      },
+      "expected": "abc"
+    },
+    {
+      "args": {
+        "s": "cbacdcbc"
+      },
+      "expected": "acdb"
+    }
+  ]
 }

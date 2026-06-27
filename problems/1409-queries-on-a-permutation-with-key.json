@@ -57,5 +57,60 @@
     "racket": "(define/contract (process-queries queries m)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec process_queries(Queries :: [integer()], M :: integer()) -> [integer()].\nprocess_queries(Queries, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec process_queries(queries :: [integer], m :: integer) :: [integer]\n  def process_queries(queries, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "m": 5
+      },
+      "expected": [
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          4,
+          1,
+          2,
+          2
+        ],
+        "m": 4
+      },
+      "expected": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          7,
+          5,
+          5,
+          8,
+          3
+        ],
+        "m": 8
+      },
+      "expected": [
+        6,
+        5,
+        0,
+        7,
+        5
+      ]
+    }
+  ]
 }

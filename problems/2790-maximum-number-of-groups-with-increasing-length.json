@@ -59,5 +59,36 @@
     "racket": "(define/contract (max-increasing-groups usageLimits)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_increasing_groups(UsageLimits :: [integer()]) -> integer().\nmax_increasing_groups(UsageLimits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_increasing_groups(usage_limits :: [integer]) :: integer\n  def max_increasing_groups(usage_limits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "usageLimits": [
+          1,
+          2,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "usageLimits": [
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "usageLimits": [
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -50,5 +50,19 @@
     "racket": "(define/contract (check-partitioning s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec check_partitioning(S :: unicode:unicode_binary()) -> boolean().\ncheck_partitioning(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_partitioning(s :: String.t) :: boolean\n  def check_partitioning(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcbdd"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "bcbddxy"
+      },
+      "expected": false
+    }
+  ]
 }

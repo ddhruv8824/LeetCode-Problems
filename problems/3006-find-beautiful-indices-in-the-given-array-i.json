@@ -54,5 +54,30 @@
     "racket": "(define/contract (beautiful-indices s a b k)\n  (-> string? string? string? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec beautiful_indices(S :: unicode:unicode_binary(), A :: unicode:unicode_binary(), B :: unicode:unicode_binary(), K :: integer()) -> [integer()].\nbeautiful_indices(S, A, B, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beautiful_indices(s :: String.t, a :: String.t, b :: String.t, k :: integer) :: [integer]\n  def beautiful_indices(s, a, b, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "isawsquirrelnearmysquirrelhouseohmy",
+        "a": "my",
+        "b": "squirrel",
+        "k": 15
+      },
+      "expected": [
+        16,
+        33
+      ]
+    },
+    {
+      "args": {
+        "s": "abcd",
+        "a": "a",
+        "b": "a",
+        "k": 4
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

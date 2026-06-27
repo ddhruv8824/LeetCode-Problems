@@ -55,5 +55,35 @@
     "racket": "(define/contract (word-count startWords targetWords)\n  (-> (listof string?) (listof string?) exact-integer?)\n  )",
     "erlang": "-spec word_count(StartWords :: [unicode:unicode_binary()], TargetWords :: [unicode:unicode_binary()]) -> integer().\nword_count(StartWords, TargetWords) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec word_count(start_words :: [String.t], target_words :: [String.t]) :: integer\n  def word_count(start_words, target_words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "startWords": [
+          "ant",
+          "act",
+          "tack"
+        ],
+        "targetWords": [
+          "tack",
+          "act",
+          "acti"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "startWords": [
+          "ab",
+          "a"
+        ],
+        "targetWords": [
+          "abc",
+          "abcd"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

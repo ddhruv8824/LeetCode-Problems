@@ -54,5 +54,39 @@
     "racket": "(define/contract (minimum-area grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_area(Grid :: [[integer()]]) -> integer().\nminimum_area(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_area(grid :: [[integer]]) :: integer\n  def minimum_area(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

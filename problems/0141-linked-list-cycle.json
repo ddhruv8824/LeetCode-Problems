@@ -57,5 +57,70 @@
     "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc hasCycle(head *ListNode) bool {\n    \n}",
     "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val)\n#         @val = val\n#         @next = nil\n#     end\n# end\n\n# @param {ListNode} head\n# @return {Boolean}\ndef hasCycle(head)\n    \nend",
     "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(var _x: Int = 0) {\n *   var next: ListNode = null\n *   var x: Int = _x\n * }\n */\n\nobject Solution {\n    def hasCycle(head: ListNode): Boolean = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pos": 0
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "head": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pos": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "head": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pos": 5
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "head": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pos": -1
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "head": [],
+        "pos": -1
+      },
+      "expected": false
+    }
+  ]
 }

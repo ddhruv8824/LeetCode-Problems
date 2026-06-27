@@ -47,5 +47,21 @@
     "racket": "(define/contract (flower-game n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec flower_game(N :: integer(), M :: integer()) -> integer().\nflower_game(N, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec flower_game(n :: integer, m :: integer) :: integer\n  def flower_game(n, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "m": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 1,
+        "m": 1
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -62,5 +62,25 @@
     "racket": "(define/contract (square-is-white coordinates)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec square_is_white(Coordinates :: unicode:unicode_binary()) -> boolean().\nsquare_is_white(Coordinates) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec square_is_white(coordinates :: String.t) :: boolean\n  def square_is_white(coordinates) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coordinates": "a1"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "coordinates": "h3"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "coordinates": "c7"
+      },
+      "expected": false
+    }
+  ]
 }

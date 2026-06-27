@@ -56,5 +56,42 @@
     "scala": "object Solution {\n    def stoneGameVIII(stones: Array[Int]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn stone_game_viii(stones: Vec<i32>) -> i32 {\n        \n    }\n}",
     "racket": "(define/contract (stone-game-viii stones)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          -1,
+          2,
+          -3,
+          4,
+          -5
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "stones": [
+          7,
+          -6,
+          5,
+          10,
+          5,
+          -2,
+          -6
+        ]
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "stones": [
+          -10,
+          -12
+        ]
+      },
+      "expected": -22
+    }
+  ]
 }

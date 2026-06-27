@@ -53,5 +53,25 @@
     "racket": "(define/contract (reverse-words s)\n  (-> string? string?)\n  )",
     "erlang": "-spec reverse_words(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreverse_words(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reverse_words(s :: String.t) :: String.t\n  def reverse_words(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "the sky is blue"
+      },
+      "expected": "blue is sky the"
+    },
+    {
+      "args": {
+        "s": "  hello world  "
+      },
+      "expected": "world hello"
+    },
+    {
+      "args": {
+        "s": "a good   example"
+      },
+      "expected": "example good a"
+    }
+  ]
 }

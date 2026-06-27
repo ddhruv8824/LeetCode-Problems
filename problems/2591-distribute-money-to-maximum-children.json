@@ -50,5 +50,21 @@
     "racket": "(define/contract (dist-money money children)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec dist_money(Money :: integer(), Children :: integer()) -> integer().\ndist_money(Money, Children) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec dist_money(money :: integer, children :: integer) :: integer\n  def dist_money(money, children) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "money": 20,
+        "children": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "money": 16,
+        "children": 2
+      },
+      "expected": 2
+    }
+  ]
 }

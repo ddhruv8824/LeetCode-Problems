@@ -53,5 +53,39 @@
     "racket": "(define/contract (longest-common-prefix words)\n  (-> (listof string?) (listof exact-integer?))\n  )",
     "erlang": "-spec longest_common_prefix(Words :: [unicode:unicode_binary()]) -> [integer()].\nlongest_common_prefix(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_common_prefix(words :: [String.t]) :: [integer]\n  def longest_common_prefix(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "jump",
+          "run",
+          "run",
+          "jump",
+          "run"
+        ]
+      },
+      "expected": [
+        3,
+        0,
+        0,
+        3,
+        3
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "dog",
+          "racer",
+          "car"
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

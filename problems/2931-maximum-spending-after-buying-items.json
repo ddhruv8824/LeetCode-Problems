@@ -55,5 +55,50 @@
     "racket": "(define/contract (max-spending values)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_spending(Values :: [[integer()]]) -> integer().\nmax_spending(Values) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_spending(values :: [[integer]]) :: integer\n  def max_spending(values) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "values": [
+          [
+            8,
+            5,
+            2
+          ],
+          [
+            6,
+            4,
+            1
+          ],
+          [
+            9,
+            7,
+            3
+          ]
+        ]
+      },
+      "expected": 285
+    },
+    {
+      "args": {
+        "values": [
+          [
+            10,
+            8,
+            6,
+            4,
+            2
+          ],
+          [
+            9,
+            7,
+            5,
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": 386
+    }
+  ]
 }

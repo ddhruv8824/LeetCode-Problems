@@ -70,5 +70,96 @@
     "racket": "(define/contract (maximum-sum-queries nums1 nums2 queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec maximum_sum_queries(Nums1 :: [integer()], Nums2 :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmaximum_sum_queries(Nums1, Nums2, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_sum_queries(nums1 :: [integer], nums2 :: [integer], queries :: [[integer]]) :: [integer]\n  def maximum_sum_queries(nums1, nums2, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          4,
+          3,
+          1,
+          2
+        ],
+        "nums2": [
+          2,
+          4,
+          9,
+          5
+        ],
+        "queries": [
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        6,
+        10,
+        7
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          3,
+          2,
+          5
+        ],
+        "nums2": [
+          2,
+          3,
+          4
+        ],
+        "queries": [
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          1
+        ],
+        "nums2": [
+          2,
+          3
+        ],
+        "queries": [
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        -1
+      ]
+    }
+  ]
 }

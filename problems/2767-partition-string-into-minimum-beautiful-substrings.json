@@ -57,5 +57,25 @@
     "racket": "(define/contract (minimum-beautiful-substrings s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_beautiful_substrings(S :: unicode:unicode_binary()) -> integer().\nminimum_beautiful_substrings(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_beautiful_substrings(s :: String.t) :: integer\n  def minimum_beautiful_substrings(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1011"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "111"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "0"
+      },
+      "expected": -1
+    }
+  ]
 }

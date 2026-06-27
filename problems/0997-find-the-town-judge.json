@@ -57,5 +57,113 @@
     "racket": "(define/contract (find-judge n trust)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec find_judge(N :: integer(), Trust :: [[integer()]]) -> integer().\nfind_judge(N, Trust) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_judge(n :: integer, trust :: [[integer]]) :: integer\n  def find_judge(n, trust) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "trust": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3,
+        "trust": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "trust": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "n": 3,
+        "trust": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "n": 4,
+        "trust": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 1,
+        "trust": []
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 0,
+        "trust": []
+      },
+      "expected": -1
+    }
+  ]
 }

@@ -55,5 +55,40 @@
     "racket": "(define/contract (count-partitions nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_partitions(Nums :: [integer()]) -> integer().\ncount_partitions(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_partitions(nums :: [integer]) :: integer\n  def count_partitions(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          10,
+          3,
+          7,
+          6
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          6,
+          8
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

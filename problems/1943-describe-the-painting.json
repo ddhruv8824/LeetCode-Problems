@@ -66,5 +66,121 @@
     "racket": "(define/contract (split-painting segments)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec split_painting(Segments :: [[integer()]]) -> [[integer()]].\nsplit_painting(Segments) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec split_painting(segments :: [[integer]]) :: [[integer]]\n  def split_painting(segments) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "segments": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            4,
+            7,
+            7
+          ],
+          [
+            1,
+            7,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          4,
+          14
+        ],
+        [
+          4,
+          7,
+          16
+        ]
+      ]
+    },
+    {
+      "args": {
+        "segments": [
+          [
+            1,
+            7,
+            9
+          ],
+          [
+            6,
+            8,
+            15
+          ],
+          [
+            8,
+            10,
+            7
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          6,
+          9
+        ],
+        [
+          6,
+          7,
+          24
+        ],
+        [
+          7,
+          8,
+          15
+        ],
+        [
+          8,
+          10,
+          7
+        ]
+      ]
+    },
+    {
+      "args": {
+        "segments": [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            4,
+            7
+          ],
+          [
+            4,
+            7,
+            1
+          ],
+          [
+            4,
+            7,
+            11
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          4,
+          12
+        ],
+        [
+          4,
+          7,
+          12
+        ]
+      ]
+    }
+  ]
 }

@@ -56,5 +56,64 @@
     "racket": "(define/contract (most-popular-creator creators ids views)\n  (-> (listof string?) (listof string?) (listof exact-integer?) (listof (listof string?)))\n  )",
     "erlang": "-spec most_popular_creator(Creators :: [unicode:unicode_binary()], Ids :: [unicode:unicode_binary()], Views :: [integer()]) -> [[unicode:unicode_binary()]].\nmost_popular_creator(Creators, Ids, Views) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_popular_creator(creators :: [String.t], ids :: [String.t], views :: [integer]) :: [[String.t]]\n  def most_popular_creator(creators, ids, views) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "creators": [
+          "alice",
+          "bob",
+          "alice",
+          "chris"
+        ],
+        "ids": [
+          "one",
+          "two",
+          "three",
+          "four"
+        ],
+        "views": [
+          5,
+          10,
+          5,
+          4
+        ]
+      },
+      "expected": [
+        [
+          "alice",
+          "one"
+        ],
+        [
+          "bob",
+          "two"
+        ]
+      ]
+    },
+    {
+      "args": {
+        "creators": [
+          "alice",
+          "alice",
+          "alice"
+        ],
+        "ids": [
+          "a",
+          "b",
+          "c"
+        ],
+        "views": [
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        [
+          "alice",
+          "b"
+        ]
+      ]
+    }
+  ]
 }

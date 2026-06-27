@@ -60,5 +60,47 @@
     "racket": "(define/contract (min-sum-of-lengths arr target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_sum_of_lengths(Arr :: [integer()], Target :: integer()) -> integer().\nmin_sum_of_lengths(Arr, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_sum_of_lengths(arr :: [integer], target :: integer) :: integer\n  def min_sum_of_lengths(arr, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          2,
+          2,
+          4,
+          3
+        ],
+        "target": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          7,
+          3,
+          4,
+          7
+        ],
+        "target": 7
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          3,
+          2,
+          6,
+          2,
+          3,
+          4
+        ],
+        "target": 6
+      },
+      "expected": -1
+    }
+  ]
 }

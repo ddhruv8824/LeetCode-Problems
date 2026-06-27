@@ -52,5 +52,33 @@
     "racket": "(define/contract (vowel-strings words left right)\n  (-> (listof string?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec vowel_strings(Words :: [unicode:unicode_binary()], Left :: integer(), Right :: integer()) -> integer().\nvowel_strings(Words, Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec vowel_strings(words :: [String.t], left :: integer, right :: integer) :: integer\n  def vowel_strings(words, left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "are",
+          "amy",
+          "u"
+        ],
+        "left": 0,
+        "right": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "hey",
+          "aeo",
+          "mu",
+          "ooo",
+          "artro"
+        ],
+        "left": 1,
+        "right": 4
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -56,5 +56,25 @@
     "racket": "(define/contract (greatest-letter s)\n  (-> string? string?)\n  )",
     "erlang": "-spec greatest_letter(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\ngreatest_letter(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec greatest_letter(s :: String.t) :: String.t\n  def greatest_letter(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "lEeTcOdE"
+      },
+      "expected": "E"
+    },
+    {
+      "args": {
+        "s": "arRAzFif"
+      },
+      "expected": "R"
+    },
+    {
+      "args": {
+        "s": "AbCdEfGhIjK"
+      },
+      "expected": ""
+    }
+  ]
 }

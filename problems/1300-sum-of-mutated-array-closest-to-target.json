@@ -57,5 +57,42 @@
     "racket": "(define/contract (find-best-value arr target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_best_value(Arr :: [integer()], Target :: integer()) -> integer().\nfind_best_value(Arr, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_best_value(arr :: [integer], target :: integer) :: integer\n  def find_best_value(arr, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          4,
+          9,
+          3
+        ],
+        "target": 10
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          2,
+          3,
+          5
+        ],
+        "target": 10
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "arr": [
+          60864,
+          25176,
+          27249,
+          21296,
+          20204
+        ],
+        "target": 56803
+      },
+      "expected": 11361
+    }
+  ]
 }

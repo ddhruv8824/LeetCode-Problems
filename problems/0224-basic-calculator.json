@@ -59,5 +59,37 @@
     "racket": "(define/contract (calculate s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec calculate(S :: unicode:unicode_binary()) -> integer().\ncalculate(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec calculate(s :: String.t) :: integer\n  def calculate(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1 + 1"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": " 2-1 + 2 "
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "(1+(4+5+2)-3)+(6+8)"
+      },
+      "expected": 23
+    },
+    {
+      "args": {
+        "s": "(1-(2-3))"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "(1-(2-(3-4)))"
+      },
+      "expected": -2
+    }
+  ]
 }

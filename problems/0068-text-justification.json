@@ -56,5 +56,77 @@
     "racket": "(define/contract (full-justify words maxWidth)\n  (-> (listof string?) exact-integer? (listof string?))\n  )",
     "erlang": "-spec full_justify(Words :: [unicode:unicode_binary()], MaxWidth :: integer()) -> [unicode:unicode_binary()].\nfull_justify(Words, MaxWidth) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec full_justify(words :: [String.t], max_width :: integer) :: [String.t]\n  def full_justify(words, max_width) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "This",
+          "is",
+          "an",
+          "example",
+          "of",
+          "text",
+          "justification."
+        ],
+        "maxWidth": 16
+      },
+      "expected": [
+        "This    is    an",
+        "example  of text",
+        "justification.  "
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "What",
+          "must",
+          "be",
+          "acknowledgment",
+          "shall",
+          "be"
+        ],
+        "maxWidth": 16
+      },
+      "expected": [
+        "What   must   be",
+        "acknowledgment  ",
+        "shall be        "
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "Science",
+          "is",
+          "what",
+          "we",
+          "understand",
+          "well",
+          "enough",
+          "to",
+          "explain",
+          "to",
+          "a",
+          "computer.",
+          "Art",
+          "is",
+          "everything",
+          "else",
+          "we",
+          "do"
+        ],
+        "maxWidth": 20
+      },
+      "expected": [
+        "Science  is  what we",
+        "understand      well",
+        "enough to explain to",
+        "a  computer.  Art is",
+        "everything  else  we",
+        "do                  "
+      ]
+    }
+  ]
 }

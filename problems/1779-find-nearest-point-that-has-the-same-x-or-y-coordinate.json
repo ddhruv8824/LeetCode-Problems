@@ -54,5 +54,62 @@
     "racket": "(define/contract (nearest-valid-point x y points)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec nearest_valid_point(X :: integer(), Y :: integer(), Points :: [[integer()]]) -> integer().\nnearest_valid_point(X, Y, Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nearest_valid_point(x :: integer, y :: integer, points :: [[integer]]) :: integer\n  def nearest_valid_point(x, y, points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 3,
+        "y": 4,
+        "points": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "x": 3,
+        "y": 4,
+        "points": [
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "x": 3,
+        "y": 4,
+        "points": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

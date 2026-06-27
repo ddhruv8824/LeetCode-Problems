@@ -55,5 +55,29 @@
     "racket": "(define/contract (find-minimum-time strength k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_minimum_time(Strength :: [integer()], K :: integer()) -> integer().\nfind_minimum_time(Strength, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_minimum_time(strength :: [integer], k :: integer) :: integer\n  def find_minimum_time(strength, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strength": [
+          3,
+          4,
+          1
+        ],
+        "k": 1
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "strength": [
+          2,
+          5,
+          4
+        ],
+        "k": 2
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -56,5 +56,31 @@
     "racket": "(define/contract (can-convert-string s t k)\n  (-> string? string? exact-integer? boolean?)\n  )",
     "erlang": "-spec can_convert_string(S :: unicode:unicode_binary(), T :: unicode:unicode_binary(), K :: integer()) -> boolean().\ncan_convert_string(S, T, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_convert_string(s :: String.t, t :: String.t, k :: integer) :: boolean\n  def can_convert_string(s, t, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "input",
+        "t": "ouput",
+        "k": 9
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abc",
+        "t": "bcd",
+        "k": 10
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "aab",
+        "t": "bbb",
+        "k": 27
+      },
+      "expected": true
+    }
+  ]
 }

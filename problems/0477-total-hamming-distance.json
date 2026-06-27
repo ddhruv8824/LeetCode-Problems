@@ -49,5 +49,27 @@
     "racket": "(define/contract (total-hamming-distance nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec total_hamming_distance(Nums :: [integer()]) -> integer().\ntotal_hamming_distance(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_hamming_distance(nums :: [integer]) :: integer\n  def total_hamming_distance(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          14,
+          2
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          14,
+          4
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

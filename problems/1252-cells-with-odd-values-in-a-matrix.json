@@ -59,5 +59,41 @@
     "racket": "(define/contract (odd-cells m n indices)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec odd_cells(M :: integer(), N :: integer(), Indices :: [[integer()]]) -> integer().\nodd_cells(M, N, Indices) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec odd_cells(m :: integer, n :: integer, indices :: [[integer]]) :: integer\n  def odd_cells(m, n, indices) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 2,
+        "n": 3,
+        "indices": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "m": 2,
+        "n": 2,
+        "indices": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

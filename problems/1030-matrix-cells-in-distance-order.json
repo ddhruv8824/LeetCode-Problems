@@ -56,5 +56,103 @@
     "racket": "(define/contract (all-cells-dist-order rows cols rCenter cCenter)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec all_cells_dist_order(Rows :: integer(), Cols :: integer(), RCenter :: integer(), CCenter :: integer()) -> [[integer()]].\nall_cells_dist_order(Rows, Cols, RCenter, CCenter) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec all_cells_dist_order(rows :: integer, cols :: integer, r_center :: integer, c_center :: integer) :: [[integer]]\n  def all_cells_dist_order(rows, cols, r_center, c_center) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "R": 1,
+        "C": 2,
+        "r0": 0,
+        "c0": 0
+      },
+      "expected": [
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "args": {
+        "R": 2,
+        "C": 2,
+        "r0": 0,
+        "c0": 1
+      },
+      "expected": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "args": {
+        "R": 2,
+        "C": 3,
+        "r0": 1,
+        "c0": 2
+      },
+      "expected": [
+        [
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  ]
 }

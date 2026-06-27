@@ -59,5 +59,65 @@
     "racket": "(define/contract (find-intersection-values nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_intersection_values(Nums1 :: [integer()], Nums2 :: [integer()]) -> [integer()].\nfind_intersection_values(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_intersection_values(nums1 :: [integer], nums2 :: [integer]) :: [integer]\n  def find_intersection_values(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          2,
+          3,
+          2
+        ],
+        "nums2": [
+          1,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          4,
+          3,
+          2,
+          3,
+          1
+        ],
+        "nums2": [
+          2,
+          2,
+          5,
+          2,
+          3,
+          6
+        ]
+      },
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums1": [
+          3,
+          4,
+          2,
+          3
+        ],
+        "nums2": [
+          1,
+          5
+        ]
+      },
+      "expected": [
+        0,
+        0
+      ]
+    }
+  ]
 }

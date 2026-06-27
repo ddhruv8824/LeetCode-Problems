@@ -50,5 +50,19 @@
     "racket": "(define/contract (split-num num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec split_num(Num :: integer()) -> integer().\nsplit_num(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec split_num(num :: integer) :: integer\n  def split_num(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 4325
+      },
+      "expected": 59
+    },
+    {
+      "args": {
+        "num": 687
+      },
+      "expected": 75
+    }
+  ]
 }

@@ -24,5 +24,144 @@
   "code_snippets": {
     "pythondata": "import pandas as pd\n\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\n    "
   },
-  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nList the names of animals that weigh strictly more than 100 kilograms, sorted by weight in descending order.\n\n**Key Concepts:**\n\n1. **DataFrame Manipulation with pandas**:\n    - **DataFrame**: A two-dimensional, size-mutable, and heterogeneous tabular data structure from the pandas library. Allows for various operations like filtering, sorting, and column selection.\n    \n2. **Filtering Data**:\n    - **Boolean Indexing**: Using boolean conditions to filter rows from a DataFrame. In this problem, we use this technique to select animals that weigh more than 100 kilograms.\n\n3. **Sorting Data**:\n    - **sort_values() Method**: A pandas DataFrame method used to sort the data based on one or more columns. In this problem, we sort the animals by their weight in descending order.\n\n4. **Column Selection**:\n    - **Subset Selection**: After filtering and sorting, we select a subset of columns from the DataFrame. In this case, we choose only the 'name' column to produce the final list of animal names.\n\n5. **Method Chaining**:\n    - **Chaining Operations**: Performing multiple operations on a DataFrame in a single line by connecting methods with dots. This is a powerful feature in pandas, which can make code concise but might be complex to read for newcomers.\n\n6. **Python Functions**:\n    - **Function Definition**: We define a function `findHeavyAnimals` to encapsulate our solution and make it reusable. This function takes a DataFrame as an argument and returns another DataFrame as a result.\n### Intuition\n\nIn the following implementation guide we begin with the initial given DataFrame `animals`:namespeciesageweightTatianaSnake98464KhaledGiraffe5041AlexLeopard6328JonathanMonkey45463StefanBear10050TommyPanda26349**Method Chaining Explanation**:\n\n1. **Filtering Operation**:\n   We begin by filtering the animals that weigh more than 100 kilograms.\n   ```python\n   filtered_animals = animals[animals['weight'] > 100]\n   ```\n - `animals['weight'] > 100`: This is a boolean indexing operation. For each row in the DataFrame, it checks if the value in the `weight` column is greater than 100. This produces a boolean (`True` or `False`) series.\n - `animals[...]`: By placing our boolean series inside the DataFrame's indexing brackets, we filter out the rows where the condition is `True`.\n- After this operation, only rows with animals weighing more than 100 kilograms remain in our DataFrame.namespeciesageweightTatianaSnake98464AlexLeopard6328JonathanMonkey45463TommyPanda263492. **Sorting Operation**:\n   Next, we sort these animals based on their weight in descending order.\n   ```python\n   sorted_animals = filtered_animals.sort_values(by='weight', ascending=False)\n   ```\n - `sort_values()`: This is a method applied to DataFrames that allows for sorting based on column values.\n - `by='weight'`: We specify that we want to sort based on the `weight` column.\n - `ascending=False`: By setting this argument to `False`, we indicate that we want the sorting to be in descending order (from the heaviest to lightest).namespeciesageweightTatianaSnake98464JonathanMonkey45463TommyPanda26349AlexLeopard63283. **Selecting the `name` column**:\n   Finally, from the sorted DataFrame, we select only the names.\n   ```python\n   names = sorted_animals[['name']]\n   ```\n - After sorting the rows based on the weight, we're only interested in the `name` column for our final result. By using double square brackets `[['name']]`, we select only this column. The double brackets ensure that the result is a DataFrame and not a Series.nameTatianaJonathanTommyAlex**Visualization of Steps 1-3:**\n![fig](../Figures/3307/3307-1.png)\n\nThe below code approaches the problem without method chaining. \n```python\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\n    filtered_animals = animals[animals['weight'] > 100]\n    sorted_animals = filtered_animals.sort_values(by='weight', ascending=False)\n    names = sorted_animals[['name']]\n    return names\n```\n\nMethod chaining is useful for creating concise code, but it's crucial to understand each step in the chain for debugging or further development.\n\n### Implementation"
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nList the names of animals that weigh strictly more than 100 kilograms, sorted by weight in descending order.\n\n**Key Concepts:**\n\n1. **DataFrame Manipulation with pandas**:\n    - **DataFrame**: A two-dimensional, size-mutable, and heterogeneous tabular data structure from the pandas library. Allows for various operations like filtering, sorting, and column selection.\n    \n2. **Filtering Data**:\n    - **Boolean Indexing**: Using boolean conditions to filter rows from a DataFrame. In this problem, we use this technique to select animals that weigh more than 100 kilograms.\n\n3. **Sorting Data**:\n    - **sort_values() Method**: A pandas DataFrame method used to sort the data based on one or more columns. In this problem, we sort the animals by their weight in descending order.\n\n4. **Column Selection**:\n    - **Subset Selection**: After filtering and sorting, we select a subset of columns from the DataFrame. In this case, we choose only the 'name' column to produce the final list of animal names.\n\n5. **Method Chaining**:\n    - **Chaining Operations**: Performing multiple operations on a DataFrame in a single line by connecting methods with dots. This is a powerful feature in pandas, which can make code concise but might be complex to read for newcomers.\n\n6. **Python Functions**:\n    - **Function Definition**: We define a function `findHeavyAnimals` to encapsulate our solution and make it reusable. This function takes a DataFrame as an argument and returns another DataFrame as a result.\n### Intuition\n\nIn the following implementation guide we begin with the initial given DataFrame `animals`:namespeciesageweightTatianaSnake98464KhaledGiraffe5041AlexLeopard6328JonathanMonkey45463StefanBear10050TommyPanda26349**Method Chaining Explanation**:\n\n1. **Filtering Operation**:\n   We begin by filtering the animals that weigh more than 100 kilograms.\n   ```python\n   filtered_animals = animals[animals['weight'] > 100]\n   ```\n - `animals['weight'] > 100`: This is a boolean indexing operation. For each row in the DataFrame, it checks if the value in the `weight` column is greater than 100. This produces a boolean (`True` or `False`) series.\n - `animals[...]`: By placing our boolean series inside the DataFrame's indexing brackets, we filter out the rows where the condition is `True`.\n- After this operation, only rows with animals weighing more than 100 kilograms remain in our DataFrame.namespeciesageweightTatianaSnake98464AlexLeopard6328JonathanMonkey45463TommyPanda263492. **Sorting Operation**:\n   Next, we sort these animals based on their weight in descending order.\n   ```python\n   sorted_animals = filtered_animals.sort_values(by='weight', ascending=False)\n   ```\n - `sort_values()`: This is a method applied to DataFrames that allows for sorting based on column values.\n - `by='weight'`: We specify that we want to sort based on the `weight` column.\n - `ascending=False`: By setting this argument to `False`, we indicate that we want the sorting to be in descending order (from the heaviest to lightest).namespeciesageweightTatianaSnake98464JonathanMonkey45463TommyPanda26349AlexLeopard63283. **Selecting the `name` column**:\n   Finally, from the sorted DataFrame, we select only the names.\n   ```python\n   names = sorted_animals[['name']]\n   ```\n - After sorting the rows based on the weight, we're only interested in the `name` column for our final result. By using double square brackets `[['name']]`, we select only this column. The double brackets ensure that the result is a DataFrame and not a Series.nameTatianaJonathanTommyAlex**Visualization of Steps 1-3:**\n![fig](../Figures/3307/3307-1.png)\n\nThe below code approaches the problem without method chaining. \n```python\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\n    filtered_animals = animals[animals['weight'] > 100]\n    sorted_animals = filtered_animals.sort_values(by='weight', ascending=False)\n    names = sorted_animals[['name']]\n    return names\n```\n\nMethod chaining is useful for creating concise code, but it's crucial to understand each step in the chain for debugging or further development.\n\n### Implementation",
+  "test_cases": [
+    {
+      "args": {
+        "animals": [
+          {
+            "name": "Tatiana",
+            "species": "Snake",
+            "age": 98,
+            "weight": 464
+          },
+          {
+            "name": "Khaled",
+            "species": "Giraffe",
+            "age": 50,
+            "weight": 41
+          },
+          {
+            "name": "Alex",
+            "species": "Leopard",
+            "age": 6,
+            "weight": 328
+          },
+          {
+            "name": "Jonathan",
+            "species": "Monkey",
+            "age": 45,
+            "weight": 463
+          },
+          {
+            "name": "Stefan",
+            "species": "Bear",
+            "age": 100,
+            "weight": 50
+          },
+          {
+            "name": "Tommy",
+            "species": "Panda",
+            "age": 26,
+            "weight": 349
+          }
+        ]
+      },
+      "expected": [
+        "Tatiana",
+        "Jonathan",
+        "Tommy",
+        "Alex"
+      ]
+    },
+    {
+      "args": {
+        "animals": [
+          {
+            "name": "Lion",
+            "species": "Mammal",
+            "age": 10,
+            "weight": 250
+          },
+          {
+            "name": "Tiger",
+            "species": "Mammal",
+            "age": 8,
+            "weight": 200
+          },
+          {
+            "name": "Elephant",
+            "species": "Mammal",
+            "age": 20,
+            "weight": 5000
+          },
+          {
+            "name": "Giraffe",
+            "species": "Mammal",
+            "age": 15,
+            "weight": 800
+          }
+        ]
+      },
+      "expected": [
+        "Elephant",
+        "Giraffe",
+        "Lion"
+      ]
+    },
+    {
+      "args": {
+        "animals": [
+          {
+            "name": "Dog",
+            "species": "Mammal",
+            "age": 5,
+            "weight": 20
+          },
+          {
+            "name": "Cat",
+            "species": "Mammal",
+            "age": 3,
+            "weight": 10
+          },
+          {
+            "name": "Bird",
+            "species": "Bird",
+            "age": 2,
+            "weight": 1
+          }
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "animals": [
+          {
+            "name": "Horse",
+            "species": "Mammal",
+            "age": 10,
+            "weight": 500
+          },
+          {
+            "name": "Cow",
+            "species": "Mammal",
+            "age": 8,
+            "weight": 400
+          },
+          {
+            "name": "Pig",
+            "species": "Mammal",
+            "age": 5,
+            "weight": 300
+          }
+        ]
+      },
+      "expected": [
+        "Horse",
+        "Cow",
+        "Pig"
+      ]
+    }
+  ]
 }

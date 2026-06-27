@@ -56,5 +56,88 @@
     "racket": "(define/contract (merge-triplets triplets target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec merge_triplets(Triplets :: [[integer()]], Target :: [integer()]) -> boolean().\nmerge_triplets(Triplets, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec merge_triplets(triplets :: [[integer]], target :: [integer]) :: boolean\n  def merge_triplets(triplets, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "triplets": [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            1,
+            8,
+            4
+          ],
+          [
+            1,
+            7,
+            5
+          ]
+        ],
+        "target": [
+          2,
+          7,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "triplets": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        "target": [
+          3,
+          2,
+          5
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "triplets": [
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            5,
+            2,
+            3
+          ]
+        ],
+        "target": [
+          5,
+          5,
+          5
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

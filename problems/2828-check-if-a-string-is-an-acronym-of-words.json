@@ -56,5 +56,42 @@
     "racket": "(define/contract (is-acronym words s)\n  (-> (listof string?) string? boolean?)\n  )",
     "erlang": "-spec is_acronym(Words :: [unicode:unicode_binary()], S :: unicode:unicode_binary()) -> boolean().\nis_acronym(Words, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_acronym(words :: [String.t], s :: String.t) :: boolean\n  def is_acronym(words, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "alice",
+          "bob",
+          "charlie"
+        ],
+        "s": "abc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "words": [
+          "an",
+          "apple"
+        ],
+        "s": "a"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "words": [
+          "never",
+          "gonna",
+          "give",
+          "up",
+          "on",
+          "you"
+        ],
+        "s": "ngguoy"
+      },
+      "expected": true
+    }
+  ]
 }

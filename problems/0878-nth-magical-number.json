@@ -47,5 +47,23 @@
     "racket": "(define/contract (nth-magical-number n a b)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec nth_magical_number(N :: integer(), A :: integer(), B :: integer()) -> integer().\nnth_magical_number(N, A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nth_magical_number(n :: integer, a :: integer, b :: integer) :: integer\n  def nth_magical_number(n, a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1,
+        "a": 2,
+        "b": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 4,
+        "a": 2,
+        "b": 3
+      },
+      "expected": 6
+    }
+  ]
 }

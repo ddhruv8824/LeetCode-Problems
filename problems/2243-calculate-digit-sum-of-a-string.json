@@ -50,5 +50,21 @@
     "racket": "(define/contract (digit-sum s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec digit_sum(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ndigit_sum(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec digit_sum(s :: String.t, k :: integer) :: String.t\n  def digit_sum(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "11111222223",
+        "k": 3
+      },
+      "expected": "135"
+    },
+    {
+      "args": {
+        "s": "00000000",
+        "k": 3
+      },
+      "expected": "000"
+    }
+  ]
 }

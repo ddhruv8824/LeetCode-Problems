@@ -55,5 +55,80 @@
     "racket": "(define/contract (maximum-subarray-xor nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec maximum_subarray_xor(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmaximum_subarray_xor(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_subarray_xor(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def maximum_subarray_xor(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          8,
+          4,
+          32,
+          16,
+          1
+        ],
+        "queries": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        12,
+        60,
+        60
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          7,
+          3,
+          2,
+          8,
+          5,
+          1
+        ],
+        "queries": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        7,
+        14,
+        11,
+        14,
+        5
+      ]
+    }
+  ]
 }

@@ -61,5 +61,91 @@
     "racket": "(define/contract (min-rectangles-to-cover-points points w)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_rectangles_to_cover_points(Points :: [[integer()]], W :: integer()) -> integer().\nmin_rectangles_to_cover_points(Points, W) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_rectangles_to_cover_points(points :: [[integer]], w :: integer) :: integer\n  def min_rectangles_to_cover_points(points, w) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "w": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "w": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "points": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "w": 0
+      },
+      "expected": 2
+    }
+  ]
 }

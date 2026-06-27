@@ -49,5 +49,34 @@
     "ruby": "# @param {Integer[]} stones\n# @return {Integer}\ndef stone_game_vii(stones)\n    \nend",
     "scala": "object Solution {\n    def stoneGameVII(stones: Array[Int]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn stone_game_vii(stones: Vec<i32>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          5,
+          3,
+          1,
+          4,
+          2
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "stones": [
+          7,
+          90,
+          5,
+          1,
+          100,
+          10,
+          10,
+          2
+        ]
+      },
+      "expected": 122
+    }
+  ]
 }

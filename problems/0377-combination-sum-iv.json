@@ -51,5 +51,18 @@
     "racket": "(define/contract (combination-sum4 nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec combination_sum4(Nums :: [integer()], Target :: integer()) -> integer().\ncombination_sum4(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec combination_sum4(nums :: [integer], target :: integer) :: integer\n  def combination_sum4(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "target": 4
+      },
+      "expected": 7
+    }
+  ]
 }

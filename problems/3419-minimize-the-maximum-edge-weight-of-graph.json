@@ -73,5 +73,153 @@
     "racket": "(define/contract (min-max-weight n edges threshold)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_max_weight(N :: integer(), Edges :: [[integer()]], Threshold :: integer()) -> integer().\nmin_max_weight(N, Edges, Threshold) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_max_weight(n :: integer, edges :: [[integer]], threshold :: integer) :: integer\n  def min_max_weight(n, edges, threshold) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            4,
+            3,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "threshold": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ]
+        ],
+        "threshold": 1
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ],
+        "threshold": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ],
+        "threshold": 1
+      },
+      "expected": -1
+    }
+  ]
 }

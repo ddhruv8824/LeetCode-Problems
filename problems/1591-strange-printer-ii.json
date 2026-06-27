@@ -64,5 +64,91 @@
     "racket": "(define/contract (is-printable targetGrid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec is_printable(TargetGrid :: [[integer()]]) -> boolean().\nis_printable(TargetGrid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_printable(target_grid :: [[integer]]) :: boolean\n  def is_printable(target_grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "targetGrid": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "targetGrid": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            3,
+            3
+          ],
+          [
+            1,
+            1,
+            3,
+            4
+          ],
+          [
+            5,
+            5,
+            1,
+            4
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "targetGrid": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

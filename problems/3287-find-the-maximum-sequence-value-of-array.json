@@ -51,5 +51,31 @@
     "racket": "(define/contract (max-value nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_value(Nums :: [integer()], K :: integer()) -> integer().\nmax_value(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_value(nums :: [integer], k :: integer) :: integer\n  def max_value(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          6,
+          7
+        ],
+        "k": 1
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          5,
+          6,
+          7
+        ],
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

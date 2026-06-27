@@ -58,5 +58,79 @@
     "racket": "(define/contract (min-trio-degree n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec min_trio_degree(N :: integer(), Edges :: [[integer()]]) -> integer().\nmin_trio_degree(N, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_trio_degree(n :: integer, edges :: [[integer]]) :: integer\n  def min_trio_degree(n, edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

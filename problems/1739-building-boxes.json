@@ -61,5 +61,25 @@
     "racket": "(define/contract (minimum-boxes n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_boxes(N :: integer()) -> integer().\nminimum_boxes(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_boxes(n :: integer) :: integer\n  def minimum_boxes(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 6
+    }
+  ]
 }

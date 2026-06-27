@@ -56,5 +56,39 @@
     "racket": "(define/contract (max-sum-div-three nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_sum_div_three(Nums :: [integer()]) -> integer().\nmax_sum_div_three(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_sum_div_three(nums :: [integer]) :: integer\n  def max_sum_div_three(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          5,
+          1,
+          8
+        ]
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "nums": [
+          4
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          4
+        ]
+      },
+      "expected": 12
+    }
+  ]
 }

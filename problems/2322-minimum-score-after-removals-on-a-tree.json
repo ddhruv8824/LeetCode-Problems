@@ -63,5 +63,72 @@
     "erlang": "-spec minimum_score(Nums :: [integer()], Edges :: [[integer()]]) -> integer().\nminimum_score(Nums, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_score(nums :: [integer], edges :: [[integer]]) :: integer\n  def minimum_score(nums, edges) do\n    \n  end\nend"
   },
-  "solution": "### Approach 1: Double $\\text{DFS}$ to Partition Connected Components\n\n#### Intuition\n\nThe problem asks us to remove two edges from the tree, calculate the XOR value of each of the three connected components formed, and then compute the minimum score using a given scoring method.\n\nWe begin by using depth-first search ($\\text{DFS}$) to traverse the entire tree. Suppose we have traversed to node $x$. After deleting the edge between $x$ and its parent node $f$, the subtree rooted at $x$ becomes one of the three final parts. Next, we treat $f$ as the root and run another $\\text{DFS}$ on the remaining part. In this remaining tree, we can try deleting another edge and obtain the resulting three parts. But how do we calculate the XOR value for each of these parts?\n\n1. For the first part, the XOR value of the subtree rooted at $x$ can be computed during the first $\\text{DFS}$.\n2. For the second part, during the second $\\text{DFS}$ (with $f$ as the root), we traverse down to a node $x'$. The XOR of the subtree rooted at $x'$ can also be computed while backtracking.\n3. For the third part, we can simply take the XOR of the entire tree and remove the contributions from the first and second parts. This is computed as:\n   $\\text{Total XOR} \\oplus \\text{Part 1 XOR} \\oplus \\text{Part 2 XOR}$\n\nEnumerate all the edge deletion plans and find the minimum score.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of nodes in the tree.\n\n- Time complexity: $O(n^2)$.\n  \n  The initial $\\text{DFS}$ runs in $O(n)$ time. Then, for each pair of nodes, we check their ancestor-descendant relationship and compute XOR values. This takes $O(n^2)$ time overall.\n\n- Space complexity: $O(n)$.\n  \n  We use $O(n)$ space to store the tree structure, DFS traversal order arrays, and subtree XOR values.\n\n---\n\n### Approach 2: Enumerate Based on $\\text{DFS}$ Order\n\n#### Intuition\n\nIn Approach 1, we used a double $\\text{DFS}$ strategy to enumerate all possible ways to partition the tree into three parts and compute the XOR of each. In Approach 2, we only need a single $\\text{DFS}$. The key observation is that a preorder DFS traversal has a useful property: the subtree of any node is traversed immediately after that node itself.\n\nWe use two arrays:\n- $\\textit{in}[x]$ records the time when the traversal first enters node $x$.\n- $\\textit{out}[x]$ records the time when the entire subtree rooted at $x$ has been completely visited.\n\nWith this structure, we can determine ancestor-descendant relationships:\nIf node $x$ is an ancestor of node $y$, then it must satisfy $\\textit{in}[x] < \\textit{in}[y] < \\textit{out}[x].$\n\nWe also compute an array $\\textit{sum}[x]$ to store the XOR value of the entire subtree rooted at node $x$. Once we have completed this DFS and recorded all necessary information, we can simply enumerate all pairs of non-root nodes $u$ and $v$ and remove the edges between each and its parent.\n\nThen, based on the relative position of $u$ and $v$ in the tree (i.e., ancestor-descendant or independent), we calculate the XOR values of the three resulting parts as follows:\n\n1. If $u$ is an ancestor of $v$:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[u]$\n- Second part: $\\textit{sum}[u] \\oplus \\textit{sum}[v]$\n- Third part: $\\textit{sum}[v]$\n\n2. If $v$ is an ancestor of $u$:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[v]$\n- Second part: $\\textit{sum}[v] \\oplus \\textit{sum}[u]$\n- Third part: $\\textit{sum}[u]$\n\n3. If $u$ and $v$ are not ancestors of each other:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[u] \\oplus \\textit{sum}[v]$\n- Second part: $\\textit{sum}[u]$\n- Third part: $\\textit{sum}[v]$\n\nWe evaluate the score for each such division and return the minimum one.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of nodes in the tree.\n\n- Time complexity: $O(n^2)$.\n  \n  The depth-first search ($\\text{DFS}$) traversal takes $O(n)$ time. After the DFS, we enumerate all pairs of nodes, which requires $O(n^2)$ time. Therefore, the overall time complexity is $O(n^2)$.\n\n- Space complexity: $O(n)$.\n  \n  We use $O(n)$ space to store the adjacency list of the graph, as well as auxiliary arrays such as `in`, `out`, and `sum` used during DFS traversal."
+  "solution": "### Approach 1: Double $\\text{DFS}$ to Partition Connected Components\n\n#### Intuition\n\nThe problem asks us to remove two edges from the tree, calculate the XOR value of each of the three connected components formed, and then compute the minimum score using a given scoring method.\n\nWe begin by using depth-first search ($\\text{DFS}$) to traverse the entire tree. Suppose we have traversed to node $x$. After deleting the edge between $x$ and its parent node $f$, the subtree rooted at $x$ becomes one of the three final parts. Next, we treat $f$ as the root and run another $\\text{DFS}$ on the remaining part. In this remaining tree, we can try deleting another edge and obtain the resulting three parts. But how do we calculate the XOR value for each of these parts?\n\n1. For the first part, the XOR value of the subtree rooted at $x$ can be computed during the first $\\text{DFS}$.\n2. For the second part, during the second $\\text{DFS}$ (with $f$ as the root), we traverse down to a node $x'$. The XOR of the subtree rooted at $x'$ can also be computed while backtracking.\n3. For the third part, we can simply take the XOR of the entire tree and remove the contributions from the first and second parts. This is computed as:\n   $\\text{Total XOR} \\oplus \\text{Part 1 XOR} \\oplus \\text{Part 2 XOR}$\n\nEnumerate all the edge deletion plans and find the minimum score.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of nodes in the tree.\n\n- Time complexity: $O(n^2)$.\n  \n  The initial $\\text{DFS}$ runs in $O(n)$ time. Then, for each pair of nodes, we check their ancestor-descendant relationship and compute XOR values. This takes $O(n^2)$ time overall.\n\n- Space complexity: $O(n)$.\n  \n  We use $O(n)$ space to store the tree structure, DFS traversal order arrays, and subtree XOR values.\n\n---\n\n### Approach 2: Enumerate Based on $\\text{DFS}$ Order\n\n#### Intuition\n\nIn Approach 1, we used a double $\\text{DFS}$ strategy to enumerate all possible ways to partition the tree into three parts and compute the XOR of each. In Approach 2, we only need a single $\\text{DFS}$. The key observation is that a preorder DFS traversal has a useful property: the subtree of any node is traversed immediately after that node itself.\n\nWe use two arrays:\n- $\\textit{in}[x]$ records the time when the traversal first enters node $x$.\n- $\\textit{out}[x]$ records the time when the entire subtree rooted at $x$ has been completely visited.\n\nWith this structure, we can determine ancestor-descendant relationships:\nIf node $x$ is an ancestor of node $y$, then it must satisfy $\\textit{in}[x] < \\textit{in}[y] < \\textit{out}[x].$\n\nWe also compute an array $\\textit{sum}[x]$ to store the XOR value of the entire subtree rooted at node $x$. Once we have completed this DFS and recorded all necessary information, we can simply enumerate all pairs of non-root nodes $u$ and $v$ and remove the edges between each and its parent.\n\nThen, based on the relative position of $u$ and $v$ in the tree (i.e., ancestor-descendant or independent), we calculate the XOR values of the three resulting parts as follows:\n\n1. If $u$ is an ancestor of $v$:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[u]$\n- Second part: $\\textit{sum}[u] \\oplus \\textit{sum}[v]$\n- Third part: $\\textit{sum}[v]$\n\n2. If $v$ is an ancestor of $u$:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[v]$\n- Second part: $\\textit{sum}[v] \\oplus \\textit{sum}[u]$\n- Third part: $\\textit{sum}[u]$\n\n3. If $u$ and $v$ are not ancestors of each other:\n\n- First part: $\\textit{sum}[0] \\oplus \\textit{sum}[u] \\oplus \\textit{sum}[v]$\n- Second part: $\\textit{sum}[u]$\n- Third part: $\\textit{sum}[v]$\n\nWe evaluate the score for each such division and return the minimum one.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of nodes in the tree.\n\n- Time complexity: $O(n^2)$.\n  \n  The depth-first search ($\\text{DFS}$) traversal takes $O(n)$ time. After the DFS, we enumerate all pairs of nodes, which requires $O(n^2)$ time. Therefore, the overall time complexity is $O(n^2)$.\n\n- Space complexity: $O(n)$.\n  \n  We use $O(n)$ space to store the adjacency list of the graph, as well as auxiliary arrays such as `in`, `out`, and `sum` used during DFS traversal.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          5,
+          4,
+          11
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          5,
+          2,
+          4,
+          4,
+          2
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

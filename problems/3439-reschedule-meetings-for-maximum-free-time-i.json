@@ -65,5 +65,60 @@
     "erlang": "-spec max_free_time(EventTime :: integer(), K :: integer(), StartTime :: [integer()], EndTime :: [integer()]) -> integer().\nmax_free_time(EventTime, K, StartTime, EndTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_free_time(event_time :: integer, k :: integer, start_time :: [integer], end_time :: [integer]) :: integer\n  def max_free_time(event_time, k, start_time, end_time) do\n    \n  end\nend"
   },
-  "solution": "### Approach 1: Greedy + Prefix Sum\n\n#### Intuition\n\nAccording to the problem description, shifting a meeting can merge the adjacent free time periods on both sides of that meeting. Therefore, when we shift $k$ meetings, the maximum number of free time periods that can be merged is $k + 1$, this happens only when the $k$ meetings are adjacent.\n\nOnce the $k$ adjacent meetings to be shifted are fixed, let the start time of the first free time interval to be merged be $\\textit{left}$, and the end time of the last free time interval be $\\textit{right}$. Then, the total length of the merged $k + 1$ free intervals is equal to the overall time interval $\\textit{right} - \\textit{left}$ minus the total duration of the $k$ meetings.\n\nWe precompute the prefix sums $\\textit{sum}$ of the $n$ meeting durations to make it easier to compute the total duration of any $k$ adjacent meetings later. We then enumerate the rightmost meeting among the $k$ adjacent ones, denoted as $i$ (with $i \\ge k - 1$), so the $k$ meetings span the interval $[i - k + 1, i]$. For each such $i$, we compute:\n\n- The total duration of the $k$ meetings: $\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1]$\n\n- The start time of the first available time slot before the $k$ meetings:\n\n$$\n\\textit{left}_i =\n\\begin{cases}\n0 & \\text{if } i \\le k - 1 \\\\\n\\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n\\end{cases}\n$$\n\n- The end time of the last available time slot after the $k$ meetings:\n\n$$\n\\textit{right}_i =\n\\begin{cases}\n\\textit{eventTime} & \\text{if } i = n - 1 \\\\\n\\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n\\end{cases}\n$$\n\nSo the total length of the merged $k + 1$ free time intervals is:\n\n$$\n\\textit{right}_i - \\textit{left}_i - (\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1])\n$$\n\nFinally, we return the maximum value over all such computations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to save the prefix sums.\n\n### Approach 2: Greedy + Sliding Window\n\n#### Intuition\n\nIn Approach 1, we used prefix sums to efficiently calculate the total duration of $k$ consecutive meetings. Similarly, in this approach, we can use a sliding window to maintain the total duration of $k$ consecutive meetings. Specifically, we use a variable $t$ to track the total duration of meetings within the current window. For each meeting $i$, we do the following:\n\n- Add meeting $i$ to the current window by updating: $t = t + \\textit{endTime}[i] - \\textit{startTime}[i]$\n\n- As in Approach 1, compute the start and end of the merged free interval:\n  - Left boundary:\n      $$\n    \\textit{left}_i = \n    \\begin{cases}\n    0 & \\text{if } i \\le k - 1 \\\\\n    \\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n    \\end{cases}\n    $$\n   \n  - Right boundary:\n    $$\n    \\textit{right}_i =\n    \\begin{cases}\n    \\textit{eventTime} & \\text{if } i = n - 1 \\\\\n    \\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n    \\end{cases}\n    $$\n    \n- When the window reaches size $k$ (i.e., $i \\ge k - 1$), we compute the total length of the merged $k + 1$ free intervals:\n  $$\n  \\textit{right}_i - \\textit{left}_i - t\n  $$\n  \n- After that, we remove the earliest meeting in the window (meeting $i - k + 1$) to maintain the window size at most $k$: $t = t - (\\textit{endTime}[i - k + 1] - \\textit{startTime}[i - k + 1])$\n\nWe return the maximum total length of the merged free time intervals across all valid windows.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$."
+  "solution": "### Approach 1: Greedy + Prefix Sum\n\n#### Intuition\n\nAccording to the problem description, shifting a meeting can merge the adjacent free time periods on both sides of that meeting. Therefore, when we shift $k$ meetings, the maximum number of free time periods that can be merged is $k + 1$, this happens only when the $k$ meetings are adjacent.\n\nOnce the $k$ adjacent meetings to be shifted are fixed, let the start time of the first free time interval to be merged be $\\textit{left}$, and the end time of the last free time interval be $\\textit{right}$. Then, the total length of the merged $k + 1$ free intervals is equal to the overall time interval $\\textit{right} - \\textit{left}$ minus the total duration of the $k$ meetings.\n\nWe precompute the prefix sums $\\textit{sum}$ of the $n$ meeting durations to make it easier to compute the total duration of any $k$ adjacent meetings later. We then enumerate the rightmost meeting among the $k$ adjacent ones, denoted as $i$ (with $i \\ge k - 1$), so the $k$ meetings span the interval $[i - k + 1, i]$. For each such $i$, we compute:\n\n- The total duration of the $k$ meetings: $\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1]$\n\n- The start time of the first available time slot before the $k$ meetings:\n\n$$\n\\textit{left}_i =\n\\begin{cases}\n0 & \\text{if } i \\le k - 1 \\\\\n\\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n\\end{cases}\n$$\n\n- The end time of the last available time slot after the $k$ meetings:\n\n$$\n\\textit{right}_i =\n\\begin{cases}\n\\textit{eventTime} & \\text{if } i = n - 1 \\\\\n\\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n\\end{cases}\n$$\n\nSo the total length of the merged $k + 1$ free time intervals is:\n\n$$\n\\textit{right}_i - \\textit{left}_i - (\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1])\n$$\n\nFinally, we return the maximum value over all such computations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to save the prefix sums.\n\n### Approach 2: Greedy + Sliding Window\n\n#### Intuition\n\nIn Approach 1, we used prefix sums to efficiently calculate the total duration of $k$ consecutive meetings. Similarly, in this approach, we can use a sliding window to maintain the total duration of $k$ consecutive meetings. Specifically, we use a variable $t$ to track the total duration of meetings within the current window. For each meeting $i$, we do the following:\n\n- Add meeting $i$ to the current window by updating: $t = t + \\textit{endTime}[i] - \\textit{startTime}[i]$\n\n- As in Approach 1, compute the start and end of the merged free interval:\n  - Left boundary:\n      $$\n    \\textit{left}_i = \n    \\begin{cases}\n    0 & \\text{if } i \\le k - 1 \\\\\n    \\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n    \\end{cases}\n    $$\n   \n  - Right boundary:\n    $$\n    \\textit{right}_i =\n    \\begin{cases}\n    \\textit{eventTime} & \\text{if } i = n - 1 \\\\\n    \\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n    \\end{cases}\n    $$\n    \n- When the window reaches size $k$ (i.e., $i \\ge k - 1$), we compute the total length of the merged $k + 1$ free intervals:\n  $$\n  \\textit{right}_i - \\textit{left}_i - t\n  $$\n  \n- After that, we remove the earliest meeting in the window (meeting $i - k + 1$) to maintain the window size at most $k$: $t = t - (\\textit{endTime}[i - k + 1] - \\textit{startTime}[i - k + 1])$\n\nWe return the maximum total length of the merged free time intervals across all valid windows.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "eventTime": 5,
+        "k": 1,
+        "startTime": [
+          1,
+          3
+        ],
+        "endTime": [
+          2,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "eventTime": 10,
+        "k": 1,
+        "startTime": [
+          0,
+          2,
+          9
+        ],
+        "endTime": [
+          1,
+          4,
+          10
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "eventTime": 5,
+        "k": 2,
+        "startTime": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "endTime": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

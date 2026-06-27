@@ -57,5 +57,58 @@
     "racket": "(define/contract (unmarked-sum-array nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec unmarked_sum_array(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nunmarked_sum_array(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unmarked_sum_array(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def unmarked_sum_array(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          3,
+          1
+        ],
+        "queries": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        8,
+        3,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          2,
+          3
+        ],
+        "queries": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        7
+      ]
+    }
+  ]
 }

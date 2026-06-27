@@ -50,5 +50,21 @@
     "racket": "(define/contract (add-binary a b)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec add_binary(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> unicode:unicode_binary().\nadd_binary(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec add_binary(a :: String.t, b :: String.t) :: String.t\n  def add_binary(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": "11",
+        "b": "1"
+      },
+      "expected": "100"
+    },
+    {
+      "args": {
+        "a": "1010",
+        "b": "1011"
+      },
+      "expected": "10101"
+    }
+  ]
 }

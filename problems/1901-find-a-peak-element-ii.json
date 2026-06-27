@@ -62,5 +62,50 @@
     "racket": "(define/contract (find-peak-grid mat)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec find_peak_grid(Mat :: [[integer()]]) -> [integer()].\nfind_peak_grid(Mat) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_peak_grid(mat :: [[integer]]) :: [integer]\n  def find_peak_grid(mat) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            10,
+            20,
+            15
+          ],
+          [
+            21,
+            30,
+            14
+          ],
+          [
+            7,
+            16,
+            32
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        1
+      ]
+    }
+  ]
 }

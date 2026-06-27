@@ -60,5 +60,64 @@
     "racket": "(define/contract (camel-match queries pattern)\n  (-> (listof string?) string? (listof boolean?))\n  )",
     "erlang": "-spec camel_match(Queries :: [unicode:unicode_binary()], Pattern :: unicode:unicode_binary()) -> [boolean()].\ncamel_match(Queries, Pattern) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec camel_match(queries :: [String.t], pattern :: String.t) :: [boolean]\n  def camel_match(queries, pattern) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          "FooBar",
+          "FooBarTest",
+          "FootBall",
+          "FrameBuffer",
+          "ForceFeedBack"
+        ],
+        "pattern": "FB"
+      },
+      "expected": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          "FooBar",
+          "FooBarTest",
+          "FootBall",
+          "FrameBuffer",
+          "ForceFeedBack"
+        ],
+        "pattern": "FoBa"
+      },
+      "expected": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          "FooBar",
+          "FooBarTest",
+          "FootBall",
+          "FrameBuffer",
+          "ForceFeedBack"
+        ],
+        "pattern": "FoBaT"
+      },
+      "expected": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
 }

@@ -51,5 +51,34 @@
     "racket": "(define/contract (min-cost-climbing-stairs cost)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_cost_climbing_stairs(Cost :: [integer()]) -> integer().\nmin_cost_climbing_stairs(Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost_climbing_stairs(cost :: [integer]) :: integer\n  def min_cost_climbing_stairs(cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cost": [
+          10,
+          15,
+          20
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "cost": [
+          1,
+          100,
+          1,
+          1,
+          1,
+          100,
+          1,
+          1,
+          100,
+          1
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

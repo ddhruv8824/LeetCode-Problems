@@ -64,5 +64,111 @@
     "erlang": "-spec max_target_nodes(Edges1 :: [[integer()]], Edges2 :: [[integer()]], K :: integer()) -> [integer()].\nmax_target_nodes(Edges1, Edges2, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_target_nodes(edges1 :: [[integer]], edges2 :: [[integer]], k :: integer) :: [integer]\n  def max_target_nodes(edges1, edges2, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Depth-First Search\n\n#### Intuition\n\nAccording to the problem statement, for the $i$-th query, when we connect the $i$-th node of the first tree to a node $j$ of the second tree, the distances from node $i$ to nodes in the second tree decrease, so more target nodes become reachable.\n\nWe must therefore compute:\n\n* $\\textit{count}_1[i]$: the number of nodes in the **first** tree within distance $\\le k$ of node $i$;\n* $\\textit{count}_2[j]$: the number of nodes in the **second** tree within distance $\\le k-1$ of node $j$.\n\nBecause $\\textit{count}_2[j]$ does not depend on the specific query, we can pre-compute it with a depth-first search (DFS) on the second tree. Afterward, we take the maximum value over all $j$, denoted $\\textit{maxCount}_2 = \\max_j \\textit{count}_2[j]$.\n\nFor each query $i$, we run a DFS on the first tree to obtain $\\textit{count}_1[i]$ and then return\n\n$$\n\\textit{count}_1[i] + \\textit{maxCount}_2\n$$\n\nas the answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the numbers of nodes in the undirected trees defined by $\\textit{edges}_1$ and $\\textit{edges}_2$, respectively.\n\n- Time complexity: $O(n^2 + m^2)$.\n  \n  We run a depth-first search (DFS) starting from every node in each tree, and each DFS visits all nodes of its tree.\n\n- Space complexity: $O(n + m)$.\n  \n  We use two auxiliary arrays - one for each tree."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Depth-First Search\n\n#### Intuition\n\nAccording to the problem statement, for the $i$-th query, when we connect the $i$-th node of the first tree to a node $j$ of the second tree, the distances from node $i$ to nodes in the second tree decrease, so more target nodes become reachable.\n\nWe must therefore compute:\n\n* $\\textit{count}_1[i]$: the number of nodes in the **first** tree within distance $\\le k$ of node $i$;\n* $\\textit{count}_2[j]$: the number of nodes in the **second** tree within distance $\\le k-1$ of node $j$.\n\nBecause $\\textit{count}_2[j]$ does not depend on the specific query, we can pre-compute it with a depth-first search (DFS) on the second tree. Afterward, we take the maximum value over all $j$, denoted $\\textit{maxCount}_2 = \\max_j \\textit{count}_2[j]$.\n\nFor each query $i$, we run a DFS on the first tree to obtain $\\textit{count}_1[i]$ and then return\n\n$$\n\\textit{count}_1[i] + \\textit{maxCount}_2\n$$\n\nas the answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the numbers of nodes in the undirected trees defined by $\\textit{edges}_1$ and $\\textit{edges}_2$, respectively.\n\n- Time complexity: $O(n^2 + m^2)$.\n  \n  We run a depth-first search (DFS) starting from every node in each tree, and each DFS visits all nodes of its tree.\n\n- Space complexity: $O(n + m)$.\n  \n  We use two auxiliary arrays - one for each tree.",
+  "test_cases": [
+    {
+      "args": {
+        "edges1": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "edges2": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        9,
+        7,
+        9,
+        8,
+        8
+      ]
+    },
+    {
+      "args": {
+        "edges1": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "edges2": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "k": 1
+      },
+      "expected": [
+        6,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  ]
 }

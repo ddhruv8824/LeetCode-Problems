@@ -54,5 +54,30 @@
     "racket": "(define/contract (max-possible-score start d)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_possible_score(Start :: [integer()], D :: integer()) -> integer().\nmax_possible_score(Start, D) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_possible_score(start :: [integer], d :: integer) :: integer\n  def max_possible_score(start, d) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "start": [
+          6,
+          0,
+          3
+        ],
+        "d": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "start": [
+          2,
+          6,
+          13,
+          13
+        ],
+        "d": 5
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -51,5 +51,45 @@
     "racket": "(define/contract (max-score a b)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_score(A :: [integer()], B :: [integer()]) -> integer().\nmax_score(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_score(a :: [integer], b :: [integer]) :: integer\n  def max_score(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          3,
+          2,
+          5,
+          6
+        ],
+        "b": [
+          2,
+          -6,
+          4,
+          -5,
+          -3,
+          2,
+          -7
+        ]
+      },
+      "expected": 26
+    },
+    {
+      "args": {
+        "a": [
+          -1,
+          4,
+          5,
+          -2
+        ],
+        "b": [
+          -5,
+          -1,
+          -3,
+          -2,
+          -4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

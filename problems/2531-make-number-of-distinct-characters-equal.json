@@ -57,5 +57,28 @@
     "racket": "(define/contract (is-it-possible word1 word2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_it_possible(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> boolean().\nis_it_possible(Word1, Word2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_it_possible(word1 :: String.t, word2 :: String.t) :: boolean\n  def is_it_possible(word1, word2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word1": "ac",
+        "word2": "b"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "word1": "abcc",
+        "word2": "aab"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "word1": "abcde",
+        "word2": "fghij"
+      },
+      "expected": true
+    }
+  ]
 }

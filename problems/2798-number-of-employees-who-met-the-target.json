@@ -48,5 +48,33 @@
     "racket": "(define/contract (number-of-employees-who-met-target hours target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_employees_who_met_target(Hours :: [integer()], Target :: integer()) -> integer().\nnumber_of_employees_who_met_target(Hours, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_employees_who_met_target(hours :: [integer], target :: integer) :: integer\n  def number_of_employees_who_met_target(hours, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "hours": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "target": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "hours": [
+          5,
+          1,
+          4,
+          2,
+          2
+        ],
+        "target": 6
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -60,5 +60,31 @@
     "racket": "(define/contract (smallest-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec smallest_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_string(s :: String.t) :: String.t\n  def smallest_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "cbabc"
+      },
+      "expected": "baabc"
+    },
+    {
+      "args": {
+        "s": "aa"
+      },
+      "expected": "az"
+    },
+    {
+      "args": {
+        "s": "acbbc"
+      },
+      "expected": "abaab"
+    },
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": "kddsbncd"
+    }
+  ]
 }

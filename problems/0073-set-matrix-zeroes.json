@@ -56,5 +56,89 @@
     "ruby": "# @param {Integer[][]} matrix\n# @return {Void} Do not return anything, modify matrix in-place instead.\ndef set_zeroes(matrix)\n    \nend",
     "scala": "object Solution {\n    def setZeroes(matrix: Array[Array[Int]]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn set_zeroes(matrix: &mut Vec<Vec<i32>>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            3,
+            4,
+            5,
+            2
+          ],
+          [
+            1,
+            3,
+            1,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          5,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          0
+        ]
+      ]
+    }
+  ]
 }

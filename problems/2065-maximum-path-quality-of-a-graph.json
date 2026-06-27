@@ -70,5 +70,99 @@
     "racket": "(define/contract (maximal-path-quality values edges maxTime)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximal_path_quality(Values :: [integer()], Edges :: [[integer()]], MaxTime :: integer()) -> integer().\nmaximal_path_quality(Values, Edges, MaxTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximal_path_quality(values :: [integer], edges :: [[integer]], max_time :: integer) :: integer\n  def maximal_path_quality(values, edges, max_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "values": [
+          0,
+          32,
+          10,
+          43
+        ],
+        "edges": [
+          [
+            0,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            15
+          ],
+          [
+            0,
+            3,
+            10
+          ]
+        ],
+        "maxTime": 49
+      },
+      "expected": 75
+    },
+    {
+      "args": {
+        "values": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "edges": [
+          [
+            0,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            0,
+            3,
+            10
+          ]
+        ],
+        "maxTime": 30
+      },
+      "expected": 25
+    },
+    {
+      "args": {
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "edges": [
+          [
+            0,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            11
+          ],
+          [
+            2,
+            3,
+            12
+          ],
+          [
+            1,
+            3,
+            13
+          ]
+        ],
+        "maxTime": 50
+      },
+      "expected": 7
+    }
+  ]
 }

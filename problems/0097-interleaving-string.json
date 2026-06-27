@@ -61,5 +61,31 @@
     "racket": "(define/contract (is-interleave s1 s2 s3)\n  (-> string? string? string? boolean?)\n  )",
     "erlang": "-spec is_interleave(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary(), S3 :: unicode:unicode_binary()) -> boolean().\nis_interleave(S1, S2, S3) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_interleave(s1 :: String.t, s2 :: String.t, s3 :: String.t) :: boolean\n  def is_interleave(s1, s2, s3) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "aabcc",
+        "s2": "dbbca",
+        "s3": "aadbbcbcac"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s1": "aabcc",
+        "s2": "dbbca",
+        "s3": "aadbbbaccc"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s1": "",
+        "s2": "",
+        "s3": ""
+      },
+      "expected": true
+    }
+  ]
 }

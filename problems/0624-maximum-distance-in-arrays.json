@@ -51,5 +51,41 @@
     "racket": "(define/contract (max-distance arrays)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_distance(Arrays :: [[integer()]]) -> integer().\nmax_distance(Arrays) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_distance(arrays :: [[integer]]) :: integer\n  def max_distance(arrays) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arrays": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arrays": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

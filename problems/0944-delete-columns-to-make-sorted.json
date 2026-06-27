@@ -59,5 +59,36 @@
     "racket": "(define/contract (min-deletion-size strs)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec min_deletion_size(Strs :: [unicode:unicode_binary()]) -> integer().\nmin_deletion_size(Strs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_deletion_size(strs :: [String.t]) :: integer\n  def min_deletion_size(strs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          "cba",
+          "daf",
+          "ghi"
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "a": [
+          "a",
+          "b"
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "a": [
+          "zyx",
+          "wvu",
+          "tsr"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

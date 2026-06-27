@@ -58,5 +58,25 @@
     "racket": "(define/contract (sum-game num)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec sum_game(Num :: unicode:unicode_binary()) -> boolean().\nsum_game(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_game(num :: String.t) :: boolean\n  def sum_game(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "5023"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "num": "25??"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "num": "?3295???"
+      },
+      "expected": false
+    }
+  ]
 }

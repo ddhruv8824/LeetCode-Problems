@@ -57,5 +57,53 @@
     "racket": "(define/contract (maximize-the-profit n offers)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximize_the_profit(N :: integer(), Offers :: [[integer()]]) -> integer().\nmaximize_the_profit(N, Offers) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximize_the_profit(n :: integer, offers :: [[integer]]) :: integer\n  def maximize_the_profit(n, offers) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "offers": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 5,
+        "offers": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            10
+          ],
+          [
+            1,
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

@@ -58,5 +58,37 @@
     "racket": "(define/contract (largest-word-count messages senders)\n  (-> (listof string?) (listof string?) string?)\n  )",
     "erlang": "-spec largest_word_count(Messages :: [unicode:unicode_binary()], Senders :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nlargest_word_count(Messages, Senders) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_word_count(messages :: [String.t], senders :: [String.t]) :: String.t\n  def largest_word_count(messages, senders) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "messages": [
+          "Hello userTwooo",
+          "Hi userThree",
+          "Wonderful day Alice",
+          "Nice day userThree"
+        ],
+        "senders": [
+          "Alice",
+          "userTwo",
+          "userThree",
+          "Alice"
+        ]
+      },
+      "expected": "Alice"
+    },
+    {
+      "args": {
+        "messages": [
+          "How is leetcode for everyone",
+          "Leetcode is useful for practice"
+        ],
+        "senders": [
+          "Bob",
+          "Charlie"
+        ]
+      },
+      "expected": "Charlie"
+    }
+  ]
 }

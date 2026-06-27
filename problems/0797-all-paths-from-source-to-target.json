@@ -57,5 +57,36 @@
     "racket": "(define/contract (all-paths-source-target graph)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec all_paths_source_target(Graph :: [[integer()]]) -> [[integer()]].\nall_paths_source_target(Graph) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec all_paths_source_target(graph :: [[integer]]) :: [[integer]]\n  def all_paths_source_target(graph) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "graph": [
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            3
+          ],
+          []
+        ]
+      },
+      "expected": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    }
+  ]
 }

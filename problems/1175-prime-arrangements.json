@@ -49,5 +49,19 @@
     "racket": "(define/contract (num-prime-arrangements n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_prime_arrangements(N :: integer()) -> integer().\nnum_prime_arrangements(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_prime_arrangements(n :: integer) :: integer\n  def num_prime_arrangements(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "n": 100
+      },
+      "expected": 682289015
+    }
+  ]
 }

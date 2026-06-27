@@ -49,5 +49,41 @@
     "racket": "(define/contract (min-mutation startGene endGene bank)\n  (-> string? string? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec min_mutation(StartGene :: unicode:unicode_binary(), EndGene :: unicode:unicode_binary(), Bank :: [unicode:unicode_binary()]) -> integer().\nmin_mutation(StartGene, EndGene, Bank) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_mutation(start_gene :: String.t, end_gene :: String.t, bank :: [String.t]) :: integer\n  def min_mutation(start_gene, end_gene, bank) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "start": "AACCGGTT",
+        "end": "AACCGGTA",
+        "bank": [
+          "AACCGGTA"
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "start": "AACCGGTT",
+        "end": "AAACGGTA",
+        "bank": [
+          "AACCGGTA",
+          "AACCGCTA",
+          "AAACGGTA"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "start": "AAAAACCC",
+        "end": "AACCCCCC",
+        "bank": [
+          "AAAACCCC",
+          "AAACCCCC",
+          "AACCCCCC"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

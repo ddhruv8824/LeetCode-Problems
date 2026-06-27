@@ -51,5 +51,67 @@
     "erlang": "-spec has_groups_size_x(Deck :: [integer()]) -> boolean().\nhas_groups_size_x(Deck) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_groups_size_x(deck :: [integer]) :: boolean\n  def has_groups_size_x(deck) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Brute Force\n\n**Intuition**\n\nWe can try every possible `X`.  \n\n**Algorithm**\n\nSince we divide the deck of `N` cards into say, `K` piles of `X` cards each, we must have `N % X == 0`.\n\nThen, say the deck has `C_i` copies of cards with number `i`.  Each group with number `i` has `X` copies, so we must have `C_i % X == 0`.  These are necessary and sufficient conditions.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2 \\log \\log N)$$, where $$N$$ is the number of cards.  It is outside the scope of this article to prove that the number of divisors of $$N$$ is bounded by $$O(N \\log \\log N)$$.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Greatest Common Divisor\n\n**Intuition and Algorithm**\n\nAgain, say there are `C_i` cards of number `i`.  These must be broken down into piles of `X` cards each, ie. `C_i % X == 0` for all `i`.\n\nThus, `X` must divide the greatest common divisor of `C_i`.  If this greatest common divisor `g` is greater than `1`, then `X = g` will satisfy.  Otherwise, it won't.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log^2 N)$$, where $$N$$ is the number of votes.  If there are $$C_i$$ cards with number $$i$$, then each `gcd` operation is naively $$O(\\log^2 C_i)$$.  Better bounds exist, but are outside the scope of this article to develop.\n\n* Space Complexity:  $$O(N)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Brute Force\n\n**Intuition**\n\nWe can try every possible `X`.  \n\n**Algorithm**\n\nSince we divide the deck of `N` cards into say, `K` piles of `X` cards each, we must have `N % X == 0`.\n\nThen, say the deck has `C_i` copies of cards with number `i`.  Each group with number `i` has `X` copies, so we must have `C_i % X == 0`.  These are necessary and sufficient conditions.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2 \\log \\log N)$$, where $$N$$ is the number of cards.  It is outside the scope of this article to prove that the number of divisors of $$N$$ is bounded by $$O(N \\log \\log N)$$.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Greatest Common Divisor\n\n**Intuition and Algorithm**\n\nAgain, say there are `C_i` cards of number `i`.  These must be broken down into piles of `X` cards each, ie. `C_i % X == 0` for all `i`.\n\nThus, `X` must divide the greatest common divisor of `C_i`.  If this greatest common divisor `g` is greater than `1`, then `X = g` will satisfy.  Otherwise, it won't.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log^2 N)$$, where $$N$$ is the number of votes.  If there are $$C_i$$ cards with number $$i$$, then each `gcd` operation is naively $$O(\\log^2 C_i)$$.  Better bounds exist, but are outside the scope of this article to develop.\n\n* Space Complexity:  $$O(N)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "deck": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "deck": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck": [
+          1
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "deck": [
+          1,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "deck": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

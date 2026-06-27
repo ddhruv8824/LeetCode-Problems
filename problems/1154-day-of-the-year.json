@@ -50,5 +50,31 @@
     "racket": "(define/contract (day-of-year date)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec day_of_year(Date :: unicode:unicode_binary()) -> integer().\nday_of_year(Date) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec day_of_year(date :: String.t) :: integer\n  def day_of_year(date) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "date": "2019-01-09"
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "date": "2019-02-10"
+      },
+      "expected": 41
+    },
+    {
+      "args": {
+        "date": "2003-03-01"
+      },
+      "expected": 60
+    },
+    {
+      "args": {
+        "date": "2004-03-01"
+      },
+      "expected": 61
+    }
+  ]
 }

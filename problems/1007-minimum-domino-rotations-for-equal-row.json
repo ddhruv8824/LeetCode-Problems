@@ -52,5 +52,47 @@
     "racket": "(define/contract (min-domino-rotations tops bottoms)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_domino_rotations(Tops :: [integer()], Bottoms :: [integer()]) -> integer().\nmin_domino_rotations(Tops, Bottoms) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_domino_rotations(tops :: [integer], bottoms :: [integer]) :: integer\n  def min_domino_rotations(tops, bottoms) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "A": [
+          2,
+          1,
+          2,
+          4,
+          2,
+          2
+        ],
+        "B": [
+          5,
+          2,
+          6,
+          2,
+          3,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "A": [
+          3,
+          5,
+          1,
+          2,
+          3
+        ],
+        "B": [
+          3,
+          6,
+          3,
+          3,
+          4
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

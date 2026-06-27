@@ -48,5 +48,34 @@
     "racket": "(define/contract (num-subarray-bounded-max nums left right)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_subarray_bounded_max(Nums :: [integer()], Left :: integer(), Right :: integer()) -> integer().\nnum_subarray_bounded_max(Nums, Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_subarray_bounded_max(nums :: [integer], left :: integer, right :: integer) :: integer\n  def num_subarray_bounded_max(nums, left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          4,
+          3
+        ],
+        "left": 2,
+        "right": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          9,
+          2,
+          5,
+          6
+        ],
+        "left": 2,
+        "right": 8
+      },
+      "expected": 7
+    }
+  ]
 }

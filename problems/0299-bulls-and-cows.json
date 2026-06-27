@@ -49,5 +49,21 @@
     "racket": "(define/contract (get-hint secret guess)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec get_hint(Secret :: unicode:unicode_binary(), Guess :: unicode:unicode_binary()) -> unicode:unicode_binary().\nget_hint(Secret, Guess) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_hint(secret :: String.t, guess :: String.t) :: String.t\n  def get_hint(secret, guess) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "secret": "1807",
+        "guess": "7810"
+      },
+      "expected": "1A3B"
+    },
+    {
+      "args": {
+        "secret": "1123",
+        "guess": "0111"
+      },
+      "expected": "1A1B"
+    }
+  ]
 }

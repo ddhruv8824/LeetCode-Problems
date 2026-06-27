@@ -51,5 +51,26 @@
     "racket": "(define/contract (min-impossible-or nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_impossible_or(Nums :: [integer()]) -> integer().\nmin_impossible_or(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_impossible_or(nums :: [integer]) :: integer\n  def min_impossible_or(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          3,
+          2
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

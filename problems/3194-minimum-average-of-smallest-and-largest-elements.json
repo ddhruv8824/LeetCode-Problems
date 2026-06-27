@@ -56,5 +56,48 @@
     "racket": "(define/contract (minimum-average nums)\n  (-> (listof exact-integer?) flonum?)\n  )",
     "erlang": "-spec minimum_average(Nums :: [integer()]) -> float().\nminimum_average(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_average(nums :: [integer]) :: float\n  def minimum_average(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          8,
+          3,
+          4,
+          15,
+          13,
+          4,
+          1
+        ]
+      },
+      "expected": 5.5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          9,
+          8,
+          3,
+          10,
+          5
+        ]
+      },
+      "expected": 5.5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

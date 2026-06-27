@@ -52,5 +52,31 @@
     "racket": "(define/contract (can-measure-water x y target)\n  (-> exact-integer? exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec can_measure_water(X :: integer(), Y :: integer(), Target :: integer()) -> boolean().\ncan_measure_water(X, Y, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_measure_water(x :: integer, y :: integer, target :: integer) :: boolean\n  def can_measure_water(x, y, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 3,
+        "y": 5,
+        "target": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "x": 2,
+        "y": 6,
+        "target": 5
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "x": 1,
+        "y": 2,
+        "target": 3
+      },
+      "expected": true
+    }
+  ]
 }

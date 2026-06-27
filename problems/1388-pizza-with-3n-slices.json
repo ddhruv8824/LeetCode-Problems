@@ -57,5 +57,33 @@
     "racket": "(define/contract (max-size-slices slices)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_size_slices(Slices :: [integer()]) -> integer().\nmax_size_slices(Slices) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_size_slices(slices :: [integer]) :: integer\n  def max_size_slices(slices) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "slices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "slices": [
+          8,
+          9,
+          8,
+          6,
+          1,
+          1
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

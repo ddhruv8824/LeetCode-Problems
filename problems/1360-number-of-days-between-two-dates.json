@@ -51,5 +51,21 @@
     "racket": "(define/contract (days-between-dates date1 date2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec days_between_dates(Date1 :: unicode:unicode_binary(), Date2 :: unicode:unicode_binary()) -> integer().\ndays_between_dates(Date1, Date2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec days_between_dates(date1 :: String.t, date2 :: String.t) :: integer\n  def days_between_dates(date1, date2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "date1": "2019-06-29",
+        "date2": "2019-06-30"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "date1": "2020-01-15",
+        "date2": "2019-12-31"
+      },
+      "expected": 15
+    }
+  ]
 }

@@ -52,5 +52,50 @@
     "racket": "(define/contract (combination-sum3 k n)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec combination_sum3(K :: integer(), N :: integer()) -> [[integer()]].\ncombination_sum3(K, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec combination_sum3(k :: integer, n :: integer) :: [[integer]]\n  def combination_sum3(k, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 3,
+        "n": 7
+      },
+      "expected": [
+        [
+          1,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "args": {
+        "k": 3,
+        "n": 9
+      },
+      "expected": [
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "args": {
+        "k": 4,
+        "n": 1
+      },
+      "expected": []
+    }
+  ]
 }

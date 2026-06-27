@@ -61,5 +61,48 @@
     "racket": "(define/contract (maximum-removals s p removable)\n  (-> string? string? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_removals(S :: unicode:unicode_binary(), P :: unicode:unicode_binary(), Removable :: [integer()]) -> integer().\nmaximum_removals(S, P, Removable) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_removals(s :: String.t, p :: String.t, removable :: [integer]) :: integer\n  def maximum_removals(s, p, removable) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcacb",
+        "p": "ab",
+        "removable": [
+          3,
+          1,
+          0
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abcbddddd",
+        "p": "abcd",
+        "removable": [
+          3,
+          2,
+          1,
+          4,
+          5,
+          6
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "abcab",
+        "p": "abc",
+        "removable": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -30,5 +30,19 @@
   "code_snippets": {
     "javascript": "/**\n * @param {number} millis\n * @return {Promise}\n */\nasync function sleep(millis) {\n    \n}\n\n/** \n * let t = Date.now()\n * sleep(100).then(() => console.log(Date.now() - t)) // 100\n */",
     "typescript": "async function sleep(millis: number): Promise<void> {\n    \n}\n\n\n/** \n * let t = Date.now()\n * sleep(100).then(() => console.log(Date.now() - t)) // 100\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "millis": 100
+      },
+      "expected": 100
+    },
+    {
+      "args": {
+        "millis": 200
+      },
+      "expected": 200
+    }
+  ]
 }

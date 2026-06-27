@@ -51,5 +51,45 @@
     "racket": "(define/contract (find-prefix-score nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_prefix_score(Nums :: [integer()]) -> [integer()].\nfind_prefix_score(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_prefix_score(nums :: [integer]) :: [integer]\n  def find_prefix_score(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          7,
+          5,
+          10
+        ]
+      },
+      "expected": [
+        4,
+        10,
+        24,
+        36,
+        56
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "expected": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ]
+    }
+  ]
 }

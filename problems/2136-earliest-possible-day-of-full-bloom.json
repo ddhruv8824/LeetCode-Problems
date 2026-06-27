@@ -65,5 +65,50 @@
     "racket": "(define/contract (earliest-full-bloom plantTime growTime)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec earliest_full_bloom(PlantTime :: [integer()], GrowTime :: [integer()]) -> integer().\nearliest_full_bloom(PlantTime, GrowTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec earliest_full_bloom(plant_time :: [integer], grow_time :: [integer]) :: integer\n  def earliest_full_bloom(plant_time, grow_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "plantTime": [
+          1,
+          4,
+          3
+        ],
+        "growTime": [
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "plantTime": [
+          1,
+          2,
+          3,
+          2
+        ],
+        "growTime": [
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "plantTime": [
+          1
+        ],
+        "growTime": [
+          1
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

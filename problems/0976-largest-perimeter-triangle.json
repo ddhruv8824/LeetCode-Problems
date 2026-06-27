@@ -50,5 +50,49 @@
     "erlang": "-spec largest_perimeter(Nums :: [integer()]) -> integer().\nlargest_perimeter(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_perimeter(nums :: [integer]) :: integer\n  def largest_perimeter(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Sort\n\n**Intuition**\n\nWithout loss of generality, say the sidelengths of the triangle are $$a \\leq b \\leq c$$.  The necessary and sufficient condition for these lengths to form a triangle of non-zero area is $$a + b > c$$.\n\nSay we knew $$c$$ already.  There is no reason not to choose the largest possible $$a$$ and $$b$$ from the array.  If $$a + b > c$$, then it forms a triangle, otherwise it doesn't.\n\n**Algorithm**\n\nThis leads to a simple algorithm:  Sort the array.  For any $$c$$ in the array, we choose the largest possible $$a \\leq b \\leq c$$:  these are just the two values adjacent to $$c$$.  If this forms a triangle, we return the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Sort\n\n**Intuition**\n\nWithout loss of generality, say the sidelengths of the triangle are $$a \\leq b \\leq c$$.  The necessary and sufficient condition for these lengths to form a triangle of non-zero area is $$a + b > c$$.\n\nSay we knew $$c$$ already.  There is no reason not to choose the largest possible $$a$$ and $$b$$ from the array.  If $$a + b > c$$, then it forms a triangle, otherwise it doesn't.\n\n**Algorithm**\n\nThis leads to a simple algorithm:  Sort the array.  For any $$c$$ in the array, we choose the largest possible $$a \\leq b \\leq c$$:  these are just the two values adjacent to $$c$$.  If this forms a triangle, we return the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "a": [
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "a": [
+          3,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "a": [
+          3,
+          6,
+          2,
+          3
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

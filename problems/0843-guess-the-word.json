@@ -50,5 +50,31 @@
     "ruby": "#    This is Master's API interface.\n#    You should not implement it, or speculate about its implementation\n#\n# class Master\n# =begin\n#     :type word: String\n#     :rtype: Integer\n# =end\n#     def guess(word)\n#         ...\n#     end\n# end\n#\n\n# @param {String[]} words\n# @param {Master} master\n# @return {Void}\ndef find_secret_word(words, master)\n    \nend",
     "scala": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *\n *   def guess(word: String): Int = {}\n *\n * }\n */\nobject Solution {\n    def findSecretWord(words: Array[String], master: Master): Unit = {\n        \n    }\n}",
     "rust": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * struct Master;\n * impl Master {\n *     fn guess(word:String)->int;\n * };\n */\n\nimpl Solution {\n    pub fn find_secret_word(words: Vec<String>, master: &Master) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "secret": "acckzz",
+        "words": [
+          "acckzz",
+          "ccbazz",
+          "eiowzz",
+          "abcczz"
+        ],
+        "allowedGuesses": 10
+      },
+      "expected": "You guessed the secret word correctly."
+    },
+    {
+      "args": {
+        "secret": "hamada",
+        "words": [
+          "hamada",
+          "khaled"
+        ],
+        "allowedGuesses": 10
+      },
+      "expected": "You guessed the secret word correctly."
+    }
+  ]
 }

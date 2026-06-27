@@ -55,5 +55,38 @@
     "racket": "(define/contract (ways-to-make-fair nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec ways_to_make_fair(Nums :: [integer()]) -> integer().\nways_to_make_fair(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ways_to_make_fair(nums :: [integer]) :: integer\n  def ways_to_make_fair(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          6,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -52,5 +52,70 @@
     "racket": "(define browser-history%\n  (class object%\n    (super-new)\n    \n    ; homepage : string?\n    (init-field\n      homepage)\n    \n    ; visit : string? -> void?\n    (define/public (visit url)\n      )\n    ; back : exact-integer? -> string?\n    (define/public (back steps)\n      )\n    ; forward : exact-integer? -> string?\n    (define/public (forward steps)\n      )))\n\n;; Your browser-history% object will be instantiated and called as such:\n;; (define obj (new browser-history% [homepage homepage]))\n;; (send obj visit url)\n;; (define param_2 (send obj back steps))\n;; (define param_3 (send obj forward steps))",
     "erlang": "-spec browser_history_init_(Homepage :: unicode:unicode_binary()) -> any().\nbrowser_history_init_(Homepage) ->\n  .\n\n-spec browser_history_visit(Url :: unicode:unicode_binary()) -> any().\nbrowser_history_visit(Url) ->\n  .\n\n-spec browser_history_back(Steps :: integer()) -> unicode:unicode_binary().\nbrowser_history_back(Steps) ->\n  .\n\n-spec browser_history_forward(Steps :: integer()) -> unicode:unicode_binary().\nbrowser_history_forward(Steps) ->\n  .\n\n\n%% Your functions will be called as such:\n%% browser_history_init_(Homepage),\n%% browser_history_visit(Url),\n%% Param_2 = browser_history_back(Steps),\n%% Param_3 = browser_history_forward(Steps),\n\n%% browser_history_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule BrowserHistory do\n  @spec init_(homepage :: String.t) :: any\n  def init_(homepage) do\n    \n  end\n\n  @spec visit(url :: String.t) :: any\n  def visit(url) do\n    \n  end\n\n  @spec back(steps :: integer) :: String.t\n  def back(steps) do\n    \n  end\n\n  @spec forward(steps :: integer) :: String.t\n  def forward(steps) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# BrowserHistory.init_(homepage)\n# BrowserHistory.visit(url)\n# param_2 = BrowserHistory.back(steps)\n# param_3 = BrowserHistory.forward(steps)\n\n# BrowserHistory.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "BrowserHistory",
+        "visit",
+        "visit",
+        "visit",
+        "back",
+        "back",
+        "forward",
+        "visit",
+        "forward",
+        "back",
+        "back"
+      ],
+      "args": [
+        [
+          "leetcode.com"
+        ],
+        [
+          "google.com"
+        ],
+        [
+          "facebook.com"
+        ],
+        [
+          "youtube.com"
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          "linkedin.com"
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        [
+          7
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        "facebook.com",
+        "google.com",
+        "facebook.com",
+        null,
+        "linkedin.com",
+        "google.com",
+        "leetcode.com"
+      ]
+    }
+  ]
 }

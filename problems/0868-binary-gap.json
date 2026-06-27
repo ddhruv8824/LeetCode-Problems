@@ -51,5 +51,31 @@
     "erlang": "-spec binary_gap(N :: integer()) -> integer().\nbinary_gap(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec binary_gap(n :: integer) :: integer\n  def binary_gap(n) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Store Indexes\n\n**Intuition**\n\nSince we wanted to inspect the distance between consecutive 1s in the binary representation of `N`, let's write down the index of each `1` in that binary representation.  For example, if `N = 22 = 0b10110`, then we'll write `A = [1, 2, 4]`.  This makes it easier to proceed, as now we have a problem about adjacent values in an array.\n\n**Algorithm**\n\nLet's make a list `A` of indices `i` such that `N` has the `i`th bit set.\n\nWith this array `A`, finding the maximum distance between consecutive `1`s is much easier: it's the maximum distance between adjacent values of this array.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\log N)$$.  Note that $$\\log N$$ is the number of digits in the binary representation of $$N$$.\n\n* Space Complexity:  $$O(\\log N)$$, the space used by `A`.---\n### Approach 2: One Pass\n\n**Intuition**\n\nIn *Approach 1*, we created an array `A` of indices `i` for which `N` had the `i`th bit set.\n\nSince we only care about consecutive values of this array `A`, we don't need to store the whole array.  We only need to remember the last value seen.\n\n**Algorithm**\n\nWe'll store `last`, the last value added to the *virtual* array `A`.  If `N` has the `i`th bit set, a candidate answer is `i - last`, and then the new last value added to `A` would be `last = i`.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\log N)$$.  Note that $$\\log N$$ is the number of digits in the binary representation of $$N$$.\n\n* Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Store Indexes\n\n**Intuition**\n\nSince we wanted to inspect the distance between consecutive 1s in the binary representation of `N`, let's write down the index of each `1` in that binary representation.  For example, if `N = 22 = 0b10110`, then we'll write `A = [1, 2, 4]`.  This makes it easier to proceed, as now we have a problem about adjacent values in an array.\n\n**Algorithm**\n\nLet's make a list `A` of indices `i` such that `N` has the `i`th bit set.\n\nWith this array `A`, finding the maximum distance between consecutive `1`s is much easier: it's the maximum distance between adjacent values of this array.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\log N)$$.  Note that $$\\log N$$ is the number of digits in the binary representation of $$N$$.\n\n* Space Complexity:  $$O(\\log N)$$, the space used by `A`.---\n### Approach 2: One Pass\n\n**Intuition**\n\nIn *Approach 1*, we created an array `A` of indices `i` for which `N` had the `i`th bit set.\n\nSince we only care about consecutive values of this array `A`, we don't need to store the whole array.  We only need to remember the last value seen.\n\n**Algorithm**\n\nWe'll store `last`, the last value added to the *virtual* array `A`.  If `N` has the `i`th bit set, a candidate answer is `i - last`, and then the new last value added to `A` would be `last = i`.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\log N)$$.  Note that $$\\log N$$ is the number of digits in the binary representation of $$N$$.\n\n* Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "n": 22
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 8
+      },
+      "expected": 0
+    }
+  ]
 }

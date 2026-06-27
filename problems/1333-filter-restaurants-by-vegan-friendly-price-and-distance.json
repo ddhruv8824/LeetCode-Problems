@@ -58,5 +58,155 @@
     "racket": "(define/contract (filter-restaurants restaurants veganFriendly maxPrice maxDistance)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec filter_restaurants(Restaurants :: [[integer()]], VeganFriendly :: integer(), MaxPrice :: integer(), MaxDistance :: integer()) -> [integer()].\nfilter_restaurants(Restaurants, VeganFriendly, MaxPrice, MaxDistance) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec filter_restaurants(restaurants :: [[integer]], vegan_friendly :: integer, max_price :: integer, max_distance :: integer) :: [integer]\n  def filter_restaurants(restaurants, vegan_friendly, max_price, max_distance) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "restaurants": [
+          [
+            1,
+            4,
+            1,
+            40,
+            10
+          ],
+          [
+            2,
+            8,
+            0,
+            50,
+            5
+          ],
+          [
+            3,
+            8,
+            1,
+            30,
+            4
+          ],
+          [
+            4,
+            10,
+            0,
+            10,
+            3
+          ],
+          [
+            5,
+            1,
+            1,
+            15,
+            1
+          ]
+        ],
+        "veganFriendly": 1,
+        "maxPrice": 50,
+        "maxDistance": 10
+      },
+      "expected": [
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "args": {
+        "restaurants": [
+          [
+            1,
+            4,
+            1,
+            40,
+            10
+          ],
+          [
+            2,
+            8,
+            0,
+            50,
+            5
+          ],
+          [
+            3,
+            8,
+            1,
+            30,
+            4
+          ],
+          [
+            4,
+            10,
+            0,
+            10,
+            3
+          ],
+          [
+            5,
+            1,
+            1,
+            15,
+            1
+          ]
+        ],
+        "veganFriendly": 0,
+        "maxPrice": 50,
+        "maxDistance": 10
+      },
+      "expected": [
+        4,
+        3,
+        2,
+        1,
+        5
+      ]
+    },
+    {
+      "args": {
+        "restaurants": [
+          [
+            1,
+            4,
+            1,
+            40,
+            10
+          ],
+          [
+            2,
+            8,
+            0,
+            50,
+            5
+          ],
+          [
+            3,
+            8,
+            1,
+            30,
+            4
+          ],
+          [
+            4,
+            10,
+            0,
+            10,
+            3
+          ],
+          [
+            5,
+            1,
+            1,
+            15,
+            1
+          ]
+        ],
+        "veganFriendly": 0,
+        "maxPrice": 30,
+        "maxDistance": 3
+      },
+      "expected": [
+        4,
+        5
+      ]
+    }
+  ]
 }

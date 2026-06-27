@@ -55,5 +55,51 @@
     "racket": "(define/contract (find-ladders beginWord endWord wordList)\n  (-> string? string? (listof string?) (listof (listof string?)))\n  )",
     "erlang": "-spec find_ladders(BeginWord :: unicode:unicode_binary(), EndWord :: unicode:unicode_binary(), WordList :: [unicode:unicode_binary()]) -> [[unicode:unicode_binary()]].\nfind_ladders(BeginWord, EndWord, WordList) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_ladders(begin_word :: String.t, end_word :: String.t, word_list :: [String.t]) :: [[String.t]]\n  def find_ladders(begin_word, end_word, word_list) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "beginWord": "hit",
+        "endWord": "cog",
+        "wordList": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log",
+          "cog"
+        ]
+      },
+      "expected": [
+        [
+          "hit",
+          "hot",
+          "dot",
+          "dog",
+          "cog"
+        ],
+        [
+          "hit",
+          "hot",
+          "lot",
+          "log",
+          "cog"
+        ]
+      ]
+    },
+    {
+      "args": {
+        "beginWord": "hit",
+        "endWord": "cog",
+        "wordList": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log"
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

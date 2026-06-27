@@ -53,5 +53,58 @@
     "racket": "(define/contract (total-fruit fruits)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec total_fruit(Fruits :: [integer()]) -> integer().\ntotal_fruit(Fruits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_fruit(fruits :: [integer]) :: integer\n  def total_fruit(fruits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tree": [
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "tree": [
+          0,
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "tree": [
+          1,
+          2,
+          3,
+          2,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "tree": [
+          3,
+          3,
+          3,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          3,
+          4
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

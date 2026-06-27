@@ -50,5 +50,21 @@
     "racket": "(define/contract (percentage-letter s letter)\n  (-> string? char? exact-integer?)\n  )",
     "erlang": "-spec percentage_letter(S :: unicode:unicode_binary(), Letter :: char()) -> integer().\npercentage_letter(S, Letter) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec percentage_letter(s :: String.t, letter :: char) :: integer\n  def percentage_letter(s, letter) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "foobar",
+        "letter": "o"
+      },
+      "expected": 33
+    },
+    {
+      "args": {
+        "s": "jjjj",
+        "letter": "k"
+      },
+      "expected": 0
+    }
+  ]
 }

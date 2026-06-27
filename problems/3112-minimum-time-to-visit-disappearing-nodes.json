@@ -65,5 +65,91 @@
     "racket": "(define/contract (minimum-time n edges disappear)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec minimum_time(N :: integer(), Edges :: [[integer()]], Disappear :: [integer()]) -> [integer()].\nminimum_time(N, Edges, Disappear) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_time(n :: integer, edges :: [[integer]], disappear :: [integer]) :: [integer]\n  def minimum_time(n, edges, disappear) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "disappear": [
+          1,
+          1,
+          5
+        ]
+      },
+      "expected": [
+        0,
+        -1,
+        4
+      ]
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "disappear": [
+          1,
+          3,
+          5
+        ]
+      },
+      "expected": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "disappear": [
+          1,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        -1
+      ]
+    }
+  ]
 }

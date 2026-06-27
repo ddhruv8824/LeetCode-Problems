@@ -55,5 +55,28 @@
     "racket": "(define/contract (longest-common-subsequence text1 text2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec longest_common_subsequence(Text1 :: unicode:unicode_binary(), Text2 :: unicode:unicode_binary()) -> integer().\nlongest_common_subsequence(Text1, Text2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_common_subsequence(text1 :: String.t, text2 :: String.t) :: integer\n  def longest_common_subsequence(text1, text2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text1": "abcde",
+        "text2": "ace"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "text1": "abc",
+        "text2": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "text1": "abc",
+        "text2": "def"
+      },
+      "expected": 0
+    }
+  ]
 }

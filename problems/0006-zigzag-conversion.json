@@ -62,5 +62,28 @@
     "racket": "(define/contract (convert s numRows)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec convert(S :: unicode:unicode_binary(), NumRows :: integer()) -> unicode:unicode_binary().\nconvert(S, NumRows) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec convert(s :: String.t, num_rows :: integer) :: String.t\n  def convert(s, num_rows) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "PAYPALISHIRING",
+        "numRows": 3
+      },
+      "expected": "PAHNAPLSIIGYIR"
+    },
+    {
+      "args": {
+        "s": "PAYPALISHIRING",
+        "numRows": 4
+      },
+      "expected": "PINALSIGYAHRPI"
+    },
+    {
+      "args": {
+        "s": "A",
+        "numRows": 1
+      },
+      "expected": "A"
+    }
+  ]
 }

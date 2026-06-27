@@ -45,5 +45,19 @@
     "racket": "(define/contract (racecar target)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec racecar(Target :: integer()) -> integer().\nracecar(Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec racecar(target :: integer) :: integer\n  def racecar(target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "target": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "target": 6
+      },
+      "expected": 5
+    }
+  ]
 }

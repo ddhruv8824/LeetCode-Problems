@@ -55,5 +55,25 @@
     "racket": "(define/contract (count-digits num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_digits(Num :: integer()) -> integer().\ncount_digits(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_digits(num :: integer) :: integer\n  def count_digits(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 7
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "num": 121
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 1248
+      },
+      "expected": 4
+    }
+  ]
 }

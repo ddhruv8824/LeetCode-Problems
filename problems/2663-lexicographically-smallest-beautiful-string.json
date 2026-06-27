@@ -53,5 +53,21 @@
     "racket": "(define/contract (smallest-beautiful-string s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec smallest_beautiful_string(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nsmallest_beautiful_string(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_beautiful_string(s :: String.t, k :: integer) :: String.t\n  def smallest_beautiful_string(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcz",
+        "k": 26
+      },
+      "expected": "abda"
+    },
+    {
+      "args": {
+        "s": "dc",
+        "k": 4
+      },
+      "expected": ""
+    }
+  ]
 }

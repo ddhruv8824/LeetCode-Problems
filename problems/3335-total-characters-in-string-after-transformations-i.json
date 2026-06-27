@@ -54,5 +54,21 @@
     "erlang": "-spec length_after_transformations(S :: unicode:unicode_binary(), T :: integer()) -> integer().\nlength_after_transformations(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_after_transformations(s :: String.t, t :: integer) :: integer\n  def length_after_transformations(s, t) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Recurrence\n\n#### Intuition\n\nWe define $f(i, c)$ as the number of occurrences of the character $c$ in the string after $i$ transformations. For sake of clarity and ease of notation, we let $c$ = $[0, 26)$, which corresponds to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, each $f(0, c)$ represents the number of occurrences of $c$ in the given string $s$. As we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$:\n\n- If $c = 0$, corresponding to $a$, it can be converted from $z$, therefore:\n    $$\n    f(i, 0) = f(i - 1, 25)\n    $$\n- If $c = 1$, corresponding to $b$, it can be converted from $z$ or $a$, therefore:\n    $$\n    f(i, 1) = f(i - 1, 25) + f(i - 1, 0)\n    $$\n- If $c \\geq 2$, it can come from the last character conversion, therefore:\n    $$\n    f(i, c) = f(i - 1, c - 1)\n    $$\n\nSo we obtain the recursive formula, which can be calculated from $f(1, \\cdots)$ all the way to $f(t, \\cdots)$. The sum of all $f(t, c)$ is the final answer.\n\n#### Optimize\n\nNotice that in this recurrence formula, the calculation of $f(i, \\cdots)$ only depends on the value of $f(i - 1, \\cdots)$, therefore we can use two one-dimensional arrays instead of the entire two-dimensional array $f$ for recursion, as can be seen in the arrays $\\textit{cnt}$ and $\\textit{nxt}$ in the following code.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ be the size of the character set, which is 26 in this question.\n\n- Time complexity: $O(n + t|\\Sigma|)$.\n  \n  We first traverse the string to obtain the count of all characters, and then use the recurrence formula to calculate the count of each character over $t$ transformations.\n\n- Space complexity: $O(|\\Sigma|)$.\n  \n  This is the space required for two one-dimensional arrays in the recursion."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Recurrence\n\n#### Intuition\n\nWe define $f(i, c)$ as the number of occurrences of the character $c$ in the string after $i$ transformations. For sake of clarity and ease of notation, we let $c$ = $[0, 26)$, which corresponds to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, each $f(0, c)$ represents the number of occurrences of $c$ in the given string $s$. As we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$:\n\n- If $c = 0$, corresponding to $a$, it can be converted from $z$, therefore:\n    $$\n    f(i, 0) = f(i - 1, 25)\n    $$\n- If $c = 1$, corresponding to $b$, it can be converted from $z$ or $a$, therefore:\n    $$\n    f(i, 1) = f(i - 1, 25) + f(i - 1, 0)\n    $$\n- If $c \\geq 2$, it can come from the last character conversion, therefore:\n    $$\n    f(i, c) = f(i - 1, c - 1)\n    $$\n\nSo we obtain the recursive formula, which can be calculated from $f(1, \\cdots)$ all the way to $f(t, \\cdots)$. The sum of all $f(t, c)$ is the final answer.\n\n#### Optimize\n\nNotice that in this recurrence formula, the calculation of $f(i, \\cdots)$ only depends on the value of $f(i - 1, \\cdots)$, therefore we can use two one-dimensional arrays instead of the entire two-dimensional array $f$ for recursion, as can be seen in the arrays $\\textit{cnt}$ and $\\textit{nxt}$ in the following code.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ be the size of the character set, which is 26 in this question.\n\n- Time complexity: $O(n + t|\\Sigma|)$.\n  \n  We first traverse the string to obtain the count of all characters, and then use the recurrence formula to calculate the count of each character over $t$ transformations.\n\n- Space complexity: $O(|\\Sigma|)$.\n  \n  This is the space required for two one-dimensional arrays in the recursion.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcyy",
+        "t": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "azbk",
+        "t": 1
+      },
+      "expected": 5
+    }
+  ]
 }

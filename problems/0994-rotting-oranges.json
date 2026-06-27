@@ -61,5 +61,62 @@
     "racket": "(define/contract (oranges-rotting grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec oranges_rotting(Grid :: [[integer()]]) -> integer().\noranges_rotting(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec oranges_rotting(grid :: [[integer]]) :: integer\n  def oranges_rotting(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -41,5 +41,19 @@
     "ruby": "# @param {String} address\n# @return {String}\ndef defang_i_paddr(address)\n    \nend",
     "scala": "object Solution {\n    def defangIPaddr(address: String): String = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn defang_i_paddr(address: String) -> String {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "address": "1.1.1.1"
+      },
+      "expected": "1[.]1[.]1[.]1"
+    },
+    {
+      "args": {
+        "address": "255.100.50.0"
+      },
+      "expected": "255[.]100[.]50[.]0"
+    }
+  ]
 }

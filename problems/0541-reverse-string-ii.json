@@ -49,5 +49,21 @@
     "erlang": "-spec reverse_str(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nreverse_str(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reverse_str(s :: String.t, k :: integer) :: String.t\n  def reverse_str(s, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe will reverse each block of `2k` characters directly.\n\nEach block starts at a multiple of `2k`: for example, `0, 2k, 4k, 6k, ...`. One thing to be careful about is we may not reverse each block if there aren't enough characters.\n\nTo reverse a block of characters from `i` to `j`, we can swap characters in positions `i++` and `j--`.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the size of `s`. We build a helper array, plus reverse about half the characters in `s`.\n\n* Space Complexity: $$O(N)$$, the size of `a`."
+  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe will reverse each block of `2k` characters directly.\n\nEach block starts at a multiple of `2k`: for example, `0, 2k, 4k, 6k, ...`. One thing to be careful about is we may not reverse each block if there aren't enough characters.\n\nTo reverse a block of characters from `i` to `j`, we can swap characters in positions `i++` and `j--`.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the size of `s`. We build a helper array, plus reverse about half the characters in `s`.\n\n* Space Complexity: $$O(N)$$, the size of `a`.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcdefg",
+        "k": 2
+      },
+      "expected": "bacdfeg"
+    },
+    {
+      "args": {
+        "s": "abcd",
+        "k": 2
+      },
+      "expected": "bacd"
+    }
+  ]
 }

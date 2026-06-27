@@ -61,5 +61,70 @@
     "racket": "(define/contract (match-replacement s sub mappings)\n  (-> string? string? (listof (listof char?)) boolean?)\n  )",
     "erlang": "-spec match_replacement(S :: unicode:unicode_binary(), Sub :: unicode:unicode_binary(), Mappings :: [[char()]]) -> boolean().\nmatch_replacement(S, Sub, Mappings) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec match_replacement(s :: String.t, sub :: String.t, mappings :: [[char]]) :: boolean\n  def match_replacement(s, sub, mappings) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "fool3e7bar",
+        "sub": "leet",
+        "mappings": [
+          [
+            "e",
+            "3"
+          ],
+          [
+            "t",
+            "7"
+          ],
+          [
+            "t",
+            "8"
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "fooleetbar",
+        "sub": "f00l",
+        "mappings": [
+          [
+            "o",
+            "0"
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "Fool33tbaR",
+        "sub": "leetd",
+        "mappings": [
+          [
+            "e",
+            "3"
+          ],
+          [
+            "t",
+            "7"
+          ],
+          [
+            "t",
+            "8"
+          ],
+          [
+            "d",
+            "b"
+          ],
+          [
+            "p",
+            "b"
+          ]
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

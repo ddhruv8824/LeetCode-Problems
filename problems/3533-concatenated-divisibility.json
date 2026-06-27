@@ -60,5 +60,46 @@
     "racket": "(define/contract (concatenated-divisibility nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec concatenated_divisibility(Nums :: [integer()], K :: integer()) -> [integer()].\nconcatenated_divisibility(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec concatenated_divisibility(nums :: [integer], k :: integer) :: [integer]\n  def concatenated_divisibility(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          12,
+          45
+        ],
+        "k": 5
+      },
+      "expected": [
+        3,
+        12,
+        45
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          5
+        ],
+        "k": 10
+      },
+      "expected": [
+        5,
+        10
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "k": 5
+      },
+      "expected": []
+    }
+  ]
 }

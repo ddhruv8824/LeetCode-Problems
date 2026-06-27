@@ -57,5 +57,31 @@
     "racket": "(define/contract (smallest-equivalent-string s1 s2 baseStr)\n  (-> string? string? string? string?)\n  )",
     "erlang": "-spec smallest_equivalent_string(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary(), BaseStr :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_equivalent_string(S1, S2, BaseStr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_equivalent_string(s1 :: String.t, s2 :: String.t, base_str :: String.t) :: String.t\n  def smallest_equivalent_string(s1, s2, base_str) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "parker",
+        "s2": "morris",
+        "baseStr": "parser"
+      },
+      "expected": "makkek"
+    },
+    {
+      "args": {
+        "s1": "hello",
+        "s2": "world",
+        "baseStr": "hold"
+      },
+      "expected": "hdld"
+    },
+    {
+      "args": {
+        "s1": "leetcode",
+        "s2": "programs",
+        "baseStr": "sourcecode"
+      },
+      "expected": "aauaaaaada"
+    }
+  ]
 }

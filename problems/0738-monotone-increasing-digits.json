@@ -53,5 +53,25 @@
     "racket": "(define/contract (monotone-increasing-digits n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec monotone_increasing_digits(N :: integer()) -> integer().\nmonotone_increasing_digits(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec monotone_increasing_digits(n :: integer) :: integer\n  def monotone_increasing_digits(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "n": 1234
+      },
+      "expected": 1234
+    },
+    {
+      "args": {
+        "n": 332
+      },
+      "expected": 299
+    }
+  ]
 }

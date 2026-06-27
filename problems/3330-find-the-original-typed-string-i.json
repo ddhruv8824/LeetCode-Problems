@@ -54,5 +54,25 @@
     "erlang": "-spec possible_string_count(Word :: unicode:unicode_binary()) -> integer().\npossible_string_count(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec possible_string_count(word :: String.t) :: integer\n  def possible_string_count(word) do\n    \n  end\nend"
   },
-  "solution": "### Approach: One-time Traversal\n\n#### Intuition\n\nIf a character in $\\textit{word}$ appears consecutively $k$ times (where $k > 1$), and Alice makes a mistake in this part, then in the actual original string, this character could have appeared $1, 2, \\dots, k - 1$ times. That is, there are $k - 1$ possible variations.\n\nFor the case $k = 1$, Alice will not make a mistake, so there are $0$ possibilities, which is consistent with the formula $k - 1$.\n\nTherefore, we can traverse the string once: let the current traversal position be $l$, and suppose the characters in $\\textit{word}$ from positions $[l, r]$ are the same, while the character at position $r + 1$ is different (or does not exist). In this case, we increase the answer by $r - l$, and continue traversing from position $r + 1$.\n\nThis further implies that the total contribution of the interval $[l, r]$ to the answer is $r - l$. We can interpret this as position $l$ not contributing to the answer, while each of the positions $[l + 1, r]$ contributes $1$. Therefore, for any position $i$ in the string $\\textit{word}$ (where $i > 0$), if $\\textit{word}[i - 1] = \\textit{word}[i]$, we can increase the answer by $1$.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$."
+  "solution": "### Approach: One-time Traversal\n\n#### Intuition\n\nIf a character in $\\textit{word}$ appears consecutively $k$ times (where $k > 1$), and Alice makes a mistake in this part, then in the actual original string, this character could have appeared $1, 2, \\dots, k - 1$ times. That is, there are $k - 1$ possible variations.\n\nFor the case $k = 1$, Alice will not make a mistake, so there are $0$ possibilities, which is consistent with the formula $k - 1$.\n\nTherefore, we can traverse the string once: let the current traversal position be $l$, and suppose the characters in $\\textit{word}$ from positions $[l, r]$ are the same, while the character at position $r + 1$ is different (or does not exist). In this case, we increase the answer by $r - l$, and continue traversing from position $r + 1$.\n\nThis further implies that the total contribution of the interval $[l, r]$ to the answer is $r - l$. We can interpret this as position $l$ not contributing to the answer, while each of the positions $[l + 1, r]$ contributes $1$. Therefore, for any position $i$ in the string $\\textit{word}$ (where $i > 0$), if $\\textit{word}[i - 1] = \\textit{word}[i]$, we can increase the answer by $1$.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "word": "abbcccc"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "word": "abcd"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "word": "aaaa"
+      },
+      "expected": 4
+    }
+  ]
 }

@@ -47,5 +47,19 @@
     "racket": "(define/contract (is-happy n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_happy(N :: integer()) -> boolean().\nis_happy(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_happy(n :: integer) :: boolean\n  def is_happy(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 19
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": false
+    }
+  ]
 }

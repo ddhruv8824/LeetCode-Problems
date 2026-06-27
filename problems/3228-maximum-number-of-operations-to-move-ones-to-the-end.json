@@ -51,5 +51,19 @@
     "racket": "(define/contract (max-operations s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_operations(S :: unicode:unicode_binary()) -> integer().\nmax_operations(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_operations(s :: String.t) :: integer\n  def max_operations(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1001101"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "00111"
+      },
+      "expected": 0
+    }
+  ]
 }

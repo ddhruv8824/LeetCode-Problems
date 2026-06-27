@@ -53,5 +53,30 @@
     "racket": "(define/contract (min-stone-sum piles k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_stone_sum(Piles :: [integer()], K :: integer()) -> integer().\nmin_stone_sum(Piles, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_stone_sum(piles :: [integer], k :: integer) :: integer\n  def min_stone_sum(piles, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "piles": [
+          5,
+          4,
+          9
+        ],
+        "k": 2
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "piles": [
+          4,
+          3,
+          6,
+          7
+        ],
+        "k": 3
+      },
+      "expected": 12
+    }
+  ]
 }

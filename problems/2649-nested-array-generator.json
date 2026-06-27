@@ -32,5 +32,34 @@
   "code_snippets": {
     "javascript": "/**\n * @param {Array} arr\n * @return {Generator}\n */\nvar inorderTraversal = function*(arr) {\n    \n};\n\n/**\n * const gen = inorderTraversal([1, [2, 3]]);\n * gen.next().value; // 1\n * gen.next().value; // 2\n * gen.next().value; // 3\n */",
     "typescript": "type MultidimensionalArray = (MultidimensionalArray | number)[]\n\nfunction* inorderTraversal(arr: MultidimensionalArray): Generator<number, void, unknown> {\n    \n};\n\n/**\n * const gen = inorderTraversal([1, [2, 3]]);\n * gen.next().value; // 1\n * gen.next().value; // 2\n * gen.next().value; // 3\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          [
+            [
+              6
+            ]
+          ],
+          [
+            1,
+            3
+          ],
+          []
+        ]
+      },
+      "expected": [
+        6,
+        1,
+        3
+      ]
+    },
+    {
+      "args": {
+        "arr": []
+      },
+      "expected": []
+    }
+  ]
 }

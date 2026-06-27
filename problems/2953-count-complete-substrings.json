@@ -53,5 +53,21 @@
     "racket": "(define/contract (count-complete-substrings word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_complete_substrings(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\ncount_complete_substrings(Word, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_complete_substrings(word :: String.t, k :: integer) :: integer\n  def count_complete_substrings(word, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "igigee",
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "word": "aaabbbccc",
+        "k": 3
+      },
+      "expected": 6
+    }
+  ]
 }

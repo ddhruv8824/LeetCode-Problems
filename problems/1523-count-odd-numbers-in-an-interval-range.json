@@ -44,5 +44,21 @@
     "ruby": "# @param {Integer} low\n# @param {Integer} high\n# @return {Integer}\ndef count_odds(low, high)\n    \nend",
     "scala": "object Solution {\n    def countOdds(low: Int, high: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn count_odds(low: i32, high: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "low": 3,
+        "high": 7
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "low": 8,
+        "high": 10
+      },
+      "expected": 1
+    }
+  ]
 }

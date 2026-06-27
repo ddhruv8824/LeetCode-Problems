@@ -54,5 +54,52 @@
     "racket": "(define/contract (ship-within-days weights days)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec ship_within_days(Weights :: [integer()], Days :: integer()) -> integer().\nship_within_days(Weights, Days) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ship_within_days(weights :: [integer], days :: integer) :: integer\n  def ship_within_days(weights, days) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "D": 5
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "weights": [
+          3,
+          2,
+          2,
+          4,
+          1,
+          4
+        ],
+        "D": 3
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "weights": [
+          1,
+          2,
+          3,
+          1,
+          1
+        ],
+        "D": 4
+      },
+      "expected": 3
+    }
+  ]
 }

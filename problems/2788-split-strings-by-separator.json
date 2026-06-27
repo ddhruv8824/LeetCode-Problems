@@ -57,5 +57,47 @@
     "racket": "(define/contract (split-words-by-separator words separator)\n  (-> (listof string?) char? (listof string?))\n  )",
     "erlang": "-spec split_words_by_separator(Words :: [unicode:unicode_binary()], Separator :: char()) -> [unicode:unicode_binary()].\nsplit_words_by_separator(Words, Separator) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec split_words_by_separator(words :: [String.t], separator :: char) :: [String.t]\n  def split_words_by_separator(words, separator) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "one.two.three",
+          "four.five",
+          "six"
+        ],
+        "separator": "."
+      },
+      "expected": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "$easy$",
+          "$problem$"
+        ],
+        "separator": "$"
+      },
+      "expected": [
+        "easy",
+        "problem"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "|||"
+        ],
+        "separator": "|"
+      },
+      "expected": []
+    }
+  ]
 }

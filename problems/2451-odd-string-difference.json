@@ -53,5 +53,28 @@
     "racket": "(define/contract (odd-string words)\n  (-> (listof string?) string?)\n  )",
     "erlang": "-spec odd_string(Words :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nodd_string(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec odd_string(words :: [String.t]) :: String.t\n  def odd_string(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "adc",
+          "wzy",
+          "abc"
+        ]
+      },
+      "expected": "abc"
+    },
+    {
+      "args": {
+        "words": [
+          "aaa",
+          "bob",
+          "ccc",
+          "ddd"
+        ]
+      },
+      "expected": "bob"
+    }
+  ]
 }

@@ -54,5 +54,27 @@
     "racket": "(define/contract (coin-change coins amount)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec coin_change(Coins :: [integer()], Amount :: integer()) -> integer().\ncoin_change(Coins, Amount) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec coin_change(coins :: [integer], amount :: integer) :: integer\n  def coin_change(coins, amount) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coins": [
+          1,
+          2,
+          5
+        ],
+        "amount": 11
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "coins": [
+          2
+        ],
+        "amount": 3
+      },
+      "expected": -1
+    }
+  ]
 }

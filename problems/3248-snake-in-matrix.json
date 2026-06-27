@@ -52,5 +52,28 @@
     "racket": "(define/contract (final-position-of-snake n commands)\n  (-> exact-integer? (listof string?) exact-integer?)\n  )",
     "erlang": "-spec final_position_of_snake(N :: integer(), Commands :: [unicode:unicode_binary()]) -> integer().\nfinal_position_of_snake(N, Commands) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec final_position_of_snake(n :: integer, commands :: [String.t]) :: integer\n  def final_position_of_snake(n, commands) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "commands": [
+          "RIGHT",
+          "DOWN"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "commands": [
+          "DOWN",
+          "RIGHT",
+          "UP"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

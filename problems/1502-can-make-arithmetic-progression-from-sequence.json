@@ -50,5 +50,27 @@
     "racket": "(define/contract (can-make-arithmetic-progression arr)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_make_arithmetic_progression(Arr :: [integer()]) -> boolean().\ncan_make_arithmetic_progression(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_make_arithmetic_progression(arr :: [integer]) :: boolean\n  def can_make_arithmetic_progression(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          5,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          4
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

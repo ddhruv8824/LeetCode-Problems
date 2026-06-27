@@ -57,5 +57,25 @@
     "racket": "(define/contract (balanced-string-split s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec balanced_string_split(S :: unicode:unicode_binary()) -> integer().\nbalanced_string_split(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec balanced_string_split(s :: String.t) :: integer\n  def balanced_string_split(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "RLRRLLRLRL"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "RLRRRLLRLL"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "LLLLRRRR"
+      },
+      "expected": 1
+    }
+  ]
 }

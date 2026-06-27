@@ -48,5 +48,21 @@
     "racket": "(define/contract (has-special-substring s k)\n  (-> string? exact-integer? boolean?)\n  )",
     "erlang": "-spec has_special_substring(S :: unicode:unicode_binary(), K :: integer()) -> boolean().\nhas_special_substring(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_special_substring(s :: String.t, k :: integer) :: boolean\n  def has_special_substring(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aaabaaa",
+        "k": 3
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abc",
+        "k": 2
+      },
+      "expected": false
+    }
+  ]
 }

@@ -53,5 +53,31 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (find-second-minimum-value root)\n  (-> (or/c tree-node? #f) exact-integer?)\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec find_second_minimum_value(Root :: #tree_node{} | null) -> integer().\nfind_second_minimum_value(Root) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec find_second_minimum_value(root :: TreeNode.t | nil) :: integer\n  def find_second_minimum_value(root) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          2,
+          2,
+          5,
+          null,
+          null,
+          5,
+          7
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "root": [
+          2,
+          2,
+          2
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

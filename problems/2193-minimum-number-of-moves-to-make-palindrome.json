@@ -54,5 +54,19 @@
     "racket": "(define/contract (min-moves-to-make-palindrome s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_moves_to_make_palindrome(S :: unicode:unicode_binary()) -> integer().\nmin_moves_to_make_palindrome(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves_to_make_palindrome(s :: String.t) :: integer\n  def min_moves_to_make_palindrome(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aabb"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "letelt"
+      },
+      "expected": 2
+    }
+  ]
 }

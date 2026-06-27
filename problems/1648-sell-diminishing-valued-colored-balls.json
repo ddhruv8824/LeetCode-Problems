@@ -60,5 +60,27 @@
     "racket": "(define/contract (max-profit inventory orders)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_profit(Inventory :: [integer()], Orders :: integer()) -> integer().\nmax_profit(Inventory, Orders) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_profit(inventory :: [integer], orders :: integer) :: integer\n  def max_profit(inventory, orders) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "inventory": [
+          2,
+          5
+        ],
+        "orders": 4
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "inventory": [
+          3,
+          5
+        ],
+        "orders": 6
+      },
+      "expected": 19
+    }
+  ]
 }

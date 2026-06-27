@@ -52,5 +52,33 @@
     "racket": "(define/contract (most-frequent nums key)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec most_frequent(Nums :: [integer()], Key :: integer()) -> integer().\nmost_frequent(Nums, Key) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_frequent(nums :: [integer], key :: integer) :: integer\n  def most_frequent(nums, key) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          100,
+          200,
+          1,
+          100
+        ],
+        "key": 1
+      },
+      "expected": 100
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          2,
+          2,
+          2,
+          3
+        ],
+        "key": 2
+      },
+      "expected": 2
+    }
+  ]
 }

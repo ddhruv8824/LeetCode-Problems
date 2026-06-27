@@ -57,5 +57,64 @@
     "racket": "(define/contract (best-hand ranks suits)\n  (-> (listof exact-integer?) (listof char?) string?)\n  )",
     "erlang": "-spec best_hand(Ranks :: [integer()], Suits :: [char()]) -> unicode:unicode_binary().\nbest_hand(Ranks, Suits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec best_hand(ranks :: [integer], suits :: [char]) :: String.t\n  def best_hand(ranks, suits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ranks": [
+          13,
+          2,
+          3,
+          1,
+          9
+        ],
+        "suits": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ]
+      },
+      "expected": "Flush"
+    },
+    {
+      "args": {
+        "ranks": [
+          4,
+          4,
+          2,
+          4,
+          4
+        ],
+        "suits": [
+          "d",
+          "a",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "expected": "Three of a Kind"
+    },
+    {
+      "args": {
+        "ranks": [
+          10,
+          10,
+          2,
+          12,
+          9
+        ],
+        "suits": [
+          "a",
+          "b",
+          "c",
+          "a",
+          "d"
+        ]
+      },
+      "expected": "Pair"
+    }
+  ]
 }

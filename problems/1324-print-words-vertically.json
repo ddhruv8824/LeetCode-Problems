@@ -52,5 +52,41 @@
     "ruby": "# @param {String} s\n# @return {String[]}\ndef print_vertically(s)\n    \nend",
     "scala": "object Solution {\n    def printVertically(s: String): List[String] = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn print_vertically(s: String) -> Vec<String> {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "HOW ARE YOU"
+      },
+      "expected": [
+        "HAY",
+        "ORO",
+        "WEU"
+      ]
+    },
+    {
+      "args": {
+        "s": "TO BE OR NOT TO BE"
+      },
+      "expected": [
+        "TBONTB",
+        "OEROOE",
+        "   T"
+      ]
+    },
+    {
+      "args": {
+        "s": "CONTEST IS COMING"
+      },
+      "expected": [
+        "CIC",
+        "OSO",
+        "N M",
+        "T I",
+        "E N",
+        "S G",
+        "T"
+      ]
+    }
+  ]
 }

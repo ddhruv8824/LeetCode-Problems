@@ -59,5 +59,28 @@
     "racket": "(define/contract (remove-digit number digit)\n  (-> string? char? string?)\n  )",
     "erlang": "-spec remove_digit(Number :: unicode:unicode_binary(), Digit :: char()) -> unicode:unicode_binary().\nremove_digit(Number, Digit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_digit(number :: String.t, digit :: char) :: String.t\n  def remove_digit(number, digit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "number": "123",
+        "digit": "3"
+      },
+      "expected": "12"
+    },
+    {
+      "args": {
+        "number": "1231",
+        "digit": "1"
+      },
+      "expected": "231"
+    },
+    {
+      "args": {
+        "number": "551",
+        "digit": "5"
+      },
+      "expected": "51"
+    }
+  ]
 }

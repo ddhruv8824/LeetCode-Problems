@@ -51,5 +51,19 @@
     "racket": "(define/contract (max-freq-sum s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_freq_sum(S :: unicode:unicode_binary()) -> integer().\nmax_freq_sum(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_freq_sum(s :: String.t) :: integer\n  def max_freq_sum(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "successes"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "s": "aeiaeia"
+      },
+      "expected": 3
+    }
+  ]
 }

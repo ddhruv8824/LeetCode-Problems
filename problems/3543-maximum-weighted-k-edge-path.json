@@ -71,5 +71,67 @@
     "racket": "(define/contract (max-weight n edges k t)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_weight(N :: integer(), Edges :: [[integer()]], K :: integer(), T :: integer()) -> integer().\nmax_weight(N, Edges, K, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_weight(n :: integer, edges :: [[integer]], k :: integer, t :: integer) :: integer\n  def max_weight(n, edges, k, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ]
+        ],
+        "k": 2,
+        "t": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "k": 1,
+        "t": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            1,
+            2,
+            8
+          ]
+        ],
+        "k": 1,
+        "t": 6
+      },
+      "expected": -1
+    }
+  ]
 }

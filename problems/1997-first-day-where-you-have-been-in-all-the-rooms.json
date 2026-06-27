@@ -57,5 +57,37 @@
     "racket": "(define/contract (first-day-been-in-all-rooms nextVisit)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec first_day_been_in_all_rooms(NextVisit :: [integer()]) -> integer().\nfirst_day_been_in_all_rooms(NextVisit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec first_day_been_in_all_rooms(next_visit :: [integer]) :: integer\n  def first_day_been_in_all_rooms(next_visit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nextVisit": [
+          0,
+          0
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nextVisit": [
+          0,
+          0,
+          2
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nextVisit": [
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

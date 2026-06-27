@@ -55,5 +55,38 @@
     "racket": "(define/contract (sum-of-beauties nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_of_beauties(Nums :: [integer()]) -> integer().\nsum_of_beauties(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_beauties(nums :: [integer]) :: integer\n  def sum_of_beauties(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          6,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

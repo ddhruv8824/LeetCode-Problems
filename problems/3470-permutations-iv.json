@@ -59,5 +59,37 @@
     "racket": "(define/contract (permute n k)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec permute(N :: integer(), K :: integer()) -> [integer()].\npermute(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec permute(n :: integer, k :: integer) :: [integer]\n  def permute(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "k": 6
+      },
+      "expected": [
+        3,
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 2
+      },
+      "expected": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "k": 3
+      },
+      "expected": []
+    }
+  ]
 }

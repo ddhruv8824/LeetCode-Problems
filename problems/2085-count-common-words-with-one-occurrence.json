@@ -58,5 +58,54 @@
     "racket": "(define/contract (count-words words1 words2)\n  (-> (listof string?) (listof string?) exact-integer?)\n  )",
     "erlang": "-spec count_words(Words1 :: [unicode:unicode_binary()], Words2 :: [unicode:unicode_binary()]) -> integer().\ncount_words(Words1, Words2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_words(words1 :: [String.t], words2 :: [String.t]) :: integer\n  def count_words(words1, words2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words1": [
+          "leetcode",
+          "is",
+          "amazing",
+          "as",
+          "is"
+        ],
+        "words2": [
+          "amazing",
+          "leetcode",
+          "is"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words1": [
+          "b",
+          "bb",
+          "bbb"
+        ],
+        "words2": [
+          "a",
+          "aa",
+          "aaa"
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "words1": [
+          "a",
+          "ab"
+        ],
+        "words2": [
+          "a",
+          "a",
+          "a",
+          "ab"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -54,5 +54,60 @@
     "racket": "(define/contract (can-three-parts-equal-sum arr)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_three_parts_equal_sum(Arr :: [integer()]) -> boolean().\ncan_three_parts_equal_sum(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_three_parts_equal_sum(arr :: [integer]) :: boolean\n  def can_three_parts_equal_sum(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "A": [
+          0,
+          2,
+          1,
+          -6,
+          6,
+          -7,
+          9,
+          1,
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "A": [
+          0,
+          2,
+          1,
+          -6,
+          6,
+          7,
+          9,
+          -1,
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "A": [
+          3,
+          3,
+          6,
+          5,
+          -2,
+          2,
+          5,
+          1,
+          -9,
+          4
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

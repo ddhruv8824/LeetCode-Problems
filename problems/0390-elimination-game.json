@@ -46,5 +46,19 @@
     "racket": "(define/contract (last-remaining n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec last_remaining(N :: integer()) -> integer().\nlast_remaining(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec last_remaining(n :: integer) :: integer\n  def last_remaining(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 9
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    }
+  ]
 }

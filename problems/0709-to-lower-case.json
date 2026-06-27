@@ -55,5 +55,25 @@
     "racket": "(define/contract (to-lower-case s)\n  (-> string? string?)\n  )",
     "erlang": "-spec to_lower_case(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nto_lower_case(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec to_lower_case(s :: String.t) :: String.t\n  def to_lower_case(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "str": "Hello"
+      },
+      "expected": "hello"
+    },
+    {
+      "args": {
+        "str": "here"
+      },
+      "expected": "here"
+    },
+    {
+      "args": {
+        "str": "LOVELY"
+      },
+      "expected": "lovely"
+    }
+  ]
 }

@@ -49,5 +49,29 @@
     "racket": "(define/contract (find-closest-number nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_closest_number(Nums :: [integer()]) -> integer().\nfind_closest_number(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_closest_number(nums :: [integer]) :: integer\n  def find_closest_number(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          -4,
+          -2,
+          1,
+          4,
+          8
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          -1,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

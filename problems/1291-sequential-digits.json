@@ -48,5 +48,32 @@
     "racket": "(define/contract (sequential-digits low high)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec sequential_digits(Low :: integer(), High :: integer()) -> [integer()].\nsequential_digits(Low, High) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sequential_digits(low :: integer, high :: integer) :: [integer]\n  def sequential_digits(low, high) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "low": 100,
+        "high": 300
+      },
+      "expected": [
+        123,
+        234
+      ]
+    },
+    {
+      "args": {
+        "low": 1000,
+        "high": 13000
+      },
+      "expected": [
+        1234,
+        2345,
+        3456,
+        4567,
+        5678,
+        6789,
+        12345
+      ]
+    }
+  ]
 }

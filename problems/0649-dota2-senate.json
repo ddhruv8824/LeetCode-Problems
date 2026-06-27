@@ -49,5 +49,19 @@
     "racket": "(define/contract (predict-party-victory senate)\n  (-> string? string?)\n  )",
     "erlang": "-spec predict_party_victory(Senate :: unicode:unicode_binary()) -> unicode:unicode_binary().\npredict_party_victory(Senate) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec predict_party_victory(senate :: String.t) :: String.t\n  def predict_party_victory(senate) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "senate": "RD"
+      },
+      "expected": "Radiant"
+    },
+    {
+      "args": {
+        "senate": "RDD"
+      },
+      "expected": "Dire"
+    }
+  ]
 }

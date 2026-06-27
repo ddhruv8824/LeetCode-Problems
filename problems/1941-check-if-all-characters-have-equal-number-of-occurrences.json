@@ -51,5 +51,19 @@
     "racket": "(define/contract (are-occurrences-equal s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec are_occurrences_equal(S :: unicode:unicode_binary()) -> boolean().\nare_occurrences_equal(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec are_occurrences_equal(s :: String.t) :: boolean\n  def are_occurrences_equal(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abacbc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aaabb"
+      },
+      "expected": false
+    }
+  ]
 }

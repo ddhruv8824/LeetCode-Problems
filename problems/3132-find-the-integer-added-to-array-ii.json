@@ -54,5 +54,39 @@
     "racket": "(define/contract (minimum-added-integer nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_added_integer(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nminimum_added_integer(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_added_integer(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def minimum_added_integer(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          4,
+          20,
+          16,
+          12,
+          8
+        ],
+        "nums2": [
+          14,
+          18,
+          10
+        ]
+      },
+      "expected": -2
+    },
+    {
+      "args": {
+        "nums1": [
+          3,
+          5,
+          5,
+          3
+        ],
+        "nums2": [
+          7,
+          7
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

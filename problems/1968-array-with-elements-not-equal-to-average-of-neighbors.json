@@ -51,5 +51,43 @@
     "racket": "(define/contract (rearrange-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec rearrange_array(Nums :: [integer()]) -> [integer()].\nrearrange_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rearrange_array(nums :: [integer]) :: [integer]\n  def rearrange_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          2,
+          0,
+          9,
+          7
+        ]
+      },
+      "expected": [
+        9,
+        7,
+        6,
+        2,
+        0
+      ]
+    }
+  ]
 }

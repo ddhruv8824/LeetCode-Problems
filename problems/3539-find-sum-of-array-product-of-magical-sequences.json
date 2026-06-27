@@ -64,5 +64,45 @@
     "racket": "(define/contract (magical-sum m k nums)\n  (-> exact-integer? exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec magical_sum(M :: integer(), K :: integer(), Nums :: [integer()]) -> integer().\nmagical_sum(M, K, Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec magical_sum(m :: integer, k :: integer, nums :: [integer]) :: integer\n  def magical_sum(m, k, nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 5,
+        "k": 5,
+        "nums": [
+          1,
+          10,
+          100,
+          10000,
+          1000000
+        ]
+      },
+      "expected": 991600007
+    },
+    {
+      "args": {
+        "m": 2,
+        "k": 2,
+        "nums": [
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": 170
+    },
+    {
+      "args": {
+        "m": 1,
+        "k": 1,
+        "nums": [
+          28
+        ]
+      },
+      "expected": 28
+    }
+  ]
 }

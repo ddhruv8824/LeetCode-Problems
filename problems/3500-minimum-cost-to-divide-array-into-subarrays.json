@@ -53,5 +53,51 @@
     "racket": "(define/contract (minimum-cost nums cost k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_cost(Nums :: [integer()], Cost :: [integer()], K :: integer()) -> integer().\nminimum_cost(Nums, Cost, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_cost(nums :: [integer], cost :: [integer], k :: integer) :: integer\n  def minimum_cost(nums, cost, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          4
+        ],
+        "cost": [
+          4,
+          6,
+          6
+        ],
+        "k": 1
+      },
+      "expected": 110
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          8,
+          5,
+          1,
+          14,
+          2,
+          2,
+          12,
+          1
+        ],
+        "cost": [
+          7,
+          2,
+          8,
+          4,
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "k": 7
+      },
+      "expected": 985
+    }
+  ]
 }

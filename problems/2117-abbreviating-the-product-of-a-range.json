@@ -56,5 +56,28 @@
     "racket": "(define/contract (abbreviate-product left right)\n  (-> exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec abbreviate_product(Left :: integer(), Right :: integer()) -> unicode:unicode_binary().\nabbreviate_product(Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec abbreviate_product(left :: integer, right :: integer) :: String.t\n  def abbreviate_product(left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "left": 1,
+        "right": 4
+      },
+      "expected": "24e0"
+    },
+    {
+      "args": {
+        "left": 2,
+        "right": 11
+      },
+      "expected": "399168e2"
+    },
+    {
+      "args": {
+        "left": 371,
+        "right": 375
+      },
+      "expected": "7219856259e3"
+    }
+  ]
 }

@@ -61,5 +61,57 @@
     "racket": "(define/contract (satisfies-conditions grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec satisfies_conditions(Grid :: [[integer()]]) -> boolean().\nsatisfies_conditions(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec satisfies_conditions(grid :: [[integer]]) :: boolean\n  def satisfies_conditions(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

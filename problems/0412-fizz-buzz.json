@@ -52,5 +52,51 @@
     "racket": "(define/contract (fizz-buzz n)\n  (-> exact-integer? (listof string?))\n  )",
     "erlang": "-spec fizz_buzz(N :: integer()) -> [unicode:unicode_binary()].\nfizz_buzz(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec fizz_buzz(n :: integer) :: [String.t]\n  def fizz_buzz(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz"
+      ]
+    },
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz",
+        "4",
+        "Buzz"
+      ]
+    },
+    {
+      "args": {
+        "n": 15
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz",
+        "4",
+        "Buzz",
+        "Fizz",
+        "7",
+        "8",
+        "Fizz",
+        "Buzz",
+        "11",
+        "Fizz",
+        "13",
+        "14",
+        "FizzBuzz"
+      ]
+    }
+  ]
 }

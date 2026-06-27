@@ -62,5 +62,25 @@
     "racket": "(define/contract (max-number-of-balloons text)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_number_of_balloons(Text :: unicode:unicode_binary()) -> integer().\nmax_number_of_balloons(Text) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_number_of_balloons(text :: String.t) :: integer\n  def max_number_of_balloons(text) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "nlaebolko"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "text": "loonbalxballpoon"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "text": "leetcode"
+      },
+      "expected": 0
+    }
+  ]
 }

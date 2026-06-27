@@ -54,5 +54,25 @@
     "racket": "(define/contract (number-of-special-chars word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec number_of_special_chars(Word :: unicode:unicode_binary()) -> integer().\nnumber_of_special_chars(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_special_chars(word :: String.t) :: integer\n  def number_of_special_chars(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "aaAbcBC"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "word": "abc"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "word": "abBCab"
+      },
+      "expected": 1
+    }
+  ]
 }

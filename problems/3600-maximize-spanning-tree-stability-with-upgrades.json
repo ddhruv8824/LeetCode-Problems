@@ -68,5 +68,82 @@
     "racket": "(define/contract (max-stability n edges k)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_stability(N :: integer(), Edges :: [[integer()]], K :: integer()) -> integer().\nmax_stability(N, Edges, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_stability(n :: integer, edges :: [[integer]], k :: integer) :: integer\n  def max_stability(n, edges, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            0
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            4,
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            0
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            1,
+            1
+          ]
+        ],
+        "k": 0
+      },
+      "expected": -1
+    }
+  ]
 }

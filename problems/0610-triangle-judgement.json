@@ -29,5 +29,116 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef triangle_judgement(triangle: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "triangle": [
+          {
+            "x": 13,
+            "y": 15,
+            "z": 30
+          },
+          {
+            "x": 10,
+            "y": 20,
+            "z": 15
+          }
+        ]
+      },
+      "expected": [
+        {
+          "x": 13,
+          "y": 15,
+          "z": 30,
+          "triangle": "No"
+        },
+        {
+          "x": 10,
+          "y": 20,
+          "z": 15,
+          "triangle": "Yes"
+        }
+      ]
+    },
+    {
+      "args": {
+        "triangle": [
+          {
+            "x": 5,
+            "y": 5,
+            "z": 5
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "z": 3
+          }
+        ]
+      },
+      "expected": [
+        {
+          "x": 5,
+          "y": 5,
+          "z": 5,
+          "triangle": "Yes"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "z": 3,
+          "triangle": "No"
+        }
+      ]
+    },
+    {
+      "args": {
+        "triangle": [
+          {
+            "x": 7,
+            "y": 8,
+            "z": 9
+          },
+          {
+            "x": 4,
+            "y": 5,
+            "z": 6
+          }
+        ]
+      },
+      "expected": [
+        {
+          "x": 7,
+          "y": 8,
+          "z": 9,
+          "triangle": "No"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "z": 6,
+          "triangle": "No"
+        }
+      ]
+    },
+    {
+      "args": {
+        "triangle": [
+          {
+            "x": 20,
+            "y": 20,
+            "z": 20
+          }
+        ]
+      },
+      "expected": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 20,
+          "triangle": "Yes"
+        }
+      ]
+    }
+  ]
 }

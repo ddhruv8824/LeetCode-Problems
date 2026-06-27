@@ -54,5 +54,65 @@
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec split_list_to_parts(Head :: #list_node{} | null, K :: integer()) -> [#list_node{} | null].\nsplit_list_to_parts(Head, K) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec split_list_to_parts(head :: ListNode.t | nil, k :: integer) :: [ListNode.t | nil]\n  def split_list_to_parts(head, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a linked list `head` and an integer `k`. We want to split `head` evenly into `k` equally sized parts and return an array of the `k` parts. If `head` cannot be split evenly, the sizes of the `k` parts can differ by at most 1, with the larger parts appearing before the smaller ones.\n\n### Approach 1: Create New Parts\n\n### Intuition\n\nWe can split the linked list into `k` parts by considering two scenarios: when the list can be split evenly and when it cannot.\n\n- **Even Split**: If the list's size `size` is divisible by `k`, each part will have exactly `size / k` nodes.\n- **Uneven Split**: If `size` is not divisible by `k`, a remainder of `size % k` nodes will remain after dividing `size / k` nodes among the parts. To handle this, we add one extra node to the first `size % k` parts, making their size `size / k + 1`. The rest of the parts will have `size / k` nodes.\n\nIn short, each part will have at least `size / k` nodes. If the list doesn't split evenly, the first `size % k` parts will have one extra node.\n\nTo create these parts, we determine each part's size `currentSize`, then use a pointer to traverse the list. We visit the next `currentSize` nodes for each part and build a new linked list. Once the nodes for that part are processed, we assign the new list to the corresponding element in our array. We repeat this process for all `k` parts.\n\n### Algorithm\n\n1. Initialize `ans` array to store the `k` parts.\n2. Initialize `size = 0` and pointer `current = head`. \n3. Iterate through `head` via `current` and increment `size` at each step to find the total size of `head`.\n4. Now that `size` has the total size of the linked list, we can calculate the minimum size for the `k` parts: `splitSize = size / k`.\n5. We can also calculate how many remaining nodes we have: `numRemainingParts = size % k`. \n6. Reset `current` back to `head` so we can iterate through the linked list again to create our `k` parts.\n7. For `i` where `0 < i < k`:\n    * Initialize the head of the new part `newPart` to a dummy node and initialize a new pointer `tail` to keep track of the end of `newPart` for efficient appending\n    * Calculate the current size `currentSize` of the current part:\n        * Initialize `currentSize = splitSize`\n        * If there are any remaining parts (`numRemainingParts > 0`), then increment `currentSize` and decrement `numRemainingParts` to assign the remaining nodes to the first `size % k` parts\n    * Initialize a counter `j = 0`.\n    * While `j < currentSize`:\n        * Copy the current node and append it to `newPart` by performing `tail.next = new ListNode(current.val)`.\n        * Advance `tail` since a new node just got added to the end\n        * Advance `current` to move on to the next node\n        * Increment `j`\n    * Now that `newPart` is fully built, we can assign it in our array: `ans[i] = newPart.next`\n8. Return `ans`\n\n### Implementation### Complexity Analysis \n\nLet $N$ be the size of the linked list `head.`\n\n* Time Complexity: $O(N)$\n\n    We traverse the entire linked list `head` twice, where each time takes $O(N)$ time. Thus, the total time complexity is $O(N)$.\n\n* Space Complexity: $O(N)$\n\n    There are $N$ new nodes created. This results in a space complexity of $O(N)$. We ignore the $O(K)$ space needed for `ans` since the array is required for the question. \n\n### Approach 2: Modify Linked List\n\n### Intuition\n\nIn the previous approach, we required extra space because we created new nodes for the `k` parts, resulting in a space complexity of $O(N)$. In our second approach, we can modify the input linked list `head` to form the `k` parts directly, eliminating the need for extra space and reducing the space complexity to $O(1)$.\n\nAs before, we iterate through the linked list, processing the next `currentSize` nodes for each part. However, this time, when we reach the last node of a part, we set its `next` field to `null`, effectively dividing the linked list in place without creating new nodes.\n\n> Before presenting this approach to the interviewer, check if modifications are allowed. Some interviewers permit changes, while others do not.\n\n### Algorithm \n\n1. Repeat steps 1-6 from Approach 1 to calculate the total size of the linked list, as well as the minimum size of the `k` parts and the number of remainder nodes.\n2. Initialize a pointer `prev = current` to keep track of the node preceding `current`\n3. For `i` where `0 < i < k`:\n    * Initialize `newPart` to `current`, which will be the head of part `i`.\n    * Calculate the current size `currentSize` of the current part using the same logic in Approach 1\n    * Initialize a counter `j = 0`.\n    * While `j < currentSize`:\n        * Update `prev` to `current`\n        * Advance `current` to next node\n        * Increment `j`\n    * Now, `prev` is pointing to the last node of part `i`, and `current` is pointing to the head of part `i+1`. To cut off the rest of the linked list for part `i`, we reassign `prev.next` to null.\n    * Set `ans[i] = newPart`.\n4. Return `ans`\n\n### Implementation### Complexity Analysis\n\nLet $N$ be the size of the linked list `head.`\n\n* Time Complexity: $O(N)$\n\n    `head` is traversed twice, which takes $O(N)$ time.\n\n* Space Complexity: $O(1)$\n\n    In contrast to Approach 1, no new nodes are created and the input is modified to create `k` parts. Thus, the space complexity is a constant $O(1)$."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a linked list `head` and an integer `k`. We want to split `head` evenly into `k` equally sized parts and return an array of the `k` parts. If `head` cannot be split evenly, the sizes of the `k` parts can differ by at most 1, with the larger parts appearing before the smaller ones.\n\n### Approach 1: Create New Parts\n\n### Intuition\n\nWe can split the linked list into `k` parts by considering two scenarios: when the list can be split evenly and when it cannot.\n\n- **Even Split**: If the list's size `size` is divisible by `k`, each part will have exactly `size / k` nodes.\n- **Uneven Split**: If `size` is not divisible by `k`, a remainder of `size % k` nodes will remain after dividing `size / k` nodes among the parts. To handle this, we add one extra node to the first `size % k` parts, making their size `size / k + 1`. The rest of the parts will have `size / k` nodes.\n\nIn short, each part will have at least `size / k` nodes. If the list doesn't split evenly, the first `size % k` parts will have one extra node.\n\nTo create these parts, we determine each part's size `currentSize`, then use a pointer to traverse the list. We visit the next `currentSize` nodes for each part and build a new linked list. Once the nodes for that part are processed, we assign the new list to the corresponding element in our array. We repeat this process for all `k` parts.\n\n### Algorithm\n\n1. Initialize `ans` array to store the `k` parts.\n2. Initialize `size = 0` and pointer `current = head`. \n3. Iterate through `head` via `current` and increment `size` at each step to find the total size of `head`.\n4. Now that `size` has the total size of the linked list, we can calculate the minimum size for the `k` parts: `splitSize = size / k`.\n5. We can also calculate how many remaining nodes we have: `numRemainingParts = size % k`. \n6. Reset `current` back to `head` so we can iterate through the linked list again to create our `k` parts.\n7. For `i` where `0 < i < k`:\n    * Initialize the head of the new part `newPart` to a dummy node and initialize a new pointer `tail` to keep track of the end of `newPart` for efficient appending\n    * Calculate the current size `currentSize` of the current part:\n        * Initialize `currentSize = splitSize`\n        * If there are any remaining parts (`numRemainingParts > 0`), then increment `currentSize` and decrement `numRemainingParts` to assign the remaining nodes to the first `size % k` parts\n    * Initialize a counter `j = 0`.\n    * While `j < currentSize`:\n        * Copy the current node and append it to `newPart` by performing `tail.next = new ListNode(current.val)`.\n        * Advance `tail` since a new node just got added to the end\n        * Advance `current` to move on to the next node\n        * Increment `j`\n    * Now that `newPart` is fully built, we can assign it in our array: `ans[i] = newPart.next`\n8. Return `ans`\n\n### Implementation### Complexity Analysis \n\nLet $N$ be the size of the linked list `head.`\n\n* Time Complexity: $O(N)$\n\n    We traverse the entire linked list `head` twice, where each time takes $O(N)$ time. Thus, the total time complexity is $O(N)$.\n\n* Space Complexity: $O(N)$\n\n    There are $N$ new nodes created. This results in a space complexity of $O(N)$. We ignore the $O(K)$ space needed for `ans` since the array is required for the question. \n\n### Approach 2: Modify Linked List\n\n### Intuition\n\nIn the previous approach, we required extra space because we created new nodes for the `k` parts, resulting in a space complexity of $O(N)$. In our second approach, we can modify the input linked list `head` to form the `k` parts directly, eliminating the need for extra space and reducing the space complexity to $O(1)$.\n\nAs before, we iterate through the linked list, processing the next `currentSize` nodes for each part. However, this time, when we reach the last node of a part, we set its `next` field to `null`, effectively dividing the linked list in place without creating new nodes.\n\n> Before presenting this approach to the interviewer, check if modifications are allowed. Some interviewers permit changes, while others do not.\n\n### Algorithm \n\n1. Repeat steps 1-6 from Approach 1 to calculate the total size of the linked list, as well as the minimum size of the `k` parts and the number of remainder nodes.\n2. Initialize a pointer `prev = current` to keep track of the node preceding `current`\n3. For `i` where `0 < i < k`:\n    * Initialize `newPart` to `current`, which will be the head of part `i`.\n    * Calculate the current size `currentSize` of the current part using the same logic in Approach 1\n    * Initialize a counter `j = 0`.\n    * While `j < currentSize`:\n        * Update `prev` to `current`\n        * Advance `current` to next node\n        * Increment `j`\n    * Now, `prev` is pointing to the last node of part `i`, and `current` is pointing to the head of part `i+1`. To cut off the rest of the linked list for part `i`, we reassign `prev.next` to null.\n    * Set `ans[i] = newPart`.\n4. Return `ans`\n\n### Implementation### Complexity Analysis\n\nLet $N$ be the size of the linked list `head.`\n\n* Time Complexity: $O(N)$\n\n    `head` is traversed twice, which takes $O(N)$ time.\n\n* Space Complexity: $O(1)$\n\n    In contrast to Approach 1, no new nodes are created and the input is modified to create `k` parts. Thus, the space complexity is a constant $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3
+        ],
+        "k": 5
+      },
+      "expected": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [],
+        []
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "k": 3
+      },
+      "expected": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    }
+  ]
 }

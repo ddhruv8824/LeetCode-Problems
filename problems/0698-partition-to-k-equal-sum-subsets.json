@@ -54,5 +54,34 @@
     "racket": "(define/contract (can-partition-k-subsets nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
     "erlang": "-spec can_partition_k_subsets(Nums :: [integer()], K :: integer()) -> boolean().\ncan_partition_k_subsets(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_partition_k_subsets(nums :: [integer], k :: integer) :: boolean\n  def can_partition_k_subsets(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          3,
+          5,
+          2,
+          1
+        ],
+        "k": 4
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "k": 3
+      },
+      "expected": false
+    }
+  ]
 }

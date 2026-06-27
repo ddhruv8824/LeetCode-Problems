@@ -52,5 +52,25 @@
     "racket": "(define/contract (is-valid s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_valid(S :: unicode:unicode_binary()) -> boolean().\nis_valid(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_valid(s :: String.t) :: boolean\n  def is_valid(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aabcbc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abcabcababcc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abccba"
+      },
+      "expected": false
+    }
+  ]
 }

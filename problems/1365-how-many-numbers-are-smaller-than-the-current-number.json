@@ -57,5 +57,57 @@
     "racket": "(define/contract (smaller-numbers-than-current nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec smaller_numbers_than_current(Nums :: [integer()]) -> [integer()].\nsmaller_numbers_than_current(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smaller_numbers_than_current(nums :: [integer]) :: [integer]\n  def smaller_numbers_than_current(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          8,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        4,
+        0,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          5,
+          4,
+          8
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

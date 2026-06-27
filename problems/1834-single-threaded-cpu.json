@@ -52,5 +52,68 @@
     "racket": "(define/contract (get-order tasks)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec get_order(Tasks :: [[integer()]]) -> [integer()].\nget_order(Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_order(tasks :: [[integer]]) :: [integer]\n  def get_order(tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tasks": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "args": {
+        "tasks": [
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        3,
+        2,
+        0,
+        1
+      ]
+    }
+  ]
 }

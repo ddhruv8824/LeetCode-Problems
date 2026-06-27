@@ -56,5 +56,41 @@
     "racket": "(define/contract (min-space-wasted-k-resizing nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_space_wasted_k_resizing(Nums :: [integer()], K :: integer()) -> integer().\nmin_space_wasted_k_resizing(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_space_wasted_k_resizing(nums :: [integer], k :: integer) :: integer\n  def min_space_wasted_k_resizing(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          20
+        ],
+        "k": 0
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          20,
+          30
+        ],
+        "k": 1
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          20,
+          15,
+          30,
+          20
+        ],
+        "k": 2
+      },
+      "expected": 15
+    }
+  ]
 }

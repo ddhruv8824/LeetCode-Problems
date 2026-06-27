@@ -47,5 +47,27 @@
     "racket": "(define/contract (check-possibility nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec check_possibility(Nums :: [integer()]) -> boolean().\ncheck_possibility(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_possibility(nums :: [integer]) :: boolean\n  def check_possibility(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          1
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

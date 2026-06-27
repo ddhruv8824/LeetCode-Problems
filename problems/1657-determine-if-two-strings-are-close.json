@@ -57,5 +57,28 @@
     "racket": "(define/contract (close-strings word1 word2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec close_strings(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> boolean().\nclose_strings(Word1, Word2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec close_strings(word1 :: String.t, word2 :: String.t) :: boolean\n  def close_strings(word1, word2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word1": "abc",
+        "word2": "bca"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "word1": "a",
+        "word2": "aa"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "word1": "cabbba",
+        "word2": "abbccc"
+      },
+      "expected": true
+    }
+  ]
 }

@@ -52,5 +52,19 @@
     "racket": "(define/contract (nth-person-gets-nth-seat n)\n  (-> exact-integer? flonum?)\n  )",
     "erlang": "-spec nth_person_gets_nth_seat(N :: integer()) -> float().\nnth_person_gets_nth_seat(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec nth_person_gets_nth_seat(n :: integer) :: float\n  def nth_person_gets_nth_seat(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 0.5
+    }
+  ]
 }

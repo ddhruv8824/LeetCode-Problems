@@ -52,5 +52,25 @@
     "racket": "(define/contract (is-power-of-two n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_power_of_two(N :: integer()) -> boolean().\nis_power_of_two(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_power_of_two(n :: integer) :: boolean\n  def is_power_of_two(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 16
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": false
+    }
+  ]
 }

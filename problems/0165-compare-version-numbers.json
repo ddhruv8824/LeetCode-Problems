@@ -57,5 +57,28 @@
     "racket": "(define/contract (compare-version version1 version2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec compare_version(Version1 :: unicode:unicode_binary(), Version2 :: unicode:unicode_binary()) -> integer().\ncompare_version(Version1, Version2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec compare_version(version1 :: String.t, version2 :: String.t) :: integer\n  def compare_version(version1, version2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "version1": "1.2",
+        "version2": "1.10"
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "version1": "1.01",
+        "version2": "1.001"
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "version1": "1.0",
+        "version2": "1.0.0.0"
+      },
+      "expected": 0
+    }
+  ]
 }

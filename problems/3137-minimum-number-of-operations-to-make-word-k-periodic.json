@@ -53,5 +53,21 @@
     "racket": "(define/contract (minimum-operations-to-make-k-periodic word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_operations_to_make_k_periodic(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_operations_to_make_k_periodic(Word, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_operations_to_make_k_periodic(word :: String.t, k :: integer) :: integer\n  def minimum_operations_to_make_k_periodic(word, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "leetcodeleet",
+        "k": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "word": " leetcoleet ",
+        "k": 2
+      },
+      "expected": 3
+    }
+  ]
 }

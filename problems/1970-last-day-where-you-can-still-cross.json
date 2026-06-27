@@ -69,5 +69,102 @@
     "racket": "(define/contract (latest-day-to-cross row col cells)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec latest_day_to_cross(Row :: integer(), Col :: integer(), Cells :: [[integer()]]) -> integer().\nlatest_day_to_cross(Row, Col, Cells) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec latest_day_to_cross(row :: integer, col :: integer, cells :: [[integer]]) :: integer\n  def latest_day_to_cross(row, col, cells) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "row": 2,
+        "col": 2,
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "row": 2,
+        "col": 2,
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "row": 3,
+        "col": 3,
+        "cells": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

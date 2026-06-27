@@ -53,5 +53,34 @@
     "racket": "(define/contract (minimum-rounds tasks)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_rounds(Tasks :: [integer()]) -> integer().\nminimum_rounds(Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_rounds(tasks :: [integer]) :: integer\n  def minimum_rounds(tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tasks": [
+          2,
+          2,
+          3,
+          3,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "tasks": [
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

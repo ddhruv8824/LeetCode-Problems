@@ -54,5 +54,24 @@
     "racket": "(define/contract (find-maximized-capital k w profits capital)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_maximized_capital(K :: integer(), W :: integer(), Profits :: [integer()], Capital :: [integer()]) -> integer().\nfind_maximized_capital(K, W, Profits, Capital) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_maximized_capital(k :: integer, w :: integer, profits :: [integer], capital :: [integer]) :: integer\n  def find_maximized_capital(k, w, profits, capital) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 2,
+        "w": 0,
+        "profits": [
+          1,
+          2,
+          3
+        ],
+        "capital": [
+          0,
+          1,
+          1
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

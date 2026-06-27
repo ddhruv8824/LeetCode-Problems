@@ -55,5 +55,25 @@
     "racket": "(define/contract (longest-beautiful-substring word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec longest_beautiful_substring(Word :: unicode:unicode_binary()) -> integer().\nlongest_beautiful_substring(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_beautiful_substring(word :: String.t) :: integer\n  def longest_beautiful_substring(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "aeiaaioaaaaeiiiiouuuooaauuaeiu"
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "word": "aeeeiiiioooauuuaeiou"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "word": "a"
+      },
+      "expected": 0
+    }
+  ]
 }

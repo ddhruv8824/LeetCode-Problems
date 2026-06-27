@@ -52,5 +52,19 @@
     "racket": "(define/contract (remove-stars s)\n  (-> string? string?)\n  )",
     "erlang": "-spec remove_stars(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_stars(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_stars(s :: String.t) :: String.t\n  def remove_stars(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leet**cod*e"
+      },
+      "expected": "lecoe"
+    },
+    {
+      "args": {
+        "s": "erase*****"
+      },
+      "expected": ""
+    }
+  ]
 }

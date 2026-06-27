@@ -58,5 +58,44 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (merge-k-lists lists)\n  (-> (listof (or/c list-node? #f)) (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec merge_k_lists(Lists :: [#list_node{} | null]) -> #list_node{} | null.\nmerge_k_lists(Lists) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec merge_k_lists(lists :: [ListNode.t | nil]) :: ListNode.t | nil\n  def merge_k_lists(lists) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "lists": [
+          [
+            2,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            7
+          ],
+          []
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "args": {
+        "lists": []
+      },
+      "expected": []
+    }
+  ]
 }

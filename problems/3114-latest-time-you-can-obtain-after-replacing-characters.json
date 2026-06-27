@@ -52,5 +52,19 @@
     "racket": "(define/contract (find-latest-time s)\n  (-> string? string?)\n  )",
     "erlang": "-spec find_latest_time(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfind_latest_time(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_latest_time(s :: String.t) :: String.t\n  def find_latest_time(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1?:?4"
+      },
+      "expected": "11:54"
+    },
+    {
+      "args": {
+        "s": "0?:5?"
+      },
+      "expected": "09:59"
+    }
+  ]
 }

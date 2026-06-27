@@ -50,5 +50,43 @@
     "racket": "(define/contract (separate-digits nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec separate_digits(Nums :: [integer()]) -> [integer()].\nseparate_digits(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec separate_digits(nums :: [integer]) :: [integer]\n  def separate_digits(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          13,
+          25,
+          83,
+          77
+        ]
+      },
+      "expected": [
+        1,
+        3,
+        2,
+        5,
+        8,
+        3,
+        7,
+        7
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          1,
+          3,
+          9
+        ]
+      },
+      "expected": [
+        7,
+        1,
+        3,
+        9
+      ]
+    }
+  ]
 }

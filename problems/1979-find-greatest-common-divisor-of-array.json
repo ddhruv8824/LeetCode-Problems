@@ -56,5 +56,40 @@
     "racket": "(define/contract (find-gcd nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_gcd(Nums :: [integer()]) -> integer().\nfind_gcd(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_gcd(nums :: [integer]) :: integer\n  def find_gcd(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          5,
+          6,
+          9,
+          10
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          5,
+          6,
+          8,
+          3
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

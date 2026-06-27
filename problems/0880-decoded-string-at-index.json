@@ -56,5 +56,35 @@
     "racket": "(define/contract (decode-at-index s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec decode_at_index(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ndecode_at_index(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec decode_at_index(s :: String.t, k :: integer) :: String.t\n  def decode_at_index(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "S": "leet2code3",
+        "K": 10
+      },
+      "expected": "o"
+    },
+    {
+      "args": {
+        "S": "ha22",
+        "K": 5
+      },
+      "expected": "h"
+    },
+    {
+      "args": {
+        "S": "a2345678999999999999999",
+        "K": 1
+      },
+      "expected": "a"
+    },
+    {
+      "args": {
+        "S": "a23",
+        "K": 6
+      },
+      "expected": "a"
+    }
+  ]
 }

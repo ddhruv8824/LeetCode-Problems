@@ -67,5 +67,69 @@
     "racket": "(define/contract (time-taken edges)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec time_taken(Edges :: [[integer()]]) -> [integer()].\ntime_taken(Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec time_taken(edges :: [[integer]]) :: [integer]\n  def time_taken(edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        4,
+        3
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "edges": [
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        6,
+        3,
+        5,
+        5
+      ]
+    }
+  ]
 }

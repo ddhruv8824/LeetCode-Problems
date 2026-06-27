@@ -47,5 +47,19 @@
     "racket": "(define/contract (next-greater-element n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec next_greater_element(N :: integer()) -> integer().\nnext_greater_element(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec next_greater_element(n :: integer) :: integer\n  def next_greater_element(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 12
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "n": 21
+      },
+      "expected": -1
+    }
+  ]
 }

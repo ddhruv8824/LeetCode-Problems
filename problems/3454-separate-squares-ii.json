@@ -60,5 +60,41 @@
     "racket": "(define/contract (separate-squares squares)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
     "erlang": "-spec separate_squares(Squares :: [[integer()]]) -> float().\nseparate_squares(Squares) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec separate_squares(squares :: [[integer]]) :: float\n  def separate_squares(squares) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "squares": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "squares": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

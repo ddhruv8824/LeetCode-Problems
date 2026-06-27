@@ -60,5 +60,28 @@
     "racket": "(define/contract (beautiful-substrings s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec beautiful_substrings(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nbeautiful_substrings(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beautiful_substrings(s :: String.t, k :: integer) :: integer\n  def beautiful_substrings(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "baeyh",
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abba",
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "bcdf",
+        "k": 1
+      },
+      "expected": 0
+    }
+  ]
 }

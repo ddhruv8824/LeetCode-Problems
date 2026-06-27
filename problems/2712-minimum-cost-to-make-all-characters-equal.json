@@ -52,5 +52,19 @@
     "racket": "(define/contract (minimum-cost s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_cost(S :: unicode:unicode_binary()) -> integer().\nminimum_cost(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_cost(s :: String.t) :: integer\n  def minimum_cost(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0011"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "010101"
+      },
+      "expected": 9
+    }
+  ]
 }

@@ -50,5 +50,25 @@
     "ruby": "# @param {Integer} n\n# @return {Integer}\ndef concatenated_binary(n)\n    \nend",
     "scala": "object Solution {\n    def concatenatedBinary(n: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn concatenated_binary(n: i32) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 27
+    },
+    {
+      "args": {
+        "n": 12
+      },
+      "expected": 505379714
+    }
+  ]
 }

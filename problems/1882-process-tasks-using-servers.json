@@ -52,5 +52,61 @@
     "racket": "(define/contract (assign-tasks servers tasks)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec assign_tasks(Servers :: [integer()], Tasks :: [integer()]) -> [integer()].\nassign_tasks(Servers, Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec assign_tasks(servers :: [integer], tasks :: [integer]) :: [integer]\n  def assign_tasks(servers, tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "servers": [
+          3,
+          3,
+          2
+        ],
+        "tasks": [
+          1,
+          2,
+          3,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        2,
+        0,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "servers": [
+          5,
+          1,
+          4,
+          3,
+          2
+        ],
+        "tasks": [
+          2,
+          1,
+          2,
+          4,
+          5,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        4,
+        1,
+        4,
+        1,
+        3,
+        2
+      ]
+    }
+  ]
 }

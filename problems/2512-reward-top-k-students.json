@@ -64,5 +64,57 @@
     "racket": "(define/contract (top-students positive_feedback negative_feedback report student_id k)\n  (-> (listof string?) (listof string?) (listof string?) (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec top_students(Positive_feedback :: [unicode:unicode_binary()], Negative_feedback :: [unicode:unicode_binary()], Report :: [unicode:unicode_binary()], Student_id :: [integer()], K :: integer()) -> [integer()].\ntop_students(Positive_feedback, Negative_feedback, Report, Student_id, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec top_students(positive_feedback :: [String.t], negative_feedback :: [String.t], report :: [String.t], student_id :: [integer], k :: integer) :: [integer]\n  def top_students(positive_feedback, negative_feedback, report, student_id, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "positive_feedback": [
+          "smart",
+          "brilliant",
+          "studious"
+        ],
+        "negative_feedback": [
+          "not"
+        ],
+        "report": [
+          "this student is studious",
+          "the student is smart"
+        ],
+        "student_id": [
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "args": {
+        "positive_feedback": [
+          "smart",
+          "brilliant",
+          "studious"
+        ],
+        "negative_feedback": [
+          "not"
+        ],
+        "report": [
+          "this student is not studious",
+          "the student is smart"
+        ],
+        "student_id": [
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": [
+        2,
+        1
+      ]
+    }
+  ]
 }

@@ -62,5 +62,37 @@
     "racket": "(define/contract (min-moves classroom energy)\n  (-> (listof string?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_moves(Classroom :: [unicode:unicode_binary()], Energy :: integer()) -> integer().\nmin_moves(Classroom, Energy) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves(classroom :: [String.t], energy :: integer) :: integer\n  def min_moves(classroom, energy) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "classroom": [
+          "S.",
+          "XL"
+        ],
+        "energy": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "classroom": [
+          "LS",
+          "RL"
+        ],
+        "energy": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "classroom": [
+          "L.S",
+          "RXL"
+        ],
+        "energy": 3
+      },
+      "expected": -1
+    }
+  ]
 }

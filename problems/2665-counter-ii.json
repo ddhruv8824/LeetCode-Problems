@@ -31,5 +31,41 @@
   "code_snippets": {
     "javascript": "/**\n * @param {integer} init\n * @return { increment: Function, decrement: Function, reset: Function }\n */\nvar createCounter = function(init) {\n    \n};\n\n/**\n * const counter = createCounter(5)\n * counter.increment(); // 6\n * counter.reset(); // 5\n * counter.decrement(); // 4\n */",
     "typescript": "type Counter = {\n    increment: () => number,\n    decrement: () => number,\n    reset: () => number,\n}\n\nfunction createCounter(init: number): Counter {\n    \n};\n\n/**\n * const counter = createCounter(5)\n * counter.increment(); // 6\n * counter.reset(); // 5\n * counter.decrement(); // 4\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "init": 5,
+        "calls": [
+          "increment",
+          "reset",
+          "decrement"
+        ]
+      },
+      "expected": [
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "args": {
+        "init": 0,
+        "calls": [
+          "increment",
+          "increment",
+          "decrement",
+          "reset",
+          "reset"
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
 }

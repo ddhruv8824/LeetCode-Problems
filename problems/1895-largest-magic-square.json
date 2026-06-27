@@ -56,5 +56,67 @@
     "racket": "(define/contract (largest-magic-square grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec largest_magic_square(Grid :: [[integer()]]) -> integer().\nlargest_magic_square(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_magic_square(grid :: [[integer]]) :: integer\n  def largest_magic_square(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            7,
+            1,
+            4,
+            5,
+            6
+          ],
+          [
+            2,
+            5,
+            1,
+            6,
+            4
+          ],
+          [
+            1,
+            5,
+            4,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            7,
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            1,
+            3,
+            1
+          ],
+          [
+            9,
+            3,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            3,
+            8
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

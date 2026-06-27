@@ -52,5 +52,21 @@
     "racket": "(define/contract (number-of-rounds loginTime logoutTime)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec number_of_rounds(LoginTime :: unicode:unicode_binary(), LogoutTime :: unicode:unicode_binary()) -> integer().\nnumber_of_rounds(LoginTime, LogoutTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_rounds(login_time :: String.t, logout_time :: String.t) :: integer\n  def number_of_rounds(login_time, logout_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "loginTime": "09:31",
+        "logoutTime": "10:14"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "loginTime": "21:30",
+        "logoutTime": "03:00"
+      },
+      "expected": 22
+    }
+  ]
 }

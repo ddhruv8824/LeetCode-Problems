@@ -49,5 +49,30 @@
     "racket": "(define/contract (sum-subarray-mins arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_subarray_mins(Arr :: [integer()]) -> integer().\nsum_subarray_mins(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_subarray_mins(arr :: [integer]) :: integer\n  def sum_subarray_mins(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          1,
+          2,
+          4
+        ]
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "arr": [
+          11,
+          81,
+          94,
+          43,
+          3
+        ]
+      },
+      "expected": 444
+    }
+  ]
 }

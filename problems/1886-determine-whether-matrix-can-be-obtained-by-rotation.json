@@ -63,5 +63,96 @@
     "racket": "(define/contract (find-rotation mat target)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec find_rotation(Mat :: [[integer()]], Target :: [[integer()]]) -> boolean().\nfind_rotation(Mat, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_rotation(mat :: [[integer]], target :: [[integer]]) :: boolean\n  def find_rotation(mat, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "target": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "target": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "target": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

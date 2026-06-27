@@ -50,5 +50,19 @@
     "racket": "(define/contract (is-three n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_three(N :: integer()) -> boolean().\nis_three(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_three(n :: integer) :: boolean\n  def is_three(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": true
+    }
+  ]
 }

@@ -58,5 +58,67 @@
     "racket": "(define/contract (can-make-pali-queries s queries)\n  (-> string? (listof (listof exact-integer?)) (listof boolean?))\n  )",
     "erlang": "-spec can_make_pali_queries(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [boolean()].\ncan_make_pali_queries(S, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_make_pali_queries(s :: String.t, queries :: [[integer]]) :: [boolean]\n  def can_make_pali_queries(s, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcda",
+        "queries": [
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            4,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "args": {
+        "s": "lyb",
+        "queries": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        false,
+        true
+      ]
+    }
+  ]
 }

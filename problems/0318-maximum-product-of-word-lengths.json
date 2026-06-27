@@ -54,5 +54,45 @@
     "racket": "(define/contract (max-product words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec max_product(Words :: [unicode:unicode_binary()]) -> integer().\nmax_product(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_product(words :: [String.t]) :: integer\n  def max_product(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "abcw",
+          "baz",
+          "foo",
+          "bar",
+          "xtfn",
+          "abcdef"
+        ]
+      },
+      "expected": 16
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "ab",
+          "abc",
+          "d",
+          "cd",
+          "bcd",
+          "abcd"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "aa",
+          "aaa",
+          "aaaa"
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

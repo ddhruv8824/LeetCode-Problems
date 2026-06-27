@@ -45,5 +45,45 @@
     "racket": "(define num-array%\n  (class object%\n    (super-new)\n    \n    ; nums : (listof exact-integer?)\n    (init-field\n      nums)\n    \n    ; sum-range : exact-integer? exact-integer? -> exact-integer?\n    (define/public (sum-range left right)\n      )))\n\n;; Your num-array% object will be instantiated and called as such:\n;; (define obj (new num-array% [nums nums]))\n;; (define param_1 (send obj sum-range left right))",
     "erlang": "-spec num_array_init_(Nums :: [integer()]) -> any().\nnum_array_init_(Nums) ->\n  .\n\n-spec num_array_sum_range(Left :: integer(), Right :: integer()) -> integer().\nnum_array_sum_range(Left, Right) ->\n  .\n\n\n%% Your functions will be called as such:\n%% num_array_init_(Nums),\n%% Param_1 = num_array_sum_range(Left, Right),\n\n%% num_array_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule NumArray do\n  @spec init_(nums :: [integer]) :: any\n  def init_(nums) do\n    \n  end\n\n  @spec sum_range(left :: integer, right :: integer) :: integer\n  def sum_range(left, right) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# NumArray.init_(nums)\n# param_1 = NumArray.sum_range(left, right)\n\n# NumArray.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "NumArray",
+        "sumRange",
+        "sumRange",
+        "sumRange"
+      ],
+      "args": [
+        [
+          [
+            -2,
+            0,
+            3,
+            -5,
+            2,
+            -1
+          ]
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "expected": [
+        null,
+        1,
+        -1,
+        -3
+      ]
+    }
+  ]
 }

@@ -49,5 +49,29 @@
     "racket": "(define/contract (beautiful-splits nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec beautiful_splits(Nums :: [integer()]) -> integer().\nbeautiful_splits(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beautiful_splits(nums :: [integer]) :: integer\n  def beautiful_splits(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

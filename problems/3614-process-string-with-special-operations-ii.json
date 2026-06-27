@@ -57,5 +57,28 @@
     "racket": "(define/contract (process-str s k)\n  (-> string? exact-integer? char?)\n  )",
     "erlang": "-spec process_str(S :: unicode:unicode_binary(), K :: integer()) -> char().\nprocess_str(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec process_str(s :: String.t, k :: integer) :: char\n  def process_str(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "a#b%*",
+        "k": 1
+      },
+      "expected": "a"
+    },
+    {
+      "args": {
+        "s": "cd%#*#",
+        "k": 3
+      },
+      "expected": "d"
+    },
+    {
+      "args": {
+        "s": "z*#",
+        "k": 0
+      },
+      "expected": "."
+    }
+  ]
 }

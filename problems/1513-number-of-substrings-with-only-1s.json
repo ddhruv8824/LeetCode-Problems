@@ -54,5 +54,25 @@
     "racket": "(define/contract (num-sub s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec num_sub(S :: unicode:unicode_binary()) -> integer().\nnum_sub(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_sub(s :: String.t) :: integer\n  def num_sub(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "0110111"
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "s": "101"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "111111"
+      },
+      "expected": 21
+    }
+  ]
 }

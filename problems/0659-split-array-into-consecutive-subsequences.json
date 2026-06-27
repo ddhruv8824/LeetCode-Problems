@@ -55,5 +55,48 @@
     "racket": "(define/contract (is-possible nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_possible(Nums :: [integer()]) -> boolean().\nis_possible(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_possible(nums :: [integer]) :: boolean\n  def is_possible(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          5
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

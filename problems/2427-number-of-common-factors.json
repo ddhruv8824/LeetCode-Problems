@@ -49,5 +49,21 @@
     "racket": "(define/contract (common-factors a b)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec common_factors(A :: integer(), B :: integer()) -> integer().\ncommon_factors(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec common_factors(a :: integer, b :: integer) :: integer\n  def common_factors(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 12,
+        "b": 6
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "a": 25,
+        "b": 30
+      },
+      "expected": 2
+    }
+  ]
 }

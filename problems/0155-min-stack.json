@@ -45,5 +45,45 @@
     "racket": "(define min-stack%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; push : exact-integer? -> void?\n    (define/public (push val)\n      )\n    ; pop : -> void?\n    (define/public (pop)\n      )\n    ; top : -> exact-integer?\n    (define/public (top)\n      )\n    ; get-min : -> exact-integer?\n    (define/public (get-min)\n      )))\n\n;; Your min-stack% object will be instantiated and called as such:\n;; (define obj (new min-stack%))\n;; (send obj push val)\n;; (send obj pop)\n;; (define param_3 (send obj top))\n;; (define param_4 (send obj get-min))",
     "erlang": "-spec min_stack_init_() -> any().\nmin_stack_init_() ->\n  .\n\n-spec min_stack_push(Val :: integer()) -> any().\nmin_stack_push(Val) ->\n  .\n\n-spec min_stack_pop() -> any().\nmin_stack_pop() ->\n  .\n\n-spec min_stack_top() -> integer().\nmin_stack_top() ->\n  .\n\n-spec min_stack_get_min() -> integer().\nmin_stack_get_min() ->\n  .\n\n\n%% Your functions will be called as such:\n%% min_stack_init_(),\n%% min_stack_push(Val),\n%% min_stack_pop(),\n%% Param_3 = min_stack_top(),\n%% Param_4 = min_stack_get_min(),\n\n%% min_stack_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MinStack do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec push(val :: integer) :: any\n  def push(val) do\n    \n  end\n\n  @spec pop() :: any\n  def pop() do\n    \n  end\n\n  @spec top() :: integer\n  def top() do\n    \n  end\n\n  @spec get_min() :: integer\n  def get_min() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MinStack.init_()\n# MinStack.push(val)\n# MinStack.pop()\n# param_3 = MinStack.top()\n# param_4 = MinStack.get_min()\n\n# MinStack.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MinStack",
+        "push",
+        "push",
+        "push",
+        "getMin",
+        "pop",
+        "top",
+        "getMin"
+      ],
+      "args": [
+        [],
+        [
+          -2
+        ],
+        [
+          0
+        ],
+        [
+          -3
+        ],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        -3,
+        null,
+        0,
+        -2
+      ]
+    }
+  ]
 }

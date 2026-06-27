@@ -53,5 +53,38 @@
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec leaf_similar(Root1 :: #tree_node{} | null, Root2 :: #tree_node{} | null) -> boolean().\nleaf_similar(Root1, Root2) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec leaf_similar(root1 :: TreeNode.t | nil, root2 :: TreeNode.t | nil) :: boolean\n  def leaf_similar(root1, root2) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Depth First Search\n\n#### Intuition\n\nLet's find the leaf value sequence for both given trees.  Afterwards, we can compare them to see if they are equal or not.\n\nTo find the leaf value sequence of a tree, we use a depth first search.  Our `dfs` function writes the node's value if it is a leaf, and then recursively explores each child.  This is guaranteed to visit each leaf in left-to-right order, as left-children are fully explored before right-children.#### Complexity Analysis**\n\nLet $N$ be the number of nodes in `root1` and $M$ the number of nodes in `root2`.\n\n* Time Complexity: $O(N + M)$\n\n    The `dfs` function visits each node exactly once in both trees, resulting in a time complexity of $O(N)$ for the first call and $O(M)$ for the second call.\n\n    After collecting all leaves in the `leaves1` and `leaves2` arrays, we compare them using the `==` operator. Comparing two arrays of size $L$ has a worst-case time complexity of $O(L)$, where $L$ is the number of leaf nodes in the larger array.\n\n    Since $L \\leq \\min(N, M)$, the comparison time is $O(\\min(N, M))$, but this is dominated by the time spent traversing both trees.\n\n    Overall, the time complexity is $O(N + M)$.\n\n* Space Complexity: $O(N + M)$\n\n    The recursive `dfs` calls will require stack space for each node. In the worst case, if the trees are completely unbalanced (like a linked list), the recursion depth could be $O(N)$ and $O(M)$ respectively, leading to a total stack space complexity of $O(N + M)$.\n\n    Additionally, each `dfs` call collects leaf nodes into `leaves1` and `leaves2`. The maximum number of leaves in a binary tree is $\\frac{N}{2}$ (for a full binary tree), resulting in $O(N)$ and $O(M)$ space for each array.\n\n    Therefore, the total space complexity, combining both the recursion stack and the storage for the leaves, is $O(N + M)$.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Depth First Search\n\n#### Intuition\n\nLet's find the leaf value sequence for both given trees.  Afterwards, we can compare them to see if they are equal or not.\n\nTo find the leaf value sequence of a tree, we use a depth first search.  Our `dfs` function writes the node's value if it is a leaf, and then recursively explores each child.  This is guaranteed to visit each leaf in left-to-right order, as left-children are fully explored before right-children.#### Complexity Analysis**\n\nLet $N$ be the number of nodes in `root1` and $M$ the number of nodes in `root2`.\n\n* Time Complexity: $O(N + M)$\n\n    The `dfs` function visits each node exactly once in both trees, resulting in a time complexity of $O(N)$ for the first call and $O(M)$ for the second call.\n\n    After collecting all leaves in the `leaves1` and `leaves2` arrays, we compare them using the `==` operator. Comparing two arrays of size $L$ has a worst-case time complexity of $O(L)$, where $L$ is the number of leaf nodes in the larger array.\n\n    Since $L \\leq \\min(N, M)$, the comparison time is $O(\\min(N, M))$, but this is dominated by the time spent traversing both trees.\n\n    Overall, the time complexity is $O(N + M)$.\n\n* Space Complexity: $O(N + M)$\n\n    The recursive `dfs` calls will require stack space for each node. In the worst case, if the trees are completely unbalanced (like a linked list), the recursion depth could be $O(N)$ and $O(M)$ respectively, leading to a total stack space complexity of $O(N + M)$.\n\n    Additionally, each `dfs` call collects leaf nodes into `leaves1` and `leaves2`. The maximum number of leaves in a binary tree is $\\frac{N}{2}$ (for a full binary tree), resulting in $O(N)$ and $O(M)$ space for each array.\n\n    Therefore, the total space complexity, combining both the recursion stack and the storage for the leaves, is $O(N + M)$.\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "root1": [
+          3,
+          5,
+          1,
+          6,
+          2,
+          9,
+          8,
+          null,
+          null,
+          7,
+          4
+        ],
+        "root2": [
+          3,
+          6,
+          1,
+          null,
+          null,
+          5,
+          2,
+          7,
+          4,
+          9,
+          8
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

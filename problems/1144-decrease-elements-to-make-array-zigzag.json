@@ -49,5 +49,29 @@
     "racket": "(define/contract (moves-to-make-zigzag nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec moves_to_make_zigzag(Nums :: [integer()]) -> integer().\nmoves_to_make_zigzag(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec moves_to_make_zigzag(nums :: [integer]) :: integer\n  def moves_to_make_zigzag(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          9,
+          6,
+          1,
+          6,
+          2
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

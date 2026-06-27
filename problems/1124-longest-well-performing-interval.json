@@ -53,5 +53,31 @@
     "racket": "(define/contract (longest-wpi hours)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec longest_wpi(Hours :: [integer()]) -> integer().\nlongest_wpi(Hours) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_wpi(hours :: [integer]) :: integer\n  def longest_wpi(hours) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "hours": [
+          9,
+          9,
+          6,
+          0,
+          6,
+          6,
+          9
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "hours": [
+          6,
+          6,
+          6
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

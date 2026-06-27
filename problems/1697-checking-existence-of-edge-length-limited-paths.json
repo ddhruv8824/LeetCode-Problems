@@ -63,5 +63,93 @@
     "racket": "(define/contract (distance-limited-paths-exist n edgeList queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof boolean?))\n  )",
     "erlang": "-spec distance_limited_paths_exist(N :: integer(), EdgeList :: [[integer()]], Queries :: [[integer()]]) -> [boolean()].\ndistance_limited_paths_exist(N, EdgeList, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distance_limited_paths_exist(n :: integer, edge_list :: [[integer]], queries :: [[integer]]) :: [boolean]\n  def distance_limited_paths_exist(n, edge_list, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edgeList": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            2,
+            0,
+            8
+          ],
+          [
+            1,
+            0,
+            16
+          ]
+        ],
+        "queries": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        false,
+        true
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "edgeList": [
+          [
+            0,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            2,
+            3,
+            9
+          ],
+          [
+            3,
+            4,
+            13
+          ]
+        ],
+        "queries": [
+          [
+            0,
+            4,
+            14
+          ],
+          [
+            1,
+            4,
+            13
+          ]
+        ]
+      },
+      "expected": [
+        true,
+        false
+      ]
+    }
+  ]
 }

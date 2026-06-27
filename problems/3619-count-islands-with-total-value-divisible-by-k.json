@@ -56,5 +56,76 @@
     "racket": "(define/contract (count-islands grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_islands(Grid :: [[integer()]], K :: integer()) -> integer().\ncount_islands(Grid, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_islands(grid :: [[integer]], k :: integer) :: integer\n  def count_islands(grid, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            4,
+            7,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            8
+          ]
+        ],
+        "k": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            0,
+            3,
+            0
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -29,5 +29,80 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef find_employees(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "employees": [
+          {
+            "id": 1,
+            "name": "Joe",
+            "salary": 70000,
+            "managerId": 3
+          },
+          {
+            "id": 2,
+            "name": "Henry",
+            "salary": 80000,
+            "managerId": 4
+          },
+          {
+            "id": 3,
+            "name": "Sam",
+            "salary": 60000,
+            "managerId": null
+          },
+          {
+            "id": 4,
+            "name": "Max",
+            "salary": 90000,
+            "managerId": null
+          }
+        ]
+      },
+      "expected": [
+        "Joe"
+      ]
+    },
+    {
+      "args": {
+        "employees": [
+          {
+            "id": 1,
+            "name": "John",
+            "salary": 50000,
+            "managerId": 2
+          },
+          {
+            "id": 2,
+            "name": "Alice",
+            "salary": 60000,
+            "managerId": null
+          }
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "employees": [
+          {
+            "id": 1,
+            "name": "Bob",
+            "salary": 70000,
+            "managerId": 2
+          },
+          {
+            "id": 2,
+            "name": "Charlie",
+            "salary": 60000,
+            "managerId": null
+          }
+        ]
+      },
+      "expected": [
+        "Bob"
+      ]
+    }
+  ]
 }

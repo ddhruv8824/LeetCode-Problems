@@ -52,5 +52,27 @@
     "racket": "(define/contract (max-num-of-substrings s)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec max_num_of_substrings(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nmax_num_of_substrings(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_num_of_substrings(s :: String.t) :: [String.t]\n  def max_num_of_substrings(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "adefaddaccc"
+      },
+      "expected": [
+        "e",
+        "f",
+        "ccc"
+      ]
+    },
+    {
+      "args": {
+        "s": "abbaccd"
+      },
+      "expected": [
+        "d",
+        "bb",
+        "cc"
+      ]
+    }
+  ]
 }

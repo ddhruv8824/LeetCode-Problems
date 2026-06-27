@@ -56,5 +56,61 @@
     "racket": "(define/contract (shopping-offers price special needs)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec shopping_offers(Price :: [integer()], Special :: [[integer()]], Needs :: [integer()]) -> integer().\nshopping_offers(Price, Special, Needs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shopping_offers(price :: [integer], special :: [[integer]], needs :: [integer]) :: integer\n  def shopping_offers(price, special, needs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "price": [
+          2,
+          5
+        ],
+        "special": [
+          [
+            3,
+            0,
+            5
+          ],
+          [
+            1,
+            2,
+            10
+          ]
+        ],
+        "needs": [
+          3,
+          2
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "price": [
+          2,
+          3,
+          4
+        ],
+        "special": [
+          [
+            1,
+            1,
+            0,
+            4
+          ],
+          [
+            2,
+            2,
+            1,
+            9
+          ]
+        ],
+        "needs": [
+          1,
+          2,
+          1
+        ]
+      },
+      "expected": 11
+    }
+  ]
 }

@@ -49,5 +49,55 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define bst-iterator%\n  (class object%\n    (super-new)\n    \n    ; root : (or/c tree-node? #f)\n    (init-field\n      root)\n    \n    ; next : -> exact-integer?\n    (define/public (next)\n      )\n    ; has-next : -> boolean?\n    (define/public (has-next)\n      )))\n\n;; Your bst-iterator% object will be instantiated and called as such:\n;; (define obj (new bst-iterator% [root root]))\n;; (define param_1 (send obj next))\n;; (define param_2 (send obj has-next))",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec bst_iterator_init_(Root :: #tree_node{} | null) -> any().\nbst_iterator_init_(Root) ->\n  .\n\n-spec bst_iterator_next() -> integer().\nbst_iterator_next() ->\n  .\n\n-spec bst_iterator_has_next() -> boolean().\nbst_iterator_has_next() ->\n  .\n\n\n%% Your functions will be called as such:\n%% bst_iterator_init_(Root),\n%% Param_1 = bst_iterator_next(),\n%% Param_2 = bst_iterator_has_next(),\n\n%% bst_iterator_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule BSTIterator do\n  @spec init_(root :: TreeNode.t | nil) :: any\n  def init_(root) do\n    \n  end\n\n  @spec next() :: integer\n  def next() do\n    \n  end\n\n  @spec has_next() :: boolean\n  def has_next() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# BSTIterator.init_(root)\n# param_1 = BSTIterator.next()\n# param_2 = BSTIterator.has_next()\n\n# BSTIterator.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "BSTIterator",
+        "next",
+        "next",
+        "hasNext",
+        "next",
+        "hasNext",
+        "next",
+        "hasNext",
+        "next",
+        "hasNext"
+      ],
+      "args": [
+        [
+          [
+            7,
+            3,
+            15,
+            null,
+            null,
+            9,
+            20
+          ]
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        3,
+        7,
+        true,
+        9,
+        true,
+        15,
+        true,
+        20,
+        false
+      ]
+    }
+  ]
 }

@@ -51,5 +51,29 @@
     "racket": "(define/contract (num-pairs-divisible-by60 time)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_pairs_divisible_by60(Time :: [integer()]) -> integer().\nnum_pairs_divisible_by60(Time) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_pairs_divisible_by60(time :: [integer]) :: integer\n  def num_pairs_divisible_by60(time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "time": [
+          30,
+          20,
+          150,
+          100,
+          40
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "time": [
+          60,
+          60,
+          60
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

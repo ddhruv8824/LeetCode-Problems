@@ -64,5 +64,64 @@
     "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Integer[]}\ndef count_subgraphs_for_each_diameter(n, edges)\n    \nend",
     "scala": "object Solution {\n    def countSubgraphsForEachDiameter(n: Int, edges: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn count_subgraphs_for_each_diameter(n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "edges": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        1
+      ]
+    }
+  ]
 }

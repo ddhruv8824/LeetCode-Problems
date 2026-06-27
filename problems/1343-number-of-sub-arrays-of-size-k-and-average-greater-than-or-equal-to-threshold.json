@@ -52,5 +52,43 @@
     "racket": "(define/contract (num-of-subarrays arr k threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_of_subarrays(Arr :: [integer()], K :: integer(), Threshold :: integer()) -> integer().\nnum_of_subarrays(Arr, K, Threshold) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_subarrays(arr :: [integer], k :: integer, threshold :: integer) :: integer\n  def num_of_subarrays(arr, k, threshold) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          2,
+          2,
+          2,
+          2,
+          5,
+          5,
+          5,
+          8
+        ],
+        "k": 3,
+        "threshold": 4
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          11,
+          13,
+          17,
+          23,
+          29,
+          31,
+          7,
+          5,
+          2,
+          3
+        ],
+        "k": 3,
+        "threshold": 5
+      },
+      "expected": 6
+    }
+  ]
 }

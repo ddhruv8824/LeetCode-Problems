@@ -57,5 +57,32 @@
     "racket": "(define/contract (max-area height)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_area(Height :: [integer()]) -> integer().\nmax_area(Height) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_area(height :: [integer]) :: integer\n  def max_area(height) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "height": [
+          1,
+          8,
+          6,
+          2,
+          5,
+          4,
+          8,
+          3,
+          7
+        ]
+      },
+      "expected": 49
+    },
+    {
+      "args": {
+        "height": [
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

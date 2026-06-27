@@ -58,5 +58,39 @@
     "racket": "(define/contract (max-gcd-score nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_gcd_score(Nums :: [integer()], K :: integer()) -> integer().\nmax_gcd_score(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_gcd_score(nums :: [integer], k :: integer) :: integer\n  def max_gcd_score(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4
+        ],
+        "k": 1
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          7
+        ],
+        "k": 2
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          5,
+          5
+        ],
+        "k": 1
+      },
+      "expected": 15
+    }
+  ]
 }

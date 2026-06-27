@@ -53,5 +53,31 @@
     "racket": "(define/contract (shortest-completing-word licensePlate words)\n  (-> string? (listof string?) string?)\n  )",
     "erlang": "-spec shortest_completing_word(LicensePlate :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nshortest_completing_word(LicensePlate, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_completing_word(license_plate :: String.t, words :: [String.t]) :: String.t\n  def shortest_completing_word(license_plate, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "licensePlate": "1s3 PSt",
+        "words": [
+          "step",
+          "steps",
+          "stripe",
+          "stepple"
+        ]
+      },
+      "expected": "steps"
+    },
+    {
+      "args": {
+        "licensePlate": "1s3 456",
+        "words": [
+          "looks",
+          "pest",
+          "stew",
+          "show"
+        ]
+      },
+      "expected": "pest"
+    }
+  ]
 }

@@ -59,5 +59,51 @@
     "erlang": "-spec min_days(BloomDay :: [integer()], M :: integer(), K :: integer()) -> integer().\nmin_days(BloomDay, M, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_days(bloom_day :: [integer], m :: integer, k :: integer) :: integer\n  def min_days(bloom_day, m, k) do\n    \n  end\nend"
   },
-  "solution": "## Solution\n\n---\n\n### Approach: Binary Search\n\n#### Intuition\n\nIn this problem, we need to return the number of days required to make a certain number of bouquets, or return -1 if it's not possible to make that many. The flowers for a bouquet must be consecutive in the garden and fully bloomed.\n\nThe naive approach would be to iterate through each day, starting from day 1, and check if we can make `m` bouquets on that day. This method is inefficient since it requires iterating over all possible days and all `N` flowers for each day.\n\nTo optimize the solution, we observe a crucial property: once a flower blooms, it remains bloomed. This means that the number of bloomed flowers stays the same or increases as the days progress. The same goes for the number of bouquets that can possibly be made.\n\nThis observation leads us to consider using a binary search algorithm. One clue that binary search can be applied is that we are searching for a specific value that satisfies a condition (the earliest day). Another clue is that the condition exhibits an \"ordered property\" – if the condition is satisfied on a particular day, it will also be satisfied on all of the following days.\n\nThe observation that the number of bloomed flowers stays the same or increases as the days progress allows us to define a search space between 1 and the maximum value in the `bloomDay` array. For each midpoint day in the search space, we calculate the number of bouquets that can be made on that day by counting the consecutive bloomed flowers.\n\nIf the number of bouquets we can make on the midpoint day is greater than or equal to the number required by the problem (`m`), then we can potentially find an earlier day that satisfies the requirement. Since we want to return the minimum number of days we need to wait, we update the search space to the left half to see if we can reduce our wait time. Conversely, if the number of bouquets is less than `m`, we update the search space to the right half to continue our search for a day that we can make the required number of bouquets.\n\nBy repeatedly narrowing down the search space through binary search, we can determine whether or not we can make the required number of bouquets.\n\n![fig](../Figures/1482/1482A.png)\n\n#### Algorithm\n\n1. Initialize `start` to `0` and `end` to the highest value in the array `bloomDay`.\n2. Do the following while the search space (`start` to `end`) doesn't become empty:\n\n    - Initialize `mid` to `start + end / 2`.\n    - Find the number of bouquets possible on day `mid` using a helper function `getNumOfBouquets` as follows:\n\n        - Initialize the variable `numOfBouquets` to `0`.\n        - Iterate over the array `bloomDay` and for each index `i`\n\n            - If the value `bloomDay[i]` is less than or equal to `mid`, increment the `count`; else, reset it to `0`.\n            - If the value of `count` is equal to `k`, make a bouquet by incrementing `numOfBouquets` and reset `count` to `0`.\n        - Return `numOfBouquets`.\n    - If `numOfBouquets` is more than or equal to `m` store `mid` as an answer in `ans`. Shift to the left of the search space by setting `end` to `mid - 1`.\n    - Otherwise, shift to the right of the search space by setting `start` to `mid + 1`.\n3. Return `ans`.\n\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of flowers and $D$ is the highest value in the array `bloomDay`.\n\n* Time complexity: $O(N \\log D)$.\n\n  The search space is from $1$ to $D$ and for each of the chosen values of `mid` in the binary search we will iterate over the $N$ flowers. Therefore the time complexity is equal to $O(N \\log D)$.\n\n* Space complexity: $O(1)$\n\n  No extra space is required apart from a few variables and hence the space complexity is constant.\n---"
+  "solution": "## Solution\n\n---\n\n### Approach: Binary Search\n\n#### Intuition\n\nIn this problem, we need to return the number of days required to make a certain number of bouquets, or return -1 if it's not possible to make that many. The flowers for a bouquet must be consecutive in the garden and fully bloomed.\n\nThe naive approach would be to iterate through each day, starting from day 1, and check if we can make `m` bouquets on that day. This method is inefficient since it requires iterating over all possible days and all `N` flowers for each day.\n\nTo optimize the solution, we observe a crucial property: once a flower blooms, it remains bloomed. This means that the number of bloomed flowers stays the same or increases as the days progress. The same goes for the number of bouquets that can possibly be made.\n\nThis observation leads us to consider using a binary search algorithm. One clue that binary search can be applied is that we are searching for a specific value that satisfies a condition (the earliest day). Another clue is that the condition exhibits an \"ordered property\" – if the condition is satisfied on a particular day, it will also be satisfied on all of the following days.\n\nThe observation that the number of bloomed flowers stays the same or increases as the days progress allows us to define a search space between 1 and the maximum value in the `bloomDay` array. For each midpoint day in the search space, we calculate the number of bouquets that can be made on that day by counting the consecutive bloomed flowers.\n\nIf the number of bouquets we can make on the midpoint day is greater than or equal to the number required by the problem (`m`), then we can potentially find an earlier day that satisfies the requirement. Since we want to return the minimum number of days we need to wait, we update the search space to the left half to see if we can reduce our wait time. Conversely, if the number of bouquets is less than `m`, we update the search space to the right half to continue our search for a day that we can make the required number of bouquets.\n\nBy repeatedly narrowing down the search space through binary search, we can determine whether or not we can make the required number of bouquets.\n\n![fig](../Figures/1482/1482A.png)\n\n#### Algorithm\n\n1. Initialize `start` to `0` and `end` to the highest value in the array `bloomDay`.\n2. Do the following while the search space (`start` to `end`) doesn't become empty:\n\n    - Initialize `mid` to `start + end / 2`.\n    - Find the number of bouquets possible on day `mid` using a helper function `getNumOfBouquets` as follows:\n\n        - Initialize the variable `numOfBouquets` to `0`.\n        - Iterate over the array `bloomDay` and for each index `i`\n\n            - If the value `bloomDay[i]` is less than or equal to `mid`, increment the `count`; else, reset it to `0`.\n            - If the value of `count` is equal to `k`, make a bouquet by incrementing `numOfBouquets` and reset `count` to `0`.\n        - Return `numOfBouquets`.\n    - If `numOfBouquets` is more than or equal to `m` store `mid` as an answer in `ans`. Shift to the left of the search space by setting `end` to `mid - 1`.\n    - Otherwise, shift to the right of the search space by setting `start` to `mid + 1`.\n3. Return `ans`.\n\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of flowers and $D$ is the highest value in the array `bloomDay`.\n\n* Time complexity: $O(N \\log D)$.\n\n  The search space is from $1$ to $D$ and for each of the chosen values of `mid` in the binary search we will iterate over the $N$ flowers. Therefore the time complexity is equal to $O(N \\log D)$.\n\n* Space complexity: $O(1)$\n\n  No extra space is required apart from a few variables and hence the space complexity is constant.\n---",
+  "test_cases": [
+    {
+      "args": {
+        "bloomDay": [
+          1,
+          10,
+          3,
+          10,
+          2
+        ],
+        "m": 3,
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "bloomDay": [
+          1,
+          10,
+          3,
+          10,
+          2
+        ],
+        "m": 3,
+        "k": 2
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "bloomDay": [
+          7,
+          7,
+          7,
+          7,
+          12,
+          7,
+          7
+        ],
+        "m": 2,
+        "k": 3
+      },
+      "expected": 12
+    }
+  ]
 }

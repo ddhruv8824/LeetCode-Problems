@@ -47,5 +47,113 @@
     "erlang": "-spec lfu_cache_init_(Capacity :: integer()) -> any().\nlfu_cache_init_(Capacity) ->\n  .\n\n-spec lfu_cache_get(Key :: integer()) -> integer().\nlfu_cache_get(Key) ->\n  .\n\n-spec lfu_cache_put(Key :: integer(), Value :: integer()) -> any().\nlfu_cache_put(Key, Value) ->\n  .\n\n\n%% Your functions will be called as such:\n%% lfu_cache_init_(Capacity),\n%% Param_1 = lfu_cache_get(Key),\n%% lfu_cache_put(Key, Value),\n\n%% lfu_cache_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule LFUCache do\n  @spec init_(capacity :: integer) :: any\n  def init_(capacity) do\n    \n  end\n\n  @spec get(key :: integer) :: integer\n  def get(key) do\n    \n  end\n\n  @spec put(key :: integer, value :: integer) :: any\n  def put(key, value) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# LFUCache.init_(capacity)\n# param_1 = LFUCache.get(key)\n# LFUCache.put(key, value)\n\n# LFUCache.init_ will be called before every test case, in which you can do some necessary initializations."
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Maintaining 2 HashMaps\n\n#### Intuition\n\nWe need to maintain all the keys, values and frequencies. Without invalidation (removing from the data structure when it reaches capacity), they can be maintained by a HashMap>, keyed by the original `key` and valued by the `frequency`-`value` pair.\n\nWith the invalidation, we need to maintain the current minimum frequency and delete particular keys. Hence, we can group the keys with the same frequency together and maintain another HashMap>, keyed by the frequency and valued by the set of `keys` that have the same frequency. This way, if we know the minimum frequency, we can access the potential keys to be deleted.\n\nAlso note that in the case of a tie, we're required to find the least recently used key and invalidate it, hence we need to keep the frequencies ordered in the Set. Instead of using a TreeSet which adds an extra $O(log(N))$ time complexity, we can maintain the keys using a LinkedList so that it supports finding both an arbitrary key and the least recently used key in constant time. Fortunately, LinkedHashSet can do the job. Once a `key` is inserted/updated, we put it to the end of the LinkedHashSet so that we can invalidate the first `key` in the LinkedHashSet corresponding to the minimum frequency.\n\nThe original operations can be transformed into operations on the 2 HashMaps, keeping them in sync and maintaining the minimum frequency.\n\nSince C++ lacks LinkedHashSet, we have to use a workaround like maintaining a list of key and value pairs instead of the LinkedHashSet and keeping the iterator with the frequency in another unordered_map to keep this connection. The idea is similar but a little bit complicated. Another workaround would be to implement your own LRU cache with a doubly linked list.\n\n\n#### Algorithm\n\nTo make things simpler, assume we have 4 member variables:\n1. `HashMap> cache`, keyed by the original `key` and valued by the `frequency`-`value` pair. \n2. `HashMap> frequencies`, keyed by frequency and valued by the set of `keys` that have the same frequency.\n3. `int minf`, which is the minimum frequency at any given time.\n4. `int capacity`, which is the `capacity` given in the input.\n\nIt's also convenient to have a private utility function `insert` to insert a `key`-`value` pair with a given frequency.\n\n##### void insert(int key, int frequency, int value)\n1. Insert `frequency`-`value` pair into `cache` with the given `key`.\n2. Get the LinkedHashSet corresponding to the given `frequency` (default to empty Set) and insert the given `key`.\n\n\n##### int get(int key)\n1. If the given `key` is not in the `cache`, return `-1`, otherwise go to step `2`.\n2. Get the `frequency` and `value` from the `cache`.\n3. Get the LinkedHashSet associated with `frequency` from `frequencies` and remove the given `key` from it, since the usage of the current key is increased by this function call.\n4. If `minf` == `frequency` and the above LinkedHashSet is empty, that means there are no more elements used `minf` times, so increase `minf` by 1. To save some space, we can also delete the entry `frequency` from the `frequencies` hash map.\n5. Call insert(`key`, `frequency` + 1, `value`), since the current key's usage has increased from this function call.\n6. Return `value`\n\n##### void put(int key, int value)\n1. If `capacity` <= 0, exit.\n2. If the given `key` exists in `cache`, update the `value` in the original `frequency`-`value` (don't call insert here), and then increment the frequency by using get(`key`). Exit the function.\n3. If `cache.size()` == `capacity`, get the first (least recently used) value in the LinkedHashSet corresponding to `minf` in `frequencies`, and remove it from `cache` and the LinkedHashSet.\n4. If we didn't exit the function in step 2, it means that this element is a new one, so the minimum frequency cannot possibly be greater than one. Set `minf` to 1.\n5. Call insert(`key`, 1, `value`)\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the total number of operations.\n\n* Time complexity: $O(1)$, as required by the question.\n\n    Since we only have basic HashMap/(Linked)HashSet operations. For details,\n\n    Our utility function `insert` puts the `key`- `value` pair into the `cache`, queries and possibly puts an empty LinedHashSet in the `frequencies`, then queries `frequencies` again and adds a `key` into the associated `value` which is a LinkedHashSet. All the operations are based on the hash calculating for simple type (int or Integer) and the time complexity is constant.\n\n\n    For each `get` operation, in the worst case, we query the `frequencies` and remove a `key` from the associated `value` which is a LinkedHashSet and call `insert` function once. All the operations have the constant time complexity based on the hash calculating for simple type.\n\n    For each `put` operation, in the simple case we just insert the new `key`-`value` pair into the `cache` and call `get` function once. In the worst case, we query the `frequencies` to get the associated `value`, namely all the `keys` with the same frequencies which is a LinkedHashSet. And then we get the first key from the LinkedHashSet, remove it from both `cache` and `frequencies`. All the operations have the constant time complexity based on the hash calculating for simple type.\n\n* Space complexity: $O(N)$.\n\n    We save all the `key`-`value` pairs as well as all the keys with frequencies in the 2 HashMaps (plus a LinkedHashSet), so there are at most $min(N, capacity) `keys` and `values` at any given time.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Maintaining 2 HashMaps\n\n#### Intuition\n\nWe need to maintain all the keys, values and frequencies. Without invalidation (removing from the data structure when it reaches capacity), they can be maintained by a HashMap>, keyed by the original `key` and valued by the `frequency`-`value` pair.\n\nWith the invalidation, we need to maintain the current minimum frequency and delete particular keys. Hence, we can group the keys with the same frequency together and maintain another HashMap>, keyed by the frequency and valued by the set of `keys` that have the same frequency. This way, if we know the minimum frequency, we can access the potential keys to be deleted.\n\nAlso note that in the case of a tie, we're required to find the least recently used key and invalidate it, hence we need to keep the frequencies ordered in the Set. Instead of using a TreeSet which adds an extra $O(log(N))$ time complexity, we can maintain the keys using a LinkedList so that it supports finding both an arbitrary key and the least recently used key in constant time. Fortunately, LinkedHashSet can do the job. Once a `key` is inserted/updated, we put it to the end of the LinkedHashSet so that we can invalidate the first `key` in the LinkedHashSet corresponding to the minimum frequency.\n\nThe original operations can be transformed into operations on the 2 HashMaps, keeping them in sync and maintaining the minimum frequency.\n\nSince C++ lacks LinkedHashSet, we have to use a workaround like maintaining a list of key and value pairs instead of the LinkedHashSet and keeping the iterator with the frequency in another unordered_map to keep this connection. The idea is similar but a little bit complicated. Another workaround would be to implement your own LRU cache with a doubly linked list.\n\n\n#### Algorithm\n\nTo make things simpler, assume we have 4 member variables:\n1. `HashMap> cache`, keyed by the original `key` and valued by the `frequency`-`value` pair. \n2. `HashMap> frequencies`, keyed by frequency and valued by the set of `keys` that have the same frequency.\n3. `int minf`, which is the minimum frequency at any given time.\n4. `int capacity`, which is the `capacity` given in the input.\n\nIt's also convenient to have a private utility function `insert` to insert a `key`-`value` pair with a given frequency.\n\n##### void insert(int key, int frequency, int value)\n1. Insert `frequency`-`value` pair into `cache` with the given `key`.\n2. Get the LinkedHashSet corresponding to the given `frequency` (default to empty Set) and insert the given `key`.\n\n\n##### int get(int key)\n1. If the given `key` is not in the `cache`, return `-1`, otherwise go to step `2`.\n2. Get the `frequency` and `value` from the `cache`.\n3. Get the LinkedHashSet associated with `frequency` from `frequencies` and remove the given `key` from it, since the usage of the current key is increased by this function call.\n4. If `minf` == `frequency` and the above LinkedHashSet is empty, that means there are no more elements used `minf` times, so increase `minf` by 1. To save some space, we can also delete the entry `frequency` from the `frequencies` hash map.\n5. Call insert(`key`, `frequency` + 1, `value`), since the current key's usage has increased from this function call.\n6. Return `value`\n\n##### void put(int key, int value)\n1. If `capacity` <= 0, exit.\n2. If the given `key` exists in `cache`, update the `value` in the original `frequency`-`value` (don't call insert here), and then increment the frequency by using get(`key`). Exit the function.\n3. If `cache.size()` == `capacity`, get the first (least recently used) value in the LinkedHashSet corresponding to `minf` in `frequencies`, and remove it from `cache` and the LinkedHashSet.\n4. If we didn't exit the function in step 2, it means that this element is a new one, so the minimum frequency cannot possibly be greater than one. Set `minf` to 1.\n5. Call insert(`key`, 1, `value`)\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the total number of operations.\n\n* Time complexity: $O(1)$, as required by the question.\n\n    Since we only have basic HashMap/(Linked)HashSet operations. For details,\n\n    Our utility function `insert` puts the `key`- `value` pair into the `cache`, queries and possibly puts an empty LinedHashSet in the `frequencies`, then queries `frequencies` again and adds a `key` into the associated `value` which is a LinkedHashSet. All the operations are based on the hash calculating for simple type (int or Integer) and the time complexity is constant.\n\n\n    For each `get` operation, in the worst case, we query the `frequencies` and remove a `key` from the associated `value` which is a LinkedHashSet and call `insert` function once. All the operations have the constant time complexity based on the hash calculating for simple type.\n\n    For each `put` operation, in the simple case we just insert the new `key`-`value` pair into the `cache` and call `get` function once. In the worst case, we query the `frequencies` to get the associated `value`, namely all the `keys` with the same frequencies which is a LinkedHashSet. And then we get the first key from the LinkedHashSet, remove it from both `cache` and `frequencies`. All the operations have the constant time complexity based on the hash calculating for simple type.\n\n* Space complexity: $O(N)$.\n\n    We save all the `key`-`value` pairs as well as all the keys with frequencies in the 2 HashMaps (plus a LinkedHashSet), so there are at most $min(N, capacity) `keys` and `values` at any given time.\n\n---",
+  "test_cases": [
+    {
+      "functions": [
+        "LFUCache",
+        "put",
+        "put",
+        "get",
+        "get",
+        "get",
+        "put",
+        "get",
+        "get",
+        "get",
+        "put",
+        "get",
+        "get",
+        "get"
+      ],
+      "args": [
+        [
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        -1,
+        3,
+        3,
+        null,
+        -1,
+        3,
+        4
+      ]
+    },
+    {
+      "functions": [
+        "LFUCache",
+        "put",
+        "get"
+      ],
+      "args": [
+        [
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        -1
+      ]
+    }
+  ]
 }

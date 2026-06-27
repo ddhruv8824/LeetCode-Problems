@@ -53,5 +53,32 @@
     "racket": "(define/contract (k-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec k_sum(Nums :: [integer()], K :: integer()) -> integer().\nk_sum(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_sum(nums :: [integer], k :: integer) :: integer\n  def k_sum(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          -2
+        ],
+        "k": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -2,
+          3,
+          4,
+          -10,
+          12
+        ],
+        "k": 16
+      },
+      "expected": 10
+    }
+  ]
 }

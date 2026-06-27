@@ -62,5 +62,37 @@
     "racket": "(define/contract (get-probability balls)\n  (-> (listof exact-integer?) flonum?)\n  )",
     "erlang": "-spec get_probability(Balls :: [integer()]) -> float().\nget_probability(Balls) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_probability(balls :: [integer]) :: float\n  def get_probability(balls) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "balls": [
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "balls": [
+          2,
+          1,
+          1
+        ]
+      },
+      "expected": 0.66667
+    },
+    {
+      "args": {
+        "balls": [
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": 0.6
+    }
+  ]
 }

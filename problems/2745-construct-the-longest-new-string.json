@@ -52,5 +52,23 @@
     "racket": "(define/contract (longest-string x y z)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec longest_string(X :: integer(), Y :: integer(), Z :: integer()) -> integer().\nlongest_string(X, Y, Z) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_string(x :: integer, y :: integer, z :: integer) :: integer\n  def longest_string(x, y, z) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 2,
+        "y": 5,
+        "z": 1
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "x": 3,
+        "y": 2,
+        "z": 2
+      },
+      "expected": 14
+    }
+  ]
 }

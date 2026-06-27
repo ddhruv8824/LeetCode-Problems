@@ -69,5 +69,94 @@
     "racket": "(define/contract (max-amount initialCurrency pairs1 rates1 pairs2 rates2)\n  (-> string? (listof (listof string?)) (listof flonum?) (listof (listof string?)) (listof flonum?) flonum?)\n  )",
     "erlang": "-spec max_amount(InitialCurrency :: unicode:unicode_binary(), Pairs1 :: [[unicode:unicode_binary()]], Rates1 :: [float()], Pairs2 :: [[unicode:unicode_binary()]], Rates2 :: [float()]) -> float().\nmax_amount(InitialCurrency, Pairs1, Rates1, Pairs2, Rates2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_amount(initial_currency :: String.t, pairs1 :: [[String.t]], rates1 :: [float], pairs2 :: [[String.t]], rates2 :: [float]) :: float\n  def max_amount(initial_currency, pairs1, rates1, pairs2, rates2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "initialCurrency": "EUR",
+        "pairs1": [
+          [
+            "EUR",
+            "USD"
+          ],
+          [
+            "USD",
+            "JPY"
+          ]
+        ],
+        "rates1": [
+          2,
+          3
+        ],
+        "pairs2": [
+          [
+            "JPY",
+            "USD"
+          ],
+          [
+            "USD",
+            "CHF"
+          ],
+          [
+            "CHF",
+            "EUR"
+          ]
+        ],
+        "rates2": [
+          4,
+          5,
+          6
+        ]
+      },
+      "expected": 720
+    },
+    {
+      "args": {
+        "initialCurrency": "NGN",
+        "pairs1": [
+          [
+            "NGN",
+            "EUR"
+          ]
+        ],
+        "rates1": [
+          9
+        ],
+        "pairs2": [
+          [
+            "NGN",
+            "EUR"
+          ]
+        ],
+        "rates2": [
+          6
+        ]
+      },
+      "expected": 1.5
+    },
+    {
+      "args": {
+        "initialCurrency": "USD",
+        "pairs1": [
+          [
+            "USD",
+            "EUR"
+          ]
+        ],
+        "rates1": [
+          1
+        ],
+        "pairs2": [
+          [
+            "EUR",
+            "JPY"
+          ]
+        ],
+        "rates2": [
+          10
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

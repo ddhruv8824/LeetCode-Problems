@@ -51,5 +51,20 @@
     "racket": "(define/contract (split-array nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec split_array(Nums :: [integer()], K :: integer()) -> integer().\nsplit_array(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec split_array(nums :: [integer], k :: integer) :: integer\n  def split_array(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          2,
+          5,
+          10,
+          8
+        ],
+        "m": 2
+      },
+      "expected": 18
+    }
+  ]
 }

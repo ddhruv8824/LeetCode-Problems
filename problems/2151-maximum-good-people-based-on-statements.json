@@ -59,5 +59,44 @@
     "racket": "(define/contract (maximum-good statements)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximum_good(Statements :: [[integer()]]) -> integer().\nmaximum_good(Statements) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_good(statements :: [[integer]]) :: integer\n  def maximum_good(statements) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "statements": [
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "statements": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

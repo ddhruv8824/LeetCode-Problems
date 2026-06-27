@@ -58,5 +58,45 @@
     "racket": "(define/contract (closest-target words target startIndex)\n  (-> (listof string?) string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec closest_target(Words :: [unicode:unicode_binary()], Target :: unicode:unicode_binary(), StartIndex :: integer()) -> integer().\nclosest_target(Words, Target, StartIndex) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec closest_target(words :: [String.t], target :: String.t, start_index :: integer) :: integer\n  def closest_target(words, target, start_index) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "hello",
+          "i",
+          "am",
+          "leetcode",
+          "hello"
+        ],
+        "target": "hello",
+        "startIndex": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "words": [
+          "a",
+          "b",
+          "leetcode"
+        ],
+        "target": "leetcode",
+        "startIndex": 0
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "words": [
+          "i",
+          "eat",
+          "leetcode"
+        ],
+        "target": "ate",
+        "startIndex": 0
+      },
+      "expected": -1
+    }
+  ]
 }

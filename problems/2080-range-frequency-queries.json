@@ -52,5 +52,88 @@
     "racket": "(define range-freq-query%\n  (class object%\n    (super-new)\n    \n    ; arr : (listof exact-integer?)\n    (init-field\n      arr)\n    \n    ; query : exact-integer? exact-integer? exact-integer? -> exact-integer?\n    (define/public (query left right value)\n      )))\n\n;; Your range-freq-query% object will be instantiated and called as such:\n;; (define obj (new range-freq-query% [arr arr]))\n;; (define param_1 (send obj query left right value))",
     "erlang": "-spec range_freq_query_init_(Arr :: [integer()]) -> any().\nrange_freq_query_init_(Arr) ->\n  .\n\n-spec range_freq_query_query(Left :: integer(), Right :: integer(), Value :: integer()) -> integer().\nrange_freq_query_query(Left, Right, Value) ->\n  .\n\n\n%% Your functions will be called as such:\n%% range_freq_query_init_(Arr),\n%% Param_1 = range_freq_query_query(Left, Right, Value),\n\n%% range_freq_query_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule RangeFreqQuery do\n  @spec init_(arr :: [integer]) :: any\n  def init_(arr) do\n    \n  end\n\n  @spec query(left :: integer, right :: integer, value :: integer) :: integer\n  def query(left, right, value) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# RangeFreqQuery.init_(arr)\n# param_1 = RangeFreqQuery.query(left, right, value)\n\n# RangeFreqQuery.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          12,
+          33,
+          4,
+          56,
+          22,
+          2,
+          34,
+          33,
+          22,
+          12,
+          34,
+          56
+        ],
+        "left": 1,
+        "right": 2,
+        "value": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "arr": [
+          12,
+          33,
+          4,
+          56,
+          22,
+          2,
+          34,
+          33,
+          22,
+          12,
+          34,
+          56
+        ],
+        "left": 0,
+        "right": 11,
+        "value": 33
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          12,
+          33,
+          4,
+          56,
+          22,
+          2,
+          34,
+          33,
+          22,
+          12,
+          34,
+          56
+        ],
+        "left": 0,
+        "right": 5,
+        "value": 22
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "left": 0,
+        "right": 4,
+        "value": 3
+      },
+      "expected": 1
+    }
+  ]
 }

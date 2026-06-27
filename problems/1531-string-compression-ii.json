@@ -57,5 +57,28 @@
     "racket": "(define/contract (get-length-of-optimal-compression s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_length_of_optimal_compression(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nget_length_of_optimal_compression(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_length_of_optimal_compression(s :: String.t, k :: integer) :: integer\n  def get_length_of_optimal_compression(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aaabcccd",
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s": "aabbaa",
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "aaaaaaaaaaa",
+        "k": 0
+      },
+      "expected": 3
+    }
+  ]
 }

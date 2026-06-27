@@ -53,5 +53,159 @@
     "racket": "(define/contract (maximum-product nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_product(Nums :: [integer()]) -> integer().\nmaximum_product(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_product(nums :: [integer]) :: integer\n  def maximum_product(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 24
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "expected": -6
+    },
+    {
+      "args": {
+        "nums": [
+          -100,
+          -98,
+          -1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 39200
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          -4,
+          -5
+        ]
+      },
+      "expected": 60
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          -4
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -3,
+          -4
+        ]
+      },
+      "expected": 24
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -3,
+          0
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -3
+        ]
+      },
+      "expected": -6
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -2,
+          0
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          0
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -2,
+          -3,
+          0
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -2,
+          -3,
+          -4
+        ]
+      },
+      "expected": -6
+    }
+  ]
 }

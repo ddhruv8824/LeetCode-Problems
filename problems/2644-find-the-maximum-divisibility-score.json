@@ -54,5 +54,57 @@
     "racket": "(define/contract (max-div-score nums divisors)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_div_score(Nums :: [integer()], Divisors :: [integer()]) -> integer().\nmax_div_score(Nums, Divisors) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_div_score(nums :: [integer], divisors :: [integer]) :: integer\n  def max_div_score(nums, divisors) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          9,
+          15,
+          50
+        ],
+        "divisors": [
+          5,
+          3,
+          7,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          7,
+          9,
+          3,
+          9
+        ],
+        "divisors": [
+          5,
+          2,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          20,
+          14,
+          21,
+          10
+        ],
+        "divisors": [
+          10,
+          16,
+          20
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

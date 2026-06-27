@@ -49,5 +49,21 @@
     "racket": "(define/contract (is-subsequence s t)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_subsequence(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_subsequence(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_subsequence(s :: String.t, t :: String.t) :: boolean\n  def is_subsequence(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc",
+        "t": "ahbgdc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "axc",
+        "t": "ahbgdc"
+      },
+      "expected": false
+    }
+  ]
 }

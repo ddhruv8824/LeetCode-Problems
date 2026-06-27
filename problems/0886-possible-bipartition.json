@@ -52,5 +52,75 @@
     "racket": "(define/contract (possible-bipartition n dislikes)\n  (-> exact-integer? (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec possible_bipartition(N :: integer(), Dislikes :: [[integer()]]) -> boolean().\npossible_bipartition(N, Dislikes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec possible_bipartition(n :: integer, dislikes :: [[integer]]) :: boolean\n  def possible_bipartition(n, dislikes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "dislikes": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 3,
+        "dislikes": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 5,
+        "dislikes": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

@@ -61,5 +61,41 @@
     "racket": "(define/contract (min-stable nums maxC)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_stable(Nums :: [integer()], MaxC :: integer()) -> integer().\nmin_stable(Nums, MaxC) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_stable(nums :: [integer], max_c :: integer) :: integer\n  def min_stable(nums, max_c) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          10
+        ],
+        "maxC": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          6,
+          8
+        ],
+        "maxC": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          9,
+          6
+        ],
+        "maxC": 1
+      },
+      "expected": 2
+    }
+  ]
 }

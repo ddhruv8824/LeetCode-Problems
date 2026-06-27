@@ -56,5 +56,53 @@
     "racket": "(define/contract (num-triplets nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_triplets(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nnum_triplets(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_triplets(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def num_triplets(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          7,
+          4
+        ],
+        "nums2": [
+          5,
+          2,
+          8,
+          9
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          1
+        ],
+        "nums2": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "nums1": [
+          7,
+          7,
+          8,
+          3
+        ],
+        "nums2": [
+          1,
+          2,
+          9,
+          7
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

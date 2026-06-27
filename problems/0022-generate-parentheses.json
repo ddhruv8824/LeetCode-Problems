@@ -47,5 +47,27 @@
     "racket": "(define/contract (generate-parenthesis n)\n  (-> exact-integer? (listof string?))\n  )",
     "erlang": "-spec generate_parenthesis(N :: integer()) -> [unicode:unicode_binary()].\ngenerate_parenthesis(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec generate_parenthesis(n :: integer) :: [String.t]\n  def generate_parenthesis(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": [
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()"
+      ]
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": [
+        "()"
+      ]
+    }
+  ]
 }

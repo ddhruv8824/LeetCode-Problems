@@ -58,5 +58,28 @@
     "racket": "(define/contract (min-length s numOps)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_length(S :: unicode:unicode_binary(), NumOps :: integer()) -> integer().\nmin_length(S, NumOps) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_length(s :: String.t, num_ops :: integer) :: integer\n  def min_length(s, num_ops) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "000001",
+        "numOps": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "0000",
+        "numOps": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "0101",
+        "numOps": 0
+      },
+      "expected": 1
+    }
+  ]
 }

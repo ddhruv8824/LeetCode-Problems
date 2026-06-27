@@ -48,5 +48,28 @@
     "racket": "(define/contract (find-anagrams s p)\n  (-> string? string? (listof exact-integer?))\n  )",
     "erlang": "-spec find_anagrams(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> [integer()].\nfind_anagrams(S, P) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_anagrams(s :: String.t, p :: String.t) :: [integer]\n  def find_anagrams(s, p) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "cbaebabacd",
+        "p": "abc"
+      },
+      "expected": [
+        0,
+        6
+      ]
+    },
+    {
+      "args": {
+        "s": "abab",
+        "p": "ab"
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
 }

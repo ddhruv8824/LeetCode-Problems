@@ -56,5 +56,89 @@
     "racket": "(define/contract (closest-room rooms queries)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec closest_room(Rooms :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nclosest_room(Rooms, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec closest_room(rooms :: [[integer]], queries :: [[integer]]) :: [integer]\n  def closest_room(rooms, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "rooms": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "queries": [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        3,
+        -1,
+        3
+      ]
+    },
+    {
+      "args": {
+        "rooms": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "queries": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        3
+      ]
+    }
+  ]
 }

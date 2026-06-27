@@ -65,5 +65,62 @@
     "racket": "(define/contract (minimize-the-difference mat target)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimize_the_difference(Mat :: [[integer()]], Target :: integer()) -> integer().\nminimize_the_difference(Mat, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_the_difference(mat :: [[integer]], target :: integer) :: integer\n  def minimize_the_difference(mat, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ],
+        "target": 13
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "target": 100
+      },
+      "expected": 94
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            2,
+            9,
+            8,
+            7
+          ]
+        ],
+        "target": 6
+      },
+      "expected": 1
+    }
+  ]
 }

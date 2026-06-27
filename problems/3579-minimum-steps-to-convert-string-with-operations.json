@@ -58,5 +58,28 @@
     "racket": "(define/contract (min-operations word1 word2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec min_operations(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> integer().\nmin_operations(Word1, Word2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(word1 :: String.t, word2 :: String.t) :: integer\n  def min_operations(word1, word2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word1": "abcdf",
+        "word2": "dacbe"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "word1": "abceded",
+        "word2": "baecfef"
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "word1": "abcdef",
+        "word2": "fedabc"
+      },
+      "expected": 2
+    }
+  ]
 }

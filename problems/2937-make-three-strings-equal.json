@@ -48,5 +48,23 @@
     "racket": "(define/contract (find-minimum-operations s1 s2 s3)\n  (-> string? string? string? exact-integer?)\n  )",
     "erlang": "-spec find_minimum_operations(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary(), S3 :: unicode:unicode_binary()) -> integer().\nfind_minimum_operations(S1, S2, S3) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_minimum_operations(s1 :: String.t, s2 :: String.t, s3 :: String.t) :: integer\n  def find_minimum_operations(s1, s2, s3) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "abc",
+        "s2": "abb",
+        "s3": "ab"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s1": "dac",
+        "s2": "bac",
+        "s3": "cac"
+      },
+      "expected": -1
+    }
+  ]
 }

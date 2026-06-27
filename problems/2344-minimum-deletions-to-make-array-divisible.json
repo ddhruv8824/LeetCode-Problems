@@ -53,5 +53,42 @@
     "racket": "(define/contract (min-operations nums numsDivide)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_operations(Nums :: [integer()], NumsDivide :: [integer()]) -> integer().\nmin_operations(Nums, NumsDivide) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], nums_divide :: [integer]) :: integer\n  def min_operations(nums, nums_divide) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          2,
+          4,
+          3
+        ],
+        "numsDivide": [
+          9,
+          6,
+          9,
+          3,
+          15
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          6
+        ],
+        "numsDivide": [
+          8,
+          2,
+          6,
+          10
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

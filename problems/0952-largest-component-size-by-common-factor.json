@@ -62,5 +62,44 @@
     "racket": "(define/contract (largest-component-size nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec largest_component_size(Nums :: [integer()]) -> integer().\nlargest_component_size(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_component_size(nums :: [integer]) :: integer\n  def largest_component_size(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          6,
+          15,
+          35
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          20,
+          50,
+          9,
+          63
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          6,
+          7,
+          4,
+          12,
+          21,
+          39
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

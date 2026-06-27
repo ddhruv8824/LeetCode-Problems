@@ -47,5 +47,35 @@
     "ruby": "# @param {Integer} n\r\n# @param {Integer} start\r\n# @return {Integer[]}\r\ndef circular_permutation(n, start)\r\n    \r\nend",
     "scala": "object Solution {\r\n    def circularPermutation(n: Int, start: Int): List[Int] = {\r\n        \r\n    }\r\n}",
     "rust": "impl Solution {\r\n    pub fn circular_permutation(n: i32, start: i32) -> Vec<i32> {\r\n        \r\n    }\r\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "start": 3
+      },
+      "expected": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 3,
+        "start": 2
+      },
+      "expected": [
+        2,
+        6,
+        7,
+        5,
+        4,
+        0,
+        1,
+        3
+      ]
+    }
+  ]
 }

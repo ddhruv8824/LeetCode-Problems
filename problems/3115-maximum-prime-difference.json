@@ -52,5 +52,30 @@
     "racket": "(define/contract (maximum-prime-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_prime_difference(Nums :: [integer()]) -> integer().\nmaximum_prime_difference(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_prime_difference(nums :: [integer]) :: integer\n  def maximum_prime_difference(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          9,
+          5,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          8,
+          2,
+          8
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

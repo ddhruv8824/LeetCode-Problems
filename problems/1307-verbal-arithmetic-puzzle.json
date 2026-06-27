@@ -59,5 +59,38 @@
     "racket": "(define/contract (is-solvable words result)\n  (-> (listof string?) string? boolean?)\n  )",
     "erlang": "-spec is_solvable(Words :: [unicode:unicode_binary()], Result :: unicode:unicode_binary()) -> boolean().\nis_solvable(Words, Result) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_solvable(words :: [String.t], result :: String.t) :: boolean\n  def is_solvable(words, result) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "SEND",
+          "MORE"
+        ],
+        "result": "MONEY"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "words": [
+          "SIX",
+          "SEVEN",
+          "SEVEN"
+        ],
+        "result": "TWENTY"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "words": [
+          "LEET",
+          "CODE"
+        ],
+        "result": "POINT"
+      },
+      "expected": false
+    }
+  ]
 }

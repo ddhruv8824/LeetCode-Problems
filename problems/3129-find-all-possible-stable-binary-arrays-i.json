@@ -54,5 +54,31 @@
     "racket": "(define/contract (number-of-stable-arrays zero one limit)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_stable_arrays(Zero :: integer(), One :: integer(), Limit :: integer()) -> integer().\nnumber_of_stable_arrays(Zero, One, Limit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_stable_arrays(zero :: integer, one :: integer, limit :: integer) :: integer\n  def number_of_stable_arrays(zero, one, limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "zero": 1,
+        "one": 1,
+        "limit": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "zero": 1,
+        "one": 2,
+        "limit": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "zero": 3,
+        "one": 3,
+        "limit": 2
+      },
+      "expected": 14
+    }
+  ]
 }

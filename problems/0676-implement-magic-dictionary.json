@@ -51,5 +51,51 @@
     "racket": "(define magic-dictionary%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; build-dict : (listof string?) -> void?\n    (define/public (build-dict dictionary)\n      )\n    ; search : string? -> boolean?\n    (define/public (search search-word)\n      )))\n\n;; Your magic-dictionary% object will be instantiated and called as such:\n;; (define obj (new magic-dictionary%))\n;; (send obj build-dict dictionary)\n;; (define param_2 (send obj search search-word))",
     "erlang": "-spec magic_dictionary_init_() -> any().\nmagic_dictionary_init_() ->\n  .\n\n-spec magic_dictionary_build_dict(Dictionary :: [unicode:unicode_binary()]) -> any().\nmagic_dictionary_build_dict(Dictionary) ->\n  .\n\n-spec magic_dictionary_search(SearchWord :: unicode:unicode_binary()) -> boolean().\nmagic_dictionary_search(SearchWord) ->\n  .\n\n\n%% Your functions will be called as such:\n%% magic_dictionary_init_(),\n%% magic_dictionary_build_dict(Dictionary),\n%% Param_2 = magic_dictionary_search(SearchWord),\n\n%% magic_dictionary_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MagicDictionary do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec build_dict(dictionary :: [String.t]) :: any\n  def build_dict(dictionary) do\n    \n  end\n\n  @spec search(search_word :: String.t) :: boolean\n  def search(search_word) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MagicDictionary.init_()\n# MagicDictionary.build_dict(dictionary)\n# param_2 = MagicDictionary.search(search_word)\n\n# MagicDictionary.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "dict": [
+          "hello",
+          "leetcode"
+        ],
+        "searches": [
+          {
+            "word": "hello",
+            "expected": false
+          },
+          {
+            "word": "hhllo",
+            "expected": true
+          },
+          {
+            "word": "hell",
+            "expected": false
+          },
+          {
+            "word": "leetcoded",
+            "expected": false
+          }
+        ]
+      }
+    },
+    {
+      "args": {
+        "dict": [
+          "hello",
+          "hallo"
+        ],
+        "searches": [
+          {
+            "word": "hello",
+            "expected": true
+          },
+          {
+            "word": "hallo",
+            "expected": true
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -62,5 +62,65 @@
     "racket": "(define/contract (smallest-trimmed-numbers nums queries)\n  (-> (listof string?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec smallest_trimmed_numbers(Nums :: [unicode:unicode_binary()], Queries :: [[integer()]]) -> [integer()].\nsmallest_trimmed_numbers(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_trimmed_numbers(nums :: [String.t], queries :: [[integer]]) :: [integer]\n  def smallest_trimmed_numbers(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          "102",
+          "473",
+          "251",
+          "814"
+        ],
+        "queries": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          "24",
+          "37",
+          "96",
+          "04"
+        ],
+        "queries": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        3,
+        0
+      ]
+    }
+  ]
 }

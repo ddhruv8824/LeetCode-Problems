@@ -56,5 +56,31 @@
     "racket": "(define/contract (get-max-function-value receiver k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_max_function_value(Receiver :: [integer()], K :: integer()) -> integer().\nget_max_function_value(Receiver, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_max_function_value(receiver :: [integer], k :: integer) :: integer\n  def get_max_function_value(receiver, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "receiver": [
+          2,
+          0,
+          1
+        ],
+        "k": 4
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "receiver": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "k": 3
+      },
+      "expected": 10
+    }
+  ]
 }

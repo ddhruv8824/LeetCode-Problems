@@ -52,5 +52,29 @@
     "racket": "(define/contract (largest-rectangle-area heights)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec largest_rectangle_area(Heights :: [integer()]) -> integer().\nlargest_rectangle_area(Heights) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_rectangle_area(heights :: [integer]) :: integer\n  def largest_rectangle_area(heights) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "heights": [
+          2,
+          1,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "heights": [
+          2,
+          4
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

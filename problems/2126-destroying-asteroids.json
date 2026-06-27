@@ -54,5 +54,32 @@
     "racket": "(define/contract (asteroids-destroyed mass asteroids)\n  (-> exact-integer? (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec asteroids_destroyed(Mass :: integer(), Asteroids :: [integer()]) -> boolean().\nasteroids_destroyed(Mass, Asteroids) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec asteroids_destroyed(mass :: integer, asteroids :: [integer]) :: boolean\n  def asteroids_destroyed(mass, asteroids) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mass": 10,
+        "asteroids": [
+          3,
+          9,
+          19,
+          5,
+          21
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "mass": 5,
+        "asteroids": [
+          4,
+          9,
+          23,
+          4
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

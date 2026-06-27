@@ -59,5 +59,48 @@
     "racket": "(define/contract (count-routes locations start finish fuel)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_routes(Locations :: [integer()], Start :: integer(), Finish :: integer(), Fuel :: integer()) -> integer().\ncount_routes(Locations, Start, Finish, Fuel) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_routes(locations :: [integer], start :: integer, finish :: integer, fuel :: integer) :: integer\n  def count_routes(locations, start, finish, fuel) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "locations": [
+          2,
+          3,
+          6,
+          8,
+          4
+        ],
+        "start": 1,
+        "finish": 3,
+        "fuel": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "locations": [
+          4,
+          3,
+          1
+        ],
+        "start": 1,
+        "finish": 0,
+        "fuel": 6
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "locations": [
+          5,
+          2,
+          1
+        ],
+        "start": 0,
+        "finish": 2,
+        "fuel": 3
+      },
+      "expected": 0
+    }
+  ]
 }

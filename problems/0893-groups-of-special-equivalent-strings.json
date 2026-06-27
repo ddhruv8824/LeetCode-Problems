@@ -51,5 +51,55 @@
     "racket": "(define/contract (num-special-equiv-groups words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec num_special_equiv_groups(Words :: [unicode:unicode_binary()]) -> integer().\nnum_special_equiv_groups(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_special_equiv_groups(words :: [String.t]) :: integer\n  def num_special_equiv_groups(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          "a",
+          "b",
+          "c",
+          "a",
+          "c",
+          "c"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": [
+          "aa",
+          "bb",
+          "ab",
+          "ba"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "a": [
+          "abc",
+          "acb",
+          "bac",
+          "bca",
+          "cab",
+          "cba"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": [
+          "abcd",
+          "cdab",
+          "adcb",
+          "cbad"
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

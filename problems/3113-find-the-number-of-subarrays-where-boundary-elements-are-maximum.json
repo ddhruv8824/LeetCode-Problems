@@ -60,5 +60,37 @@
     "racket": "(define/contract (number-of-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_subarrays(Nums :: [integer()]) -> integer().\nnumber_of_subarrays(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_subarrays(nums :: [integer]) :: integer\n  def number_of_subarrays(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3,
+          3
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

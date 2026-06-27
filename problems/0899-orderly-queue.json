@@ -48,5 +48,21 @@
     "racket": "(define/contract (orderly-queue s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec orderly_queue(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\norderly_queue(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec orderly_queue(s :: String.t, k :: integer) :: String.t\n  def orderly_queue(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "cba",
+        "k": 1
+      },
+      "expected": "acb"
+    },
+    {
+      "args": {
+        "s": "baaca",
+        "k": 3
+      },
+      "expected": "aaabc"
+    }
+  ]
 }

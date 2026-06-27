@@ -58,5 +58,28 @@
     "racket": "(define/contract (possibly-equals s1 s2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec possibly_equals(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> boolean().\npossibly_equals(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec possibly_equals(s1 :: String.t, s2 :: String.t) :: boolean\n  def possibly_equals(s1, s2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "internationalization",
+        "s2": "i18n"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s1": "l123e",
+        "s2": "44"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s1": "a5b",
+        "s2": "c5b"
+      },
+      "expected": false
+    }
+  ]
 }

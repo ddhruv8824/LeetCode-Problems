@@ -63,5 +63,22 @@
     "racket": "(define/contract (exclusive-time n logs)\n  (-> exact-integer? (listof string?) (listof exact-integer?))\n  )",
     "erlang": "-spec exclusive_time(N :: integer(), Logs :: [unicode:unicode_binary()]) -> [integer()].\nexclusive_time(N, Logs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec exclusive_time(n :: integer, logs :: [String.t]) :: [integer]\n  def exclusive_time(n, logs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "logs": [
+          "0:start:0",
+          "1:start:2",
+          "1:end:5",
+          "0:end:6"
+        ]
+      },
+      "expected": [
+        3,
+        4
+      ]
+    }
+  ]
 }

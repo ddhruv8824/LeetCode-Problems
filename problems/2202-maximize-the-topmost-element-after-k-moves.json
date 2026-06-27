@@ -50,5 +50,30 @@
     "racket": "(define/contract (maximum-top nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximum_top(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_top(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_top(nums :: [integer], k :: integer) :: integer\n  def maximum_top(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          2,
+          2,
+          4,
+          0,
+          6
+        ],
+        "k": 4
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          2
+        ],
+        "k": 1
+      },
+      "expected": -1
+    }
+  ]
 }

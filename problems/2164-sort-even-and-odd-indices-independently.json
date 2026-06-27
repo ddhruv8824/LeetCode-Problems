@@ -51,5 +51,35 @@
     "racket": "(define/contract (sort-even-odd nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec sort_even_odd(Nums :: [integer()]) -> [integer()].\nsort_even_odd(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sort_even_odd(nums :: [integer]) :: [integer]\n  def sort_even_odd(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        2,
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1
+        ]
+      },
+      "expected": [
+        2,
+        1
+      ]
+    }
+  ]
 }

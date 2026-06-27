@@ -51,5 +51,35 @@
     "racket": "(define/contract (find-lonely nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_lonely(Nums :: [integer()]) -> [integer()].\nfind_lonely(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_lonely(nums :: [integer]) :: [integer]\n  def find_lonely(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          6,
+          5,
+          8
+        ]
+      },
+      "expected": [
+        10,
+        8
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          5,
+          3
+        ]
+      },
+      "expected": [
+        1,
+        5
+      ]
+    }
+  ]
 }

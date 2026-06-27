@@ -53,5 +53,35 @@
     "racket": "(define/contract (find-smallest-integer nums value)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_smallest_integer(Nums :: [integer()], Value :: integer()) -> integer().\nfind_smallest_integer(Nums, Value) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_smallest_integer(nums :: [integer], value :: integer) :: integer\n  def find_smallest_integer(nums, value) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          -10,
+          7,
+          13,
+          6,
+          8
+        ],
+        "value": 5
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -10,
+          7,
+          13,
+          6,
+          8
+        ],
+        "value": 7
+      },
+      "expected": 2
+    }
+  ]
 }

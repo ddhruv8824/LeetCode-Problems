@@ -57,5 +57,25 @@
     "racket": "(define/contract (next-beautiful-number n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec next_beautiful_number(N :: integer()) -> integer().\nnext_beautiful_number(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec next_beautiful_number(n :: integer) :: integer\n  def next_beautiful_number(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 22
+    },
+    {
+      "args": {
+        "n": 1000
+      },
+      "expected": 1333
+    },
+    {
+      "args": {
+        "n": 3000
+      },
+      "expected": 3133
+    }
+  ]
 }

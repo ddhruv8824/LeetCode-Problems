@@ -53,5 +53,19 @@
     "racket": "(define/contract (repeated-character s)\n  (-> string? char?)\n  )",
     "erlang": "-spec repeated_character(S :: unicode:unicode_binary()) -> char().\nrepeated_character(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec repeated_character(s :: String.t) :: char\n  def repeated_character(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abccbaacz"
+      },
+      "expected": "c"
+    },
+    {
+      "args": {
+        "s": "abcdd"
+      },
+      "expected": "d"
+    }
+  ]
 }

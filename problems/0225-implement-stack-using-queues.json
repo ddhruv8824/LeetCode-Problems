@@ -44,5 +44,59 @@
     "racket": "(define my-stack%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; push : exact-integer? -> void?\n    (define/public (push x)\n      )\n    ; pop : -> exact-integer?\n    (define/public (pop)\n      )\n    ; top : -> exact-integer?\n    (define/public (top)\n      )\n    ; empty : -> boolean?\n    (define/public (empty)\n      )))\n\n;; Your my-stack% object will be instantiated and called as such:\n;; (define obj (new my-stack%))\n;; (send obj push x)\n;; (define param_2 (send obj pop))\n;; (define param_3 (send obj top))\n;; (define param_4 (send obj empty))",
     "erlang": "-spec my_stack_init_() -> any().\nmy_stack_init_() ->\n  .\n\n-spec my_stack_push(X :: integer()) -> any().\nmy_stack_push(X) ->\n  .\n\n-spec my_stack_pop() -> integer().\nmy_stack_pop() ->\n  .\n\n-spec my_stack_top() -> integer().\nmy_stack_top() ->\n  .\n\n-spec my_stack_empty() -> boolean().\nmy_stack_empty() ->\n  .\n\n\n%% Your functions will be called as such:\n%% my_stack_init_(),\n%% my_stack_push(X),\n%% Param_2 = my_stack_pop(),\n%% Param_3 = my_stack_top(),\n%% Param_4 = my_stack_empty(),\n\n%% my_stack_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MyStack do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec push(x :: integer) :: any\n  def push(x) do\n    \n  end\n\n  @spec pop() :: integer\n  def pop() do\n    \n  end\n\n  @spec top() :: integer\n  def top() do\n    \n  end\n\n  @spec empty() :: boolean\n  def empty() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MyStack.init_()\n# MyStack.push(x)\n# param_2 = MyStack.pop()\n# param_3 = MyStack.top()\n# param_4 = MyStack.empty()\n\n# MyStack.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MyStack",
+        "push",
+        "push",
+        "top",
+        "pop",
+        "empty"
+      ],
+      "args": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        2,
+        2,
+        false
+      ]
+    },
+    {
+      "functions": [
+        "MyStack",
+        "push",
+        "pop",
+        "top"
+      ],
+      "args": [
+        [],
+        [
+          1
+        ],
+        [],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null
+      ]
+    }
+  ]
 }

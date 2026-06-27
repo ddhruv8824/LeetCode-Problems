@@ -55,5 +55,72 @@
     "racket": "(define/contract (find-substring s words)\n  (-> string? (listof string?) (listof exact-integer?))\n  )",
     "erlang": "-spec find_substring(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> [integer()].\nfind_substring(S, Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_substring(s :: String.t, words :: [String.t]) :: [integer]\n  def find_substring(s, words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "barfoothefoobarman",
+        "words": [
+          "foo",
+          "bar"
+        ]
+      },
+      "expected": [
+        0,
+        9
+      ]
+    },
+    {
+      "args": {
+        "s": "wordgoodgoodgoodbestword",
+        "words": [
+          "word",
+          "good",
+          "best",
+          "word"
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "s": "barfoofoobarthefoobarman",
+        "words": [
+          "bar",
+          "foo",
+          "the"
+        ]
+      },
+      "expected": [
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "args": {
+        "s": "wordgoodgoodgoodbestword",
+        "words": [
+          "word",
+          "good",
+          "best",
+          "good"
+        ]
+      },
+      "expected": [
+        8
+      ]
+    },
+    {
+      "args": {
+        "s": "a",
+        "words": [
+          "a"
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

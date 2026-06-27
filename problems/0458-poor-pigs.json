@@ -52,5 +52,31 @@
     "racket": "(define/contract (poor-pigs buckets minutesToDie minutesToTest)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec poor_pigs(Buckets :: integer(), MinutesToDie :: integer(), MinutesToTest :: integer()) -> integer().\npoor_pigs(Buckets, MinutesToDie, MinutesToTest) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec poor_pigs(buckets :: integer, minutes_to_die :: integer, minutes_to_test :: integer) :: integer\n  def poor_pigs(buckets, minutes_to_die, minutes_to_test) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "buckets": 1000,
+        "minutesToDie": 15,
+        "minutesToTest": 60
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "buckets": 65,
+        "minutesToDie": 15,
+        "minutesToTest": 59
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "buckets": 3,
+        "minutesToDie": 15,
+        "minutesToTest": 59
+      },
+      "expected": 1
+    }
+  ]
 }

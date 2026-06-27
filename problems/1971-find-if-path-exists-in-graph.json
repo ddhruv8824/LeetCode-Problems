@@ -59,5 +59,59 @@
     "racket": "(define/contract (valid-path n edges source destination)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec valid_path(N :: integer(), Edges :: [[integer()]], Source :: integer(), Destination :: integer()) -> boolean().\nvalid_path(N, Edges, Source, Destination) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec valid_path(n :: integer, edges :: [[integer]], source :: integer, destination :: integer) :: boolean\n  def valid_path(n, edges, source, destination) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "source": 0,
+        "destination": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "source": 0,
+        "destination": 5
+      },
+      "expected": false
+    }
+  ]
 }

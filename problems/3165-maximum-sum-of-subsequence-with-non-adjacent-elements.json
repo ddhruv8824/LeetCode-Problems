@@ -56,5 +56,42 @@
     "racket": "(define/contract (maximum-sum-subsequence nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximum_sum_subsequence(Nums :: [integer()], Queries :: [[integer()]]) -> integer().\nmaximum_sum_subsequence(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_sum_subsequence(nums :: [integer], queries :: [[integer]]) :: integer\n  def maximum_sum_subsequence(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          9
+        ],
+        "queries": [
+          [
+            1,
+            -2
+          ],
+          [
+            0,
+            -3
+          ]
+        ]
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          -1
+        ],
+        "queries": [
+          [
+            0,
+            -5
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

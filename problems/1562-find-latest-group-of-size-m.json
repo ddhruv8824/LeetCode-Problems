@@ -55,5 +55,33 @@
     "racket": "(define/contract (find-latest-step arr m)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_latest_step(Arr :: [integer()], M :: integer()) -> integer().\nfind_latest_step(Arr, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_latest_step(arr :: [integer], m :: integer) :: integer\n  def find_latest_step(arr, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          3,
+          5,
+          1,
+          2,
+          4
+        ],
+        "m": 1
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arr": [
+          3,
+          1,
+          5,
+          4,
+          2
+        ],
+        "m": 2
+      },
+      "expected": -1
+    }
+  ]
 }

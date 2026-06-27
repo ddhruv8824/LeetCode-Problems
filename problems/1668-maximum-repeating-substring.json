@@ -57,5 +57,28 @@
     "racket": "(define/contract (max-repeating sequence word)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec max_repeating(Sequence :: unicode:unicode_binary(), Word :: unicode:unicode_binary()) -> integer().\nmax_repeating(Sequence, Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_repeating(sequence :: String.t, word :: String.t) :: integer\n  def max_repeating(sequence, word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "sequence": "ababc",
+        "word": "ab"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "sequence": "ababc",
+        "word": "ba"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "sequence": "ababc",
+        "word": "ac"
+      },
+      "expected": 0
+    }
+  ]
 }

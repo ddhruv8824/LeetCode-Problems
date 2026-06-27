@@ -63,5 +63,42 @@
     "racket": "(define/contract (max-distance colors)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_distance(Colors :: [integer()]) -> integer().\nmax_distance(Colors) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_distance(colors :: [integer]) :: integer\n  def max_distance(colors) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "colors": [
+          1,
+          1,
+          1,
+          6,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "colors": [
+          1,
+          8,
+          3,
+          8,
+          3
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "colors": [
+          0,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -49,5 +49,53 @@
     "racket": "(define word-dictionary%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; add-word : string? -> void?\n    (define/public (add-word word)\n      )\n    ; search : string? -> boolean?\n    (define/public (search word)\n      )))\n\n;; Your word-dictionary% object will be instantiated and called as such:\n;; (define obj (new word-dictionary%))\n;; (send obj add-word word)\n;; (define param_2 (send obj search word))",
     "erlang": "-spec word_dictionary_init_() -> any().\nword_dictionary_init_() ->\n  .\n\n-spec word_dictionary_add_word(Word :: unicode:unicode_binary()) -> any().\nword_dictionary_add_word(Word) ->\n  .\n\n-spec word_dictionary_search(Word :: unicode:unicode_binary()) -> boolean().\nword_dictionary_search(Word) ->\n  .\n\n\n%% Your functions will be called as such:\n%% word_dictionary_init_(),\n%% word_dictionary_add_word(Word),\n%% Param_2 = word_dictionary_search(Word),\n\n%% word_dictionary_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule WordDictionary do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec add_word(word :: String.t) :: any\n  def add_word(word) do\n    \n  end\n\n  @spec search(word :: String.t) :: boolean\n  def search(word) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# WordDictionary.init_()\n# WordDictionary.add_word(word)\n# param_2 = WordDictionary.search(word)\n\n# WordDictionary.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "WordDictionary",
+        "addWord",
+        "addWord",
+        "addWord",
+        "search",
+        "search",
+        "search",
+        "search"
+      ],
+      "args": [
+        [],
+        [
+          "bad"
+        ],
+        [
+          "dad"
+        ],
+        [
+          "mad"
+        ],
+        [
+          "pad"
+        ],
+        [
+          "bad"
+        ],
+        [
+          ".ad"
+        ],
+        [
+          "b.."
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        false,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
 }

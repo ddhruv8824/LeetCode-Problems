@@ -53,5 +53,57 @@
     "racket": "(define/contract (construct-product-matrix grid)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec construct_product_matrix(Grid :: [[integer()]]) -> [[integer()]].\nconstruct_product_matrix(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec construct_product_matrix(grid :: [[integer]]) :: [[integer]]\n  def construct_product_matrix(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        [
+          24,
+          12
+        ],
+        [
+          8,
+          6
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            12345
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          2
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ]
+    }
+  ]
 }

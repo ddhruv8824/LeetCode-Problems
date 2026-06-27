@@ -55,5 +55,29 @@
     "racket": "(define/contract (min-swaps-couples row)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_swaps_couples(Row :: [integer()]) -> integer().\nmin_swaps_couples(Row) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_swaps_couples(row :: [integer]) :: integer\n  def min_swaps_couples(row) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "row": [
+          0,
+          2,
+          1,
+          3
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "row": [
+          3,
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

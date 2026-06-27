@@ -54,5 +54,32 @@
     "racket": "(define/contract (max-frequency nums k numOperations)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_frequency(Nums :: [integer()], K :: integer(), NumOperations :: integer()) -> integer().\nmax_frequency(Nums, K, NumOperations) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_frequency(nums :: [integer], k :: integer, num_operations :: integer) :: integer\n  def max_frequency(nums, k, num_operations) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          5
+        ],
+        "k": 1,
+        "numOperations": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          11,
+          20,
+          20
+        ],
+        "k": 5,
+        "numOperations": 1
+      },
+      "expected": 2
+    }
+  ]
 }

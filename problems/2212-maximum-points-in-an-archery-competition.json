@@ -59,5 +59,73 @@
     "racket": "(define/contract (maximum-bob-points numArrows aliceArrows)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec maximum_bob_points(NumArrows :: integer(), AliceArrows :: [integer()]) -> [integer()].\nmaximum_bob_points(NumArrows, AliceArrows) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_bob_points(num_arrows :: integer, alice_arrows :: [integer]) :: [integer]\n  def maximum_bob_points(num_arrows, alice_arrows) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numArrows": 9,
+        "aliceArrows": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          2,
+          1,
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "args": {
+        "numArrows": 3,
+        "aliceArrows": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
 }

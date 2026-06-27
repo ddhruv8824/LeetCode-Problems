@@ -52,5 +52,33 @@
     "racket": "(define/contract (max-distinct-elements nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_distinct_elements(Nums :: [integer()], K :: integer()) -> integer().\nmax_distinct_elements(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_distinct_elements(nums :: [integer], k :: integer) :: integer\n  def max_distinct_elements(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "k": 2
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "k": 1
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -51,5 +51,55 @@
     "ruby": "# @param {Integer[][]} board\n# @return {Void} Do not return anything, modify board in-place instead.\ndef game_of_life(board)\n    \nend",
     "scala": "object Solution {\n    def gameOfLife(board: Array[Array[Int]]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn game_of_life(board: &mut Vec<Vec<i32>>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ]
 }

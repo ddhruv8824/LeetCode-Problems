@@ -48,5 +48,53 @@
     "ruby": "# @param {Integer[][]} rectangles\n# @return {Integer}\ndef count_good_rectangles(rectangles)\n    \nend",
     "scala": "object Solution {\n    def countGoodRectangles(rectangles: Array[Array[Int]]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn count_good_rectangles(rectangles: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "rectangles": [
+          [
+            5,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            16,
+            5
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "rectangles": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

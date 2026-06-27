@@ -54,5 +54,31 @@
     "racket": "(define/contract (is-sum-equal firstWord secondWord targetWord)\n  (-> string? string? string? boolean?)\n  )",
     "erlang": "-spec is_sum_equal(FirstWord :: unicode:unicode_binary(), SecondWord :: unicode:unicode_binary(), TargetWord :: unicode:unicode_binary()) -> boolean().\nis_sum_equal(FirstWord, SecondWord, TargetWord) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_sum_equal(first_word :: String.t, second_word :: String.t, target_word :: String.t) :: boolean\n  def is_sum_equal(first_word, second_word, target_word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "firstWord": "acb",
+        "secondWord": "cba",
+        "targetWord": "cdb"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "firstWord": "aaa",
+        "secondWord": "a",
+        "targetWord": "aab"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "firstWord": "aaa",
+        "secondWord": "a",
+        "targetWord": "aaaa"
+      },
+      "expected": true
+    }
+  ]
 }

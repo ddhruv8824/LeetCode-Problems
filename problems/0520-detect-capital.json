@@ -46,5 +46,19 @@
     "racket": "(define/contract (detect-capital-use word)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec detect_capital_use(Word :: unicode:unicode_binary()) -> boolean().\ndetect_capital_use(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec detect_capital_use(word :: String.t) :: boolean\n  def detect_capital_use(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "USA"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "word": "FlaG"
+      },
+      "expected": false
+    }
+  ]
 }

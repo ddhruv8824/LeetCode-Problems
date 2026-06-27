@@ -55,5 +55,34 @@
     "racket": "(define/contract (min-moves sx sy tx ty)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_moves(Sx :: integer(), Sy :: integer(), Tx :: integer(), Ty :: integer()) -> integer().\nmin_moves(Sx, Sy, Tx, Ty) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_moves(sx :: integer, sy :: integer, tx :: integer, ty :: integer) :: integer\n  def min_moves(sx, sy, tx, ty) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "sx": 1,
+        "sy": 2,
+        "tx": 5,
+        "ty": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "sx": 0,
+        "sy": 1,
+        "tx": 2,
+        "ty": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "sx": 1,
+        "sy": 1,
+        "tx": 2,
+        "ty": 2
+      },
+      "expected": -1
+    }
+  ]
 }

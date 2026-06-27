@@ -58,5 +58,66 @@
     "racket": "(define/contract (range-add-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec range_add_queries(N :: integer(), Queries :: [[integer()]]) -> [[integer()]].\nrange_add_queries(N, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec range_add_queries(n :: integer, queries :: [[integer]]) :: [[integer]]\n  def range_add_queries(n, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "queries": [
+          [
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "queries": [
+          [
+            0,
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ]
 }

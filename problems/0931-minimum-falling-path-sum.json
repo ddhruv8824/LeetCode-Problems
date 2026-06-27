@@ -53,5 +53,44 @@
     "racket": "(define/contract (min-falling-path-sum matrix)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec min_falling_path_sum(Matrix :: [[integer()]]) -> integer().\nmin_falling_path_sum(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_falling_path_sum(matrix :: [[integer]]) :: integer\n  def min_falling_path_sum(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            6,
+            5,
+            4
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            -19,
+            57
+          ],
+          [
+            -40,
+            -5
+          ]
+        ]
+      },
+      "expected": -59
+    }
+  ]
 }

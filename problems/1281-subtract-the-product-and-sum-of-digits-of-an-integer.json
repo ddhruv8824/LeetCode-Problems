@@ -49,5 +49,19 @@
     "racket": "(define/contract (subtract-product-and-sum n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec subtract_product_and_sum(N :: integer()) -> integer().\nsubtract_product_and_sum(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subtract_product_and_sum(n :: integer) :: integer\n  def subtract_product_and_sum(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 234
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "n": 4421
+      },
+      "expected": 21
+    }
+  ]
 }

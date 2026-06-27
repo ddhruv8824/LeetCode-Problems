@@ -60,5 +60,41 @@
     "racket": "(define/contract (majority-element nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec majority_element(Nums :: [integer()]) -> [integer()].\nmajority_element(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec majority_element(nums :: [integer]) :: [integer]\n  def majority_element(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ]
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

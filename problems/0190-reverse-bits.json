@@ -49,5 +49,19 @@
     "racket": "(define/contract (reverse-bits n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec reverse_bits(N :: integer()) -> integer().\nreverse_bits(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reverse_bits(n :: integer) :: integer\n  def reverse_bits(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 43261596
+      },
+      "expected": 964176192
+    },
+    {
+      "args": {
+        "n": 2147483644
+      },
+      "expected": 1073741822
+    }
+  ]
 }

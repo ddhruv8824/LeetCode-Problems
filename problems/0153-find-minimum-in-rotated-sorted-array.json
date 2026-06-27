@@ -59,5 +59,67 @@
     "racket": "(define/contract (find-min nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_min(Nums :: [integer()]) -> integer().\nfind_min(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_min(nums :: [integer]) :: integer\n  def find_min(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          0
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

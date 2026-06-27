@@ -56,5 +56,40 @@
     "racket": "(define/contract (pivot-index nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec pivot_index(Nums :: [integer()]) -> integer().\npivot_index(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec pivot_index(nums :: [integer]) :: integer\n  def pivot_index(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          7,
+          3,
+          6,
+          5,
+          6
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          -1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

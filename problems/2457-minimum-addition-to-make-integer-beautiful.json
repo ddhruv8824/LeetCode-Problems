@@ -56,5 +56,28 @@
     "racket": "(define/contract (make-integer-beautiful n target)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec make_integer_beautiful(N :: integer(), Target :: integer()) -> integer().\nmake_integer_beautiful(N, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_integer_beautiful(n :: integer, target :: integer) :: integer\n  def make_integer_beautiful(n, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 16,
+        "target": 6
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 467,
+        "target": 6
+      },
+      "expected": 33
+    },
+    {
+      "args": {
+        "n": 1,
+        "target": 1
+      },
+      "expected": 0
+    }
+  ]
 }

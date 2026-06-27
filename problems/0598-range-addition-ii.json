@@ -61,5 +61,89 @@
     "racket": "(define/contract (max-count m n ops)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_count(M :: integer(), N :: integer(), Ops :: [[integer()]]) -> integer().\nmax_count(M, N, Ops) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_count(m :: integer, n :: integer, ops :: [[integer]]) :: integer\n  def max_count(m, n, ops) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 3,
+        "n": 3,
+        "ops": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "m": 3,
+        "n": 3,
+        "ops": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "m": 3,
+        "n": 3,
+        "ops": []
+      },
+      "expected": 9
+    }
+  ]
 }

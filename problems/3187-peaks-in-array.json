@@ -58,5 +58,66 @@
     "racket": "(define/contract (count-of-peaks nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec count_of_peaks(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\ncount_of_peaks(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_of_peaks(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def count_of_peaks(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          1,
+          4,
+          2,
+          5
+        ],
+        "queries": [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          1,
+          4,
+          2,
+          1,
+          5
+        ],
+        "queries": [
+          [
+            2,
+            2,
+            4
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
 }

@@ -54,5 +54,47 @@
     "racket": "(define/contract (find-radius houses heaters)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_radius(Houses :: [integer()], Heaters :: [integer()]) -> integer().\nfind_radius(Houses, Heaters) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_radius(houses :: [integer], heaters :: [integer]) :: integer\n  def find_radius(houses, heaters) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "houses": [
+          1,
+          2,
+          3
+        ],
+        "heaters": [
+          2
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "houses": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "heaters": [
+          1,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "houses": [
+          1,
+          5
+        ],
+        "heaters": [
+          2
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

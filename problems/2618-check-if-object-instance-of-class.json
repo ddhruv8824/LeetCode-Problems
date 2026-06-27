@@ -39,5 +39,31 @@
   "code_snippets": {
     "javascript": "/**\n * @param {*} obj\n * @param {*} classFunction\n * @return {boolean}\n */\nvar checkIfInstanceOf = function(obj, classFunction) {\n    \n};\n\n/**\n * checkIfInstanceOf(new Date(), Date); // true\n */",
     "typescript": "function checkIfInstanceOf(obj: any, classFunction: any): boolean {\n    \n};\n\n/**\n * checkIfInstanceOf(new Date(), Date); // true\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "func": "() => checkIfInstanceOf(new Date(), Date)"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "func": "() => { class Animal {}; class Dog extends Animal {}; return checkIfInstanceOf(new Dog(), Animal); }"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "func": "() => checkIfInstanceOf(Date, Date)"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "func": "() => checkIfInstanceOf(5, Number)"
+      },
+      "expected": true
+    }
+  ]
 }

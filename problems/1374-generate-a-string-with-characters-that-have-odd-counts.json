@@ -52,5 +52,25 @@
     "racket": "(define/contract (generate-the-string n)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec generate_the_string(N :: integer()) -> unicode:unicode_binary().\ngenerate_the_string(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec generate_the_string(n :: integer) :: String.t\n  def generate_the_string(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": "pppz"
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": "xy"
+    },
+    {
+      "args": {
+        "n": 7
+      },
+      "expected": "holasss"
+    }
+  ]
 }

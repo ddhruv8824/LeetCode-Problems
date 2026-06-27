@@ -47,5 +47,41 @@
     "racket": "(define smallest-infinite-set%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; pop-smallest : -> exact-integer?\n    (define/public (pop-smallest)\n      )\n    ; add-back : exact-integer? -> void?\n    (define/public (add-back num)\n      )))\n\n;; Your smallest-infinite-set% object will be instantiated and called as such:\n;; (define obj (new smallest-infinite-set%))\n;; (define param_1 (send obj pop-smallest))\n;; (send obj add-back num)",
     "erlang": "-spec smallest_infinite_set_init_() -> any().\nsmallest_infinite_set_init_() ->\n  .\n\n-spec smallest_infinite_set_pop_smallest() -> integer().\nsmallest_infinite_set_pop_smallest() ->\n  .\n\n-spec smallest_infinite_set_add_back(Num :: integer()) -> any().\nsmallest_infinite_set_add_back(Num) ->\n  .\n\n\n%% Your functions will be called as such:\n%% smallest_infinite_set_init_(),\n%% Param_1 = smallest_infinite_set_pop_smallest(),\n%% smallest_infinite_set_add_back(Num),\n\n%% smallest_infinite_set_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule SmallestInfiniteSet do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec pop_smallest() :: integer\n  def pop_smallest() do\n    \n  end\n\n  @spec add_back(num :: integer) :: any\n  def add_back(num) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# SmallestInfiniteSet.init_()\n# param_1 = SmallestInfiniteSet.pop_smallest()\n# SmallestInfiniteSet.add_back(num)\n\n# SmallestInfiniteSet.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "param1": []
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "param1": [
+          2
+        ]
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "param1": []
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "param1": []
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "param1": [
+          1
+        ]
+      },
+      "expected": null
+    }
+  ]
 }

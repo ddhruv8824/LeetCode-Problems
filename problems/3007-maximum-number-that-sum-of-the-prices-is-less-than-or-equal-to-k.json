@@ -51,5 +51,21 @@
     "racket": "(define/contract (find-maximum-number k x)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_maximum_number(K :: integer(), X :: integer()) -> integer().\nfind_maximum_number(K, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_maximum_number(k :: integer, x :: integer) :: integer\n  def find_maximum_number(k, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 9,
+        "x": 1
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "k": 7,
+        "x": 2
+      },
+      "expected": 9
+    }
+  ]
 }

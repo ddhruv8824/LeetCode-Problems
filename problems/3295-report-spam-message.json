@@ -51,5 +51,36 @@
     "racket": "(define/contract (report-spam message bannedWords)\n  (-> (listof string?) (listof string?) boolean?)\n  )",
     "erlang": "-spec report_spam(Message :: [unicode:unicode_binary()], BannedWords :: [unicode:unicode_binary()]) -> boolean().\nreport_spam(Message, BannedWords) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec report_spam(message :: [String.t], banned_words :: [String.t]) :: boolean\n  def report_spam(message, banned_words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "message": [
+          "hello",
+          "world",
+          "leetcode"
+        ],
+        "bannedWords": [
+          "world",
+          "hello"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "message": [
+          "hello",
+          "programming",
+          "fun"
+        ],
+        "bannedWords": [
+          "world",
+          "programming",
+          "leetcode"
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

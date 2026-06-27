@@ -52,5 +52,25 @@
     "racket": "(define/contract (count num1 num2 min_sum max_sum)\n  (-> string? string? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary(), Min_sum :: integer(), Max_sum :: integer()) -> integer().\ncount(Num1, Num2, Min_sum, Max_sum) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count(num1 :: String.t, num2 :: String.t, min_sum :: integer, max_sum :: integer) :: integer\n  def count(num1, num2, min_sum, max_sum) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": "1",
+        "num2": "12",
+        "min_sum": 1,
+        "max_sum": 8
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "num1": "1",
+        "num2": "5",
+        "min_sum": 1,
+        "max_sum": 5
+      },
+      "expected": 5
+    }
+  ]
 }

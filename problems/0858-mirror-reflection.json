@@ -51,5 +51,21 @@
     "racket": "(define/contract (mirror-reflection p q)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec mirror_reflection(P :: integer(), Q :: integer()) -> integer().\nmirror_reflection(P, Q) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec mirror_reflection(p :: integer, q :: integer) :: integer\n  def mirror_reflection(p, q) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "p": 2,
+        "q": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "p": 3,
+        "q": 1
+      },
+      "expected": 1
+    }
+  ]
 }

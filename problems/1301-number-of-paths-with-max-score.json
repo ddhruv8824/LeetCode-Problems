@@ -51,5 +51,46 @@
     "ruby": "# @param {String[]} board\n# @return {Integer[]}\ndef paths_with_max_score(board)\n    \nend",
     "scala": "object Solution {\n    def pathsWithMaxScore(board: List[String]): Array[Int] = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn paths_with_max_score(board: Vec<String>) -> Vec<i32> {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          "E23",
+          "2X2",
+          "12S"
+        ]
+      },
+      "expected": [
+        7,
+        1
+      ]
+    },
+    {
+      "args": {
+        "board": [
+          "E12",
+          "1X1",
+          "21S"
+        ]
+      },
+      "expected": [
+        4,
+        2
+      ]
+    },
+    {
+      "args": {
+        "board": [
+          "E11",
+          "XXX",
+          "11S"
+        ]
+      },
+      "expected": [
+        0,
+        0
+      ]
+    }
+  ]
 }

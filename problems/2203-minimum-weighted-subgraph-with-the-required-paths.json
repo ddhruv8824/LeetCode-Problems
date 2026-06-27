@@ -60,5 +60,84 @@
     "racket": "(define/contract (minimum-weight n edges src1 src2 dest)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_weight(N :: integer(), Edges :: [[integer()]], Src1 :: integer(), Src2 :: integer(), Dest :: integer()) -> integer().\nminimum_weight(N, Edges, Src1, Src2, Dest) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_weight(n :: integer, edges :: [[integer]], src1 :: integer, src2 :: integer, dest :: integer) :: integer\n  def minimum_weight(n, edges, src1, src2, dest) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            5,
+            6
+          ],
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            4,
+            5,
+            1
+          ]
+        ],
+        "src1": 0,
+        "src2": 1,
+        "dest": 5
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "src1": 0,
+        "src2": 1,
+        "dest": 2
+      },
+      "expected": -1
+    }
+  ]
 }

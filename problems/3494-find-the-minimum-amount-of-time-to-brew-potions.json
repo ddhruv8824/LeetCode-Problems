@@ -59,5 +59,54 @@
     "racket": "(define/contract (min-time skill mana)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_time(Skill :: [integer()], Mana :: [integer()]) -> integer().\nmin_time(Skill, Mana) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_time(skill :: [integer], mana :: [integer]) :: integer\n  def min_time(skill, mana) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "skill": [
+          1,
+          5,
+          2,
+          4
+        ],
+        "mana": [
+          5,
+          1,
+          4,
+          2
+        ]
+      },
+      "expected": 110
+    },
+    {
+      "args": {
+        "skill": [
+          1,
+          1,
+          1
+        ],
+        "mana": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "skill": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "mana": [
+          1,
+          2
+        ]
+      },
+      "expected": 21
+    }
+  ]
 }

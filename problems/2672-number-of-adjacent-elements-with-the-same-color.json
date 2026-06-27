@@ -53,5 +53,55 @@
     "racket": "(define/contract (color-the-array n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec color_the_array(N :: integer(), Queries :: [[integer()]]) -> [integer()].\ncolor_the_array(N, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec color_the_array(n :: integer, queries :: [[integer]]) :: [integer]\n  def color_the_array(n, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "queries": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "args": {
+        "n": 1,
+        "queries": [
+          [
+            0,
+            100000
+          ]
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

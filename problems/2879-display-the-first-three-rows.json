@@ -26,5 +26,163 @@
   "code_snippets": {
     "pythondata": "import pandas as pd\n\ndef selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:\n    "
   },
-  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nThis problem requires us to return the first 3 rows of the `employees` DataFrame. \n\n**Key Concepts:**\n\n1. **DataFrame:** a 2D table-like structure, similar to a spreadsheet or SQL table. Each row represents an individual record and each column represents a different attribute. It is size-mutable and designed to handle a mix of different types of data.\n2. **`head` method**: a method provided by the pandas library that is used on a DataFrame to return the first `n` rows. If `n` is omitted, it defaults to returning the first 5 rows. This is useful to get an overview or quick look at the beginning of large datasets.\n\n\n### Intuition\n\nLet's explore step by step how to return the first 3 rows of a DataFrame.\n\n1. **Importing pandas**:\n   \n   ```python\n   import pandas as pd\n   ```\n   This line imports the pandas library and gives it an alias name `pd`. The pandas library provides fast, flexible, and expressive data structures designed to work with structured (tabular, multidimensional, potentially heterogeneous) data.\n\n2. **Utilizing `head`:**\n   \n    Let's look at an example to see how we can use `head` to solve our problem.\n\n    Given the `employees` DataFrame as:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering3380560AnnabelleInformationTechnology3767849JonathanHumanResources2379343KhaledAdministration40454We return the `employees` DataFrame using the the `head` function with an input of 3, to indicate we want to return the first 3 rows:\n\n    ```python\n    return employees.head(3)\n    ```\n\n    The dataframe returned is then:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering33805**Visualization of the `head` function applied to the `employees` DataFrame:**\n\n![fig](../Figures/3309/3309-1.png)\n\n### Implementation"
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nThis problem requires us to return the first 3 rows of the `employees` DataFrame. \n\n**Key Concepts:**\n\n1. **DataFrame:** a 2D table-like structure, similar to a spreadsheet or SQL table. Each row represents an individual record and each column represents a different attribute. It is size-mutable and designed to handle a mix of different types of data.\n2. **`head` method**: a method provided by the pandas library that is used on a DataFrame to return the first `n` rows. If `n` is omitted, it defaults to returning the first 5 rows. This is useful to get an overview or quick look at the beginning of large datasets.\n\n\n### Intuition\n\nLet's explore step by step how to return the first 3 rows of a DataFrame.\n\n1. **Importing pandas**:\n   \n   ```python\n   import pandas as pd\n   ```\n   This line imports the pandas library and gives it an alias name `pd`. The pandas library provides fast, flexible, and expressive data structures designed to work with structured (tabular, multidimensional, potentially heterogeneous) data.\n\n2. **Utilizing `head`:**\n   \n    Let's look at an example to see how we can use `head` to solve our problem.\n\n    Given the `employees` DataFrame as:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering3380560AnnabelleInformationTechnology3767849JonathanHumanResources2379343KhaledAdministration40454We return the `employees` DataFrame using the the `head` function with an input of 3, to indicate we want to return the first 3 rows:\n\n    ```python\n    return employees.head(3)\n    ```\n\n    The dataframe returned is then:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering33805**Visualization of the `head` function applied to the `employees` DataFrame:**\n\n![fig](../Figures/3309/3309-1.png)\n\n### Implementation",
+  "test_cases": [
+    {
+      "args": {
+        "df": [
+          {
+            "employee_id": 3,
+            "name": "Bob",
+            "department": "Operations",
+            "salary": 48675
+          },
+          {
+            "employee_id": 90,
+            "name": "Alice",
+            "department": "Sales",
+            "salary": 11096
+          },
+          {
+            "employee_id": 9,
+            "name": "Tatiana",
+            "department": "Engineering",
+            "salary": 33805
+          },
+          {
+            "employee_id": 60,
+            "name": "Annabelle",
+            "department": "InformationTechnology",
+            "salary": 37678
+          },
+          {
+            "employee_id": 49,
+            "name": "Jonathan",
+            "department": "HumanResources",
+            "salary": 23793
+          },
+          {
+            "employee_id": 43,
+            "name": "Khaled",
+            "department": "Administration",
+            "salary": 40454
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 3,
+          "name": "Bob",
+          "department": "Operations",
+          "salary": 48675
+        },
+        {
+          "employee_id": 90,
+          "name": "Alice",
+          "department": "Sales",
+          "salary": 11096
+        },
+        {
+          "employee_id": 9,
+          "name": "Tatiana",
+          "department": "Engineering",
+          "salary": 33805
+        }
+      ]
+    },
+    {
+      "args": {
+        "df": [
+          {
+            "employee_id": 1,
+            "name": "John",
+            "department": "Marketing",
+            "salary": 50000
+          },
+          {
+            "employee_id": 2,
+            "name": "Jane",
+            "department": "Finance",
+            "salary": 60000
+          },
+          {
+            "employee_id": 3,
+            "name": "Jim",
+            "department": "IT",
+            "salary": 70000
+          },
+          {
+            "employee_id": 4,
+            "name": "Jack",
+            "department": "HR",
+            "salary": 80000
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 1,
+          "name": "John",
+          "department": "Marketing",
+          "salary": 50000
+        },
+        {
+          "employee_id": 2,
+          "name": "Jane",
+          "department": "Finance",
+          "salary": 60000
+        },
+        {
+          "employee_id": 3,
+          "name": "Jim",
+          "department": "IT",
+          "salary": 70000
+        }
+      ]
+    },
+    {
+      "args": {
+        "df": [
+          {
+            "employee_id": 10,
+            "name": "Mike",
+            "department": "Sales",
+            "salary": 40000
+          },
+          {
+            "employee_id": 20,
+            "name": "Emma",
+            "department": "Engineering",
+            "salary": 50000
+          },
+          {
+            "employee_id": 30,
+            "name": "David",
+            "department": "Operations",
+            "salary": 60000
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 10,
+          "name": "Mike",
+          "department": "Sales",
+          "salary": 40000
+        },
+        {
+          "employee_id": 20,
+          "name": "Emma",
+          "department": "Engineering",
+          "salary": 50000
+        },
+        {
+          "employee_id": 30,
+          "name": "David",
+          "department": "Operations",
+          "salary": 60000
+        }
+      ]
+    }
+  ]
 }

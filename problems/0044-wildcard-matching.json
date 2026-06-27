@@ -55,5 +55,98 @@
     "racket": "(define/contract (is-match s p)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_match(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> boolean().\nis_match(S, P) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_match(s :: String.t, p :: String.t) :: boolean\n  def is_match(s, p) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aa",
+        "p": "a"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "aa",
+        "p": "aa"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aaa",
+        "p": "aa"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "aa",
+        "p": "*"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aa",
+        "p": "a*"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "ab",
+        "p": "?*"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aab",
+        "p": "c*a*b*"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "aa",
+        "p": "*aa"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aa",
+        "p": "aa*"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "",
+        "p": "*"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "",
+        "p": "?"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "",
+        "p": ""
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "a",
+        "p": ""
+      },
+      "expected": false
+    }
+  ]
 }

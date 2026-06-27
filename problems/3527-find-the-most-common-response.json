@@ -53,5 +53,57 @@
     "racket": "(define/contract (find-common-response responses)\n  (-> (listof (listof string?)) string?)\n  )",
     "erlang": "-spec find_common_response(Responses :: [[unicode:unicode_binary()]]) -> unicode:unicode_binary().\nfind_common_response(Responses) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_common_response(responses :: [[String.t]]) :: String.t\n  def find_common_response(responses) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "responses": [
+          [
+            "good",
+            "ok",
+            "good",
+            "ok"
+          ],
+          [
+            "ok",
+            "bad",
+            "good",
+            "ok",
+            "ok"
+          ],
+          [
+            "good"
+          ],
+          [
+            "bad"
+          ]
+        ]
+      },
+      "expected": "good"
+    },
+    {
+      "args": {
+        "responses": [
+          [
+            "good",
+            "ok",
+            "good"
+          ],
+          [
+            "ok",
+            "bad"
+          ],
+          [
+            "bad",
+            "notsure"
+          ],
+          [
+            "great",
+            "good"
+          ]
+        ]
+      },
+      "expected": "bad"
+    }
+  ]
 }

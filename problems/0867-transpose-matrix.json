@@ -58,5 +58,75 @@
     "erlang": "-spec transpose(Matrix :: [[integer()]]) -> [[integer()]].\ntranspose(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec transpose(matrix :: [[integer]]) :: [[integer]]\n  def transpose(matrix) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Copy Directly\n\n**Intuition and Algorithm**\n\nThe transpose of a matrix `A` with dimensions `R x C` is a matrix `ans` with dimensions `C x R` for which `ans[c][r] = A[r][c]`.\n\nLet's initialize a new matrix `ans` representing the answer.  Then, we'll copy each entry of the matrix as appropriate.**Complexity Analysis**\n\n* Time Complexity:  $$O(R * C)$$, where $$R$$ and $$C$$ are the number of rows and columns in the given matrix `A`.\n\n* Space Complexity:  $$O(R * C)$$, the space used by the answer."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Copy Directly\n\n**Intuition and Algorithm**\n\nThe transpose of a matrix `A` with dimensions `R x C` is a matrix `ans` with dimensions `C x R` for which `ans[c][r] = A[r][c]`.\n\nLet's initialize a new matrix `ans` representing the answer.  Then, we'll copy each entry of the matrix as appropriate.**Complexity Analysis**\n\n* Time Complexity:  $$O(R * C)$$, where $$R$$ and $$C$$ are the number of rows and columns in the given matrix `A`.\n\n* Space Complexity:  $$O(R * C)$$, the space used by the answer.",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          5,
+          8
+        ],
+        [
+          3,
+          6,
+          9
+        ]
+      ]
+    },
+    {
+      "args": {
+        "a": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ]
+    }
+  ]
 }

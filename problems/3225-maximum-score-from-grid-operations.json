@@ -60,5 +60,91 @@
     "racket": "(define/contract (maximum-score grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec maximum_score(Grid :: [[integer()]]) -> integer().\nmaximum_score(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_score(grid :: [[integer]]) :: integer\n  def maximum_score(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            10,
+            9,
+            0,
+            0,
+            15
+          ],
+          [
+            7,
+            1,
+            0,
+            8,
+            0
+          ],
+          [
+            5,
+            20,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            8,
+            12,
+            1,
+            10,
+            3
+          ]
+        ]
+      },
+      "expected": 94
+    }
+  ]
 }

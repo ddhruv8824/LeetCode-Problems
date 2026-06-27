@@ -49,5 +49,19 @@
     "racket": "(define/contract (maximum-binary-string binary)\n  (-> string? string?)\n  )",
     "erlang": "-spec maximum_binary_string(Binary :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmaximum_binary_string(Binary) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_binary_string(binary :: String.t) :: String.t\n  def maximum_binary_string(binary) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "binary": "000110"
+      },
+      "expected": "111011"
+    },
+    {
+      "args": {
+        "binary": "01"
+      },
+      "expected": "01"
+    }
+  ]
 }

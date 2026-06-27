@@ -62,5 +62,50 @@
     "racket": "(define/contract (min-or-after-operations nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_or_after_operations(Nums :: [integer()], K :: integer()) -> integer().\nmin_or_after_operations(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_or_after_operations(nums :: [integer], k :: integer) :: integer\n  def min_or_after_operations(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          3,
+          2,
+          7
+        ],
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          3,
+          15,
+          14,
+          2,
+          8
+        ],
+        "k": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          10,
+          7,
+          10,
+          3,
+          9,
+          14,
+          9,
+          4
+        ],
+        "k": 1
+      },
+      "expected": 15
+    }
+  ]
 }

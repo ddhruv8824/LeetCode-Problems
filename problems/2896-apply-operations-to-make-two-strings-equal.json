@@ -51,5 +51,23 @@
     "racket": "(define/contract (min-operations s1 s2 x)\n  (-> string? string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_operations(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary(), X :: integer()) -> integer().\nmin_operations(S1, S2, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(s1 :: String.t, s2 :: String.t, x :: integer) :: integer\n  def min_operations(s1, s2, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "1100011000",
+        "s2": "0101001010",
+        "x": 2
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "s1": "10110",
+        "s2": "00011",
+        "x": 4
+      },
+      "expected": -1
+    }
+  ]
 }

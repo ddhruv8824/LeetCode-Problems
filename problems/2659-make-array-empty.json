@@ -63,5 +63,38 @@
     "racket": "(define/contract (count-operations-to-empty-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_operations_to_empty_array(Nums :: [integer()]) -> integer().\ncount_operations_to_empty_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_operations_to_empty_array(nums :: [integer]) :: integer\n  def count_operations_to_empty_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          -1
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

@@ -54,5 +54,31 @@
     "racket": "(define/contract (new21-game n k maxPts)\n  (-> exact-integer? exact-integer? exact-integer? flonum?)\n  )",
     "erlang": "-spec new21_game(N :: integer(), K :: integer(), MaxPts :: integer()) -> float().\nnew21_game(N, K, MaxPts) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec new21_game(n :: integer, k :: integer, max_pts :: integer) :: float\n  def new21_game(n, k, max_pts) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10,
+        "k": 1,
+        "maxPts": 10
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 6,
+        "k": 1,
+        "maxPts": 10
+      },
+      "expected": 0.6
+    },
+    {
+      "args": {
+        "n": 21,
+        "k": 17,
+        "maxPts": 10
+      },
+      "expected": 0.73278
+    }
+  ]
 }

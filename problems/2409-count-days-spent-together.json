@@ -51,5 +51,25 @@
     "racket": "(define/contract (count-days-together arriveAlice leaveAlice arriveBob leaveBob)\n  (-> string? string? string? string? exact-integer?)\n  )",
     "erlang": "-spec count_days_together(ArriveAlice :: unicode:unicode_binary(), LeaveAlice :: unicode:unicode_binary(), ArriveBob :: unicode:unicode_binary(), LeaveBob :: unicode:unicode_binary()) -> integer().\ncount_days_together(ArriveAlice, LeaveAlice, ArriveBob, LeaveBob) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_days_together(arrive_alice :: String.t, leave_alice :: String.t, arrive_bob :: String.t, leave_bob :: String.t) :: integer\n  def count_days_together(arrive_alice, leave_alice, arrive_bob, leave_bob) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arriveAlice": "08-15",
+        "leaveAlice": "08-18",
+        "arriveBob": "08-16",
+        "leaveBob": "08-19"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arriveAlice": "10-01",
+        "leaveAlice": "10-31",
+        "arriveBob": "11-01",
+        "leaveBob": "12-31"
+      },
+      "expected": 0
+    }
+  ]
 }

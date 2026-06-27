@@ -55,5 +55,30 @@
     "racket": "(define/contract (count-quadruplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_quadruplets(Nums :: [integer()]) -> integer().\ncount_quadruplets(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_quadruplets(nums :: [integer]) :: integer\n  def count_quadruplets(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          2,
+          4,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

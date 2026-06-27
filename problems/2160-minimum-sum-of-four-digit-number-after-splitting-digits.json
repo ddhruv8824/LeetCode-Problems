@@ -51,5 +51,19 @@
     "racket": "(define/contract (minimum-sum num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_sum(Num :: integer()) -> integer().\nminimum_sum(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_sum(num :: integer) :: integer\n  def minimum_sum(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 2932
+      },
+      "expected": 52
+    },
+    {
+      "args": {
+        "num": 4009
+      },
+      "expected": 13
+    }
+  ]
 }

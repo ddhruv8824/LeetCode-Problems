@@ -52,5 +52,27 @@
     "erlang": "-spec triangle_type(Nums :: [integer()]) -> unicode:unicode_binary().\ntriangle_type(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec triangle_type(nums :: [integer]) :: String.t\n  def triangle_type(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Mathematics\n\n#### Intuition\n\nFirst, sort $\\textit{nums}$ in ascending order, then make the following checks in sequence:\n\n- If $\\textit{nums}[0] + \\textit{nums}[1] \\le \\textit{nums}[2]$, return `\"none\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[2]$, return `\"equilateral\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[1]$ or $\\textit{nums}[1] = \\textit{nums}[2]$, return `\"isosceles\"`.\n\n- If none of the above conditions are met, return `\"scalene\"`.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n  Since the length of $nums$ is only 3, the time required for sorting can be ignored.\n\n- Space complexity: $O(1)$.\n  \n  No additional variables are needed."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Mathematics\n\n#### Intuition\n\nFirst, sort $\\textit{nums}$ in ascending order, then make the following checks in sequence:\n\n- If $\\textit{nums}[0] + \\textit{nums}[1] \\le \\textit{nums}[2]$, return `\"none\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[2]$, return `\"equilateral\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[1]$ or $\\textit{nums}[1] = \\textit{nums}[2]$, return `\"isosceles\"`.\n\n- If none of the above conditions are met, return `\"scalene\"`.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n  Since the length of $nums$ is only 3, the time required for sorting can be ignored.\n\n- Space complexity: $O(1)$.\n  \n  No additional variables are needed.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          3,
+          3
+        ]
+      },
+      "expected": "equilateral"
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": "scalene"
+    }
+  ]
 }

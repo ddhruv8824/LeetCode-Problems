@@ -60,5 +60,76 @@
     "racket": "(define/contract (max-performance n speed efficiency k)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_performance(N :: integer(), Speed :: [integer()], Efficiency :: [integer()], K :: integer()) -> integer().\nmax_performance(N, Speed, Efficiency, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_performance(n :: integer, speed :: [integer], efficiency :: [integer], k :: integer) :: integer\n  def max_performance(n, speed, efficiency, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6,
+        "speed": [
+          2,
+          10,
+          3,
+          1,
+          5,
+          8
+        ],
+        "efficiency": [
+          5,
+          4,
+          3,
+          9,
+          7,
+          2
+        ],
+        "k": 2
+      },
+      "expected": 60
+    },
+    {
+      "args": {
+        "n": 6,
+        "speed": [
+          2,
+          10,
+          3,
+          1,
+          5,
+          8
+        ],
+        "efficiency": [
+          5,
+          4,
+          3,
+          9,
+          7,
+          2
+        ],
+        "k": 3
+      },
+      "expected": 68
+    },
+    {
+      "args": {
+        "n": 6,
+        "speed": [
+          2,
+          10,
+          3,
+          1,
+          5,
+          8
+        ],
+        "efficiency": [
+          5,
+          4,
+          3,
+          9,
+          7,
+          2
+        ],
+        "k": 4
+      },
+      "expected": 72
+    }
+  ]
 }

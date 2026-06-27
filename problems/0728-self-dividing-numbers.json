@@ -48,5 +48,40 @@
     "erlang": "-spec self_dividing_numbers(Left :: integer(), Right :: integer()) -> [integer()].\nself_dividing_numbers(Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec self_dividing_numbers(left :: integer, right :: integer) :: [integer]\n  def self_dividing_numbers(left, right) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n### Approach : Brute Force [Accepted]\n\n**Intuition and Algorithm**\n\nFor each number in the given range, we will directly test if that number is self-dividing.\n\nBy definition, we want to test each whether each digit is non-zero and divide the number. For example, with `128`, we want to test `d != 0 && 128 % d == 0` for `d = 1, 2, 8`.  To do that, we need to iterate over each digit of the number.\n\nA straightforward approach to that problem would be to convert the number into a character array (string in Python), and then convert it back to an integer to perform the modulo operation when checking `n % d == 0`.\n\nWe could also continually divide the number by 10 and peek at the last digit.  That is shown as a variation in a comment.**Complexity Analysis**\n\n* Time Complexity: We iterate through each digit in the given number; therefore, the time complexity is $O(D)$, where $D$ represents the number of digits in the number.\n\n* Space Complexity: $$O(1)$$, since we do not include the output size in space complexity calculations and only consider the intermediate variables or references used during the computation."
+  "solution": "[TOC]\n\n### Approach : Brute Force [Accepted]\n\n**Intuition and Algorithm**\n\nFor each number in the given range, we will directly test if that number is self-dividing.\n\nBy definition, we want to test each whether each digit is non-zero and divide the number. For example, with `128`, we want to test `d != 0 && 128 % d == 0` for `d = 1, 2, 8`.  To do that, we need to iterate over each digit of the number.\n\nA straightforward approach to that problem would be to convert the number into a character array (string in Python), and then convert it back to an integer to perform the modulo operation when checking `n % d == 0`.\n\nWe could also continually divide the number by 10 and peek at the last digit.  That is shown as a variation in a comment.**Complexity Analysis**\n\n* Time Complexity: We iterate through each digit in the given number; therefore, the time complexity is $O(D)$, where $D$ represents the number of digits in the number.\n\n* Space Complexity: $$O(1)$$, since we do not include the output size in space complexity calculations and only consider the intermediate variables or references used during the computation.",
+  "test_cases": [
+    {
+      "args": {
+        "left": 1,
+        "right": 22
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        15,
+        22
+      ]
+    },
+    {
+      "args": {
+        "left": 47,
+        "right": 85
+      },
+      "expected": [
+        48,
+        55,
+        66,
+        77
+      ]
+    }
+  ]
 }

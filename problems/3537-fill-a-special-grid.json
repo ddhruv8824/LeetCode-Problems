@@ -56,5 +56,63 @@
     "racket": "(define/contract (special-grid n)\n  (-> exact-integer? (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec special_grid(N :: integer()) -> [[integer()]].\nspecial_grid(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec special_grid(n :: integer) :: [[integer]]\n  def special_grid(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 0
+      },
+      "expected": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": [
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": [
+        [
+          15,
+          12,
+          3,
+          0
+        ],
+        [
+          14,
+          13,
+          2,
+          1
+        ],
+        [
+          11,
+          8,
+          7,
+          4
+        ],
+        [
+          10,
+          9,
+          6,
+          5
+        ]
+      ]
+    }
+  ]
 }

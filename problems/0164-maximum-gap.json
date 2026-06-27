@@ -49,5 +49,26 @@
     "racket": "(define/contract (maximum-gap nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_gap(Nums :: [integer()]) -> integer().\nmaximum_gap(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_gap(nums :: [integer]) :: integer\n  def maximum_gap(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          6,
+          9,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          10
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

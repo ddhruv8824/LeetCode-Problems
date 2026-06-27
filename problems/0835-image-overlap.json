@@ -61,5 +61,76 @@
     "racket": "(define/contract (largest-overlap img1 img2)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec largest_overlap(Img1 :: [[integer()]], Img2 :: [[integer()]]) -> integer().\nlargest_overlap(Img1, Img2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_overlap(img1 :: [[integer]], img2 :: [[integer]]) :: integer\n  def largest_overlap(img1, img2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "img1": [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "img2": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "img1": [
+          [
+            1
+          ]
+        ],
+        "img2": [
+          [
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "img1": [
+          [
+            0
+          ]
+        ],
+        "img2": [
+          [
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

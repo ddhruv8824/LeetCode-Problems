@@ -54,5 +54,25 @@
     "racket": "(define/contract (max-freq s maxLetters minSize maxSize)\n  (-> string? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_freq(S :: unicode:unicode_binary(), MaxLetters :: integer(), MinSize :: integer(), MaxSize :: integer()) -> integer().\nmax_freq(S, MaxLetters, MinSize, MaxSize) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_freq(s :: String.t, max_letters :: integer, min_size :: integer, max_size :: integer) :: integer\n  def max_freq(s, max_letters, min_size, max_size) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aababcaab",
+        "maxLetters": 2,
+        "minSize": 3,
+        "maxSize": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "aaaa",
+        "maxLetters": 1,
+        "minSize": 3,
+        "maxSize": 3
+      },
+      "expected": 2
+    }
+  ]
 }

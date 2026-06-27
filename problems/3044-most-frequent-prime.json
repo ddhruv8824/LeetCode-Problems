@@ -67,5 +67,58 @@
     "racket": "(define/contract (most-frequent-prime mat)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec most_frequent_prime(Mat :: [[integer()]]) -> integer().\nmost_frequent_prime(Mat) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_frequent_prime(mat :: [[integer]]) :: integer\n  def most_frequent_prime(mat) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            1
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 19
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            7
+          ]
+        ]
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            9,
+            7,
+            8
+          ],
+          [
+            4,
+            6,
+            5
+          ],
+          [
+            2,
+            8,
+            6
+          ]
+        ]
+      },
+      "expected": 97
+    }
+  ]
 }

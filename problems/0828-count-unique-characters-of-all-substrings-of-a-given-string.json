@@ -53,5 +53,25 @@
     "racket": "(define/contract (unique-letter-string s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec unique_letter_string(S :: unicode:unicode_binary()) -> integer().\nunique_letter_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unique_letter_string(s :: String.t) :: integer\n  def unique_letter_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "ABC"
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "s": "ABA"
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "s": "LEETCODE"
+      },
+      "expected": 92
+    }
+  ]
 }

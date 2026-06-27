@@ -55,5 +55,25 @@
     "racket": "(define/contract (make-good s)\n  (-> string? string?)\n  )",
     "erlang": "-spec make_good(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_good(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_good(s :: String.t) :: String.t\n  def make_good(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leEeetcode"
+      },
+      "expected": "leetcode"
+    },
+    {
+      "args": {
+        "s": "abBAcC"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "s"
+      },
+      "expected": "s"
+    }
+  ]
 }

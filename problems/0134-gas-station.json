@@ -49,5 +49,58 @@
     "racket": "(define/contract (can-complete-circuit gas cost)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec can_complete_circuit(Gas :: [integer()], Cost :: [integer()]) -> integer().\ncan_complete_circuit(Gas, Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_complete_circuit(gas :: [integer], cost :: [integer]) :: integer\n  def can_complete_circuit(gas, cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "gas": [
+          1,
+          2,
+          3,
+          3
+        ],
+        "cost": [
+          2,
+          1,
+          5,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "gas": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cost": [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "gas": [
+          2,
+          3,
+          4
+        ],
+        "cost": [
+          3,
+          4,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

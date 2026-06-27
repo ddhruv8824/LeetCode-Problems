@@ -53,5 +53,29 @@
     "racket": "(define/contract (beautiful-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec beautiful_subarrays(Nums :: [integer()]) -> integer().\nbeautiful_subarrays(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beautiful_subarrays(nums :: [integer]) :: integer\n  def beautiful_subarrays(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          1,
+          2,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          10,
+          4
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

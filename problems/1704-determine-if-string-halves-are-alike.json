@@ -50,5 +50,19 @@
     "racket": "(define/contract (halves-are-alike s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec halves_are_alike(S :: unicode:unicode_binary()) -> boolean().\nhalves_are_alike(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec halves_are_alike(s :: String.t) :: boolean\n  def halves_are_alike(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "book"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "textbook"
+      },
+      "expected": false
+    }
+  ]
 }

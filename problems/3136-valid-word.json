@@ -54,5 +54,25 @@
     "erlang": "-spec is_valid(Word :: unicode:unicode_binary()) -> boolean().\nis_valid(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_valid(word :: String.t) :: boolean\n  def is_valid(word) do\n    \n  end\nend"
   },
-  "solution": "### Approach: One-Time Traversal\n\n#### Intuition\n\nFirst, we check whether the length of the given word is at least 3. Then, using a single traversal, we determine whether the word contains at least one vowel letter, at least one consonant letter, and only valid characters, i.e., letters and digits. Any other characters are not allowed.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n  \n  We iterate through the word only once to check each character, so the time complexity is linear in the length of the word.\n\n- Space complexity: $O(1)$."
+  "solution": "### Approach: One-Time Traversal\n\n#### Intuition\n\nFirst, we check whether the length of the given word is at least 3. Then, using a single traversal, we determine whether the word contains at least one vowel letter, at least one consonant letter, and only valid characters, i.e., letters and digits. Any other characters are not allowed.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n  \n  We iterate through the word only once to check each character, so the time complexity is linear in the length of the word.\n\n- Space complexity: $O(1)$.",
+  "test_cases": [
+    {
+      "args": {
+        "word": "234Adas"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "word": "b3"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "word": "a3$e"
+      },
+      "expected": false
+    }
+  ]
 }

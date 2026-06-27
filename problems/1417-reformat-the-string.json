@@ -54,5 +54,25 @@
     "racket": "(define/contract (reformat s)\n  (-> string? string?)\n  )",
     "erlang": "-spec reformat(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreformat(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reformat(s :: String.t) :: String.t\n  def reformat(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "a0b1c2"
+      },
+      "expected": "0a1b2c"
+    },
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "1229857369"
+      },
+      "expected": ""
+    }
+  ]
 }

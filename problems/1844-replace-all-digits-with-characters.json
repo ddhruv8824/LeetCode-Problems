@@ -50,5 +50,19 @@
     "racket": "(define/contract (replace-digits s)\n  (-> string? string?)\n  )",
     "erlang": "-spec replace_digits(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreplace_digits(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec replace_digits(s :: String.t) :: String.t\n  def replace_digits(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "a1c1e1"
+      },
+      "expected": "abcdef"
+    },
+    {
+      "args": {
+        "s": "a1b2c3d4e"
+      },
+      "expected": "abbdcfdhe"
+    }
+  ]
 }

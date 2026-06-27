@@ -57,5 +57,54 @@
     "racket": "(define/contract (num-submat mat)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec num_submat(Mat :: [[integer()]]) -> integer().\nnum_submat(Mat) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_submat(mat :: [[integer]]) :: integer\n  def num_submat(mat) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 13
+    },
+    {
+      "args": {
+        "mat": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 24
+    }
+  ]
 }

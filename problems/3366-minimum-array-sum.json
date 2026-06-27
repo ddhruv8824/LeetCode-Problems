@@ -53,5 +53,35 @@
     "racket": "(define/contract (min-array-sum nums k op1 op2)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_array_sum(Nums :: [integer()], K :: integer(), Op1 :: integer(), Op2 :: integer()) -> integer().\nmin_array_sum(Nums, K, Op1, Op2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_array_sum(nums :: [integer], k :: integer, op1 :: integer, op2 :: integer) :: integer\n  def min_array_sum(nums, k, op1, op2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          8,
+          3,
+          19,
+          3
+        ],
+        "k": 3,
+        "op1": 1,
+        "op2": 1
+      },
+      "expected": 23
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          3
+        ],
+        "k": 3,
+        "op1": 2,
+        "op2": 1
+      },
+      "expected": 3
+    }
+  ]
 }

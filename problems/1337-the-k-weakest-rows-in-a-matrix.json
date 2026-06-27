@@ -55,5 +55,26 @@
     "racket": "(define/contract (k-weakest-rows mat k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec k_weakest_rows(Mat :: [[integer()]], K :: integer()) -> [integer()].\nk_weakest_rows(Mat, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_weakest_rows(mat :: [[integer]], k :: integer) :: [integer]\n  def k_weakest_rows(mat, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mat": ""
+      },
+      "expected": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "args": {
+        "mat": ""
+      },
+      "expected": [
+        0,
+        2
+      ]
+    }
+  ]
 }

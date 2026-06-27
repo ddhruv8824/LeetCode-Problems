@@ -52,5 +52,47 @@
     "erlang": "-spec build_array(Nums :: [integer()]) -> [integer()].\nbuild_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec build_array(nums :: [integer]) :: [integer]\n  def build_array(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Build As Required\n\n#### Intuition\n\nWe can construct a new array of the same length as the original array $\\textit{nums}$, with the element at index $i$ in the new array equal to $\\textit{nums}[\\textit{nums}[i]]$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nThis is the time complexity for constructing the new array.\n\n- Space complexity: $O(1)$.\n\nThe output array is not counted in the space complexity.\n\n### Approach 2: Build In Place\n\n#### Intuition\n\nWe can also directly modify the original array $\\textit{nums}$.\n\nIn order to allow the construction process to proceed completely, we need to enable each element $\\textit{nums}[i]$ in $\\textit{nums}$ to store both the 'current value' (i.e., $\\textit{nums}[i]$) and the 'final value' (i.e., $\\textit{nums}[\\textit{nums}[i]]$).\n\nWe noticed that the range of values of the elements in $\\textit{nums}$ is $[0, 999]$ inclusive, which means that both the 'current value' and the 'final value' of each element in $\\textit{nums}$ are within the closed interval $[0, 999]$.\n\nTherefore, we can use a concept similar to the \"$1000$-based system\" to represent the \"current value\" and \"final value\" of each element. For each element, we use the quotient when it is divided by $1000$ to represent its \"final value,\" and the remainder to represent its \"current value.\"\n\nSo, we first traverse $\\textit{nums}$, calculate the \"final value\" of each element, and add $1000$ times that value to the element. Then, we traverse the array again, and divide the value of each element by $1000$, retaining the quotient. At this point, $\\textit{nums}$ is the completed array, and we return this array as the answer.\n\n#### Details\n\nWhen calculating the \"final value\" of $\\textit{nums}[i]$ and modifying the element, we need to calculate the value of $\\textit{nums}[\\textit{nums}[i]]$ before the modification, and the element at the index $\\textit{nums}[i]$ in $\\textit{nums}$ may have been modified. Therefore, we need to take the modulus of the value at that index with 1000 to get the \"final value\".\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe traversed and modified the $\\textit{nums}$ array twice, and the time complexity of each traversal and modification is $O(n)$.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Build As Required\n\n#### Intuition\n\nWe can construct a new array of the same length as the original array $\\textit{nums}$, with the element at index $i$ in the new array equal to $\\textit{nums}[\\textit{nums}[i]]$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nThis is the time complexity for constructing the new array.\n\n- Space complexity: $O(1)$.\n\nThe output array is not counted in the space complexity.\n\n### Approach 2: Build In Place\n\n#### Intuition\n\nWe can also directly modify the original array $\\textit{nums}$.\n\nIn order to allow the construction process to proceed completely, we need to enable each element $\\textit{nums}[i]$ in $\\textit{nums}$ to store both the 'current value' (i.e., $\\textit{nums}[i]$) and the 'final value' (i.e., $\\textit{nums}[\\textit{nums}[i]]$).\n\nWe noticed that the range of values of the elements in $\\textit{nums}$ is $[0, 999]$ inclusive, which means that both the 'current value' and the 'final value' of each element in $\\textit{nums}$ are within the closed interval $[0, 999]$.\n\nTherefore, we can use a concept similar to the \"$1000$-based system\" to represent the \"current value\" and \"final value\" of each element. For each element, we use the quotient when it is divided by $1000$ to represent its \"final value,\" and the remainder to represent its \"current value.\"\n\nSo, we first traverse $\\textit{nums}$, calculate the \"final value\" of each element, and add $1000$ times that value to the element. Then, we traverse the array again, and divide the value of each element by $1000$, retaining the quotient. At this point, $\\textit{nums}$ is the completed array, and we return this array as the answer.\n\n#### Details\n\nWhen calculating the \"final value\" of $\\textit{nums}[i]$ and modifying the element, we need to calculate the value of $\\textit{nums}[\\textit{nums}[i]]$ before the modification, and the element at the index $\\textit{nums}[i]$ in $\\textit{nums}$ may have been modified. Therefore, we need to take the modulus of the value at that index with 1000 to get the \"final value\".\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe traversed and modified the $\\textit{nums}$ array twice, and the time complexity of each traversal and modification is $O(n)$.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          2,
+          1,
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        4,
+        5,
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
 }

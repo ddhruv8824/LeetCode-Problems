@@ -53,5 +53,28 @@
     "racket": "(define/contract (total-strength strength)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec total_strength(Strength :: [integer()]) -> integer().\ntotal_strength(Strength) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_strength(strength :: [integer]) :: integer\n  def total_strength(strength) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strength": [
+          1,
+          3,
+          1,
+          2
+        ]
+      },
+      "expected": 44
+    },
+    {
+      "args": {
+        "strength": [
+          5,
+          4,
+          6
+        ]
+      },
+      "expected": 213
+    }
+  ]
 }

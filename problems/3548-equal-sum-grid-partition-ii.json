@@ -71,5 +71,71 @@
     "racket": "(define/contract (can-partition-grid grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec can_partition_grid(Grid :: [[integer()]]) -> boolean().\ncan_partition_grid(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_partition_grid(grid :: [[integer]]) :: boolean\n  def can_partition_grid(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            4,
+            1,
+            8
+          ],
+          [
+            3,
+            2,
+            6
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

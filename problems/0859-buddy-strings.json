@@ -52,5 +52,42 @@
     "racket": "(define/contract (buddy-strings s goal)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec buddy_strings(S :: unicode:unicode_binary(), Goal :: unicode:unicode_binary()) -> boolean().\nbuddy_strings(S, Goal) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec buddy_strings(s :: String.t, goal :: String.t) :: boolean\n  def buddy_strings(s, goal) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": "ab",
+        "b": "ba"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": "ab",
+        "b": "ab"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "a": "aa",
+        "b": "aa"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": "aaaaaaabc",
+        "b": "aaaaaaacb"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": "",
+        "b": "aa"
+      },
+      "expected": false
+    }
+  ]
 }

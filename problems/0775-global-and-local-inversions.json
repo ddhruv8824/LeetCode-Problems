@@ -52,5 +52,37 @@
     "racket": "(define/contract (is-ideal-permutation nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_ideal_permutation(Nums :: [integer()]) -> boolean().\nis_ideal_permutation(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_ideal_permutation(nums :: [integer]) :: boolean\n  def is_ideal_permutation(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "A": [
+          1,
+          0,
+          2
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "A": [
+          1,
+          2,
+          0
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "A": [
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

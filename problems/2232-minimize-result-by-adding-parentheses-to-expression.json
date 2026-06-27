@@ -58,5 +58,25 @@
     "racket": "(define/contract (minimize-result expression)\n  (-> string? string?)\n  )",
     "erlang": "-spec minimize_result(Expression :: unicode:unicode_binary()) -> unicode:unicode_binary().\nminimize_result(Expression) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_result(expression :: String.t) :: String.t\n  def minimize_result(expression) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "expression": "247+38"
+      },
+      "expected": "2(47+38)"
+    },
+    {
+      "args": {
+        "expression": "12+34"
+      },
+      "expected": "1(2+3)4"
+    },
+    {
+      "args": {
+        "expression": "999+999"
+      },
+      "expected": "(999+999)"
+    }
+  ]
 }

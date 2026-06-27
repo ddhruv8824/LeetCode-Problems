@@ -54,5 +54,19 @@
     "racket": "(define/contract (minimum-distance word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_distance(Word :: unicode:unicode_binary()) -> integer().\nminimum_distance(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_distance(word :: String.t) :: integer\n  def minimum_distance(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "CAKE"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "word": "HAPPY"
+      },
+      "expected": 6
+    }
+  ]
 }

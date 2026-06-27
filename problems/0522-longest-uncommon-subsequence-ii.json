@@ -51,5 +51,27 @@
     "racket": "(define/contract (find-lu-slength strs)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec find_lu_slength(Strs :: [unicode:unicode_binary()]) -> integer().\nfind_lu_slength(Strs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_lu_slength(strs :: [String.t]) :: integer\n  def find_lu_slength(strs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strs": [
+          "aba",
+          "cdc",
+          "eae"
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "strs": [
+          "aaa",
+          "aaa",
+          "aa"
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

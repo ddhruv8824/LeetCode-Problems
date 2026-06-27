@@ -51,5 +51,21 @@
     "racket": "(define/contract (is-reachable targetX targetY)\n  (-> exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec is_reachable(TargetX :: integer(), TargetY :: integer()) -> boolean().\nis_reachable(TargetX, TargetY) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_reachable(target_x :: integer, target_y :: integer) :: boolean\n  def is_reachable(target_x, target_y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "targetX": 6,
+        "targetY": 9
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "targetX": 4,
+        "targetY": 7
+      },
+      "expected": true
+    }
+  ]
 }

@@ -52,5 +52,52 @@
     "racket": "(define/contract (three-equal-parts arr)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec three_equal_parts(Arr :: [integer()]) -> [integer()].\nthree_equal_parts(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec three_equal_parts(arr :: [integer]) :: [integer]\n  def three_equal_parts(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        3
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ]
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        2
+      ]
+    }
+  ]
 }

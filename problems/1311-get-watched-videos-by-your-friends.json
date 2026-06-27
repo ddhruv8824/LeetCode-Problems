@@ -64,5 +64,94 @@
     "racket": "(define/contract (watched-videos-by-friends watchedVideos friends id level)\n  (-> (listof (listof string?)) (listof (listof exact-integer?)) exact-integer? exact-integer? (listof string?))\n  )",
     "erlang": "-spec watched_videos_by_friends(WatchedVideos :: [[unicode:unicode_binary()]], Friends :: [[integer()]], Id :: integer(), Level :: integer()) -> [unicode:unicode_binary()].\nwatched_videos_by_friends(WatchedVideos, Friends, Id, Level) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec watched_videos_by_friends(watched_videos :: [[String.t]], friends :: [[integer]], id :: integer, level :: integer) :: [String.t]\n  def watched_videos_by_friends(watched_videos, friends, id, level) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "watchedVideos": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "B",
+            "C"
+          ],
+          [
+            "D"
+          ]
+        ],
+        "friends": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "id": 0,
+        "level": 1
+      },
+      "expected": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "args": {
+        "watchedVideos": [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "B",
+            "C"
+          ],
+          [
+            "D"
+          ]
+        ],
+        "friends": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "id": 0,
+        "level": 2
+      },
+      "expected": [
+        "D"
+      ]
+    }
+  ]
 }

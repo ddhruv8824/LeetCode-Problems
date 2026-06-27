@@ -47,5 +47,54 @@
     "golang": "/**\n * Definition for a Node.\n * type Node struct {\n *     Val int\n *     Children []*Node\n * }\n */\n\nfunc maxDepth(root *Node) int {\n    \n}",
     "ruby": "# Definition for a Node.\n# class Node\n#     attr_accessor :val, :children\n#     def initialize(val)\n#         @val = val\n#         @children = []\n#     end\n# end\n\n# @param {Node} root\n# @return {int}\ndef maxDepth(root)\n    \nend",
     "scala": "/**\n * Definition for a Node.\n * class Node(var _value: Int) {\n *   var value: Int = _value\n *   var children: List[Node] = List()\n * }\n */\n\nobject Solution {\n    def maxDepth(root: Node): Int = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          null,
+          3,
+          2,
+          4,
+          null,
+          5,
+          6
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          null,
+          2,
+          3,
+          4,
+          5,
+          null,
+          null,
+          6,
+          7,
+          null,
+          8,
+          null,
+          9,
+          10,
+          null,
+          null,
+          11,
+          null,
+          12,
+          null,
+          13,
+          null,
+          null,
+          14
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

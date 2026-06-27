@@ -54,5 +54,39 @@
     "racket": "(define/contract (calculate-minimum-hp dungeon)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec calculate_minimum_hp(Dungeon :: [[integer()]]) -> integer().\ncalculate_minimum_hp(Dungeon) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec calculate_minimum_hp(dungeon :: [[integer]]) :: integer\n  def calculate_minimum_hp(dungeon) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "dungeon": [
+          [
+            -2,
+            -3,
+            3
+          ],
+          [
+            -5,
+            -10,
+            1
+          ],
+          [
+            10,
+            30,
+            -5
+          ]
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "dungeon": [
+          [
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

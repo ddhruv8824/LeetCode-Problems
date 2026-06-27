@@ -62,5 +62,84 @@
     "racket": "(define/contract (min-area-free-rect points)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
     "erlang": "-spec min_area_free_rect(Points :: [[integer()]]) -> float().\nmin_area_free_rect(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_area_free_rect(points :: [[integer]]) :: float\n  def min_area_free_rect(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -63,5 +63,66 @@
     "racket": "(define/contract (shortest-path-binary-matrix grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec shortest_path_binary_matrix(Grid :: [[integer()]]) -> integer().\nshortest_path_binary_matrix(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_path_binary_matrix(grid :: [[integer]]) :: integer\n  def shortest_path_binary_matrix(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

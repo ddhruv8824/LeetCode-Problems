@@ -52,5 +52,77 @@
     "racket": "(define/contract (min-difference nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec min_difference(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmin_difference(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_difference(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def min_difference(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          4,
+          8
+        ],
+        "queries": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          5,
+          2,
+          2,
+          7,
+          10
+        ],
+        "queries": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        -1,
+        1,
+        1,
+        3
+      ]
+    }
+  ]
 }

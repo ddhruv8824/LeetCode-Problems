@@ -52,5 +52,31 @@
     "racket": "(define/contract (count-ways nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_ways(Nums :: [integer()]) -> integer().\ncount_ways(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_ways(nums :: [integer]) :: integer\n  def count_ways(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          0,
+          3,
+          3,
+          6,
+          7,
+          2,
+          7
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

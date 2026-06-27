@@ -55,5 +55,25 @@
     "racket": "(define/contract (furthest-distance-from-origin moves)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec furthest_distance_from_origin(Moves :: unicode:unicode_binary()) -> integer().\nfurthest_distance_from_origin(Moves) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec furthest_distance_from_origin(moves :: String.t) :: integer\n  def furthest_distance_from_origin(moves) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "moves": "L_RL__R"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "moves": "_R__LL_"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "moves": "_______"
+      },
+      "expected": 7
+    }
+  ]
 }

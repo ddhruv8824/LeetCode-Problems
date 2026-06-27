@@ -62,5 +62,42 @@
     "racket": "(define/contract (min-abs-difference nums goal)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_abs_difference(Nums :: [integer()], Goal :: integer()) -> integer().\nmin_abs_difference(Nums, Goal) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_abs_difference(nums :: [integer], goal :: integer) :: integer\n  def min_abs_difference(nums, goal) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          -7,
+          3,
+          5
+        ],
+        "goal": 6
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          -9,
+          15,
+          -2
+        ],
+        "goal": -5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "goal": -7
+      },
+      "expected": 7
+    }
+  ]
 }

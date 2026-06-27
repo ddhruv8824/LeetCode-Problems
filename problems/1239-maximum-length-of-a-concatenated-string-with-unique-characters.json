@@ -58,5 +58,36 @@
     "racket": "(define/contract (max-length arr)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec max_length(Arr :: [unicode:unicode_binary()]) -> integer().\nmax_length(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_length(arr :: [String.t]) :: integer\n  def max_length(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          "un",
+          "iq",
+          "ue"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "arr": [
+          "cha",
+          "r",
+          "act",
+          "ers"
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "arr": [
+          "abcdefghijklmnopqrstuvwxyz"
+        ]
+      },
+      "expected": 26
+    }
+  ]
 }

@@ -63,5 +63,71 @@
     "racket": "(define/contract (dig-artifacts n artifacts dig)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec dig_artifacts(N :: integer(), Artifacts :: [[integer()]], Dig :: [[integer()]]) -> integer().\ndig_artifacts(N, Artifacts, Dig) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec dig_artifacts(n :: integer, artifacts :: [[integer]], dig :: [[integer]]) :: integer\n  def dig_artifacts(n, artifacts, dig) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "artifacts": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "dig": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 2,
+        "artifacts": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ]
+        ],
+        "dig": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

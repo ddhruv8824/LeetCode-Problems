@@ -54,5 +54,56 @@
     "racket": "(define/contract (add-strings num1 num2)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec add_strings(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\nadd_strings(Num1, Num2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec add_strings(num1 :: String.t, num2 :: String.t) :: String.t\n  def add_strings(num1, num2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": "11",
+        "num2": "123"
+      },
+      "expected": "134"
+    },
+    {
+      "args": {
+        "num1": "456",
+        "num2": "77"
+      },
+      "expected": "533"
+    },
+    {
+      "args": {
+        "num1": "0",
+        "num2": "0"
+      },
+      "expected": "0"
+    },
+    {
+      "args": {
+        "num1": "123",
+        "num2": "123"
+      },
+      "expected": "246"
+    },
+    {
+      "args": {
+        "num1": "1123",
+        "num2": "123"
+      },
+      "expected": "1246"
+    },
+    {
+      "args": {
+        "num1": "123",
+        "num2": "1123"
+      },
+      "expected": "1246"
+    },
+    {
+      "args": {
+        "num1": "1",
+        "num2": "999"
+      },
+      "expected": "1000"
+    }
+  ]
 }

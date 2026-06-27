@@ -55,5 +55,25 @@
     "racket": "(define/contract (num-different-integers word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec num_different_integers(Word :: unicode:unicode_binary()) -> integer().\nnum_different_integers(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_different_integers(word :: String.t) :: integer\n  def num_different_integers(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "a123bc34d8ef34"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "word": "leet1234code234"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "a1b01c001"
+      },
+      "expected": 1
+    }
+  ]
 }

@@ -56,5 +56,55 @@
     "racket": "(define/contract (max-path-length coordinates k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_path_length(Coordinates :: [[integer()]], K :: integer()) -> integer().\nmax_path_length(Coordinates, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_path_length(coordinates :: [[integer]], k :: integer) :: integer\n  def max_path_length(coordinates, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coordinates": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "coordinates": [
+          [
+            2,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

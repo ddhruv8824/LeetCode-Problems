@@ -56,5 +56,86 @@
     "racket": "(define/contract (cherry-pickup grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec cherry_pickup(Grid :: [[integer()]]) -> integer().\ncherry_pickup(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec cherry_pickup(grid :: [[integer]]) :: integer\n  def cherry_pickup(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            1,
+            5,
+            5
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 24
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            2,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            5,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            3,
+            0,
+            0,
+            6
+          ]
+        ]
+      },
+      "expected": 28
+    }
+  ]
 }

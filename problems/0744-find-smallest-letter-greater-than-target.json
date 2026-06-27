@@ -57,5 +57,41 @@
     "racket": "(define/contract (next-greatest-letter letters target)\n  (-> (listof char?) char? char?)\n  )",
     "erlang": "-spec next_greatest_letter(Letters :: [char()], Target :: char()) -> char().\nnext_greatest_letter(Letters, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec next_greatest_letter(letters :: [char], target :: char) :: char\n  def next_greatest_letter(letters, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "letters": [
+          "c",
+          "f",
+          "j"
+        ],
+        "target": "a"
+      },
+      "expected": "c"
+    },
+    {
+      "args": {
+        "letters": [
+          "c",
+          "f",
+          "j"
+        ],
+        "target": "c"
+      },
+      "expected": "f"
+    },
+    {
+      "args": {
+        "letters": [
+          "x",
+          "x",
+          "y",
+          "y"
+        ],
+        "target": "z"
+      },
+      "expected": "x"
+    }
+  ]
 }

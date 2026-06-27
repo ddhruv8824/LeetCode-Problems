@@ -57,5 +57,29 @@
     "racket": "(define/contract (unique-paths-with-obstacles obstacleGrid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec unique_paths_with_obstacles(ObstacleGrid :: [[integer()]]) -> integer().\nunique_paths_with_obstacles(ObstacleGrid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unique_paths_with_obstacles(obstacle_grid :: [[integer]]) :: integer\n  def unique_paths_with_obstacles(obstacle_grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "obstacleGrid": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

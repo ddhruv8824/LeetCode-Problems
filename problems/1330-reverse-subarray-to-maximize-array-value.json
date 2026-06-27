@@ -55,5 +55,33 @@
     "racket": "(define/contract (max-value-after-reverse nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_value_after_reverse(Nums :: [integer()]) -> integer().\nmax_value_after_reverse(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_value_after_reverse(nums :: [integer]) :: integer\n  def max_value_after_reverse(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1,
+          5,
+          4
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          9,
+          24,
+          2,
+          1,
+          10
+        ]
+      },
+      "expected": 68
+    }
+  ]
 }

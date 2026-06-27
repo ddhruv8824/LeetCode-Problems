@@ -68,5 +68,66 @@
     "racket": "(define/contract (minimum-fuel-cost roads seats)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_fuel_cost(Roads :: [[integer()]], Seats :: integer()) -> integer().\nminimum_fuel_cost(Roads, Seats) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_fuel_cost(roads :: [[integer]], seats :: integer) :: integer\n  def minimum_fuel_cost(roads, seats) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "roads": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "seats": 5
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "roads": [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "seats": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "roads": [],
+        "seats": 1
+      },
+      "expected": 0
+    }
+  ]
 }

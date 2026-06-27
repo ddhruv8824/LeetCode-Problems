@@ -49,5 +49,19 @@
     "racket": "(define/contract (reverse-degree s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec reverse_degree(S :: unicode:unicode_binary()) -> integer().\nreverse_degree(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reverse_degree(s :: String.t) :: integer\n  def reverse_degree(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc"
+      },
+      "expected": 148
+    },
+    {
+      "args": {
+        "s": "zaza"
+      },
+      "expected": 160
+    }
+  ]
 }

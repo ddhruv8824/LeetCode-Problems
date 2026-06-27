@@ -52,5 +52,27 @@
     "racket": "(define/contract (most-words-found sentences)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec most_words_found(Sentences :: [unicode:unicode_binary()]) -> integer().\nmost_words_found(Sentences) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_words_found(sentences :: [String.t]) :: integer\n  def most_words_found(sentences) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "sentences": [
+          "alice and bob love leetcode",
+          "i think so too",
+          "this is great thanks very much"
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "sentences": [
+          "please wait",
+          "continue to fight",
+          "continue to win"
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

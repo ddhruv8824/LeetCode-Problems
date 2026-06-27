@@ -64,5 +64,57 @@
     "racket": "(define/contract (num-submatrix-sum-target matrix target)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec num_submatrix_sum_target(Matrix :: [[integer()]], Target :: integer()) -> integer().\nnum_submatrix_sum_target(Matrix, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_submatrix_sum_target(matrix :: [[integer]], target :: integer) :: integer\n  def num_submatrix_sum_target(matrix, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "target": 0
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            -1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "target": 0
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            904
+          ]
+        ],
+        "target": 0
+      },
+      "expected": 0
+    }
+  ]
 }

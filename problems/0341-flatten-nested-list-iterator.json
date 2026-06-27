@@ -52,5 +52,53 @@
     "ruby": "# This is the interface that allows for creating nested lists.\n# You should not implement it, or speculate about its implementation\n#\n#class NestedInteger\n#    def is_integer()\n#        \"\"\"\n#        Return true if this NestedInteger holds a single integer, rather than a nested list.\n#        @return {Boolean}\n#        \"\"\"\n#\n#    def get_integer()\n#        \"\"\"\n#        Return the single integer that this NestedInteger holds, if it holds a single integer\n#        Return nil if this NestedInteger holds a nested list\n#        @return {Integer}\n#        \"\"\"\n#\n#    def get_list()\n#        \"\"\"\n#        Return the nested list that this NestedInteger holds, if it holds a nested list\n#        Return nil if this NestedInteger holds a single integer\n#        @return {NestedInteger[]}\n#        \"\"\"\n\nclass NestedIterator\n    # @param {NestedInteger[]} nested_list\n    def initialize(nested_list)\n        \n    end\n\n    # @return {Boolean}\n    def has_next\n        \n    end\n\n    # @return {Integer}\n    def next\n        \n    end\nend\n\n# Your NestedIterator will be called like this:\n# i, v = NestedIterator.new(nested_list), []\n# while i.has_next()\n#    v << i.next\n# end",
     "scala": "/**\n * // This is the interface that allows for creating nested lists.\n * // You should not implement it, or speculate about its implementation\n * trait NestedInteger {\n *\n *   // Return true if this NestedInteger holds a single integer, rather than a nested list.\n *   def isInteger: Boolean\n *\n *   // Return the single integer that this NestedInteger holds, if it holds a single integer.\n *   def getInteger: Int\n *\n *   // Set this NestedInteger to hold a single integer.\n *   def setInteger(i: Int): Unit\n *\n *   // Return the nested list that this NestedInteger holds, if it holds a nested list.\n *   def getList: Array[NestedInteger]\n *\n *   // Set this NestedInteger to hold a nested list and adds a nested integer to it.\n *   def add(ni: NestedInteger): Unit\n * }\n */\n\nclass NestedIterator(_nestedList: List[NestedInteger]) {\n    def next(): Int = {\n        \n    }\n    \n    def hasNext(): Boolean = {\n        \n    }\n}\n\n/**\n * Your NestedIterator object will be instantiated and called as such:\n * var obj = new NestedIterator(nestedList)\n * var param_1 = obj.next()\n * var param_2 = obj.hasNext()\n */",
     "rust": "// #[derive(Debug, PartialEq, Eq)]\n// pub enum NestedInteger {\n//   Int(i32),\n//   List(Vec<NestedInteger>)\n// }\nstruct NestedIterator {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl NestedIterator {\n\n    fn new(nestedList: Vec<NestedInteger>) -> Self {\n        \n    }\n    \n    fn next(&self) -> i32 {\n        \n    }\n    \n    fn has_next(&self) -> bool {\n        \n    }\n}\n\n/**\n * Your NestedIterator object will be instantiated and called as such:\n * let obj = NestedIterator::new(nestedList);\n * let ret_1: i32 = obj.next();\n * let ret_2: bool = obj.has_next();\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nestedList": "[[1,1],2,[1,1]]"
+      },
+      "expected": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nestedList": "[[1,1],2,[],[1,1,[1,1]]]"
+      },
+      "expected": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nestedList": "[1]"
+      },
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": {
+        "nestedList": "[]"
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "nestedList": "[[]]"
+      },
+      "expected": []
+    }
+  ]
 }

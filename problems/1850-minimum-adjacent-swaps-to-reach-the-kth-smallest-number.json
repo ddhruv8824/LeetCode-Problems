@@ -57,5 +57,28 @@
     "racket": "(define/contract (get-min-swaps num k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_min_swaps(Num :: unicode:unicode_binary(), K :: integer()) -> integer().\nget_min_swaps(Num, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_min_swaps(num :: String.t, k :: integer) :: integer\n  def get_min_swaps(num, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "5489355142",
+        "k": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": "11112",
+        "k": 4
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "num": "00123",
+        "k": 1
+      },
+      "expected": 1
+    }
+  ]
 }

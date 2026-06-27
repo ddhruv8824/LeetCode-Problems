@@ -60,5 +60,45 @@
     "racket": "(define/contract (cycle-length-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec cycle_length_queries(N :: integer(), Queries :: [[integer()]]) -> [integer()].\ncycle_length_queries(N, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec cycle_length_queries(n :: integer, queries :: [[integer]]) :: [integer]\n  def cycle_length_queries(n, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "queries": [
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "args": {
+        "n": 2,
+        "queries": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        2
+      ]
+    }
+  ]
 }

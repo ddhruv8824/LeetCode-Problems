@@ -63,5 +63,37 @@
     "racket": "(define/contract (simplify-path path)\n  (-> string? string?)\n  )",
     "erlang": "-spec simplify_path(Path :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsimplify_path(Path) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec simplify_path(path :: String.t) :: String.t\n  def simplify_path(path) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "path": "/home/"
+      },
+      "expected": "/home"
+    },
+    {
+      "args": {
+        "path": "/home//foo/"
+      },
+      "expected": "/home/foo"
+    },
+    {
+      "args": {
+        "path": "/home/user/Documents/../Pictures"
+      },
+      "expected": "/home/user/Pictures"
+    },
+    {
+      "args": {
+        "path": "/../"
+      },
+      "expected": "/"
+    },
+    {
+      "args": {
+        "path": "/.../a/../b/c/../d/./"
+      },
+      "expected": "/.../b/d"
+    }
+  ]
 }

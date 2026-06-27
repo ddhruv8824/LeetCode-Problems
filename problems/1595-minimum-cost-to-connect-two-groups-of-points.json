@@ -67,5 +67,76 @@
     "racket": "(define/contract (connect-two-groups cost)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec connect_two_groups(Cost :: [[integer()]]) -> integer().\nconnect_two_groups(Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec connect_two_groups(cost :: [[integer]]) :: integer\n  def connect_two_groups(cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cost": [
+          [
+            15,
+            96
+          ],
+          [
+            36,
+            2
+          ]
+        ]
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "cost": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            4,
+            1,
+            1
+          ],
+          [
+            1,
+            5,
+            3
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "cost": [
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            3,
+            4,
+            7
+          ],
+          [
+            8,
+            1,
+            2
+          ],
+          [
+            6,
+            2,
+            4
+          ],
+          [
+            3,
+            8,
+            8
+          ]
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

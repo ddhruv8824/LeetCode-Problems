@@ -64,5 +64,50 @@
     "racket": "(define/contract (can-distribute nums quantity)\n  (-> (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_distribute(Nums :: [integer()], Quantity :: [integer()]) -> boolean().\ncan_distribute(Nums, Quantity) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_distribute(nums :: [integer], quantity :: [integer]) :: boolean\n  def can_distribute(nums, quantity) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quantity": [
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          3
+        ],
+        "quantity": [
+          2
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "quantity": [
+          2,
+          2
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

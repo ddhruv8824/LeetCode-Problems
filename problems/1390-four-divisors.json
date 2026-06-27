@@ -55,5 +55,38 @@
     "racket": "(define/contract (sum-four-divisors nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_four_divisors(Nums :: [integer()]) -> integer().\nsum_four_divisors(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_four_divisors(nums :: [integer]) :: integer\n  def sum_four_divisors(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          21,
+          4,
+          7
+        ]
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "nums": [
+          21,
+          21
+        ]
+      },
+      "expected": 64
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

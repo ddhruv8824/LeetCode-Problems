@@ -61,5 +61,44 @@
     "racket": "(define/contract (min-cost-to-equalize-array nums cost1 cost2)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_cost_to_equalize_array(Nums :: [integer()], Cost1 :: integer(), Cost2 :: integer()) -> integer().\nmin_cost_to_equalize_array(Nums, Cost1, Cost2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost_to_equalize_array(nums :: [integer], cost1 :: integer, cost2 :: integer) :: integer\n  def min_cost_to_equalize_array(nums, cost1, cost2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          1
+        ],
+        "cost1": 5,
+        "cost2": 2
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          3,
+          3,
+          5
+        ],
+        "cost1": 2,
+        "cost2": 1
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          3
+        ],
+        "cost1": 1,
+        "cost2": 3
+      },
+      "expected": 4
+    }
+  ]
 }

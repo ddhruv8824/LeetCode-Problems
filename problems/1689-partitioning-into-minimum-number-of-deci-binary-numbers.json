@@ -57,5 +57,25 @@
     "racket": "(define/contract (min-partitions n)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec min_partitions(N :: unicode:unicode_binary()) -> integer().\nmin_partitions(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_partitions(n :: String.t) :: integer\n  def min_partitions(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": "32"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": "82734"
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "n": "27346209830709182346"
+      },
+      "expected": 9
+    }
+  ]
 }

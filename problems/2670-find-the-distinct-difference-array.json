@@ -50,5 +50,43 @@
     "racket": "(define/contract (distinct-difference-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec distinct_difference_array(Nums :: [integer()]) -> [integer()].\ndistinct_difference_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distinct_difference_array(nums :: [integer]) :: [integer]\n  def distinct_difference_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": [
+        -3,
+        -1,
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          2,
+          3,
+          4,
+          2
+        ]
+      },
+      "expected": [
+        -2,
+        -1,
+        0,
+        2,
+        3
+      ]
+    }
+  ]
 }

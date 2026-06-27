@@ -52,5 +52,37 @@
     "racket": "(define/contract (bitwise-complement n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec bitwise_complement(N :: integer()) -> integer().\nbitwise_complement(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec bitwise_complement(n :: integer) :: integer\n  def bitwise_complement(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "N": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "N": 7
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "N": 10
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "N": 1
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "N": 0
+      },
+      "expected": 1
+    }
+  ]
 }

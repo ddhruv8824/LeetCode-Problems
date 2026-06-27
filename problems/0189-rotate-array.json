@@ -51,5 +51,47 @@
     "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef rotate(nums, k)\n    \nend",
     "scala": "object Solution {\n    def rotate(nums: Array[Int], k: Int): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn rotate(nums: &mut Vec<i32>, k: i32) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "k": 3
+      },
+      "expected": [
+        5,
+        6,
+        7,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -100,
+          3,
+          99
+        ],
+        "k": 2
+      },
+      "expected": [
+        3,
+        99,
+        -1,
+        -100
+      ]
+    }
+  ]
 }

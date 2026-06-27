@@ -56,5 +56,28 @@
     "racket": "(define/contract (rearrange-sticks n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec rearrange_sticks(N :: integer(), K :: integer()) -> integer().\nrearrange_sticks(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rearrange_sticks(n :: integer, k :: integer) :: integer\n  def rearrange_sticks(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 5,
+        "k": 5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 20,
+        "k": 11
+      },
+      "expected": 647427950
+    }
+  ]
 }

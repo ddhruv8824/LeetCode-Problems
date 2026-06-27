@@ -50,5 +50,29 @@
     "racket": "(define/contract (max-array-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_array_value(Nums :: [integer()]) -> integer().\nmax_array_value(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_array_value(nums :: [integer]) :: integer\n  def max_array_value(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          7,
+          9,
+          3
+        ]
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          3,
+          3
+        ]
+      },
+      "expected": 11
+    }
+  ]
 }

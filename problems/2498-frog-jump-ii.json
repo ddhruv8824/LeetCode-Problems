@@ -57,5 +57,29 @@
     "racket": "(define/contract (max-jump stones)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_jump(Stones :: [integer()]) -> integer().\nmax_jump(Stones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_jump(stones :: [integer]) :: integer\n  def max_jump(stones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          0,
+          2,
+          5,
+          6,
+          7
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "stones": [
+          0,
+          3,
+          9
+        ]
+      },
+      "expected": 9
+    }
+  ]
 }

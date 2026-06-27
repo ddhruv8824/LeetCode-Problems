@@ -61,5 +61,28 @@
     "racket": "(define/contract (min-deletion s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_deletion(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmin_deletion(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_deletion(s :: String.t, k :: integer) :: integer\n  def min_deletion(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc",
+        "k": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "aabb",
+        "k": 2
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "yyyzz",
+        "k": 1
+      },
+      "expected": 2
+    }
+  ]
 }

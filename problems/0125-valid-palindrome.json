@@ -52,5 +52,25 @@
     "racket": "(define/contract (is-palindrome s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_palindrome(S :: unicode:unicode_binary()) -> boolean().\nis_palindrome(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_palindrome(s :: String.t) :: boolean\n  def is_palindrome(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "A man, a plan, a canal: Panama"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "race a car"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": " "
+      },
+      "expected": true
+    }
+  ]
 }

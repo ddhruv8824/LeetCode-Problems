@@ -46,5 +46,19 @@
     "racket": "(define/contract (magical-string n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec magical_string(N :: integer()) -> integer().\nmagical_string(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec magical_string(n :: integer) :: integer\n  def magical_string(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 1
+    }
+  ]
 }

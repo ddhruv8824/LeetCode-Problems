@@ -48,5 +48,21 @@
     "erlang": "-spec complex_number_multiply(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncomplex_number_multiply(Num1, Num2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec complex_number_multiply(num1 :: String.t, num2 :: String.t) :: String.t\n  def complex_number_multiply(num1, num2) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Simple Solution[Accepted]\n\n**Algorithm**\n\nMultiplication of two complex numbers can be done as:\n\n$$\n(a+ib) \\times (x+iy)=ax+i^2by+i(bx+ay)=ax-by+i(bx+ay)\n$$\n\nWe simply split up the real and the imaginary parts of the given complex strings based on the '+' and the 'i' symbols. We store the real parts of the two strings $$a$$ and $$b$$ as $$x[0]$$ and $$y[0]$$ respectively and the imaginary parts as $$x[1]$$ and $$y[1]$$ respectively. Then, we multiply the real and the imaginary parts as required after converting the extracted parts into integers. Then, we again form the return string in the required format and return the result.**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. Here splitting takes constant time as length of the string is very small $$(<20)$$.\n\n* Space complexity : $$O(1)$$. Constant extra space is used."
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Simple Solution[Accepted]\n\n**Algorithm**\n\nMultiplication of two complex numbers can be done as:\n\n$$\n(a+ib) \\times (x+iy)=ax+i^2by+i(bx+ay)=ax-by+i(bx+ay)\n$$\n\nWe simply split up the real and the imaginary parts of the given complex strings based on the '+' and the 'i' symbols. We store the real parts of the two strings $$a$$ and $$b$$ as $$x[0]$$ and $$y[0]$$ respectively and the imaginary parts as $$x[1]$$ and $$y[1]$$ respectively. Then, we multiply the real and the imaginary parts as required after converting the extracted parts into integers. Then, we again form the return string in the required format and return the result.**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. Here splitting takes constant time as length of the string is very small $$(<20)$$.\n\n* Space complexity : $$O(1)$$. Constant extra space is used.",
+  "test_cases": [
+    {
+      "args": {
+        "num1": "1+1i",
+        "num2": "1+1i"
+      },
+      "expected": "0+2i"
+    },
+    {
+      "args": {
+        "num1": "1+-1i",
+        "num2": "1+-1i"
+      },
+      "expected": "0+-2i"
+    }
+  ]
 }

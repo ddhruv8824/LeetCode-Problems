@@ -58,5 +58,45 @@
     "racket": "(define/contract (min-skips dist speed hoursBefore)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_skips(Dist :: [integer()], Speed :: integer(), HoursBefore :: integer()) -> integer().\nmin_skips(Dist, Speed, HoursBefore) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_skips(dist :: [integer], speed :: integer, hours_before :: integer) :: integer\n  def min_skips(dist, speed, hours_before) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "dist": [
+          1,
+          3,
+          2
+        ],
+        "speed": 4,
+        "hoursBefore": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "dist": [
+          7,
+          3,
+          5,
+          5
+        ],
+        "speed": 2,
+        "hoursBefore": 10
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "dist": [
+          7,
+          3,
+          5,
+          5
+        ],
+        "speed": 1,
+        "hoursBefore": 10
+      },
+      "expected": -1
+    }
+  ]
 }

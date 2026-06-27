@@ -56,5 +56,28 @@
     "racket": "(define/contract (word-pattern pattern s)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec word_pattern(Pattern :: unicode:unicode_binary(), S :: unicode:unicode_binary()) -> boolean().\nword_pattern(Pattern, S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec word_pattern(pattern :: String.t, s :: String.t) :: boolean\n  def word_pattern(pattern, s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pattern": "abba",
+        "s": "dog cat cat dog"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "pattern": "abba",
+        "s": "dog cat cat fish"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "pattern": "aaaa",
+        "s": "dog cat cat dog"
+      },
+      "expected": false
+    }
+  ]
 }

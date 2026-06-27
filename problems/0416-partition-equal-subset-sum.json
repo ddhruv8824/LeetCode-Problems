@@ -47,5 +47,29 @@
     "racket": "(define/contract (can-partition nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec can_partition(Nums :: [integer()]) -> boolean().\ncan_partition(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_partition(nums :: [integer]) :: boolean\n  def can_partition(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          5,
+          11,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

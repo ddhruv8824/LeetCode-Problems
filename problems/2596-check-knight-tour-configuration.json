@@ -59,5 +59,71 @@
     "racket": "(define/contract (check-valid-grid grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec check_valid_grid(Grid :: [[integer()]]) -> boolean().\ncheck_valid_grid(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_valid_grid(grid :: [[integer]]) :: boolean\n  def check_valid_grid(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            11,
+            16,
+            5,
+            20
+          ],
+          [
+            17,
+            4,
+            19,
+            10,
+            15
+          ],
+          [
+            12,
+            1,
+            8,
+            21,
+            6
+          ],
+          [
+            3,
+            18,
+            23,
+            14,
+            9
+          ],
+          [
+            24,
+            13,
+            2,
+            7,
+            22
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            5,
+            8,
+            1
+          ],
+          [
+            2,
+            7,
+            4
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

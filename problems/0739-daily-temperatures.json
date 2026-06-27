@@ -55,5 +55,31 @@
     "racket": "(define/contract (daily-temperatures temperatures)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec daily_temperatures(Temperatures :: [integer()]) -> [integer()].\ndaily_temperatures(Temperatures) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec daily_temperatures(temperatures :: [integer]) :: [integer]\n  def daily_temperatures(temperatures) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "T": [
+          73,
+          74,
+          75,
+          71,
+          69,
+          72,
+          76,
+          73
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        4,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
 }

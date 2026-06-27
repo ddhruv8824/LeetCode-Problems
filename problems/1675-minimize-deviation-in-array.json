@@ -59,5 +59,40 @@
     "racket": "(define/contract (minimum-deviation nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_deviation(Nums :: [integer()]) -> integer().\nminimum_deviation(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_deviation(nums :: [integer]) :: integer\n  def minimum_deviation(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          1,
+          5,
+          20,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          10,
+          8
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

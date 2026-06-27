@@ -58,5 +58,57 @@
     "racket": "(define/contract (get-folder-names names)\n  (-> (listof string?) (listof string?))\n  )",
     "erlang": "-spec get_folder_names(Names :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nget_folder_names(Names) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_folder_names(names :: [String.t]) :: [String.t]\n  def get_folder_names(names) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "names": [
+          "pes",
+          "fifa",
+          "gta",
+          "pes(2019)"
+        ]
+      },
+      "expected": [
+        "pes",
+        "fifa",
+        "gta",
+        "pes(2019)"
+      ]
+    },
+    {
+      "args": {
+        "names": [
+          "gta",
+          "gta(1)",
+          "gta",
+          "avalon"
+        ]
+      },
+      "expected": [
+        "gta",
+        "gta(1)",
+        "gta(2)",
+        "avalon"
+      ]
+    },
+    {
+      "args": {
+        "names": [
+          "onepiece",
+          "onepiece(1)",
+          "onepiece(2)",
+          "onepiece(3)",
+          "onepiece"
+        ]
+      },
+      "expected": [
+        "onepiece",
+        "onepiece(1)",
+        "onepiece(2)",
+        "onepiece(3)",
+        "onepiece(4)"
+      ]
+    }
+  ]
 }

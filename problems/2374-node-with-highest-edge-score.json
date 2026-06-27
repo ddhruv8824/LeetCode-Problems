@@ -57,5 +57,33 @@
     "racket": "(define/contract (edge-score edges)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec edge_score(Edges :: [integer()]) -> integer().\nedge_score(Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec edge_score(edges :: [integer]) :: integer\n  def edge_score(edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "edges": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          7,
+          7,
+          5
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "edges": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

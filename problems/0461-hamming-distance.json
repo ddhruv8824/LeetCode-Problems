@@ -45,5 +45,21 @@
     "racket": "(define/contract (hamming-distance x y)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec hamming_distance(X :: integer(), Y :: integer()) -> integer().\nhamming_distance(X, Y) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec hamming_distance(x :: integer, y :: integer) :: integer\n  def hamming_distance(x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 1,
+        "y": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "x": 3,
+        "y": 1
+      },
+      "expected": 1
+    }
+  ]
 }

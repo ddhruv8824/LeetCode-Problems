@@ -57,5 +57,34 @@
     "racket": "(define/contract (minimize-set divisor1 divisor2 uniqueCnt1 uniqueCnt2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimize_set(Divisor1 :: integer(), Divisor2 :: integer(), UniqueCnt1 :: integer(), UniqueCnt2 :: integer()) -> integer().\nminimize_set(Divisor1, Divisor2, UniqueCnt1, UniqueCnt2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_set(divisor1 :: integer, divisor2 :: integer, unique_cnt1 :: integer, unique_cnt2 :: integer) :: integer\n  def minimize_set(divisor1, divisor2, unique_cnt1, unique_cnt2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "divisor1": 2,
+        "divisor2": 7,
+        "uniqueCnt1": 1,
+        "uniqueCnt2": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "divisor1": 3,
+        "divisor2": 5,
+        "uniqueCnt1": 2,
+        "uniqueCnt2": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "divisor1": 2,
+        "divisor2": 4,
+        "uniqueCnt1": 8,
+        "uniqueCnt2": 2
+      },
+      "expected": 15
+    }
+  ]
 }

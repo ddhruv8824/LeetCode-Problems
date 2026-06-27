@@ -57,5 +57,67 @@
     "racket": "(define/contract (min-abs-diff grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec min_abs_diff(Grid :: [[integer()]], K :: integer()) -> [[integer()]].\nmin_abs_diff(Grid, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_abs_diff(grid :: [[integer]], k :: integer) :: [[integer]]\n  def min_abs_diff(grid, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            -2
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            -1
+          ]
+        ],
+        "k": 1
+      },
+      "expected": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            -2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ]
 }

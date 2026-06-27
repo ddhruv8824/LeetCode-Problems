@@ -53,5 +53,28 @@
     "racket": "(define/contract (max-score points m)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_score(Points :: [integer()], M :: integer()) -> integer().\nmax_score(Points, M) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_score(points :: [integer], m :: integer) :: integer\n  def max_score(points, m) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          2,
+          4
+        ],
+        "m": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "points": [
+          1,
+          2,
+          3
+        ],
+        "m": 5
+      },
+      "expected": 2
+    }
+  ]
 }

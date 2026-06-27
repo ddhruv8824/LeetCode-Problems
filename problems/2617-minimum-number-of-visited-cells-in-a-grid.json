@@ -72,5 +72,86 @@
     "racket": "(define/contract (minimum-visited-cells grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n\n  )",
     "erlang": "-spec minimum_visited_cells(Grid :: [[integer()]]) -> integer().\nminimum_visited_cells(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_visited_cells(grid :: [[integer]]) :: integer\n  def minimum_visited_cells(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            4,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            3,
+            4,
+            2,
+            1
+          ],
+          [
+            4,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            3,
+            4,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

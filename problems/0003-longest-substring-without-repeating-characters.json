@@ -55,5 +55,43 @@
     "racket": "(define/contract (length-of-longest-substring s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec length_of_longest_substring(S :: unicode:unicode_binary()) -> integer().\nlength_of_longest_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_of_longest_substring(s :: String.t) :: integer\n  def length_of_longest_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcabcbb"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "bbbbb"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "pwwkew"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": ""
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "abcad"
+      },
+      "expected": 4
+    }
+  ]
 }

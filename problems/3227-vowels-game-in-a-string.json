@@ -53,5 +53,19 @@
     "racket": "(define/contract (does-alice-win s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec does_alice_win(S :: unicode:unicode_binary()) -> boolean().\ndoes_alice_win(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec does_alice_win(s :: String.t) :: boolean\n  def does_alice_win(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcoder"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "bbcd"
+      },
+      "expected": false
+    }
+  ]
 }

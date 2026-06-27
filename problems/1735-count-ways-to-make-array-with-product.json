@@ -53,5 +53,63 @@
     "racket": "(define/contract (ways-to-fill-array queries)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec ways_to_fill_array(Queries :: [[integer()]]) -> [integer()].\nways_to_fill_array(Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ways_to_fill_array(queries :: [[integer]]) :: [integer]\n  def ways_to_fill_array(queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          [
+            2,
+            6
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            73,
+            660
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        1,
+        50734910
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        10,
+        5
+      ]
+    }
+  ]
 }

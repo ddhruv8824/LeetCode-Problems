@@ -54,5 +54,26 @@
     "racket": "(define/contract (square-free-subsets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec square_free_subsets(Nums :: [integer()]) -> integer().\nsquare_free_subsets(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec square_free_subsets(nums :: [integer]) :: integer\n  def square_free_subsets(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          4,
+          5
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

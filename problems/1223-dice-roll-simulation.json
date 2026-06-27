@@ -56,5 +56,49 @@
     "racket": "(define/contract (die-simulator n rollMax)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec die_simulator(N :: integer(), RollMax :: [integer()]) -> integer().\ndie_simulator(N, RollMax) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec die_simulator(n :: integer, roll_max :: [integer]) :: integer\n  def die_simulator(n, roll_max) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "rollMax": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      "expected": 34
+    },
+    {
+      "args": {
+        "n": 2,
+        "rollMax": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 30
+    },
+    {
+      "args": {
+        "n": 3,
+        "rollMax": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      "expected": 181
+    }
+  ]
 }

@@ -53,5 +53,21 @@
     "racket": "(define/contract (make-the-integer-zero num1 num2)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec make_the_integer_zero(Num1 :: integer(), Num2 :: integer()) -> integer().\nmake_the_integer_zero(Num1, Num2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_the_integer_zero(num1 :: integer, num2 :: integer) :: integer\n  def make_the_integer_zero(num1, num2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num1": 3,
+        "num2": -2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "num1": 5,
+        "num2": 7
+      },
+      "expected": -1
+    }
+  ]
 }

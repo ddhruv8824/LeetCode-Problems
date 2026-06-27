@@ -60,5 +60,94 @@
     "racket": "(define/contract (count-arrays original bounds)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec count_arrays(Original :: [integer()], Bounds :: [[integer()]]) -> integer().\ncount_arrays(Original, Bounds) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_arrays(original :: [integer], bounds :: [[integer]]) :: integer\n  def count_arrays(original, bounds) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "original": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bounds": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "original": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "bounds": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "original": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "bounds": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

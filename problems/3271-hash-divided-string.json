@@ -53,5 +53,21 @@
     "racket": "(define/contract (string-hash s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec string_hash(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nstring_hash(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec string_hash(s :: String.t, k :: integer) :: String.t\n  def string_hash(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcd",
+        "k": 2
+      },
+      "expected": "bf"
+    },
+    {
+      "args": {
+        "s": "mxz",
+        "k": 3
+      },
+      "expected": "i"
+    }
+  ]
 }

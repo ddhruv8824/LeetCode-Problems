@@ -49,5 +49,19 @@
     "racket": "(define/contract (freq-alphabets s)\n  (-> string? string?)\n  )",
     "erlang": "-spec freq_alphabets(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfreq_alphabets(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec freq_alphabets(s :: String.t) :: String.t\n  def freq_alphabets(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "10#11#12"
+      },
+      "expected": "jkab"
+    },
+    {
+      "args": {
+        "s": "1326#"
+      },
+      "expected": "acz"
+    }
+  ]
 }

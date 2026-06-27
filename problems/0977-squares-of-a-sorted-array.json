@@ -49,5 +49,43 @@
     "racket": "(define/contract (sorted-squares nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec sorted_squares(Nums :: [integer()]) -> [integer()].\nsorted_squares(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sorted_squares(nums :: [integer]) :: [integer]\n  def sorted_squares(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          -4,
+          -1,
+          0,
+          3,
+          10
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        9,
+        16,
+        100
+      ]
+    },
+    {
+      "args": {
+        "a": [
+          -7,
+          -3,
+          2,
+          3,
+          11
+        ]
+      },
+      "expected": [
+        4,
+        9,
+        9,
+        49,
+        121
+      ]
+    }
+  ]
 }

@@ -55,5 +55,44 @@
     "racket": "(define/contract (find-lhs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_lhs(Nums :: [integer()]) -> integer().\nfind_lhs(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_lhs(nums :: [integer]) :: integer\n  def find_lhs(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          2,
+          2,
+          5,
+          2,
+          3,
+          7
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -50,5 +50,60 @@
     "racket": "(define mk-average%\n  (class object%\n    (super-new)\n    \n    ; m : exact-integer?\n    ; k : exact-integer?\n    (init-field\n      m\n      k)\n    \n    ; add-element : exact-integer? -> void?\n    (define/public (add-element num)\n      )\n    ; calculate-mk-average : -> exact-integer?\n    (define/public (calculate-mk-average)\n      )))\n\n;; Your mk-average% object will be instantiated and called as such:\n;; (define obj (new mk-average% [m m] [k k]))\n;; (send obj add-element num)\n;; (define param_2 (send obj calculate-mk-average))",
     "erlang": "-spec mk_average_init_(M :: integer(), K :: integer()) -> any().\nmk_average_init_(M, K) ->\n  .\n\n-spec mk_average_add_element(Num :: integer()) -> any().\nmk_average_add_element(Num) ->\n  .\n\n-spec mk_average_calculate_mk_average() -> integer().\nmk_average_calculate_mk_average() ->\n  .\n\n\n%% Your functions will be called as such:\n%% mk_average_init_(M, K),\n%% mk_average_add_element(Num),\n%% Param_2 = mk_average_calculate_mk_average(),\n\n%% mk_average_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MKAverage do\n  @spec init_(m :: integer, k :: integer) :: any\n  def init_(m, k) do\n    \n  end\n\n  @spec add_element(num :: integer) :: any\n  def add_element(num) do\n    \n  end\n\n  @spec calculate_mk_average() :: integer\n  def calculate_mk_average() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MKAverage.init_(m, k)\n# MKAverage.add_element(num)\n# param_2 = MKAverage.calculate_mk_average()\n\n# MKAverage.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MKAverage",
+        "addElement",
+        "addElement",
+        "calculateMKAverage",
+        "addElement",
+        "calculateMKAverage",
+        "addElement",
+        "addElement",
+        "addElement",
+        "calculateMKAverage"
+      ],
+      "args": [
+        [
+          3,
+          1
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ],
+        [],
+        [
+          10
+        ],
+        [],
+        [
+          5
+        ],
+        [
+          5
+        ],
+        [
+          5
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        -1,
+        null,
+        3,
+        null,
+        null,
+        null,
+        5
+      ]
+    }
+  ]
 }

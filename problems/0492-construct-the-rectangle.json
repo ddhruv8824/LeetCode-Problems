@@ -52,5 +52,34 @@
     "racket": "(define/contract (construct-rectangle area)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec construct_rectangle(Area :: integer()) -> [integer()].\nconstruct_rectangle(Area) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec construct_rectangle(area :: integer) :: [integer]\n  def construct_rectangle(area) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "area": 4
+      },
+      "expected": [
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "area": 37
+      },
+      "expected": [
+        37,
+        1
+      ]
+    },
+    {
+      "args": {
+        "area": 122122
+      },
+      "expected": [
+        427,
+        286
+      ]
+    }
+  ]
 }

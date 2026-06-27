@@ -36,5 +36,19 @@
     "python3": "class H2O:\n    def __init__(self):\n        pass\n\n\n    def hydrogen(self, releaseHydrogen: 'Callable[[], None]') -> None:\n        \n        # releaseHydrogen() outputs \"H\". Do not change or remove this line.\n        releaseHydrogen()\n\n\n    def oxygen(self, releaseOxygen: 'Callable[[], None]') -> None:\n        \n        # releaseOxygen() outputs \"O\". Do not change or remove this line.\n        releaseOxygen()",
     "c": "typedef struct {\n    // User defined data may be declared here.\n    \n} H2O;\n\nvoid releaseHydrogen();\n\nvoid releaseOxygen();\n\nH2O* h2oCreate() {\n    H2O* obj = (H2O*) malloc(sizeof(H2O));\n    \n    // Initialize user defined data here.\n    \n    return obj;\n}\n\nvoid hydrogen(H2O* obj) {\n    \n    // releaseHydrogen() outputs \"H\". Do not change or remove this line.\n    releaseHydrogen();\n}\n\nvoid oxygen(H2O* obj) {\n    \n    // releaseOxygen() outputs \"O\". Do not change or remove this line.\n    releaseOxygen();\n}\n\nvoid h2oFree(H2O* obj) {\n    // User defined data may be cleaned up here.\n    \n}",
     "csharp": "public class H2O {\n\n    public H2O() {\n        \n    }\n\n    public void Hydrogen(Action releaseHydrogen) {\n\t\t\n        // releaseHydrogen() outputs \"H\". Do not change or remove this line.\n        releaseHydrogen();\n    }\n\n    public void Oxygen(Action releaseOxygen) {\n        \n        // releaseOxygen() outputs \"O\". Do not change or remove this line.\n\t\treleaseOxygen();\n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "water": "HOH"
+      },
+      "expected": "HHO"
+    },
+    {
+      "args": {
+        "water": "OOHHHH"
+      },
+      "expected": "HHOHHO"
+    }
+  ]
 }

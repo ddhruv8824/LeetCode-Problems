@@ -55,5 +55,42 @@
     "racket": "(define/contract (sum-of-unique nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_of_unique(Nums :: [integer()]) -> integer().\nsum_of_unique(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_unique(nums :: [integer]) :: integer\n  def sum_of_unique(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": 15
+    }
+  ]
 }

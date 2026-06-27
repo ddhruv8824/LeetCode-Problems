@@ -57,5 +57,25 @@
     "racket": "(define/contract (longest-nice-substring s)\n  (-> string? string?)\n  )",
     "erlang": "-spec longest_nice_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_nice_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_nice_substring(s :: String.t) :: String.t\n  def longest_nice_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "YazaAay"
+      },
+      "expected": "aAa"
+    },
+    {
+      "args": {
+        "s": "Bb"
+      },
+      "expected": "Bb"
+    },
+    {
+      "args": {
+        "s": "c"
+      },
+      "expected": ""
+    }
+  ]
 }

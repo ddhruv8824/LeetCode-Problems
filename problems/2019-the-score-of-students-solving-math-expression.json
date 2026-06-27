@@ -72,5 +72,47 @@
     "racket": "(define/contract (score-of-students s answers)\n  (-> string? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec score_of_students(S :: unicode:unicode_binary(), Answers :: [integer()]) -> integer().\nscore_of_students(S, Answers) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec score_of_students(s :: String.t, answers :: [integer]) :: integer\n  def score_of_students(s, answers) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "7+3*1*2",
+        "answers": [
+          20,
+          13,
+          42
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "3+5*2",
+        "answers": [
+          13,
+          0,
+          10,
+          13,
+          13,
+          16,
+          16
+        ]
+      },
+      "expected": 19
+    },
+    {
+      "args": {
+        "s": "6+0*1",
+        "answers": [
+          12,
+          9,
+          6,
+          4,
+          8,
+          6
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

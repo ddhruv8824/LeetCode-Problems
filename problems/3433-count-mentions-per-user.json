@@ -63,5 +63,80 @@
     "racket": "(define/contract (count-mentions numberOfUsers events)\n  (-> exact-integer? (listof (listof string?)) (listof exact-integer?))\n  )",
     "erlang": "-spec count_mentions(NumberOfUsers :: integer(), Events :: [[unicode:unicode_binary()]]) -> [integer()].\ncount_mentions(NumberOfUsers, Events) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_mentions(number_of_users :: integer, events :: [[String.t]]) :: [integer]\n  def count_mentions(number_of_users, events) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numberOfUsers": 2,
+        "events": [
+          [
+            "MESSAGE",
+            "10",
+            "id1 id0"
+          ],
+          [
+            "OFFLINE",
+            "11",
+            "0"
+          ],
+          [
+            "MESSAGE",
+            "71",
+            "HERE"
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "numberOfUsers": 2,
+        "events": [
+          [
+            "MESSAGE",
+            "10",
+            "id1 id0"
+          ],
+          [
+            "OFFLINE",
+            "11",
+            "0"
+          ],
+          [
+            "MESSAGE",
+            "12",
+            "ALL"
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "numberOfUsers": 2,
+        "events": [
+          [
+            "OFFLINE",
+            "10",
+            "0"
+          ],
+          [
+            "MESSAGE",
+            "12",
+            "HERE"
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
 }

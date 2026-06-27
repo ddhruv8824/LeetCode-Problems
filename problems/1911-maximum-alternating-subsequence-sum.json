@@ -52,5 +52,42 @@
     "scala": "object Solution {\r\n    def maxAlternatingSum(nums: Array[Int]): Long = {\r\n        \r\n    }\r\n}",
     "rust": "impl Solution {\r\n    pub fn max_alternating_sum(nums: Vec<i32>) -> i64 {\r\n        \r\n    }\r\n}",
     "racket": "(define/contract (max-alternating-sum nums)\r\n  (-> (listof exact-integer?) exact-integer?)\r\n\r\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          5,
+          3
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          2,
+          1,
+          2,
+          4,
+          5
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

@@ -55,5 +55,44 @@
     "racket": "(define/contract (merge-stones stones k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec merge_stones(Stones :: [integer()], K :: integer()) -> integer().\nmerge_stones(Stones, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec merge_stones(stones :: [integer], k :: integer) :: integer\n  def merge_stones(stones, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "stones": [
+          3,
+          2,
+          4,
+          1
+        ],
+        "k": 2
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "stones": [
+          3,
+          2,
+          4,
+          1
+        ],
+        "k": 3
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "stones": [
+          3,
+          5,
+          1,
+          2,
+          6
+        ],
+        "k": 3
+      },
+      "expected": 25
+    }
+  ]
 }

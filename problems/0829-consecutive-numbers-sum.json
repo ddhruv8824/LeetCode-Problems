@@ -51,5 +51,25 @@
     "racket": "(define/contract (consecutive-numbers-sum n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec consecutive_numbers_sum(N :: integer()) -> integer().\nconsecutive_numbers_sum(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec consecutive_numbers_sum(n :: integer) :: integer\n  def consecutive_numbers_sum(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 9
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 15
+      },
+      "expected": 4
+    }
+  ]
 }

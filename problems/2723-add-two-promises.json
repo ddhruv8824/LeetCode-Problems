@@ -26,5 +26,75 @@
   "code_snippets": {
     "javascript": "/**\n * @param {Promise} promise1\n * @param {Promise} promise2\n * @return {Promise}\n */\nvar addTwoPromises = async function(promise1, promise2) {\n    \n};\n\n/**\n * addTwoPromises(Promise.resolve(2), Promise.resolve(2))\n *   .then(console.log); // 4\n */",
     "typescript": "type P = Promise<number>\n\nasync function addTwoPromises(promise1: P, promise2: P): P {\n    \n};\n\n/**\n * addTwoPromises(Promise.resolve(2), Promise.resolve(2))\n *   .then(console.log); // 4\n */"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "promise1": {
+          "function_name": "Promise.resolve",
+          "args": [
+            2
+          ]
+        },
+        "promise2": {
+          "function_name": "Promise.resolve",
+          "args": [
+            5
+          ]
+        }
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "promise1": {
+          "function_name": "Promise.resolve",
+          "args": [
+            10
+          ]
+        },
+        "promise2": {
+          "function_name": "Promise.resolve",
+          "args": [
+            -12
+          ]
+        }
+      },
+      "expected": -2
+    },
+    {
+      "args": {
+        "promise1": {
+          "function_name": "Promise.resolve",
+          "args": [
+            2
+          ]
+        },
+        "promise2": {
+          "function_name": "Promise.resolve",
+          "args": [
+            2
+          ]
+        }
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "promise1": {
+          "function_name": "Promise.resolve",
+          "args": [
+            0
+          ]
+        },
+        "promise2": {
+          "function_name": "Promise.resolve",
+          "args": [
+            0
+          ]
+        }
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -62,5 +62,28 @@
     "racket": "(define/contract (number-of-sets n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_sets(N :: integer(), K :: integer()) -> integer().\nnumber_of_sets(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_sets(n :: integer, k :: integer) :: integer\n  def number_of_sets(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "k": 2
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "n": 30,
+        "k": 7
+      },
+      "expected": 796297179
+    }
+  ]
 }

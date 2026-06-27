@@ -54,5 +54,19 @@
     "racket": "(define/contract (add-digits num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec add_digits(Num :: integer()) -> integer().\nadd_digits(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec add_digits(num :: integer) :: integer\n  def add_digits(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 38
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 0
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -57,5 +57,46 @@
     "racket": "(define/contract (destroy-targets nums space)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec destroy_targets(Nums :: [integer()], Space :: integer()) -> integer().\ndestroy_targets(Nums, Space) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec destroy_targets(nums :: [integer], space :: integer) :: integer\n  def destroy_targets(nums, space) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          7,
+          8,
+          1,
+          1,
+          5
+        ],
+        "space": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          5,
+          2,
+          4,
+          6
+        ],
+        "space": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          6,
+          2,
+          5
+        ],
+        "space": 100
+      },
+      "expected": 2
+    }
+  ]
 }

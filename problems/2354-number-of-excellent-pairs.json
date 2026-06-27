@@ -53,5 +53,30 @@
     "racket": "(define/contract (count-excellent-pairs nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_excellent_pairs(Nums :: [integer()], K :: integer()) -> integer().\ncount_excellent_pairs(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_excellent_pairs(nums :: [integer], k :: integer) :: integer\n  def count_excellent_pairs(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "k": 3
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          1,
+          1
+        ],
+        "k": 10
+      },
+      "expected": 0
+    }
+  ]
 }

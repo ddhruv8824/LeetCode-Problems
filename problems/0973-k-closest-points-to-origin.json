@@ -56,5 +56,57 @@
     "racket": "(define/contract (k-closest points k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec k_closest(Points :: [[integer()]], K :: integer()) -> [[integer()]].\nk_closest(Points, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec k_closest(points :: [[integer]], k :: integer) :: [[integer]]\n  def k_closest(points, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            3
+          ],
+          [
+            -2,
+            2
+          ]
+        ],
+        "k": 1
+      },
+      "expected": [
+        [
+          -2,
+          2
+        ]
+      ]
+    },
+    {
+      "args": {
+        "points": [
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            -1
+          ],
+          [
+            -2,
+            4
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        [
+          3,
+          3
+        ],
+        [
+          -2,
+          4
+        ]
+      ]
+    }
+  ]
 }

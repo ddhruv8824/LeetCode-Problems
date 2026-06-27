@@ -65,5 +65,28 @@
     "racket": "(define/contract (decode-ciphertext encodedText rows)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec decode_ciphertext(EncodedText :: unicode:unicode_binary(), Rows :: integer()) -> unicode:unicode_binary().\ndecode_ciphertext(EncodedText, Rows) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec decode_ciphertext(encoded_text :: String.t, rows :: integer) :: String.t\n  def decode_ciphertext(encoded_text, rows) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "encodedText": "ch   ie   pr",
+        "rows": 3
+      },
+      "expected": "cipher"
+    },
+    {
+      "args": {
+        "encodedText": "iveo    eed   l te   olc",
+        "rows": 4
+      },
+      "expected": "i love leetcode"
+    },
+    {
+      "args": {
+        "encodedText": "coding",
+        "rows": 1
+      },
+      "expected": "coding"
+    }
+  ]
 }

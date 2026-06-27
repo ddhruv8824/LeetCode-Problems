@@ -57,5 +57,33 @@
     "racket": "(define/contract (find-valid-split nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_valid_split(Nums :: [integer()]) -> integer().\nfind_valid_split(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_valid_split(nums :: [integer]) :: integer\n  def find_valid_split(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          7,
+          8,
+          15,
+          3,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          7,
+          15,
+          8,
+          3,
+          5
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

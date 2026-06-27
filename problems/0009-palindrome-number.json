@@ -52,5 +52,25 @@
     "racket": "(define/contract (is-palindrome x)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_palindrome(X :: integer()) -> boolean().\nis_palindrome(X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_palindrome(x :: integer) :: boolean\n  def is_palindrome(x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 121
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "x": -121
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "x": 10
+      },
+      "expected": false
+    }
+  ]
 }

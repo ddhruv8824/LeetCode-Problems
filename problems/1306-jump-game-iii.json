@@ -57,5 +57,50 @@
     "racket": "(define/contract (can-reach arr start)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
     "erlang": "-spec can_reach(Arr :: [integer()], Start :: integer()) -> boolean().\ncan_reach(Arr, Start) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_reach(arr :: [integer], start :: integer) :: boolean\n  def can_reach(arr, start) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          4,
+          2,
+          3,
+          0,
+          3,
+          1,
+          2
+        ],
+        "start": 5
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "arr": [
+          4,
+          2,
+          3,
+          0,
+          3,
+          1,
+          2
+        ],
+        "start": 0
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "arr": [
+          3,
+          0,
+          2,
+          1,
+          2
+        ],
+        "start": 2
+      },
+      "expected": false
+    }
+  ]
 }

@@ -57,5 +57,28 @@
     "racket": "(define/contract (minimum-numbers num k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_numbers(Num :: integer(), K :: integer()) -> integer().\nminimum_numbers(Num, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_numbers(num :: integer, k :: integer) :: integer\n  def minimum_numbers(num, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 58,
+        "k": 9
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 37,
+        "k": 2
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "num": 0,
+        "k": 7
+      },
+      "expected": 0
+    }
+  ]
 }

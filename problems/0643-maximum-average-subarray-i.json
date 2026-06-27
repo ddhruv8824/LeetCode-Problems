@@ -48,5 +48,21 @@
     "racket": "(define/contract (find-max-average nums k)\n  (-> (listof exact-integer?) exact-integer? flonum?)\n  )",
     "erlang": "-spec find_max_average(Nums :: [integer()], K :: integer()) -> float().\nfind_max_average(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_max_average(nums :: [integer], k :: integer) :: float\n  def find_max_average(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          12,
+          -5,
+          -6,
+          50,
+          3
+        ],
+        "k": 4
+      },
+      "expected": 12.75
+    }
+  ]
 }

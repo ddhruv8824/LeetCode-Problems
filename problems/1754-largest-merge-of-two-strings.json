@@ -53,5 +53,21 @@
     "racket": "(define/contract (largest-merge word1 word2)\n  (-> string? string? string?)\n  )",
     "erlang": "-spec largest_merge(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_merge(Word1, Word2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_merge(word1 :: String.t, word2 :: String.t) :: String.t\n  def largest_merge(word1, word2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word1": "cabaa",
+        "word2": "bcaaa"
+      },
+      "expected": "cbcabaaaaa"
+    },
+    {
+      "args": {
+        "word1": "abcabc",
+        "word2": "abdcaba"
+      },
+      "expected": "abdcabcabcaba"
+    }
+  ]
 }

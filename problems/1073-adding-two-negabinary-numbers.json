@@ -55,5 +55,56 @@
     "racket": "(define/contract (add-negabinary arr1 arr2)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec add_negabinary(Arr1 :: [integer()], Arr2 :: [integer()]) -> [integer()].\nadd_negabinary(Arr1, Arr2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec add_negabinary(arr1 :: [integer], arr2 :: [integer]) :: [integer]\n  def add_negabinary(arr1, arr2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr1": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "arr2": [
+          1,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "arr1": [
+          0
+        ],
+        "arr2": [
+          0
+        ]
+      },
+      "expected": [
+        0
+      ]
+    },
+    {
+      "args": {
+        "arr1": [
+          0
+        ],
+        "arr2": [
+          1
+        ]
+      },
+      "expected": [
+        1
+      ]
+    }
+  ]
 }

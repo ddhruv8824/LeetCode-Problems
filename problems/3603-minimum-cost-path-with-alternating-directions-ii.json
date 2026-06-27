@@ -61,5 +61,56 @@
     "racket": "(define/contract (min-cost m n waitCost)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec min_cost(M :: integer(), N :: integer(), WaitCost :: [[integer()]]) -> integer().\nmin_cost(M, N, WaitCost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_cost(m :: integer, n :: integer, wait_cost :: [[integer]]) :: integer\n  def min_cost(m, n, wait_cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "m": 1,
+        "n": 2,
+        "waitCost": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "m": 2,
+        "n": 2,
+        "waitCost": [
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "m": 2,
+        "n": 3,
+        "waitCost": [
+          [
+            6,
+            1,
+            4
+          ],
+          [
+            3,
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

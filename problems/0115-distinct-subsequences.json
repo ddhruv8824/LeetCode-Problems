@@ -47,5 +47,21 @@
     "racket": "(define/contract (num-distinct s t)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec num_distinct(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nnum_distinct(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_distinct(s :: String.t, t :: String.t) :: integer\n  def num_distinct(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "rabbbit",
+        "t": "rabbit"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "babgbag",
+        "t": "bag"
+      },
+      "expected": 5
+    }
+  ]
 }

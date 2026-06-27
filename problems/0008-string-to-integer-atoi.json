@@ -56,5 +56,31 @@
     "racket": "(define/contract (my-atoi s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec my_atoi(S :: unicode:unicode_binary()) -> integer().\nmy_atoi(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec my_atoi(s :: String.t) :: integer\n  def my_atoi(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "42"
+      },
+      "expected": 42
+    },
+    {
+      "args": {
+        "s": "   -042"
+      },
+      "expected": -42
+    },
+    {
+      "args": {
+        "s": "1337c0d3"
+      },
+      "expected": 1337
+    },
+    {
+      "args": {
+        "s": "0-1"
+      },
+      "expected": 0
+    }
+  ]
 }

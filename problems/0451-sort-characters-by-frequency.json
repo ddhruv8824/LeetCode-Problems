@@ -56,5 +56,25 @@
     "racket": "(define/contract (frequency-sort s)\n  (-> string? string?)\n  )",
     "erlang": "-spec frequency_sort(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfrequency_sort(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec frequency_sort(s :: String.t) :: String.t\n  def frequency_sort(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "tree"
+      },
+      "expected": "eert"
+    },
+    {
+      "args": {
+        "s": "cccaaa"
+      },
+      "expected": "aaaccc"
+    },
+    {
+      "args": {
+        "s": "Aabb"
+      },
+      "expected": "bbAa"
+    }
+  ]
 }

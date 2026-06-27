@@ -56,5 +56,25 @@
     "racket": "(define/contract (reinitialize-permutation n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec reinitialize_permutation(N :: integer()) -> integer().\nreinitialize_permutation(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reinitialize_permutation(n :: integer) :: integer\n  def reinitialize_permutation(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": 4
+    }
+  ]
 }

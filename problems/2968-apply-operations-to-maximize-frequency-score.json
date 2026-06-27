@@ -54,5 +54,32 @@
     "racket": "(define/contract (max-frequency-score nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_frequency_score(Nums :: [integer()], K :: integer()) -> integer().\nmax_frequency_score(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_frequency_score(nums :: [integer], k :: integer) :: integer\n  def max_frequency_score(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          6,
+          4
+        ],
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          4,
+          4,
+          2,
+          4
+        ],
+        "k": 0
+      },
+      "expected": 3
+    }
+  ]
 }

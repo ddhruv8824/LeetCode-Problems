@@ -69,5 +69,105 @@
     "racket": "(define/contract (count-sub-trees n edges labels)\n  (-> exact-integer? (listof (listof exact-integer?)) string? (listof exact-integer?))\n  )",
     "erlang": "-spec count_sub_trees(N :: integer(), Edges :: [[integer()]], Labels :: unicode:unicode_binary()) -> [integer()].\ncount_sub_trees(N, Edges, Labels) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_sub_trees(n :: integer, edges :: [[integer]], labels :: String.t) :: [integer]\n  def count_sub_trees(n, edges, labels) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "labels": "abaedcd"
+      },
+      "expected": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "labels": "bbbb"
+      },
+      "expected": [
+        4,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "labels": "aabab"
+      },
+      "expected": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
 }

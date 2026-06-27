@@ -58,5 +58,28 @@
     "racket": "(define/contract (rearrange-characters s target)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec rearrange_characters(S :: unicode:unicode_binary(), Target :: unicode:unicode_binary()) -> integer().\nrearrange_characters(S, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rearrange_characters(s :: String.t, target :: String.t) :: integer\n  def rearrange_characters(s, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "ilovecodingonleetcode",
+        "target": "code"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abcba",
+        "target": "abc"
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "abbaccaddaeea",
+        "target": "aaaaa"
+      },
+      "expected": 1
+    }
+  ]
 }

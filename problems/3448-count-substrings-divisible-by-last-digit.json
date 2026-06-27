@@ -57,5 +57,25 @@
     "racket": "(define/contract (count-substrings s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec count_substrings(S :: unicode:unicode_binary()) -> integer().\ncount_substrings(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_substrings(s :: String.t) :: integer\n  def count_substrings(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "12936"
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "s": "5701283"
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "s": "1010101010"
+      },
+      "expected": 25
+    }
+  ]
 }

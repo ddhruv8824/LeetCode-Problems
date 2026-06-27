@@ -50,5 +50,27 @@
     "erlang": "-spec max_adjacent_distance(Nums :: [integer()]) -> integer().\nmax_adjacent_distance(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_adjacent_distance(nums :: [integer]) :: integer\n  def max_adjacent_distance(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Traversal\n\n#### Intuition\n\nFirst, calculate the absolute difference between the first and last elements to initialize the maximum absolute difference. Then, traverse the array to calculate the absolute difference between adjacent elements and update the answer.\n\nFinally, return the maximum absolute difference in the circular array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array.\n\n- Time complexity: $O(n)$.\n  \n  Only need to traverse the array once.\n\n- Space complexity: $O(1)$.\n  \n  Only a few additional variables are needed."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Traversal\n\n#### Intuition\n\nFirst, calculate the absolute difference between the first and last elements to initialize the maximum absolute difference. Then, traverse the array to calculate the absolute difference between adjacent elements and update the answer.\n\nFinally, return the maximum absolute difference in the circular array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array.\n\n- Time complexity: $O(n)$.\n  \n  Only need to traverse the array once.\n\n- Space complexity: $O(1)$.\n  \n  Only a few additional variables are needed.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          4
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          -5,
+          -10,
+          -5
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

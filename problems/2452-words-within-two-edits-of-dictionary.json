@@ -54,5 +54,38 @@
     "racket": "(define/contract (two-edit-words queries dictionary)\n  (-> (listof string?) (listof string?) (listof string?))\n  )",
     "erlang": "-spec two_edit_words(Queries :: [unicode:unicode_binary()], Dictionary :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\ntwo_edit_words(Queries, Dictionary) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec two_edit_words(queries :: [String.t], dictionary :: [String.t]) :: [String.t]\n  def two_edit_words(queries, dictionary) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "queries": [
+          "word",
+          "note",
+          "ants",
+          "wood"
+        ],
+        "dictionary": [
+          "wood",
+          "joke",
+          "moat"
+        ]
+      },
+      "expected": [
+        "word",
+        "note",
+        "wood"
+      ]
+    },
+    {
+      "args": {
+        "queries": [
+          "yes"
+        ],
+        "dictionary": [
+          "not"
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

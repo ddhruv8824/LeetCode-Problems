@@ -56,5 +56,43 @@
     "racket": "(define/contract (latest-time-catch-the-bus buses passengers capacity)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec latest_time_catch_the_bus(Buses :: [integer()], Passengers :: [integer()], Capacity :: integer()) -> integer().\nlatest_time_catch_the_bus(Buses, Passengers, Capacity) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec latest_time_catch_the_bus(buses :: [integer], passengers :: [integer], capacity :: integer) :: integer\n  def latest_time_catch_the_bus(buses, passengers, capacity) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "buses": [
+          10,
+          20
+        ],
+        "passengers": [
+          2,
+          17,
+          18,
+          19
+        ],
+        "capacity": 2
+      },
+      "expected": 16
+    },
+    {
+      "args": {
+        "buses": [
+          20,
+          30,
+          10
+        ],
+        "passengers": [
+          19,
+          13,
+          26,
+          4,
+          25,
+          11,
+          21
+        ],
+        "capacity": 2
+      },
+      "expected": 20
+    }
+  ]
 }

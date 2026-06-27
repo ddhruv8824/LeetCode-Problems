@@ -63,5 +63,12 @@
     "golang": "/**\n * Definition for a Node.\n * type Node struct {\n *     Val int\n *     Neighbors []*Node\n * }\n */\n\nfunc cloneGraph(node *Node) *Node {\n    \n}",
     "ruby": "# Definition for a Node.\n# class Node\n#     attr_accessor :val, :neighbors\n#     def initialize(val = 0, neighbors = nil)\n#\t\t  @val = val\n#\t\t  neighbors = [] if neighbors.nil?\n#         @neighbors = neighbors\n#     end\n# end\n\n# @param {Node} node\n# @return {Node}\ndef cloneGraph(node)\n    \nend",
     "scala": "/**\n * Definition for a Node.\n * class Node(var _value: Int) {\n *   var value: Int = _value\n *   var neighbors: List[Node] = List()\n * }\n */\n\nobject Solution {\n    def cloneGraph(graph: Node): Node = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "graph": "{0,1,2#1,2#2,2}"
+      }
+    }
+  ]
 }

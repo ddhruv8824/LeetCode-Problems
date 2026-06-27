@@ -55,5 +55,43 @@
     "racket": "(define/contract (car-pooling trips capacity)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
     "erlang": "-spec car_pooling(Trips :: [[integer()]], Capacity :: integer()) -> boolean().\ncar_pooling(Trips, Capacity) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec car_pooling(trips :: [[integer]], capacity :: integer) :: boolean\n  def car_pooling(trips, capacity) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "trips": [
+          [
+            2,
+            1,
+            5
+          ],
+          [
+            3,
+            3,
+            7
+          ]
+        ],
+        "capacity": 4
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "trips": [
+          [
+            2,
+            1,
+            5
+          ],
+          [
+            3,
+            3,
+            7
+          ]
+        ],
+        "capacity": 5
+      },
+      "expected": true
+    }
+  ]
 }

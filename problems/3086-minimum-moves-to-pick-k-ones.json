@@ -56,5 +56,39 @@
     "racket": "(define/contract (minimum-moves nums k maxChanges)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_moves(Nums :: [integer()], K :: integer(), MaxChanges :: integer()) -> integer().\nminimum_moves(Nums, K, MaxChanges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_moves(nums :: [integer], k :: integer, max_changes :: integer) :: integer\n  def minimum_moves(nums, k, max_changes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "k": 3,
+        "maxChanges": 1
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "k": 2,
+        "maxChanges": 3
+      },
+      "expected": 4
+    }
+  ]
 }

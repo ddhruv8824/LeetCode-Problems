@@ -52,5 +52,25 @@
     "racket": "(define/contract (smallest-good-base n)\n  (-> string? string?)\n  )",
     "erlang": "-spec smallest_good_base(N :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_good_base(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_good_base(n :: String.t) :: String.t\n  def smallest_good_base(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": "13"
+      },
+      "expected": "3"
+    },
+    {
+      "args": {
+        "n": "4681"
+      },
+      "expected": "8"
+    },
+    {
+      "args": {
+        "n": "1000000000000000000"
+      },
+      "expected": "999999999999999999"
+    }
+  ]
 }

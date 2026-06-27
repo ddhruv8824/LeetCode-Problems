@@ -56,5 +56,19 @@
     "racket": "(define/contract (minimum-pushes word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec minimum_pushes(Word :: unicode:unicode_binary()) -> integer().\nminimum_pushes(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_pushes(word :: String.t) :: integer\n  def minimum_pushes(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "abcde"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "word": "xycdefghij"
+      },
+      "expected": 12
+    }
+  ]
 }

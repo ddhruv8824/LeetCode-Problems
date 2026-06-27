@@ -54,5 +54,29 @@
     "racket": "(define/contract (count-range-sum nums lower upper)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_range_sum(Nums :: [integer()], Lower :: integer(), Upper :: integer()) -> integer().\ncount_range_sum(Nums, Lower, Upper) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_range_sum(nums :: [integer], lower :: integer, upper :: integer) :: integer\n  def count_range_sum(nums, lower, upper) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          -2,
+          5,
+          -1
+        ],
+        "lower": -2,
+        "upper": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          0
+        ],
+        "lower": 0,
+        "upper": 0
+      },
+      "expected": 1
+    }
+  ]
 }

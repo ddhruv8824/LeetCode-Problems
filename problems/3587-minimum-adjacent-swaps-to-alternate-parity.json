@@ -65,5 +65,51 @@
     "racket": "(define/contract (min-swaps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_swaps(Nums :: [integer()]) -> integer().\nmin_swaps(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_swaps(nums :: [integer]) :: integer\n  def min_swaps(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          6,
+          5,
+          7
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          5,
+          7
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

@@ -53,5 +53,23 @@
     "racket": "(define/contract (count-numbers l r b)\n  (-> string? string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_numbers(L :: unicode:unicode_binary(), R :: unicode:unicode_binary(), B :: integer()) -> integer().\ncount_numbers(L, R, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_numbers(l :: String.t, r :: String.t, b :: integer) :: integer\n  def count_numbers(l, r, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "l": "23",
+        "r": "28",
+        "b": 8
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "l": "2",
+        "r": "7",
+        "b": 2
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -50,5 +50,19 @@
     "racket": "(define/contract (check-ones-segment s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec check_ones_segment(S :: unicode:unicode_binary()) -> boolean().\ncheck_ones_segment(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_ones_segment(s :: String.t) :: boolean\n  def check_ones_segment(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "1001"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "110"
+      },
+      "expected": true
+    }
+  ]
 }

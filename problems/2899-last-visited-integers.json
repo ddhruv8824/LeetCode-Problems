@@ -49,5 +49,39 @@
     "racket": "(define/contract (last-visited-integers nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec last_visited_integers(Nums :: [integer()]) -> [integer()].\nlast_visited_integers(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec last_visited_integers(nums :: [integer]) :: [integer]\n  def last_visited_integers(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "expected": [
+        2,
+        1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          -1,
+          2,
+          -1,
+          -1
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        1
+      ]
+    }
+  ]
 }

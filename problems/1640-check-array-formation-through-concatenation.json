@@ -59,5 +59,64 @@
     "racket": "(define/contract (can-form-array arr pieces)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec can_form_array(Arr :: [integer()], Pieces :: [[integer()]]) -> boolean().\ncan_form_array(Arr, Pieces) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_form_array(arr :: [integer], pieces :: [[integer]]) :: boolean\n  def can_form_array(arr, pieces) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          15,
+          88
+        ],
+        "pieces": [
+          [
+            88
+          ],
+          [
+            15
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "arr": [
+          49,
+          18,
+          16
+        ],
+        "pieces": [
+          [
+            16,
+            18,
+            49
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "arr": [
+          91,
+          4,
+          64,
+          78
+        ],
+        "pieces": [
+          [
+            78
+          ],
+          [
+            4,
+            64
+          ],
+          [
+            91
+          ]
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

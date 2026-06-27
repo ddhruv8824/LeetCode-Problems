@@ -50,5 +50,57 @@
     "racket": "(define/contract (prison-after-n-days cells n)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec prison_after_n_days(Cells :: [integer()], N :: integer()) -> [integer()].\nprison_after_n_days(Cells, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec prison_after_n_days(cells :: [integer], n :: integer) :: [integer]\n  def prison_after_n_days(cells, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cells": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "n": 7
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "args": {
+        "cells": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "n": 1000000000
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  ]
 }

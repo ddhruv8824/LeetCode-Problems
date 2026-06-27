@@ -54,5 +54,33 @@
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec is_unival_tree(Root :: #tree_node{} | null) -> boolean().\nis_unival_tree(Root) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec is_unival_tree(root :: TreeNode.t | nil) :: boolean\n  def is_unival_tree(root) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Depth-First Search\n\n**Intuition and Algorithm**\n\nLet's output all the values of the array.  After, we can check that they are all equal.\n\nTo output all the values of the array, we perform a depth-first search.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Recursion\n\n**Intuition and Algorithm**\n\nA tree is univalued if both its children are univalued, plus the root node has the same value as the child nodes.\n\nWe can write our function recursively.  `left_correct` will represent that the left child is correct: ie., that it is univalued, and the root value is equal to the left child's value.  `right_correct` will represent the same thing for the right child.  We need both of these properties to be true.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Depth-First Search\n\n**Intuition and Algorithm**\n\nLet's output all the values of the array.  After, we can check that they are all equal.\n\nTo output all the values of the array, we perform a depth-first search.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Recursion\n\n**Intuition and Algorithm**\n\nA tree is univalued if both its children are univalued, plus the root node has the same value as the child nodes.\n\nWe can write our function recursively.  `left_correct` will represent that the left child is correct: ie., that it is univalued, and the root value is equal to the left child's value.  `right_correct` will represent the same thing for the right child.  We need both of these properties to be true.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the number of nodes in the given tree.\n\n* Space Complexity:  $$O(H)$$, where $$H$$ is the height of the given tree.",
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "root": [
+          2,
+          2,
+          2,
+          5,
+          2
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

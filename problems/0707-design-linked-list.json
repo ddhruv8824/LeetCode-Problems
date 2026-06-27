@@ -43,5 +43,49 @@
     "racket": "(define my-linked-list%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; get : exact-integer? -> exact-integer?\n    (define/public (get index)\n      )\n    ; add-at-head : exact-integer? -> void?\n    (define/public (add-at-head val)\n      )\n    ; add-at-tail : exact-integer? -> void?\n    (define/public (add-at-tail val)\n      )\n    ; add-at-index : exact-integer? exact-integer? -> void?\n    (define/public (add-at-index index val)\n      )\n    ; delete-at-index : exact-integer? -> void?\n    (define/public (delete-at-index index)\n      )))\n\n;; Your my-linked-list% object will be instantiated and called as such:\n;; (define obj (new my-linked-list%))\n;; (define param_1 (send obj get index))\n;; (send obj add-at-head val)\n;; (send obj add-at-tail val)\n;; (send obj add-at-index index val)\n;; (send obj delete-at-index index)",
     "erlang": "-spec my_linked_list_init_() -> any().\nmy_linked_list_init_() ->\n  .\n\n-spec my_linked_list_get(Index :: integer()) -> integer().\nmy_linked_list_get(Index) ->\n  .\n\n-spec my_linked_list_add_at_head(Val :: integer()) -> any().\nmy_linked_list_add_at_head(Val) ->\n  .\n\n-spec my_linked_list_add_at_tail(Val :: integer()) -> any().\nmy_linked_list_add_at_tail(Val) ->\n  .\n\n-spec my_linked_list_add_at_index(Index :: integer(), Val :: integer()) -> any().\nmy_linked_list_add_at_index(Index, Val) ->\n  .\n\n-spec my_linked_list_delete_at_index(Index :: integer()) -> any().\nmy_linked_list_delete_at_index(Index) ->\n  .\n\n\n%% Your functions will be called as such:\n%% my_linked_list_init_(),\n%% Param_1 = my_linked_list_get(Index),\n%% my_linked_list_add_at_head(Val),\n%% my_linked_list_add_at_tail(Val),\n%% my_linked_list_add_at_index(Index, Val),\n%% my_linked_list_delete_at_index(Index),\n\n%% my_linked_list_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MyLinkedList do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec get(index :: integer) :: integer\n  def get(index) do\n    \n  end\n\n  @spec add_at_head(val :: integer) :: any\n  def add_at_head(val) do\n    \n  end\n\n  @spec add_at_tail(val :: integer) :: any\n  def add_at_tail(val) do\n    \n  end\n\n  @spec add_at_index(index :: integer, val :: integer) :: any\n  def add_at_index(index, val) do\n    \n  end\n\n  @spec delete_at_index(index :: integer) :: any\n  def delete_at_index(index) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MyLinkedList.init_()\n# param_1 = MyLinkedList.get(index)\n# MyLinkedList.add_at_head(val)\n# MyLinkedList.add_at_tail(val)\n# MyLinkedList.add_at_index(index, val)\n# MyLinkedList.delete_at_index(index)\n\n# MyLinkedList.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MyLinkedList",
+        "addAtHead",
+        "addAtTail",
+        "addAtIndex",
+        "get",
+        "deleteAtIndex",
+        "get"
+      ],
+      "args": [
+        [],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        2,
+        null,
+        3
+      ]
+    }
+  ]
 }

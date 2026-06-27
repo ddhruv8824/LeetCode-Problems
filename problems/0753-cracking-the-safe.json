@@ -51,5 +51,19 @@
     "racket": "(define/contract (crack-safe n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec crack_safe(N :: integer(), K :: integer()) -> unicode:unicode_binary().\ncrack_safe(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec crack_safe(n :: integer, k :: integer) :: String.t\n  def crack_safe(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1,
+        "k": 2
+      }
+    },
+    {
+      "args": {
+        "n": 2,
+        "k": 2
+      }
+    }
+  ]
 }

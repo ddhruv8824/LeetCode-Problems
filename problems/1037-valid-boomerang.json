@@ -51,5 +51,102 @@
     "racket": "(define/contract (is-boomerang points)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec is_boomerang(Points :: [[integer()]]) -> boolean().\nis_boomerang(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_boomerang(points :: [[integer]]) :: boolean\n  def is_boomerang(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "points": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

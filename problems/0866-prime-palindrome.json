@@ -51,5 +51,25 @@
     "racket": "(define/contract (prime-palindrome n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec prime_palindrome(N :: integer()) -> integer().\nprime_palindrome(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec prime_palindrome(n :: integer) :: integer\n  def prime_palindrome(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 6
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "n": 8
+      },
+      "expected": 11
+    },
+    {
+      "args": {
+        "n": 13
+      },
+      "expected": 101
+    }
+  ]
 }

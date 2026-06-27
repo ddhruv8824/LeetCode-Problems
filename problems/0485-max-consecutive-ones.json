@@ -48,5 +48,20 @@
     "racket": "(define/contract (find-max-consecutive-ones nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_max_consecutive_ones(Nums :: [integer()]) -> integer().\nfind_max_consecutive_ones(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_max_consecutive_ones(nums :: [integer]) :: integer\n  def find_max_consecutive_ones(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

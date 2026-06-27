@@ -56,5 +56,49 @@
     "racket": "(define/contract (most-frequent-even nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec most_frequent_even(Nums :: [integer()]) -> integer().\nmost_frequent_even(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec most_frequent_even(nums :: [integer]) :: integer\n  def most_frequent_even(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          2,
+          2,
+          4,
+          4,
+          1
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          4,
+          4,
+          9,
+          2,
+          4
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          29,
+          47,
+          21,
+          41,
+          13,
+          37,
+          25,
+          7
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

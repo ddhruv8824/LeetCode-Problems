@@ -54,5 +54,50 @@
     "racket": "(define/contract (max-dot-product nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_dot_product(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmax_dot_product(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_dot_product(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def max_dot_product(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          2,
+          1,
+          -2,
+          5
+        ],
+        "nums2": [
+          3,
+          0,
+          -6
+        ]
+      },
+      "expected": 18
+    },
+    {
+      "args": {
+        "nums1": [
+          3,
+          -2
+        ],
+        "nums2": [
+          2,
+          -6,
+          7
+        ]
+      },
+      "expected": 21
+    },
+    {
+      "args": {
+        "nums1": [
+          -1,
+          -1
+        ],
+        "nums2": [
+          1,
+          1
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

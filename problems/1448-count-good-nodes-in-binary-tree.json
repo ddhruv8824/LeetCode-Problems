@@ -58,5 +58,41 @@
     "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @return {Integer}\ndef good_nodes(root)\n    \nend",
     "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def goodNodes(root: TreeNode): Int = {\n        \n    }\n}",
     "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn good_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          3,
+          1,
+          4,
+          3,
+          null,
+          1,
+          5
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "root": [
+          3,
+          3,
+          null,
+          4,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "root": [
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

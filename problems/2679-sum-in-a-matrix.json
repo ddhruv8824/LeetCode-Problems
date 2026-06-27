@@ -54,5 +54,44 @@
     "racket": "(define/contract (matrix-sum nums)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec matrix_sum(Nums :: [[integer()]]) -> integer().\nmatrix_sum(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec matrix_sum(nums :: [[integer]]) :: integer\n  def matrix_sum(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          [
+            7,
+            2,
+            1
+          ],
+          [
+            6,
+            4,
+            2
+          ],
+          [
+            6,
+            5,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "nums": [
+          [
+            1
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

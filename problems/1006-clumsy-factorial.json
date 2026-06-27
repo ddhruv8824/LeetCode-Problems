@@ -47,5 +47,19 @@
     "racket": "(define/contract (clumsy n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec clumsy(N :: integer()) -> integer().\nclumsy(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec clumsy(n :: integer) :: integer\n  def clumsy(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 12
+    }
+  ]
 }

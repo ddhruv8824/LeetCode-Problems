@@ -50,5 +50,19 @@
     "scala": "object Solution {\n    def sortSentence(s: String): String = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn sort_sentence(s: String) -> String {\n        \n    }\n}",
     "racket": "(define/contract (sort-sentence s)\n  (-> string? string?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "is2 sentence4 This1 a3"
+      },
+      "expected": "This is a sentence"
+    },
+    {
+      "args": {
+        "s": "Myself2 Me1 I4 and3"
+      },
+      "expected": "Me Myself and I"
+    }
+  ]
 }

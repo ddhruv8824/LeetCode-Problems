@@ -53,5 +53,34 @@
     "racket": "(define/contract (largest-triangle-area points)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
     "erlang": "-spec largest_triangle_area(Points :: [[integer()]]) -> float().\nlargest_triangle_area(Points) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_triangle_area(points :: [[integer]]) :: float\n  def largest_triangle_area(points) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

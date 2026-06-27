@@ -63,5 +63,99 @@
     "racket": "(define/contract (grid-illumination n lamps queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec grid_illumination(N :: integer(), Lamps :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\ngrid_illumination(N, Lamps, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec grid_illumination(n :: integer, lamps :: [[integer]], queries :: [[integer]]) :: [integer]\n  def grid_illumination(n, lamps, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "lamps": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "queries": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "lamps": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "queries": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "n": 5,
+        "lamps": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "queries": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
 }

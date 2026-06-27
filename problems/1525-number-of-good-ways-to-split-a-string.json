@@ -51,5 +51,19 @@
     "racket": "(define/contract (num-splits s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec num_splits(S :: unicode:unicode_binary()) -> integer().\nnum_splits(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_splits(s :: String.t) :: integer\n  def num_splits(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aacaba"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abcd"
+      },
+      "expected": 1
+    }
+  ]
 }

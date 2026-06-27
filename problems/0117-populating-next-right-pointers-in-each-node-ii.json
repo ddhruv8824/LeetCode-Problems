@@ -54,5 +54,62 @@
     "golang": "/**\n * Definition for a Node.\n * type Node struct {\n *     Val int\n *     Left *Node\n *     Right *Node\n *     Next *Node\n * }\n */\n\nfunc connect(root *Node) *Node {\n\t\n}",
     "ruby": "# Definition for a Node.\n# class Node\n#     attr_accessor :val, :left, :right, :next\n#     def initialize(val)\n#         @val = val\n#         @left, @right, @next = nil, nil, nil\n#     end\n# end\n\n# @param {Node} root\n# @return {Node}\ndef connect(root)\n    \nend",
     "scala": "/**\n * Definition for a Node.\n * class Node(var _value: Int) {\n *   var value: Int = _value\n *   var left: Node = null\n *   var right: Node = null\n *   var next: Node = null\n * }\n */\n\nobject Solution {\n    def connect(root: Node): Node = {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4,
+        5,
+        6,
+        7,
+        null
+      ]
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          null,
+          7
+        ]
+      },
+      "expected": [
+        1,
+        null,
+        2,
+        3,
+        null,
+        4,
+        5,
+        7,
+        null
+      ]
+    },
+    {
+      "args": {
+        "root": []
+      },
+      "expected": []
+    }
+  ]
 }

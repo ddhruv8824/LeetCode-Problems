@@ -54,5 +54,69 @@
     "racket": "(define/contract (modified-matrix matrix)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
     "erlang": "-spec modified_matrix(Matrix :: [[integer()]]) -> [[integer()]].\nmodified_matrix(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec modified_matrix(matrix :: [[integer]]) :: [[integer]]\n  def modified_matrix(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            1,
+            2,
+            -1
+          ],
+          [
+            4,
+            -1,
+            6
+          ],
+          [
+            7,
+            8,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        [
+          1,
+          2,
+          9
+        ],
+        [
+          4,
+          8,
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            3,
+            -1
+          ],
+          [
+            5,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    }
+  ]
 }

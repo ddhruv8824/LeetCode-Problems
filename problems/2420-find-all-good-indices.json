@@ -53,5 +53,37 @@
     "racket": "(define/contract (good-indices nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec good_indices(Nums :: [integer()], K :: integer()) -> [integer()].\ngood_indices(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec good_indices(nums :: [integer], k :: integer) :: [integer]\n  def good_indices(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          1,
+          1,
+          3,
+          4,
+          1
+        ],
+        "k": 2
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "k": 2
+      },
+      "expected": []
+    }
+  ]
 }

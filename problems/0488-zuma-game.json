@@ -57,5 +57,28 @@
     "racket": "(define/contract (find-min-step board hand)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec find_min_step(Board :: unicode:unicode_binary(), Hand :: unicode:unicode_binary()) -> integer().\nfind_min_step(Board, Hand) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_min_step(board :: String.t, hand :: String.t) :: integer\n  def find_min_step(board, hand) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": "WRRBBW",
+        "hand": "RB"
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "board": "WWRRBBWW",
+        "hand": "WRBRW"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "board": "G",
+        "hand": "GGGGG"
+      },
+      "expected": 2
+    }
+  ]
 }

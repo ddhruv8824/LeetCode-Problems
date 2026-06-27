@@ -55,5 +55,58 @@
     "racket": "(define/contract (largest-number cost target)\n  (-> (listof exact-integer?) exact-integer? string?)\n  )",
     "erlang": "-spec largest_number(Cost :: [integer()], Target :: integer()) -> unicode:unicode_binary().\nlargest_number(Cost, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_number(cost :: [integer], target :: integer) :: String.t\n  def largest_number(cost, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cost": [
+          4,
+          3,
+          2,
+          5,
+          6,
+          7,
+          2,
+          5,
+          5
+        ],
+        "target": 9
+      },
+      "expected": "7772"
+    },
+    {
+      "args": {
+        "cost": [
+          7,
+          6,
+          5,
+          5,
+          5,
+          6,
+          8,
+          7,
+          8
+        ],
+        "target": 12
+      },
+      "expected": "85"
+    },
+    {
+      "args": {
+        "cost": [
+          2,
+          4,
+          6,
+          2,
+          4,
+          6,
+          4,
+          4,
+          4
+        ],
+        "target": 5
+      },
+      "expected": "0"
+    }
+  ]
 }

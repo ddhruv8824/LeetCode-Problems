@@ -48,5 +48,19 @@
     "erlang": "-spec judge_circle(Moves :: unicode:unicode_binary()) -> boolean().\njudge_circle(Moves) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec judge_circle(moves :: String.t) :: boolean\n  def judge_circle(moves) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Simulation [Accepted]\n\n**Intuition**\n\nWe can simulate the position of the robot after each command.\n\n**Algorithm**\n\nInitially, the robot is at `(x, y) = (0, 0)`. If the move is `'U'`, the robot goes to `(x, y - 1)`; if the move is `'R'`, the robot goes to `(x, y) = (x + 1, y)`, and so on.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `moves`. We iterate through the string.\n\n* Space Complexity: $$O(1)$$. In Java, our character array is $$O(N)$$."
+  "solution": "[TOC]\n\n---\n### Approach #1: Simulation [Accepted]\n\n**Intuition**\n\nWe can simulate the position of the robot after each command.\n\n**Algorithm**\n\nInitially, the robot is at `(x, y) = (0, 0)`. If the move is `'U'`, the robot goes to `(x, y - 1)`; if the move is `'R'`, the robot goes to `(x, y) = (x + 1, y)`, and so on.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `moves`. We iterate through the string.\n\n* Space Complexity: $$O(1)$$. In Java, our character array is $$O(N)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "moves": "UD"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "moves": "LL"
+      },
+      "expected": false
+    }
+  ]
 }

@@ -57,5 +57,45 @@
     "racket": "(define/contract (get-min-dist-sum positions)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
     "erlang": "-spec get_min_dist_sum(Positions :: [[integer()]]) -> float().\nget_min_dist_sum(Positions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_min_dist_sum(positions :: [[integer]]) :: float\n  def get_min_dist_sum(positions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "positions": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "positions": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "expected": 2.82843
+    }
+  ]
 }

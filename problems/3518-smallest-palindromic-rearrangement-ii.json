@@ -63,5 +63,28 @@
     "racket": "(define/contract (smallest-palindrome s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec smallest_palindrome(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nsmallest_palindrome(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_palindrome(s :: String.t, k :: integer) :: String.t\n  def smallest_palindrome(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abba",
+        "k": 2
+      },
+      "expected": "baab"
+    },
+    {
+      "args": {
+        "s": "aa",
+        "k": 2
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "bacab",
+        "k": 1
+      },
+      "expected": "abcba"
+    }
+  ]
 }

@@ -62,5 +62,36 @@
     "racket": "(define/contract (rank-teams votes)\n  (-> (listof string?) string?)\n  )",
     "erlang": "-spec rank_teams(Votes :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nrank_teams(Votes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec rank_teams(votes :: [String.t]) :: String.t\n  def rank_teams(votes) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "votes": [
+          "ABC",
+          "ACB",
+          "ABC",
+          "ACB",
+          "ACB"
+        ]
+      },
+      "expected": "ACB"
+    },
+    {
+      "args": {
+        "votes": [
+          "WXYZ",
+          "XYZW"
+        ]
+      },
+      "expected": "XWYZ"
+    },
+    {
+      "args": {
+        "votes": [
+          "ZMNAGUEDSJYLBOPHRQICWFXTVK"
+        ]
+      },
+      "expected": "ZMNAGUEDSJYLBOPHRQICWFXTVK"
+    }
+  ]
 }

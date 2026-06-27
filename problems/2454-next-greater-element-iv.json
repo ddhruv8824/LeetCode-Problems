@@ -55,5 +55,37 @@
     "racket": "(define/contract (second-greater-element nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec second_greater_element(Nums :: [integer()]) -> [integer()].\nsecond_greater_element(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec second_greater_element(nums :: [integer]) :: [integer]\n  def second_greater_element(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4,
+          0,
+          9,
+          6
+        ]
+      },
+      "expected": [
+        9,
+        6,
+        6,
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          3
+        ]
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    }
+  ]
 }

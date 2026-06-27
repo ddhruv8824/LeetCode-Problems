@@ -67,5 +67,80 @@
     "racket": "(define/contract (reachable-nodes n edges restricted)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec reachable_nodes(N :: integer(), Edges :: [[integer()]], Restricted :: [integer()]) -> integer().\nreachable_nodes(N, Edges, Restricted) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reachable_nodes(n :: integer, edges :: [[integer]], restricted :: [integer]) :: integer\n  def reachable_nodes(n, edges, restricted) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "restricted": [
+          4,
+          5
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "restricted": [
+          4,
+          2,
+          1
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

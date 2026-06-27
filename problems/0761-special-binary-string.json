@@ -50,5 +50,19 @@
     "racket": "(define/contract (make-largest-special s)\n  (-> string? string?)\n  )",
     "erlang": "-spec make_largest_special(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_largest_special(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec make_largest_special(s :: String.t) :: String.t\n  def make_largest_special(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "11011000"
+      },
+      "expected": "11100100"
+    },
+    {
+      "args": {
+        "s": "10"
+      },
+      "expected": "10"
+    }
+  ]
 }

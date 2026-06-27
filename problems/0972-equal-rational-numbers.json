@@ -56,5 +56,28 @@
     "erlang": "-spec is_rational_equal(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_rational_equal(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_rational_equal(s :: String.t, t :: String.t) :: boolean\n  def is_rational_equal(s, t) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Fraction Class\n\n**Intuition**\n\nAs both numbers represent a fraction, we need a fraction class to handle fractions.  It should help us add two fractions together, keeping the answer in lowest terms.\n\n**Algorithm**\n\nWe need to make sense of the fraction we are given.  The hard part is the repeating part.\n\nSay we have a string like `S = \"0.(12)\"`.  It represents (for $$r = \\frac{1}{100}$$):\n\n$$\nS = \\frac{12}{100} + \\frac{12}{10000} + \\frac{12}{10^6} + \\frac{12}{10^8} + \\frac{12}{10^{10}} + \\cdots\n$$\n\n$$\nS = 12 * (r + r^2 + r^3 + \\cdots)\n$$\n\n$$\nS = 12 * \\frac{r}{1-r}\n$$\n\nas the sum $$(r + r^2 + r^3 + \\cdots)$$ is a geometric sum.\n\nIn general, for a repeating part $$x$$ with length $$k$$, we have $$r = 10^{-k}$$ and the contribution is $$\\frac{xr}{1-r}$$.\n\nThe other two parts are easier, as it is just a literal interpretation of the value.**Complexity Analysis**\n\n* Time Complexity:  $$O(1)$$, if we take the length of $$S, T$$ as $$O(1)$$.\n\n* Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Fraction Class\n\n**Intuition**\n\nAs both numbers represent a fraction, we need a fraction class to handle fractions.  It should help us add two fractions together, keeping the answer in lowest terms.\n\n**Algorithm**\n\nWe need to make sense of the fraction we are given.  The hard part is the repeating part.\n\nSay we have a string like `S = \"0.(12)\"`.  It represents (for $$r = \\frac{1}{100}$$):\n\n$$\nS = \\frac{12}{100} + \\frac{12}{10000} + \\frac{12}{10^6} + \\frac{12}{10^8} + \\frac{12}{10^{10}} + \\cdots\n$$\n\n$$\nS = 12 * (r + r^2 + r^3 + \\cdots)\n$$\n\n$$\nS = 12 * \\frac{r}{1-r}\n$$\n\nas the sum $$(r + r^2 + r^3 + \\cdots)$$ is a geometric sum.\n\nIn general, for a repeating part $$x$$ with length $$k$$, we have $$r = 10^{-k}$$ and the contribution is $$\\frac{xr}{1-r}$$.\n\nThe other two parts are easier, as it is just a literal interpretation of the value.**Complexity Analysis**\n\n* Time Complexity:  $$O(1)$$, if we take the length of $$S, T$$ as $$O(1)$$.\n\n* Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "0.(52)",
+        "t": "0.5(25)"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "0.1666(6)",
+        "t": "0.166(66)"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "0.9(9)",
+        "t": "1."
+      },
+      "expected": true
+    }
+  ]
 }

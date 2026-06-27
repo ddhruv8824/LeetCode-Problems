@@ -68,5 +68,69 @@
     "racket": "(define/contract (network-delay-time times n k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer?)\n\n  )",
     "erlang": "-spec network_delay_time(Times :: [[integer()]], N :: integer(), K :: integer()) -> integer().\nnetwork_delay_time(Times, N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec network_delay_time(times :: [[integer]], n :: integer, k :: integer) :: integer\n  def network_delay_time(times, n, k) do\n\n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "times": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        "n": 4,
+        "k": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "times": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ]
+        ],
+        "n": 3,
+        "k": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "times": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "n": 2,
+        "k": 2
+      },
+      "expected": -1
+    }
+  ]
 }

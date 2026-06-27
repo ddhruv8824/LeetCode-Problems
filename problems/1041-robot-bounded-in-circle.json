@@ -56,5 +56,25 @@
     "racket": "(define/contract (is-robot-bounded instructions)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_robot_bounded(Instructions :: unicode:unicode_binary()) -> boolean().\nis_robot_bounded(Instructions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_robot_bounded(instructions :: String.t) :: boolean\n  def is_robot_bounded(instructions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "instructions": "GGLLGG"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "instructions": "GG"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "instructions": "GL"
+      },
+      "expected": true
+    }
+  ]
 }

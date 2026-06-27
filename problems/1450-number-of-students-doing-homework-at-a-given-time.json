@@ -51,5 +51,35 @@
     "racket": "(define/contract (busy-student startTime endTime queryTime)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec busy_student(StartTime :: [integer()], EndTime :: [integer()], QueryTime :: integer()) -> integer().\nbusy_student(StartTime, EndTime, QueryTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec busy_student(start_time :: [integer], end_time :: [integer], query_time :: integer) :: integer\n  def busy_student(start_time, end_time, query_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "startTime": [
+          1,
+          2,
+          3
+        ],
+        "endTime": [
+          3,
+          2,
+          7
+        ],
+        "queryTime": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "startTime": [
+          4
+        ],
+        "endTime": [
+          4
+        ],
+        "queryTime": 4
+      },
+      "expected": 1
+    }
+  ]
 }

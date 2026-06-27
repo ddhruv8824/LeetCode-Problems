@@ -67,5 +67,25 @@
     "racket": "(define/contract (length-longest-path input)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec length_longest_path(Input :: unicode:unicode_binary()) -> integer().\nlength_longest_path(Input) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_longest_path(input :: String.t) :: integer\n  def length_longest_path(input) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "input": "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "input": "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "input": "a"
+      },
+      "expected": 0
+    }
+  ]
 }

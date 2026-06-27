@@ -52,5 +52,25 @@
     "racket": "(define/contract (num-decodings s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec num_decodings(S :: unicode:unicode_binary()) -> integer().\nnum_decodings(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_decodings(s :: String.t) :: integer\n  def num_decodings(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "12"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "226"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "s": "101"
+      },
+      "expected": 1
+    }
+  ]
 }

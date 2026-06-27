@@ -54,5 +54,37 @@
     "racket": "(define/contract (shortest-substrings arr)\n  (-> (listof string?) (listof string?))\n  )",
     "erlang": "-spec shortest_substrings(Arr :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nshortest_substrings(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_substrings(arr :: [String.t]) :: [String.t]\n  def shortest_substrings(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          "cab",
+          "ad",
+          "bad",
+          "c"
+        ]
+      },
+      "expected": [
+        "ab",
+        "",
+        "ba",
+        ""
+      ]
+    },
+    {
+      "args": {
+        "arr": [
+          "abc",
+          "bcd",
+          "abcd"
+        ]
+      },
+      "expected": [
+        "",
+        "",
+        "abcd"
+      ]
+    }
+  ]
 }

@@ -65,5 +65,75 @@
     "racket": "(define/contract (is-possible n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec is_possible(N :: integer(), Edges :: [[integer()]]) -> boolean().\nis_possible(N, Edges) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_possible(n :: integer, edges :: [[integer]]) :: boolean\n  def is_possible(n, edges) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 4,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

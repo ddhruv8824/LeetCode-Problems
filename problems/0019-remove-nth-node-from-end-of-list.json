@@ -64,5 +64,46 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (remove-nth-from-end head n)\n  (-> (or/c list-node? #f) exact-integer? (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec remove_nth_from_end(Head :: #list_node{} | null, N :: integer()) -> #list_node{} | null.\nremove_nth_from_end(Head, N) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec remove_nth_from_end(head :: ListNode.t | nil, n :: integer) :: ListNode.t | nil\n  def remove_nth_from_end(head, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n": 2
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1
+        ],
+        "n": 1
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          2
+        ],
+        "n": 1
+      },
+      "expected": [
+        1
+      ]
+    }
+  ]
 }

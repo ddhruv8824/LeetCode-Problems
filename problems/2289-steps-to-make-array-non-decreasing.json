@@ -53,5 +53,37 @@
     "racket": "(define/contract (total-steps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec total_steps(Nums :: [integer()]) -> integer().\ntotal_steps(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec total_steps(nums :: [integer]) :: integer\n  def total_steps(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          3,
+          4,
+          4,
+          7,
+          3,
+          6,
+          11,
+          8,
+          5,
+          11
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          5,
+          7,
+          7,
+          13
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -59,5 +59,61 @@
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (is-balanced root)\n  (-> (or/c tree-node? #f) boolean?)\n  )",
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec is_balanced(Root :: #tree_node{} | null) -> boolean().\nis_balanced(Root) ->\n  .",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec is_balanced(root :: TreeNode.t | nil) :: boolean\n  def is_balanced(root) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          null,
+          null,
+          null,
+          5
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "root": [
+          1,
+          2,
+          3,
+          4,
+          null,
+          null,
+          5,
+          6,
+          null,
+          null,
+          7
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

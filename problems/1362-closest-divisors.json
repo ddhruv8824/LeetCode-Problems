@@ -53,5 +53,34 @@
     "racket": "(define/contract (closest-divisors num)\n  (-> exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec closest_divisors(Num :: integer()) -> [integer()].\nclosest_divisors(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec closest_divisors(num :: integer) :: [integer]\n  def closest_divisors(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 8
+      },
+      "expected": [
+        3,
+        3
+      ]
+    },
+    {
+      "args": {
+        "num": 123
+      },
+      "expected": [
+        5,
+        25
+      ]
+    },
+    {
+      "args": {
+        "num": 999
+      },
+      "expected": [
+        40,
+        25
+      ]
+    }
+  ]
 }

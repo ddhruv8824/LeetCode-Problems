@@ -64,5 +64,44 @@
     "racket": "(define/contract (closest-to-target arr target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec closest_to_target(Arr :: [integer()], Target :: integer()) -> integer().\nclosest_to_target(Arr, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec closest_to_target(arr :: [integer], target :: integer) :: integer\n  def closest_to_target(arr, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          9,
+          12,
+          3,
+          7,
+          15
+        ],
+        "target": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "arr": [
+          1000000,
+          1000000,
+          1000000
+        ],
+        "target": 1
+      },
+      "expected": 999999
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "target": 0
+      },
+      "expected": 0
+    }
+  ]
 }

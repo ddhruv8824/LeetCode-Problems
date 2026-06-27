@@ -55,5 +55,46 @@
     "erlang": "-spec repeated_n_times(Nums :: [integer()]) -> integer().\nrepeated_n_times(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec repeated_n_times(nums :: [integer]) :: integer\n  def repeated_n_times(nums) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Count\n\n**Intuition and Algorithm**\n\nLet's count the number of elements.  We can use a `HashMap` or an array - here, we use a `HashMap`.\n\nAfter, the element with a count larger than 1 must be the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Compare\n\n**Intuition and Algorithm**\n\nIf we ever find a repeated element, it must be the answer.  Let's call this answer the *major element*.\n\nConsider all subarrays of length 4.  There must be a major element in at least one such subarray.\n\nThis is because either:\n\n* There is a major element in a length 2 subarray, or;\n* Every length 2 subarray has exactly 1 major element, which means that a length 4 subarray that begins at a major element will have 2 major elements.\n\nThus, we only have to compare elements with their neighbors that are distance 1, 2, or 3 away.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Count\n\n**Intuition and Algorithm**\n\nLet's count the number of elements.  We can use a `HashMap` or an array - here, we use a `HashMap`.\n\nAfter, the element with a count larger than 1 must be the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Compare\n\n**Intuition and Algorithm**\n\nIf we ever find a repeated element, it must be the answer.  Let's call this answer the *major element*.\n\nConsider all subarrays of length 4.  There must be a major element in at least one such subarray.\n\nThis is because either:\n\n* There is a major element in a length 2 subarray, or;\n* Every length 2 subarray has exactly 1 major element, which means that a length 4 subarray that begins at a major element will have 2 major elements.\n\nThus, we only have to compare elements with their neighbors that are distance 1, 2, or 3 away.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$.",
+  "test_cases": [
+    {
+      "args": {
+        "a": [
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": [
+          2,
+          1,
+          2,
+          5,
+          3,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "a": [
+          5,
+          1,
+          5,
+          2,
+          5,
+          3,
+          5,
+          4
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

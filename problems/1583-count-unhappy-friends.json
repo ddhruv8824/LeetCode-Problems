@@ -64,5 +64,103 @@
     "racket": "(define/contract (unhappy-friends n preferences pairs)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec unhappy_friends(N :: integer(), Preferences :: [[integer()]], Pairs :: [[integer()]]) -> integer().\nunhappy_friends(N, Preferences, Pairs) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec unhappy_friends(n :: integer, preferences :: [[integer]], pairs :: [[integer]]) :: integer\n  def unhappy_friends(n, preferences, pairs) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4,
+        "preferences": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 2,
+        "preferences": [
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "pairs": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 4,
+        "preferences": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "pairs": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

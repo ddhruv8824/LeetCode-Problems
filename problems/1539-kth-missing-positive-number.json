@@ -51,5 +51,32 @@
     "racket": "(define/contract (find-kth-positive arr k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_kth_positive(Arr :: [integer()], K :: integer()) -> integer().\nfind_kth_positive(Arr, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_kth_positive(arr :: [integer], k :: integer) :: integer\n  def find_kth_positive(arr, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          2,
+          3,
+          4,
+          7,
+          11
+        ],
+        "k": 5
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "k": 2
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -48,5 +48,42 @@
     "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef largest1_bordered_square(grid)\n    \nend",
     "scala": "object Solution {\n    def largest1BorderedSquare(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn largest1_bordered_square(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

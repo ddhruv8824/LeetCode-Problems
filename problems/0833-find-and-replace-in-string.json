@@ -58,5 +58,43 @@
     "racket": "(define/contract (find-replace-string s indices sources targets)\n  (-> string? (listof exact-integer?) (listof string?) (listof string?) string?)\n  )",
     "erlang": "-spec find_replace_string(S :: unicode:unicode_binary(), Indices :: [integer()], Sources :: [unicode:unicode_binary()], Targets :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nfind_replace_string(S, Indices, Sources, Targets) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_replace_string(s :: String.t, indices :: [integer], sources :: [String.t], targets :: [String.t]) :: String.t\n  def find_replace_string(s, indices, sources, targets) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcd",
+        "indices": [
+          0,
+          2
+        ],
+        "sources": [
+          "a",
+          "cd"
+        ],
+        "targets": [
+          "eee",
+          "ffff"
+        ]
+      },
+      "expected": "eeebffff"
+    },
+    {
+      "args": {
+        "s": "abcd",
+        "indices": [
+          0,
+          2
+        ],
+        "sources": [
+          "ab",
+          "ec"
+        ],
+        "targets": [
+          "eee",
+          "ffff"
+        ]
+      },
+      "expected": "eeecd"
+    }
+  ]
 }

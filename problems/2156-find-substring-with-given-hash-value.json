@@ -55,5 +55,27 @@
     "racket": "(define/contract (sub-str-hash s power modulo k hashValue)\n  (-> string? exact-integer? exact-integer? exact-integer? exact-integer? string?)\n  )",
     "erlang": "-spec sub_str_hash(S :: unicode:unicode_binary(), Power :: integer(), Modulo :: integer(), K :: integer(), HashValue :: integer()) -> unicode:unicode_binary().\nsub_str_hash(S, Power, Modulo, K, HashValue) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sub_str_hash(s :: String.t, power :: integer, modulo :: integer, k :: integer, hash_value :: integer) :: String.t\n  def sub_str_hash(s, power, modulo, k, hash_value) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode",
+        "power": 7,
+        "modulo": 20,
+        "k": 2,
+        "hashValue": 0
+      },
+      "expected": "ee"
+    },
+    {
+      "args": {
+        "s": "fbxzaad",
+        "power": 31,
+        "modulo": 100,
+        "k": 3,
+        "hashValue": 32
+      },
+      "expected": "fbx"
+    }
+  ]
 }

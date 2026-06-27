@@ -46,5 +46,156 @@
     "racket": "(define lru-cache%\n  (class object%\n    (super-new)\n    \n    ; capacity : exact-integer?\n    (init-field\n      capacity)\n    \n    ; get : exact-integer? -> exact-integer?\n    (define/public (get key)\n      )\n    ; put : exact-integer? exact-integer? -> void?\n    (define/public (put key value)\n      )))\n\n;; Your lru-cache% object will be instantiated and called as such:\n;; (define obj (new lru-cache% [capacity capacity]))\n;; (define param_1 (send obj get key))\n;; (send obj put key value)",
     "erlang": "-spec lru_cache_init_(Capacity :: integer()) -> any().\nlru_cache_init_(Capacity) ->\n  .\n\n-spec lru_cache_get(Key :: integer()) -> integer().\nlru_cache_get(Key) ->\n  .\n\n-spec lru_cache_put(Key :: integer(), Value :: integer()) -> any().\nlru_cache_put(Key, Value) ->\n  .\n\n\n%% Your functions will be called as such:\n%% lru_cache_init_(Capacity),\n%% Param_1 = lru_cache_get(Key),\n%% lru_cache_put(Key, Value),\n\n%% lru_cache_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule LRUCache do\n  @spec init_(capacity :: integer) :: any\n  def init_(capacity) do\n    \n  end\n\n  @spec get(key :: integer) :: integer\n  def get(key) do\n    \n  end\n\n  @spec put(key :: integer, value :: integer) :: any\n  def put(key, value) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# LRUCache.init_(capacity)\n# param_1 = LRUCache.get(key)\n# LRUCache.put(key, value)\n\n# LRUCache.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "LRUCache",
+        "put",
+        "put",
+        "get",
+        "put",
+        "get",
+        "put",
+        "get",
+        "get",
+        "get"
+      ],
+      "args": [
+        [
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1,
+        null,
+        -1,
+        null,
+        -1,
+        3,
+        4
+      ]
+    },
+    {
+      "functions": [
+        "LRUCache",
+        "put",
+        "get",
+        "put",
+        "get",
+        "get"
+      ],
+      "args": [
+        [
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        1,
+        null,
+        -1,
+        2
+      ]
+    },
+    {
+      "functions": [
+        "LRUCache",
+        "put",
+        "put",
+        "put",
+        "put",
+        "get",
+        "get"
+      ],
+      "args": [
+        [
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        -1,
+        3
+      ]
+    }
+  ]
 }

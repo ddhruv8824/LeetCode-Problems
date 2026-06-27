@@ -67,5 +67,65 @@
     "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def canMerge(trees: List[TreeNode]): TreeNode = {\n        \n    }\n}",
     "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn can_merge(trees: Vec<Option<Rc<RefCell<TreeNode>>>>) -> Option<Rc<RefCell<TreeNode>>> {\n        \n    }\n}",
     "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (can-merge trees)\n  (-> (listof (or/c tree-node? #f)) (or/c tree-node? #f))\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "trees": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            5
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        3,
+        2,
+        5,
+        1,
+        null,
+        4
+      ]
+    },
+    {
+      "args": {
+        "trees": [
+          [
+            5,
+            3,
+            8
+          ],
+          [
+            3,
+            2,
+            6
+          ]
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "trees": [
+          [
+            5,
+            4
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      "expected": []
+    }
+  ]
 }

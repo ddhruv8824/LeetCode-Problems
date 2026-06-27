@@ -55,5 +55,28 @@
     "racket": "(define/contract (count-balls lowLimit highLimit)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_balls(LowLimit :: integer(), HighLimit :: integer()) -> integer().\ncount_balls(LowLimit, HighLimit) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_balls(low_limit :: integer, high_limit :: integer) :: integer\n  def count_balls(low_limit, high_limit) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "lowLimit": 1,
+        "highLimit": 10
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "lowLimit": 5,
+        "highLimit": 15
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "lowLimit": 19,
+        "highLimit": 28
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -54,5 +54,25 @@
     "racket": "(define/contract (sum-of-number-and-reverse num)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec sum_of_number_and_reverse(Num :: integer()) -> boolean().\nsum_of_number_and_reverse(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_number_and_reverse(num :: integer) :: boolean\n  def sum_of_number_and_reverse(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 443
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "num": 63
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "num": 181
+      },
+      "expected": true
+    }
+  ]
 }

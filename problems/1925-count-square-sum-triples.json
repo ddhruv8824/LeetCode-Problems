@@ -49,5 +49,19 @@
     "racket": "(define/contract (count-triples n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_triples(N :: integer()) -> integer().\ncount_triples(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_triples(n :: integer) :: integer\n  def count_triples(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 4
+    }
+  ]
 }

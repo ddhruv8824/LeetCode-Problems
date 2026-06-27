@@ -61,5 +61,43 @@
     "racket": "(define/contract (num-of-minutes n headID manager informTime)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_of_minutes(N :: integer(), HeadID :: integer(), Manager :: [integer()], InformTime :: [integer()]) -> integer().\nnum_of_minutes(N, HeadID, Manager, InformTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_minutes(n :: integer, head_id :: integer, manager :: [integer], inform_time :: [integer]) :: integer\n  def num_of_minutes(n, head_id, manager, inform_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1,
+        "headID": 0,
+        "manager": [
+          -1
+        ],
+        "informTime": [
+          0
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 6,
+        "headID": 2,
+        "manager": [
+          2,
+          2,
+          -1,
+          2,
+          2,
+          2
+        ],
+        "informTime": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

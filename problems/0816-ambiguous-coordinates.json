@@ -54,5 +54,40 @@
     "racket": "(define/contract (ambiguous-coordinates s)\n  (-> string? (listof string?))\n  )",
     "erlang": "-spec ambiguous_coordinates(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nambiguous_coordinates(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ambiguous_coordinates(s :: String.t) :: [String.t]\n  def ambiguous_coordinates(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "(123)"
+      },
+      "expected": [
+        "(1, 2.3)",
+        "(1, 23)",
+        "(1.2, 3)",
+        "(12, 3)"
+      ]
+    },
+    {
+      "args": {
+        "s": "(0123)"
+      },
+      "expected": [
+        "(0, 1.23)",
+        "(0, 12.3)",
+        "(0, 123)",
+        "(0.1, 2.3)",
+        "(0.1, 23)",
+        "(0.12, 3)"
+      ]
+    },
+    {
+      "args": {
+        "s": "(00011)"
+      },
+      "expected": [
+        "(0, 0.011)",
+        "(0.001, 1)"
+      ]
+    }
+  ]
 }

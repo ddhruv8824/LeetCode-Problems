@@ -53,5 +53,19 @@
     "racket": "(define/contract (ways-to-reach-stair k)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec ways_to_reach_stair(K :: integer()) -> integer().\nways_to_reach_stair(K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ways_to_reach_stair(k :: integer) :: integer\n  def ways_to_reach_stair(k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 0
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "k": 1
+      },
+      "expected": 4
+    }
+  ]
 }

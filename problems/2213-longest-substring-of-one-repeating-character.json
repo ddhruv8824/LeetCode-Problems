@@ -58,5 +58,37 @@
     "racket": "(define/contract (longest-repeating s queryCharacters queryIndices)\n  (-> string? string? (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec longest_repeating(S :: unicode:unicode_binary(), QueryCharacters :: unicode:unicode_binary(), QueryIndices :: [integer()]) -> [integer()].\nlongest_repeating(S, QueryCharacters, QueryIndices) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_repeating(s :: String.t, query_characters :: String.t, query_indices :: [integer]) :: [integer]\n  def longest_repeating(s, query_characters, query_indices) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "babacc",
+        "queryCharacters": "bcb",
+        "queryIndices": [
+          1,
+          3,
+          3
+        ]
+      },
+      "expected": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "args": {
+        "s": "abyzz",
+        "queryCharacters": "aa",
+        "queryIndices": [
+          2,
+          1
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    }
+  ]
 }

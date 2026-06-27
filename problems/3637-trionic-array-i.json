@@ -46,5 +46,30 @@
     "racket": "(define/contract (is-trionic nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_trionic(Nums :: [integer()]) -> boolean().\nis_trionic(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_trionic(nums :: [integer]) :: boolean\n  def is_trionic(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          5,
+          4,
+          2,
+          6
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          1,
+          3
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

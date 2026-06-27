@@ -52,5 +52,19 @@
     "racket": "(define/contract (last-substring s)\n  (-> string? string?)\n  )",
     "erlang": "-spec last_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlast_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec last_substring(s :: String.t) :: String.t\n  def last_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abab"
+      },
+      "expected": "bab"
+    },
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": "tcode"
+    }
+  ]
 }

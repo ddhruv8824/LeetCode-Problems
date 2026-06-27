@@ -52,5 +52,54 @@
     "erlang": "-spec large_group_positions(S :: unicode:unicode_binary()) -> [[integer()]].\nlarge_group_positions(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec large_group_positions(s :: String.t) :: [[integer]]\n  def large_group_positions(s) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n---\n### Approach #1: Two Pointer [Accepted]\n\n**Intuition**\n\nWe scan through the string to identify the start and end of each group.  If the size of the group is at least 3, we add it to the answer.\n\n**Algorithm**\n\nMaintain pointers `i, j` with `i <= j`.  The `i` pointer will represent the start of the current group, and we will increment `j` forward until it reaches the end of the group.\n\nWe know that we have reached the end of the group when `j` is at the end of the string, or `S[j] != S[j+1]`.  At this point, we have some group `[i, j]`; and after, we will update `i = j+1`, the start of the next group.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity: $$O(N)$$, the space used by the answer."
+  "solution": "[TOC]\n\n---\n### Approach #1: Two Pointer [Accepted]\n\n**Intuition**\n\nWe scan through the string to identify the start and end of each group.  If the size of the group is at least 3, we add it to the answer.\n\n**Algorithm**\n\nMaintain pointers `i, j` with `i <= j`.  The `i` pointer will represent the start of the current group, and we will increment `j` forward until it reaches the end of the group.\n\nWe know that we have reached the end of the group when `j` is at the end of the string, or `S[j] != S[j+1]`.  At this point, we have some group `[i, j]`; and after, we will update `i = j+1`, the start of the next group.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity: $$O(N)$$, the space used by the answer.",
+  "test_cases": [
+    {
+      "args": {
+        "s": "abbxxxxzzy"
+      },
+      "expected": [
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "args": {
+        "s": "abc"
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "s": "abcdddeeeeaabbbcd"
+      },
+      "expected": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "args": {
+        "s": "aaa"
+      },
+      "expected": [
+        [
+          0,
+          2
+        ]
+      ]
+    }
+  ]
 }

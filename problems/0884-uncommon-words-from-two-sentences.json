@@ -51,5 +51,26 @@
     "erlang": "-spec uncommon_from_sentences(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nuncommon_from_sentences(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec uncommon_from_sentences(s1 :: String.t, s2 :: String.t) :: [String.t]\n  def uncommon_from_sentences(s1, s2) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Counting \n\n**Intuition and Algorithm**\n\nEvery uncommon word occurs exactly once in total.  We can count the number of occurrences of every word, then return ones that occur exactly once.**Complexity Analysis**\n\n* Time Complexity:  $$O(M + N)$$, where $$M, N$$ are the lengths of `A` and `B` respectively.\n\n* Space Complexity:  $$O(M + N)$$, the space used by `count`."
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Counting \n\n**Intuition and Algorithm**\n\nEvery uncommon word occurs exactly once in total.  We can count the number of occurrences of every word, then return ones that occur exactly once.**Complexity Analysis**\n\n* Time Complexity:  $$O(M + N)$$, where $$M, N$$ are the lengths of `A` and `B` respectively.\n\n* Space Complexity:  $$O(M + N)$$, the space used by `count`.",
+  "test_cases": [
+    {
+      "args": {
+        "a": "this apple is sweet",
+        "b": "this apple is sour"
+      },
+      "expected": [
+        "sweet",
+        "sour"
+      ]
+    },
+    {
+      "args": {
+        "a": "apple apple",
+        "b": "banana"
+      },
+      "expected": [
+        "banana"
+      ]
+    }
+  ]
 }

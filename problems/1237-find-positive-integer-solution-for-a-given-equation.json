@@ -54,5 +54,47 @@
     "ruby": "# \tThis is the custom function interface.\n#\tYou should not implement it, or speculate about its implementation\n#\tclass CustomFunction:\n#\t\tdef f(self, x, y):\n# \t\t\tReturns f(x, y) for any given positive integers x and y.\n# \t\t\tNote that f(x, y) is increasing with respect to both x and y.\n# \t\t\ti.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)\n# \t\tend\n# \tend\n# \n\n# @param {CustomFunction} customfunction\n# @param {Integer} z\n# @return {List[List[Integer]]}\ndef findSolution(customfunction, z)\n    \nend",
     "scala": "/*\n * // This is the custom function interface.\n * // You should not implement it, or speculate about its implementation\n * class CustomFunction {\n *     // Returns f(x, y) for any given positive integers x and y.\n *     // Note that f(x, y) is increasing with respect to both x and y.\n *     // i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)\n *     def f(x: Int, y: Int): Int = {}\n * };\n */\n\nobject Solution {\n    def findSolution(customfunction: CustomFunction, z: Int): List[List[Int]] = {\n        \n    }\n}",
     "rust": "/*\n * // This is the custom function interface.\n * // You should not implement it, or speculate about its implementation\n * struct CustomFunction;\n * impl CustomFunction {\n *    pub fn f(x:i32,y:i32)->i32{}\n * }\n */\n\nimpl Solution {\n    pub fn find_solution(customfunction: &CustomFunction, z: i32) -> Vec<Vec<i32>> {\n\t\n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "function_id": 1,
+        "z": 5
+      },
+      "expected": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "args": {
+        "function_id": 2,
+        "z": 5
+      },
+      "expected": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    }
+  ]
 }

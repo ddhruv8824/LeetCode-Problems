@@ -55,5 +55,28 @@
     "racket": "(define/contract (number-of-child n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_child(N :: integer(), K :: integer()) -> integer().\nnumber_of_child(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_child(n :: integer, k :: integer) :: integer\n  def number_of_child(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "n": 5,
+        "k": 6
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 4,
+        "k": 2
+      },
+      "expected": 2
+    }
+  ]
 }

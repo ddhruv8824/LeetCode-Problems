@@ -49,5 +49,19 @@
     "racket": "(define/contract (concat-hex36 n)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec concat_hex36(N :: integer()) -> unicode:unicode_binary().\nconcat_hex36(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec concat_hex36(n :: integer) :: String.t\n  def concat_hex36(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 13
+      },
+      "expected": "A91P1"
+    },
+    {
+      "args": {
+        "n": 36
+      },
+      "expected": "5101000"
+    }
+  ]
 }

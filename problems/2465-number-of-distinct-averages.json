@@ -53,5 +53,29 @@
     "racket": "(define/contract (distinct-averages nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec distinct_averages(Nums :: [integer()]) -> integer().\ndistinct_averages(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distinct_averages(nums :: [integer]) :: integer\n  def distinct_averages(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          1,
+          4,
+          0,
+          3,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          100
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

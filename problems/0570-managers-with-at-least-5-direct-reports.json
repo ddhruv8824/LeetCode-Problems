@@ -34,5 +34,142 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef find_managers(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "employee": [
+          {
+            "id": 101,
+            "name": "John",
+            "department": "A",
+            "managerId": null
+          },
+          {
+            "id": 102,
+            "name": "Dan",
+            "department": "A",
+            "managerId": 101
+          },
+          {
+            "id": 103,
+            "name": "James",
+            "department": "A",
+            "managerId": 101
+          },
+          {
+            "id": 104,
+            "name": "Amy",
+            "department": "A",
+            "managerId": 101
+          },
+          {
+            "id": 105,
+            "name": "Anne",
+            "department": "A",
+            "managerId": 101
+          },
+          {
+            "id": 106,
+            "name": "Ron",
+            "department": "B",
+            "managerId": 101
+          }
+        ]
+      },
+      "expected": [
+        {
+          "name": "John"
+        }
+      ]
+    },
+    {
+      "args": {
+        "employee": [
+          {
+            "id": 1,
+            "name": "Alice",
+            "department": "Sales",
+            "managerId": null
+          },
+          {
+            "id": 2,
+            "name": "Bob",
+            "department": "Sales",
+            "managerId": 1
+          },
+          {
+            "id": 3,
+            "name": "Charlie",
+            "department": "Sales",
+            "managerId": 1
+          },
+          {
+            "id": 4,
+            "name": "David",
+            "department": "Sales",
+            "managerId": 1
+          },
+          {
+            "id": 5,
+            "name": "Eve",
+            "department": "Sales",
+            "managerId": 1
+          },
+          {
+            "id": 6,
+            "name": "Frank",
+            "department": "Sales",
+            "managerId": 1
+          }
+        ]
+      },
+      "expected": [
+        {
+          "name": "Alice"
+        }
+      ]
+    },
+    {
+      "args": {
+        "employee": [
+          {
+            "id": 1,
+            "name": "Sam",
+            "department": "IT",
+            "managerId": null
+          },
+          {
+            "id": 2,
+            "name": "Tom",
+            "department": "IT",
+            "managerId": 1
+          },
+          {
+            "id": 3,
+            "name": "Alex",
+            "department": "IT",
+            "managerId": 1
+          },
+          {
+            "id": 4,
+            "name": "Ben",
+            "department": "IT",
+            "managerId": 1
+          },
+          {
+            "id": 5,
+            "name": "Chris",
+            "department": "IT",
+            "managerId": 1
+          }
+        ]
+      },
+      "expected": [
+        {
+          "name": "Sam"
+        }
+      ]
+    }
+  ]
 }

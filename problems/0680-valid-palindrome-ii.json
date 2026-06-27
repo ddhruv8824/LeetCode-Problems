@@ -53,5 +53,25 @@
     "racket": "(define/contract (valid-palindrome s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec valid_palindrome(S :: unicode:unicode_binary()) -> boolean().\nvalid_palindrome(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec valid_palindrome(s :: String.t) :: boolean\n  def valid_palindrome(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aba"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abca"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "abc"
+      },
+      "expected": false
+    }
+  ]
 }

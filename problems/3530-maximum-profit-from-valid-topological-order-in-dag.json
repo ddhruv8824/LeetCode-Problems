@@ -65,5 +65,44 @@
     "racket": "(define/contract (max-profit n edges score)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_profit(N :: integer(), Edges :: [[integer()]], Score :: [integer()]) -> integer().\nmax_profit(N, Edges, Score) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_profit(n :: integer, edges :: [[integer]], score :: [integer]) :: integer\n  def max_profit(n, edges, score) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "score": [
+          2,
+          3
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "score": [
+          1,
+          6,
+          3
+        ]
+      },
+      "expected": 25
+    }
+  ]
 }

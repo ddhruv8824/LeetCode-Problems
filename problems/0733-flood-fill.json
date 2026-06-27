@@ -58,5 +58,48 @@
     "erlang": "-spec flood_fill(Image :: [[integer()]], Sr :: integer(), Sc :: integer(), Color :: integer()) -> [[integer()]].\nflood_fill(Image, Sr, Sc, Color) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec flood_fill(image :: [[integer]], sr :: integer, sc :: integer, color :: integer) :: [[integer]]\n  def flood_fill(image, sr, sc, color) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition**\n\nWe perform the algorithm explained in the problem description: paint the starting pixels, plus adjacent pixels of the same color, and so on.\n\n**Algorithm**\n\nSay `color` is the color of the starting pixel. Let's flood fill the starting pixel: we change the color of that pixel to the new color, then check the 4 neighboring pixels to make sure they are valid pixels of the same `color`, and of the valid ones, we flood fill those, and so on.\n\nWe can use a function `dfs` to perform a flood fill on a target pixel.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of pixels in the image. We might process every pixel.\n\n* Space Complexity: $$O(N)$$, the size of the implicit call stack when calling `dfs`."
+  "solution": "[TOC]\n\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition**\n\nWe perform the algorithm explained in the problem description: paint the starting pixels, plus adjacent pixels of the same color, and so on.\n\n**Algorithm**\n\nSay `color` is the color of the starting pixel. Let's flood fill the starting pixel: we change the color of that pixel to the new color, then check the 4 neighboring pixels to make sure they are valid pixels of the same `color`, and of the valid ones, we flood fill those, and so on.\n\nWe can use a function `dfs` to perform a flood fill on a target pixel.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of pixels in the image. We might process every pixel.\n\n* Space Complexity: $$O(N)$$, the size of the implicit call stack when calling `dfs`.",
+  "test_cases": [
+    {
+      "args": {
+        "image": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "sr": 1,
+        "sc": 1,
+        "newColor": 2
+      },
+      "expected": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    }
+  ]
 }

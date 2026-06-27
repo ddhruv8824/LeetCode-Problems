@@ -56,5 +56,37 @@
     "erlang": "-spec num_of_unplaced_fruits(Fruits :: [integer()], Baskets :: [integer()]) -> integer().\nnum_of_unplaced_fruits(Fruits, Baskets) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_of_unplaced_fruits(fruits :: [integer], baskets :: [integer]) :: integer\n  def num_of_unplaced_fruits(fruits, baskets) do\n    \n  end\nend"
   },
-  "solution": "### Approach 1: Square Root Decomposition\n\n#### Intuition\n\nThis problem is similar to [3479. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/description/), but the difference lies in the **larger input size**, making a direct simulation inefficient.\n\nTo optimize, we apply a **square root decomposition** approach.\n\nWe divide the `baskets` array into $\\sqrt{n}$ blocks, each of size $m = \\sqrt{n}$ (approximately). For each block, we maintain the **maximum value** in that block in an auxiliary array `maxV`.\n\nFor each fruit, we scan these blocks **block by block**. There are two possibilities for a given block:\n\n1. If the maximum basket capacity in the current block is **less than** the fruit’s quantity, we **skip** this block entirely.\n2. If the block contains a basket that can hold the fruit (`maxV[sec] >= fruit`), we scan that block to find the **leftmost** basket that can hold the fruit, place it (set it to 0), and update the block’s maximum value.\n\nIf no such basket is found after scanning all blocks, we increment the count of **unplaced fruits**.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\times \\sqrt{n}) = O(n^{\\frac32})$.\n  \n  Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and traversing each block takes $O(\\sqrt{n})$ time.\n\n- Space complexity: $O(\\sqrt{n})$.\n  \n  We need to maintain the maximum capacity of the baskets in each block.\n\n---\n\n### Approach 2: Segment Tree + Binary Search\n\n#### Intuition\n\nThis is a template problem for a segment tree, where we can use a segment tree to maintain the maximum value of the $\\textit{baskets}$ array over intervals, and then use binary search to find the first basket that meets the condition. The specific method is as follows:\n\n1. First, establish a tree where the content maintained at initialization is the maximum value of each interval.\n2. Then, enumerate the fruits in $\\textit{fruits}$, and use the segment tree to find the maximum value in the interval during the binary search process to locate the first basket that meets the condition. If such a basket is found, use the segment tree to perform a single-point update on that basket, setting its value to $0$. Otherwise, increment the counter $\\textit{count}$.\n3. The process of binary search is as follows: If the maximum value in the left interval is greater than the current number of fruits, continue the binary search in the left interval. If the maximum value in the left interval is less than the current number of fruits and the maximum value in the right interval is greater than or equal to the current number of fruits, continue the binary search in the right interval. Otherwise, there is no interval that meets the condition in the current range.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\log n)$.\n  \n  Constructing the segment tree takes $O(n)$ time. Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and each binary search, segment tree query, and update operation takes $O(\\log n)$ time.\n\n- Space complexity: $O(n)$.\n  \n  It requires $O(n)$ space to store the segment tree.\n  \n---"
+  "solution": "### Approach 1: Square Root Decomposition\n\n#### Intuition\n\nThis problem is similar to [3479. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/description/), but the difference lies in the **larger input size**, making a direct simulation inefficient.\n\nTo optimize, we apply a **square root decomposition** approach.\n\nWe divide the `baskets` array into $\\sqrt{n}$ blocks, each of size $m = \\sqrt{n}$ (approximately). For each block, we maintain the **maximum value** in that block in an auxiliary array `maxV`.\n\nFor each fruit, we scan these blocks **block by block**. There are two possibilities for a given block:\n\n1. If the maximum basket capacity in the current block is **less than** the fruit’s quantity, we **skip** this block entirely.\n2. If the block contains a basket that can hold the fruit (`maxV[sec] >= fruit`), we scan that block to find the **leftmost** basket that can hold the fruit, place it (set it to 0), and update the block’s maximum value.\n\nIf no such basket is found after scanning all blocks, we increment the count of **unplaced fruits**.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\times \\sqrt{n}) = O(n^{\\frac32})$.\n  \n  Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and traversing each block takes $O(\\sqrt{n})$ time.\n\n- Space complexity: $O(\\sqrt{n})$.\n  \n  We need to maintain the maximum capacity of the baskets in each block.\n\n---\n\n### Approach 2: Segment Tree + Binary Search\n\n#### Intuition\n\nThis is a template problem for a segment tree, where we can use a segment tree to maintain the maximum value of the $\\textit{baskets}$ array over intervals, and then use binary search to find the first basket that meets the condition. The specific method is as follows:\n\n1. First, establish a tree where the content maintained at initialization is the maximum value of each interval.\n2. Then, enumerate the fruits in $\\textit{fruits}$, and use the segment tree to find the maximum value in the interval during the binary search process to locate the first basket that meets the condition. If such a basket is found, use the segment tree to perform a single-point update on that basket, setting its value to $0$. Otherwise, increment the counter $\\textit{count}$.\n3. The process of binary search is as follows: If the maximum value in the left interval is greater than the current number of fruits, continue the binary search in the left interval. If the maximum value in the left interval is less than the current number of fruits and the maximum value in the right interval is greater than or equal to the current number of fruits, continue the binary search in the right interval. Otherwise, there is no interval that meets the condition in the current range.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\log n)$.\n  \n  Constructing the segment tree takes $O(n)$ time. Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and each binary search, segment tree query, and update operation takes $O(\\log n)$ time.\n\n- Space complexity: $O(n)$.\n  \n  It requires $O(n)$ space to store the segment tree.\n  \n---",
+  "test_cases": [
+    {
+      "args": {
+        "fruits": [
+          4,
+          2,
+          5
+        ],
+        "baskets": [
+          3,
+          5,
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "fruits": [
+          3,
+          6,
+          1
+        ],
+        "baskets": [
+          6,
+          4,
+          7
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

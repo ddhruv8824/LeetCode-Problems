@@ -50,5 +50,44 @@
     "racket": "(define/contract (largest-divisible-subset nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec largest_divisible_subset(Nums :: [integer()]) -> [integer()].\nlargest_divisible_subset(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec largest_divisible_subset(nums :: [integer]) :: [integer]\n  def largest_divisible_subset(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      "expected": [
+        [
+          1,
+          2,
+          4,
+          8
+        ]
+      ]
+    }
+  ]
 }

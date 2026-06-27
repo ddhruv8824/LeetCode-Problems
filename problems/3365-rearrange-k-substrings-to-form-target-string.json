@@ -58,5 +58,31 @@
     "racket": "(define/contract (is-possible-to-rearrange s t k)\n  (-> string? string? exact-integer? boolean?)\n  )",
     "erlang": "-spec is_possible_to_rearrange(S :: unicode:unicode_binary(), T :: unicode:unicode_binary(), K :: integer()) -> boolean().\nis_possible_to_rearrange(S, T, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_possible_to_rearrange(s :: String.t, t :: String.t, k :: integer) :: boolean\n  def is_possible_to_rearrange(s, t, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcd",
+        "t": "cdab",
+        "k": 2
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aabbcc",
+        "t": "bbaacc",
+        "k": 3
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aabbcc",
+        "t": "bbaacc",
+        "k": 2
+      },
+      "expected": false
+    }
+  ]
 }

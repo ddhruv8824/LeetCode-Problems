@@ -57,5 +57,59 @@
     "racket": "(define/contract (max-distance nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_distance(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmax_distance(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_distance(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def max_distance(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          55,
+          30,
+          5,
+          4,
+          2
+        ],
+        "nums2": [
+          100,
+          20,
+          10,
+          10,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          2,
+          2
+        ],
+        "nums2": [
+          10,
+          10,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums1": [
+          30,
+          29,
+          19,
+          5
+        ],
+        "nums2": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -57,5 +57,23 @@
     "racket": "(define/contract (minimum-white-tiles floor numCarpets carpetLen)\n  (-> string? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_white_tiles(Floor :: unicode:unicode_binary(), NumCarpets :: integer(), CarpetLen :: integer()) -> integer().\nminimum_white_tiles(Floor, NumCarpets, CarpetLen) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_white_tiles(floor :: String.t, num_carpets :: integer, carpet_len :: integer) :: integer\n  def minimum_white_tiles(floor, num_carpets, carpet_len) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "floor": "10110101",
+        "numCarpets": 2,
+        "carpetLen": 2
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "floor": "11111",
+        "numCarpets": 2,
+        "carpetLen": 3
+      },
+      "expected": 0
+    }
+  ]
 }

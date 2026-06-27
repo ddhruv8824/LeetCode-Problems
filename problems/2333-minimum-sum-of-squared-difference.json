@@ -56,5 +56,45 @@
     "racket": "(define/contract (min-sum-square-diff nums1 nums2 k1 k2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_sum_square_diff(Nums1 :: [integer()], Nums2 :: [integer()], K1 :: integer(), K2 :: integer()) -> integer().\nmin_sum_square_diff(Nums1, Nums2, K1, K2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_sum_square_diff(nums1 :: [integer], nums2 :: [integer], k1 :: integer, k2 :: integer) :: integer\n  def min_sum_square_diff(nums1, nums2, k1, k2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "nums2": [
+          2,
+          10,
+          20,
+          19
+        ],
+        "k1": 0,
+        "k2": 0
+      },
+      "expected": 579
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          4,
+          10,
+          12
+        ],
+        "nums2": [
+          5,
+          8,
+          6,
+          9
+        ],
+        "k1": 1,
+        "k2": 1
+      },
+      "expected": 43
+    }
+  ]
 }

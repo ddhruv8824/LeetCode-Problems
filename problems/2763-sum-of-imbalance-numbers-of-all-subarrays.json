@@ -53,5 +53,30 @@
     "racket": "(define/contract (sum-imbalance-numbers nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_imbalance_numbers(Nums :: [integer()]) -> integer().\nsum_imbalance_numbers(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_imbalance_numbers(nums :: [integer]) :: integer\n  def sum_imbalance_numbers(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1,
+          4
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          3,
+          3,
+          3,
+          5
+        ]
+      },
+      "expected": 8
+    }
+  ]
 }

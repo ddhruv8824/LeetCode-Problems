@@ -51,5 +51,19 @@
     "racket": "(define/contract (beauty-sum s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec beauty_sum(S :: unicode:unicode_binary()) -> integer().\nbeauty_sum(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beauty_sum(s :: String.t) :: integer\n  def beauty_sum(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aabcb"
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "s": "aabcbaa"
+      },
+      "expected": 17
+    }
+  ]
 }

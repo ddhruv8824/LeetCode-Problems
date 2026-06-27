@@ -46,5 +46,35 @@
     "racket": "(define/contract (max-depth-after-split seq)\n  (-> string? (listof exact-integer?))\n  )",
     "erlang": "-spec max_depth_after_split(Seq :: unicode:unicode_binary()) -> [integer()].\nmax_depth_after_split(Seq) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_depth_after_split(seq :: String.t) :: [integer]\n  def max_depth_after_split(seq) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "seq": "(()())"
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "seq": "()(())()"
+      },
+      "expected": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    }
+  ]
 }

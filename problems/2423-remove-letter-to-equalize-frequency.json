@@ -51,5 +51,19 @@
     "racket": "(define/contract (equal-frequency word)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec equal_frequency(Word :: unicode:unicode_binary()) -> boolean().\nequal_frequency(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec equal_frequency(word :: String.t) :: boolean\n  def equal_frequency(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "abcc"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "word": "aazz"
+      },
+      "expected": false
+    }
+  ]
 }

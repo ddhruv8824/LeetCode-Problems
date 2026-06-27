@@ -54,5 +54,19 @@
     "racket": "(define/contract (longest-dup-substring s)\n  (-> string? string?)\n  )",
     "erlang": "-spec longest_dup_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_dup_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_dup_substring(s :: String.t) :: String.t\n  def longest_dup_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "banana"
+      },
+      "expected": "ana"
+    },
+    {
+      "args": {
+        "s": "abcd"
+      },
+      "expected": ""
+    }
+  ]
 }

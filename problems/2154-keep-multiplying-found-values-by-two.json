@@ -54,5 +54,31 @@
     "racket": "(define/contract (find-final-value nums original)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_final_value(Nums :: [integer()], Original :: integer()) -> integer().\nfind_final_value(Nums, Original) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_final_value(nums :: [integer], original :: integer) :: integer\n  def find_final_value(nums, original) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          3,
+          6,
+          1,
+          12
+        ],
+        "original": 3
+      },
+      "expected": 24
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          7,
+          9
+        ],
+        "original": 4
+      },
+      "expected": 4
+    }
+  ]
 }

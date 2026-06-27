@@ -59,5 +59,43 @@
     "scala": "object Solution {\n    def largestPathValue(colors: String, edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn largest_path_value(colors: String, edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
     "racket": "(define/contract (largest-path-value colors edges)\n  (-> string? (listof (listof exact-integer?)) exact-integer?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "colors": "abaca",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "colors": "a",
+        "edges": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

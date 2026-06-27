@@ -67,5 +67,68 @@
     "racket": "(define/contract (number-of-paths grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_paths(Grid :: [[integer()]], K :: integer()) -> integer().\nnumber_of_paths(Grid, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_paths(grid :: [[integer]], k :: integer) :: integer\n  def number_of_paths(grid, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            2,
+            4
+          ],
+          [
+            3,
+            0,
+            5
+          ],
+          [
+            0,
+            7,
+            2
+          ]
+        ],
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0
+          ]
+        ],
+        "k": 5
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            7,
+            3,
+            4,
+            9
+          ],
+          [
+            2,
+            3,
+            6,
+            2
+          ],
+          [
+            2,
+            3,
+            7,
+            0
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 10
+    }
+  ]
 }

@@ -52,5 +52,21 @@
     "racket": "(define/contract (min-steps s t)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec min_steps(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nmin_steps(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_steps(s :: String.t, t :: String.t) :: integer\n  def min_steps(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "leetcode",
+        "t": "coats"
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "s": "night",
+        "t": "thing"
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -52,5 +52,19 @@
     "racket": "(define/contract (num-islands grid)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
     "erlang": "-spec num_islands(Grid :: [[char()]]) -> integer().\nnum_islands(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_islands(grid :: [[char]]) :: integer\n  def num_islands(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": "["
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "grid": "["
+      },
+      "expected": 3
+    }
+  ]
 }

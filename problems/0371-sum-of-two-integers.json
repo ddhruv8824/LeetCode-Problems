@@ -46,5 +46,21 @@
     "racket": "(define/contract (get-sum a b)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec get_sum(A :: integer(), B :: integer()) -> integer().\nget_sum(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_sum(a :: integer, b :: integer) :: integer\n  def get_sum(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": 1,
+        "b": 2
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "a": 2,
+        "b": 3
+      },
+      "expected": 5
+    }
+  ]
 }

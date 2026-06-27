@@ -47,5 +47,19 @@
     "racket": "(define/contract (reverse-vowels s)\n  (-> string? string?)\n  )",
     "erlang": "-spec reverse_vowels(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreverse_vowels(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reverse_vowels(s :: String.t) :: String.t\n  def reverse_vowels(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "IceCreAm"
+      },
+      "expected": "AceCreIm"
+    },
+    {
+      "args": {
+        "s": "leetcode"
+      },
+      "expected": "leotcede"
+    }
+  ]
 }

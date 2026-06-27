@@ -64,5 +64,37 @@
     "racket": "(define/contract (kth-smallest-path destination k)\n  (-> (listof exact-integer?) exact-integer? string?)\n  )",
     "erlang": "-spec kth_smallest_path(Destination :: [integer()], K :: integer()) -> unicode:unicode_binary().\nkth_smallest_path(Destination, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec kth_smallest_path(destination :: [integer], k :: integer) :: String.t\n  def kth_smallest_path(destination, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "destination": [
+          2,
+          3
+        ],
+        "k": 1
+      },
+      "expected": "HHHVV"
+    },
+    {
+      "args": {
+        "destination": [
+          2,
+          3
+        ],
+        "k": 2
+      },
+      "expected": "HHVHV"
+    },
+    {
+      "args": {
+        "destination": [
+          2,
+          3
+        ],
+        "k": 3
+      },
+      "expected": "HHVVH"
+    }
+  ]
 }

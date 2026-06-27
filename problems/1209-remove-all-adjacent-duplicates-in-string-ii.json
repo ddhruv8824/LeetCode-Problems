@@ -56,5 +56,28 @@
     "racket": "(define/contract (remove-duplicates s k)\n  (-> string? exact-integer? string?)\n  )",
     "erlang": "-spec remove_duplicates(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nremove_duplicates(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_duplicates(s :: String.t, k :: integer) :: String.t\n  def remove_duplicates(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcd",
+        "k": 2
+      },
+      "expected": "abcd"
+    },
+    {
+      "args": {
+        "s": "deeedbbcccbdaa",
+        "k": 3
+      },
+      "expected": "aa"
+    },
+    {
+      "args": {
+        "s": "pbbcggttciiippooaais",
+        "k": 2
+      },
+      "expected": "ps"
+    }
+  ]
 }

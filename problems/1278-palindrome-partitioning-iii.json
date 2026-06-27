@@ -55,5 +55,28 @@
     "racket": "(define/contract (palindrome-partition s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec palindrome_partition(S :: unicode:unicode_binary(), K :: integer()) -> integer().\npalindrome_partition(S, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec palindrome_partition(s :: String.t, k :: integer) :: integer\n  def palindrome_partition(s, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc",
+        "k": 2
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "s": "aabbc",
+        "k": 3
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "s": "leetcode",
+        "k": 8
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -60,5 +60,46 @@
     "racket": "(define/contract (minimum-increments nums target)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec minimum_increments(Nums :: [integer()], Target :: [integer()]) -> integer().\nminimum_increments(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_increments(nums :: [integer], target :: [integer]) :: integer\n  def minimum_increments(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "target": [
+          4
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          8,
+          4
+        ],
+        "target": [
+          10,
+          5
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          9,
+          10
+        ],
+        "target": [
+          7
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

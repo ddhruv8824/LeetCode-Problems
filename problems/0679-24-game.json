@@ -48,5 +48,29 @@
     "racket": "(define/contract (judge-point24 cards)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec judge_point24(Cards :: [integer()]) -> boolean().\njudge_point24(Cards) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec judge_point24(cards :: [integer]) :: boolean\n  def judge_point24(cards) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "cards": [
+          4,
+          1,
+          8,
+          7
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "cards": [
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

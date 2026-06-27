@@ -56,5 +56,73 @@
     "racket": "(define/contract (can-make-square grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
     "erlang": "-spec can_make_square(Grid :: [[char()]]) -> boolean().\ncan_make_square(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_make_square(grid :: [[char]]) :: boolean\n  def can_make_square(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            "B",
+            "W",
+            "B"
+          ],
+          [
+            "B",
+            "W",
+            "W"
+          ],
+          [
+            "B",
+            "W",
+            "B"
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            "B",
+            "W",
+            "B"
+          ],
+          [
+            "W",
+            "B",
+            "W"
+          ],
+          [
+            "B",
+            "W",
+            "B"
+          ]
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            "B",
+            "W",
+            "B"
+          ],
+          [
+            "B",
+            "W",
+            "W"
+          ],
+          [
+            "B",
+            "W",
+            "W"
+          ]
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

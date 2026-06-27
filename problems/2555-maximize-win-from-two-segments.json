@@ -53,5 +53,34 @@
     "racket": "(define/contract (maximize-win prizePositions k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec maximize_win(PrizePositions :: [integer()], K :: integer()) -> integer().\nmaximize_win(PrizePositions, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximize_win(prize_positions :: [integer], k :: integer) :: integer\n  def maximize_win(prize_positions, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "prizePositions": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          5
+        ],
+        "k": 2
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "prizePositions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "k": 0
+      },
+      "expected": 2
+    }
+  ]
 }

@@ -56,5 +56,44 @@
     "racket": "(define/contract (max-score-indices nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec max_score_indices(Nums :: [integer()]) -> [integer()].\nmax_score_indices(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_score_indices(nums :: [integer]) :: [integer]\n  def max_score_indices(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        2,
+        4
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": [
+        3
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1
+        ]
+      },
+      "expected": [
+        0
+      ]
+    }
+  ]
 }

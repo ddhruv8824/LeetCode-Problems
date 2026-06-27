@@ -50,5 +50,109 @@
     "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec cbt_inserter_init_(Root :: #tree_node{} | null) -> any().\ncbt_inserter_init_(Root) ->\n  .\n\n-spec cbt_inserter_insert(Val :: integer()) -> integer().\ncbt_inserter_insert(Val) ->\n  .\n\n-spec cbt_inserter_get_root() -> #tree_node{} | null.\ncbt_inserter_get_root() ->\n  .\n\n\n%% Your functions will be called as such:\n%% cbt_inserter_init_(Root),\n%% Param_1 = cbt_inserter_insert(Val),\n%% Param_2 = cbt_inserter_get_root(),\n\n%% cbt_inserter_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule CBTInserter do\n  @spec init_(root :: TreeNode.t | nil) :: any\n  def init_(root) do\n    \n  end\n\n  @spec insert(val :: integer) :: integer\n  def insert(val) do\n    \n  end\n\n  @spec get_root() :: TreeNode.t | nil\n  def get_root() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# CBTInserter.init_(root)\n# param_1 = CBTInserter.insert(val)\n# param_2 = CBTInserter.get_root()\n\n# CBTInserter.init_ will be called before every test case, in which you can do some necessary initializations."
   },
-  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Deque\n\n**Intuition**\n\nConsider all the nodes numbered first by level and then left to right.  Call this the \"number order\" of the nodes.\n\nAt each insertion step, we want to insert into the node with the lowest number (that still has 0 or 1 children).\n\nBy maintaining a `deque` (double ended queue) of these nodes in number order, we can solve the problem.  After inserting a node, that node now has the highest number and no children, so it goes at the end of the deque.  To get the node with the lowest number, we pop from the beginning of the deque.\n\n**Algorithm**\n\nFirst, perform a breadth-first search to populate the `deque` with nodes that have 0 or 1 children, in number order.\n\nNow when inserting a node, the parent is the first element of `deque`, and we add this new node to our `deque`.**Complexity Analysis**\n\n* Time Complexity:  The preprocessing is $$O(N)$$, where $$N$$ is the number of nodes in the tree.  Each insertion operation thereafter is $$O(1)$$.\n\n* Space Complexity:  $$O(N_{\\text{cur}})$$ space complexity, when the size of the tree during the current insertion operation is $$N_{\\text{cur}}$$."
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Deque\n\n**Intuition**\n\nConsider all the nodes numbered first by level and then left to right.  Call this the \"number order\" of the nodes.\n\nAt each insertion step, we want to insert into the node with the lowest number (that still has 0 or 1 children).\n\nBy maintaining a `deque` (double ended queue) of these nodes in number order, we can solve the problem.  After inserting a node, that node now has the highest number and no children, so it goes at the end of the deque.  To get the node with the lowest number, we pop from the beginning of the deque.\n\n**Algorithm**\n\nFirst, perform a breadth-first search to populate the `deque` with nodes that have 0 or 1 children, in number order.\n\nNow when inserting a node, the parent is the first element of `deque`, and we add this new node to our `deque`.**Complexity Analysis**\n\n* Time Complexity:  The preprocessing is $$O(N)$$, where $$N$$ is the number of nodes in the tree.  Each insertion operation thereafter is $$O(1)$$.\n\n* Space Complexity:  $$O(N_{\\text{cur}})$$ space complexity, when the size of the tree during the current insertion operation is $$N_{\\text{cur}}$$.",
+  "test_cases": [
+    {
+      "functions": [
+        "CBTInserter",
+        "insert",
+        "get_root"
+      ],
+      "args": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "functions": [
+        "CBTInserter",
+        "insert",
+        "insert",
+        "get_root"
+      ],
+      "args": [
+        [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        3,
+        4,
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "functions": [
+        "CBTInserter",
+        "insert",
+        "insert",
+        "get_root"
+      ],
+      "args": [
+        [
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        1,
+        2,
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    }
+  ]
 }

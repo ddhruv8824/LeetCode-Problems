@@ -54,5 +54,28 @@
     "racket": "(define/contract (minimum-possible-sum n target)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_possible_sum(N :: integer(), Target :: integer()) -> integer().\nminimum_possible_sum(N, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_possible_sum(n :: integer, target :: integer) :: integer\n  def minimum_possible_sum(n, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2,
+        "target": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 3,
+        "target": 3
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "n": 1,
+        "target": 1
+      },
+      "expected": 1
+    }
+  ]
 }

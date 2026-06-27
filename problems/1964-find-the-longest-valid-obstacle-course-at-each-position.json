@@ -57,5 +57,57 @@
     "racket": "(define/contract (longest-obstacle-course-at-each-position obstacles)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec longest_obstacle_course_at_each_position(Obstacles :: [integer()]) -> [integer()].\nlongest_obstacle_course_at_each_position(Obstacles) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_obstacle_course_at_each_position(obstacles :: [integer]) :: [integer]\n  def longest_obstacle_course_at_each_position(obstacles) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "obstacles": [
+          1,
+          2,
+          3,
+          2
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "args": {
+        "obstacles": [
+          2,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "obstacles": [
+          3,
+          1,
+          5,
+          6,
+          4,
+          2
+        ]
+      },
+      "expected": [
+        1,
+        1,
+        2,
+        3,
+        2,
+        2
+      ]
+    }
+  ]
 }

@@ -70,5 +70,68 @@
     "racket": "(define/contract (number-of-sets n maxDistance roads)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec number_of_sets(N :: integer(), MaxDistance :: integer(), Roads :: [[integer()]]) -> integer().\nnumber_of_sets(N, MaxDistance, Roads) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_sets(n :: integer, max_distance :: integer, roads :: [[integer]]) :: integer\n  def number_of_sets(n, max_distance, roads) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "maxDistance": 5,
+        "roads": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            10
+          ],
+          [
+            0,
+            2,
+            10
+          ]
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 3,
+        "maxDistance": 5,
+        "roads": [
+          [
+            0,
+            1,
+            20
+          ],
+          [
+            0,
+            1,
+            10
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      "expected": 7
+    },
+    {
+      "args": {
+        "n": 1,
+        "maxDistance": 10,
+        "roads": []
+      },
+      "expected": 2
+    }
+  ]
 }

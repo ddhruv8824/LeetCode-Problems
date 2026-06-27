@@ -59,5 +59,63 @@
     "racket": "(define/contract (shortest-path grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec shortest_path(Grid :: [[integer()]], K :: integer()) -> integer().\nshortest_path(Grid, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec shortest_path(grid :: [[integer]], k :: integer) :: integer\n  def shortest_path(grid, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "k": 1
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "k": 1
+      },
+      "expected": -1
+    }
+  ]
 }

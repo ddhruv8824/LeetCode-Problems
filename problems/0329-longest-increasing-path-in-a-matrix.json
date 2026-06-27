@@ -66,5 +66,57 @@
     "racket": "(define/contract (longest-increasing-path matrix)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec longest_increasing_path(Matrix :: [[integer()]]) -> integer().\nlongest_increasing_path(Matrix) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_increasing_path(matrix :: [[integer]]) :: integer\n  def longest_increasing_path(matrix) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "matrix": [
+          [
+            9,
+            9,
+            4
+          ],
+          [
+            6,
+            6,
+            8
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "matrix": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            2,
+            6
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "matrix": []
+      },
+      "expected": 0
+    }
+  ]
 }

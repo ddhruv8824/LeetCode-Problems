@@ -53,5 +53,21 @@
     "racket": "(define/contract (max-bottles-drunk numBottles numExchange)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec max_bottles_drunk(NumBottles :: integer(), NumExchange :: integer()) -> integer().\nmax_bottles_drunk(NumBottles, NumExchange) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_bottles_drunk(num_bottles :: integer, num_exchange :: integer) :: integer\n  def max_bottles_drunk(num_bottles, num_exchange) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "numBottles": 13,
+        "numExchange": 6
+      },
+      "expected": 15
+    },
+    {
+      "args": {
+        "numBottles": 10,
+        "numExchange": 3
+      },
+      "expected": 13
+    }
+  ]
 }

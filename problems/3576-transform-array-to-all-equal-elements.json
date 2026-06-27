@@ -51,5 +51,34 @@
     "racket": "(define/contract (can-make-equal nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
     "erlang": "-spec can_make_equal(Nums :: [integer()], K :: integer()) -> boolean().\ncan_make_equal(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_make_equal(nums :: [integer], k :: integer) :: boolean\n  def can_make_equal(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "k": 3
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "k": 5
+      },
+      "expected": false
+    }
+  ]
 }

@@ -46,5 +46,39 @@
     "racket": "(define median-finder%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; add-num : exact-integer? -> void?\n    (define/public (add-num num)\n      )\n    ; find-median : -> flonum?\n    (define/public (find-median)\n      )))\n\n;; Your median-finder% object will be instantiated and called as such:\n;; (define obj (new median-finder%))\n;; (send obj add-num num)\n;; (define param_2 (send obj find-median))",
     "erlang": "-spec median_finder_init_() -> any().\nmedian_finder_init_() ->\n  .\n\n-spec median_finder_add_num(Num :: integer()) -> any().\nmedian_finder_add_num(Num) ->\n  .\n\n-spec median_finder_find_median() -> float().\nmedian_finder_find_median() ->\n  .\n\n\n%% Your functions will be called as such:\n%% median_finder_init_(),\n%% median_finder_add_num(Num),\n%% Param_2 = median_finder_find_median(),\n\n%% median_finder_init_ will be called before every test case, in which you can do some necessary initializations.",
     "elixir": "defmodule MedianFinder do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec add_num(num :: integer) :: any\n  def add_num(num) do\n    \n  end\n\n  @spec find_median() :: float\n  def find_median() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MedianFinder.init_()\n# MedianFinder.add_num(num)\n# param_2 = MedianFinder.find_median()\n\n# MedianFinder.init_ will be called before every test case, in which you can do some necessary initializations."
-  }
+  },
+  "test_cases": [
+    {
+      "functions": [
+        "MedianFinder",
+        "addNum",
+        "addNum",
+        "findMedian",
+        "addNum",
+        "findMedian"
+      ],
+      "args": [
+        [],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [],
+        [
+          3
+        ],
+        []
+      ],
+      "expected": [
+        null,
+        null,
+        null,
+        1.5,
+        null,
+        2
+      ]
+    }
+  ]
 }

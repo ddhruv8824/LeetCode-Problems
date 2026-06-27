@@ -52,5 +52,30 @@
     "racket": "(define/contract (find-the-array-conc-val nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_the_array_conc_val(Nums :: [integer()]) -> integer().\nfind_the_array_conc_val(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_the_array_conc_val(nums :: [integer]) :: integer\n  def find_the_array_conc_val(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          52,
+          2,
+          4
+        ]
+      },
+      "expected": 596
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          14,
+          13,
+          8,
+          12
+        ]
+      },
+      "expected": 673
+    }
+  ]
 }

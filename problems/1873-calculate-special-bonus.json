@@ -29,5 +29,130 @@
     "oraclesql": "/* Write your PL/SQL query statement below */\n",
     "pythondata": "import pandas as pd\n\ndef calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:\n    ",
     "postgresql": "-- Write your PostgreSQL query statement below\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "employees": [
+          {
+            "employee_id": 2,
+            "name": "Meir",
+            "salary": 3000
+          },
+          {
+            "employee_id": 3,
+            "name": "Michael",
+            "salary": 3800
+          },
+          {
+            "employee_id": 7,
+            "name": "Addilyn",
+            "salary": 7400
+          },
+          {
+            "employee_id": 8,
+            "name": "Juan",
+            "salary": 6100
+          },
+          {
+            "employee_id": 9,
+            "name": "Kannon",
+            "salary": 7700
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 2,
+          "bonus": 0
+        },
+        {
+          "employee_id": 3,
+          "bonus": 0
+        },
+        {
+          "employee_id": 7,
+          "bonus": 7400
+        },
+        {
+          "employee_id": 8,
+          "bonus": 0
+        },
+        {
+          "employee_id": 9,
+          "bonus": 7700
+        }
+      ]
+    },
+    {
+      "args": {
+        "employees": [
+          {
+            "employee_id": 1,
+            "name": "John",
+            "salary": 1000
+          },
+          {
+            "employee_id": 2,
+            "name": "Mary",
+            "salary": 2000
+          },
+          {
+            "employee_id": 3,
+            "name": "David",
+            "salary": 3000
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 1,
+          "bonus": 1000
+        },
+        {
+          "employee_id": 2,
+          "bonus": 0
+        },
+        {
+          "employee_id": 3,
+          "bonus": 3000
+        }
+      ]
+    },
+    {
+      "args": {
+        "employees": [
+          {
+            "employee_id": 10,
+            "name": "Emily",
+            "salary": 5000
+          },
+          {
+            "employee_id": 11,
+            "name": "Michael",
+            "salary": 6000
+          },
+          {
+            "employee_id": 12,
+            "name": "Sarah",
+            "salary": 7000
+          }
+        ]
+      },
+      "expected": [
+        {
+          "employee_id": 10,
+          "bonus": 0
+        },
+        {
+          "employee_id": 11,
+          "bonus": 6000
+        },
+        {
+          "employee_id": 12,
+          "bonus": 0
+        }
+      ]
+    }
+  ]
 }

@@ -56,5 +56,31 @@
     "racket": "(define/contract (number-of-ways n x y)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec number_of_ways(N :: integer(), X :: integer(), Y :: integer()) -> integer().\nnumber_of_ways(N, X, Y) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_ways(n :: integer, x :: integer, y :: integer) :: integer\n  def number_of_ways(n, x, y) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 1,
+        "x": 2,
+        "y": 3
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 5,
+        "x": 2,
+        "y": 1
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "n": 3,
+        "x": 3,
+        "y": 4
+      },
+      "expected": 684
+    }
+  ]
 }

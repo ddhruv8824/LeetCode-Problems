@@ -56,5 +56,19 @@
     "racket": "(define/contract (minimize-string-value s)\n  (-> string? string?)\n  )",
     "erlang": "-spec minimize_string_value(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nminimize_string_value(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimize_string_value(s :: String.t) :: String.t\n  def minimize_string_value(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "???"
+      },
+      "expected": "abc"
+    },
+    {
+      "args": {
+        "s": "a?a?"
+      },
+      "expected": "abac"
+    }
+  ]
 }

@@ -59,5 +59,70 @@
     "racket": "(define/contract (assign-elements groups elements)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec assign_elements(Groups :: [integer()], Elements :: [integer()]) -> [integer()].\nassign_elements(Groups, Elements) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec assign_elements(groups :: [integer], elements :: [integer]) :: [integer]\n  def assign_elements(groups, elements) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "groups": [
+          8,
+          4,
+          3,
+          2,
+          4
+        ],
+        "elements": [
+          4,
+          2
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "groups": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "elements": [
+          5,
+          3,
+          3
+        ]
+      },
+      "expected": [
+        -1,
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "groups": [
+          10,
+          21,
+          30,
+          41
+        ],
+        "elements": [
+          2,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ]
 }

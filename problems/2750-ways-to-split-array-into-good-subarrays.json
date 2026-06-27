@@ -52,5 +52,29 @@
     "racket": "(define/contract (number-of-good-subarray-splits nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_good_subarray_splits(Nums :: [integer()]) -> integer().\nnumber_of_good_subarray_splits(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_good_subarray_splits(nums :: [integer]) :: integer\n  def number_of_good_subarray_splits(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          0,
+          1,
+          0
+        ]
+      },
+      "expected": 1
+    }
+  ]
 }

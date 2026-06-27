@@ -55,5 +55,25 @@
     "racket": "(define/contract (capitalize-title title)\n  (-> string? string?)\n  )",
     "erlang": "-spec capitalize_title(Title :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncapitalize_title(Title) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec capitalize_title(title :: String.t) :: String.t\n  def capitalize_title(title) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "title": "capiTalIze tHe titLe"
+      },
+      "expected": "Capitalize The Title"
+    },
+    {
+      "args": {
+        "title": "First leTTeR of EACH Word"
+      },
+      "expected": "First Letter of Each Word"
+    },
+    {
+      "args": {
+        "title": "i lOve leetcode"
+      },
+      "expected": "i Love Leetcode"
+    }
+  ]
 }

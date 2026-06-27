@@ -52,5 +52,33 @@
     "erlang": "-spec max_kelements(Nums :: [integer()], K :: integer()) -> integer().\nmax_kelements(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_kelements(nums :: [integer], k :: integer) :: integer\n  def max_kelements(nums, k) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach : Priority Queue\n\n#### Intuition\n\nWe are given an integer array `nums` and a number `k`. The goal is to maximize a starting score of 0 by performing an operation exactly `k` times. In each operation, we choose an index `i`, add `nums[i]` to the score, and replace `nums[i]` with `nums[i] / 3`.\n\nWe can solve this using a max heap, which allows us to access the largest element in the array efficiently. We need to select the largest number, add it to the score, and then replace it with one-third of its value, doing this `k` times.\n\nFirst, we build a max heap from the numbers in `nums`. For each operation, we extract the largest number, add it to the score, and replace it with its one-third value. We then push this new value back into the heap. Repeating this process `k` times ensures that the score is maximized.\n\n#### Algorithm\n\n1. Initialize an integer `ans` to store the total score:\n2. Create a max-heap (priority_queue) given by `pq` and push necessary elements of the array `nums` into the heap.\n3. Repeat the following steps `k` times:\n    - Extract the largest element from the heap using `pq.top()`, and remove it from the heap using `pq.pop()`.\n    - Add this largest element to `ans` to update the total score.\n    - Push the one-third value of the largest element (rounded up) into the heap.\n4. Return the value of `ans`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the given `nums` array.\n\n- Time complexity: $O(k \\log n + n \\log n)$\n\n    Initially, in worst case inserting all $n$ elements into the max-heap takes $O(n \\log n)$ time. \n    \n    Each of the $k$ operations involves extracting the largest element from the heap and inserting a new value back into it, both of which take $O(\\log n)$ time. Performing $k$ such operations results in a time complexity of $O(k \\log n)$.\n\n    Therefore, total time complexity is given by $O(k \\log n + n \\log n)$.\n\n- Space complexity: $O(n)$\n\n    The space complexity is dominated by the size of the max-heap, which contains at most $n$ elements. Therefore, the space complexity is $O(n)$.\n\n---"
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach : Priority Queue\n\n#### Intuition\n\nWe are given an integer array `nums` and a number `k`. The goal is to maximize a starting score of 0 by performing an operation exactly `k` times. In each operation, we choose an index `i`, add `nums[i]` to the score, and replace `nums[i]` with `nums[i] / 3`.\n\nWe can solve this using a max heap, which allows us to access the largest element in the array efficiently. We need to select the largest number, add it to the score, and then replace it with one-third of its value, doing this `k` times.\n\nFirst, we build a max heap from the numbers in `nums`. For each operation, we extract the largest number, add it to the score, and replace it with its one-third value. We then push this new value back into the heap. Repeating this process `k` times ensures that the score is maximized.\n\n#### Algorithm\n\n1. Initialize an integer `ans` to store the total score:\n2. Create a max-heap (priority_queue) given by `pq` and push necessary elements of the array `nums` into the heap.\n3. Repeat the following steps `k` times:\n    - Extract the largest element from the heap using `pq.top()`, and remove it from the heap using `pq.pop()`.\n    - Add this largest element to `ans` to update the total score.\n    - Push the one-third value of the largest element (rounded up) into the heap.\n4. Return the value of `ans`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the given `nums` array.\n\n- Time complexity: $O(k \\log n + n \\log n)$\n\n    Initially, in worst case inserting all $n$ elements into the max-heap takes $O(n \\log n)$ time. \n    \n    Each of the $k$ operations involves extracting the largest element from the heap and inserting a new value back into it, both of which take $O(\\log n)$ time. Performing $k$ such operations results in a time complexity of $O(k \\log n)$.\n\n    Therefore, total time complexity is given by $O(k \\log n + n \\log n)$.\n\n- Space complexity: $O(n)$\n\n    The space complexity is dominated by the size of the max-heap, which contains at most $n$ elements. Therefore, the space complexity is $O(n)$.\n\n---",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "k": 5
+      },
+      "expected": 50
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          10,
+          3,
+          3,
+          3
+        ],
+        "k": 3
+      },
+      "expected": 17
+    }
+  ]
 }

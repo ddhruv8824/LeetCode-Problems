@@ -52,5 +52,49 @@
     "scala": "object Solution {\n    def compress(chars: Array[Char]): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn compress(chars: &mut Vec<char>) -> i32 {\n        \n    }\n}"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n#### Intuition\n\nFirst, we make the following observation. Consider a group `t` of consecutive repeating characters. The length of compressed `t` is less than or equal to the length of `t`. For example, `d` tranforms into `d`, `cc` into `c2`, `aaaa` into `a4`, `bbbbbbbbbbbb` into `b12`.\n\nThis observation allows processing groups in the array `chars` from left to right.\n\n!?!../Documents/443/slideshow.json:960,540!?!\n\nIn the slideshow above, we compress the array `chars = [\"c\",\"c\",\"b\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\"]`. First, we process the group `cc`, then `b`, and finally `aaaaaaaaaa`.\n\nUnprocessed characters are in white cells.\n\nProcessed characters that we may overwrite in the future are in blue cells.\n\nCharacters that belong to the answer and will not change are in green cells.\n\nWhen processing a group, we first find its size `groupLength` and paint its cells blue. Then we append the character of the group to the answer. If `groupLength` is greater than $1$, we also append the string representation of `groupLength` to the answer. Because the problem wants us to form the answer in place, instead of \"appending\" to the answer we will overwrite the corresponding blue cells by repainting them green.\n\nWhite cells will eventually become blue and blue ones may become green. Since the compressed group takes up fewer cells than the uncompressed, the white cell cannot immediately become green.\n\n#### Algorithm\n\n1. Declare the variables `i` – the first index of the current group, and `res` – the length of the answer (of the compressed string). Initialize `i = 0`, `res = 0`.\n2. While `i` is less than the length of `chars`:\n\t* Find the length of the current group of consecutive repeating characters `groupLength`.\n\t* Add `chars[i]` to the answer (`chars[res++] = chars[i]`).\n\t* If `groupLength > 1`, add the string representation of `groupLength` to the answer and increase `res` accordingly.\n\t* Increase `i` by `groupLength` and proceed to the next group.\n3. Return `res`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of `chars`.\n\n* Time complexity: $O(n)$.\n\n\tAll cells are initially white. We will repaint each white cell blue, and we may repaint some blue cells green. Thus each cell will be repainted at most twice. Since there are $n$ cells, the total number of repaintings is $O(n)$.\n\n* Space complexity: $O(1)$.\n\n\tWe store only a few integer variables and the string representation of `groupLength` which takes up $O(1)$ space."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n#### Intuition\n\nFirst, we make the following observation. Consider a group `t` of consecutive repeating characters. The length of compressed `t` is less than or equal to the length of `t`. For example, `d` tranforms into `d`, `cc` into `c2`, `aaaa` into `a4`, `bbbbbbbbbbbb` into `b12`.\n\nThis observation allows processing groups in the array `chars` from left to right.\n\n!?!../Documents/443/slideshow.json:960,540!?!\n\nIn the slideshow above, we compress the array `chars = [\"c\",\"c\",\"b\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\",\"a\"]`. First, we process the group `cc`, then `b`, and finally `aaaaaaaaaa`.\n\nUnprocessed characters are in white cells.\n\nProcessed characters that we may overwrite in the future are in blue cells.\n\nCharacters that belong to the answer and will not change are in green cells.\n\nWhen processing a group, we first find its size `groupLength` and paint its cells blue. Then we append the character of the group to the answer. If `groupLength` is greater than $1$, we also append the string representation of `groupLength` to the answer. Because the problem wants us to form the answer in place, instead of \"appending\" to the answer we will overwrite the corresponding blue cells by repainting them green.\n\nWhite cells will eventually become blue and blue ones may become green. Since the compressed group takes up fewer cells than the uncompressed, the white cell cannot immediately become green.\n\n#### Algorithm\n\n1. Declare the variables `i` – the first index of the current group, and `res` – the length of the answer (of the compressed string). Initialize `i = 0`, `res = 0`.\n2. While `i` is less than the length of `chars`:\n\t* Find the length of the current group of consecutive repeating characters `groupLength`.\n\t* Add `chars[i]` to the answer (`chars[res++] = chars[i]`).\n\t* If `groupLength > 1`, add the string representation of `groupLength` to the answer and increase `res` accordingly.\n\t* Increase `i` by `groupLength` and proceed to the next group.\n3. Return `res`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of `chars`.\n\n* Time complexity: $O(n)$.\n\n\tAll cells are initially white. We will repaint each white cell blue, and we may repaint some blue cells green. Thus each cell will be repainted at most twice. Since there are $n$ cells, the total number of repaintings is $O(n)$.\n\n* Space complexity: $O(1)$.\n\n\tWe store only a few integer variables and the string representation of `groupLength` which takes up $O(1)$ space.",
+  "test_cases": [
+    {
+      "args": {
+        "chars": [
+          "a",
+          "a",
+          "b",
+          "b",
+          "c",
+          "c",
+          "c"
+        ]
+      },
+      "expected": "Return 6, and the first 6 characters of the input array should be: [\"a\",\"2\",\"b\",\"2\",\"c\",\"3\"]"
+    },
+    {
+      "args": {
+        "chars": [
+          "a"
+        ]
+      },
+      "expected": "Return 1, and the first character of the input array should be: [\"a\"]"
+    },
+    {
+      "args": {
+        "chars": [
+          "a",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b",
+          "b"
+        ]
+      },
+      "expected": "Return 4, and the first 4 characters of the input array should be: [\"a\",\"b\",\"1\",\"2\"]."
+    }
+  ]
 }

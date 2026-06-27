@@ -57,5 +57,48 @@
     "racket": "(define/contract (watering-plants plants capacity)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec watering_plants(Plants :: [integer()], Capacity :: integer()) -> integer().\nwatering_plants(Plants, Capacity) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec watering_plants(plants :: [integer], capacity :: integer) :: integer\n  def watering_plants(plants, capacity) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "plants": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "capacity": 5
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "plants": [
+          1,
+          1,
+          1,
+          4,
+          2,
+          3
+        ],
+        "capacity": 4
+      },
+      "expected": 30
+    },
+    {
+      "args": {
+        "plants": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "capacity": 8
+      },
+      "expected": 49
+    }
+  ]
 }

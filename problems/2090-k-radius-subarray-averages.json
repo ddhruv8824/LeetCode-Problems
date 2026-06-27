@@ -63,5 +63,56 @@
     "racket": "(define/contract (get-averages nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec get_averages(Nums :: [integer()], K :: integer()) -> [integer()].\nget_averages(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_averages(nums :: [integer], k :: integer) :: [integer]\n  def get_averages(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          7,
+          4,
+          3,
+          9,
+          1,
+          8,
+          5,
+          2,
+          6
+        ],
+        "k": 3
+      },
+      "expected": [
+        -1,
+        -1,
+        -1,
+        5,
+        4,
+        4,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          100000
+        ],
+        "k": 0
+      },
+      "expected": [
+        100000
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          8
+        ],
+        "k": 100000
+      },
+      "expected": [
+        -1
+      ]
+    }
+  ]
 }

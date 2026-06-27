@@ -63,5 +63,38 @@
     "racket": "(define/contract (count-prefix-suffix-pairs words)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec count_prefix_suffix_pairs(Words :: [unicode:unicode_binary()]) -> integer().\ncount_prefix_suffix_pairs(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_prefix_suffix_pairs(words :: [String.t]) :: integer\n  def count_prefix_suffix_pairs(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "a",
+          "aba",
+          "ababa",
+          "aa"
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "words": [
+          "pa",
+          "papa",
+          "ma",
+          "mama"
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "words": [
+          "abab",
+          "ab"
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -56,5 +56,89 @@
     "scala": "object Solution {\r\n    def rotateGrid(grid: Array[Array[Int]], k: Int): Array[Array[Int]] = {\r\n        \r\n    }\r\n}",
     "rust": "impl Solution {\r\n    pub fn rotate_grid(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {\r\n        \r\n    }\r\n}",
     "racket": "(define/contract (rotate-grid grid k)\r\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\r\n\r\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            40,
+            10
+          ],
+          [
+            30,
+            20
+          ]
+        ],
+        "k": 1
+      },
+      "expected": [
+        [
+          10,
+          20
+        ],
+        [
+          40,
+          30
+        ]
+      ]
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            9,
+            10,
+            11,
+            12
+          ],
+          [
+            13,
+            14,
+            15,
+            16
+          ]
+        ],
+        "k": 2
+      },
+      "expected": [
+        [
+          3,
+          4,
+          8,
+          12
+        ],
+        [
+          2,
+          11,
+          10,
+          16
+        ],
+        [
+          1,
+          7,
+          6,
+          15
+        ],
+        [
+          5,
+          9,
+          13,
+          14
+        ]
+      ]
+    }
+  ]
 }

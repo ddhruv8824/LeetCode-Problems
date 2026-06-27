@@ -60,5 +60,97 @@
     "racket": "(define/contract (max-number-of-alloys n k budget composition stock cost)\n  (-> exact-integer? exact-integer? exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec max_number_of_alloys(N :: integer(), K :: integer(), Budget :: integer(), Composition :: [[integer()]], Stock :: [integer()], Cost :: [integer()]) -> integer().\nmax_number_of_alloys(N, K, Budget, Composition, Stock, Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_number_of_alloys(n :: integer, k :: integer, budget :: integer, composition :: [[integer]], stock :: [integer], cost :: [integer]) :: integer\n  def max_number_of_alloys(n, k, budget, composition, stock, cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 3,
+        "k": 2,
+        "budget": 15,
+        "composition": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            10
+          ]
+        ],
+        "stock": [
+          0,
+          0,
+          0
+        ],
+        "cost": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 3,
+        "k": 2,
+        "budget": 15,
+        "composition": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            10
+          ]
+        ],
+        "stock": [
+          0,
+          0,
+          100
+        ],
+        "cost": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 2,
+        "k": 3,
+        "budget": 10,
+        "composition": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "stock": [
+          1,
+          1
+        ],
+        "cost": [
+          5,
+          5
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

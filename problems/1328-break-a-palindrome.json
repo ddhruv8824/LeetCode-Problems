@@ -52,5 +52,19 @@
     "racket": "(define/contract (break-palindrome palindrome)\n  (-> string? string?)\n  )",
     "erlang": "-spec break_palindrome(Palindrome :: unicode:unicode_binary()) -> unicode:unicode_binary().\nbreak_palindrome(Palindrome) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec break_palindrome(palindrome :: String.t) :: String.t\n  def break_palindrome(palindrome) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "palindrome": "abccba"
+      },
+      "expected": "aaccba"
+    },
+    {
+      "args": {
+        "palindrome": "a"
+      },
+      "expected": ""
+    }
+  ]
 }

@@ -62,5 +62,75 @@
     "racket": "(define/contract (best-coordinate towers radius)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec best_coordinate(Towers :: [[integer()]], Radius :: integer()) -> [integer()].\nbest_coordinate(Towers, Radius) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec best_coordinate(towers :: [[integer]], radius :: integer) :: [integer]\n  def best_coordinate(towers, radius) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "towers": [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            2,
+            1,
+            7
+          ],
+          [
+            3,
+            1,
+            9
+          ]
+        ],
+        "radius": 2
+      },
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "towers": [
+          [
+            23,
+            11,
+            21
+          ]
+        ],
+        "radius": 9
+      },
+      "expected": [
+        23,
+        11
+      ]
+    },
+    {
+      "args": {
+        "towers": [
+          [
+            1,
+            2,
+            13
+          ],
+          [
+            2,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            9
+          ]
+        ],
+        "radius": 2
+      },
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
 }

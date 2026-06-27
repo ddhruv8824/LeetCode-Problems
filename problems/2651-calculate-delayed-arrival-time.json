@@ -49,5 +49,21 @@
     "racket": "(define/contract (find-delayed-arrival-time arrivalTime delayedTime)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_delayed_arrival_time(ArrivalTime :: integer(), DelayedTime :: integer()) -> integer().\nfind_delayed_arrival_time(ArrivalTime, DelayedTime) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_delayed_arrival_time(arrival_time :: integer, delayed_time :: integer) :: integer\n  def find_delayed_arrival_time(arrival_time, delayed_time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arrivalTime": 15,
+        "delayedTime": 5
+      },
+      "expected": 20
+    },
+    {
+      "args": {
+        "arrivalTime": 13,
+        "delayedTime": 11
+      },
+      "expected": 0
+    }
+  ]
 }

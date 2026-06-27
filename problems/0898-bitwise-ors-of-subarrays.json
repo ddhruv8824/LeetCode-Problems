@@ -53,5 +53,35 @@
     "racket": "(define/contract (subarray-bitwise-o-rs arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec subarray_bitwise_o_rs(Arr :: [integer()]) -> integer().\nsubarray_bitwise_o_rs(Arr) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec subarray_bitwise_o_rs(arr :: [integer]) :: integer\n  def subarray_bitwise_o_rs(arr) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr": [
+          0
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          1,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "arr": [
+          1,
+          2,
+          4
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

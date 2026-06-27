@@ -57,5 +57,25 @@
     "racket": "(define/contract (count-primes n)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec count_primes(N :: integer()) -> integer().\ncount_primes(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_primes(n :: integer) :: integer\n  def count_primes(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 10
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "n": 0
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -49,5 +49,19 @@
     "racket": "(define/contract (is-fascinating n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec is_fascinating(N :: integer()) -> boolean().\nis_fascinating(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_fascinating(n :: integer) :: boolean\n  def is_fascinating(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 192
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 100
+      },
+      "expected": false
+    }
+  ]
 }

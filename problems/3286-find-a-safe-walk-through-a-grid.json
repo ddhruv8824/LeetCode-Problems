@@ -68,5 +68,99 @@
     "racket": "(define/contract (find-safe-walk grid health)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
     "erlang": "-spec find_safe_walk(Grid :: [[integer()]], Health :: integer()) -> boolean().\nfind_safe_walk(Grid, Health) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_safe_walk(grid :: [[integer]], health :: integer) :: boolean\n  def find_safe_walk(grid, health) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "health": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        ],
+        "health": 3
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "health": 5
+      },
+      "expected": true
+    }
+  ]
 }

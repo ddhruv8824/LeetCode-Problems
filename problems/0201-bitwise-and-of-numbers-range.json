@@ -50,5 +50,28 @@
     "racket": "(define/contract (range-bitwise-and left right)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec range_bitwise_and(Left :: integer(), Right :: integer()) -> integer().\nrange_bitwise_and(Left, Right) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec range_bitwise_and(left :: integer, right :: integer) :: integer\n  def range_bitwise_and(left, right) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "left": 5,
+        "right": 7
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "left": 0,
+        "right": 0
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "left": 1,
+        "right": 2147483647
+      },
+      "expected": 0
+    }
+  ]
 }

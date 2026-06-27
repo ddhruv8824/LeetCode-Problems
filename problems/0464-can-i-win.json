@@ -56,5 +56,35 @@
     "racket": "(define/contract (can-i-win maxChoosableInteger desiredTotal)\n  (-> exact-integer? exact-integer? boolean?)\n  )",
     "erlang": "-spec can_i_win(MaxChoosableInteger :: integer(), DesiredTotal :: integer()) -> boolean().\ncan_i_win(MaxChoosableInteger, DesiredTotal) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_i_win(max_choosable_integer :: integer, desired_total :: integer) :: boolean\n  def can_i_win(max_choosable_integer, desired_total) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "maxChoosableInteger": 10,
+        "desiredTotal": 11
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "maxChoosableInteger": 10,
+        "desiredTotal": 0
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "maxChoosableInteger": 0,
+        "desiredTotal": 0
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "maxChoosableInteger": 5,
+        "desiredTotal": 50
+      },
+      "expected": false
+    }
+  ]
 }

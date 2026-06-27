@@ -81,5 +81,197 @@
     "golang": "/**\n * Definition for a Node.\n * type Node struct {\n *     Val int\n *     Prev *Node\n *     Next *Node\n *     Child *Node\n * }\n */\n\nfunc flatten(root *Node) *Node {\n    \n}",
     "ruby": "# Definition for a Node.\n# class Node\n#     attr_accessor :val, :prev, :next, :child\n#     def initialize(val=nil, prev=nil, next_=nil, child=nil)\n#         @val = val\n#         @prev = prev\n#         @next = next_\n#         @child = child\n#     end\n# end\n\n# @param {Node} root\n# @return {Node}\ndef flatten(root)\n    \nend",
     "scala": "/**\n * Definition for a Node.\n * class Node(var _value: Int) {\n *   var value: Int = _value\n *   var prev: Node = null\n *   var next: Node = null\n *   var child: Node = null\n * }\n */\n\nobject Solution {\n    def flatten(head: Node): Node = {\n    \t\n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": {
+          "$id": "1",
+          "child": null,
+          "next": {
+            "$id": "2",
+            "child": null,
+            "next": {
+              "$id": "3",
+              "child": {
+                "$id": "7",
+                "child": null,
+                "next": {
+                  "$id": "8",
+                  "child": {
+                    "$id": "11",
+                    "child": null,
+                    "next": {
+                      "$id": "12",
+                      "child": null,
+                      "next": null,
+                      "prev": {
+                        "$ref": "11"
+                      },
+                      "val": 12
+                    },
+                    "prev": null,
+                    "val": 11
+                  },
+                  "next": {
+                    "$id": "9",
+                    "child": null,
+                    "next": {
+                      "$id": "10",
+                      "child": null,
+                      "next": null,
+                      "prev": {
+                        "$ref": "9"
+                      },
+                      "val": 10
+                    },
+                    "prev": {
+                      "$ref": "8"
+                    },
+                    "val": 9
+                  },
+                  "prev": {
+                    "$ref": "7"
+                  },
+                  "val": 8
+                },
+                "prev": null,
+                "val": 7
+              },
+              "next": {
+                "$id": "4",
+                "child": null,
+                "next": {
+                  "$id": "5",
+                  "child": null,
+                  "next": {
+                    "$id": "6",
+                    "child": null,
+                    "next": null,
+                    "prev": {
+                      "$ref": "5"
+                    },
+                    "val": 6
+                  },
+                  "prev": {
+                    "$ref": "4"
+                  },
+                  "val": 5
+                },
+                "prev": {
+                  "$ref": "3"
+                },
+                "val": 4
+              },
+              "prev": {
+                "$ref": "2"
+              },
+              "val": 3
+            },
+            "prev": {
+              "$ref": "1"
+            },
+            "val": 2
+          },
+          "prev": null,
+          "val": 1
+        }
+      },
+      "expected": {
+        "$id": "1",
+        "child": null,
+        "next": {
+          "$id": "2",
+          "child": null,
+          "next": {
+            "$id": "3",
+            "child": null,
+            "next": {
+              "$id": "4",
+              "child": null,
+              "next": {
+                "$id": "5",
+                "child": null,
+                "next": {
+                  "$id": "6",
+                  "child": null,
+                  "next": {
+                    "$id": "7",
+                    "child": null,
+                    "next": {
+                      "$id": "8",
+                      "child": null,
+                      "next": {
+                        "$id": "9",
+                        "child": null,
+                        "next": {
+                          "$id": "10",
+                          "child": null,
+                          "next": {
+                            "$id": "11",
+                            "child": null,
+                            "next": {
+                              "$id": "12",
+                              "child": null,
+                              "next": null,
+                              "prev": {
+                                "$ref": "11"
+                              },
+                              "val": 6
+                            },
+                            "prev": {
+                              "$ref": "10"
+                            },
+                            "val": 5
+                          },
+                          "prev": {
+                            "$ref": "9"
+                          },
+                          "val": 4
+                        },
+                        "prev": {
+                          "$ref": "8"
+                        },
+                        "val": 10
+                      },
+                      "prev": {
+                        "$ref": "7"
+                      },
+                      "val": 9
+                    },
+                    "prev": {
+                      "$ref": "6"
+                    },
+                    "val": 12
+                  },
+                  "prev": {
+                    "$ref": "5"
+                  },
+                  "val": 11
+                },
+                "prev": {
+                  "$ref": "4"
+                },
+                "val": 8
+              },
+              "prev": {
+                "$ref": "3"
+              },
+              "val": 7
+            },
+            "prev": {
+              "$ref": "2"
+            },
+            "val": 3
+          },
+          "prev": {
+            "$ref": "1"
+          },
+          "val": 2
+        },
+        "prev": null,
+        "val": 1
+      }
+    }
+  ]
 }

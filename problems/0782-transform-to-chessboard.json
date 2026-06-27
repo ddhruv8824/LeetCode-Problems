@@ -62,5 +62,68 @@
     "racket": "(define/contract (moves-to-chessboard board)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec moves_to_chessboard(Board :: [[integer()]]) -> integer().\nmoves_to_chessboard(Board) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec moves_to_chessboard(board :: [[integer]]) :: integer\n  def moves_to_chessboard(board) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "board": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "board": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

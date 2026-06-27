@@ -58,5 +58,46 @@
     "racket": "(define/contract (have-conflict event1 event2)\n  (-> (listof string?) (listof string?) boolean?)\n  )",
     "erlang": "-spec have_conflict(Event1 :: [unicode:unicode_binary()], Event2 :: [unicode:unicode_binary()]) -> boolean().\nhave_conflict(Event1, Event2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec have_conflict(event1 :: [String.t], event2 :: [String.t]) :: boolean\n  def have_conflict(event1, event2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "event1": [
+          "01:15",
+          "02:00"
+        ],
+        "event2": [
+          "02:00",
+          "03:00"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "event1": [
+          "01:00",
+          "02:00"
+        ],
+        "event2": [
+          "01:20",
+          "03:00"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "event1": [
+          "10:00",
+          "11:00"
+        ],
+        "event2": [
+          "14:00",
+          "15:00"
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

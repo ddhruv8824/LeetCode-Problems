@@ -60,5 +60,44 @@
     "racket": "(define/contract (min-absolute-difference nums x)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec min_absolute_difference(Nums :: [integer()], X :: integer()) -> integer().\nmin_absolute_difference(Nums, X) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_absolute_difference(nums :: [integer], x :: integer) :: integer\n  def min_absolute_difference(nums, x) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          4
+        ],
+        "x": 2
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          5,
+          3,
+          2,
+          10,
+          15
+        ],
+        "x": 1
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "x": 3
+      },
+      "expected": 3
+    }
+  ]
 }

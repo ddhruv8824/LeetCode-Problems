@@ -46,5 +46,45 @@
     "ruby": "# @param {Character[]} s\n# @return {Void} Do not return anything, modify s in-place instead.\ndef reverse_string(s)\n    \nend",
     "scala": "object Solution {\n    def reverseString(s: Array[Char]): Unit = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn reverse_string(s: &mut Vec<char>) {\n        \n    }\n}"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": [
+          "h",
+          "e",
+          "l",
+          "l",
+          "o"
+        ]
+      },
+      "expected": [
+        "o",
+        "l",
+        "l",
+        "e",
+        "h"
+      ]
+    },
+    {
+      "args": {
+        "s": [
+          "H",
+          "a",
+          "n",
+          "n",
+          "a",
+          "h"
+        ]
+      },
+      "expected": [
+        "h",
+        "a",
+        "n",
+        "n",
+        "a",
+        "H"
+      ]
+    }
+  ]
 }

@@ -49,5 +49,23 @@
     "racket": "(define/contract (ways-to-buy-pens-pencils total cost1 cost2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec ways_to_buy_pens_pencils(Total :: integer(), Cost1 :: integer(), Cost2 :: integer()) -> integer().\nways_to_buy_pens_pencils(Total, Cost1, Cost2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ways_to_buy_pens_pencils(total :: integer, cost1 :: integer, cost2 :: integer) :: integer\n  def ways_to_buy_pens_pencils(total, cost1, cost2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "total": 20,
+        "cost1": 10,
+        "cost2": 5
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "total": 5,
+        "cost1": 10,
+        "cost2": 10
+      },
+      "expected": 1
+    }
+  ]
 }

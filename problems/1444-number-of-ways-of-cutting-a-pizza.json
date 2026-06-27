@@ -69,5 +69,40 @@
     "racket": "(define/contract (ways pizza k)\n  (-> (listof string?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec ways(Pizza :: [unicode:unicode_binary()], K :: integer()) -> integer().\nways(Pizza, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec ways(pizza :: [String.t], k :: integer) :: integer\n  def ways(pizza, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pizza": [
+          "A..",
+          "AAA",
+          "..."
+        ],
+        "k": 3
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "pizza": [
+          "A..",
+          "AA.",
+          "..."
+        ],
+        "k": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "pizza": [
+          "A..",
+          "A..",
+          "..."
+        ],
+        "k": 1
+      },
+      "expected": 1
+    }
+  ]
 }

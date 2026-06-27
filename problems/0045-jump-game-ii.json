@@ -49,5 +49,31 @@
     "racket": "(define/contract (jump nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec jump(Nums :: [integer()]) -> integer().\njump(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec jump(nums :: [integer]) :: integer\n  def jump(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          0,
+          1,
+          4
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

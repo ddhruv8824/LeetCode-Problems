@@ -59,5 +59,33 @@
     "racket": "(define/contract (min-increments n cost)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_increments(N :: integer(), Cost :: [integer()]) -> integer().\nmin_increments(N, Cost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_increments(n :: integer, cost :: [integer]) :: integer\n  def min_increments(n, cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "cost": [
+          1,
+          5,
+          2,
+          2,
+          3,
+          3,
+          1
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "n": 3,
+        "cost": [
+          5,
+          3,
+          3
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -55,5 +55,25 @@
     "racket": "(define/contract (number-of-unique-good-subsequences binary)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec number_of_unique_good_subsequences(Binary :: unicode:unicode_binary()) -> integer().\nnumber_of_unique_good_subsequences(Binary) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_unique_good_subsequences(binary :: String.t) :: integer\n  def number_of_unique_good_subsequences(binary) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "binary": "001"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "binary": "11"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "binary": "101"
+      },
+      "expected": 5
+    }
+  ]
 }

@@ -61,5 +61,64 @@
     "racket": "(define/contract (swim-in-water grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec swim_in_water(Grid :: [[integer()]]) -> integer().\nswim_in_water(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec swim_in_water(grid :: [[integer]]) :: integer\n  def swim_in_water(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            24,
+            23,
+            22,
+            21,
+            5
+          ],
+          [
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          [
+            11,
+            17,
+            18,
+            19,
+            20
+          ],
+          [
+            10,
+            9,
+            8,
+            7,
+            6
+          ]
+        ]
+      },
+      "expected": 16
+    }
+  ]
 }

@@ -53,5 +53,48 @@
     "racket": "(define/contract (plus-one digits)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec plus_one(Digits :: [integer()]) -> [integer()].\nplus_one(Digits) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec plus_one(digits :: [integer]) :: [integer]\n  def plus_one(digits) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "digits": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "args": {
+        "digits": [
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": [
+        4,
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "args": {
+        "digits": [
+          9
+        ]
+      },
+      "expected": [
+        1,
+        0
+      ]
+    }
+  ]
 }

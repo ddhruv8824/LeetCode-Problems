@@ -52,5 +52,28 @@
     "racket": "(define/contract (halve-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec halve_array(Nums :: [integer()]) -> integer().\nhalve_array(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec halve_array(nums :: [integer]) :: integer\n  def halve_array(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          5,
+          19,
+          8,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          8,
+          20
+        ]
+      },
+      "expected": 3
+    }
+  ]
 }

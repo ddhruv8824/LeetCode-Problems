@@ -46,5 +46,19 @@
     "racket": "(define/contract (is-balanced num)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec is_balanced(Num :: unicode:unicode_binary()) -> boolean().\nis_balanced(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_balanced(num :: String.t) :: boolean\n  def is_balanced(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": "1234"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "num": "24123"
+      },
+      "expected": true
+    }
+  ]
 }

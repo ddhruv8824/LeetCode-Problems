@@ -50,5 +50,50 @@
     "racket": "(define/contract (get-good-indices variables target)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
     "erlang": "-spec get_good_indices(Variables :: [[integer()]], Target :: integer()) -> [integer()].\nget_good_indices(Variables, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_good_indices(variables :: [[integer]], target :: integer) :: [integer]\n  def get_good_indices(variables, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "variables": [
+          [
+            2,
+            3,
+            3,
+            10
+          ],
+          [
+            3,
+            3,
+            3,
+            1
+          ],
+          [
+            6,
+            1,
+            1,
+            4
+          ]
+        ],
+        "target": 2
+      },
+      "expected": [
+        0,
+        2
+      ]
+    },
+    {
+      "args": {
+        "variables": [
+          [
+            39,
+            3,
+            1000,
+            1000
+          ]
+        ],
+        "target": 17
+      },
+      "expected": []
+    }
+  ]
 }

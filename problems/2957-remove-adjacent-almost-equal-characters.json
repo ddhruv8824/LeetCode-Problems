@@ -56,5 +56,25 @@
     "racket": "(define/contract (remove-almost-equal-characters word)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec remove_almost_equal_characters(Word :: unicode:unicode_binary()) -> integer().\nremove_almost_equal_characters(Word) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_almost_equal_characters(word :: String.t) :: integer\n  def remove_almost_equal_characters(word) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "aaaaa"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "abddez"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "zyxyxyz"
+      },
+      "expected": 3
+    }
+  ]
 }

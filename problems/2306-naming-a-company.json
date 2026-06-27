@@ -57,5 +57,27 @@
     "racket": "(define/contract (distinct-names ideas)\n  (-> (listof string?) exact-integer?)\n  )",
     "erlang": "-spec distinct_names(Ideas :: [unicode:unicode_binary()]) -> integer().\ndistinct_names(Ideas) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec distinct_names(ideas :: [String.t]) :: integer\n  def distinct_names(ideas) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ideas": [
+          "coffee",
+          "donuts",
+          "time",
+          "toffee"
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "ideas": [
+          "lack",
+          "back"
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

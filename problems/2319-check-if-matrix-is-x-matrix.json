@@ -55,5 +55,60 @@
     "racket": "(define/contract (check-x-matrix grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec check_x_matrix(Grid :: [[integer()]]) -> boolean().\ncheck_x_matrix(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_x_matrix(grid :: [[integer]]) :: boolean\n  def check_x_matrix(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            5,
+            2,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            7,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

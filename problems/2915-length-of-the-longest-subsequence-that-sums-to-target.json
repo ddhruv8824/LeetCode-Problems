@@ -58,5 +58,47 @@
     "racket": "(define/contract (length-of-longest-subsequence nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec length_of_longest_subsequence(Nums :: [integer()], Target :: integer()) -> integer().\nlength_of_longest_subsequence(Nums, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec length_of_longest_subsequence(nums :: [integer], target :: integer) :: integer\n  def length_of_longest_subsequence(nums, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "target": 9
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          1,
+          3,
+          2,
+          1,
+          5
+        ],
+        "target": 7
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          5,
+          4,
+          5
+        ],
+        "target": 3
+      },
+      "expected": -1
+    }
+  ]
 }

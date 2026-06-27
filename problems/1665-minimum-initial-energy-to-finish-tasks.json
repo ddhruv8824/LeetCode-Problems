@@ -56,5 +56,84 @@
     "racket": "(define/contract (minimum-effort tasks)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec minimum_effort(Tasks :: [[integer()]]) -> integer().\nminimum_effort(Tasks) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_effort(tasks :: [[integer]]) :: integer\n  def minimum_effort(tasks) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tasks": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "tasks": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      },
+      "expected": 32
+    },
+    {
+      "args": {
+        "tasks": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            12
+          ]
+        ]
+      },
+      "expected": 27
+    }
+  ]
 }

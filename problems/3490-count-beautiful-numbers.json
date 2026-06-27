@@ -47,5 +47,21 @@
     "racket": "(define/contract (beautiful-numbers l r)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec beautiful_numbers(L :: integer(), R :: integer()) -> integer().\nbeautiful_numbers(L, R) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec beautiful_numbers(l :: integer, r :: integer) :: integer\n  def beautiful_numbers(l, r) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "l": 10,
+        "r": 20
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "l": 1,
+        "r": 15
+      },
+      "expected": 10
+    }
+  ]
 }

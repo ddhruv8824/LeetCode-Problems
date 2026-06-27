@@ -50,5 +50,21 @@
     "racket": "(define/contract (check-two-chessboards coordinate1 coordinate2)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec check_two_chessboards(Coordinate1 :: unicode:unicode_binary(), Coordinate2 :: unicode:unicode_binary()) -> boolean().\ncheck_two_chessboards(Coordinate1, Coordinate2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_two_chessboards(coordinate1 :: String.t, coordinate2 :: String.t) :: boolean\n  def check_two_chessboards(coordinate1, coordinate2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coordinate1": "a1",
+        "coordinate2": "c3"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "coordinate1": "a1",
+        "coordinate2": "h3"
+      },
+      "expected": false
+    }
+  ]
 }

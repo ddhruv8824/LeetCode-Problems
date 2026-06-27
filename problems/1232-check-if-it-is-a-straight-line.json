@@ -58,5 +58,69 @@
     "racket": "(define/contract (check-straight-line coordinates)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
     "erlang": "-spec check_straight_line(Coordinates :: [[integer()]]) -> boolean().\ncheck_straight_line(Coordinates) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_straight_line(coordinates :: [[integer]]) :: boolean\n  def check_straight_line(coordinates) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "coordinates": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "coordinates": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            7
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

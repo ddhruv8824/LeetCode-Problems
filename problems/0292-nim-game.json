@@ -54,5 +54,25 @@
     "racket": "(define/contract (can-win-nim n)\n  (-> exact-integer? boolean?)\n  )",
     "erlang": "-spec can_win_nim(N :: integer()) -> boolean().\ncan_win_nim(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_win_nim(n :: integer) :: boolean\n  def can_win_nim(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 4
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": true
+    }
+  ]
 }

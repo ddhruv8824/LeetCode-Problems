@@ -59,5 +59,39 @@
     "racket": "(define/contract (min-number-of-seconds mountainHeight workerTimes)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_number_of_seconds(MountainHeight :: integer(), WorkerTimes :: [integer()]) -> integer().\nmin_number_of_seconds(MountainHeight, WorkerTimes) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_number_of_seconds(mountain_height :: integer, worker_times :: [integer]) :: integer\n  def min_number_of_seconds(mountain_height, worker_times) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "mountainHeight": 4,
+        "workerTimes": [
+          2,
+          1,
+          1
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "mountainHeight": 10,
+        "workerTimes": [
+          3,
+          2,
+          2,
+          4
+        ]
+      },
+      "expected": 12
+    },
+    {
+      "args": {
+        "mountainHeight": 5,
+        "workerTimes": [
+          1
+        ]
+      },
+      "expected": 15
+    }
+  ]
 }

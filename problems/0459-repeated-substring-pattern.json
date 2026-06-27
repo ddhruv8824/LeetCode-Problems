@@ -52,5 +52,25 @@
     "racket": "(define/contract (repeated-substring-pattern s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec repeated_substring_pattern(S :: unicode:unicode_binary()) -> boolean().\nrepeated_substring_pattern(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec repeated_substring_pattern(s :: String.t) :: boolean\n  def repeated_substring_pattern(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abab"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "aba"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "abcabcabcabc"
+      },
+      "expected": true
+    }
+  ]
 }

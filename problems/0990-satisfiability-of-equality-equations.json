@@ -53,5 +53,22 @@
     "racket": "(define/contract (equations-possible equations)\n  (-> (listof string?) boolean?)\n  )",
     "erlang": "-spec equations_possible(Equations :: [unicode:unicode_binary()]) -> boolean().\nequations_possible(Equations) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec equations_possible(equations :: [String.t]) :: boolean\n  def equations_possible(equations) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "equations": "[\"",
+        "a": "=b\",\"b!=a\"]"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "equations": "[\"",
+        "b": "=a\",\"",
+        "a": "=b\"]"
+      },
+      "expected": true
+    }
+  ]
 }

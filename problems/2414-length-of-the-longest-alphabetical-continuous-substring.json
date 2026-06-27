@@ -49,5 +49,19 @@
     "racket": "(define/contract (longest-continuous-substring s)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec longest_continuous_substring(S :: unicode:unicode_binary()) -> integer().\nlongest_continuous_substring(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec longest_continuous_substring(s :: String.t) :: integer\n  def longest_continuous_substring(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abacaba"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abcde"
+      },
+      "expected": 5
+    }
+  ]
 }

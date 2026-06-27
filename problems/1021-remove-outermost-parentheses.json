@@ -55,5 +55,43 @@
     "racket": "(define/contract (remove-outer-parentheses s)\n  (-> string? string?)\n  )",
     "erlang": "-spec remove_outer_parentheses(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_outer_parentheses(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec remove_outer_parentheses(s :: String.t) :: String.t\n  def remove_outer_parentheses(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "S": "(()())(())"
+      },
+      "expected": "()()()"
+    },
+    {
+      "args": {
+        "S": "(()())(())(()(()))"
+      },
+      "expected": "()()()()(())"
+    },
+    {
+      "args": {
+        "S": "()()"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "S": "(())"
+      },
+      "expected": "()"
+    },
+    {
+      "args": {
+        "S": "()"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "S": ""
+      },
+      "expected": ""
+    }
+  ]
 }

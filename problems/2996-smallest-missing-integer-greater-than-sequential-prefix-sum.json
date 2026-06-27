@@ -50,5 +50,33 @@
     "racket": "(define/contract (missing-integer nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec missing_integer(Nums :: [integer()]) -> integer().\nmissing_integer(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec missing_integer(nums :: [integer]) :: integer\n  def missing_integer(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          2,
+          5
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          4,
+          5,
+          1,
+          12,
+          14,
+          13
+        ]
+      },
+      "expected": 15
+    }
+  ]
 }

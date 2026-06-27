@@ -53,5 +53,19 @@
     "racket": "(define/contract (has-same-digits s)\n  (-> string? boolean?)\n  )",
     "erlang": "-spec has_same_digits(S :: unicode:unicode_binary()) -> boolean().\nhas_same_digits(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec has_same_digits(s :: String.t) :: boolean\n  def has_same_digits(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "3902"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "34789"
+      },
+      "expected": false
+    }
+  ]
 }

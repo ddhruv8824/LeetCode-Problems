@@ -53,5 +53,19 @@
     "racket": "(define/contract (is-valid-sudoku board)\n  (-> (listof (listof char?)) boolean?)\n  )",
     "erlang": "-spec is_valid_sudoku(Board :: [[char()]]) -> boolean().\nis_valid_sudoku(Board) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_valid_sudoku(board :: [[char]]) :: boolean\n  def is_valid_sudoku(board) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "board": ""
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "board": ""
+      },
+      "expected": false
+    }
+  ]
 }

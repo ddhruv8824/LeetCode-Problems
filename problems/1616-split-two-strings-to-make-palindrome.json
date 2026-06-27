@@ -56,5 +56,28 @@
     "racket": "(define/contract (check-palindrome-formation a b)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec check_palindrome_formation(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> boolean().\ncheck_palindrome_formation(A, B) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec check_palindrome_formation(a :: String.t, b :: String.t) :: boolean\n  def check_palindrome_formation(a, b) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "a": "x",
+        "b": "y"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "a": "xbdef",
+        "b": "xecab"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "a": "ulacfd",
+        "b": "jizalu"
+      },
+      "expected": true
+    }
+  ]
 }

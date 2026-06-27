@@ -34,5 +34,31 @@
     "oraclesql": "CREATE FUNCTION getNthHighestSalary(N IN NUMBER) RETURN NUMBER IS\nresult NUMBER;\nBEGIN\n    /* Write your PL/SQL query statement below */\n\n    RETURN result;\nEND;",
     "pythondata": "import pandas as pd\n\ndef nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:",
     "postgresql": "CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) RETURNS TABLE (Salary INT) AS $$\nBEGIN\n  RETURN QUERY (\n    -- Write your PostgreSQL query statement below.\n    \n      \n  );\nEND;\n$$ LANGUAGE plpgsql;"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": 200
+    },
+    {
+      "args": {
+        "n": 2
+      },
+      "expected": null
+    },
+    {
+      "args": {
+        "n": 1
+      },
+      "expected": 300
+    },
+    {
+      "args": {
+        "n": 3
+      },
+      "expected": 100
+    }
+  ]
 }

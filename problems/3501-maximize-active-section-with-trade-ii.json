@@ -68,5 +68,98 @@
     "racket": "(define/contract (max-active-sections-after-trade s queries)\n  (-> string? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec max_active_sections_after_trade(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [integer()].\nmax_active_sections_after_trade(S, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_active_sections_after_trade(s :: String.t, queries :: [[integer]]) :: [integer]\n  def max_active_sections_after_trade(s, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "01",
+        "queries": [
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": {
+        "s": "0100",
+        "queries": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "args": {
+        "s": "1000100",
+        "queries": [
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        6,
+        7,
+        2
+      ]
+    },
+    {
+      "args": {
+        "s": "01010",
+        "queries": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": [
+        4,
+        4,
+        2
+      ]
+    }
+  ]
 }

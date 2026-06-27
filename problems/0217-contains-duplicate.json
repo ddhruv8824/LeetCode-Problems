@@ -53,5 +53,46 @@
     "racket": "(define/contract (contains-duplicate nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec contains_duplicate(Nums :: [integer()]) -> boolean().\ncontains_duplicate(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec contains_duplicate(nums :: [integer]) :: boolean\n  def contains_duplicate(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          1,
+          1,
+          3,
+          3,
+          4,
+          3,
+          2,
+          4,
+          2
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

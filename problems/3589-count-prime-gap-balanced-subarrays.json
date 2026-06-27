@@ -57,5 +57,30 @@
     "racket": "(define/contract (prime-subarray nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec prime_subarray(Nums :: [integer()], K :: integer()) -> integer().\nprime_subarray(Nums, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec prime_subarray(nums :: [integer], k :: integer) :: integer\n  def prime_subarray(nums, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "k": 1
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "k": 3
+      },
+      "expected": 4
+    }
+  ]
 }

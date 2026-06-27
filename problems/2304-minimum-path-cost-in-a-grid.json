@@ -60,5 +60,101 @@
     "racket": "(define/contract (min-path-cost grid moveCost)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec min_path_cost(Grid :: [[integer()]], MoveCost :: [[integer()]]) -> integer().\nmin_path_cost(Grid, MoveCost) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_path_cost(grid :: [[integer]], move_cost :: [[integer]]) :: integer\n  def min_path_cost(grid, move_cost) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "moveCost": [
+          [
+            9,
+            8
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            14,
+            3
+          ]
+        ]
+      },
+      "expected": 17
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            5,
+            1,
+            2
+          ],
+          [
+            4,
+            0,
+            3
+          ]
+        ],
+        "moveCost": [
+          [
+            12,
+            10,
+            15
+          ],
+          [
+            20,
+            23,
+            8
+          ],
+          [
+            21,
+            7,
+            1
+          ],
+          [
+            8,
+            1,
+            13
+          ],
+          [
+            9,
+            10,
+            25
+          ],
+          [
+            5,
+            3,
+            2
+          ]
+        ]
+      },
+      "expected": 6
+    }
+  ]
 }

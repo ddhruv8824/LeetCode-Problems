@@ -25,5 +25,46 @@
   "hints": [],
   "code_snippets": {
     "bash": "# Read from the file words.txt and output the word frequency list to stdout.\n"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": "the day is sunny the the"
+      },
+      "expected": {
+        "the": 3,
+        "day": 1,
+        "is": 1,
+        "sunny": 1
+      }
+    },
+    {
+      "args": {
+        "words": "the sunny is is"
+      },
+      "expected": {
+        "the": 1,
+        "sunny": 1,
+        "is": 2
+      }
+    },
+    {
+      "args": {
+        "words": "hello world hello"
+      },
+      "expected": {
+        "hello": 2,
+        "world": 1
+      }
+    },
+    {
+      "args": {
+        "words": "a a a b b"
+      },
+      "expected": {
+        "a": 3,
+        "b": 2
+      }
+    }
+  ]
 }

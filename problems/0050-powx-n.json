@@ -55,5 +55,28 @@
     "racket": "(define/contract (my-pow x n)\n  (-> flonum? exact-integer? flonum?)\n  )",
     "erlang": "-spec my_pow(X :: float(), N :: integer()) -> float().\nmy_pow(X, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec my_pow(x :: float, n :: integer) :: float\n  def my_pow(x, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "x": 2,
+        "n": 10
+      },
+      "expected": 1024
+    },
+    {
+      "args": {
+        "x": 2.1,
+        "n": 3
+      },
+      "expected": 9.261
+    },
+    {
+      "args": {
+        "x": 2,
+        "n": -2
+      },
+      "expected": 0.25
+    }
+  ]
 }

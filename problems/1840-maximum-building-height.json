@@ -65,5 +65,54 @@
     "racket": "(define/contract (max-building n restrictions)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec max_building(N :: integer(), Restrictions :: [[integer()]]) -> integer().\nmax_building(N, Restrictions) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_building(n :: integer, restrictions :: [[integer]]) :: integer\n  def max_building(n, restrictions) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 5,
+        "restrictions": [
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "n": 6,
+        "restrictions": []
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "n": 10,
+        "restrictions": [
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            10,
+            3
+          ]
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

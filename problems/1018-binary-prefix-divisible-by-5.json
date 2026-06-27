@@ -49,5 +49,73 @@
     "racket": "(define/contract (prefixes-div-by5 nums)\n  (-> (listof exact-integer?) (listof boolean?))\n  )",
     "erlang": "-spec prefixes_div_by5(Nums :: [integer()]) -> [boolean()].\nprefixes_div_by5(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec prefixes_div_by5(nums :: [integer]) :: [boolean]\n  def prefixes_div_by5(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "A": [
+          0,
+          1,
+          1
+        ]
+      },
+      "expected": [
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "args": {
+        "A": [
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "args": {
+        "A": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "expected": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "args": {
+        "A": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
 }

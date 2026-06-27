@@ -53,5 +53,44 @@
     "erlang": "-spec is_zero_array(Nums :: [integer()], Queries :: [[integer()]]) -> boolean().\nis_zero_array(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_zero_array(nums :: [integer], queries :: [[integer]]) :: boolean\n  def is_zero_array(nums, queries) do\n    \n  end\nend"
   },
-  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Difference Array\n\n#### Intuition\n\nWe count the maximum number of operations that can be performed at each position using a difference array. Construct the difference array `deltaArray` with a length of `n + 1` (where `n` is the length of the array `nums`), which is used to record the increment for each query on the number of operations. \n\nFor each query interval `[left, right]`, increment `deltaArray[left]` by `+1`, indicating an increase in the operation count starting from `left`. Decrement `deltaArray[right + 1]` by `-1`, indicating that the operation count returns to its original value after `right + 1`. \n\nNext, perform a prefix sum accumulation on the difference array `deltaArray` to obtain the total operation count at each position in the array, storing these counts in `operationCounts`. Traverse the `nums` array and the `operationCounts` array, comparing the actual operation counts (`operations`) at each position to see if they meet the minimum number of operations (`target`) required for zeroing. If all positions meet `operations >= target`, return `true`; otherwise, return `false`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of $\\textit{nums}$ and $m$ be the length of $\\textit{queries}$.\n\n- Time complexity: $O(n + m)$.\n  \n  We need $O(m)$ time to construct the difference array, followed by checking all $O(n)$ positions.\n\n- Space complexity: $O(n)$.\n  \n  We need $O(n)$ space to store the difference array."
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Difference Array\n\n#### Intuition\n\nWe count the maximum number of operations that can be performed at each position using a difference array. Construct the difference array `deltaArray` with a length of `n + 1` (where `n` is the length of the array `nums`), which is used to record the increment for each query on the number of operations. \n\nFor each query interval `[left, right]`, increment `deltaArray[left]` by `+1`, indicating an increase in the operation count starting from `left`. Decrement `deltaArray[right + 1]` by `-1`, indicating that the operation count returns to its original value after `right + 1`. \n\nNext, perform a prefix sum accumulation on the difference array `deltaArray` to obtain the total operation count at each position in the array, storing these counts in `operationCounts`. Traverse the `nums` array and the `operationCounts` array, comparing the actual operation counts (`operations`) at each position to see if they meet the minimum number of operations (`target`) required for zeroing. If all positions meet `operations >= target`, return `true`; otherwise, return `false`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of $\\textit{nums}$ and $m$ be the length of $\\textit{queries}$.\n\n- Time complexity: $O(n + m)$.\n  \n  We need $O(m)$ time to construct the difference array, followed by checking all $O(n)$ positions.\n\n- Space complexity: $O(n)$.\n  \n  We need $O(n)$ space to store the difference array.",
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          0,
+          1
+        ],
+        "queries": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          3,
+          2,
+          1
+        ],
+        "queries": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

@@ -56,5 +56,29 @@
     "racket": "(define/contract (number-of-good-subsets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_good_subsets(Nums :: [integer()]) -> integer().\nnumber_of_good_subsets(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_good_subsets(nums :: [integer]) :: integer\n  def number_of_good_subsets(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "nums": [
+          4,
+          2,
+          3,
+          15
+        ]
+      },
+      "expected": 5
+    }
+  ]
 }

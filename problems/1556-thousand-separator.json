@@ -47,5 +47,19 @@
     "racket": "(define/contract (thousand-separator n)\n  (-> exact-integer? string?)\n  )",
     "erlang": "-spec thousand_separator(N :: integer()) -> unicode:unicode_binary().\nthousand_separator(N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec thousand_separator(n :: integer) :: String.t\n  def thousand_separator(n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 987
+      },
+      "expected": "987"
+    },
+    {
+      "args": {
+        "n": 1234
+      },
+      "expected": "1.234"
+    }
+  ]
 }

@@ -52,5 +52,31 @@
     "racket": "(define/contract (sum-of-floored-pairs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec sum_of_floored_pairs(Nums :: [integer()]) -> integer().\nsum_of_floored_pairs(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_of_floored_pairs(nums :: [integer]) :: integer\n  def sum_of_floored_pairs(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          5,
+          9
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "nums": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": 49
+    }
+  ]
 }

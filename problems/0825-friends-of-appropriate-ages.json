@@ -55,5 +55,72 @@
     "racket": "(define/contract (num-friend-requests ages)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec num_friend_requests(Ages :: [integer()]) -> integer().\nnum_friend_requests(Ages) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec num_friend_requests(ages :: [integer]) :: integer\n  def num_friend_requests(ages) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "ages": [
+          16,
+          16
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "ages": [
+          16,
+          17,
+          18
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "ages": [
+          20,
+          30,
+          100,
+          110,
+          120
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "ages": [
+          8,
+          85,
+          24,
+          85,
+          69
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "ages": [
+          73,
+          106,
+          39,
+          6,
+          26,
+          15,
+          30,
+          100,
+          71,
+          35,
+          46,
+          112,
+          6,
+          60,
+          110
+        ]
+      },
+      "expected": 29
+    }
+  ]
 }

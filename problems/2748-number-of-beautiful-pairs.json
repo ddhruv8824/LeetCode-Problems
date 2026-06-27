@@ -54,5 +54,28 @@
     "racket": "(define/contract (count-beautiful-pairs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec count_beautiful_pairs(Nums :: [integer()]) -> integer().\ncount_beautiful_pairs(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec count_beautiful_pairs(nums :: [integer]) :: integer\n  def count_beautiful_pairs(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          5,
+          1,
+          4
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          11,
+          21,
+          12
+        ]
+      },
+      "expected": 2
+    }
+  ]
 }

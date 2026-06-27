@@ -45,5 +45,19 @@
     "racket": "(define/contract (find-complement num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_complement(Num :: integer()) -> integer().\nfind_complement(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_complement(num :: integer) :: integer\n  def find_complement(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 5
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "num": 1
+      },
+      "expected": 0
+    }
+  ]
 }

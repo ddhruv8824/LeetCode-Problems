@@ -55,5 +55,25 @@
     "racket": "(define/contract (reformat-number number)\n  (-> string? string?)\n  )",
     "erlang": "-spec reformat_number(Number :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreformat_number(Number) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reformat_number(number :: String.t) :: String.t\n  def reformat_number(number) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "number": "1-23-45 6"
+      },
+      "expected": "123-456"
+    },
+    {
+      "args": {
+        "number": "123 4-567"
+      },
+      "expected": "123-45-67"
+    },
+    {
+      "args": {
+        "number": "123 4-5678"
+      },
+      "expected": "123-456-78"
+    }
+  ]
 }

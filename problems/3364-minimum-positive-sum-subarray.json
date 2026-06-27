@@ -56,5 +56,46 @@
     "racket": "(define/contract (minimum-sum-subarray nums l r)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_sum_subarray(Nums :: [integer()], L :: integer(), R :: integer()) -> integer().\nminimum_sum_subarray(Nums, L, R) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_sum_subarray(nums :: [integer], l :: integer, r :: integer) :: integer\n  def minimum_sum_subarray(nums, l, r) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          3,
+          -2,
+          1,
+          4
+        ],
+        "l": 2,
+        "r": 3
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums": [
+          -2,
+          2,
+          -3,
+          1
+        ],
+        "l": 2,
+        "r": 3
+      },
+      "expected": -1
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "l": 2,
+        "r": 4
+      },
+      "expected": 3
+    }
+  ]
 }

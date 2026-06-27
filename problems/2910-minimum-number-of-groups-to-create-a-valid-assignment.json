@@ -55,5 +55,32 @@
     "racket": "(define/contract (min-groups-for-valid-assignment balls)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_groups_for_valid_assignment(Balls :: [integer()]) -> integer().\nmin_groups_for_valid_assignment(Balls) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_groups_for_valid_assignment(balls :: [integer]) :: integer\n  def min_groups_for_valid_assignment(balls) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "balls": [
+          3,
+          2,
+          3,
+          2,
+          3
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "balls": [
+          10,
+          10,
+          10,
+          3,
+          1,
+          1
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

@@ -55,5 +55,25 @@
     "racket": "(define/contract (max-rep-opt1 text)\n  (-> string? exact-integer?)\n  )",
     "erlang": "-spec max_rep_opt1(Text :: unicode:unicode_binary()) -> integer().\nmax_rep_opt1(Text) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec max_rep_opt1(text :: String.t) :: integer\n  def max_rep_opt1(text) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "text": "ababa"
+      },
+      "expected": 3
+    },
+    {
+      "args": {
+        "text": "aaabaaa"
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "text": "aaaaa"
+      },
+      "expected": 5
+    }
+  ]
 }

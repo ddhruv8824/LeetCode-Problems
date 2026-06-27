@@ -57,5 +57,28 @@
     "racket": "(define/contract (minimum-time-to-initial-state word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec minimum_time_to_initial_state(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_time_to_initial_state(Word, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_time_to_initial_state(word :: String.t, k :: integer) :: integer\n  def minimum_time_to_initial_state(word, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "word": "abacaba",
+        "k": 3
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "word": "abacaba",
+        "k": 4
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "word": "abcbabcd",
+        "k": 2
+      },
+      "expected": 4
+    }
+  ]
 }

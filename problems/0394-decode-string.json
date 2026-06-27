@@ -55,5 +55,31 @@
     "racket": "(define/contract (decode-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec decode_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\ndecode_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec decode_string(s :: String.t) :: String.t\n  def decode_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "3[a]2[bc]"
+      },
+      "expected": "aaabcbc"
+    },
+    {
+      "args": {
+        "s": "3[a2[c]]"
+      },
+      "expected": "accaccacc"
+    },
+    {
+      "args": {
+        "s": "2[abc]3[cd]ef"
+      },
+      "expected": "abcabccdcdcdef"
+    },
+    {
+      "args": {
+        "s": "2[a2[bc]]gh2[cd]ef"
+      },
+      "expected": "abcbcabcbcghcdcdef"
+    }
+  ]
 }

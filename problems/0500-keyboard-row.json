@@ -54,5 +54,41 @@
     "racket": "(define/contract (find-words words)\n  (-> (listof string?) (listof string?))\n  )",
     "erlang": "-spec find_words(Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nfind_words(Words) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_words(words :: [String.t]) :: [String.t]\n  def find_words(words) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "words": [
+          "Hello",
+          "Alaska",
+          "Dad",
+          "Peace"
+        ]
+      },
+      "expected": [
+        "Alaska",
+        "Dad"
+      ]
+    },
+    {
+      "args": {
+        "words": [
+          "omk"
+        ]
+      },
+      "expected": []
+    },
+    {
+      "args": {
+        "words": [
+          "adsdf",
+          "sfd"
+        ]
+      },
+      "expected": [
+        "adsdf",
+        "sfd"
+      ]
+    }
+  ]
 }

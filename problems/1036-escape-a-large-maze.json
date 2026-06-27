@@ -57,5 +57,44 @@
     "racket": "(define/contract (is-escape-possible blocked source target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec is_escape_possible(Blocked :: [[integer()]], Source :: [integer()], Target :: [integer()]) -> boolean().\nis_escape_possible(Blocked, Source, Target) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_escape_possible(blocked :: [[integer]], source :: [integer], target :: [integer]) :: boolean\n  def is_escape_possible(blocked, source, target) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "blocked": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          2
+        ]
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "blocked": [],
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          999999,
+          999999
+        ]
+      },
+      "expected": true
+    }
+  ]
 }

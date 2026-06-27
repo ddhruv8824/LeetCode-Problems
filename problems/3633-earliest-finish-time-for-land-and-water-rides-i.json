@@ -48,5 +48,43 @@
     "racket": "(define/contract (earliest-finish-time landStartTime landDuration waterStartTime waterDuration)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec earliest_finish_time(LandStartTime :: [integer()], LandDuration :: [integer()], WaterStartTime :: [integer()], WaterDuration :: [integer()]) -> integer().\nearliest_finish_time(LandStartTime, LandDuration, WaterStartTime, WaterDuration) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec earliest_finish_time(land_start_time :: [integer], land_duration :: [integer], water_start_time :: [integer], water_duration :: [integer]) :: integer\n  def earliest_finish_time(land_start_time, land_duration, water_start_time, water_duration) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "landStartTime": [
+          2,
+          8
+        ],
+        "landDuration": [
+          4,
+          1
+        ],
+        "waterStartTime": [
+          6
+        ],
+        "waterDuration": [
+          3
+        ]
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "landStartTime": [
+          5
+        ],
+        "landDuration": [
+          3
+        ],
+        "waterStartTime": [
+          1
+        ],
+        "waterDuration": [
+          10
+        ]
+      },
+      "expected": 14
+    }
+  ]
 }

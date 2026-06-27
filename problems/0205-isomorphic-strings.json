@@ -53,5 +53,28 @@
     "racket": "(define/contract (is-isomorphic s t)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_isomorphic(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_isomorphic(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_isomorphic(s :: String.t, t :: String.t) :: boolean\n  def is_isomorphic(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "egg",
+        "t": "add"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "foo",
+        "t": "bar"
+      },
+      "expected": false
+    },
+    {
+      "args": {
+        "s": "paper",
+        "t": "title"
+      },
+      "expected": true
+    }
+  ]
 }

@@ -64,5 +64,69 @@
     "racket": "; Definition for singly-linked list:\n#|\n\n; val : integer?\n; next : (or/c list-node? #f)\n(struct list-node\n  (val next) #:mutable #:transparent)\n\n; constructor\n(define (make-list-node [val 0])\n  (list-node val #f))\n\n|#\n\n(define/contract (reverse-even-length-groups head)\n  (-> (or/c list-node? #f) (or/c list-node? #f))\n  )",
     "erlang": "%% Definition for singly-linked list.\n%%\n%% -record(list_node, {val = 0 :: integer(),\n%%                     next = null :: 'null' | #list_node{}}).\n\n-spec reverse_even_length_groups(Head :: #list_node{} | null) -> #list_node{} | null.\nreverse_even_length_groups(Head) ->\n  .",
     "elixir": "# Definition for singly-linked list.\n#\n# defmodule ListNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           next: ListNode.t() | nil\n#         }\n#   defstruct val: 0, next: nil\n# end\n\ndefmodule Solution do\n  @spec reverse_even_length_groups(head :: ListNode.t | nil) :: ListNode.t | nil\n  def reverse_even_length_groups(head) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "head": [
+          5,
+          2,
+          6,
+          3,
+          9,
+          1,
+          7,
+          3,
+          8,
+          4
+        ]
+      },
+      "expected": [
+        5,
+        6,
+        2,
+        3,
+        9,
+        1,
+        4,
+        8,
+        3,
+        7
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          1,
+          0,
+          6
+        ]
+      },
+      "expected": [
+        1,
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "args": {
+        "head": [
+          1,
+          1,
+          0,
+          6,
+          5
+        ]
+      },
+      "expected": [
+        1,
+        0,
+        1,
+        5,
+        6
+      ]
+    }
+  ]
 }

@@ -52,5 +52,33 @@
     "racket": "(define/contract (task-scheduler-ii tasks space)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
     "erlang": "-spec task_scheduler_ii(Tasks :: [integer()], Space :: integer()) -> integer().\ntask_scheduler_ii(Tasks, Space) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec task_scheduler_ii(tasks :: [integer], space :: integer) :: integer\n  def task_scheduler_ii(tasks, space) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "tasks": [
+          1,
+          2,
+          1,
+          2,
+          3,
+          1
+        ],
+        "space": 3
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "tasks": [
+          5,
+          8,
+          8,
+          5
+        ],
+        "space": 2
+      },
+      "expected": 6
+    }
+  ]
 }

@@ -56,5 +56,25 @@
     "racket": "(define/contract (mask-pii s)\n  (-> string? string?)\n  )",
     "erlang": "-spec mask_pii(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmask_pii(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec mask_pii(s :: String.t) :: String.t\n  def mask_pii(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "LeetCode@LeetCode.com"
+      },
+      "expected": "l*****e@leetcode.com"
+    },
+    {
+      "args": {
+        "s": "AB@qq.com"
+      },
+      "expected": "a*****b@qq.com"
+    },
+    {
+      "args": {
+        "s": "1(234)567-890"
+      },
+      "expected": "***-***-7890"
+    }
+  ]
 }

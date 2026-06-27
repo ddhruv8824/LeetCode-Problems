@@ -60,5 +60,100 @@
     "racket": "(define/contract (find-the-string lcp)\n  (-> (listof (listof exact-integer?)) string?)\n  )",
     "erlang": "-spec find_the_string(Lcp :: [[integer()]]) -> unicode:unicode_binary().\nfind_the_string(Lcp) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_the_string(lcp :: [[integer]]) :: String.t\n  def find_the_string(lcp) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "lcp": [
+          [
+            4,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": "abab"
+    },
+    {
+      "args": {
+        "lcp": [
+          [
+            4,
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": "aaaa"
+    },
+    {
+      "args": {
+        "lcp": [
+          [
+            4,
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": ""
+    }
+  ]
 }

@@ -49,5 +49,19 @@
     "racket": "(define/contract (smallest-number num)\n  (-> exact-integer? exact-integer?)\n  )",
     "erlang": "-spec smallest_number(Num :: integer()) -> integer().\nsmallest_number(Num) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec smallest_number(num :: integer) :: integer\n  def smallest_number(num) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "num": 310
+      },
+      "expected": 103
+    },
+    {
+      "args": {
+        "num": -7605
+      },
+      "expected": -7650
+    }
+  ]
 }

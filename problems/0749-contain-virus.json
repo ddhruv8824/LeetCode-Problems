@@ -66,5 +66,116 @@
     "racket": "(define/contract (contain-virus isInfected)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec contain_virus(IsInfected :: [[integer()]]) -> integer().\ncontain_virus(IsInfected) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec contain_virus(is_infected :: [[integer]]) :: integer\n  def contain_virus(is_infected) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "isInfected": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "args": {
+        "isInfected": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "isInfected": [
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 13
+    }
+  ]
 }

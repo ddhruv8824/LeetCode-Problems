@@ -51,5 +51,21 @@
     "racket": "(define/contract (find-permutation-difference s t)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec find_permutation_difference(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nfind_permutation_difference(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_permutation_difference(s :: String.t, t :: String.t) :: integer\n  def find_permutation_difference(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abc",
+        "t": "bac"
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "s": "abcde",
+        "t": "edbac"
+      },
+      "expected": 12
+    }
+  ]
 }

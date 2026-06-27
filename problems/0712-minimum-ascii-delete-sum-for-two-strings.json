@@ -49,5 +49,21 @@
     "racket": "(define/contract (minimum-delete-sum s1 s2)\n  (-> string? string? exact-integer?)\n  )",
     "erlang": "-spec minimum_delete_sum(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> integer().\nminimum_delete_sum(S1, S2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec minimum_delete_sum(s1 :: String.t, s2 :: String.t) :: integer\n  def minimum_delete_sum(s1, s2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s1": "sea",
+        "s2": "eat"
+      },
+      "expected": 231
+    },
+    {
+      "args": {
+        "s1": "delete",
+        "s2": "leet"
+      },
+      "expected": 403
+    }
+  ]
 }

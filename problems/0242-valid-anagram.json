@@ -50,5 +50,21 @@
     "racket": "(define/contract (is-anagram s t)\n  (-> string? string? boolean?)\n  )",
     "erlang": "-spec is_anagram(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_anagram(S, T) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec is_anagram(s :: String.t, t :: String.t) :: boolean\n  def is_anagram(s, t) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "anagram",
+        "t": "nagaram"
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "s": "rat",
+        "t": "cat"
+      },
+      "expected": false
+    }
+  ]
 }

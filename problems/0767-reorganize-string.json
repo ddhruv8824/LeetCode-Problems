@@ -53,5 +53,25 @@
     "racket": "(define/contract (reorganize-string s)\n  (-> string? string?)\n  )",
     "erlang": "-spec reorganize_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreorganize_string(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec reorganize_string(s :: String.t) :: String.t\n  def reorganize_string(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "aab"
+      },
+      "expected": "aba"
+    },
+    {
+      "args": {
+        "s": "aaab"
+      },
+      "expected": ""
+    },
+    {
+      "args": {
+        "s": "vvvlo"
+      },
+      "expected": "vlvov"
+    }
+  ]
 }

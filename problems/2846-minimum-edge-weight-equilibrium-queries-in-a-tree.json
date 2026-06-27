@@ -65,5 +65,134 @@
     "racket": "(define/contract (min-operations-queries n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec min_operations_queries(N :: integer(), Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nmin_operations_queries(N, Edges, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations_queries(n :: integer, edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def min_operations_queries(n, edges, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            4,
+            5,
+            2
+          ],
+          [
+            5,
+            6,
+            2
+          ]
+        ],
+        "queries": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "args": {
+        "n": 8,
+        "edges": [
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            3,
+            6,
+            6
+          ],
+          [
+            3,
+            0,
+            8
+          ],
+          [
+            7,
+            0,
+            2
+          ]
+        ],
+        "queries": [
+          [
+            4,
+            6
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        2,
+        3
+      ]
+    }
+  ]
 }

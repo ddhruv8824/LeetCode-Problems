@@ -52,5 +52,32 @@
     "racket": "(define/contract (get-xor-sum arr1 arr2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec get_xor_sum(Arr1 :: [integer()], Arr2 :: [integer()]) -> integer().\nget_xor_sum(Arr1, Arr2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec get_xor_sum(arr1 :: [integer], arr2 :: [integer]) :: integer\n  def get_xor_sum(arr1, arr2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "arr1": [
+          1,
+          2,
+          3
+        ],
+        "arr2": [
+          6,
+          5
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "arr1": [
+          12
+        ],
+        "arr2": [
+          4
+        ]
+      },
+      "expected": 4
+    }
+  ]
 }

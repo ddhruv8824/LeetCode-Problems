@@ -54,5 +54,42 @@
     "racket": "(define/contract (maximum-score nums multipliers)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec maximum_score(Nums :: [integer()], Multipliers :: [integer()]) -> integer().\nmaximum_score(Nums, Multipliers) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_score(nums :: [integer], multipliers :: [integer]) :: integer\n  def maximum_score(nums, multipliers) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3
+        ],
+        "multipliers": [
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": 14
+    },
+    {
+      "args": {
+        "nums": [
+          -5,
+          -3,
+          -3,
+          -2,
+          7,
+          1
+        ],
+        "multipliers": [
+          -10,
+          -5,
+          3,
+          4,
+          6
+        ]
+      },
+      "expected": 102
+    }
+  ]
 }

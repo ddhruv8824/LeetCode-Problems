@@ -56,5 +56,40 @@
     "racket": "(define/contract (find-unsorted-subarray nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec find_unsorted_subarray(Nums :: [integer()]) -> integer().\nfind_unsorted_subarray(Nums) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_unsorted_subarray(nums :: [integer]) :: integer\n  def find_unsorted_subarray(nums) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          6,
+          4,
+          8,
+          10,
+          9,
+          15
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "args": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 0
+    }
+  ]
 }

@@ -49,5 +49,19 @@
     "scala": "object Solution {\n    def maxNiceDivisors(primeFactors: Int): Int = {\n        \n    }\n}",
     "rust": "impl Solution {\n    pub fn max_nice_divisors(prime_factors: i32) -> i32 {\n        \n    }\n}",
     "racket": "(define/contract (max-nice-divisors primeFactors)\n  (-> exact-integer? exact-integer?)\n\n  )"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "primeFactors": 5
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "primeFactors": 8
+      },
+      "expected": 18
+    }
+  ]
 }

@@ -51,5 +51,27 @@
     "racket": "(define/contract (number-of-weeks milestones)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec number_of_weeks(Milestones :: [integer()]) -> integer().\nnumber_of_weeks(Milestones) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec number_of_weeks(milestones :: [integer]) :: integer\n  def number_of_weeks(milestones) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "milestones": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "args": {
+        "milestones": [
+          5,
+          2,
+          1
+        ]
+      },
+      "expected": 7
+    }
+  ]
 }

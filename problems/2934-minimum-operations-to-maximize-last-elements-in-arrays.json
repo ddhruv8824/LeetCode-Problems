@@ -58,5 +58,56 @@
     "racket": "(define/contract (min-operations nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
     "erlang": "-spec min_operations(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmin_operations(Nums1, Nums2) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec min_operations(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def min_operations(nums1, nums2) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums1": [
+          1,
+          2,
+          7
+        ],
+        "nums2": [
+          4,
+          5,
+          3
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "args": {
+        "nums1": [
+          2,
+          3,
+          4,
+          5,
+          9
+        ],
+        "nums2": [
+          8,
+          8,
+          4,
+          4,
+          4
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "args": {
+        "nums1": [
+          1,
+          5,
+          4
+        ],
+        "nums2": [
+          2,
+          5,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
 }

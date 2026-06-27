@@ -49,5 +49,19 @@
     "racket": "(define/contract (process-str s)\n  (-> string? string?)\n  )",
     "erlang": "-spec process_str(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nprocess_str(S) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec process_str(s :: String.t) :: String.t\n  def process_str(s) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "a#b%*"
+      },
+      "expected": "ba"
+    },
+    {
+      "args": {
+        "s": "z*#"
+      },
+      "expected": ""
+    }
+  ]
 }

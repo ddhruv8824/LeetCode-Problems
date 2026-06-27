@@ -64,5 +64,115 @@
     "racket": "(define/contract (popcount-depth nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
     "erlang": "-spec popcount_depth(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\npopcount_depth(Nums, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec popcount_depth(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def popcount_depth(nums, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          2,
+          4
+        ],
+        "queries": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          3,
+          5,
+          6
+        ],
+        "queries": [
+          [
+            1,
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            4
+          ],
+          [
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          2
+        ],
+        "queries": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "expected": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
 }

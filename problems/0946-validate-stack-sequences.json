@@ -51,5 +51,45 @@
     "racket": "(define/contract (validate-stack-sequences pushed popped)\n  (-> (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
     "erlang": "-spec validate_stack_sequences(Pushed :: [integer()], Popped :: [integer()]) -> boolean().\nvalidate_stack_sequences(Pushed, Popped) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec validate_stack_sequences(pushed :: [integer], popped :: [integer]) :: boolean\n  def validate_stack_sequences(pushed, popped) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "pushed": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "popped": [
+          4,
+          5,
+          3,
+          2,
+          1
+        ]
+      },
+      "expected": true
+    },
+    {
+      "args": {
+        "pushed": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "popped": [
+          4,
+          3,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": false
+    }
+  ]
 }

@@ -66,5 +66,69 @@
     "racket": "(define/contract (busiest-servers k arrival load)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
     "erlang": "-spec busiest_servers(K :: integer(), Arrival :: [integer()], Load :: [integer()]) -> [integer()].\nbusiest_servers(K, Arrival, Load) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec busiest_servers(k :: integer, arrival :: [integer], load :: [integer]) :: [integer]\n  def busiest_servers(k, arrival, load) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "k": 3,
+        "arrival": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "load": [
+          5,
+          2,
+          3,
+          3,
+          3
+        ]
+      },
+      "expected": [
+        1
+      ]
+    },
+    {
+      "args": {
+        "k": 3,
+        "arrival": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "load": [
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": [
+        0
+      ]
+    },
+    {
+      "args": {
+        "k": 3,
+        "arrival": [
+          1,
+          2,
+          3
+        ],
+        "load": [
+          10,
+          12,
+          11
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
 }

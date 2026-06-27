@@ -56,5 +56,30 @@
     "racket": "(define/contract (sum-distance nums s d)\n  (-> (listof exact-integer?) string? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_distance(Nums :: [integer()], S :: unicode:unicode_binary(), D :: integer()) -> integer().\nsum_distance(Nums, S, D) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_distance(nums :: [integer], s :: String.t, d :: integer) :: integer\n  def sum_distance(nums, s, d) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "nums": [
+          -2,
+          0,
+          2
+        ],
+        "s": "RLL",
+        "d": 3
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "nums": [
+          1,
+          0
+        ],
+        "s": "RL",
+        "d": 2
+      },
+      "expected": 5
+    }
+  ]
 }

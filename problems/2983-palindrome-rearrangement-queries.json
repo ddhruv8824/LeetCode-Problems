@@ -68,5 +68,62 @@
     "racket": "(define/contract (can-make-palindrome-queries s queries)\n  (-> string? (listof (listof exact-integer?)) (listof boolean?))\n  )",
     "erlang": "-spec can_make_palindrome_queries(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [boolean()].\ncan_make_palindrome_queries(S, Queries) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec can_make_palindrome_queries(s :: String.t, queries :: [[integer]]) :: [boolean]\n  def can_make_palindrome_queries(s, queries) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "s": "abcabc",
+        "queries": [
+          [
+            1,
+            1,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            5,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "args": {
+        "s": "abbcdecbba",
+        "queries": [
+          [
+            0,
+            2,
+            7,
+            9
+          ]
+        ]
+      },
+      "expected": [
+        false
+      ]
+    },
+    {
+      "args": {
+        "s": "acbcab",
+        "queries": [
+          [
+            1,
+            2,
+            4,
+            5
+          ]
+        ]
+      },
+      "expected": [
+        true
+      ]
+    }
+  ]
 }

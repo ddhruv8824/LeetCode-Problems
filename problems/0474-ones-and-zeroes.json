@@ -50,5 +50,33 @@
     "racket": "(define/contract (find-max-form strs m n)\n  (-> (listof string?) exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec find_max_form(Strs :: [unicode:unicode_binary()], M :: integer(), N :: integer()) -> integer().\nfind_max_form(Strs, M, N) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec find_max_form(strs :: [String.t], m :: integer, n :: integer) :: integer\n  def find_max_form(strs, m, n) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "strs": [
+          "10",
+          "0001",
+          "111001",
+          "1",
+          "0"
+        ],
+        "m": 5,
+        "n": 3
+      },
+      "expected": 4
+    },
+    {
+      "args": {
+        "strs": [
+          "10",
+          "0",
+          "1"
+        ],
+        "m": 1,
+        "n": 1
+      },
+      "expected": 2
+    }
+  ]
 }

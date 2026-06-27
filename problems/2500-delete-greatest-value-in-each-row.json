@@ -59,5 +59,34 @@
     "racket": "(define/contract (delete-greatest-value grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
     "erlang": "-spec delete_greatest_value(Grid :: [[integer()]]) -> integer().\ndelete_greatest_value(Grid) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec delete_greatest_value(grid :: [[integer]]) :: integer\n  def delete_greatest_value(grid) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "grid": [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            3,
+            3,
+            1
+          ]
+        ]
+      },
+      "expected": 8
+    },
+    {
+      "args": {
+        "grid": [
+          [
+            10
+          ]
+        ]
+      },
+      "expected": 10
+    }
+  ]
 }

@@ -48,5 +48,21 @@
     "racket": "(define/contract (sum-base n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
     "erlang": "-spec sum_base(N :: integer(), K :: integer()) -> integer().\nsum_base(N, K) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec sum_base(n :: integer, k :: integer) :: integer\n  def sum_base(n, k) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "n": 34,
+        "k": 6
+      },
+      "expected": 9
+    },
+    {
+      "args": {
+        "n": 10,
+        "k": 10
+      },
+      "expected": 1
+    }
+  ]
 }

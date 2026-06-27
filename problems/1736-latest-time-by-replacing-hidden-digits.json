@@ -55,5 +55,25 @@
     "racket": "(define/contract (maximum-time time)\n  (-> string? string?)\n  )",
     "erlang": "-spec maximum_time(Time :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmaximum_time(Time) ->\n  .",
     "elixir": "defmodule Solution do\n  @spec maximum_time(time :: String.t) :: String.t\n  def maximum_time(time) do\n    \n  end\nend"
-  }
+  },
+  "test_cases": [
+    {
+      "args": {
+        "time": "2?:?0"
+      },
+      "expected": "23:50"
+    },
+    {
+      "args": {
+        "time": "0?:3?"
+      },
+      "expected": "09:39"
+    },
+    {
+      "args": {
+        "time": "1?:22"
+      },
+      "expected": "19:22"
+    }
+  ]
 }
